@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MaryCache/imozuru | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛠️</div><div>
+<h1>MaryCache/imozuru</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-19（Trendshift 6位）</span>
+<a class="gh" href="https://github.com/MaryCache/imozuru" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="marycache__imozuru" data-repo="MaryCache/imozuru" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">知らない分野を原文まで芋づる式にたどって調べる Claude Code のスキル</p>
+<h3>何ができるか</h3><ul><li>英語と日本語など2通りの探し方で、分野の用語・中心人物・発信の場・定番資料を集めた地図（map.md）を作る。</li><li>参考文献や被引用、著者、記事内のリンクを芋づる式にたどり、論文の無い分野でもブログや動画から情報を追う。</li><li>PDF・記事・YouTube の字幕などの原文を sources/ に保存し、404 やログインの壁は中身を見てはじく。</li><li>原文を要約せず、主張ごとに「どのファイルの何行目か」を示す。</li><li>原文から切り出した文を主張ごとに並べた HTML を作り、抜き書きが原文の指定行にそのまま在るかを機械で照合する。</li><li>見つけた場所（Qiita・Zenn・note・YouTube・arXiv など）の新着を RSS で取得して並べる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIに「調べて」と頼むと検索上位の数件を要約して終わりがちな問題に対し、情報探索研究（Bates の berrypicking など）に基づく探し方をさせる点が評価されていると考えられる。要約せず原文の場所を示し、抜き書きを機械で照合する設計が、AIの言い換えや誤りを避けたい人に響いていると思われる。</p>
+<h3>どんな人に役立つか</h3><p>新しい分野を一次資料（原文）にあたりながら調べたい学生や研究者、技術者に向く。論文が少ない趣味の分野（歌ってみたの MIX など）を個人の発信からたどりたい人にも使える。</p>
+<h3>技術的なポイント</h3><ul><li>スクリプトは Python 3.10 以上の標準ライブラリだけで動き、pdftotext・tesseract・yt-dlp などがあれば追加で使う。</li><li>引用をたどる chain.py は OpenAlex（論文の書誌情報を集めた無料のデータベース）の API を使い、API キーは要らない。</li><li>「答えるのに要る主張」をすべて原文で裏付けられたら止める、または2本の探索の結果が7割以上重なったら止めるという停止条件を持つ。</li><li>report.py は抜き書きの文が原文に一字一句そのまま在るかを照合し、言い換えが混ざっていればページを作らずに止まる。</li></ul>
+<h3>試し方</h3>
+<ol><li>skills の CLI でスキルをインストールするか、skills/imozuru/ を ~/.claude/skills/imozuru/ にコピーする。</li><li>Claude Code で「芋づる式に調べて: 〜」のように頼む。</li><li>結果は ~/research/&lt;話題&gt;/ に map.md・log.md・sources/・extracts.json・report.html として置かれる。</li><li>スクリプトだけ試す場合は、examples/demo を対象に report.py を実行して report.html を作る。</li></ol>
+<pre><code>npx skills add MaryCache/imozuru
+python3 skills/imozuru/scripts/report.py examples/demo</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-marycache__imozuru">2026-10-19</a>
+<span class="src trendshift">Trendshift 6位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

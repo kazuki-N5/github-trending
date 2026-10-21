@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sickn33/agentic-awesome-skills | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧩</div><div>
+<h1>sickn33/agentic-awesome-skills</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-21（GitHub Trending 13位）</span>
+<a class="gh" href="https://github.com/sickn33/agentic-awesome-skills" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="sickn33__agentic-awesome-skills" data-repo="sickn33/agentic-awesome-skills" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェント用の2,700超のスキル集と、選定・検証を助けるローカル管理ツール</p>
+<h3>何ができるか</h3><ul><li>AIコーディングエージェントに読ませる手順書（SKILL.md）を2,724件以上集めたライブラリで、必要なものだけを選んでインストールできます。</li><li>AAS Coreを使うと、CodexやClaudeがローカルにあるカタログ全体を検索し、各スキルのファイルを読んだうえで、プロジェクトに合うスキルを自分で選んで記録できます。</li><li>選んだスキルの組み合わせをaas-stack.jsonという一覧ファイルに保存し、aas stack validateで構成を検証し、aas stack planで変更内容のプレビューを作って確認できます。</li><li>npxで動くインストーラーで、Claude Code・Cursor・Gemini CLI・Codex CLI・Kiro・GitHub Copilot・OpenCodeなど多くのツールのスキル置き場へ、IDやカテゴリ、リスクで絞ってインストールできます。</li><li>Webアプリ開発、セキュリティ、データ分析、QA、DevOpsなど分野別に10件前後のスキルをまとめたプラグインや、使う順番を示すワークフローも用意されています。</li><li>Webのカタログサイトと、ブラウザのメモリ内だけで保存済みのスキル構成とプランを確認できるWorkbenchも提供しています。</li></ul>
+<h3>なぜ注目されているか</h3><p>README によると約48,000のスターを集めており、多数のAIコーディングツールで共通して使えるスキル集として規模の大きさが特徴です。<span class="guess">推測</span> スキルが増えすぎてどれを使うべきか分かりにくくなったため、エージェント自身に選ばせ、その選択を検証・確認できるAAS Coreを打ち出した点も関心を集めていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>Claude CodeやCodex、CursorなどのAIコーディングエージェントを使っていて、計画づくり・デバッグ・テスト・セキュリティ確認などの定型の進め方をエージェントに覚えさせたい人に向いています。自分でスキルを書いて共有したい人も、テンプレートに沿って投稿できます。</p>
+<h3>技術的なポイント</h3><ul><li>スキルはskills/&lt;スキル名&gt;/SKILL.mdというMarkdownファイルで管理され、機械向けの一覧としてskills_index.jsonとそのJSONスキーマ（データ形式の定義）が公開されています。</li><li>AAS CoreはローカルのMCPサーバー（AIエージェントが外部ツールを呼び出すための共通プロトコルのサーバー）として動き、compose_stackという読み取り専用ツールで選んだIDと構成をメモリ上で検証します。</li><li>Core自体はスキルの順位付けやおすすめをせず、選ぶのはエージェントの役割で、検証は構造とIDの正しさだけを確かめ、内容の適合性や安全性までは保証しないと明記しています。</li><li>1つの構成に入れられるスキルは技術的に最大128件で、実際の適用（apply）や復旧（recovery）は実験的機能として明示的な有効化が必要です。</li><li>配布はnpmパッケージagentic-awesome-skillsで行われ、--dry-runで事前に変更内容だけを確認してから本番のインストールができます。</li></ul>
+<h3>試し方</h3>
+<ol><li>CodexまたはClaude Codeのガイドに従い、aas mcp configureでローカルMCPを設定します（最初の実行は変更のプレビューと承認用のダイジェストを返します）。</li><li>MCPが使える状態で、エージェントにプロジェクトを調べさせ、関連するスキルを比較して選んだIDを保存させます。</li><li>保存されたマニフェストを検証し、作成されたプランを確認してからインストールに進みます。</li><li>使いたいスキルのIDが分かっている場合は、インストーラーを--dry-run付きで実行してプレビューを確認し、問題なければ--dry-runを外してもう一度実行します。</li><li>Cursor・Gemini CLI・Codex CLIなどはnpx agentic-awesome-skillsに各ツール用のオプションを付けてインストールし、例えば「Use brainstorming to plan a feature」のようにスキル名を指定して使います。</li></ol>
+<pre><code>npm exec --yes --ignore-scripts --package=agentic-awesome-skills@19.12.1 -- aas mcp configure --host codex --scope user --config /absolute/path/to/codex/config.toml --cache-root /absolute/path/to/aas-cache
+npm exec --yes --ignore-scripts --package=agentic-awesome-skills@19.12.1 -- agentic-awesome-skills --release 19.12.1 --path .agents/skills --skills brainstorming,systematic-debugging --dry-run
+npx agentic-awesome-skills --cursor
+npx agentic-awesome-skills --gemini
+npx agentic-awesome-skills --codex
+npx agentic-awesome-skills --path ./my-skills</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-21.html#d-sickn33__agentic-awesome-skills">2026-10-21</a>
+<span class="src github">GitHub Trending 13位</span><span>★ +83</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

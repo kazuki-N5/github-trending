@@ -1,0 +1,36 @@
+{
+  "repo": "deepseek-ai/DeepInfer",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "DeepSeekの本番サービスを支える大規模・高性能なLLM推論フレームワーク",
+  "features": [
+    "DeepSeek-V4.1-Flashモデルのオフライン推論（サーバーを立てずにスクリプトから文章を生成すること）ができます。",
+    "Attention DP（データ並列）やCP（コンテキスト並列）、MoE（複数の専門家ネットワークを切り替えるモデル構造）のEP（専門家並列）とEPLB（専門家の負荷分散）で、多数のGPUに処理を分散できます。",
+    "DSparkによる下書きトークン（先に予測した候補の単語）を使ったデコード高速化と、確信度に基づいて検証タイミングを決める仕組みを備えています。",
+    "CPUでのバッチのスケジューリングとGPUでの実行を重ねる非同期スケジューリングが標準で有効になっています。",
+    "バッチの組み合わせが変わっても結果が同じになるバッチ不変推論と、同じ入力・同じパラメータで同じ出力を得る決定的サンプリングに対応しています（NVIDIAのみ）。",
+    "正規表現・JSONスキーマ・EBNF文法（文法を記述する記法）に従った形式で出力させる構造化出力ができます。"
+  ],
+  "why": "DeepSeekが自社の大規模な本番サービスで使っている推論フレームワークを、Apache 2.0ライセンスで公開したものだからです。推測: FlashMLAやDeepGEMM、DeepEPなどDeepSeekがこれまで公開してきた高速カーネルをまとめて使う実例であり、NVIDIA SM100 GPUとHuawei Ascend NPUの両方に対応している点も注目を集めていると考えられます。",
+  "whoFor": "大規模言語モデルの推論を高速化・大規模化する仕組みを研究・開発している人に向いています。なお、KVキャッシュシステムやPrefill/Decodeの分離、データ並列レプリカ間の負荷分散はこのリリースに含まれないため、完全な推論サービスとして使うには別途用意が必要です。",
+  "tech": [
+    "DeepSeekのFlashMLA、DeepGEMM、DeepEP、TileKernels、DeepSelectといった最適化済みカーネル（GPU上で動く計算処理）と、TileLangで書いた独自カーネルを使っています。",
+    "PythonのコードとC++の拡張（csrc以下、pybindでPythonから呼び出す）を組み合わせて、スケジューラなどを実装しています。",
+    "当初は主にvLLMを土台に作られ、SGLangやTensorRT-LLMからも影響を受けたとREADMEに書かれています。",
+    "デコーダのSWA（一定幅の直近トークンだけを見るスライディングウィンドウ注意機構）について、上限を決めた末尾部分だけを再生するbounded replayでprefill（入力の一括処理）の作業を減らします。",
+    "動作環境はLinux、GCC 13以上、Python 3.12で、NVIDIAではCUDA 13、AscendではCANN 9.2が必要です。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Linux上に空のPython 3.12環境を作って有効にします。",
+      "環境変数DEEPINFER_ACCELERATORにnvidia（Ascendならascend）を設定し、build.shでソースからビルドします。",
+      "examples/offline_inference.pyを実行すると、初回はDeepSeek-V4.1-Flash-1017のチェックポイントがHugging Faceのキャッシュにダウンロードされて推論が動きます。",
+      "手元のモデルを使う場合は、DEEPINFER_HF_MODEL_DIRにモデルのディレクトリを指定します。"
+    ],
+    "commands": [
+      "export DEEPINFER_ACCELERATOR=nvidia",
+      "./build.sh",
+      "python examples/offline_inference.py"
+    ]
+  }
+}

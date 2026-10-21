@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>boykopovar/AnyPS5 | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎮</div><div>
+<h1>boykopovar/AnyPS5</h1>
+<div class="meta"><span>C++</span>
+<span>初掲載 2026-10-19（Star History 5位）</span>
+<a class="gh" href="https://github.com/boykopovar/AnyPS5" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="boykopovar__anyps5" data-repo="boykopovar/AnyPS5" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">PS5 の実行ファイルを Linux・Windows 向けに自動で移植するツール</p>
+<h3>何ができるか</h3><ul><li>リリンカー（実行ファイルを別の形式に組み替える道具）で、PS5 の実行ファイルを対象 OS のネイティブ形式に変換する。</li><li>PS5 のシステム prx ライブラリ（PS5 の共有ライブラリ）を動的リンクできる形で再実装して同梱している。</li><li>シェーダー再コンパイラーで GPU 用プログラムを SPIR-V（Vulkan などで使われるシェーダーの中間表現）に変換する。</li><li>SDL で認識されるゲームコントローラーに対応し、キーボードとマウスの割り当ても設定ファイルで変更できる。</li><li>ファイルを端末の外に送らずに変換できる Web 版コンバーターがある。</li></ul>
+<h3>なぜ注目されているか</h3><p>エミュレーションや別のランタイムプロセスを使わず、実行ファイル自体を変換して PC 上で直接動かすという方式をとっている。<span class="guess">推測</span> PS5 タイトルを PC で動かす新しいアプローチとして、ゲーム保存や互換性の分野で関心を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>ゲームの互換性や保存、実行ファイル形式やバイナリ変換の仕組みに関心がある開発者や研究者に向く。著作権のあるソフトや鍵は含まれないため、使うバイナリは利用者自身が法律とライセンスに沿って用意する必要がある。</p>
+<h3>技術的なポイント</h3><ul><li>主に C++ で書かれ、対応できない状態では必ず std::runtime_error を投げてエラー内容を表示し終了する方針をとっている。</li><li>エミュレーターのように命令を逐次解釈するのではなく、実行ファイルを再リンクしてネイティブ形式にする。</li><li>生成した SPIR-V は、ANYPS5_ENABLE_SPIRV_TOOLS を有効にしてビルドすると SPIRV-Tools で検証できる。</li><li>リリンカーだけのビルドは Apple silicon を含む macOS でも動く。</li></ul>
+<h3>試し方</h3>
+<ol><li>ブラウザで Web converter（https://boykopovar.github.io/AnyPS5/）を開くと、ファイルを端末内に置いたまま変換できる。</li><li>詳しい使い方は docs/user/USAGE.md、ビルド方法は docs/dev/BUILD.md を参照する。</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#w-boykopovar__anyps5">2026-10-19 週間</a>
+<span class="src starhistory">Star History 5位</span><span>★ +14,661（週）</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

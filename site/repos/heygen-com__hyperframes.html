@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>heygen-com/hyperframes | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎬</div><div>
+<h1>heygen-com/hyperframes</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-10-19（Star History 16位）</span>
+<a class="gh" href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="heygen-com__hyperframes" data-repo="heygen-com/hyperframes" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">HTMLで書いた構成をMP4動画に変換する、AIエージェント向けの動画フレームワーク</p>
+<h3>何ができるか</h3><ul><li>HTML、CSS、メディア、アニメーションで動画を定義し、毎回同じ結果になる MP4 動画として書き出せます。</li><li>data 属性で各要素の開始時刻、長さ、トラック（重ね順）を指定し、タイムラインを組み立てられます。</li><li>CLI でプロジェクトの作成、ブラウザでのプレビュー、リント（記述ミスの検査）、レンダリングができます。</li><li>製品紹介動画、プルリクエストの解説動画、字幕付けなどの作業手順をAIエージェントに教える21個のスキルを提供します。</li><li>トランジション、SNS 風オーバーレイ、アニメーショングラフなどの部品をカタログから追加できます。</li><li>ブラウザ上の編集画面（Studio）や、AWS Lambda を使った分散レンダリングにも対応しています。</li></ul>
+<h3>なぜ注目されているか</h3><p>README によると HeyGen の本番環境で使われており、リポジトリページでは6万を超えるスターを集めています。React を前提とする Remotion と違い、エージェントも人も書きやすい素の HTML で動画を作れることと、Apache 2.0 ライセンスでレンダリングごとの料金がないことを特徴として挙げています。<span class="guess">推測</span> AIエージェントに動画制作を任せたいという需要の高まりが注目の背景と考えられます。</p>
+<h3>どんな人に役立つか</h3><p>製品紹介やデータ可視化などの動画をコードで量産したい開発者や、Claude Code などのAIエージェントに動画を作らせたい人に向いています。</p>
+<h3>技術的なポイント</h3><ul><li>レンダラーはヘッドレス Chrome（画面を表示しないブラウザ）で1フレームずつ時刻を進めて描画し、FFmpeg で動画にエンコードします。</li><li>GSAP、CSS アニメーション、Lottie、Three.js、Anime.js、WAAPI などのアニメーションを、時刻を指定して再生できるアダプタ経由で扱います。</li><li>ビルド工程が不要で、index.html の構成をそのままブラウザでプレビューできます。</li><li>CLI、core、engine（Puppeteer と FFmpeg による取り込み）、producer、studio、player などのパッケージに分かれた構成で、動作には Node.js 22 以上と FFmpeg が必要です。</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js 22 以上と FFmpeg を用意します。</li><li>npx hyperframes init でプロジェクトを作成し、そのディレクトリに移動します。</li><li>preview でブラウザ上にライブリロード付きでプレビューし、render で MP4 に書き出します。</li><li>Claude Code から使う場合はプラグインを導入し、/hyperframes で作りたい動画を指示します。</li></ol>
+<pre><code>npx hyperframes init my-video
+cd my-video
+npx hyperframes preview
+npx hyperframes render
+claude plugin marketplace add heygen-com/hyperframes
+claude plugin install hyperframes@hyperframes</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#w-heygen-com__hyperframes">2026-10-19 週間</a>
+<span class="src starhistory">Star History 16位</span><span>★ +5,795（週）</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

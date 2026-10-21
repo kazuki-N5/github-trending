@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>morluto/rea | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔍</div><div>
+<h1>morluto/rea</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-10-19（Trendshift 3位）</span>
+<a class="gh" href="https://github.com/morluto/rea" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="morluto__rea" data-repo="morluto/rea" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントにアプリやバイナリの逆解析をさせるMCPツール</p>
+<h3>何ができるか</h3><ul><li>ソースコードの無いアプリを調べ、ある機能がどう動いているかを証拠付きで説明させ、自分のプロジェクト向けに似た機能を作らせることができる。</li><li>ネイティブバイナリ（コンパイル済みの実行ファイル）について、Hopper・Ghidra・IDA を使って疑似コード、アセンブリ、文字列、シンボル、呼び出し関係を取り出せる。</li><li>JavaScript/Electron アプリ、.NET アセンブリ、Android APK、Webサイト、ファームウェア、SQLite データベース、ネットワークキャプチャなど多様な対象を解析できる。</li><li>npx rea-agents setup で Claude Code・Codex・Cursor・Gemini CLI などのエージェントに MCP サーバーと作業手順（スキル）をまとめて登録できる。</li><li>同じ機能をターミナルの rea コマンドからも使え、結果を JSON で受け取れる。</li><li>解析はローカルで行われ、結論ごとに根拠となる証拠と限界（わからない点）が返される。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 「気に入った機能の仕組みをバイナリのレベルまで調べる」作業を、普段使っているAIエージェントに頼めるようにした点が関心を集めていると考えられる。README によればスター数は30万を超えており、DX-Ball や Notion などの実例（ショーケース）も公開されている。</p>
+<h3>どんな人に役立つか</h3><p>リバースエンジニアリング（完成品の動きから内部の仕組みを調べる技術）を学びたい人や、セキュリティ研究・相互運用のために自分が権限を持つソフトを解析したい人に向く。Ghidra などの解析ツールをAIエージェント経由で使いたい人にも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>MCP（Model Context Protocol、AIエージェントが外部ツールを呼び出すための共通プロトコル）サーバーとして動き、エージェントが解析ツールを呼び出す。</li><li>ネイティブ解析は Hopper・Ghidra・IDA などの既存の逆アセンブラ／デコンパイラを裏で操作する仕組みになっている。</li><li>Android は JADX や Apktool、パケット解析は TShark、ファームウェアは Binwalk/Unblob など、対象ごとに外部ツールと連携する。</li><li>TypeScript で書かれ、npm パッケージ rea-agents として配布されている（Node.js 22.19 以上などが必要）。</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js と npm を用意し、npx rea-agents setup を実行する。</li><li>使うエージェントを選び、提案された設定変更を確認して承認し、エージェントを再起動する。</li><li>エージェントに「Notes アプリの検索がどう動くか調べて、証拠を見せて、似た機能を作って」のように頼む。</li><li>ターミナルから使う場合は、展開済みの JavaScript/Electron アプリのディレクトリを analyze-javascript-application で解析する。</li><li>ネイティブ解析をする場合は、先に Hopper・Ghidra・IDA などのプロバイダを設定する。</li></ol>
+<pre><code>npx rea-agents setup
+npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json
+npm install --global rea-agents
+rea --help
+rea update
+npx rea-agents@latest setup</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-morluto__rea">2026-10-19</a>
+<span class="src trendshift">Trendshift 3位</span></li><li><a href="../days/2026-10-19.html#w-morluto__rea">2026-10-19 週間</a>
+<span class="src starhistory">Star History 1位</span><span>★ +232,742（週）</span></li><li><a href="../days/2026-10-20.html#d-morluto__rea">2026-10-20</a>
+<span class="src trendshift">Trendshift 4位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

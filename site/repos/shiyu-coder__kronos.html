@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shiyu-coder/Kronos | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>shiyu-coder/Kronos</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-20（GitHub Trending 12位）</span>
+<a class="gh" href="https://github.com/shiyu-coder/Kronos" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="shiyu-coder__kronos" data-repo="shiyu-coder/Kronos" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">株価などのローソク足データを予測する、金融市場向けのオープンソース基盤モデル</p>
+<h3>何ができるか</h3><ul><li>過去のローソク足（K線: 始値・高値・安値・終値・出来高などをまとめた価格データ）から、指定した未来の期間の値を予測できます。</li><li>KronosPredictor クラスが前処理・正規化・予測・逆正規化をまとめて行うので、数行のコードで予測を出せます。</li><li>温度 T や top_p、sample_count といったパラメータで、サンプリングによる確率的な予測を制御できます。</li><li>predict_batch メソッドで複数の銘柄や期間を GPU 上でまとめて並列に予測できます。</li><li>mini（410万パラメータ）から base（約1億パラメータ）までの学習済みモデルが Hugging Face Hub で公開されています。</li><li>Qlib を使った中国A株データでのファインチューニング（追加学習）とバックテスト（過去データでの戦略検証）の一連のスクリプトが付属しています。</li></ul>
+<h3>なぜ注目されているか</h3><p>README によると、金融のローソク足データ向けとしては初のオープンソース基盤モデル（大量データで事前学習し、さまざまなタスクに流用できるモデル）で、世界45以上の取引所のデータで学習されています。論文が arXiv で公開され AAAI 2026 に採択されたこと、BTC/USDT の24時間先予測を見られるライブデモがあることも紹介されています。<span class="guess">推測</span> 汎用の時系列モデルではなく、ノイズの多い金融データに特化した点が関心を集めていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>株価や暗号資産の価格予測を試したい人、クオンツ（数理的な手法で行う投資）の研究や時系列予測モデルに興味がある人に向いています。自分のデータでファインチューニングして独自のタスクに合わせたい場合にも使えます。</p>
+<h3>技術的なポイント</h3><ul><li>連続値で多次元のローソク足データ（OHLCV）を、専用のトークナイザーで階層的な離散トークン（記号の列）に量子化します。</li><li>そのトークン列で、デコーダのみの自己回帰型 Transformer（前のトークンから次のトークンを順に予測するモデル）を事前学習する2段階構成です。</li><li>モデルとトークナイザーは Hugging Face Hub から from_pretrained で読み込みます。入力できる長さ（コンテキスト長）は small と base で512、mini で2048です。</li><li>ファインチューニングは torchrun による複数 GPU での学習に対応し、トークナイザーと予測モデルを順に追加学習します。</li></ul>
+<h3>試し方</h3>
+<ol><li>Python 3.10 以上を用意し、requirements.txt の依存パッケージをインストールします。</li><li>KronosTokenizer と Kronos を Hugging Face Hub から読み込み、KronosPredictor を作成します。</li><li>open・high・low・close 列を含む pandas の DataFrame と、過去・未来のタイムスタンプを用意します。</li><li>predictor.predict を呼び出して予測結果の DataFrame を得ます。データ読み込みからグラフ描画までの完全な例は examples/prediction_example.py にあります。</li><li>自分のデータで追加学習する場合は pyqlib を入れ、finetune/config.py のパスを設定してから、データ前処理・トークナイザー学習・予測モデル学習・バックテストの順にスクリプトを実行します。</li></ol>
+<pre><code>pip install -r requirements.txt
+pip install pyqlib
+python finetune/qlib_data_preprocess.py
+torchrun --standalone --nproc_per_node=NUM_GPUS finetune/train_tokenizer.py
+torchrun --standalone --nproc_per_node=NUM_GPUS finetune/train_predictor.py
+python finetune/qlib_test.py --device cuda:0</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-20.html#d-shiyu-coder__kronos">2026-10-20</a>
+<span class="src github">GitHub Trending 12位</span><span>★ +363</span></li><li><a href="../days/2026-10-21.html#d-shiyu-coder__kronos">2026-10-21</a>
+<span class="src github">GitHub Trending 14位</span><span>★ +733</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

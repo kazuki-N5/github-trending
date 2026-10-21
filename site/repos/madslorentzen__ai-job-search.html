@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MadsLorentzen/ai-job-search | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">💼</div><div>
+<h1>MadsLorentzen/ai-job-search</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-19（GitHub Trending 1位）</span>
+<a class="gh" href="https://github.com/MadsLorentzen/ai-job-search" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="madslorentzen__ai-job-search" data-repo="MadsLorentzen/ai-job-search" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Claude Code で求人評価から応募書類作成・面接対策までこなす就活フレームワーク</p>
+<h3>何ができるか</h3><ul><li>/setup で手持ちの CV や LinkedIn のエクスポート、または対話形式のインタビューから自分のプロフィールを作れます。</li><li>/scrape で複数の求人サイトを検索し、重複を除いて自分との適合度順に一覧表示します。</li><li>/apply に求人 URL か本文を渡すと、適合度の評価、CV（職務経歴書）とカバーレターの下書き、別エージェントによるレビューと修正までを自動で行います。</li><li>/interview で応募した求人ごとに面接の準備資料を作り、模擬面接もできます。</li><li>/rank で検索結果をまとめて採点して優先順位を付け、/outcome で選考結果の記録やフォローアップメールの下書きを行います。</li><li>/add-portal で自分の国の求人サイト用の検索スキルを、/add-template で独自の CV テンプレートを追加できます。</li></ul>
+<h3>なぜ注目されているか</h3><p>作者が失職後に実際にこの仕組みで69件応募し、20件の一次面接を経て AI エンジニアとして採用されたと README に書かれています。<span class="guess">推測</span> Claude Code のコマンドやエージェントを就職活動という身近な用途に具体的に組み込んだ実例として関心を集めていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>就職・転職活動中で、応募ごとに CV やカバーレターを書き分ける手間を減らしたい人に向いています。Claude Code のスラッシュコマンドやサブエージェントを実用的なワークフローに組み込む例を知りたい人の参考にもなります。</p>
+<h3>技術的なポイント</h3><ul><li>Claude Code のスラッシュコマンド（.claude/commands）とスキル定義でワークフロー全体を組み立てています。</li><li>書類を書くエージェントと、新しいコンテキストで起動した別のレビュー用エージェントを分ける「drafter-reviewer」方式で品質を上げています。</li><li>CV は LaTeX（組版ソフト）の lualatex、カバーレターは xelatex で PDF 化し、ページ数やレイアウト崩れを確認して直すまで繰り返します。</li><li>PDF から抜き出したテキストを ATS（企業の応募者管理システム）が読むのと同じ形で確認し、連絡先の欠落や求人キーワードの網羅度をチェックします。</li><li>求人サイトの検索ツールは Bun（JavaScript ランタイム）で動く TypeScript 製の CLI で、共通の入出力ルールに従えば /scrape が自動で認識します。</li></ul>
+<h3>試し方</h3>
+<ol><li>Claude Code、Python 3.10 以上、Bun、lualatex と xelatex を含む LaTeX 環境を用意します。</li><li>リポジトリをフォークして手元に clone します（個人データを入れるならプライベートリポジトリの利用が推奨されています）。</li><li>求人サイト検索用の CLI をインストールします。</li><li>Claude Code を起動して /setup でプロフィールを作ります。</li><li>/scrape で求人を探し、/apply に求人 URL を渡して応募書類を作ります。</li></ol>
+<pre><code>gh repo fork MadsLorentzen/ai-job-search --clone
+cd ai-job-search
+python3 tools/install_portal_clis.py
+claude
+/setup
+/scrape
+/apply https://jobindex.dk/job/1234567</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-madslorentzen__ai-job-search">2026-10-19</a>
+<span class="src github">GitHub Trending 1位</span><span>★ +2,232</span></li><li><a href="../days/2026-10-20.html#d-madslorentzen__ai-job-search">2026-10-20</a>
+<span class="src github">GitHub Trending 1位</span><span>★ +3,856</span></li><li><a href="../days/2026-10-21.html#d-madslorentzen__ai-job-search">2026-10-21</a>
+<span class="src github">GitHub Trending 1位</span><span>★ +3,861</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

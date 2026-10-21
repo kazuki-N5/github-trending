@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ly05010419/MacNativeGames | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎮</div><div>
+<h1>ly05010419/MacNativeGames</h1>
+<div class="meta"><span>C</span>
+<span>初掲載 2026-10-19（Trendshift 2位）</span>
+<a class="gh" href="https://github.com/ly05010419/MacNativeGames" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="ly05010419__macnativegames" data-repo="ly05010419/MacNativeGames" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">手持ちのゼルダ新作をApple silicon Macでネイティブ実行するアプリを作るツール</p>
+<h3>何ができるか</h3><ul><li>自分が持っているゲームファイル（XCI または NSP）と prod.keys から、1本のスクリプトで macOS 用の .app を作成できる。</li><li>エミュレータではなく、ゲーム自身の ARM64 コードを Apple チップ上で直接動かす。</li><li>ベース版 1.0.0 に加え、別途用意したアップデート（NSP/NSZ）を指定して 1.1.2 や 1.4.3 のアプリも作れる。</li><li>ビルド時にゲームデータから8,000以上のシェーダーを準備してアプリに同梱し、初回起動時に事前ウォームアップする。</li><li>macOS が認識するコントローラー（DualSense や Xbox コントローラーなど）やキーボードで操作でき、MetalFX によるアップスケールやフレーム補間を切り替えられる。</li><li>リポジトリ自体にはゲームの内容を一切含まず、抽出したデータは期待されるハッシュ値と照合して不一致ならビルドを止める。</li></ul>
+<h3>なぜ注目されているか</h3><p>README によると M4 搭載の MacBook Air と Mac mini で動作確認され、シェーダーのウォームアップ後は約90FPS、メニューでは120FPSに達したと記録されている。<span class="guess">推測</span> エミュレーションではなくゲームのコードを Mac 上でネイティブ実行するという珍しいアプローチと、実際に遊べる水準の性能が注目を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>ゲームのソフトと鍵を自分で所有していて、Apple silicon Mac（macOS 26 以降）で遊びたい人に向く。ゲーム機向けバイナリを別 OS で動かす仕組みやグラフィックス API の変換に興味がある人にとっても参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>ゲームの ARM64 コードは macOS が要求する箇所だけ書き換えて直接実行し、Switch のシステムサービスは小さなホストプログラムが応答する。</li><li>ゲームの NVN グラフィックスを Metal 4（Apple のグラフィックス API）の上で再構築している。</li><li>Ryujinx 由来のシェーダートランスレータを .NET NativeAOT で事前コンパイルしたネイティブプログラムで、Maxwell GPU 向けシェーダーを SPIR-V に変換し、SPIRV-Cross で Metal Shading Language に変換する。</li><li>ランタイムは主に C と Objective-C で書かれ、音声とプリレンダリング動画には libopus と libvpx を使う。</li><li>同じ APFS ボリューム上ではファイルのクローン機能で大きなデータを共有し、ディスク使用量を抑える。</li></ul>
+<h3>試し方</h3>
+<ol><li>Xcode コマンドラインツールと Homebrew を用意し、ビルドに必要なパッケージをインストールする。</li><li>このリポジトリをダウンロードまたはクローンし、MacNativeGames フォルダでターミナルを開く。</li><li>ゲームファイルと prod.keys を指定して build_app.py を実行する（NSP の場合は --firmware か --shared-fonts でフォントも指定する）。</li><li>ゲームファイルの隣にできた Tears of the Kingdom.app を Finder から開いて遊ぶ。</li></ol>
+<pre><code>xcode-select --install
+brew install opus libvpx python@3.14
+python3.14 build_app.py ~/Games/totk.xci -k ~/keys/prod.keys
+python3.14 build_app.py ~/Games/totk.nsp -k ~/keys/prod.keys --firmware ~/Games/firmware
+python3.14 build_app.py ~/Games/totk.xci -k ~/keys/prod.keys --update ~/Games/1.1.2.nsp</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-ly05010419__macnativegames">2026-10-19</a>
+<span class="src trendshift">Trendshift 2位</span></li><li><a href="../days/2026-10-20.html#d-ly05010419__macnativegames">2026-10-20</a>
+<span class="src trendshift">Trendshift 8位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

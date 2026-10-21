@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vllm-project/vllm | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧠</div><div>
+<h1>vllm-project/vllm</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-21（GitHub Trending 15位）</span>
+<a class="gh" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="vllm-project__vllm" data-repo="vllm-project/vllm" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">大規模言語モデルを速く・安く・省メモリで動かす推論・配信エンジン</p>
+<h3>何ができるか</h3><ul><li>大規模言語モデル（LLM）の推論（学習済みモデルで文章を生成すること）と、APIとしての配信（サービング）を高いスループットで行えます。</li><li>OpenAI互換のAPIサーバーを立てられ、AnthropicのMessages APIやgRPCにも対応しています。</li><li>Hugging Face上の200以上のモデル構造に対応し、Llama・Qwen・Gemmaなどの一般的なLLM、Mixtral・DeepSeek-V3などのMoEモデル、LLaVAなどの画像も扱えるマルチモーダルモデル、埋め込みモデルなどを動かせます。</li><li>出力のストリーミング、並列サンプリングやビームサーチなどの生成方式、xgrammarやguidanceを使った構造化出力（JSONなど決まった形式での出力）、ツール呼び出しに対応しています。</li><li>テンソル並列・パイプライン並列などの分散推論で、大きなモデルを複数のGPUに分けて動かせます。</li><li>NVIDIA・AMD・IntelのGPUやx86/ARM/PowerPCのCPUに対応し、プラグインでGoogle TPU、Intel Gaudi、Huawei Ascend、Apple Siliconなども使えます。</li></ul>
+<h3>なぜ注目されているか</h3><p>UC BerkeleyのSky Computing Labで生まれ、現在は2000人を超えるコントリビューターと多数の大学・企業が開発する、最も活発なオープンソースAIプロジェクトの一つだと説明されています。PagedAttentionという独自のメモリ管理手法の論文がOSの主要国際会議（SOSP 2023）で発表されています。<span class="guess">推測</span> 自前のサーバーでLLMを安く高速に提供したい需要が大きく、新しいモデルや量子化手法への対応も早いため注目され続けていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>オープンなLLMを自分のGPUサーバーで動かし、チャットやAPIとして提供したい開発者や研究者に向いています。LLM推論の高速化やGPUメモリ管理の仕組みを学びたい人にとっても参考になります。</p>
+<h3>技術的なポイント</h3><ul><li>PagedAttentionは、注意機構（Attention）が使うキーとバリューのキャッシュ（KVキャッシュ）を、OSの仮想メモリのページングのように小さなブロック単位で管理し、GPUメモリの無駄を減らす仕組みです。</li><li>連続バッチ処理（届いたリクエストを随時まとめて処理する方式）、chunked prefill（入力の前処理を分割して行う方式）、プレフィックスキャッシュ（共通の入力部分の計算結果を再利用する仕組み）で処理効率を高めています。</li><li>FP8・INT8・INT4・GPTQ/AWQ・GGUFなど多くの量子化（数値の精度を落としてメモリと計算を節約する手法）に対応しています。</li><li>FlashAttentionやFlashInferなどの最適化済みカーネル、CUDA/HIPグラフ、torch.compileによる自動カーネル生成を使って実行を高速化しています。</li><li>投機的デコーディング（軽い方法で先の単語を予測し、本体モデルでまとめて検証して生成を速める手法）として、n-gramやEAGLEなどに対応しています。</li></ul>
+<h3>試し方</h3>
+<ol><li>uv（推奨）またはpipでvllmをインストールします。</li><li>起動を速くするため、コンパイル済みカーネルをダウンロードします。</li><li>公式ドキュメントのQuickstartに沿って、モデルを読み込んで推論やAPIサーバーを試します。</li></ol>
+<pre><code>uv pip install vllm
+vllm download-kernels</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-21.html#d-vllm-project__vllm">2026-10-21</a>
+<span class="src github">GitHub Trending 15位</span><span>★ +128</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

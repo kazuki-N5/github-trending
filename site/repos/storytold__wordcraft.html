@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>storytold/wordcraft | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📁</div><div>
+<h1>storytold/wordcraft</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-10-19（Star History 7位）</span>
+<a class="gh" href="https://github.com/storytold/wordcraft" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="storytold__wordcraft" data-repo="storytold/wordcraft" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Microsoft Word を純 Rust でクリーンルーム再実装したオープンソースのワープロ</p>
+<h3>何ができるか</h3><ul><li>Word と同じリボン、スタイル、表、変更履歴、コメント、目次・脚注・引用文献、差し込み印刷などを使える。</li><li>.docx の読み書きに加え、.odt、.rtf、.html、.md、.tex、.txt の入出力、旧 .doc の読み込み、文字を選択できる PDF への書き出しができる。</li><li>スペルチェックや文法チェックを含め、すべての機能がオフラインで動く。</li><li>日本語を含む21言語の UI に対応し、ダークモードも備える。</li><li>422 個のコマンドを、リボン・ショートカット・CLI・JSON 制御チャネル・MCP サーバー（AI エージェントがツールを呼び出すための規格）から共通で実行できる。</li></ul>
+<h3>なぜ注目されているか</h3><p>Word の操作感を再現しつつ、macOS、Windows、Linux、BSD、ブラウザで動くオープンソース実装として作られている。段落レイアウトをキャッシュし、188ページの文書でも打鍵ごとの再レイアウトが約1.4ミリ秒と高速さも打ち出している。<span class="guess">推測</span> 同じチームの PhotoCraft などと並ぶ「Crafting Apps」の一つとして、有料オフィスソフトの代替や AI エージェントからの文書操作に関心が集まっていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>Word と同じ使い勝手で無料・オフラインの文書作成環境がほしい人に向く。文書の作成や変換を CLI や AI エージェントで自動化したい人、ワープロのレイアウトエンジンの作りを学びたい人にも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>Electron や Tauri を使わず、egui（Rust の即時モード GUI ライブラリ）で GPU 描画するネイティブアプリで、WebAssembly でブラウザでも動く。</li><li>幾何・文書モデル・レイアウト・描画・エンジン・MCP・UI といった層ごとにクレートを分け、層の依存関係をチェックしている。</li><li>ラスタライズ（図形や文字をピクセルに変換する処理）に vello_cpu、PDF 出力に Krilla などを使う。</li><li>cargo xtask ci で書式チェック、clippy（Rust の静的解析ツール）、約800件のテスト、wasm ビルドなどをまとめて実行する。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリを clone し、cargo でサンプル文書付きのデスクトップアプリを起動する。</li><li>wordcraft-cli で .docx を PDF などに変換したり、テキスト抽出や構造の確認ができる。</li><li>ブラウザ版は apps/wordcraft-web で trunk serve を実行し、http://127.0.0.1:8771/?sample を開く。</li><li>ビルド済みのものは GitHub のリリースから OS に合ったインストーラーを入手する。</li></ol>
+<pre><code>git clone https://github.com/storytold/wordcraft
+cd wordcraft
+cargo run --release -p wordcraft -- --sample
+cargo run --release -p wordcraft -- report.docx
+wordcraft-cli convert report.docx report.pdf
+wordcraft-cli text report.docx
+wordcraft-cli inspect report.docx
+cd apps/wordcraft-web &amp;&amp; trunk serve
+claude mcp add wordcraft -- wordcraft-cli mcp</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#w-storytold__wordcraft">2026-10-19 週間</a>
+<span class="src starhistory">Star History 7位</span><span>★ +10,676（週）</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

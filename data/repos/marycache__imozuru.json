@@ -1,0 +1,34 @@
+{
+  "repo": "MaryCache/imozuru",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "知らない分野を原文まで芋づる式にたどって調べる Claude Code のスキル",
+  "features": [
+    "英語と日本語など2通りの探し方で、分野の用語・中心人物・発信の場・定番資料を集めた地図（map.md）を作る。",
+    "参考文献や被引用、著者、記事内のリンクを芋づる式にたどり、論文の無い分野でもブログや動画から情報を追う。",
+    "PDF・記事・YouTube の字幕などの原文を sources/ に保存し、404 やログインの壁は中身を見てはじく。",
+    "原文を要約せず、主張ごとに「どのファイルの何行目か」を示す。",
+    "原文から切り出した文を主張ごとに並べた HTML を作り、抜き書きが原文の指定行にそのまま在るかを機械で照合する。",
+    "見つけた場所（Qiita・Zenn・note・YouTube・arXiv など）の新着を RSS で取得して並べる。"
+  ],
+  "why": "推測: AIに「調べて」と頼むと検索上位の数件を要約して終わりがちな問題に対し、情報探索研究（Bates の berrypicking など）に基づく探し方をさせる点が評価されていると考えられる。要約せず原文の場所を示し、抜き書きを機械で照合する設計が、AIの言い換えや誤りを避けたい人に響いていると思われる。",
+  "whoFor": "新しい分野を一次資料（原文）にあたりながら調べたい学生や研究者、技術者に向く。論文が少ない趣味の分野（歌ってみたの MIX など）を個人の発信からたどりたい人にも使える。",
+  "tech": [
+    "スクリプトは Python 3.10 以上の標準ライブラリだけで動き、pdftotext・tesseract・yt-dlp などがあれば追加で使う。",
+    "引用をたどる chain.py は OpenAlex（論文の書誌情報を集めた無料のデータベース）の API を使い、API キーは要らない。",
+    "「答えるのに要る主張」をすべて原文で裏付けられたら止める、または2本の探索の結果が7割以上重なったら止めるという停止条件を持つ。",
+    "report.py は抜き書きの文が原文に一字一句そのまま在るかを照合し、言い換えが混ざっていればページを作らずに止まる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "skills の CLI でスキルをインストールするか、skills/imozuru/ を ~/.claude/skills/imozuru/ にコピーする。",
+      "Claude Code で「芋づる式に調べて: 〜」のように頼む。",
+      "結果は ~/research/<話題>/ に map.md・log.md・sources/・extracts.json・report.html として置かれる。",
+      "スクリプトだけ試す場合は、examples/demo を対象に report.py を実行して report.html を作る。"
+    ],
+    "commands": [
+      "npx skills add MaryCache/imozuru",
+      "python3 skills/imozuru/scripts/report.py examples/demo"
+    ]
+  }
+}

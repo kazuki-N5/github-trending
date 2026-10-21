@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>msitarzewski/agency-agents | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>msitarzewski/agency-agents</h1>
+<div class="meta"><span>Shell</span>
+<span>初掲載 2026-10-21（GitHub Trending 9位）</span>
+<a class="gh" href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="msitarzewski__agency-agents" data-repo="msitarzewski/agency-agents" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">役割と個性を持つ230超のAIエージェント定義を集めた「AIの代理店チーム」</p>
+<h3>何ができるか</h3><ul><li>フロントエンド開発者、UIデザイナー、Redditコミュニティ担当、テスト担当など、分野ごとに特化したAIエージェントの定義ファイル（Markdown）を230以上収録しています。</li><li>エンジニアリング、デザイン、広告運用、営業、マーケティング、プロダクト、テスト、セキュリティ、ゲーム開発、財務などの「部門（Division）」に分けて整理されています。</li><li>各エージェントには人格・口調、中心となる使命とワークフロー、コード例付きの成果物、成功指標がまとめて書かれています。</li><li>Claude Codeにはそのまま使え、変換スクリプトでGitHub Copilot、Gemini CLI、Cursor、Codex、OpenCode、Aider、Windsurfなど多数のツール向けの形式に変換してインストールできます。</li><li>インストールスクリプトで、使いたいツールや部門、個別のエージェントだけを選んで入れられます。</li><li>スタートアップのMVP開発や広告アカウントの引き継ぎなど、複数のエージェントを組み合わせて使う実例も紹介されています。</li></ul>
+<h3>なぜ注目されているか</h3><p>Redditのスレッドから生まれ、汎用的な「開発者として振る舞って」というプロンプトではなく、専門性・個性・成果物まで作り込んだエージェント集として育ってきたことがREADMEで紹介されています。<span class="guess">推測</span> Claude CodeやCodexなどAIコーディングツールのサブエージェント（特定の役割を任せる補助AI）機能が広まり、すぐ使える高品質な役割定義の需要が高まっていることが注目の理由と考えられます。</p>
+<h3>どんな人に役立つか</h3><p>Claude CodeやCursorなどのAIコーディングツールで、役割ごとに専門化したAIに作業を任せたい人に向いています。自分でエージェントやプロンプトを設計する際の参考資料としても使えます。</p>
+<h3>技術的なポイント</h3><ul><li>各エージェントは、名前・説明・色を書いたフロントマター（ファイル先頭のメタデータ）付きのMarkdownファイルとして定義されています。</li><li>シェルスクリプトのconvert.shが、元のMarkdownをCursor用の.mdcルール、Codex用のTOML、Kimi Code用のYAML、SKILL.mdなど各ツールの形式に変換します。</li><li>install.shはインストール済みのツールを自動検出し、--tool、--division、--agentなどのオプションで対象を絞り込めます。</li><li>--parallelオプションで変換やインストールをツールごとに並列実行でき、ジョブ数は--jobsで指定できます。</li><li>ライセンスはMITで、別途macOS・Linux・Windows向けのネイティブアプリ「Agency Agents」も提供されています。</li></ul>
+<h3>試し方</h3>
+<ol><li>最も手軽な方法として、デスクトップアプリ「Agency Agents」をダウンロードし、一覧から選んだエージェントを各ツールにインストールします。</li><li>スクリプトを使う場合は、Claude Codeならinstall.shに--tool claude-codeを付けて実行するか、使いたい部門のMarkdownを~/.claude/agents/にコピーします。</li><li>他のツールで使う場合は、先にconvert.shで各ツール向けのファイルを生成し、その後install.shでインストールします。</li><li>Claude Codeのセッションで「Frontend Developerモードを有効にしてReactコンポーネントを作って」のようにエージェントを指名して使います。</li></ol>
+<pre><code>brew install --cask msitarzewski/agency-agents/agency-agents
+./scripts/install.sh --tool claude-code
+cp engineering/*.md ~/.claude/agents/
+./scripts/convert.sh
+./scripts/install.sh
+./scripts/install.sh --tool claude-code --division engineering,security
+./scripts/install.sh --list teams</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-21.html#d-msitarzewski__agency-agents">2026-10-21</a>
+<span class="src github">GitHub Trending 9位</span><span>★ +562</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

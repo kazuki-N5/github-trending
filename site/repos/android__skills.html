@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>android/skills | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛠️</div><div>
+<h1>android/skills</h1>
+<div class="meta"><span>Kotlin</span>
+<span>初掲載 2026-10-19（GitHub Trending 10位）</span>
+<a class="gh" href="https://github.com/android/skills" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="android__skills" data-repo="android/skills" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Android開発のベストプラクティスをAIエージェントに教えるスキル集</p>
+<h3>何ができるか</h3><ul><li>developer.android.com のガイドに沿った Android 開発の手順を、AIエージェント向けのモジュール化された指示（スキル）として提供する。</li><li>Android CLI を使って、特定のスキルや全スキルをプロジェクトや検出されたエージェントにインストールできる。</li><li>Claude Code や Codex のプラグインとしても導入できる。</li><li>インストールしたスキルは、関連する作業を頼んだときにエージェントが自動で見つけて使う。</li><li>android skills update コマンドでスキルを最新に更新できる。</li></ul>
+<h3>なぜ注目されているか</h3><p>Android の公式組織が公開しているスキル集で、評価でLLMの性能が低いと分かった用途や作業手順に絞って作られている。<span class="guess">推測</span> AIエージェントにアプリ開発を任せる流れの中で、公式のお手本を直接エージェントに渡せる点が注目されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>Gemini、Claude Code、Codex などのAIエージェントを使って Android アプリを開発する人に向いている。</p>
+<h3>技術的なポイント</h3><ul><li>オープン標準の agent skills 形式に従い、各スキルはタスクの技術仕様を書いた Markdown ファイル（SKILL.md）でできている。</li><li>スキルでLLMを専門分野の情報に「グラウンディング」（根拠となる情報に結び付けること）させ、誤りを減らす狙いがある。</li><li>基本的な Jetpack Compose の書き方など、LLMがすでに得意な分野は優先していない。</li></ul>
+<h3>試し方</h3>
+<ol><li>Android CLI で使いたいスキルをプロジェクトに追加するか、--all で全スキルを検出されたエージェントに追加する。</li><li>Claude Code や Codex を使う場合は、プラグインとしてインストールすることもできる。</li><li>「アプリのUIを edge-to-edge にして」のように関連する作業を頼むと、エージェントがスキルを自動で使う。</li></ol>
+<pre><code>android skills add r8-analyzer --project=.
+android skills add --all
+android skills update --all
+android skills update wear-compose-m3
+/plugin install android-skills --marketplace android/skills
+codex plugin marketplace add android/skills
+codex plugin add android-skills@android-skills</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-android__skills">2026-10-19</a>
+<span class="src github">GitHub Trending 10位</span><span>★ +375</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

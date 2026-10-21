@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vxcontrol/pentagi | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛡️</div><div>
+<h1>vxcontrol/pentagi</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-10-19（Star History 19位）</span>
+<a class="gh" href="https://github.com/vxcontrol/pentagi" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="vxcontrol__pentagi" data-repo="vxcontrol/pentagi" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">複数の AI エージェントが自律的にペネトレーションテストを行うシステム</p>
+<h3>何ができるか</h3><ul><li>対象と目的を普通の文章で伝えると、専門分野ごとの AI エージェントのチームが作業を計画して実行する。</li><li>nmap、Metasploit、sqlmap など 20 種類以上のセキュリティツールを、隔離された Docker サンドボックス内で実行する。</li><li>調査結果やうまくいった手順を長期記憶として保存し、後の作業で再利用する。</li><li>脆弱性と攻撃手順をまとめた詳細なレポートを生成し、Markdown や PDF でダウンロードできる。</li><li>Web 検索 API や内蔵ブラウザを使って最新の情報を集められる。</li><li>Web UI に加え、REST API と GraphQL API で操作を自動化できる。</li></ul>
+<h3>なぜ注目されているか</h3><p>ペネトレーションテスト（許可を得てシステムに攻撃を試み、弱点を探す検査）を AI エージェントで自律化する、自分のサーバーで動かせるオープンソースのシステムです。OpenAI や Anthropic など 10 以上の LLM プロバイダーや、Ollama・vLLM によるローカルモデルにも対応しています。<span class="guess">推測</span> AI エージェントのセキュリティ分野への応用例として関心を集めていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>セキュリティエンジニア、ペネトレーションテスター、研究者、レッドチーム（攻撃者役として防御を検証するチーム）向けです。README では、許可を得たテストにのみ使うよう明記されています。</p>
+<h3>技術的なポイント</h3><ul><li>バックエンドは Go と GraphQL、フロントエンドは React と TypeScript で作られている。</li><li>コマンドや出力は pgvector（ベクトル検索の拡張機能）付きの PostgreSQL に保存し、記憶の検索に使う。</li><li>オプションで Graphiti と Neo4j（グラフデータベース）による知識グラフを使い、ホストやサービス、発見事項の関係を追跡できる。</li><li>小さめのオープンモデルでも安定して動くよう、実行監視とタスク計画の仕組みを備えている。</li><li>Langfuse による LLM の分析や、Grafana・Prometheus による監視と連携できる。</li></ul>
+<h3>試し方</h3>
+<ol><li>Docker と Docker Compose を用意する（最低 2 vCPU が必要）。</li><li>OS とアーキテクチャに合ったインストーラーを公式サイトからダウンロードして展開する。</li><li>対話型インストーラーを実行し、システムチェック、LLM プロバイダーや検索エンジンの設定を進める。</li><li>起動後、https://localhost:8443 にアクセスしてログインし、最初に初期パスワードを変更する。</li></ol>
+<pre><code>mkdir -p pentagi &amp;&amp; cd pentagi
+wget -O installer.zip https://pentagi.com/downloads/linux/amd64/installer-latest.zip
+unzip installer.zip
+./installer</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#w-vxcontrol__pentagi">2026-10-19 週間</a>
+<span class="src starhistory">Star History 19位</span><span>★ +5,604（週）</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

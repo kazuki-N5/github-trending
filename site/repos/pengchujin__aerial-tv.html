@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pengchujin/aerial-tv | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📺</div><div>
+<h1>pengchujin/aerial-tv</h1>
+<div class="meta"><span>Kotlin</span>
+<span>初掲載 2026-10-21（Trendshift 2位）</span>
+<a class="gh" href="https://github.com/pengchujin/aerial-tv" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="pengchujin__aerial-tv" data-repo="pengchujin/aerial-tv" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">中国向けテレビの広告だらけのホーム画面をtvOS風の広告なしランチャーに置き換えるAndroid TVアプリ</p>
+<h3>何ができるか</h3><ul><li>Apple TVのtvOSを参考にしたホーム画面で、大きな時計と壁紙の上に1行5個のアプリタイルを並べ、広告やおすすめ動画の一覧は出しません。</li><li>Xiaomi（小米）やTCLなど自社ホームしか認めないテレビでも、起動時に自動でホーム画面を乗っ取り、スタンバイ時に終了させられても復活します。</li><li>スクリーンセーバーとして、Appleのサーバーから直接再生する114本のApple TV空撮映像、写真のスライド、焼き付き防止のため毎分位置が変わる時計を選べます。</li><li>リモコンのメニューキーで開くコントロールセンターから、入力切替（HDMI・AV・アンテナ）、ネットワーク、音量・明るさ、壁紙、非表示アプリなどを操作できます。</li><li>壁紙はBingの日替わり画像、内蔵の8種類のグラデーション、自分の写真から選べ、パネルのQRコードを読み取ればスマホから写真のアップロードや設定変更ができます。</li><li>OKボタンの長押しメニューでタイルの移動、ホームからの非表示、アプリ情報の表示、アンインストールができます。</li></ul>
+<h3>なぜ注目されているか</h3><p>中国市場向けテレビの標準ホーム画面はドラマのおすすめや会員バッジで埋め尽くされており、それを広告なしのすっきりした画面に置き換えられる点が README で強調されています。root化（端末の管理者権限の取得）不要で、システムアプリを削除・無効化せず、コマンド1つで元に戻せる手軽さも特徴です。<span class="guess">推測</span> Claude CodeなどのAIエージェントにインストール作業を任せる手順まで用意している点も関心を集めていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>Xiaomi、TCL、ソニー中国版などのAndroid TV搭載テレビを使っていて、標準ホーム画面の広告やおすすめ表示にうんざりしている人に向いています。メーカー独自ファームウェアの制約下でアプリを常駐させる工夫に興味があるAndroid開発者にも参考になります。</p>
+<h3>技術的なポイント</h3><ul><li>まずHOMEロール（既定のホームアプリになる権限）を正式に申請し、それでもメーカーが自社ホームを使い続ける場合はアクセシビリティサービス（障害者支援用の画面監視機能）で前面のウィンドウだけを監視し、標準ホームが出たらAerialを呼び戻します。</li><li>通知リスナー（通知を受け取る仕組み）を登録しておくと、強制停止後や起動時にシステムが約0.5秒で再接続するため、これを利用して復活・自動起動します（通知の内容は読みません）。</li><li>ADB（PCからAndroid端末を操作するデバッグ用ツール）経由でWRITE_SECURE_SETTINGSやオーバーレイ表示などの権限を付与し、TCLではappopsで自動起動を許可します。</li><li>画面は960×540dpのキャンバスを等倍で拡大縮小して画素密度の違いを吸収し、非力なテレビのGPUに合わせて1フレームあたりの全画面描画を1回までに抑え、待機中はアニメーションを止めています。</li><li>フォーカスの動きにはばねアニメーションを使い途中で中断でき、ビルドにはJDK 17とAndroid SDK 36が必要で、ライセンスはMITです。</li></ul>
+<h3>試し方</h3>
+<ol><li>PCとテレビを同じネットワークにつなぎ、テレビの設定画面でIPアドレスを確認します。</li><li>機種ごとの手順（Xiaomiは製品型番を連打、TCLは上下左右を順に押す、標準Android TVはビルド番号を7回押すなど）で開発者モードに入り、ADBデバッグを有効にします。</li><li>PCからワンライナーのインストールスクリプトを実行し、初回接続時にテレビに出る「USBデバッグを許可しますか」で許可を選びます（TCLでは「多屏互动」のアプリ配信確認で同意します）。</li><li>手動で入れる場合はReleasesからaerial-standard.apk（ホームアプリのインストールを拒否される機種ではaerial-guard.apk）をダウンロードし、adbでインストールと権限付与を行います。</li><li>元のホーム画面に戻したいときは、スクリプトにrestoreを付けて実行します。</li></ol>
+<pre><code>curl -fsSL https://raw.githubusercontent.com/pengchujin/aerial-tv/main/tools/get.sh | KEEP_ADB=1 TV=192.168.1.20 bash
+curl -fsSL https://raw.githubusercontent.com/pengchujin/aerial-tv/main/tools/get.sh | TV=192.168.1.20 bash -s restore
+adb connect 192.168.1.20:5555
+adb install -r aerial-standard.apk
+adb shell pm grant app.orchard.tv android.permission.WRITE_SECURE_SETTINGS
+adb shell cmd notification allow_listener app.orchard.tv/app.orchard.tv.guard.RevivalListener
+adb shell appops set app.orchard.tv SYSTEM_ALERT_WINDOW allow
+adb shell am start -n app.orchard.tv/.MainActivity
+./gradlew assembleStandardRelease assembleGuardRelease
+BUILD=1 KEEP_ADB=1 TV=&lt;电视IP&gt; tools/install.sh</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-21.html#d-pengchujin__aerial-tv">2026-10-21</a>
+<span class="src trendshift">Trendshift 2位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

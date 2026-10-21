@@ -1,0 +1,35 @@
+{
+  "repo": "DietrichGebert/ponytail",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "AIエージェントに「書かずに済ませる」ベテラン開発者の考え方を与えるプロンプト",
+  "features": [
+    "コードを書く前に「本当に必要か」「既存コードにあるか」「標準ライブラリやプラットフォーム機能で済むか」などを順に確かめ、最小限の実装だけを書かせます。",
+    "入力検証、エラー処理、セキュリティ、アクセシビリティは削らず、分岐やループなどのロジックには小さなテストを1つ残させます。",
+    "/ponytail-review で、変更が触れるコードまで読んだうえで、バグ、セキュリティ、負荷、テスト不足、削れる部分をレビューします。",
+    "/ponytail-audit でリポジトリ全体を同じ観点で点検し、優先度順に何から直すべきかを示します。",
+    "Claude Code では、タスクのコスト、トークン数、作業時間、既存コードの再利用率などをプロンプトの上に表示します。",
+    "/ponytail-debt で、後回しにした箇所を示す shortcut: コメントを一覧にまとめられます。"
+  ],
+  "why": "README のベンチマークでは、スキルなしと比べてコード量が53%、時間が41%、コストが26%、トークンが45%減り、リスクのあるロジックにテストが付く割合は68%から98%に上がったとしています。リポジトリページでは16万を超えるスターを集めています。推測: AIエージェントが必要以上のコードを書きがちだという悩みに、具体的な数値で応えている点が注目の理由と考えられます。",
+  "whoFor": "Claude Code や Codex などのAIエージェントが、ライブラリを足したり部品を自作したりしてコードを膨らませがちだと感じている開発者に向いています。",
+  "tech": [
+    "本体は1つのプロンプト（skills/ponytail/SKILL.md）で、ルールファイルを読むエージェント向けに短くした AGENTS.md も用意されています。",
+    "リポジトリの残りの部分は、そのプロンプトを Claude Code、Codex、Cursor、Gemini など約20種類のエージェントに読み込ませるためのアダプタです。",
+    "ベンチマークは Claude Code 上で、実際の FastAPI + React リポジトリを含む39タスクを各5回実行して比較しています。",
+    "lite、full、ultra、off の強度を切り替えられ、表示用のデータは既定で手元の ~/.config/ponytail/band/ に保存されます。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Claude Code で、マーケットプレイスの追加とプラグインのインストールを別々のプロンプトとして実行します。",
+      "Codex の場合はコマンドでプラグインを追加し、/hooks で2つのフックを信頼してから新しいスレッドを始めます。",
+      "その他のエージェントでは、AGENTS.md をプロジェクトにコピーするか、SKILL.md をスキルとして導入します。"
+    ],
+    "commands": [
+      "/plugin marketplace add DietrichGebert/ponytail",
+      "/plugin install ponytail@ponytail",
+      "codex plugin marketplace add DietrichGebert/ponytail",
+      "codex plugin add ponytail@ponytail"
+    ]
+  }
+}

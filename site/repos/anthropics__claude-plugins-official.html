@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>anthropics/claude-plugins-official | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧩</div><div>
+<h1>anthropics/claude-plugins-official</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-19（GitHub Trending 2位）</span>
+<a class="gh" href="https://github.com/anthropics/claude-plugins-official" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="anthropics__claude-plugins-official" data-repo="anthropics/claude-plugins-official" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Anthropic が管理する Claude Code 公式プラグインのマーケットプレイス</p>
+<h3>何ができるか</h3><ul><li>Claude Code のプラグインシステムから、このマーケットプレイスに載っているプラグインを直接インストールできます。</li><li>/plugins に Anthropic 自身が開発・保守するプラグイン、/external_plugins にパートナーやコミュニティ製のプラグインがまとめられています。</li><li>Claude Code の /plugin &gt; Discover 画面からプラグインを探せます。</li><li>外部の開発者は申請フォームからプラグインを提出でき、品質とセキュリティの基準を満たせば掲載されます。</li><li>SKILL.md だけを持つリポジトリも、マーケットプレイス側の設定でスキル集プラグインとして登録できます。</li></ul>
+<h3>なぜ注目されているか</h3><p>Claude Code を作っている Anthropic 自身が公式に管理するプラグインの一覧です。<span class="guess">推測</span> 公式の配布先なので、Claude Code の機能を広げたい利用者がまず参照する場所になっていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>Claude Code に外部サービス連携や追加コマンドを入れたい利用者に役立ちます。自作プラグインを作りたい人は、構成の見本として /plugins/example-plugin を参考にできます。</p>
+<h3>技術的なポイント</h3><ul><li>各プラグインは .claude-plugin/plugin.json（必須のメタデータ）を持ち、必要に応じて .mcp.json（MCP サーバーの設定）、commands、agents、skills を含む決まった構成になっています。</li><li>MCP（Model Context Protocol、AI に外部ツールをつなぐための標準仕様）のサーバー設定をプラグインに含められます。</li><li>マーケットプレイスの name は一度公開したら変えない識別子で、どうしても改名するときは marketplace.json の renames に旧名と新名を書くと既存のインストールが自動で移行されます。</li><li>strict: false と skills 配列を使うと、plugin.json の無いリポジトリのスキルを直接登録できます。</li></ul>
+<h3>試し方</h3>
+<ol><li>Claude Code で /plugin install コマンドにプラグイン名を付けて実行します。</li><li>または /plugin &gt; Discover からプラグインを探してインストールします。</li><li>インストール前に、そのプラグインが信頼できるかを各プラグインのホームページで確認します。</li></ol>
+<pre><code>/plugin install {plugin-name}@claude-plugins-official</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-anthropics__claude-plugins-official">2026-10-19</a>
+<span class="src github">GitHub Trending 2位</span><span>★ +1,175</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

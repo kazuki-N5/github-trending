@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wshobson/agents | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧩</div><div>
+<h1>wshobson/agents</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-21（GitHub Trending 12位）</span>
+<a class="gh" href="https://github.com/wshobson/agents" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="wshobson__agents" data-repo="wshobson/agents" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Claude CodeやCodexなど複数のAIコーディングツールで共通に使えるプラグイン集</p>
+<h3>何ができるか</h3><ul><li>Claude Code、OpenAI Codex CLI、Cursor、OpenCode、Antigravity CLI、GitHub Copilot、Piの7種類のAIコーディングツール（README では「ハーネス」と呼ぶ）で同じプラグイン群を使えます。</li><li>94個のプラグイン（ローカル92個と外部2個）を収録し、202のエージェント、185のスキル、105のコマンドを含みます。</li><li>Python・JavaScript/TypeScript開発、コードレビュー、テスト、インフラ、セキュリティなど用途別のプラグインを必要なものだけ選んでインストールできます。</li><li>Claude CodeやCodex CLIではマーケットプレイス（プラグインの配布元）として登録し、コマンド1つでプラグインを追加できます。</li><li>gh skill や npx skills を使えば、リポジトリをクローンせずに個別のスキルだけをインストールできます。</li><li>plugin-evalというツールで、モデルを呼ばずにスキルを静的にチェックできます（LLMによる採点やモンテカルロ法による評価は実験的機能です）。</li></ul>
+<h3>なぜ注目されているか</h3><p>AIコーディングツールが次々に登場する中で、エージェントやスキルを1つのMarkdownの原本で管理し、各ツール向けに変換して使い回せる点が特徴です。<span class="guess">推測</span> 200を超えるエージェントや180を超えるスキルがすぐ使える規模の大きさと、Claude Code以外の主要ツールにも対応範囲を広げたことが関心を集めていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>Claude CodeやCodex CLI、Cursorなどを日常的に使い、コードレビューやテスト、セキュリティチェックといった作業を専門のサブエージェントに任せたい開発者に役立ちます。複数のAIコーディングツールを併用していて、設定やプロンプトを共通化したい人にも向いています。</p>
+<h3>技術的なポイント</h3><ul><li>プラグインは関連するエージェント（作業を任される専門のサブエージェント用の指示）、スキル（必要なときに読み込まれる手引きや参考資料）、コマンド（名前を付けて呼び出す作業手順）をまとめた単位で、plugins/ 以下に置かれています。</li><li>原本はClaude Codeのプラグイン形式のMarkdownで1つだけ管理し、アダプタ（形式を変換するプログラム）が各ツール用の形式を生成します。たとえばCodex向けにはTOML形式のエージェントを生成し、コマンドはスキルやプロンプトテンプレートに変換されます。</li><li>エージェントには opus・sonnet・haiku・inherit などのモデル別名を指定し、アダプタが各ツールのモデル設定や権限設定に対応付けます。</li><li>Codex向けの生成物では、8KBの上限に収まるよう長すぎるスキル本文を参照ファイルに分割します。</li><li>uvとPython 3.12以上を使い、make generate-all や make validate STRICT=1 でプラグイン構造や生成物、ドキュメントを検証します。</li></ul>
+<h3>試し方</h3>
+<ol><li>Claude Codeの中でマーケットプレイスを登録し、Python開発用プラグインをインストールします。</li><li>Claudeに作業を頼むときにPython用エージェントを使うよう指示するか、プラグインの雛形作成コマンドを実行します。</li><li>Codex CLIを使う場合はターミナルからマーケットプレイスを追加してプラグインをインストールします。</li><li>スキルだけ欲しい場合は gh skill（GitHub CLI 2.90以上）か npx skills（Node.jsとnpmが必要）で個別にインストールします。</li><li>OpenCode、Antigravity CLI、GitHub Copilot、Piではuvと Python 3.12以上を用意し、リポジトリをクローンして各ツール用のmakeターゲットを実行します（Piのエージェントにはsubagent拡張が必要です）。</li></ol>
+<pre><code>/plugin marketplace add wshobson/agents
+/plugin install python-development@claude-code-workflows
+/python-development:python-scaffold Create a FastAPI service with tests
+codex plugin marketplace add wshobson/agents
+codex plugin add python-development@claude-code-workflows
+gh skill install wshobson/agents python-testing-patterns
+npx skills add wshobson/agents --skill python-testing-patterns
+gh repo clone wshobson/agents ~/agents
+cd ~/agents
+make install-opencode
+make install-antigravity
+make install-copilot
+make install-pi</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-21.html#d-wshobson__agents">2026-10-21</a>
+<span class="src github">GitHub Trending 12位</span><span>★ +93</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

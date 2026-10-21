@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stablyai/orca | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>stablyai/orca</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-10-19（GitHub Trending 7位）</span>
+<a class="gh" href="https://github.com/stablyai/orca" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="stablyai__orca" data-repo="stablyai/orca" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">複数のAIコーディングエージェントを並列に動かして管理するデスクトップアプリ</p>
+<h3>何ができるか</h3><ul><li>Codex、Claude Code、OpenCode などのエージェントを、それぞれ独立した git worktree（同じリポジトリを別フォルダで同時に作業できる仕組み）で並べて実行できる。</li><li>1つのプロンプトを複数のエージェントに同時に投げ、結果を比べて良いものをマージできる。</li><li>スマホのコンパニオンアプリから、エージェントの完了通知を受けたり追加の指示を送ったりできる。</li><li>AIが出した差分の行にコメントを付けてエージェントに送り返し、レビューからコミットまでアプリ内で完結できる。</li><li>SSH 経由でリモートマシン上のエージェントを動かせ、自動再接続やポートフォワーディングにも対応する。</li><li>GitHub の PR・Issue や Linear のタスクをアプリ内で閲覧し、そこから worktree を作成できる。</li></ul>
+<h3>なぜ注目されているか</h3><p>ターミナルで動くCLIエージェントならどれでも動かせ、多数のエージェントを1か所でまとめて追跡できる点が特徴として挙げられている。<span class="guess">推測</span> 複数のエージェントを同時並行で使う開発スタイルが広がっており、その管理を楽にするツールとして注目されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>複数のAIコーディングエージェントを同時に走らせて作業を進めたい開発者や、外出先からもエージェントの進み具合を確認したい人に向いている。</p>
+<h3>技術的なポイント</h3><ul><li>各エージェントの作業を git worktree で分離し、互いの変更がぶつからないようにしている。</li><li>WebGL 描画のターミナルを内蔵し、無制限の画面分割や再起動後も残るスクロールバックを備える。</li><li>実際の Chromium ウィンドウ上でUI要素をクリックすると、その HTML・CSS・切り抜き画像をエージェントのプロンプトへ送る Design Mode がある。</li><li>orca worktree create などのコマンドを持つ Orca CLI があり、エージェント自身が Orca を操作できる。</li><li>モバイルアプリとデスクトップをつなぐリレーサーバーも cloud/ ディレクトリに含まれている。</li></ul>
+<h3>試し方</h3>
+<ol><li>onOrca.dev または GitHub の Releases から、自分のOS向けのデスクトップアプリをダウンロードしてインストールする。</li><li>macOS では Homebrew、Arch Linux では AUR からもインストールできる。</li><li>スマホからも操作したい場合は、iOS の App Store または Android の APK からコンパニオンアプリを入れ、デスクトップアプリとペアリングする。</li></ol>
+<pre><code>brew install --cask stablyai/orca/orca
+yay -S stably-orca-bin</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-stablyai__orca">2026-10-19</a>
+<span class="src github">GitHub Trending 7位</span><span>★ +1,146</span></li><li><a href="../days/2026-10-19.html#w-stablyai__orca">2026-10-19 週間</a>
+<span class="src starhistory">Star History 12位</span><span>★ +6,537（週）</span></li><li><a href="../days/2026-10-20.html#d-stablyai__orca">2026-10-20</a>
+<span class="src github">GitHub Trending 6位</span><span>★ +1,590</span></li><li><a href="../days/2026-10-21.html#d-stablyai__orca">2026-10-21</a>
+<span class="src github">GitHub Trending 3位</span><span>★ +1,565</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

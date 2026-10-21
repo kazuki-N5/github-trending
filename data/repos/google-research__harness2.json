@@ -1,0 +1,43 @@
+{
+  "repo": "google-research/harness2",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "AIエージェントを動かす周辺の仕組み（ハーネス）を再帰的に自動改善するフレームワーク",
+  "features": [
+    "モデルの重みを変えずに、エージェントのハーネス（プロンプト・ツール・メモリ・スキル・オーケストレーションなど、モデルをエージェントとして動かす周辺システム）を自動で改良する。",
+    "タスク単位の再帰では、編集案の提案（Propose）、同じタスクでの効果の試行（Probe）、実行結果の比較からの合成（Compose）を正解データなしで行う。",
+    "ハーネス改善レベルの再帰では、採用されたハーネスと根拠のある教訓を永続的な「改善用ハーネス」に蓄積し、次のタスクの改良に活かす。",
+    "システムプロンプト、ガードレール、メモリ、ツールガイダンス、サブエージェント、スキル、スクリプト、プラグインの8つの構成要素を編集対象にできる。",
+    "複数の候補を広く探索する並列再帰と、改良を段階的に深める逐次再帰の2つのモードを選べる。",
+    "JobBench、LAB（法律業務）、WorkBuddy-Bench（オフィス・Web・コード）の3つのベンチマークを実行・採点・レポートできる。"
+  ],
+  "why": "README によると、1回の Harness² ステップで GLM-5 と Gemini 3.5 Flash の性能が元のハーネスより向上し、WorkBuddy-Bench で最大11.5ポイント、JobBench で4.5ポイント、LAB の部分合格率で11.8ポイント改善したとされる。推測: Google Research による論文付きの公開で、モデルを再学習せずにエージェントを強化できる手法として関心を集めていると考えられる。",
+  "whoFor": "AIエージェントの研究者や、エージェントのプロンプトやツール構成の調整を自動化したい開発者に向く。論文の実験を再現したい人にも役立つ。",
+  "tech": [
+    "エージェントの実行器（executor）として OpenCode と Codex を切り替えて使える（--substrate cx で Codex）。",
+    "モデル呼び出しには Vertex AI（Google Cloud の AI サービス）を使い、Google Cloud CLI で認証する。",
+    "Python 3.12 と uv（高速な Python パッケージ管理ツール）でインストールし、harness2・harness2-setup・harness2-judge などの CLI コマンドを提供する。",
+    "ローカルデモは決定的な（毎回同じ結果になる）エディタと実際の Python 実行で両方の再帰モードを動かし、モデルの認証情報なしで試せる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Linux 上で Python 3.12 と uv を用意し、リポジトリのルートで仮想環境を作ってインストールする。",
+      "harness2-demo を実行し、認証情報なしで動くローカルデモで両方の再帰モードを確認する。",
+      "モデルを使うベンチマークを試す場合は Node.js 20 以上と Google Cloud CLI を入れ、.env に Vertex AI のプロジェクトとモデル ID を設定する。",
+      "harness2-setup でベンチマークを導入し、少数のタスクで実行してから judge と report で評価・集計する（API 費用がかかる点に注意）。"
+    ],
+    "commands": [
+      "uv venv --python 3.12 .venv",
+      "source .venv/bin/activate",
+      "uv pip install -e '.[render]'",
+      "harness2-demo --output runs/demo --k 2",
+      "cp .env.example .env",
+      "gcloud auth application-default login",
+      "harness2-setup lab",
+      "harness2-check --bench lab",
+      "harness2 --bench lab --k 1 --mode parallel --only-domains antitrust-competition --max-tasks 1",
+      "harness2-judge --bench lab --k 1 --mode parallel",
+      "harness2-report --bench lab --k 1 --mode parallel"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>anomalyco/opencode | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>anomalyco/opencode</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-10-19（GitHub Trending 3位）</span>
+<a class="gh" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="anomalyco__opencode" data-repo="anomalyco/opencode" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ターミナルで動くオープンソースの AI コーディングエージェント</p>
+<h3>何ができるか</h3><ul><li>ターミナル上の画面（TUI）で AI と対話しながらコードを書いたり直したりできます。</li><li>Tab キーで、何でもできる開発用の build エージェントと、読み取り専用の plan エージェントを切り替えられます。</li><li>plan エージェントは標準でファイル編集を拒否し、bash コマンドの実行前に許可を求めるので、知らないコードを調べるときに安全です。</li><li>複雑な検索や多段階の作業には general サブエージェントを @general で呼び出せます。</li><li>ターミナル版に加えて、macOS・Windows・Linux 向けのデスクトップアプリ（ベータ版）もあります。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Claude Code のような AI コーディングエージェントをオープンソースで使える選択肢として支持されていると考えられます。npm、Homebrew、pacman、Nix など多くの方法でインストールでき、README も20以上の言語に翻訳されています。</p>
+<h3>どんな人に役立つか</h3><p>ターミナル中心で開発していて、AI にコードの調査や修正を手伝ってほしい人に向いています。いきなり編集させず、まず読み取り専用で既存のコードを分析させたい場面にも使えます。</p>
+<h3>技術的なポイント</h3><ul><li>TypeScript で書かれていて、npm パッケージ @opencode/cli として配布されています。</li><li>エージェントごとに権限を設定でき、ファイル編集やコマンド実行の可否を分けています。</li><li>インストールスクリプトは OPENCODE_INSTALL_DIR、XDG_BIN_DIR、$HOME/bin、$HOME/.opencode/bin の優先順でインストール先を決めます。</li></ul>
+<h3>試し方</h3>
+<ol><li>インストールスクリプトかパッケージマネージャーで opencode をインストールします（0.1.x より古い版は先に削除します）。</li><li>ターミナルで opencode を起動し、Tab キーで build と plan のエージェントを切り替えて使います。</li><li>デスクトップアプリを使う場合は opencode.ai/download からダウンロードします。</li></ol>
+<pre><code>curl -fsSL https://opencode.ai/v2/install | bash
+npm i -g @opencode/cli@latest
+brew install anomalyco/tap/opencode-v2
+brew install opencode
+sudo pacman -S opencode
+paru -S opencode-beta
+mise use -g opencode
+nix run github:anomalyco/opencode
+brew install --cask opencode-desktop</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-anomalyco__opencode">2026-10-19</a>
+<span class="src github">GitHub Trending 3位</span><span>★ +1,414</span></li><li><a href="../days/2026-10-20.html#d-anomalyco__opencode">2026-10-20</a>
+<span class="src github">GitHub Trending 2位</span><span>★ +1,311</span></li><li><a href="../days/2026-10-21.html#d-anomalyco__opencode">2026-10-21</a>
+<span class="src github">GitHub Trending 8位</span><span>★ +1,240</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

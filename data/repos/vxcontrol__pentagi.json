@@ -1,0 +1,37 @@
+{
+  "repo": "vxcontrol/pentagi",
+  "language": "Go",
+  "readme": true,
+  "oneLiner": "複数の AI エージェントが自律的にペネトレーションテストを行うシステム",
+  "features": [
+    "対象と目的を普通の文章で伝えると、専門分野ごとの AI エージェントのチームが作業を計画して実行する。",
+    "nmap、Metasploit、sqlmap など 20 種類以上のセキュリティツールを、隔離された Docker サンドボックス内で実行する。",
+    "調査結果やうまくいった手順を長期記憶として保存し、後の作業で再利用する。",
+    "脆弱性と攻撃手順をまとめた詳細なレポートを生成し、Markdown や PDF でダウンロードできる。",
+    "Web 検索 API や内蔵ブラウザを使って最新の情報を集められる。",
+    "Web UI に加え、REST API と GraphQL API で操作を自動化できる。"
+  ],
+  "why": "ペネトレーションテスト（許可を得てシステムに攻撃を試み、弱点を探す検査）を AI エージェントで自律化する、自分のサーバーで動かせるオープンソースのシステムです。OpenAI や Anthropic など 10 以上の LLM プロバイダーや、Ollama・vLLM によるローカルモデルにも対応しています。推測: AI エージェントのセキュリティ分野への応用例として関心を集めていると考えられます。",
+  "whoFor": "セキュリティエンジニア、ペネトレーションテスター、研究者、レッドチーム（攻撃者役として防御を検証するチーム）向けです。README では、許可を得たテストにのみ使うよう明記されています。",
+  "tech": [
+    "バックエンドは Go と GraphQL、フロントエンドは React と TypeScript で作られている。",
+    "コマンドや出力は pgvector（ベクトル検索の拡張機能）付きの PostgreSQL に保存し、記憶の検索に使う。",
+    "オプションで Graphiti と Neo4j（グラフデータベース）による知識グラフを使い、ホストやサービス、発見事項の関係を追跡できる。",
+    "小さめのオープンモデルでも安定して動くよう、実行監視とタスク計画の仕組みを備えている。",
+    "Langfuse による LLM の分析や、Grafana・Prometheus による監視と連携できる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Docker と Docker Compose を用意する（最低 2 vCPU が必要）。",
+      "OS とアーキテクチャに合ったインストーラーを公式サイトからダウンロードして展開する。",
+      "対話型インストーラーを実行し、システムチェック、LLM プロバイダーや検索エンジンの設定を進める。",
+      "起動後、https://localhost:8443 にアクセスしてログインし、最初に初期パスワードを変更する。"
+    ],
+    "commands": [
+      "mkdir -p pentagi && cd pentagi",
+      "wget -O installer.zip https://pentagi.com/downloads/linux/amd64/installer-latest.zip",
+      "unzip installer.zip",
+      "./installer"
+    ]
+  }
+}

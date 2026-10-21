@@ -1,0 +1,38 @@
+{
+  "repo": "Comfy-Org/ComfyUI",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "ノードをつないで画像・動画・音声などを生成するモジュール式の生成AIエンジン",
+  "features": [
+    "ノードグラフ（処理の部品を線でつなぐ視覚的な画面）で、画像・動画・音声・3D・テキストの生成ワークフローをコードを書かずに組み立てて再利用できる。",
+    "Stable Diffusion 1.5/SDXL/SD3.5、Flux、Qwen Image、Wan、LTX-Video、ACE-Step、Hunyuan3D、Gemma、Qwen3 など、最新のオープンモデルを幅広くネイティブで扱える。",
+    "インペイント、アウトペイント、マスク合成、モデルマージ、アップスケール、フレーム補間、セグメンテーション、深度推定などの機能が組み込まれている。",
+    "ワークフローを JSON で保存・読み込みでき、生成した PNG などをドラッグするとシードを含む完全なワークフローを復元できる。",
+    "サブグラフ、テンプレート、App Mode（複雑なワークフローをシンプルなUIとして公開する機能）、ローカル API でアプリケーションに組み込める。",
+    "カスタムノードで機能を拡張でき、ComfyUI-Manager でカスタムノードのインストールや更新を管理できる。"
+  ],
+  "why": "README では、ローカルの一般向けハードウェアに重点を置いた拡散モデル向けの推論エンジンとして最も最適化されていると主張しており、非同期の重みストリーミングにより VRAM 4GB と RAM 8GB でも大きなオープンモデルを比較的速く動かせるとしている。推測: 新しいオープンモデルへの対応が早く、ノード方式で細かく制御できる点がクリエイターや開発者に支持されていると考えられる。",
+  "whoFor": "画像・動画生成AIを手元の PC で細かく制御しながら使いたい人や、生成処理をワークフローとして組んで API 経由で制作パイプラインに組み込みたい人に向く。Windows・Linux・macOS に対応し、NVIDIA・AMD・Intel・Apple Silicon・Ascend など幅広い GPU で動く。",
+  "tech": [
+    "Python と PyTorch（深層学習ライブラリ）で実装され、CUDA・ROCm・XPU など各 GPU 向けの PyTorch を使って動作する。",
+    "グラフのうち出力に必要な部分だけを実行し、前回から変わった部分とその依存先だけを再実行する部分再実行の仕組みを持つ。",
+    "非同期キュー、VRAM/RAM の賢い管理、モデルのオフロード（使わないモデルをGPUメモリから退避すること）、量子化モデル対応で効率よくローカル実行する。",
+    "フロントエンドは別リポジトリ（ComfyUI_frontend）で TypeScript/Vue により開発され、ビルド済みファイルが PyPI パッケージとして本体に取り込まれる。",
+    "コア自体は要求しない限り何もダウンロードせず、--offline オプションで有料の API ノードを無効化して完全オフラインで動かせる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "初めての人は公式サイトからデスクトップアプリ（Windows・macOS）をダウンロードするのが最も簡単とされている。",
+      "手動インストールではリポジトリを git clone し、GPU に合った PyTorch をインストールする。",
+      "モデルのチェックポイント（ckpt/safetensors ファイル）を models/checkpoints に、VAE を models/vae に置く。",
+      "ComfyUI フォルダで依存パッケージをインストールし、python main.py で起動する。"
+    ],
+    "commands": [
+      "pip install comfy-cli",
+      "comfy install",
+      "pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu130",
+      "pip install -r requirements.txt",
+      "python main.py"
+    ]
+  }
+}

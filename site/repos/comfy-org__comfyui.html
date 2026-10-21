@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comfy-Org/ComfyUI | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🖼️</div><div>
+<h1>Comfy-Org/ComfyUI</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-19（GitHub Trending 13位）</span>
+<a class="gh" href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="comfy-org__comfyui" data-repo="Comfy-Org/ComfyUI" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ノードをつないで画像・動画・音声などを生成するモジュール式の生成AIエンジン</p>
+<h3>何ができるか</h3><ul><li>ノードグラフ（処理の部品を線でつなぐ視覚的な画面）で、画像・動画・音声・3D・テキストの生成ワークフローをコードを書かずに組み立てて再利用できる。</li><li>Stable Diffusion 1.5/SDXL/SD3.5、Flux、Qwen Image、Wan、LTX-Video、ACE-Step、Hunyuan3D、Gemma、Qwen3 など、最新のオープンモデルを幅広くネイティブで扱える。</li><li>インペイント、アウトペイント、マスク合成、モデルマージ、アップスケール、フレーム補間、セグメンテーション、深度推定などの機能が組み込まれている。</li><li>ワークフローを JSON で保存・読み込みでき、生成した PNG などをドラッグするとシードを含む完全なワークフローを復元できる。</li><li>サブグラフ、テンプレート、App Mode（複雑なワークフローをシンプルなUIとして公開する機能）、ローカル API でアプリケーションに組み込める。</li><li>カスタムノードで機能を拡張でき、ComfyUI-Manager でカスタムノードのインストールや更新を管理できる。</li></ul>
+<h3>なぜ注目されているか</h3><p>README では、ローカルの一般向けハードウェアに重点を置いた拡散モデル向けの推論エンジンとして最も最適化されていると主張しており、非同期の重みストリーミングにより VRAM 4GB と RAM 8GB でも大きなオープンモデルを比較的速く動かせるとしている。<span class="guess">推測</span> 新しいオープンモデルへの対応が早く、ノード方式で細かく制御できる点がクリエイターや開発者に支持されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>画像・動画生成AIを手元の PC で細かく制御しながら使いたい人や、生成処理をワークフローとして組んで API 経由で制作パイプラインに組み込みたい人に向く。Windows・Linux・macOS に対応し、NVIDIA・AMD・Intel・Apple Silicon・Ascend など幅広い GPU で動く。</p>
+<h3>技術的なポイント</h3><ul><li>Python と PyTorch（深層学習ライブラリ）で実装され、CUDA・ROCm・XPU など各 GPU 向けの PyTorch を使って動作する。</li><li>グラフのうち出力に必要な部分だけを実行し、前回から変わった部分とその依存先だけを再実行する部分再実行の仕組みを持つ。</li><li>非同期キュー、VRAM/RAM の賢い管理、モデルのオフロード（使わないモデルをGPUメモリから退避すること）、量子化モデル対応で効率よくローカル実行する。</li><li>フロントエンドは別リポジトリ（ComfyUI_frontend）で TypeScript/Vue により開発され、ビルド済みファイルが PyPI パッケージとして本体に取り込まれる。</li><li>コア自体は要求しない限り何もダウンロードせず、--offline オプションで有料の API ノードを無効化して完全オフラインで動かせる。</li></ul>
+<h3>試し方</h3>
+<ol><li>初めての人は公式サイトからデスクトップアプリ（Windows・macOS）をダウンロードするのが最も簡単とされている。</li><li>手動インストールではリポジトリを git clone し、GPU に合った PyTorch をインストールする。</li><li>モデルのチェックポイント（ckpt/safetensors ファイル）を models/checkpoints に、VAE を models/vae に置く。</li><li>ComfyUI フォルダで依存パッケージをインストールし、python main.py で起動する。</li></ol>
+<pre><code>pip install comfy-cli
+comfy install
+pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu130
+pip install -r requirements.txt
+python main.py</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-comfy-org__comfyui">2026-10-19</a>
+<span class="src github">GitHub Trending 13位</span><span>★ +154</span></li><li><a href="../days/2026-10-20.html#d-comfy-org__comfyui">2026-10-20</a>
+<span class="src github">GitHub Trending 4位</span><span>★ +1,011</span></li><li><a href="../days/2026-10-21.html#d-comfy-org__comfyui">2026-10-21</a>
+<span class="src github">GitHub Trending 5位</span><span>★ +1,206</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

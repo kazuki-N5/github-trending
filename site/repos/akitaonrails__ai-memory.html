@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>akitaonrails/ai-memory | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧠</div><div>
+<h1>akitaonrails/ai-memory</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-10-19（GitHub Trending 6位）</span>
+<a class="gh" href="https://github.com/akitaonrails/ai-memory" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="akitaonrails__ai-memory" data-repo="akitaonrails/ai-memory" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">複数のAIコーディングエージェントで共有できる長期記憶サーバー</p>
+<h3>何ができるか</h3><ul><li>Claude Code、Codex、Cursor、Gemini CLI など20種類以上のエージェントが1つの記憶を共有し、途中で別のエージェントに作業を引き継げる。</li><li>引き継ぎ（ハンドオフ）は型付きのプロトコルで、どこまで進んだか・何が失敗したか・何が未解決かを次のエージェントに渡す。</li><li>ライフサイクルフック（エージェントの動作の節目で呼ばれる仕組み）でプロンプトやツール呼び出しを自動記録し、セッション終了時に読みやすいページへまとめる。</li><li>記憶は自分で動かすサーバーに置くため、別のマシンやチームのメンバーとも共有でき、複数ユーザー認証や監査ログも備える。</li><li>使われていない記憶は設定したスケジュールで徐々に薄れ、よく参照される記憶は長く残るなど、LLMを使わずに記憶を整理できる。</li><li>全文検索・エンティティ・リンク（必要ならベクトル検索も）を組み合わせて過去の記憶を検索できる。</li></ul>
+<h3>なぜ注目されているか</h3><p>各エージェントの記憶機能は1台のマシン・1つのエージェントに閉じているという共通の制限があり、それを取り払うことを目指している。<span class="guess">推測</span> 複数ベンダーのコーディングエージェントを使い分ける人が増えており、ツールを切り替えても文脈を説明し直さずに済む点が評価されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>Claude Code や Codex など複数のAIコーディングエージェントを切り替えて使う開発者や、エージェントが得た知識をチームで共有したい開発チームに向いている。</p>
+<h3>技術的なポイント</h3><ul><li>記憶の本体は git で管理されたプレーンな Markdown ファイルのWikiで、データベースはそこから再構築できる派生インデックスとして扱う。</li><li>既定の動作ではLLMを一切呼ばず、記録・検索・引き継ぎがAPIキーなしで動く。</li><li>Rust製の単一の自己完結バイナリとして配布される。</li><li>MCP（エージェントに外部ツールをつなぐための共通プロトコル）への登録とライフサイクルフックで各エージェントと連携する。</li><li>LLMを設定すると、アイドル時に古いメモ群を1つのページに書き直すオプトインの「dream」処理も使える。</li></ul>
+<h3>試し方</h3>
+<ol><li>インストールスクリプトでバイナリを取得する。</li><li>ai-memory setup を実行すると、データディレクトリとトークンの作成、ユーザー単位のサービス起動、見つかったエージェントへのMCP・フック登録がまとめて行われる。</li><li>エージェントを再起動し、「このプロジェクトについて何を覚えている？」と尋ねて動作を確認する。</li></ol>
+<pre><code>curl -fsSL https://github.com/akitaonrails/ai-memory/releases/latest/download/install.sh | sh
+ai-memory setup
+irm https://github.com/akitaonrails/ai-memory/releases/latest/download/install.ps1 | iex
+claude plugin marketplace add akitaonrails/ai-memory &amp;&amp; claude plugin install ai-memory@ai-memory
+codex plugin marketplace add akitaonrails/ai-memory &amp;&amp; codex plugin add ai-memory@ai-memory</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-akitaonrails__ai-memory">2026-10-19</a>
+<span class="src github">GitHub Trending 6位</span><span>★ +512</span></li><li><a href="../days/2026-10-20.html#d-akitaonrails__ai-memory">2026-10-20</a>
+<span class="src github">GitHub Trending 3位</span><span>★ +666</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

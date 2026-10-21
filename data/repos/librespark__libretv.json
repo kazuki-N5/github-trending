@@ -1,0 +1,39 @@
+{
+  "repo": "LibreSpark/LibreTV",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "複数の動画配信元をまとめて検索・視聴できる、自分で建てる動画サイト",
+  "features": [
+    "複数の動画収集サイト（采集站）をサーバー側で並列に検索し、結果をまとめて表示する。",
+    "同じ名前の作品を1枚のカードにまとめ、配信元を比べて選べる。",
+    "HLS（動画を細かく分割して配信する方式）の再生に対応し、広告部分の除去、自動連続再生、倍速、ショートカットキーを使える。",
+    "M3U 形式の再生リストを読み込み、ライブ配信や IPTV のチャンネルを番組表（EPG）付きで視聴できる。",
+    "視聴の進み具合と履歴をブラウザ内の IndexedDB に保存し、秒単位で続きから再生できる。",
+    "配信元の一覧を JSON で書き出して共有したり、他人の一覧や TVBOX の設定を購読して取り込んだりできる。"
+  ],
+  "why": "Docker で手早く動画まとめサイトを立てられることをうたっており、Fork 数は約 2.9 万と Star 数を上回っています。推測: 自分用のサイトを立てるために Fork する利用者や、派生プロジェクトが多いことが注目度につながっていると考えられます。",
+  "whoFor": "自分のサーバーで動画検索・視聴サイトを運営したい人に向いています。Next.js を使った実用的な Web アプリの構成や、SSRF 対策などのセキュリティ実装を学ぶ題材としても使えます。",
+  "tech": [
+    "Next.js 15（App Router）、TypeScript、Tailwind CSS で作られている。",
+    "動画プレイヤーには ArtPlayer と hls.js を使っている。",
+    "サーバー側のプロキシに SSRF 対策（サーバーを踏み台にして内部ネットワークへアクセスさせる攻撃への防御）を組み込み、内部アドレスへのアクセスを拒否する。",
+    "PWA（Web アプリをアプリのようにインストールできる仕組み）に対応している。",
+    "Docker イメージは linux/amd64 と linux/arm64 の両方に対応し、GHCR と Docker Hub で配布されている。"
+  ],
+  "tryIt": {
+    "steps": [
+      ".env ファイルにアクセス用パスワード（PASSWORD）を設定する。",
+      "Docker Compose で公開済みのイメージを取得して起動する（ソースからビルドしてもよい）。",
+      "本番環境ではリバースプロキシなどで HTTPS 化してからアクセスする（HTTP ではログインできない）。",
+      "設定画面の配信元管理から、使いたい配信元の API アドレスを追加して検索する。"
+    ],
+    "commands": [
+      "echo \"PASSWORD=your-password\" > .env",
+      "docker compose pull && docker compose up -d",
+      "docker compose up -d --build",
+      "npm install",
+      "PASSWORD=your-password npm run build",
+      "PASSWORD=your-password npm start"
+    ]
+  }
+}

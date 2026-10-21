@@ -1,0 +1,29 @@
+{
+  "repo": "bitwarden-app312/.gitp3d",
+  "language": "HTML",
+  "readme": true,
+  "oneLiner": "パスワード管理アプリBitwardenのMac・Windows版を紹介するダウンロード案内ページ",
+  "features": [
+    "READMEの冒頭に「DOWNLOAD NOW」のリンクがあり、このアカウント自身のGitHub Pages（bitwarden-app312.github.io）へ誘導し、開くと自動でダウンロードが始まると書かれています。",
+    "Bitwardenの無料プランの特徴（無料、オープンソース、ゼロ知識暗号化、定期的なセキュリティ監査、台数無制限の同期、ブラウザ拡張による自動入力）を表で紹介しています。",
+    "対応環境としてmacOS Sonoma／Sequoia、Windows 10／11、Apple Silicon（M1〜M4）とIntelのMac、iOS／Androidを挙げています。",
+    "Bitwarden・1Password・KeePassXCの3つのパスワード管理ソフトを、価格・完成度・同期方式・オープンソースかどうか・インポートのしやすさで比較しています。",
+    "パスワード管理ソフトは公式サイトからだけダウンロードし、怪しいサイトや「無料のプレミアム版」を使わないよう呼びかけています。"
+  ],
+  "why": "ページ上ではスター263・フォーク126と数字が多めですが、リポジトリの中身はREADME.md、画像1枚（bitwarden.png）、index.htmlの3ファイルだけで、ソースコードはありません。所有者は公式のbitwarden組織ではなく「bitwarden-app312」という別のアカウントで、READMEの「Visitors: 10K+」などのバッジも固定の文字を表示しているだけです。推測: 公式アプリのソースや配布ではなく、名前の知られたソフトを使ってダウンロードへ誘導するためのページで、スター数も実際の人気を表していない可能性があります。",
+  "whoFor": "Bitwardenの概要や他のパスワード管理ソフトとの違いを手早く知りたい人の参考になる程度です。推測: アプリを入手する目的には向かず、README自身が勧めているとおり公式サイトから入手するのが安全です。",
+  "tech": [
+    "中身はGitHub Pages（リポジトリのHTMLをそのままWebサイトとして公開する機能）で表示されるindex.htmlと、README・画像だけの構成です。",
+    "READMEで紹介されている「ゼロ知識暗号化」とは、データを利用者の端末で暗号化してから保存するため、サービスの開発者でもパスワードを見られない仕組みのことです。"
+  ],
+  "tryIt": {
+    "steps": [
+      "READMEの手順では、まず公式サイトからアプリをダウンロードします。",
+      "無料アカウントを作成します。",
+      "Chrome、Safari、Edge、1Password、LastPassからパスワードをインポートします。",
+      "ブラウザ拡張機能を接続して自動入力を有効にします。",
+      "MacならTouch ID、WindowsならWindows Helloをオンにします。"
+    ],
+    "commands": []
+  }
+}

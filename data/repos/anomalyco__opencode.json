@@ -1,0 +1,38 @@
+{
+  "repo": "anomalyco/opencode",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "ターミナルで動くオープンソースの AI コーディングエージェント",
+  "features": [
+    "ターミナル上の画面（TUI）で AI と対話しながらコードを書いたり直したりできます。",
+    "Tab キーで、何でもできる開発用の build エージェントと、読み取り専用の plan エージェントを切り替えられます。",
+    "plan エージェントは標準でファイル編集を拒否し、bash コマンドの実行前に許可を求めるので、知らないコードを調べるときに安全です。",
+    "複雑な検索や多段階の作業には general サブエージェントを @general で呼び出せます。",
+    "ターミナル版に加えて、macOS・Windows・Linux 向けのデスクトップアプリ（ベータ版）もあります。"
+  ],
+  "why": "推測: Claude Code のような AI コーディングエージェントをオープンソースで使える選択肢として支持されていると考えられます。npm、Homebrew、pacman、Nix など多くの方法でインストールでき、README も20以上の言語に翻訳されています。",
+  "whoFor": "ターミナル中心で開発していて、AI にコードの調査や修正を手伝ってほしい人に向いています。いきなり編集させず、まず読み取り専用で既存のコードを分析させたい場面にも使えます。",
+  "tech": [
+    "TypeScript で書かれていて、npm パッケージ @opencode/cli として配布されています。",
+    "エージェントごとに権限を設定でき、ファイル編集やコマンド実行の可否を分けています。",
+    "インストールスクリプトは OPENCODE_INSTALL_DIR、XDG_BIN_DIR、$HOME/bin、$HOME/.opencode/bin の優先順でインストール先を決めます。"
+  ],
+  "tryIt": {
+    "steps": [
+      "インストールスクリプトかパッケージマネージャーで opencode をインストールします（0.1.x より古い版は先に削除します）。",
+      "ターミナルで opencode を起動し、Tab キーで build と plan のエージェントを切り替えて使います。",
+      "デスクトップアプリを使う場合は opencode.ai/download からダウンロードします。"
+    ],
+    "commands": [
+      "curl -fsSL https://opencode.ai/v2/install | bash",
+      "npm i -g @opencode/cli@latest",
+      "brew install anomalyco/tap/opencode-v2",
+      "brew install opencode",
+      "sudo pacman -S opencode",
+      "paru -S opencode-beta",
+      "mise use -g opencode",
+      "nix run github:anomalyco/opencode",
+      "brew install --cask opencode-desktop"
+    ]
+  }
+}

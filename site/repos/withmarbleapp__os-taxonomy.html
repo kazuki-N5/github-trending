@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>withmarbleapp/os-taxonomy | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>withmarbleapp/os-taxonomy</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-10-20（GitHub Trending 8位）</span>
+<a class="gh" href="https://github.com/withmarbleapp/os-taxonomy" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="withmarbleapp__os-taxonomy" data-repo="withmarbleapp/os-taxonomy" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">子どもが学ぶ内容を前提関係のグラフにまとめたオープンな学習項目データセット</p>
+<h3>何ができるか</h3><ul><li>小学校段階で学ぶ内容を、ひとつずつ教えられる1,591個の「マイクロトピック」に細かく分け、説明・習得の目安（evidence）・対象年齢を付けて収録しています。</li><li>「トピックXを学ぶにはトピックYが先に必要」という前提関係3,225本を、hard/soft の強さと一行の理由付きで有向非巡回グラフ（DAG：向きがあり循環しないグラフ）として提供します。</li><li>各トピックを NGSS、Common Core、英国ナショナルカリキュラムなど、各国のカリキュラム標準に対応づけています。</li><li>理科と算数・数学の1,051トピックについて、教え方・具体的な学習活動・評価の方法・参考文献をまとめた「教授法リサーチ」データを含みます。</li><li>科目・分野・年齢帯ごとに、保護者向けの一段落の要約（176件のクラスタ）を用意しています。</li><li>Science・Mathematics・English・History など8科目をカバーしています。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> カリキュラムのデータは標準の平坦な一覧か、製品の中に閉じ込められたものが多いのに対し、前提関係でつながった「学習のグラフ」を誰でも使える形で公開した点が注目されていると考えられます。商用利用もできるライセンス（ODbL・CC BY-SA）で出されているため、教育アプリや AI チューターの開発者にも使いやすいデータになっています。</p>
+<h3>どんな人に役立つか</h3><p>教育アプリや学習支援 AI を作る開発者、カリキュラムやグラフ構造データを研究したい人に役立ちます。ある概念を学ぶ前に何を身につけておくべきかをたどる、学習順序の設計に使えます。</p>
+<h3>技術的なポイント</h3><ul><li>実行環境や依存ライブラリはなく、UTF-8 の JSON ファイルだけで構成された純粋なデータセットです。</li><li>トピックがグラフのノード、前提関係（topicId が prerequisiteId に依存）がエッジになっていて、エッジを逆向きにすれば「次に解放される内容」が得られます。</li><li>schema/ に JSON Schema（JSON の構造を定義する仕様）があり、manifest.json には件数と各ファイルの SHA-256 チェックサムが記録されています。</li><li>teaching-research.json は topics.json の正確なバイト列に topicFileSha256 で結び付けられていて、トピックファイルが変わったら作り直す仕組みです。</li><li>Node.js 用の検証スクリプト（validate.mjs）とテスト（node --test）で、構造・カバー範囲・チェックサムを確認できます。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリを取得し、data/ フォルダにある topics.json と dependencies.json を JavaScript などから読み込みます。</li><li>トピックの id から名前を引ける Map を作り、dependencies を topicId で絞り込むと、そのトピックの前提トピックの一覧が得られます。</li><li>教え方の情報が必要なら teaching-research.json を topicId で結合します（現在は理科と算数・数学のみ対応）。</li><li>検証スクリプトとテストを実行して、データの構造やチェックサムを確認します。</li></ol>
+<pre><code>node scripts/validate.mjs
+node --test scripts/teaching-research.test.mjs</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-20.html#d-withmarbleapp__os-taxonomy">2026-10-20</a>
+<span class="src github">GitHub Trending 8位</span><span>★ +284</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

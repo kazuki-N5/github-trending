@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>storytold/photocraft | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🖼️</div><div>
+<h1>storytold/photocraft</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-10-19（Star History 2位）</span>
+<a class="gh" href="https://github.com/storytold/photocraft" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="storytold__photocraft" data-repo="storytold/photocraft" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Photoshop の操作感をそのまま再現した、純 Rust 製のオープンソース画像編集アプリ</p>
+<h3>何ができるか</h3><ul><li>レイヤー、マスク、調整レイヤー（元画像を変えずに色調補正を重ねられるレイヤー）、レイヤースタイル、文字、ベクター図形を扱える。</li><li>Photoshop の PSD/PSB ファイルを開いて編集・保存でき、psd-tools のテスト用ファイル309件中307件で再保存後も同じ描画結果になる。</li><li>ぼかしや変形などのフィルターをキャンバス上でライブプレビューでき、スマートオブジェクトに適用したフィルターは後から編集できる。</li><li>筆圧や傾きに反応するブラシエンジン、67種類のツール、RGB/CMYK/Lab の8・16・32ビット編集と ICC カラーマネジメント（機器間で色をそろえる仕組み）を備える。</li><li>500以上のコマンドを UI・CLI・JSON 制御チャネル・MCP サーバー（AI エージェントがツールを呼び出すための規格）から共通で実行できる。</li><li>macOS、Windows、Linux、FreeBSD のネイティブアプリに加え、WebAssembly でブラウザ上でも動く。</li></ul>
+<h3>なぜ注目されているか</h3><p>Adobe Photoshop をクリーンルーム方式（他社のコードを見ずに公開仕様と挙動の観察だけで作る方法）で Rust により作り直すという野心的なプロジェクトで、PSD との高い互換性を数値で示している。<span class="guess">推測</span> 有料ソフトの代替になり得るオープンソースの画像編集ツールであることと、AI エージェントから操作できる設計が関心を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>Photoshop の操作に慣れていて、オフラインで使える無料の画像編集ソフトを探している人に向く。画像処理やGPU描画、ファイル形式の実装を Rust で学びたい学生や、画像編集を AI エージェントやスクリプトで自動化したい人にも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>wgpu（Metal、Vulkan、DX12、WebGPU を共通に扱える Rust のグラフィックスライブラリ）による GPU コンポジター（レイヤーを合成して画面を作る部分）を使い、CPU 版コンポジターを正解として互いにテストしている。</li><li>256×256 ピクセルの疎なタイルをコピーオンライト（変更時だけ複製する方式）で管理し、取り消し操作を軽くし巨大なキャンバスも扱えるようにしている。</li><li>純粋なデータとしてのドキュメントモデルとコマンドエンジンの上に、薄い egui（Rust の即時モード GUI ライブラリ）の UI を載せ、24 個のクレートで層構造をビルド時に強制している。</li><li>PSD の読み書きは Adobe の公開仕様から書いた独立クレートで、1,700件以上のテストで往復変換や合成結果を検証している。</li></ul>
+<h3>試し方</h3>
+<ol><li>手軽に使うなら getartcraft.com の PhotoCraft ページか GitHub のリリースから OS に合ったインストーラーを入手する。</li><li>ソースから動かす場合はリポジトリを clone し、cargo でデスクトップアプリを起動する。</li><li>photocraft-cli を使うと、GUI なしで画像を開いてコマンドを適用し保存できる。</li></ol>
+<pre><code>git clone https://github.com/storytold/photocraft
+cd photocraft
+cargo run --release -p photocraft -- image.psd
+cargo test --workspace
+photocraft-cli batch --actions grade.json --in ./raw --out ./graded
+photocraft-cli mcp</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#w-storytold__photocraft">2026-10-19 週間</a>
+<span class="src starhistory">Star History 2位</span><span>★ +23,534（週）</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

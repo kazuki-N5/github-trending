@@ -1,0 +1,39 @@
+{
+  "repo": "shiyu-coder/Kronos",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "株価などのローソク足データを予測する、金融市場向けのオープンソース基盤モデル",
+  "features": [
+    "過去のローソク足（K線: 始値・高値・安値・終値・出来高などをまとめた価格データ）から、指定した未来の期間の値を予測できます。",
+    "KronosPredictor クラスが前処理・正規化・予測・逆正規化をまとめて行うので、数行のコードで予測を出せます。",
+    "温度 T や top_p、sample_count といったパラメータで、サンプリングによる確率的な予測を制御できます。",
+    "predict_batch メソッドで複数の銘柄や期間を GPU 上でまとめて並列に予測できます。",
+    "mini（410万パラメータ）から base（約1億パラメータ）までの学習済みモデルが Hugging Face Hub で公開されています。",
+    "Qlib を使った中国A株データでのファインチューニング（追加学習）とバックテスト（過去データでの戦略検証）の一連のスクリプトが付属しています。"
+  ],
+  "why": "README によると、金融のローソク足データ向けとしては初のオープンソース基盤モデル（大量データで事前学習し、さまざまなタスクに流用できるモデル）で、世界45以上の取引所のデータで学習されています。論文が arXiv で公開され AAAI 2026 に採択されたこと、BTC/USDT の24時間先予測を見られるライブデモがあることも紹介されています。推測: 汎用の時系列モデルではなく、ノイズの多い金融データに特化した点が関心を集めていると考えられます。",
+  "whoFor": "株価や暗号資産の価格予測を試したい人、クオンツ（数理的な手法で行う投資）の研究や時系列予測モデルに興味がある人に向いています。自分のデータでファインチューニングして独自のタスクに合わせたい場合にも使えます。",
+  "tech": [
+    "連続値で多次元のローソク足データ（OHLCV）を、専用のトークナイザーで階層的な離散トークン（記号の列）に量子化します。",
+    "そのトークン列で、デコーダのみの自己回帰型 Transformer（前のトークンから次のトークンを順に予測するモデル）を事前学習する2段階構成です。",
+    "モデルとトークナイザーは Hugging Face Hub から from_pretrained で読み込みます。入力できる長さ（コンテキスト長）は small と base で512、mini で2048です。",
+    "ファインチューニングは torchrun による複数 GPU での学習に対応し、トークナイザーと予測モデルを順に追加学習します。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Python 3.10 以上を用意し、requirements.txt の依存パッケージをインストールします。",
+      "KronosTokenizer と Kronos を Hugging Face Hub から読み込み、KronosPredictor を作成します。",
+      "open・high・low・close 列を含む pandas の DataFrame と、過去・未来のタイムスタンプを用意します。",
+      "predictor.predict を呼び出して予測結果の DataFrame を得ます。データ読み込みからグラフ描画までの完全な例は examples/prediction_example.py にあります。",
+      "自分のデータで追加学習する場合は pyqlib を入れ、finetune/config.py のパスを設定してから、データ前処理・トークナイザー学習・予測モデル学習・バックテストの順にスクリプトを実行します。"
+    ],
+    "commands": [
+      "pip install -r requirements.txt",
+      "pip install pyqlib",
+      "python finetune/qlib_data_preprocess.py",
+      "torchrun --standalone --nproc_per_node=NUM_GPUS finetune/train_tokenizer.py",
+      "torchrun --standalone --nproc_per_node=NUM_GPUS finetune/train_predictor.py",
+      "python finetune/qlib_test.py --device cuda:0"
+    ]
+  }
+}

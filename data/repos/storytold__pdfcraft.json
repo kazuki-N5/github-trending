@@ -1,0 +1,39 @@
+{
+  "repo": "storytold/pdfcraft",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "PDF の閲覧・整理・結合・分割・保護ができる、純 Rust 製のオープンソース PDF ワークベンチ",
+  "features": [
+    "右から左に書く文字や縦書き日本語、カラー絵文字、透明効果などを含む PDF を忠実に表示し、拡大してもタイル描画で文字がくっきりしている。",
+    "ページの回転・削除・挿入・並べ替えを一覧画面で行え、取り消し操作は保存後も使える。",
+    "複数 PDF の結合や、ページ抽出・分割をリンク、フォーム、レイヤー、添付ファイルを保ったまま行える。",
+    "RC4 から AES-256 までの PDF 標準セキュリティ（暗号化とパスワード）に対応し、作成者が設定した権限を守る。",
+    "フォーム入力、スレッド形式のコメント、オプショナルコンテンツ（表示を切り替えられるレイヤー）、添付ファイルを扱える。",
+    "pdfcraft-cli やオプトインの MCP サーバー（AI エージェントがツールを呼び出すための規格）から、GUI なしで同じ機能を実行できる。"
+  ],
+  "why": "アカウント不要・テレメトリなし・オフライン動作で、保存時は元のバイト列を残す追記保存と原子的な書き込みにより安全性を重視している。pdf.js のテスト用ファイル983件を開いてクラッシュ0件という頑健さも示している。推測: 有料の PDF 編集ソフトに代わるオープンソースの選択肢として注目されていると考えられる。",
+  "whoFor": "PDF の閲覧やページ整理、結合・分割、フォーム入力をローカルで安全に行いたい人に向く。PDF 処理をスクリプトや AI エージェントで自動化したい人、PDF の内部構造を学びたい人にも役立つ。",
+  "tech": [
+    "フィルター、暗号、オブジェクト層、ページ操作、注釈、フォーム、描画、エンジン、自動化、UI をクレートに分け、コアが UI に依存しない層構造にしている。",
+    "保存は増分更新（ファイル末尾に変更だけを追記する PDF の仕組み）と、一時ファイルに書いてから差し替える原子的書き込みで行い、qpdf で毎回 CI 検証している。",
+    "ISO 32000（PDF の国際規格）とブラックボックス観察だけに基づくクリーンルーム実装で、ページ描画は現在 hayro クレートを使いつつ独自レンダラーを開発中である。",
+    "egui ベースの UI で macOS、Windows、Linux、FreeBSD にネイティブ対応し、WebAssembly でブラウザでも動く。"
+  ],
+  "tryIt": {
+    "steps": [
+      "手軽に使うなら getartcraft.com の PdfCraft ページか GitHub のリリースからビルド済みのものを入手する。",
+      "ソースからビルドするには Rust 1.95 以降を用意し、リポジトリを clone して cargo でデスクトップアプリを起動する。",
+      "pdfcraft-cli を使うと、コマンドラインから PDF の結合・抽出・分割や情報の確認ができる。"
+    ],
+    "commands": [
+      "git clone https://github.com/storytold/pdfcraft",
+      "cd pdfcraft",
+      "cargo xtask models",
+      "cargo run --release -p pdfcraft -- some.pdf",
+      "pdfcraft-cli combine report.pdf appendix.pdf --out combined.pdf",
+      "pdfcraft-cli extract report.pdf --pages 1,3,5-8 --out highlights.pdf",
+      "pdfcraft-cli split   report.pdf --every 10 --out-dir parts/",
+      "pdfcraft-cli info  form.pdf"
+    ]
+  }
+}

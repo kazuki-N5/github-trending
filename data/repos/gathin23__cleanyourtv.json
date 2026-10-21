@@ -1,0 +1,40 @@
+{
+  "repo": "Gathin23/cleanyourtv",
+  "language": "Java",
+  "readme": true,
+  "oneLiner": "Android TV の広告と不要アプリを消し、Apple TV 風のホーム画面にするツール集",
+  "features": [
+    "Wi-Fi 経由の ADB（Android の開発者向けデバッグ接続）で、メーカーのテレメトリ（利用状況の送信）や広告サービス、プリインストールアプリを無効化できます。",
+    "アプリはアンインストールせず pm disable-user で無効化するだけなので、restore スクリプト1行で元に戻せます。",
+    "約300KBの軽量ネイティブランチャー（ホーム画面アプリ）をインストールし、お気に入り4アプリのドック、フォーカス中アプリ名の表示、グリッド表示などを備えた Apple TV 風のホームにできます。",
+    "Claude Code などシェルを使えるコーディングアシスタントに PROMPT.md を渡すと、TV の検出・バックアップ・不要アプリの洗い出し・ランチャーのビルドとインストールまでを対話的に進めてくれます。",
+    "25ブランド66機種分の検証済み無効化リストが examples/ に用意され、テーマ切り替え、時計スクリーンセーバー、14言語対応も備えています。"
+  ],
+  "why": "README に引用された作者の投稿によると、両親の TV で Netflix を開く前にスポンサー広告が出るのを、Claude Code に型番を伝えるだけで解消したという話が発端で、その投稿への返信から多くの機種別リストが集まりました。推測: root 化不要で元に戻せる手軽さと、AI コーディングアシスタントに作業を任せる「バイブコーディング」の実例として話題になったと考えられます。",
+  "whoFor": "Android TV や Google TV のホーム画面の広告やおすすめ表示にうんざりしている人に向いています。ADB や Android アプリのビルドの流れを実機で学びたい学生にとっても、手順とスクリプトがそろった教材になります。",
+  "tech": [
+    "ランチャーは素の Java と AndroidX RecyclerView だけで作られ、ブラー・動画・ネットワーク通信・常駐サービスを使わず、メモリ 1GB の TV でも動くよう設計されています。",
+    "tools/tv.py は Python だけで書かれた ADB クライアントで、macOS などで標準の adb コマンドが使えない環境でもシェル実行やファイル転送ができます。",
+    "大きな APK は b64push.py で base64 に分割して送り、チェックサムで検証します。",
+    "インストールスクリプトは現在のホームアプリを TV に問い合わせ、新しいランチャーがホームにならなければ元に戻すロールバック処理を持ちます。",
+    "テーマは TV に送る config.json で色・壁紙・ドック・列数を変えられ、ランチャーを再ビルドする必要がありません。"
+  ],
+  "tryIt": {
+    "steps": [
+      "TV の設定 → デバイス設定 → 情報 で「ビルド」を7回押して開発者向けオプションを出し、USB デバッグ（あればネットワーク/ADB デバッグも）をオンにします。",
+      "TV と同じ Wi-Fi につながったコンピューターで、Claude Code などのアシスタントに PROMPT.md を貼り付け、TV の型番を書き込みます。",
+      "TV に出る「USB デバッグを許可しますか？」を承認し、使うアプリやドックに置く4アプリなどのチェックリストに答えます。",
+      "手動で行う場合は、Python 3 の仮想環境を作って TV_HOST に TV の IP アドレスを設定し、tools/ のスクリプトで確認・無効化・復元、launcher/build-and-install.sh でランチャーを導入します。"
+    ],
+    "commands": [
+      "python3 -m venv tools/venv && tools/venv/bin/pip install -r tools/requirements.txt",
+      "export TV_HOST=192.168.1.50",
+      "tools/venv/bin/python -I tools/tv.py --probe",
+      "tools/venv/bin/python -I tools/tv.py 'pm list packages'",
+      "tools/disable.sh examples/xiaomi-mi-tv-4a/debloat.txt",
+      "tools/restore.sh examples/xiaomi-mi-tv-4a/debloat.txt",
+      "TV_HOST=192.168.1.50 launcher/build-and-install.sh",
+      "tools/theme.sh themes/aurora"
+    ]
+  }
+}

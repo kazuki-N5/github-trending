@@ -1,0 +1,38 @@
+{
+  "repo": "ly05010419/MacNativeGames",
+  "language": "C",
+  "readme": true,
+  "oneLiner": "手持ちのゼルダ新作をApple silicon Macでネイティブ実行するアプリを作るツール",
+  "features": [
+    "自分が持っているゲームファイル（XCI または NSP）と prod.keys から、1本のスクリプトで macOS 用の .app を作成できる。",
+    "エミュレータではなく、ゲーム自身の ARM64 コードを Apple チップ上で直接動かす。",
+    "ベース版 1.0.0 に加え、別途用意したアップデート（NSP/NSZ）を指定して 1.1.2 や 1.4.3 のアプリも作れる。",
+    "ビルド時にゲームデータから8,000以上のシェーダーを準備してアプリに同梱し、初回起動時に事前ウォームアップする。",
+    "macOS が認識するコントローラー（DualSense や Xbox コントローラーなど）やキーボードで操作でき、MetalFX によるアップスケールやフレーム補間を切り替えられる。",
+    "リポジトリ自体にはゲームの内容を一切含まず、抽出したデータは期待されるハッシュ値と照合して不一致ならビルドを止める。"
+  ],
+  "why": "README によると M4 搭載の MacBook Air と Mac mini で動作確認され、シェーダーのウォームアップ後は約90FPS、メニューでは120FPSに達したと記録されている。推測: エミュレーションではなくゲームのコードを Mac 上でネイティブ実行するという珍しいアプローチと、実際に遊べる水準の性能が注目を集めていると考えられる。",
+  "whoFor": "ゲームのソフトと鍵を自分で所有していて、Apple silicon Mac（macOS 26 以降）で遊びたい人に向く。ゲーム機向けバイナリを別 OS で動かす仕組みやグラフィックス API の変換に興味がある人にとっても参考になる。",
+  "tech": [
+    "ゲームの ARM64 コードは macOS が要求する箇所だけ書き換えて直接実行し、Switch のシステムサービスは小さなホストプログラムが応答する。",
+    "ゲームの NVN グラフィックスを Metal 4（Apple のグラフィックス API）の上で再構築している。",
+    "Ryujinx 由来のシェーダートランスレータを .NET NativeAOT で事前コンパイルしたネイティブプログラムで、Maxwell GPU 向けシェーダーを SPIR-V に変換し、SPIRV-Cross で Metal Shading Language に変換する。",
+    "ランタイムは主に C と Objective-C で書かれ、音声とプリレンダリング動画には libopus と libvpx を使う。",
+    "同じ APFS ボリューム上ではファイルのクローン機能で大きなデータを共有し、ディスク使用量を抑える。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Xcode コマンドラインツールと Homebrew を用意し、ビルドに必要なパッケージをインストールする。",
+      "このリポジトリをダウンロードまたはクローンし、MacNativeGames フォルダでターミナルを開く。",
+      "ゲームファイルと prod.keys を指定して build_app.py を実行する（NSP の場合は --firmware か --shared-fonts でフォントも指定する）。",
+      "ゲームファイルの隣にできた Tears of the Kingdom.app を Finder から開いて遊ぶ。"
+    ],
+    "commands": [
+      "xcode-select --install",
+      "brew install opus libvpx python@3.14",
+      "python3.14 build_app.py ~/Games/totk.xci -k ~/keys/prod.keys",
+      "python3.14 build_app.py ~/Games/totk.nsp -k ~/keys/prod.keys --firmware ~/Games/firmware",
+      "python3.14 build_app.py ~/Games/totk.xci -k ~/keys/prod.keys --update ~/Games/1.1.2.nsp"
+    ]
+  }
+}

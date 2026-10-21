@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cathrynlavery/diagram-design | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📊</div><div>
+<h1>cathrynlavery/diagram-design</h1>
+<div class="meta"><span>HTML</span>
+<span>初掲載 2026-10-19（Star History 8位）</span>
+<a class="gh" href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="cathrynlavery__diagram-design" data-repo="cathrynlavery/diagram-design" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントに雑誌のような図をHTML+SVGで描かせるスキル</p>
+<h3>何ができるか</h3><ul><li>「フロントエンド、バックエンド、データベース、Redis キャッシュの構成図を作って」のように普通の言葉で頼むと、エージェントが図の種類を選び、ダブルクリックで開ける1つの .html ファイルを書き出す。</li><li>アーキテクチャ図、フローチャート、シーケンス図、ER 図、ガントチャート、サンキー図など45種類の図に対応し、それぞれライト、ダーク、フル編集版の3種類の見た目を持つ。</li><li>自分の Web サイトの URL を渡すと配色とフォントを取り出してスタイルガイドに書き込み、以後の図をそのブランドに合わせる。</li><li>draw.io、Mermaid、Excalidraw で作った既存の図を読み込み、同じ内容をこのデザインで描き直せる。</li><li>出力先に合わせて、サイズ（16:9 のスライド、ドキュメント幅、SNS 用など）や形式（HTML、SVG、PNG）を指定できる。</li><li>WCAG AA（Web の読みやすさの基準）を満たす色のコントラストかを自動で確かめ、SVG にはスクリーンリーダー向けの名前と説明を付ける。</li></ul>
+<h3>なぜ注目されているか</h3><p>作者は、ブログ用の図を Claude に頼むとサイトに合わない汎用的な角丸ボックスの図しか返ってこないことに不満を持ち、「強調色は1〜2箇所だけ」「影なし」「座標は4px グリッド」といった好みを書き出してスキルにしたと説明している。Claude Code、Codex、GitHub Copilot、Cursor など多くのエージェントで同じファイルを使える点も特徴になっている。<span class="guess">推測</span> ありがちな Mermaid 風の図ではなく、そのまま公開できる見た目の図を手軽に作れることが関心を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>ブログ記事、スライド、技術資料に載せる図を、見た目にこだわりつつ素早く作りたい人に向く。README によると、Git で管理して頻繁に書き換えるドキュメントの図には Mermaid のほうが合っており、このスキルは公開用の図に向いている。</p>
+<h3>技術的なポイント</h3><ul><li>図は外部の画像に頼らない1つの HTML ファイルに、インライン SVG（HTML に直接埋め込んだベクター画像）として書かれ、通常はビルドも JavaScript も不要。</li><li>座標はすべて4px のグリッドに乗せ、要素の重なりやはみ出しは CI（自動で動くテスト）でチェックしている。</li><li>色は accent や ink のような意味を表す名前（セマンティックトークン）で style-guide.md にまとめられ、すべての図がそこを参照する。</li><li>フォントは標準では Google Fonts から読み込むが、システムフォントを指定するとネットワーク通信を一切しないファイルになる。</li><li>アニメーションは任意で、使う場合も審査済みのコントローラーだけを許可し、勝手なスクリプトや外部ファイルの読み込みは拒否する。</li></ul>
+<h3>試し方</h3>
+<ol><li>npx skills add で、Agent Skills に対応したエージェントにスキルを入れる（Claude Code ではプラグインマーケットプレイスからも入れられる）。</li><li>エージェントに「アプリの構成図を作って」のように普通の言葉で頼む。</li><li>必要なら「onboard diagram-design to &lt;自分のサイトの URL&gt;」と頼み、図の配色とフォントを自分のサイトに合わせる。</li><li>リポジトリをクローンした場合は skills/diagram-design/assets/index.html をブラウザで開くと、すべての図のギャラリーを見られる。</li></ol>
+<pre><code>npx skills add cathrynlavery/diagram-design
+/plugin marketplace add cathrynlavery/diagram-design
+/plugin install diagram-design@diagram-design
+codex plugin marketplace add cathrynlavery/diagram-design
+codex plugin add diagram-design@diagram-design
+copilot plugin marketplace add cathrynlavery/diagram-design
+copilot plugin install diagram-design@diagram-design
+pi install https://github.com/cathrynlavery/diagram-design
+open skills/diagram-design/assets/index.html
+xdg-open skills/diagram-design/assets/index.html
+cp skills/diagram-design/assets/template.html my-diagram.html</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#w-cathrynlavery__diagram-design">2026-10-19 週間</a>
+<span class="src starhistory">Star History 8位</span><span>★ +8,067（週）</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

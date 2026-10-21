@@ -1,0 +1,40 @@
+{
+  "repo": "mattpocock/skills",
+  "language": "Shell",
+  "readme": true,
+  "oneLiner": "実務エンジニア向けのAIコーディングエージェント用スキル集",
+  "features": [
+    "/grill-me や /grill-with-docs を使うと、作業前にエージェントから細かく質問させ、作りたいものについて認識をそろえられる。",
+    "/grill-with-docs は、プロジェクトの用語集（GLOSSARY.md）や ADR（設計判断の記録）を対話しながら更新し、エージェントと共通の言葉を作る。",
+    "/tdd は、先に失敗するテストを書いてから直す red-green-refactor のループをエージェントに守らせる。",
+    "/diagnosing-bugs は、再現、最小化、仮説、計測、修正、回帰テストという段階を踏むデバッグ手順をエージェントに実行させる。",
+    "/to-spec や /to-tickets は、会話の内容を仕様書やチケットにまとめて Issue トラッカーに登録する。",
+    "/improve-codebase-architecture は、コードベースを調べてモジュールを「深く」する（小さなインターフェースの裏に多くの機能をまとめる）改善候補を HTML レポートで示す。"
+  ],
+  "why": "作者は、エージェントが意図どおりに動かない、説明が冗長になる、コードが動かない、設計が崩れていくといったよくある失敗を直すためにこのスキルを作ったと説明している。GSD、BMAD、Spec-Kit のように開発プロセス全体を握るのではなく、小さく組み合わせやすく、どのモデルでも使えることを打ち出している。推測: 作者のニュースレターに約6万人の開発者が登録しているなど知名度が高いことも、注目を集める一因と考えられる。",
+  "whoFor": "Claude Code、Codex、GitHub Copilot、Gemini CLI、Cursor などのコーディングエージェントを日常的に使い、勢い任せではなく設計やテストを重視して開発したい人に向く。エージェントとの認識のずれや、AI が書いたコードの品質に悩んでいるときに役立つ。",
+  "tech": [
+    "各スキルは SKILL.md という Markdown の手順書で、エージェントがこれを読んで作業の進め方を変える。",
+    "ユーザーが /grill-me のように明示的に呼ぶ user-invoked スキルと、状況に応じてエージェントが自動で使える model-invoked スキルの2種類に分けている。",
+    "Claude Code、Codex、Copilot ではプラグインとして入れると自動で更新され、skills.sh（npx skills）を使うと編集できるファイルとしてプロジェクトにコピーされる。",
+    "code-review スキルは「コーディング規約に沿っているか」と「仕様どおりか」の2つの観点を、互いに影響しないよう並列のサブエージェント（親エージェントから起動される別のエージェント）で確認する。"
+  ],
+  "tryIt": {
+    "steps": [
+      "使っているエージェントに合わせて、プラグインか skills.sh のどちらか一方でスキルを入れる（両方入れると同じスキルが2つずつになる）。",
+      "エージェント上で /setup-matt-pocock-skills をリポジトリごとに1回実行し、使う Issue トラッカー、トリアージ用のラベル、ドキュメントの保存場所を答える。",
+      "変更を始める前に /grill-me や /grill-with-docs を使い、エージェントと認識をそろえる。"
+    ],
+    "commands": [
+      "claude plugin install mattpocock-skills@claude-plugins-official",
+      "codex plugin marketplace add mattpocock/skills",
+      "codex plugin add mattpocock-skills@mattpocock",
+      "copilot plugin marketplace add mattpocock/skills",
+      "copilot plugin install mattpocock-skills@mattpocock",
+      "gemini skills install https://github.com/mattpocock/skills.git --path skills/engineering",
+      "gemini skills install https://github.com/mattpocock/skills.git --path skills/productivity",
+      "npx skills@latest add mattpocock/skills -a <agent>",
+      "npx skills@latest update"
+    ]
+  }
+}

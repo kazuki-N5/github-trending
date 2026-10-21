@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cursor/plugins | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧩</div><div>
+<h1>cursor/plugins</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-10-19（GitHub Trending 4位）</span>
+<a class="gh" href="https://github.com/cursor/plugins" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="cursor__plugins" data-repo="cursor/plugins" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AI エディタ Cursor のプラグイン仕様と公式プラグイン集</p>
+<h3>何ができるか</h3><ul><li>開発ツール、フレームワーク、SaaS 向けの Cursor 公式プラグインがまとめて公開されています。</li><li>Gmail、Google ドライブ、GitHub、Salesforce、Playwright など多数の外部サービスと連携するプラグインがあります。</li><li>新しいプラグインの雛形作成と検証を行う create-plugin や、並列のクラウドエージェントに大きな作業を分担させる orchestrate など、エージェント作業を助けるプラグインもあります。</li><li>大事な判断の前や行き詰まったときに、より強力なモデルへ相談させる advisor プラグインがあります。</li><li>ルートの marketplace.json が全プラグインを一覧にし、マーケットプレイスとして機能します。</li></ul>
+<h3>なぜ注目されているか</h3><p>AI エディタ Cursor の開発元が公式に公開しているプラグインの仕様と実装です。<span class="guess">推測</span> Cursor の機能を広げる公式の仕組みであり、エージェントに外部サービスやワークフローを組み込む具体例が多数見られるため注目されていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>Cursor を使っていて、外部サービス連携や作業の自動化を加えたい人に向いています。自分で Cursor 用のプラグインを作りたい人は、構成の見本として使えます。</p>
+<h3>技術的なポイント</h3><ul><li>各プラグインはリポジトリ直下の独立したディレクトリで、それぞれ .cursor-plugin/plugin.json というマニフェスト（設定ファイル）を持ちます。</li><li>プラグインには skills（フロントマター付きの SKILL.md で書くエージェント用スキル）、rules（.mdc ファイルの Cursor ルール）、mcp.json（MCP サーバーの定義）を含められます。</li><li>MCP（Model Context Protocol、AI に外部ツールをつなぐための標準仕様）のサーバーを定義して外部サービスとつなぎます。</li><li>一部のプラグインは hooks を持ち、エージェントの動作の区切りでスクリプトを実行します。</li></ul>
+<h3>試し方</h3>
+<p>README に試し方の記載はありません。</p></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-cursor__plugins">2026-10-19</a>
+<span class="src github">GitHub Trending 4位</span><span>★ +350</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

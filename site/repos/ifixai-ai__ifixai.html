@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ifixai-ai/iFixAi | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛡️</div><div>
+<h1>ifixai-ai/iFixAi</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-19（Star History 15位）</span>
+<a class="gh" href="https://github.com/ifixai-ai/iFixAi" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="ifixai-ai__ifixai" data-repo="ifixai-ai/iFixAi" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントが本来の仕事をきちんとしているかを短時間で監査する診断ツール</p>
+<h3>何ができるか</h3><ul><li>権限外のツール利用、権限昇格、プロンプトインジェクション（悪意ある指示の混入）への耐性などを、60種類の検査で調べます。</li><li>既定では重要度の高い10検査を実行し、--full-run で60検査すべてを実行できます。</li><li>結果を Fabrication、Manipulation、Deception、Unpredictability、Opacity の5つの柱にまとめ、A〜F の成績を付けます。</li><li>対話式ウィザード、明示的なコマンドライン引数、Claude Code や Codex のプラグイン（スキル）の3通りで実行できます。</li><li>OpenAI 互換の HTTP エンドポイントを持つ自作エージェントを、そのまま検査対象にできます。</li><li>レポートを JSON と Markdown で ./ifixai-results/ に出力します。</li></ul>
+<h3>なぜ注目されているか</h3><p>README では、既存の評価・レッドチーミング（攻撃者視点での検証）・監視ツールは主に技術的な能力を見ており、エージェントが業務上の目的や組織の決まりどおりに動いているかには答えられないと述べ、iFixAi はそれに120秒未満で答えるとしています。リポジトリページでは約3万のスターを集めています。<span class="guess">推測</span> AIエージェントを業務に組み込む企業が増え、安全性や統制の確認手段が求められていることが注目の背景と考えられます。</p>
+<h3>どんな人に役立つか</h3><p>業務用のAIエージェントを開発・運用し、権限管理やポリシー違反、情報漏えいのリスクを公開前に確認したい開発者やリスク管理の担当者に向いています。</p>
+<h3>技術的なポイント</h3><ul><li>Python 3.10 以上で動き、検査したいプロバイダごとに pip の追加パッケージ（例: ifixai[openai]）を入れて使います。</li><li>検査対象とは別ベンダーの LLM が採点役（ジャッジ）を務めることで、自己採点ではない引用可能な成績になる仕組みです。</li><li>複数のジャッジを使う場合は、判定が割れたら fail、partial、pass の順に厳しい側を採用します。</li><li>独自の環境で動くエージェントは、ChatProvider.send_message という1つのメソッドを実装したアダプタで接続できます。</li><li>キーもネットワークも不要なモック（mock）プロバイダで、仕組みが動くかを数秒で確認できます。</li></ul>
+<h3>試し方</h3>
+<ol><li>検査したいプロバイダ用の追加パッケージ付きで ifixai をインストールします。</li><li>ifixai setup の対話式ウィザードで、プロバイダ、モデル、ジャッジ、検査セットを選びます（設定は ifixai.yaml に保存されます）。</li><li>ifixai run を実行すると、レポートが ./ifixai-results/ に出力されます。</li><li>APIキーなしで試すなら、モックプロバイダで実行します（同梱の既定データにはわざと欠陥が入っているため、不合格の結果が出ます）。</li></ol>
+<pre><code>pip install &quot;ifixai[openai]&quot;
+ifixai setup
+ifixai run
+ifixai run --provider mock --api-key not-used --eval-mode self</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#w-ifixai-ai__ifixai">2026-10-19 週間</a>
+<span class="src starhistory">Star History 15位</span><span>★ +5,888（週）</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

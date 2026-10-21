@@ -1,0 +1,40 @@
+{
+  "repo": "headroomlabs-ai/headroom",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "AIエージェントがLLMに渡す情報を手元で圧縮し、トークンを節約するツール",
+  "features": [
+    "ツールの出力、ログ、RAG（検索で集めた資料をLLMに渡す手法）の検索結果、ファイル、会話履歴を、LLMに送る前に圧縮します。",
+    "Python・TypeScriptのライブラリとして compress(messages) で使うほか、コードを変えずに挟めるプロキシ（中継サーバー）としても動きます。",
+    "headroom wrap claude のように1コマンドで、Claude Code、Codex、Aider、Cline などのコーディングエージェントを Headroom 経由で動かせます。",
+    "MCP（AIツールと外部機能をつなぐ共通規格）サーバーとして、圧縮・元データ取得・統計の機能を提供します。",
+    "圧縮前の元データを手元に保存しておき、モデルが必要なときに全文を取り出せるようにします（CCR）。",
+    "モデルの前置きや無駄な繰り返しを抑えるよう促すなど、モデルが書き返す出力トークンも減らせます。"
+  ],
+  "why": "README によると、SRE障害調査のシナリオで55,957トークンを24,340トークンへ57%削減しつつ、GSM8K などの精度評価では差がほとんど出なかったと示されています。圧縮処理は1ミリ秒前後と速く、手元のマシンで動くためプロンプトやファイルの中身を外部に送らずに済みます。推測: AIコーディングエージェントの利用が広がりAPI料金やコンテキスト長の制約が問題になっているため、既存のエージェントにそのまま組み込める点が注目されていると考えられます。",
+  "whoFor": "Claude Code や Codex などのAIエージェントを日常的に使い、API料金やコンテキストの上限に悩んでいる人に役立ちます。大量のログやJSONをLLMに読ませるアプリを作っている開発者にも向いています。",
+  "tech": [
+    "ContentRouter が内容の種類を判定し、JSONは SmartCrusher、ソースコードは AST（構文木）を使う CodeCompressor、文章は Hugging Face で公開された Kompress-v2-base モデルへ振り分けて圧縮します。",
+    "CacheAligner は、プロバイダ側のKVキャッシュ（同じ前置き部分の計算結果を再利用する仕組み）を壊しやすい変動部分を検出します。プロンプトは書き換えません。",
+    "Anthropic の /v1/messages や OpenAI 互換の /v1/chat/completions などのAPI形式に対応するプロキシとして、間に入って通信を処理します。",
+    "headroom learn は失敗したセッションを分析し、CLAUDE.md や AGENTS.md などの指示ファイルに修正内容を書き込みます。"
+  ],
+  "tryIt": {
+    "steps": [
+      "pip または uv で headroom-ai をインストールします（CLIはPyPI版にのみ含まれます）。",
+      "headroom wrap claude でエージェントを包むか、headroom proxy --port 8787 でプロキシを起動します。",
+      "headroom doctor で動作を確認し、headroom dashboard で節約できたトークン量を確認します。"
+    ],
+    "commands": [
+      "uv tool install --python 3.13 \"headroom-ai[all]\"",
+      "pip install \"headroom-ai[all]\"",
+      "npm install headroom-ai",
+      "headroom deploy",
+      "headroom wrap claude",
+      "headroom proxy --port 8787",
+      "headroom doctor",
+      "headroom perf",
+      "headroom dashboard"
+    ]
+  }
+}

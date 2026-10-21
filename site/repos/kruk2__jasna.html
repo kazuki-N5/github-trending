@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kruk2/jasna | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🖼️</div><div>
+<h1>Kruk2/jasna</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-19（GitHub Trending 12位）</span>
+<a class="gh" href="https://github.com/Kruk2/jasna" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="kruk2__jasna" data-repo="Kruk2/jasna" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">動画や画像のモザイクをGPUで検出・復元する無料のアプリとコマンドラインツール</p>
+<h3>何ができるか</h3><ul><li>動画内のモザイクを見つけて復元し、それ以外の部分には手を加えない。</li><li>高速な BasicVSR++（無料）と、低速だがより細部まで復元できる LTX（支援者向け・NVIDIA のみ）の2種類の復元モデルを選べる。</li><li>Segment Editor で、プレビューを見ながら復元したい区間だけを選んで処理できる。</li><li>VR180 動画や静止画（支援者向けの SD 1.5 モデル）にも対応している。</li><li>Video Player を使うと、ファイルを書き出さずに復元しながらリアルタイムで再生できる。</li><li>GUI アプリに加えてコマンドラインからも、動画1本・画像1枚・フォルダ一括の処理ができる。</li></ul>
+<h3>なぜ注目されているか</h3><p>README のベンチマークでは、3分22秒の動画の復元が参考元の Lada 0.11.0 より 3.4〜4.7 倍速いと示されている。<span class="guess">推測</span> 動画のデコードからエンコードまでほぼ全工程を GPU 上で処理する設計による速度と、手軽に使える GUI が注目を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>NVIDIA（GTX 16 シリーズ / RTX 20 シリーズ以降）や AMD Radeon RX 7000/9000 の GPU を持ち、動画のモザイク復元を手元で高速に行いたい人に向く。動画処理パイプラインを GPU で組む実装例として、開発者がソースを読むのにも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>処理は GPU でのデコード（NVDEC/AMF）→ モザイク検出（既定モデル rfdetr-v6）→ 時間方向の追跡とクリップ化 → BasicVSR++ による 256x256 単位の復元 → 元フレームへの合成 → GPU エンコード（NVENC/AMF）という流れで行われる。</li><li>クリップはシーンの切れ目で区切られ、少しずつ重ねて処理することでクリップ間の継ぎ目が目立たないようにしている。</li><li>初回実行時にモデルを使用中の GPU 向けに最適化して model_weights フォルダに保存し、以降はそれを再利用する（NVIDIA のみ、初回は15〜60分ほどかかる）。</li><li>LTX は拡散モデル（ノイズから画像を生成するタイプの生成モデル）を使い、検出・準備・復元・保存の4パスで動画を処理する。</li><li>UNet 4x、RTX Super Res、Topaz TVAI による任意の二次復元で、復元部分をより大きく鮮明にできる。</li></ul>
+<h3>試し方</h3>
+<ol><li>自分の OS と GPU に合ったリリースをダウンロードする。</li><li>中国語・日本語・アクセント付き文字などを含まないパスのフォルダに展開する。</li><li>Windows は jasna.exe、Linux NVIDIA は jasna、Linux AMD は run_jasna_amd.sh を実行してアプリを起動する。</li><li>動画を追加して設定を選び、画面下部の ▶ ボタンを押す（初回は GPU 向けのモデル準備に時間がかかる）。</li></ol>
+<pre><code>jasna --input input.mp4 --output output.mkv
+jasna --input photo.png --output restored.png
+jasna --input input_folder --output output_folder
+jasna --help</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-kruk2__jasna">2026-10-19</a>
+<span class="src github">GitHub Trending 12位</span><span>★ +115</span></li><li><a href="../days/2026-10-20.html#d-kruk2__jasna">2026-10-20</a>
+<span class="src github">GitHub Trending 9位</span><span>★ +498</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

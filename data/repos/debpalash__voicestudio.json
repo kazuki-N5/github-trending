@@ -1,0 +1,39 @@
+{
+  "repo": "debpalash/VoiceStudio",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "声のクローンや動画吹き替えをローカルで行うオープンソース音声スタジオ",
+  "features": [
+    "参照用の録音から声をクローン（再現）したり、言葉で説明して新しい声をデザインしたりできる。",
+    "動画にタイミングを合わせた音声を付けて吹き替えができる。",
+    "フローティングウィジェットで音声入力（ディクテーション）や文字起こしができる。",
+    "物語やオーディオブックの作成、バッチ処理に対応する。",
+    "エージェント向けにローカルAPIと MCP（AIエージェントに外部ツールをつなぐ共通プロトコル）を提供する。",
+    "646の言語に対応し、標準エンジン以外の音声エンジンも選べる。"
+  ],
+  "why": "ローカルの処理は自分のハードウェア上で動き、外部サービスは任意という、完全ローカルで使える点を打ち出している。推測: 有料の音声合成サービス ElevenLabs の代わりとして無料・オフラインで使える点が関心を集めていると考えられる。",
+  "whoFor": "動画の吹き替えやオーディオブック作成をしたいクリエイターや、音声データを外部に送らずに音声合成・文字起こしをしたい人に向いている。",
+  "tech": [
+    "標準エンジンは k2-fsa/OmniVoice を使っている。",
+    "デスクトップアプリは Electron で作られており、Python のバックエンドと組み合わせて動く。",
+    "NVIDIA GPU では CUDA、Apple Silicon では Metal（MPS）で高速化し、専用GPUがなくてもCPUで動かせる。",
+    "モデル管理画面でモデルの出典やライセンスに関する情報を確認できる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "macOS や Linux ではワンコマンドのインストーラー、Windows では PowerShell のコマンドでインストールする（Releases からのダウンロードも可）。",
+      "アプリで Voice cloning を開き、声を選ぶかきれいな参照録音を追加する。",
+      "テキストを入力して生成する。必要なモデルはインストールを求められたときに入れる。"
+    ],
+    "commands": [
+      "curl -fsSL https://voicestudio.sh/install | sh",
+      "irm https://voicestudio.sh/install | iex",
+      "npx skills add debpalash/VoiceStudio",
+      "git clone https://github.com/debpalash/VoiceStudio.git",
+      "cd VoiceStudio",
+      "bun install",
+      "bun run setup:api",
+      "bun run dev"
+    ]
+  }
+}

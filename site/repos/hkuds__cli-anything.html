@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HKUDS/CLI-Anything | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>HKUDS/CLI-Anything</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-19（GitHub Trending 8位）</span>
+<a class="gh" href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="hkuds__cli-anything" data-repo="HKUDS/CLI-Anything" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">あらゆるソフトをAIエージェントが操作できるCLIに変えるツール群</p>
+<h3>何ができるか</h3><ul><li>ソフトウェアのソースコードやリポジトリを渡すと、AIエージェントが使えるCLI（コマンドラインツール）を自動生成する。</li><li>生成は解析・設計・実装・テスト計画・テスト作成・ドキュメント化などの7段階のパイプラインで自動的に進む。</li><li>CLI-Hub というパッケージマネージャーで、コミュニティが作ったCLIを検索・インストール・更新・削除できる。</li><li>GIMP、Blender、LibreOffice、FreeCAD、Draw.io など多数のアプリ向けのCLIがすでに用意されている。</li><li>生成されたCLIごとに SKILL.md（エージェントが読む使い方説明書）が作られ、エージェントが自分で適切なCLIを探して使える。</li></ul>
+<h3>なぜ注目されているか</h3><p>AIエージェントは推論は得意でも本格的なソフトを使うのが苦手で、既存の画面操作の自動化は壊れやすいという課題に、CLIという共通の入口で取り組んでいる。GitHub Trending や Trendshift のバッジを掲げており、コミュニティから多くのCLIが寄せられている。</p>
+<h3>どんな人に役立つか</h3><p>Claude Code や Codex などのエージェントに画像編集・3Dモデリング・オフィス文書作成といった既存ソフトの作業を任せたい人や、自作ツールをエージェント対応にしたい開発者に向いている。</p>
+<h3>技術的なポイント</h3><ul><li>生成されるCLIは Python の Click ライブラリで作られ、全コマンドに --json フラグがあり、エージェントが扱いやすい構造化データを出力する。</li><li>コマンドを引数なしで実行すると対話型の REPL（入力・評価・出力を繰り返すモード）に入り、undo/redo 付きでプロジェクトの状態を保持する。</li><li>CLI自体は作品を描画せず、プロジェクトファイルを作って本物のアプリ（例: LibreOffice のヘッドレス実行）に処理を任せる設計になっている。</li><li>単体テストに加え、実際のソフトを呼び出すE2Eテストと、インストールしたコマンドをサブプロセスで動かすテストで品質を確認する。</li></ul>
+<h3>試し方</h3>
+<ol><li>pip で CLI-Hub をインストールし、cli-hub list や cli-hub search で使えるCLIを探す。</li><li>cli-hub install でCLIを入れ、cli-hub launch で起動する（GIMP など元のアプリも別途必要な場合がある）。</li><li>新しいCLIを作りたい場合は、Claude Code にマーケットプレイスからプラグインを入れ、/cli-anything に対象ソフトのパスやリポジトリURLを渡す。</li></ol>
+<pre><code>pip install cli-anything-hub
+cli-hub list
+cli-hub search image
+cli-hub install gimp
+cli-hub info gimp
+cli-hub launch gimp
+npx skills add HKUDS/CLI-Anything --skill cli-hub-meta-skill -g -y
+/plugin marketplace add HKUDS/CLI-Anything
+/plugin install cli-anything
+/cli-anything ./gimp</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-hkuds__cli-anything">2026-10-19</a>
+<span class="src github">GitHub Trending 8位</span><span>★ +589</span></li><li><a href="../days/2026-10-20.html#d-hkuds__cli-anything">2026-10-20</a>
+<span class="src github">GitHub Trending 10位</span><span>★ +606</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

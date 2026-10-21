@@ -1,0 +1,39 @@
+{
+  "repo": "openclaw/openclaw",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "自分のPCで動き、普段使うチャットアプリから話しかけられるオープンソースAIアシスタント",
+  "features": [
+    "Discord、iMessage、Slack、Teams、Telegram、WhatsApp など20以上のチャットサービス（チャネル）から同じアシスタントに話しかけられる。",
+    "macOS、iOS、Android、Windows、Linux 向けのネイティブアプリがあり、音声、Canvas、カメラ、画面操作、端末上での操作などを追加できる。",
+    "Claude や Codex、ローカルモデルなどの AI モデルやエージェント実行基盤をプラグインとして差し替えられる。",
+    "ツール、スキル、プラグインでアシスタントの能力を拡張でき、プラグインは ClawHub で共有できる。",
+    "ブラウザで開く管理画面（Control UI）、CLI、TUI（ターミナル上の画面）から操作できる。",
+    "同じ Gateway を、ノートPC上の個人用アシスタントとしてもチーム共有の環境としても、設定の違いだけで動かせる。"
+  ],
+  "why": "状態・記憶・認証情報を自分のハードウェアに置き、有料プランやホスト型サービスを持たない、非営利財団（OpenClaw Foundation）が運営するオープンソースのアシスタントである点が特徴として打ち出されている。推測: 普段使いのチャットアプリからそのまま AI に作業を頼める手軽さと、データを手元に残せる安心感の両立が、多くの開発者の関心を集めていると考えられる。",
+  "whoFor": "Slack や Telegram などのチャットから AI に作業を任せたい人や、データを外部サービスに預けずに自分の PC で AI アシスタントを動かしたい人に向いている。チームで共有するアシスタントを自前で運用したい場合にも使える。",
+  "tech": [
+    "TypeScript で書かれた Node.js アプリで、リポジトリは pnpm ワークスペース（複数パッケージを1つにまとめて管理する仕組み）として構成されている。",
+    "Gateway がローカルの制御の中心（コントロールプレーン）となり、セッション、ツール、イベント、チャネル接続を管理する。",
+    "「信頼できる Gateway と信頼しない実行環境を分け、ポリシーをコードで強制する」という設計で、受信メッセージは信頼できない入力として扱い、未知の送信者はペアリング承認が必要になる。",
+    "ツールは標準ではホスト上で実行されるが、サンドボックス（隔離された実行環境）を設定して動かすこともできる。",
+    "新しい機能はプラグイン SDK を使ったプラグインとして作るのが基本で、モデルやエージェント実行基盤も差し替え可能なプラグインになっている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "インストーラ（macOS / Linux / WSL2 はシェルスクリプト、Windows は PowerShell）を実行するか、Node.js を管理済みなら npm でパッケージを入れる。",
+      "インストーラ経由ならオンボーディング（初期設定ウィザード）が自動で始まるので完了させ、npm などで直接入れた場合は openclaw onboard --install-daemon を実行する。",
+      "オンボーディングではモデルへのアクセス確認、作業用ワークスペースの作成、Gateway の設定が行われる。",
+      "openclaw gateway status で状態を確認し、openclaw dashboard で Control UI を開いてメッセージを送り、アシスタントが動くことを確かめる。"
+    ],
+    "commands": [
+      "curl -fsSL https://openclaw.ai/install.sh | bash",
+      "iwr -useb https://openclaw.ai/install.ps1 | iex",
+      "npm install -g openclaw@latest --allow-scripts=openclaw",
+      "openclaw onboard --install-daemon",
+      "openclaw gateway status",
+      "openclaw dashboard"
+    ]
+  }
+}

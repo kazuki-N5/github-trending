@@ -1,0 +1,36 @@
+{
+  "repo": "android/skills",
+  "language": "Kotlin",
+  "readme": true,
+  "oneLiner": "Android開発のベストプラクティスをAIエージェントに教えるスキル集",
+  "features": [
+    "developer.android.com のガイドに沿った Android 開発の手順を、AIエージェント向けのモジュール化された指示（スキル）として提供する。",
+    "Android CLI を使って、特定のスキルや全スキルをプロジェクトや検出されたエージェントにインストールできる。",
+    "Claude Code や Codex のプラグインとしても導入できる。",
+    "インストールしたスキルは、関連する作業を頼んだときにエージェントが自動で見つけて使う。",
+    "android skills update コマンドでスキルを最新に更新できる。"
+  ],
+  "why": "Android の公式組織が公開しているスキル集で、評価でLLMの性能が低いと分かった用途や作業手順に絞って作られている。推測: AIエージェントにアプリ開発を任せる流れの中で、公式のお手本を直接エージェントに渡せる点が注目されていると考えられる。",
+  "whoFor": "Gemini、Claude Code、Codex などのAIエージェントを使って Android アプリを開発する人に向いている。",
+  "tech": [
+    "オープン標準の agent skills 形式に従い、各スキルはタスクの技術仕様を書いた Markdown ファイル（SKILL.md）でできている。",
+    "スキルでLLMを専門分野の情報に「グラウンディング」（根拠となる情報に結び付けること）させ、誤りを減らす狙いがある。",
+    "基本的な Jetpack Compose の書き方など、LLMがすでに得意な分野は優先していない。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Android CLI で使いたいスキルをプロジェクトに追加するか、--all で全スキルを検出されたエージェントに追加する。",
+      "Claude Code や Codex を使う場合は、プラグインとしてインストールすることもできる。",
+      "「アプリのUIを edge-to-edge にして」のように関連する作業を頼むと、エージェントがスキルを自動で使う。"
+    ],
+    "commands": [
+      "android skills add r8-analyzer --project=.",
+      "android skills add --all",
+      "android skills update --all",
+      "android skills update wear-compose-m3",
+      "/plugin install android-skills --marketplace android/skills",
+      "codex plugin marketplace add android/skills",
+      "codex plugin add android-skills@android-skills"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "repo": "deepseek-ai/deepseek-harness",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "DeepSeek AI が公開した、全部をプラグインで組み立てる AI エージェント基盤",
+  "features": [
+    "AI エージェントを動かすための土台（エージェントハーネス）として使える。",
+    "「すべてがプラグイン」という設計で、機能をプラグインとして組み合わせられる。",
+    "npx コマンド1つで Web UI を起動し、ブラウザから操作できる。",
+    "SSH 経由で起動した場合はブラウザを開かず、アクセス先の URL だけを表示する。",
+    "自作プラグインのリポジトリに dsh-plugin トピックを付けて公開・共有できる。"
+  ],
+  "why": "DeepSeek AI 自身が開発したオープンソースのエージェントハーネスで、Star 数は 25 万を超えています。推測: 大規模言語モデルで知られる DeepSeek が公式にエージェント基盤を公開したことが、大きな注目につながっていると考えられます。",
+  "whoFor": "AI エージェントを自分で動かしたり、プラグインで機能を拡張したりしたい開発者に向いています。ただし開発者プレビュー段階で互換性を壊す変更があると明記されているため、試用や研究目的での利用が中心になります。",
+  "tech": [
+    "Cordis というフレームワークを土台にしており、その設計は論文「A Programming Paradigm for Spatiotemporal Composability」で説明されている。",
+    "pnpm（Node.js のパッケージ管理ツール）を使ったモノレポ構成で、npm パッケージ @deepseek-ai/dsh として配布されている。",
+    "Web UI はデフォルトで http://127.0.0.1:3080 で起動する。",
+    "Web 版に加えてデスクトップ版向けのビルドターゲットも用意されている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "実行前に安全上の注意（SAFETY.md）を読む。",
+      "Node.js をインストールする。",
+      "npx で dsh の Web UI を起動すると、既定のブラウザで http://127.0.0.1:3080 が開く。",
+      "ソースから動かす場合は、リポジトリを clone して pnpm で依存関係のインストールとビルドを行い、pnpm dsh web で起動する。"
+    ],
+    "commands": [
+      "npx @deepseek-ai/dsh web",
+      "git clone https://github.com/deepseek-ai/deepseek-harness.git",
+      "cd deepseek-harness",
+      "pnpm install",
+      "pnpm run build",
+      "pnpm dsh web"
+    ]
+  }
+}

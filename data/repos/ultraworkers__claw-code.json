@@ -1,0 +1,41 @@
+{
+  "repo": "ultraworkers/claw-code",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "AIエージェントが保守する、Rust製CLIエージェントハーネス「claw」の展示的リポジトリ",
+  "features": [
+    "ターミナルから使うCLIエージェントハーネス（AIモデルにツール操作やコード作業をさせるための実行環境）「claw」をRustで実装しています。",
+    "claw prompt で1回だけ指示を送ったり、引数なしで起動して対話セッションを続けたりできます。",
+    "claw doctor でAPIキー、モデルへのアクセス、ツール設定が正しいかをまとめて確認できます。",
+    "Anthropic APIキーやOpenAI APIキーに加え、Ollama、llama.cpp、vLLMなどのローカルのOpenAI互換モデル（OpenAIと同じ形式のAPIで呼び出せるモデル）も使えるよう案内されています。",
+    "ファイルを @path の形で文脈として渡す機能や、セッション管理、設定、スキルの導入などについての手順書が用意されています。",
+    "macOS/Linuxに加えてWindowsのPowerShellにも対応し、コンテナで動かす手順も用意されています。"
+  ],
+  "why": "README によると、このリポジトリは本番用の製品ではなく「博物館の展示物」のような位置づけで、計画・実行・検証・ラベル付けまでをエージェントが行い、人の手を介さずに保守されている点が特徴です。リポジトリページでは約19.5万スター・約10.8万フォークを集めています。推測: Claude Code のようなAIコーディングエージェントへの関心が高い中で、「その仕組みをRustで作り直したもの」かつ「AIだけで運営されるリポジトリ」という話題性が注目を集めたと考えられます。",
+  "whoFor": "AIコーディングエージェントの内部構造（ツール呼び出し、セッション管理、プロバイダー切り替えなど）をRustのコードで読んでみたい人に向いています。README は実際の作業には LazyCodex や Gajae-Code を使うよう勧めているため、実用ツールというより研究・観察の対象として見るのがよいでしょう。",
+  "tech": [
+    "本体は rust/ ディレクトリにあるCargoワークスペース（複数のRustパッケージをまとめて管理する仕組み）で、claw という実行ファイルをビルドします。",
+    "src/ と tests/ には参照用・監査用のPythonコードがあり、PARITY.md でRust移植がどこまで元の実装と同等か（パリティ）を管理しています。",
+    "モックサービス（本物のAPIの代わりに決まった応答を返す偽のサーバー）を使った決定的なテスト用ハーネスを備えています。",
+    "Gajae-Code や LazyCodex といったエージェントハーネスによって、開発や保守が自動で進められています。",
+    "認証はAPIキー方式のみで、Claudeのサブスクリプションでのログインには対応していません。"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンし、rust/ ディレクトリで cargo build --workspace を実行してビルドします（事前にRustのインストールが必要です）。",
+      "環境変数 ANTHROPIC_API_KEY にAnthropicのAPIキーを設定します。",
+      "./target/debug/claw doctor を実行して、設定が正しいか確認します。",
+      "claw prompt でメッセージを送るか、引数なしで claw を起動して対話セッションを始めます。Windowsでは実行ファイル名が claw.exe になります。",
+      "crates.io の claw-code は別物の非推奨パッケージなので、cargo install claw-code は使わないよう注意します。"
+    ],
+    "commands": [
+      "git clone https://github.com/ultraworkers/claw-code",
+      "cd claw-code/rust",
+      "cargo build --workspace",
+      "export ANTHROPIC_API_KEY=\"sk-ant-...\"",
+      "./target/debug/claw doctor",
+      "./target/debug/claw prompt \"say hello\"",
+      "./target/debug/claw"
+    ]
+  }
+}

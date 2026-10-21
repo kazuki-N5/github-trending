@@ -1,0 +1,34 @@
+{
+  "repo": "UnderleveledBuilder/awesome-short-drama-skills",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "AI短編ドラマ・漫画ドラマ制作用のエージェントSkillを厳選したリスト",
+  "features": [
+    "小説の脚色、話ごとの構成（集綱）、脚本、審稿、絵コンテ、動画生成AI向けプロンプトまで、短編ドラマ制作に使えるSkill（AIエージェントに追加する能力パック）83件と関連オープンソース基盤16件を収録している。",
+    "Skillを「全工程」「脚本」「絵コンテ・映像素材・動画プロンプト」などの種類別、制作段階別、対応する動画生成モデル（Seedance、MiniMax H3、可灵 Kling など）別に整理している。",
+    "各グループの末尾に、そのまま使える「npx skills add 作者/リポジトリ名」形式のインストールコマンドをまとめている。",
+    "脚本系Skill 10件とSkillなしの対照群を同じお題で3回ずつ書かせ、AIが盲検比較した実測結果と、その限界を掲載している。",
+    "「小説を短編ドラマ化する」「Seedanceで動画を作る」など目的別のおすすめ組み合わせを紹介している。",
+    "このリスト自体もSkill（short-drama-skill-finder）として導入でき、エージェントに「どのSkillを入れるべきか」を質問できる。"
+  ],
+  "why": "推測: 中国では縦型ショートドラマやAI漫画ドラマの制作が盛んで、AIエージェントに組み込めるSkillが急増しているため、人手で確認・分類した一覧の需要が高いと考えられる。README によれば審査した203件のうち104件を不採用とし、人気Skillを丸写しして不審なインストーラーへ誘導するリポジトリも除外しているなど、選別の確かさも売りになっている。毎週星数や更新日を自動更新し、新規分は人手で確認してから追加している。",
+  "whoFor": "Claude Code、Codex、千問、豆包、OpenClaw などのAIエージェントを使って、小説の脚色や短編ドラマの脚本・絵コンテ・動画プロンプト作成を効率化したい人に役立つ。どのSkillを選べばよいか迷ったときの入口として使える。",
+  "tech": [
+    "README は scripts/build.py が data/ と templates/ の内容から自動生成しており、収録データは data/skills.toml、不採用理由は data/ignore.toml に記録されている。",
+    "収録Skillの多くは標準の SKILL.md 形式（エージェントに作業手順を教える説明ファイル）で、対応するエージェントならどれでもインストールできる。",
+    "インストールには vercel-labs/skills の npx skills ツールを使い、「-a openclaw」のようなオプションで導入先のエージェントを指定できる。",
+    "脚本Skillの評価では、同一モデル（claude-opus-5-5）で生成した原稿をAIがブラインドで比較し、GPTで再判定する方法を取っている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "npx skills コマンドでこのリストのSkill（short-drama-skill-finder）をエージェントに追加する。",
+      "エージェントに「Codexで小説を短編ドラマ化したいが、どのSkillを入れればいいか」のように質問する。",
+      "勧められたSkillを、README の各グループ末尾にあるインストールコマンドで追加する。",
+      "インストール前に、各Skillの SKILL.md を一度読んで、同梱スクリプトなどの中身を確認する。"
+    ],
+    "commands": [
+      "npx skills add UnderleveledBuilder/awesome-short-drama-skills",
+      "npx skills add 作者/仓库名 -a openclaw"
+    ]
+  }
+}

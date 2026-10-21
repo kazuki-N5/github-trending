@@ -1,0 +1,44 @@
+{
+  "repo": "Gathin23/tv-vibehack",
+  "language": "Java",
+  "readme": true,
+  "oneLiner": "ADB経由でAndroid TVの広告や不要アプリを止め、Apple TV風ランチャーに替える",
+  "features": [
+    "Android TV / Google TV のメーカー製テレメトリ（利用状況の送信）や広告サービス、プリインストールアプリを pm disable-user で無効化できる。",
+    "広告入りのホーム画面を、Apple TV（tvOS）風の黒背景・ドック・アプリ一覧を持つ自作ランチャーに置き換えられる。",
+    "無効化前にパッケージ一覧と設定をバックアップし、復元スクリプトで元の状態に戻せる（アンインストールはしない）。",
+    "PROMPT.md のプロンプトを Claude Code などのコーディングアシスタントに渡すと、テレビごとに異なる不要アプリを調べ、確認しながら作業してくれる。",
+    "Python だけで動く ADB クライアント tools/tv.py で、テレビ上でシェルコマンドを実行したりファイルを送ったりできる。",
+    "ランチャーと同じ見た目の時計スクリーンセーバーも任意で使える。"
+  ],
+  "why": "推測: 「テレビを開くと Netflix の前に広告が出る」という身近な不満を、root 化なしで元に戻せる形で解決している点が受けていると考えられる。作者が両親の Mi TV を Claude Code に実機を操作させて半日で直した経緯と、そのプロンプト自体を公開している点も話題性につながっていると思われる。",
+  "whoFor": "Xiaomi・TCL・Sony などの Android TV / Google TV のホーム画面の広告や重さに困っている人に向く。ADB（Android Debug Bridge、PCからAndroid端末を操作するための仕組み）や Android アプリ開発の実例を知りたい学生にも参考になる。",
+  "tech": [
+    "テレビの開発者向けオプションで USB デバッグを有効にし、Wi-Fi 越しの ADB で操作する。",
+    "アプリは pm disable-user でユーザー単位に無効化するだけなので、システムイメージやファームウェアには手を加えない。",
+    "ランチャーは素の Java と AndroidX RecyclerView だけで書かれた約1.6MBのネイティブアプリで、メモリ1GBの機種向けにぼかしや動画、ネットワーク通信を使わない設計になっている。",
+    "Python 製の ADB クライアントを同梱し、macOS で標準の adb がブロックされる環境でも動くようにしている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "テレビの設定で「ビルド」を7回押して開発者向けオプションを出し、USB デバッグを有効にする。",
+      "テレビと同じ Wi-Fi にある PC でコーディングアシスタントを開き、PROMPT.md のプロンプトを貼ってテレビの機種名を書き込む。",
+      "テレビに出る「USB デバッグを許可しますか？」を承認し、使う配信アプリやドックに置くアプリなどの質問に答える。",
+      "手作業で行う場合は、Python 3 の仮想環境に tools のライブラリを入れ、TV_HOST にテレビの IP アドレスを設定してスクリプトを実行する。",
+      "ランチャーのビルドには JDK 17 と Android SDK（platform 34、build-tools 34.0.0）が必要。"
+    ],
+    "commands": [
+      "python3 -m venv tools/venv && tools/venv/bin/pip install -r tools/requirements.txt",
+      "export TV_HOST=192.168.1.50",
+      "tools/venv/bin/python -I tools/tv.py --probe",
+      "tools/venv/bin/python -I tools/tv.py 'pm list packages'",
+      "tools/disable.sh examples/xiaomi-mi-tv-4a/debloat.txt",
+      "tools/restore.sh examples/xiaomi-mi-tv-4a/debloat.txt",
+      "TV_HOST=192.168.1.50 launcher/build-and-install.sh",
+      "python -m venv tools\\venv; tools\\venv\\Scripts\\python.exe -m pip install -r tools\\requirements.txt",
+      "powershell -ExecutionPolicy Bypass -File launcher\\build-and-install.ps1 -TvHost 192.168.1.50",
+      "powershell -ExecutionPolicy Bypass -File tools\\disable.ps1 -TvHost 192.168.1.50 examples\\xiaomi-mi-tv-4a\\debloat.txt",
+      "powershell -ExecutionPolicy Bypass -File tools\\restore.ps1 -TvHost 192.168.1.50 examples\\xiaomi-mi-tv-4a\\debloat.txt"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "repo": "xtool-org/xtool",
+  "language": "Swift",
+  "readme": true,
+  "oneLiner": "Linux・Windows・macOS で iOS アプリを作れる、Xcode の代替ツール",
+  "features": [
+    "SwiftPM（Swift の標準パッケージ管理ツール）のパッケージを iOS アプリとしてビルドできる。",
+    "iOS アプリに署名し、実機の iPhone などへインストールできる。",
+    "Apple Developer Services（証明書や App ID などを管理する Apple の開発者向けサービス）をプログラムから操作できる。",
+    "接続中のデバイスの一覧表示、アプリのインストール・アンインストール・起動をコマンドラインから行える。",
+    "xtool new で新しいプロジェクトを作り、xtool dev でビルドと実行をまとめて行える。",
+    "同梱のライブラリ XKit を SwiftPM の依存として追加すれば、自分のアプリから Apple Developer Services や iOS デバイスを扱える。"
+  ],
+  "why": "通常 iOS アプリの開発には Mac と Xcode が必要ですが、xtool は Linux（WSL を含む）や Windows でもビルドから実機へのインストールまでを行えるとしています。推測: Mac を持たない開発者でも iOS 開発に取り組める点が関心を集めていると考えられます。",
+  "whoFor": "Mac を持っていない、または Linux や Windows を主な開発環境にしていて iOS アプリを作りたい人に向いています。VSCode などのエディタとコマンドラインで iOS 開発をしたい人にも使いどころがあります。",
+  "tech": [
+    "Swift で書かれており、ビルドには SwiftPM を使う。",
+    "Darwin Swift SDK（Apple のプラットフォーム向けにコンパイルするための SDK）を xtool sdk サブコマンドで管理する。",
+    "Xcode の機能をオープンな標準の仕組みで再現する方針をとっている。",
+    "コマンドラインツールに加えて、XKit というライブラリとしても機能を提供している。"
+  ],
+  "tryIt": {
+    "steps": [
+      "公式サイトのインストールガイド（Linux/Windows 用または macOS 用）に従って xtool をインストールする。",
+      "公式チュートリアルに従って最初の xtool アプリを作成し、実行する。"
+    ],
+    "commands": [
+      "xtool --help"
+    ]
+  }
+}

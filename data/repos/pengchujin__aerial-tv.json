@@ -1,0 +1,44 @@
+{
+  "repo": "pengchujin/aerial-tv",
+  "language": "Kotlin",
+  "readme": true,
+  "oneLiner": "中国向けテレビの広告だらけのホーム画面をtvOS風の広告なしランチャーに置き換えるAndroid TVアプリ",
+  "features": [
+    "Apple TVのtvOSを参考にしたホーム画面で、大きな時計と壁紙の上に1行5個のアプリタイルを並べ、広告やおすすめ動画の一覧は出しません。",
+    "Xiaomi（小米）やTCLなど自社ホームしか認めないテレビでも、起動時に自動でホーム画面を乗っ取り、スタンバイ時に終了させられても復活します。",
+    "スクリーンセーバーとして、Appleのサーバーから直接再生する114本のApple TV空撮映像、写真のスライド、焼き付き防止のため毎分位置が変わる時計を選べます。",
+    "リモコンのメニューキーで開くコントロールセンターから、入力切替（HDMI・AV・アンテナ）、ネットワーク、音量・明るさ、壁紙、非表示アプリなどを操作できます。",
+    "壁紙はBingの日替わり画像、内蔵の8種類のグラデーション、自分の写真から選べ、パネルのQRコードを読み取ればスマホから写真のアップロードや設定変更ができます。",
+    "OKボタンの長押しメニューでタイルの移動、ホームからの非表示、アプリ情報の表示、アンインストールができます。"
+  ],
+  "why": "中国市場向けテレビの標準ホーム画面はドラマのおすすめや会員バッジで埋め尽くされており、それを広告なしのすっきりした画面に置き換えられる点が README で強調されています。root化（端末の管理者権限の取得）不要で、システムアプリを削除・無効化せず、コマンド1つで元に戻せる手軽さも特徴です。推測: Claude CodeなどのAIエージェントにインストール作業を任せる手順まで用意している点も関心を集めていると考えられます。",
+  "whoFor": "Xiaomi、TCL、ソニー中国版などのAndroid TV搭載テレビを使っていて、標準ホーム画面の広告やおすすめ表示にうんざりしている人に向いています。メーカー独自ファームウェアの制約下でアプリを常駐させる工夫に興味があるAndroid開発者にも参考になります。",
+  "tech": [
+    "まずHOMEロール（既定のホームアプリになる権限）を正式に申請し、それでもメーカーが自社ホームを使い続ける場合はアクセシビリティサービス（障害者支援用の画面監視機能）で前面のウィンドウだけを監視し、標準ホームが出たらAerialを呼び戻します。",
+    "通知リスナー（通知を受け取る仕組み）を登録しておくと、強制停止後や起動時にシステムが約0.5秒で再接続するため、これを利用して復活・自動起動します（通知の内容は読みません）。",
+    "ADB（PCからAndroid端末を操作するデバッグ用ツール）経由でWRITE_SECURE_SETTINGSやオーバーレイ表示などの権限を付与し、TCLではappopsで自動起動を許可します。",
+    "画面は960×540dpのキャンバスを等倍で拡大縮小して画素密度の違いを吸収し、非力なテレビのGPUに合わせて1フレームあたりの全画面描画を1回までに抑え、待機中はアニメーションを止めています。",
+    "フォーカスの動きにはばねアニメーションを使い途中で中断でき、ビルドにはJDK 17とAndroid SDK 36が必要で、ライセンスはMITです。"
+  ],
+  "tryIt": {
+    "steps": [
+      "PCとテレビを同じネットワークにつなぎ、テレビの設定画面でIPアドレスを確認します。",
+      "機種ごとの手順（Xiaomiは製品型番を連打、TCLは上下左右を順に押す、標準Android TVはビルド番号を7回押すなど）で開発者モードに入り、ADBデバッグを有効にします。",
+      "PCからワンライナーのインストールスクリプトを実行し、初回接続時にテレビに出る「USBデバッグを許可しますか」で許可を選びます（TCLでは「多屏互动」のアプリ配信確認で同意します）。",
+      "手動で入れる場合はReleasesからaerial-standard.apk（ホームアプリのインストールを拒否される機種ではaerial-guard.apk）をダウンロードし、adbでインストールと権限付与を行います。",
+      "元のホーム画面に戻したいときは、スクリプトにrestoreを付けて実行します。"
+    ],
+    "commands": [
+      "curl -fsSL https://raw.githubusercontent.com/pengchujin/aerial-tv/main/tools/get.sh | KEEP_ADB=1 TV=192.168.1.20 bash",
+      "curl -fsSL https://raw.githubusercontent.com/pengchujin/aerial-tv/main/tools/get.sh | TV=192.168.1.20 bash -s restore",
+      "adb connect 192.168.1.20:5555",
+      "adb install -r aerial-standard.apk",
+      "adb shell pm grant app.orchard.tv android.permission.WRITE_SECURE_SETTINGS",
+      "adb shell cmd notification allow_listener app.orchard.tv/app.orchard.tv.guard.RevivalListener",
+      "adb shell appops set app.orchard.tv SYSTEM_ALERT_WINDOW allow",
+      "adb shell am start -n app.orchard.tv/.MainActivity",
+      "./gradlew assembleStandardRelease assembleGuardRelease",
+      "BUILD=1 KEEP_ADB=1 TV=<电视IP> tools/install.sh"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "repo": "MadsLorentzen/ai-job-search",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Claude Code で求人評価から応募書類作成・面接対策までこなす就活フレームワーク",
+  "features": [
+    "/setup で手持ちの CV や LinkedIn のエクスポート、または対話形式のインタビューから自分のプロフィールを作れます。",
+    "/scrape で複数の求人サイトを検索し、重複を除いて自分との適合度順に一覧表示します。",
+    "/apply に求人 URL か本文を渡すと、適合度の評価、CV（職務経歴書）とカバーレターの下書き、別エージェントによるレビューと修正までを自動で行います。",
+    "/interview で応募した求人ごとに面接の準備資料を作り、模擬面接もできます。",
+    "/rank で検索結果をまとめて採点して優先順位を付け、/outcome で選考結果の記録やフォローアップメールの下書きを行います。",
+    "/add-portal で自分の国の求人サイト用の検索スキルを、/add-template で独自の CV テンプレートを追加できます。"
+  ],
+  "why": "作者が失職後に実際にこの仕組みで69件応募し、20件の一次面接を経て AI エンジニアとして採用されたと README に書かれています。推測: Claude Code のコマンドやエージェントを就職活動という身近な用途に具体的に組み込んだ実例として関心を集めていると考えられます。",
+  "whoFor": "就職・転職活動中で、応募ごとに CV やカバーレターを書き分ける手間を減らしたい人に向いています。Claude Code のスラッシュコマンドやサブエージェントを実用的なワークフローに組み込む例を知りたい人の参考にもなります。",
+  "tech": [
+    "Claude Code のスラッシュコマンド（.claude/commands）とスキル定義でワークフロー全体を組み立てています。",
+    "書類を書くエージェントと、新しいコンテキストで起動した別のレビュー用エージェントを分ける「drafter-reviewer」方式で品質を上げています。",
+    "CV は LaTeX（組版ソフト）の lualatex、カバーレターは xelatex で PDF 化し、ページ数やレイアウト崩れを確認して直すまで繰り返します。",
+    "PDF から抜き出したテキストを ATS（企業の応募者管理システム）が読むのと同じ形で確認し、連絡先の欠落や求人キーワードの網羅度をチェックします。",
+    "求人サイトの検索ツールは Bun（JavaScript ランタイム）で動く TypeScript 製の CLI で、共通の入出力ルールに従えば /scrape が自動で認識します。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Claude Code、Python 3.10 以上、Bun、lualatex と xelatex を含む LaTeX 環境を用意します。",
+      "リポジトリをフォークして手元に clone します（個人データを入れるならプライベートリポジトリの利用が推奨されています）。",
+      "求人サイト検索用の CLI をインストールします。",
+      "Claude Code を起動して /setup でプロフィールを作ります。",
+      "/scrape で求人を探し、/apply に求人 URL を渡して応募書類を作ります。"
+    ],
+    "commands": [
+      "gh repo fork MadsLorentzen/ai-job-search --clone",
+      "cd ai-job-search",
+      "python3 tools/install_portal_clis.py",
+      "claude",
+      "/setup",
+      "/scrape",
+      "/apply https://jobindex.dk/job/1234567"
+    ]
+  }
+}

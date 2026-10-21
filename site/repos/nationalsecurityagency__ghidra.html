@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NationalSecurityAgency/ghidra | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔍</div><div>
+<h1>NationalSecurityAgency/ghidra</h1>
+<div class="meta"><span>Java</span>
+<span>初掲載 2026-10-19（Star History 9位）</span>
+<a class="gh" href="https://github.com/NationalSecurityAgency/ghidra" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="nationalsecurityagency__ghidra" data-repo="NationalSecurityAgency/ghidra" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">米NSAが開発したソフトウェアのリバースエンジニアリング基盤</p>
+<h3>何ができるか</h3><ul><li>コンパイル済みのプログラムを、Windows、macOS、Linux のどれでも解析できる。</li><li>逆アセンブル（機械語を人が読めるアセンブリ言語に戻すこと）、アセンブル、逆コンパイル（機械語から元のプログラムに近いコードを復元すること）、グラフ表示、スクリプト実行など数百の機能を持つ。</li><li>さまざまなプロセッサの命令セットや実行ファイル形式に対応している。</li><li>人が画面で操作する対話モードと、自動で処理を進めるモードの両方で動かせる。</li><li>Java や Python で独自の拡張機能やスクリプトを作れ、PyGhidra を使って Python から起動することもできる。</li></ul>
+<h3>なぜ注目されているか</h3><p>米国家安全保障局（NSA）の研究部門が作成・保守しており、悪意のあるプログラム（マルウェア）の解析などに NSA 自身が使ってきたと README に書かれている。大規模な解析をチームで進めるときの問題を解決し、カスタマイズや拡張がしやすい研究基盤として作られた。<span class="guess">推測</span> 本格的な逆コンパイラを無料のオープンソースで使えるため、セキュリティ分野で長く注目され続けていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>マルウェアを解析したい人や、ネットワークやシステムに潜む脆弱性を理解したいソフトウェア・リバースエンジニアリング（SRE）の解析者に向く。ソースコードがなく、コンパイル済みのプログラムしか手元にない状況で中身を調べるときに役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>本体は Java で書かれており、公式リリースを動かすには 64bit 版の JDK 25 が必要。</li><li>ソースからのビルドには Gradle（Java でよく使われるビルドツール）を使い、Python 3 と C/C++ のコンパイラ（Linux と macOS では GCC か Clang、Windows では Visual Studio）も必要になる。</li><li>拡張機能やスクリプトの開発用に、Eclipse 向けの GhidraDev プラグインや Visual Studio Code との連携が用意されている。</li><li>一部のバージョンには既知の脆弱性があるため、使う前にセキュリティアドバイザリ（脆弱性情報）を読むよう README で注意している。</li></ul>
+<h3>試し方</h3>
+<ol><li>64bit 版の JDK 25 をインストールする。</li><li>GitHub の Releases ページから ghidra_&lt;version&gt;_&lt;release&gt;_&lt;date&gt;.zip という名前の公式リリースファイルをダウンロードする（「Source Code」のファイルではない）。</li><li>リリースファイルを展開する（既存のインストール先の上には展開しない）。</li><li>ghidraRun（Windows では ghidraRun.bat）を実行して起動する。</li></ol>
+<pre><code>./ghidraRun
+ghidraRun.bat
+./support/pyghidraRun
+support\pyghidraRun.bat
+git clone https://github.com/NationalSecurityAgency/ghidra.git
+gradle -I gradle/support/fetchDependencies.gradle
+gradle buildGhidra
+gradle prepdev eclipse buildNatives</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#w-nationalsecurityagency__ghidra">2026-10-19 週間</a>
+<span class="src starhistory">Star History 9位</span><span>★ +7,603（週）</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

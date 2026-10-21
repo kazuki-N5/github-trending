@@ -1,0 +1,40 @@
+{
+  "repo": "HKUDS/CLI-Anything",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "あらゆるソフトをAIエージェントが操作できるCLIに変えるツール群",
+  "features": [
+    "ソフトウェアのソースコードやリポジトリを渡すと、AIエージェントが使えるCLI（コマンドラインツール）を自動生成する。",
+    "生成は解析・設計・実装・テスト計画・テスト作成・ドキュメント化などの7段階のパイプラインで自動的に進む。",
+    "CLI-Hub というパッケージマネージャーで、コミュニティが作ったCLIを検索・インストール・更新・削除できる。",
+    "GIMP、Blender、LibreOffice、FreeCAD、Draw.io など多数のアプリ向けのCLIがすでに用意されている。",
+    "生成されたCLIごとに SKILL.md（エージェントが読む使い方説明書）が作られ、エージェントが自分で適切なCLIを探して使える。"
+  ],
+  "why": "AIエージェントは推論は得意でも本格的なソフトを使うのが苦手で、既存の画面操作の自動化は壊れやすいという課題に、CLIという共通の入口で取り組んでいる。GitHub Trending や Trendshift のバッジを掲げており、コミュニティから多くのCLIが寄せられている。",
+  "whoFor": "Claude Code や Codex などのエージェントに画像編集・3Dモデリング・オフィス文書作成といった既存ソフトの作業を任せたい人や、自作ツールをエージェント対応にしたい開発者に向いている。",
+  "tech": [
+    "生成されるCLIは Python の Click ライブラリで作られ、全コマンドに --json フラグがあり、エージェントが扱いやすい構造化データを出力する。",
+    "コマンドを引数なしで実行すると対話型の REPL（入力・評価・出力を繰り返すモード）に入り、undo/redo 付きでプロジェクトの状態を保持する。",
+    "CLI自体は作品を描画せず、プロジェクトファイルを作って本物のアプリ（例: LibreOffice のヘッドレス実行）に処理を任せる設計になっている。",
+    "単体テストに加え、実際のソフトを呼び出すE2Eテストと、インストールしたコマンドをサブプロセスで動かすテストで品質を確認する。"
+  ],
+  "tryIt": {
+    "steps": [
+      "pip で CLI-Hub をインストールし、cli-hub list や cli-hub search で使えるCLIを探す。",
+      "cli-hub install でCLIを入れ、cli-hub launch で起動する（GIMP など元のアプリも別途必要な場合がある）。",
+      "新しいCLIを作りたい場合は、Claude Code にマーケットプレイスからプラグインを入れ、/cli-anything に対象ソフトのパスやリポジトリURLを渡す。"
+    ],
+    "commands": [
+      "pip install cli-anything-hub",
+      "cli-hub list",
+      "cli-hub search image",
+      "cli-hub install gimp",
+      "cli-hub info gimp",
+      "cli-hub launch gimp",
+      "npx skills add HKUDS/CLI-Anything --skill cli-hub-meta-skill -g -y",
+      "/plugin marketplace add HKUDS/CLI-Anything",
+      "/plugin install cli-anything",
+      "/cli-anything ./gimp"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "repo": "NationalSecurityAgency/ghidra",
+  "language": "Java",
+  "readme": true,
+  "oneLiner": "米NSAが開発したソフトウェアのリバースエンジニアリング基盤",
+  "features": [
+    "コンパイル済みのプログラムを、Windows、macOS、Linux のどれでも解析できる。",
+    "逆アセンブル（機械語を人が読めるアセンブリ言語に戻すこと）、アセンブル、逆コンパイル（機械語から元のプログラムに近いコードを復元すること）、グラフ表示、スクリプト実行など数百の機能を持つ。",
+    "さまざまなプロセッサの命令セットや実行ファイル形式に対応している。",
+    "人が画面で操作する対話モードと、自動で処理を進めるモードの両方で動かせる。",
+    "Java や Python で独自の拡張機能やスクリプトを作れ、PyGhidra を使って Python から起動することもできる。"
+  ],
+  "why": "米国家安全保障局（NSA）の研究部門が作成・保守しており、悪意のあるプログラム（マルウェア）の解析などに NSA 自身が使ってきたと README に書かれている。大規模な解析をチームで進めるときの問題を解決し、カスタマイズや拡張がしやすい研究基盤として作られた。推測: 本格的な逆コンパイラを無料のオープンソースで使えるため、セキュリティ分野で長く注目され続けていると考えられる。",
+  "whoFor": "マルウェアを解析したい人や、ネットワークやシステムに潜む脆弱性を理解したいソフトウェア・リバースエンジニアリング（SRE）の解析者に向く。ソースコードがなく、コンパイル済みのプログラムしか手元にない状況で中身を調べるときに役立つ。",
+  "tech": [
+    "本体は Java で書かれており、公式リリースを動かすには 64bit 版の JDK 25 が必要。",
+    "ソースからのビルドには Gradle（Java でよく使われるビルドツール）を使い、Python 3 と C/C++ のコンパイラ（Linux と macOS では GCC か Clang、Windows では Visual Studio）も必要になる。",
+    "拡張機能やスクリプトの開発用に、Eclipse 向けの GhidraDev プラグインや Visual Studio Code との連携が用意されている。",
+    "一部のバージョンには既知の脆弱性があるため、使う前にセキュリティアドバイザリ（脆弱性情報）を読むよう README で注意している。"
+  ],
+  "tryIt": {
+    "steps": [
+      "64bit 版の JDK 25 をインストールする。",
+      "GitHub の Releases ページから ghidra_<version>_<release>_<date>.zip という名前の公式リリースファイルをダウンロードする（「Source Code」のファイルではない）。",
+      "リリースファイルを展開する（既存のインストール先の上には展開しない）。",
+      "ghidraRun（Windows では ghidraRun.bat）を実行して起動する。"
+    ],
+    "commands": [
+      "./ghidraRun",
+      "ghidraRun.bat",
+      "./support/pyghidraRun",
+      "support\\pyghidraRun.bat",
+      "git clone https://github.com/NationalSecurityAgency/ghidra.git",
+      "gradle -I gradle/support/fetchDependencies.gradle",
+      "gradle buildGhidra",
+      "gradle prepdev eclipse buildNatives"
+    ]
+  }
+}

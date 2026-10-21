@@ -1,0 +1,40 @@
+{
+  "repo": "Graphify-Labs/graphify",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "コードや資料を丸ごと検索できる知識グラフに変えるAIアシスタント用スキル",
+  "features": [
+    "AIコーディングアシスタントで「/graphify .」と入力すると、コード・ドキュメント・PDF・画像・動画を含むプロジェクト全体を知識グラフ（概念をノード、関係を辺で表したデータ）にまとめます。",
+    "結果として、ブラウザでクリック・絞り込み・検索ができるgraph.html、要点をまとめたGRAPH_REPORT.md、グラフ全体を保存したgraph.jsonの3ファイルを出力します。",
+    "「graphify query」で自然文の質問に関係する部分グラフを返し、「graphify path A B」で2つの要素のつながりをたどり、「graphify explain」で1つの概念の接続を説明します。",
+    "最もつながりの多い概念（God nodes）の抽出や、Leiden法（グラフを密につながったまとまりに分ける手法）によるサブシステムへの分割を行います。",
+    "約40言語で関数呼び出し・import・継承などのファイル間の関係を解決し、「# NOTE:」「# WHY:」コメントやADR/RFCの引用もコードに結び付いたノードにします。",
+    "Claude Code、Cursor、Codex、Gemini CLI、GitHub Copilotなど20以上のアシスタントに対応し、「graphify install」で使っているアシスタントを検出してスキルを登録します。"
+  ],
+  "why": "ファイルをgrepで探す代わりにグラフを問い合わせることでAIエージェントの作業を効率化できる点が特徴で、README ではベンチマーク（LOCOMOでrecall@10が0.497、グラフ構築のLLMクレジット0）も示されています。コードの解析はLLMを使わずローカルで決定的に行い、ベクトルストア（埋め込みベクトルの検索用データベース）も使わないという方針が打ち出されています。推測: Claude CodeやCodexなどのエージェント型ツールの普及で、大きなコードベースを少ないトークンで理解させる手段への関心が高まっていることも注目の理由と考えられます。",
+  "whoFor": "Claude CodeやCursorなどのAIコーディングアシスタントで、大きなコードベースや資料を効率よく把握させたい開発者に役立ちます。初めて触るプロジェクトの全体構造や、要素同士のつながりを把握したいときにも使えます。",
+  "tech": [
+    "コードはtree-sitter（多言語対応の構文解析ライブラリ）でAST（抽象構文木）に解析し、LLMを使わず手元のマシンだけで決定的に処理します。",
+    "ドキュメント・PDF・画像・動画は、アシスタントのモデルや設定したAPIキー（OpenAI、Gemini、Claude、Ollamaなど）を使った意味解析で同じグラフに取り込みます。",
+    "各辺には、ソースに明示されていた関係を表すEXTRACTEDか、graphifyが推論で解決した関係を表すINFERREDのタグが付きます。",
+    "埋め込みやベクトルストアは使わず、実際にたどれるグラフとしてgraph.jsonに保存し、互換性確認用にschema_versionとgraphify_versionを記録します。",
+    "PDF・Office・SQLスキーマ・PostgreSQL・MCPサーバー・Neo4jへの出力などは、必要なものだけ追加でインストールするオプション（extras）として提供されています。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Python 3.10以上とuv（またはpipx）を用意します。",
+      "PyPIのgraphifyy（yが2つ）パッケージをインストールし、「graphify install」で使っているアシスタントにスキルを登録します。",
+      "AIアシスタントを開いて「/graphify .」と入力します（Codexでは「$graphify」を使います）。",
+      "graphify-outフォルダに出力されたgraph.htmlをブラウザで開いたり、graphify query・path・explainコマンドでグラフに質問したりします。"
+    ],
+    "commands": [
+      "uv tool install graphifyy",
+      "pipx install graphifyy",
+      "graphify install",
+      "/graphify .",
+      "graphify explain \"APIRouter\"",
+      "graphify path \"FastAPI\" \"ModelField\"",
+      "graphify install --project"
+    ]
+  }
+}

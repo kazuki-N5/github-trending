@@ -1,0 +1,39 @@
+{
+  "repo": "morluto/rea",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "AIエージェントにアプリやバイナリの逆解析をさせるMCPツール",
+  "features": [
+    "ソースコードの無いアプリを調べ、ある機能がどう動いているかを証拠付きで説明させ、自分のプロジェクト向けに似た機能を作らせることができる。",
+    "ネイティブバイナリ（コンパイル済みの実行ファイル）について、Hopper・Ghidra・IDA を使って疑似コード、アセンブリ、文字列、シンボル、呼び出し関係を取り出せる。",
+    "JavaScript/Electron アプリ、.NET アセンブリ、Android APK、Webサイト、ファームウェア、SQLite データベース、ネットワークキャプチャなど多様な対象を解析できる。",
+    "npx rea-agents setup で Claude Code・Codex・Cursor・Gemini CLI などのエージェントに MCP サーバーと作業手順（スキル）をまとめて登録できる。",
+    "同じ機能をターミナルの rea コマンドからも使え、結果を JSON で受け取れる。",
+    "解析はローカルで行われ、結論ごとに根拠となる証拠と限界（わからない点）が返される。"
+  ],
+  "why": "推測: 「気に入った機能の仕組みをバイナリのレベルまで調べる」作業を、普段使っているAIエージェントに頼めるようにした点が関心を集めていると考えられる。README によればスター数は30万を超えており、DX-Ball や Notion などの実例（ショーケース）も公開されている。",
+  "whoFor": "リバースエンジニアリング（完成品の動きから内部の仕組みを調べる技術）を学びたい人や、セキュリティ研究・相互運用のために自分が権限を持つソフトを解析したい人に向く。Ghidra などの解析ツールをAIエージェント経由で使いたい人にも役立つ。",
+  "tech": [
+    "MCP（Model Context Protocol、AIエージェントが外部ツールを呼び出すための共通プロトコル）サーバーとして動き、エージェントが解析ツールを呼び出す。",
+    "ネイティブ解析は Hopper・Ghidra・IDA などの既存の逆アセンブラ／デコンパイラを裏で操作する仕組みになっている。",
+    "Android は JADX や Apktool、パケット解析は TShark、ファームウェアは Binwalk/Unblob など、対象ごとに外部ツールと連携する。",
+    "TypeScript で書かれ、npm パッケージ rea-agents として配布されている（Node.js 22.19 以上などが必要）。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node.js と npm を用意し、npx rea-agents setup を実行する。",
+      "使うエージェントを選び、提案された設定変更を確認して承認し、エージェントを再起動する。",
+      "エージェントに「Notes アプリの検索がどう動くか調べて、証拠を見せて、似た機能を作って」のように頼む。",
+      "ターミナルから使う場合は、展開済みの JavaScript/Electron アプリのディレクトリを analyze-javascript-application で解析する。",
+      "ネイティブ解析をする場合は、先に Hopper・Ghidra・IDA などのプロバイダを設定する。"
+    ],
+    "commands": [
+      "npx rea-agents setup",
+      "npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json",
+      "npm install --global rea-agents",
+      "rea --help",
+      "rea update",
+      "npx rea-agents@latest setup"
+    ]
+  }
+}

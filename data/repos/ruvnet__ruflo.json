@@ -1,0 +1,43 @@
+{
+  "repo": "ruvnet/ruflo",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "Claude Code と Codex に多数のエージェントや記憶を足すハーネス",
+  "features": [
+    "コーディング、テスト、セキュリティ、ドキュメント、設計などを担当する100以上の専門エージェントを使えます。",
+    "複数のエージェントを階層型やメッシュ型などの構成でチーム（スウォーム）として協調させられます。",
+    "ベクトル検索を使った記憶を持ち、セッションをまたいで過去の経験を思い出したり、成功したパターンから学習したりします。",
+    "フェデレーション機能で、別のマシンや組織のエージェント同士が認証したうえで安全に作業をやり取りできます。",
+    "コンソール画面でワークフロー、エージェント、モデル、トークン数、コストを確認でき、Claude に操作させる権限の範囲も設定できます。",
+    "Claude Code のプラグインとして必要な機能だけ入れることも、CLI で一式をまとめて導入することもできます。"
+  ],
+  "why": "README では、元は Claude Flow という名前で始まったエージェントのハーネス（モデルに道具・記憶・制御を与える実行基盤）で、npm のダウンロード数が大きいことを示しています。推測: Claude Code や Codex を複数エージェントで動かしたいという需要に、プラグインや MCP サーバーとしてすぐ導入できる形で応えている点が注目されていると考えられます。",
+  "whoFor": "Claude Code や Codex で、複数のエージェントに役割分担させたり、作業の記憶や学習を持たせたりしたい人に向いています。エージェントの動作やコストを画面で監視したい場面にも使えます。",
+  "tech": [
+    "MCP（Model Context Protocol、AI に外部ツールをつなぐ標準仕様）のサーバーとして動き、Claude Code 以外の MCP 対応ツールからも使えます。",
+    "記憶には HNSW（高速な近似最近傍探索のアルゴリズム）で索引付けした AgentDB を使い、README では規模によって全件探索より速くなると測定結果を示しています。",
+    "Claude Code のフック（決まったタイミングで処理を差し込む仕組み）で、作業の振り分けや成功パターンの学習を裏側で自動的に行います。",
+    "監査や最適化などを自動で実行する12種類のバックグラウンドワーカーを持ちます。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Claude Code（2.1.287 以降）でマーケットプレイスを追加し、ruflo-core などのプラグインをインストールして /ruflo を実行します。",
+      "Codex など他の MCP 対応ツールで使う場合は、プロジェクトのターミナルでセットアップウィザードを実行し、Ruflo の MCP サーバーに接続します。",
+      "mods プラグインはアカウントの権限で動きサンドボックス化されていないため、入れる前にコードを確認します。"
+    ],
+    "commands": [
+      "/plugin marketplace add ruvnet/ruflo",
+      "/plugin install ruflo-core@ruflo",
+      "/plugin install ruflo-console@ruflo",
+      "/plugin install ruflo-mods@ruflo",
+      "/reload-plugins",
+      "/ruflo",
+      "npx ruflo@latest init wizard",
+      "npx -y ruflo@latest mcp start",
+      "npx ruflo tui",
+      "curl -fsSL https://cdn.jsdelivr.net/gh/ruvnet/ruflo@main/scripts/install.sh | bash",
+      "npm install -g ruflo@latest",
+      "claude mcp add claude-flow -- npx ruflo@latest mcp start"
+    ]
+  }
+}

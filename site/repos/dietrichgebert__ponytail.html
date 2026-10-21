@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DietrichGebert/ponytail | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>DietrichGebert/ponytail</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-10-19（Star History 14位）</span>
+<a class="gh" href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="dietrichgebert__ponytail" data-repo="DietrichGebert/ponytail" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントに「書かずに済ませる」ベテラン開発者の考え方を与えるプロンプト</p>
+<h3>何ができるか</h3><ul><li>コードを書く前に「本当に必要か」「既存コードにあるか」「標準ライブラリやプラットフォーム機能で済むか」などを順に確かめ、最小限の実装だけを書かせます。</li><li>入力検証、エラー処理、セキュリティ、アクセシビリティは削らず、分岐やループなどのロジックには小さなテストを1つ残させます。</li><li>/ponytail-review で、変更が触れるコードまで読んだうえで、バグ、セキュリティ、負荷、テスト不足、削れる部分をレビューします。</li><li>/ponytail-audit でリポジトリ全体を同じ観点で点検し、優先度順に何から直すべきかを示します。</li><li>Claude Code では、タスクのコスト、トークン数、作業時間、既存コードの再利用率などをプロンプトの上に表示します。</li><li>/ponytail-debt で、後回しにした箇所を示す shortcut: コメントを一覧にまとめられます。</li></ul>
+<h3>なぜ注目されているか</h3><p>README のベンチマークでは、スキルなしと比べてコード量が53%、時間が41%、コストが26%、トークンが45%減り、リスクのあるロジックにテストが付く割合は68%から98%に上がったとしています。リポジトリページでは16万を超えるスターを集めています。<span class="guess">推測</span> AIエージェントが必要以上のコードを書きがちだという悩みに、具体的な数値で応えている点が注目の理由と考えられます。</p>
+<h3>どんな人に役立つか</h3><p>Claude Code や Codex などのAIエージェントが、ライブラリを足したり部品を自作したりしてコードを膨らませがちだと感じている開発者に向いています。</p>
+<h3>技術的なポイント</h3><ul><li>本体は1つのプロンプト（skills/ponytail/SKILL.md）で、ルールファイルを読むエージェント向けに短くした AGENTS.md も用意されています。</li><li>リポジトリの残りの部分は、そのプロンプトを Claude Code、Codex、Cursor、Gemini など約20種類のエージェントに読み込ませるためのアダプタです。</li><li>ベンチマークは Claude Code 上で、実際の FastAPI + React リポジトリを含む39タスクを各5回実行して比較しています。</li><li>lite、full、ultra、off の強度を切り替えられ、表示用のデータは既定で手元の ~/.config/ponytail/band/ に保存されます。</li></ul>
+<h3>試し方</h3>
+<ol><li>Claude Code で、マーケットプレイスの追加とプラグインのインストールを別々のプロンプトとして実行します。</li><li>Codex の場合はコマンドでプラグインを追加し、/hooks で2つのフックを信頼してから新しいスレッドを始めます。</li><li>その他のエージェントでは、AGENTS.md をプロジェクトにコピーするか、SKILL.md をスキルとして導入します。</li></ol>
+<pre><code>/plugin marketplace add DietrichGebert/ponytail
+/plugin install ponytail@ponytail
+codex plugin marketplace add DietrichGebert/ponytail
+codex plugin add ponytail@ponytail</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#w-dietrichgebert__ponytail">2026-10-19 週間</a>
+<span class="src starhistory">Star History 14位</span><span>★ +6,057（週）</span></li><li><a href="../days/2026-10-21.html#d-dietrichgebert__ponytail">2026-10-21</a>
+<span class="src github">GitHub Trending 4位</span><span>★ +1,208</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

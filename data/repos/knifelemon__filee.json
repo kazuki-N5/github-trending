@@ -1,0 +1,41 @@
+{
+  "repo": "KnifeLemon/Filee",
+  "language": "C#",
+  "readme": true,
+  "oneLiner": "ドラッグ&ドロップで多数の形式をオフライン変換できる無料ファイル変換ソフト",
+  "features": [
+    "キーを押しながらファイルをドラッグすると、カーソル位置にドーナツ型のメニューが開き、変換先の形式の上に落とすだけで変換できる。",
+    "画像・PDF・Word・Excel・PowerPoint・HWP・電子書籍・動画・音声・アーカイブ・フォント・CAD・3Dモデルなど244形式を扱える。",
+    "多くの形式は Office や LibreOffice なしで変換でき、一部の形式は必要なときだけ FFmpeg や LibreOffice などの追加エンジンをダウンロードして使う。",
+    "複数ファイルの並列変換や、HWP → HWPX → DOCX のような多段の変換経路の自動探索ができる。",
+    "監視フォルダに入ったファイルを自動変換でき、右クリックメニューや filee コマンドからも使える。",
+    "ファイルはアップロードされず、オフラインで変換して元ファイルの隣に保存する。"
+  ],
+  "why": "推測: 変換のためにファイルを外部サイトへアップロードしたくない、Office を入れたくないという需要に、無料・オープンソース・オフラインで応えている点が注目されていると考えられる。韓国で広く使われる HWP/HWPX 形式に Hancom Office なしで対応している点も特徴になっていると思われる。",
+  "whoFor": "形式の違うファイルを日常的に変換する人や、機密ファイルをオンライン変換サービスに上げたくない人に向く。C# でのデスクトップアプリやプラグイン式の変換処理の作り方を知りたい人にも参考になる。",
+  "tech": [
+    "C# と .NET 10 SDK で開発され、Windows 10/11 のほか macOS と Linux（プレビュー版）でも動く。",
+    "Ghostscript・LibreOffice・Pandoc・calibre・FFmpeg を任意の外部エンジンとして、必要なときに公式配布元から取得する仕組みになっている。",
+    "同じエンジンとプリセットを使う filee コマンドライン（CLI）を備えている。",
+    "利用データの送信（テレメトリ）はせず、通信は更新確認とエンジンのダウンロード、リンクを開くときに限られる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHub の Releases から自分の OS 向けのパッケージをダウンロードする。",
+      "Windows ではセットアップ用 exe を実行するか、Portable 版の zip を展開して Filee.exe を起動する。",
+      "macOS 14 以上や Linux（Ubuntu 22.04 以上）では、パッケージを展開して ./install.sh を実行する。",
+      "Ctrl（macOS では Option）を押しながらファイルをドラッグし、開いたドーナツの変換先形式の上で離す。",
+      "ソースからビルドする場合は .NET 10 SDK を用意し、リポジトリを clone して dotnet run で起動する。"
+    ],
+    "commands": [
+      "filee convert photo.heic --to jpg",
+      "filee convert *.png --to webp --quality 80 -o converted",
+      "filee watch D:\\Inbox --to pdf --move-originals",
+      "git clone https://github.com/KnifeLemon/Filee.git",
+      "cd Filee",
+      "pwsh build/fetch-engines.ps1 -Only rhwp,pandoc",
+      "dotnet run --project src/Filee.App",
+      "dotnet test"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>affaan-m/ECC | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧠</div><div>
+<h1>affaan-m/ECC</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-10-19（Star History 13位）</span>
+<a class="gh" href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="affaan-m__ecc" data-repo="affaan-m/ECC" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIコーディングエージェントに計画・検証・記憶の仕組みを丸ごと入れる強化キット</p>
+<h3>何ができるか</h3><ul><li>計画、テスト、実装、レビュー、検証、記憶、改善という開発の流れを、エージェントの標準の動き方として組み込めます。</li><li>計画・レビュー・ビルド修復・セキュリティなどに特化した71のエージェントと、TDDや調査、ドキュメント作成などの311のスキルを利用できます。</li><li>フック（エージェントの特定のタイミングで自動実行される処理）とメモリにより、セッションの要約や継続的な学習を行えます。</li><li>AgentShield により、プロンプト、フック、MCP 設定、権限、秘密情報、エージェント用ファイルをスキャンできます。</li><li>Claude Code、Codex、Qoder にはネイティブのプラグインとして、Cursor、OpenCode、Gemini、Zed などには機能を絞ったアダプタとして導入できます。</li><li>対話式のセットアップウィザードで、インストール先のスコープやフックの設定を選んで導入・更新できます。</li></ul>
+<h3>なぜ注目されているか</h3><p>リポジトリページでは28万を超えるスターを集めており、README ではメンテナー1人が7種類のハーネスに向けて毎週リリースしていると述べています。<span class="guess">推測</span> 毎回プロンプトで手順を指示しなくても、エージェントに一貫した開発プロセスを持たせられる点が、AIコーディングツールの利用者に支持されていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>Claude Code や Codex などのAIコーディングエージェントを日常的に使い、計画やテスト、レビューを含む決まった進め方をエージェントに守らせたい開発者に向いています。</p>
+<h3>技術的なポイント</h3><ul><li>Claude Code ではプラグイン ecc@ecc として配布され、npm パッケージ ecc-universal（Node.js 18 以上が必要）から対話式セットアップを実行できます。</li><li>install.sh / install.ps1 の minimal・core・full といったプロファイルで、入れる部品（ルール、エージェント、フックなど）を選べます。</li><li>ルールは言語やフレームワークごとのパックに分かれており、常に読み込ませる規約を必要な分だけ追加します。</li><li>複数の導入方法を同じハーネスに重ねると、スキルやフックが重複するため、ハーネスごとに1つの方法を選ぶ設計になっています。</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js 18 以上、Git、Claude Code をインストールします。</li><li>ターミナル（Windows なら PowerShell）でガイド付きセットアップを実行します。</li><li>個人利用なら Global user と Standard フックを選んで確定します。</li><li>新しい Claude Code セッションで /plugin list を実行し、ecc@ecc が有効になっていることを確認します。</li></ol>
+<pre><code>npx ecc-universal@2.2.3 setup
+/plugin marketplace add https://github.com/affaan-m/ECC
+/plugin install ecc@ecc</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#w-affaan-m__ecc">2026-10-19 週間</a>
+<span class="src starhistory">Star History 13位</span><span>★ +6,453（週）</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

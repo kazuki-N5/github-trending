@@ -1,0 +1,35 @@
+{
+  "repo": "cloudflare/security-audit-skill",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "コーディングエージェントを多段階のセキュリティ監査役に変えるスキル",
+  "features": [
+    "偵察・網羅的な脆弱性探し・候補の検証・構造化出力・記録の独立検証・レポート作成という6つのフェーズで監査を進めます。",
+    "偵察フェーズでアーキテクチャや信頼境界（権限や信頼度が変わる境目）、入力箇所を調べ、architecture.mdとcoverage-ledger.json（どこを調べたかの台帳）にまとめます。",
+    "見つかった脆弱性の候補は、発見したエージェントとは別の新しいエージェントが反証を試みて検証します。",
+    "結果をconfirmed（確認済み）、needs_validation（未確定の事実が残る）、rejected（反証済み）の3種類に分けてfindings.jsonに書き出し、report-schema.jsonで形式をチェックします。",
+    "検証済みの記録からREPORT.md、FINDINGS-DETAIL.md、NEEDS-VALIDATION.mdといった報告書を作ります。",
+    "同じリポジトリへの複数回の実行は積み重ねられ、前回の台帳や結果を使って未調査の部分や変更されたコードを重点的に調べます。"
+  ],
+  "why": "Cloudflareが社内の脆弱性発見ハーネス（自動で脆弱性を探す仕組み）の出発点となったスキルとして公開しており、ブログ記事「Build your own vulnerability harness」でも紹介されています。推測: AIエージェントによるコード監査への関心が高まるなか、大手企業が実際に使った手法をそのまま試せる点が注目を集めていると考えられます。",
+  "whoFor": "コーディングエージェントを使って自分のコードベースのセキュリティを点検したい開発者に向いています。セキュリティ監査の進め方や、AIの誤検知を減らす検証の仕組みを学びたい人にも参考になります。",
+  "tech": [
+    "スキルはMarkdownの指示書（SKILL.mdや各フェーズ用のファイル）で構成され、Webの認証、クライアント側、サプライチェーン、クラウド、メモリ安全性、LLMなど分野別の攻撃パターン集を持ちます。",
+    "互いに独立したサブエージェント（親エージェントから並列に起動される別のエージェント）を使い分け、見つける役と確かめる役を必ず分けます。",
+    "依存ライブラリなしのNode.jsスクリプトvalidate-findings.cjsとvalidate-coverage-ledger.cjsで、結果ファイルと台帳の形式を検証します。",
+    "対象コードのビルドやテストを実行する場合は、外部ネットワーク遮断や書き込み先制限などを備えたOSレベルのサンドボックス（隔離環境）が必要で、ない場合はコードを実行せずneeds_validationとして残します。"
+  ],
+  "tryIt": {
+    "steps": [
+      "ツール呼び出しと並列サブエージェントに対応したコーディングエージェントと、Node.jsを用意します。",
+      "Skills CLIでスキルをインストールします（ユーザー全体に入れる場合は--globalを付けます）。",
+      "監査したいコードベースでエージェントを起動し、「security audit this codebase」のように依頼するとスキルが自動で起動します。",
+      "出力先を指定しない場合、結果は~/security-audit-skill/<リポジトリ名>/run-<N>に保存されます。"
+    ],
+    "commands": [
+      "npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit",
+      "npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit --global",
+      "npx skills --help"
+    ]
+  }
+}

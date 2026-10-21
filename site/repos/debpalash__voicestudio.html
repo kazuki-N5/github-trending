@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>debpalash/VoiceStudio | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎙️</div><div>
+<h1>debpalash/VoiceStudio</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-19（GitHub Trending 9位）</span>
+<a class="gh" href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="debpalash__voicestudio" data-repo="debpalash/VoiceStudio" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">声のクローンや動画吹き替えをローカルで行うオープンソース音声スタジオ</p>
+<h3>何ができるか</h3><ul><li>参照用の録音から声をクローン（再現）したり、言葉で説明して新しい声をデザインしたりできる。</li><li>動画にタイミングを合わせた音声を付けて吹き替えができる。</li><li>フローティングウィジェットで音声入力（ディクテーション）や文字起こしができる。</li><li>物語やオーディオブックの作成、バッチ処理に対応する。</li><li>エージェント向けにローカルAPIと MCP（AIエージェントに外部ツールをつなぐ共通プロトコル）を提供する。</li><li>646の言語に対応し、標準エンジン以外の音声エンジンも選べる。</li></ul>
+<h3>なぜ注目されているか</h3><p>ローカルの処理は自分のハードウェア上で動き、外部サービスは任意という、完全ローカルで使える点を打ち出している。<span class="guess">推測</span> 有料の音声合成サービス ElevenLabs の代わりとして無料・オフラインで使える点が関心を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>動画の吹き替えやオーディオブック作成をしたいクリエイターや、音声データを外部に送らずに音声合成・文字起こしをしたい人に向いている。</p>
+<h3>技術的なポイント</h3><ul><li>標準エンジンは k2-fsa/OmniVoice を使っている。</li><li>デスクトップアプリは Electron で作られており、Python のバックエンドと組み合わせて動く。</li><li>NVIDIA GPU では CUDA、Apple Silicon では Metal（MPS）で高速化し、専用GPUがなくてもCPUで動かせる。</li><li>モデル管理画面でモデルの出典やライセンスに関する情報を確認できる。</li></ul>
+<h3>試し方</h3>
+<ol><li>macOS や Linux ではワンコマンドのインストーラー、Windows では PowerShell のコマンドでインストールする（Releases からのダウンロードも可）。</li><li>アプリで Voice cloning を開き、声を選ぶかきれいな参照録音を追加する。</li><li>テキストを入力して生成する。必要なモデルはインストールを求められたときに入れる。</li></ol>
+<pre><code>curl -fsSL https://voicestudio.sh/install | sh
+irm https://voicestudio.sh/install | iex
+npx skills add debpalash/VoiceStudio
+git clone https://github.com/debpalash/VoiceStudio.git
+cd VoiceStudio
+bun install
+bun run setup:api
+bun run dev</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#d-debpalash__voicestudio">2026-10-19</a>
+<span class="src github">GitHub Trending 9位</span><span>★ +2,082</span></li><li><a href="../days/2026-10-19.html#w-debpalash__voicestudio">2026-10-19 週間</a>
+<span class="src starhistory">Star History 4位</span><span>★ +16,327（週）</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

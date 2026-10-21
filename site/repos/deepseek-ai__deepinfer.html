@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>deepseek-ai/DeepInfer | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>deepseek-ai/DeepInfer</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-21（Trendshift 1位）</span>
+<a class="gh" href="https://github.com/deepseek-ai/DeepInfer" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="deepseek-ai__deepinfer" data-repo="deepseek-ai/DeepInfer" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">DeepSeekの本番サービスを支える大規模・高性能なLLM推論フレームワーク</p>
+<h3>何ができるか</h3><ul><li>DeepSeek-V4.1-Flashモデルのオフライン推論（サーバーを立てずにスクリプトから文章を生成すること）ができます。</li><li>Attention DP（データ並列）やCP（コンテキスト並列）、MoE（複数の専門家ネットワークを切り替えるモデル構造）のEP（専門家並列）とEPLB（専門家の負荷分散）で、多数のGPUに処理を分散できます。</li><li>DSparkによる下書きトークン（先に予測した候補の単語）を使ったデコード高速化と、確信度に基づいて検証タイミングを決める仕組みを備えています。</li><li>CPUでのバッチのスケジューリングとGPUでの実行を重ねる非同期スケジューリングが標準で有効になっています。</li><li>バッチの組み合わせが変わっても結果が同じになるバッチ不変推論と、同じ入力・同じパラメータで同じ出力を得る決定的サンプリングに対応しています（NVIDIAのみ）。</li><li>正規表現・JSONスキーマ・EBNF文法（文法を記述する記法）に従った形式で出力させる構造化出力ができます。</li></ul>
+<h3>なぜ注目されているか</h3><p>DeepSeekが自社の大規模な本番サービスで使っている推論フレームワークを、Apache 2.0ライセンスで公開したものだからです。<span class="guess">推測</span> FlashMLAやDeepGEMM、DeepEPなどDeepSeekがこれまで公開してきた高速カーネルをまとめて使う実例であり、NVIDIA SM100 GPUとHuawei Ascend NPUの両方に対応している点も注目を集めていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>大規模言語モデルの推論を高速化・大規模化する仕組みを研究・開発している人に向いています。なお、KVキャッシュシステムやPrefill/Decodeの分離、データ並列レプリカ間の負荷分散はこのリリースに含まれないため、完全な推論サービスとして使うには別途用意が必要です。</p>
+<h3>技術的なポイント</h3><ul><li>DeepSeekのFlashMLA、DeepGEMM、DeepEP、TileKernels、DeepSelectといった最適化済みカーネル（GPU上で動く計算処理）と、TileLangで書いた独自カーネルを使っています。</li><li>PythonのコードとC++の拡張（csrc以下、pybindでPythonから呼び出す）を組み合わせて、スケジューラなどを実装しています。</li><li>当初は主にvLLMを土台に作られ、SGLangやTensorRT-LLMからも影響を受けたとREADMEに書かれています。</li><li>デコーダのSWA（一定幅の直近トークンだけを見るスライディングウィンドウ注意機構）について、上限を決めた末尾部分だけを再生するbounded replayでprefill（入力の一括処理）の作業を減らします。</li><li>動作環境はLinux、GCC 13以上、Python 3.12で、NVIDIAではCUDA 13、AscendではCANN 9.2が必要です。</li></ul>
+<h3>試し方</h3>
+<ol><li>Linux上に空のPython 3.12環境を作って有効にします。</li><li>環境変数DEEPINFER_ACCELERATORにnvidia（Ascendならascend）を設定し、build.shでソースからビルドします。</li><li>examples/offline_inference.pyを実行すると、初回はDeepSeek-V4.1-Flash-1017のチェックポイントがHugging Faceのキャッシュにダウンロードされて推論が動きます。</li><li>手元のモデルを使う場合は、DEEPINFER_HF_MODEL_DIRにモデルのディレクトリを指定します。</li></ol>
+<pre><code>export DEEPINFER_ACCELERATOR=nvidia
+./build.sh
+python examples/offline_inference.py</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-21.html#d-deepseek-ai__deepinfer">2026-10-21</a>
+<span class="src trendshift">Trendshift 1位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

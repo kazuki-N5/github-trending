@@ -1,0 +1,31 @@
+{
+  "repo": "anthropics/claude-plugins-official",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Anthropic が管理する Claude Code 公式プラグインのマーケットプレイス",
+  "features": [
+    "Claude Code のプラグインシステムから、このマーケットプレイスに載っているプラグインを直接インストールできます。",
+    "/plugins に Anthropic 自身が開発・保守するプラグイン、/external_plugins にパートナーやコミュニティ製のプラグインがまとめられています。",
+    "Claude Code の /plugin > Discover 画面からプラグインを探せます。",
+    "外部の開発者は申請フォームからプラグインを提出でき、品質とセキュリティの基準を満たせば掲載されます。",
+    "SKILL.md だけを持つリポジトリも、マーケットプレイス側の設定でスキル集プラグインとして登録できます。"
+  ],
+  "why": "Claude Code を作っている Anthropic 自身が公式に管理するプラグインの一覧です。推測: 公式の配布先なので、Claude Code の機能を広げたい利用者がまず参照する場所になっていると考えられます。",
+  "whoFor": "Claude Code に外部サービス連携や追加コマンドを入れたい利用者に役立ちます。自作プラグインを作りたい人は、構成の見本として /plugins/example-plugin を参考にできます。",
+  "tech": [
+    "各プラグインは .claude-plugin/plugin.json（必須のメタデータ）を持ち、必要に応じて .mcp.json（MCP サーバーの設定）、commands、agents、skills を含む決まった構成になっています。",
+    "MCP（Model Context Protocol、AI に外部ツールをつなぐための標準仕様）のサーバー設定をプラグインに含められます。",
+    "マーケットプレイスの name は一度公開したら変えない識別子で、どうしても改名するときは marketplace.json の renames に旧名と新名を書くと既存のインストールが自動で移行されます。",
+    "strict: false と skills 配列を使うと、plugin.json の無いリポジトリのスキルを直接登録できます。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Claude Code で /plugin install コマンドにプラグイン名を付けて実行します。",
+      "または /plugin > Discover からプラグインを探してインストールします。",
+      "インストール前に、そのプラグインが信頼できるかを各プラグインのホームページで確認します。"
+    ],
+    "commands": [
+      "/plugin install {plugin-name}@claude-plugins-official"
+    ]
+  }
+}

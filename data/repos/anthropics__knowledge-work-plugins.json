@@ -1,0 +1,33 @@
+{
+  "repo": "anthropics/knowledge-work-plugins",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Claudeを営業・法務・財務など職種別の専門アシスタントにするプラグイン集",
+  "features": [
+    "営業、カスタマーサポート、プロダクトマネジメント、マーケティング、法務、財務、データ分析、社内検索、バイオ研究、生産性向上など、職種ごとのプラグイン11種類を公開しています。",
+    "各プラグインはスキル、コネクタ、スラッシュコマンド、サブエージェントをひとまとめにしており、その職種の仕事を手伝うための出発点になります。",
+    "スキル（その分野の知識や手順を書いたファイル）は、関係する場面でClaudeが自動的に参照します。",
+    "「/sales:call-prep」や「/data:write-query」のようなスラッシュコマンドで、決まった作業を明示的に実行できます。",
+    "Slack、Notion、Jira、HubSpot、Snowflake、PubMedなどの外部ツールとコネクタでつなぎ、データを取り込みながら作業できます。",
+    "cowork-plugin-managementプラグインを使うと、自社の道具や業務の流れに合わせて新しいプラグインを作ったり既存のものを手直ししたりできます。"
+  ],
+  "why": "AnthropicがClaude Cowork向けに、自社の業務で作ったり参考にしたりしたプラグインをオープンソースとして公開したものです。推測: プログラムを書かずにMarkdownとJSONだけでClaudeを職種別の専門家に仕立てられる手軽さが、エンジニア以外の知識労働者にも使える仕組みとして注目されていると考えられます。",
+  "whoFor": "Claude CoworkやClaude Codeを使っていて、営業・法務・財務・データ分析などの定型業務をAIに任せたい人やチームに役立ちます。自社の用語や業務手順をClaudeに覚えさせたい管理者や、プラグインの作り方を学びたい人の参考にもなります。",
+  "tech": [
+    "各プラグインは、マニフェスト（.claude-plugin/plugin.json）、ツール接続設定（.mcp.json）、commandsフォルダ、skillsフォルダという共通の構成になっています。",
+    "外部ツールとの接続にはMCPサーバー（Model Context Protocol: AIと外部ツールをつなぐための共通規格に沿ったサーバー）を使います。",
+    "すべての部品がMarkdownとJSONのファイルだけでできていて、コードもインフラもビルド手順も要りません。",
+    ".mcp.jsonを書き換えて接続先を差し替えたり、スキルのファイルに社内の用語や手順を書き足したりしてカスタマイズできます。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Claude Coworkを使う場合は、claude.com/pluginsからプラグインをインストールします。",
+      "Claude Codeを使う場合は、まずこのリポジトリをマーケットプレイスとして追加し、続けて使いたいプラグイン（例: sales）をインストールします。",
+      "インストールするとプラグインは自動で有効になり、スキルは関係する場面で使われ、/sales:call-prepのようなスラッシュコマンドもセッション内で使えるようになります。"
+    ],
+    "commands": [
+      "claude plugin marketplace add anthropics/knowledge-work-plugins",
+      "claude plugin install sales@knowledge-work-plugins"
+    ]
+  }
+}

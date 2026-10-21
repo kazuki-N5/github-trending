@@ -1,0 +1,38 @@
+{
+  "repo": "alchaincyf/huashu-motion",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "AIエージェントに作曲付きの製品紹介動画を作らせ、画面を指して直せるスキル",
+  "features": [
+    "「製品の30秒の発表動画を作って」と頼むと、製品を読み取って3つの方向性の案を出し、動画本体と音楽まで作る。",
+    "ブラウザで開くエディタ上で画面の一点をクリックしてコメントを書くと、エージェントがその箇所だけを修正する。",
+    "エージェントが ABC 記譜法（テキストで書く楽譜）で曲を書き、ピアノ・弦楽器・ドラムのサンプル音源で演奏して場面の切り替えに合わせる。",
+    "CSV データの解説動画、自分の録音を使ったナレーション付き動画、縦型への作り替えなどにも対応する。",
+    "MP4・透過 MOV・WebM・GIF への書き出しや、プレイヤーとソース付きの共有用 Web ページの書き出しができる。",
+    "om check や om qa で、レンダリング前後に文字の欠けやコントラスト不足、一瞬だけのコマなどを自動検査する。"
+  ],
+  "why": "推測: Anthropic が Team/Enterprise 向けに beta 公開した Claude Motion と同じような体験を、誰でも使えるオープンなスキルとして再現しようとしている点が注目されていると考えられる。DeepSeek V4.1 Flash のような安価なモデルでも約30分・約2元で動画が作れたという実例も関心を引いていると思われる。",
+  "whoFor": "製品やアプリの紹介動画を手早く作りたい個人開発者や小さなチームに向く。Claude Code や Codex などのコーディングエージェントを動画制作に使ってみたい人にも役立つ。",
+  "tech": [
+    "1本の動画は1つの index.html で、GSAP・Canvas・Three.js・SVG などで描き、動画生成モデルは使わずコードと時刻だけで各フレームが決まる。",
+    "手元の Chrome を直接操作して複数のブラウザで並列にレンダリングし、FFmpeg で動画と音声を書き出す。",
+    "実在の発表動画21本を FFmpeg でカット割りや音量の変化を測り、142本を分析して20種類の「動きの言語」として演出ルールにまとめている。",
+    "Agent Skills の規約に沿ったスキルとして配布され、Claude Code・Codex など複数のエージェントで使える。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node 22 以上、Chrome（または Chromium・Edge）、FFmpeg を用意する。",
+      "エージェントに「huashu-motion というスキルをインストールしてデモを動かして」と頼むか、npx skills add でインストールする。",
+      "エージェントに「huashu-motion で製品の30秒の発表動画を作って、公式サイトは xxx.com」のように頼む。",
+      "開いたエディタで C キーを押し、直したい場所をクリックしてコメントを書く。",
+      "足りないものは om doctor で確認できる（動作確認は現状 macOS のみ）。"
+    ],
+    "commands": [
+      "npx skills add alchaincyf/huashu-motion",
+      "git clone https://github.com/alchaincyf/huashu-motion.git",
+      "ln -s \"$PWD/huashu-motion/skills/huashu-motion\" ~/.claude/skills/huashu-motion",
+      "om samples build",
+      "om doctor"
+    ]
+  }
+}

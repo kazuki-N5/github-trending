@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cloudflare/security-audit-skill | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛡️</div><div>
+<h1>cloudflare/security-audit-skill</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-10-21（GitHub Trending 2位）</span>
+<a class="gh" href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="cloudflare__security-audit-skill" data-repo="cloudflare/security-audit-skill" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">コーディングエージェントを多段階のセキュリティ監査役に変えるスキル</p>
+<h3>何ができるか</h3><ul><li>偵察・網羅的な脆弱性探し・候補の検証・構造化出力・記録の独立検証・レポート作成という6つのフェーズで監査を進めます。</li><li>偵察フェーズでアーキテクチャや信頼境界（権限や信頼度が変わる境目）、入力箇所を調べ、architecture.mdとcoverage-ledger.json（どこを調べたかの台帳）にまとめます。</li><li>見つかった脆弱性の候補は、発見したエージェントとは別の新しいエージェントが反証を試みて検証します。</li><li>結果をconfirmed（確認済み）、needs_validation（未確定の事実が残る）、rejected（反証済み）の3種類に分けてfindings.jsonに書き出し、report-schema.jsonで形式をチェックします。</li><li>検証済みの記録からREPORT.md、FINDINGS-DETAIL.md、NEEDS-VALIDATION.mdといった報告書を作ります。</li><li>同じリポジトリへの複数回の実行は積み重ねられ、前回の台帳や結果を使って未調査の部分や変更されたコードを重点的に調べます。</li></ul>
+<h3>なぜ注目されているか</h3><p>Cloudflareが社内の脆弱性発見ハーネス（自動で脆弱性を探す仕組み）の出発点となったスキルとして公開しており、ブログ記事「Build your own vulnerability harness」でも紹介されています。<span class="guess">推測</span> AIエージェントによるコード監査への関心が高まるなか、大手企業が実際に使った手法をそのまま試せる点が注目を集めていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>コーディングエージェントを使って自分のコードベースのセキュリティを点検したい開発者に向いています。セキュリティ監査の進め方や、AIの誤検知を減らす検証の仕組みを学びたい人にも参考になります。</p>
+<h3>技術的なポイント</h3><ul><li>スキルはMarkdownの指示書（SKILL.mdや各フェーズ用のファイル）で構成され、Webの認証、クライアント側、サプライチェーン、クラウド、メモリ安全性、LLMなど分野別の攻撃パターン集を持ちます。</li><li>互いに独立したサブエージェント（親エージェントから並列に起動される別のエージェント）を使い分け、見つける役と確かめる役を必ず分けます。</li><li>依存ライブラリなしのNode.jsスクリプトvalidate-findings.cjsとvalidate-coverage-ledger.cjsで、結果ファイルと台帳の形式を検証します。</li><li>対象コードのビルドやテストを実行する場合は、外部ネットワーク遮断や書き込み先制限などを備えたOSレベルのサンドボックス（隔離環境）が必要で、ない場合はコードを実行せずneeds_validationとして残します。</li></ul>
+<h3>試し方</h3>
+<ol><li>ツール呼び出しと並列サブエージェントに対応したコーディングエージェントと、Node.jsを用意します。</li><li>Skills CLIでスキルをインストールします（ユーザー全体に入れる場合は--globalを付けます）。</li><li>監査したいコードベースでエージェントを起動し、「security audit this codebase」のように依頼するとスキルが自動で起動します。</li><li>出力先を指定しない場合、結果は~/security-audit-skill/&lt;リポジトリ名&gt;/run-&lt;N&gt;に保存されます。</li></ol>
+<pre><code>npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit
+npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit --global
+npx skills --help</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-21.html#d-cloudflare__security-audit-skill">2026-10-21</a>
+<span class="src github">GitHub Trending 2位</span><span>★ +1,712</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

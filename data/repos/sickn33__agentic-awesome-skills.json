@@ -1,0 +1,40 @@
+{
+  "repo": "sickn33/agentic-awesome-skills",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "AIエージェント用の2,700超のスキル集と、選定・検証を助けるローカル管理ツール",
+  "features": [
+    "AIコーディングエージェントに読ませる手順書（SKILL.md）を2,724件以上集めたライブラリで、必要なものだけを選んでインストールできます。",
+    "AAS Coreを使うと、CodexやClaudeがローカルにあるカタログ全体を検索し、各スキルのファイルを読んだうえで、プロジェクトに合うスキルを自分で選んで記録できます。",
+    "選んだスキルの組み合わせをaas-stack.jsonという一覧ファイルに保存し、aas stack validateで構成を検証し、aas stack planで変更内容のプレビューを作って確認できます。",
+    "npxで動くインストーラーで、Claude Code・Cursor・Gemini CLI・Codex CLI・Kiro・GitHub Copilot・OpenCodeなど多くのツールのスキル置き場へ、IDやカテゴリ、リスクで絞ってインストールできます。",
+    "Webアプリ開発、セキュリティ、データ分析、QA、DevOpsなど分野別に10件前後のスキルをまとめたプラグインや、使う順番を示すワークフローも用意されています。",
+    "Webのカタログサイトと、ブラウザのメモリ内だけで保存済みのスキル構成とプランを確認できるWorkbenchも提供しています。"
+  ],
+  "why": "README によると約48,000のスターを集めており、多数のAIコーディングツールで共通して使えるスキル集として規模の大きさが特徴です。推測: スキルが増えすぎてどれを使うべきか分かりにくくなったため、エージェント自身に選ばせ、その選択を検証・確認できるAAS Coreを打ち出した点も関心を集めていると考えられます。",
+  "whoFor": "Claude CodeやCodex、CursorなどのAIコーディングエージェントを使っていて、計画づくり・デバッグ・テスト・セキュリティ確認などの定型の進め方をエージェントに覚えさせたい人に向いています。自分でスキルを書いて共有したい人も、テンプレートに沿って投稿できます。",
+  "tech": [
+    "スキルはskills/<スキル名>/SKILL.mdというMarkdownファイルで管理され、機械向けの一覧としてskills_index.jsonとそのJSONスキーマ（データ形式の定義）が公開されています。",
+    "AAS CoreはローカルのMCPサーバー（AIエージェントが外部ツールを呼び出すための共通プロトコルのサーバー）として動き、compose_stackという読み取り専用ツールで選んだIDと構成をメモリ上で検証します。",
+    "Core自体はスキルの順位付けやおすすめをせず、選ぶのはエージェントの役割で、検証は構造とIDの正しさだけを確かめ、内容の適合性や安全性までは保証しないと明記しています。",
+    "1つの構成に入れられるスキルは技術的に最大128件で、実際の適用（apply）や復旧（recovery）は実験的機能として明示的な有効化が必要です。",
+    "配布はnpmパッケージagentic-awesome-skillsで行われ、--dry-runで事前に変更内容だけを確認してから本番のインストールができます。"
+  ],
+  "tryIt": {
+    "steps": [
+      "CodexまたはClaude Codeのガイドに従い、aas mcp configureでローカルMCPを設定します（最初の実行は変更のプレビューと承認用のダイジェストを返します）。",
+      "MCPが使える状態で、エージェントにプロジェクトを調べさせ、関連するスキルを比較して選んだIDを保存させます。",
+      "保存されたマニフェストを検証し、作成されたプランを確認してからインストールに進みます。",
+      "使いたいスキルのIDが分かっている場合は、インストーラーを--dry-run付きで実行してプレビューを確認し、問題なければ--dry-runを外してもう一度実行します。",
+      "Cursor・Gemini CLI・Codex CLIなどはnpx agentic-awesome-skillsに各ツール用のオプションを付けてインストールし、例えば「Use brainstorming to plan a feature」のようにスキル名を指定して使います。"
+    ],
+    "commands": [
+      "npm exec --yes --ignore-scripts --package=agentic-awesome-skills@19.12.1 -- aas mcp configure --host codex --scope user --config /absolute/path/to/codex/config.toml --cache-root /absolute/path/to/aas-cache",
+      "npm exec --yes --ignore-scripts --package=agentic-awesome-skills@19.12.1 -- agentic-awesome-skills --release 19.12.1 --path .agents/skills --skills brainstorming,systematic-debugging --dry-run",
+      "npx agentic-awesome-skills --cursor",
+      "npx agentic-awesome-skills --gemini",
+      "npx agentic-awesome-skills --codex",
+      "npx agentic-awesome-skills --path ./my-skills"
+    ]
+  }
+}

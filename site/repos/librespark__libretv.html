@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LibreSpark/LibreTV | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎬</div><div>
+<h1>LibreSpark/LibreTV</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-10-19（Star History 20位）</span>
+<a class="gh" href="https://github.com/LibreSpark/LibreTV" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="librespark__libretv" data-repo="LibreSpark/LibreTV" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">複数の動画配信元をまとめて検索・視聴できる、自分で建てる動画サイト</p>
+<h3>何ができるか</h3><ul><li>複数の動画収集サイト（采集站）をサーバー側で並列に検索し、結果をまとめて表示する。</li><li>同じ名前の作品を1枚のカードにまとめ、配信元を比べて選べる。</li><li>HLS（動画を細かく分割して配信する方式）の再生に対応し、広告部分の除去、自動連続再生、倍速、ショートカットキーを使える。</li><li>M3U 形式の再生リストを読み込み、ライブ配信や IPTV のチャンネルを番組表（EPG）付きで視聴できる。</li><li>視聴の進み具合と履歴をブラウザ内の IndexedDB に保存し、秒単位で続きから再生できる。</li><li>配信元の一覧を JSON で書き出して共有したり、他人の一覧や TVBOX の設定を購読して取り込んだりできる。</li></ul>
+<h3>なぜ注目されているか</h3><p>Docker で手早く動画まとめサイトを立てられることをうたっており、Fork 数は約 2.9 万と Star 数を上回っています。<span class="guess">推測</span> 自分用のサイトを立てるために Fork する利用者や、派生プロジェクトが多いことが注目度につながっていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>自分のサーバーで動画検索・視聴サイトを運営したい人に向いています。Next.js を使った実用的な Web アプリの構成や、SSRF 対策などのセキュリティ実装を学ぶ題材としても使えます。</p>
+<h3>技術的なポイント</h3><ul><li>Next.js 15（App Router）、TypeScript、Tailwind CSS で作られている。</li><li>動画プレイヤーには ArtPlayer と hls.js を使っている。</li><li>サーバー側のプロキシに SSRF 対策（サーバーを踏み台にして内部ネットワークへアクセスさせる攻撃への防御）を組み込み、内部アドレスへのアクセスを拒否する。</li><li>PWA（Web アプリをアプリのようにインストールできる仕組み）に対応している。</li><li>Docker イメージは linux/amd64 と linux/arm64 の両方に対応し、GHCR と Docker Hub で配布されている。</li></ul>
+<h3>試し方</h3>
+<ol><li>.env ファイルにアクセス用パスワード（PASSWORD）を設定する。</li><li>Docker Compose で公開済みのイメージを取得して起動する（ソースからビルドしてもよい）。</li><li>本番環境ではリバースプロキシなどで HTTPS 化してからアクセスする（HTTP ではログインできない）。</li><li>設定画面の配信元管理から、使いたい配信元の API アドレスを追加して検索する。</li></ol>
+<pre><code>echo &quot;PASSWORD=your-password&quot; &gt; .env
+docker compose pull &amp;&amp; docker compose up -d
+docker compose up -d --build
+npm install
+PASSWORD=your-password npm run build
+PASSWORD=your-password npm start</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#w-librespark__libretv">2026-10-19 週間</a>
+<span class="src starhistory">Star History 20位</span><span>★ +5,293（週）</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

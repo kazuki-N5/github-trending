@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>headroomlabs-ai/headroom | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>headroomlabs-ai/headroom</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-20（GitHub Trending 7位）</span>
+<a class="gh" href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="headroomlabs-ai__headroom" data-repo="headroomlabs-ai/headroom" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントがLLMに渡す情報を手元で圧縮し、トークンを節約するツール</p>
+<h3>何ができるか</h3><ul><li>ツールの出力、ログ、RAG（検索で集めた資料をLLMに渡す手法）の検索結果、ファイル、会話履歴を、LLMに送る前に圧縮します。</li><li>Python・TypeScriptのライブラリとして compress(messages) で使うほか、コードを変えずに挟めるプロキシ（中継サーバー）としても動きます。</li><li>headroom wrap claude のように1コマンドで、Claude Code、Codex、Aider、Cline などのコーディングエージェントを Headroom 経由で動かせます。</li><li>MCP（AIツールと外部機能をつなぐ共通規格）サーバーとして、圧縮・元データ取得・統計の機能を提供します。</li><li>圧縮前の元データを手元に保存しておき、モデルが必要なときに全文を取り出せるようにします（CCR）。</li><li>モデルの前置きや無駄な繰り返しを抑えるよう促すなど、モデルが書き返す出力トークンも減らせます。</li></ul>
+<h3>なぜ注目されているか</h3><p>README によると、SRE障害調査のシナリオで55,957トークンを24,340トークンへ57%削減しつつ、GSM8K などの精度評価では差がほとんど出なかったと示されています。圧縮処理は1ミリ秒前後と速く、手元のマシンで動くためプロンプトやファイルの中身を外部に送らずに済みます。<span class="guess">推測</span> AIコーディングエージェントの利用が広がりAPI料金やコンテキスト長の制約が問題になっているため、既存のエージェントにそのまま組み込める点が注目されていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>Claude Code や Codex などのAIエージェントを日常的に使い、API料金やコンテキストの上限に悩んでいる人に役立ちます。大量のログやJSONをLLMに読ませるアプリを作っている開発者にも向いています。</p>
+<h3>技術的なポイント</h3><ul><li>ContentRouter が内容の種類を判定し、JSONは SmartCrusher、ソースコードは AST（構文木）を使う CodeCompressor、文章は Hugging Face で公開された Kompress-v2-base モデルへ振り分けて圧縮します。</li><li>CacheAligner は、プロバイダ側のKVキャッシュ（同じ前置き部分の計算結果を再利用する仕組み）を壊しやすい変動部分を検出します。プロンプトは書き換えません。</li><li>Anthropic の /v1/messages や OpenAI 互換の /v1/chat/completions などのAPI形式に対応するプロキシとして、間に入って通信を処理します。</li><li>headroom learn は失敗したセッションを分析し、CLAUDE.md や AGENTS.md などの指示ファイルに修正内容を書き込みます。</li></ul>
+<h3>試し方</h3>
+<ol><li>pip または uv で headroom-ai をインストールします（CLIはPyPI版にのみ含まれます）。</li><li>headroom wrap claude でエージェントを包むか、headroom proxy --port 8787 でプロキシを起動します。</li><li>headroom doctor で動作を確認し、headroom dashboard で節約できたトークン量を確認します。</li></ol>
+<pre><code>uv tool install --python 3.13 &quot;headroom-ai[all]&quot;
+pip install &quot;headroom-ai[all]&quot;
+npm install headroom-ai
+headroom deploy
+headroom wrap claude
+headroom proxy --port 8787
+headroom doctor
+headroom perf
+headroom dashboard</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-20.html#d-headroomlabs-ai__headroom">2026-10-20</a>
+<span class="src github">GitHub Trending 7位</span><span>★ +310</span></li><li><a href="../days/2026-10-21.html#d-headroomlabs-ai__headroom">2026-10-21</a>
+<span class="src github">GitHub Trending 10位</span><span>★ +549</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

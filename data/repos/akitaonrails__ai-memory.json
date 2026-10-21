@@ -1,0 +1,37 @@
+{
+  "repo": "akitaonrails/ai-memory",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "複数のAIコーディングエージェントで共有できる長期記憶サーバー",
+  "features": [
+    "Claude Code、Codex、Cursor、Gemini CLI など20種類以上のエージェントが1つの記憶を共有し、途中で別のエージェントに作業を引き継げる。",
+    "引き継ぎ（ハンドオフ）は型付きのプロトコルで、どこまで進んだか・何が失敗したか・何が未解決かを次のエージェントに渡す。",
+    "ライフサイクルフック（エージェントの動作の節目で呼ばれる仕組み）でプロンプトやツール呼び出しを自動記録し、セッション終了時に読みやすいページへまとめる。",
+    "記憶は自分で動かすサーバーに置くため、別のマシンやチームのメンバーとも共有でき、複数ユーザー認証や監査ログも備える。",
+    "使われていない記憶は設定したスケジュールで徐々に薄れ、よく参照される記憶は長く残るなど、LLMを使わずに記憶を整理できる。",
+    "全文検索・エンティティ・リンク（必要ならベクトル検索も）を組み合わせて過去の記憶を検索できる。"
+  ],
+  "why": "各エージェントの記憶機能は1台のマシン・1つのエージェントに閉じているという共通の制限があり、それを取り払うことを目指している。推測: 複数ベンダーのコーディングエージェントを使い分ける人が増えており、ツールを切り替えても文脈を説明し直さずに済む点が評価されていると考えられる。",
+  "whoFor": "Claude Code や Codex など複数のAIコーディングエージェントを切り替えて使う開発者や、エージェントが得た知識をチームで共有したい開発チームに向いている。",
+  "tech": [
+    "記憶の本体は git で管理されたプレーンな Markdown ファイルのWikiで、データベースはそこから再構築できる派生インデックスとして扱う。",
+    "既定の動作ではLLMを一切呼ばず、記録・検索・引き継ぎがAPIキーなしで動く。",
+    "Rust製の単一の自己完結バイナリとして配布される。",
+    "MCP（エージェントに外部ツールをつなぐための共通プロトコル）への登録とライフサイクルフックで各エージェントと連携する。",
+    "LLMを設定すると、アイドル時に古いメモ群を1つのページに書き直すオプトインの「dream」処理も使える。"
+  ],
+  "tryIt": {
+    "steps": [
+      "インストールスクリプトでバイナリを取得する。",
+      "ai-memory setup を実行すると、データディレクトリとトークンの作成、ユーザー単位のサービス起動、見つかったエージェントへのMCP・フック登録がまとめて行われる。",
+      "エージェントを再起動し、「このプロジェクトについて何を覚えている？」と尋ねて動作を確認する。"
+    ],
+    "commands": [
+      "curl -fsSL https://github.com/akitaonrails/ai-memory/releases/latest/download/install.sh | sh",
+      "ai-memory setup",
+      "irm https://github.com/akitaonrails/ai-memory/releases/latest/download/install.ps1 | iex",
+      "claude plugin marketplace add akitaonrails/ai-memory && claude plugin install ai-memory@ai-memory",
+      "codex plugin marketplace add akitaonrails/ai-memory && codex plugin add ai-memory@ai-memory"
+    ]
+  }
+}

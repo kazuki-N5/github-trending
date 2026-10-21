@@ -1,0 +1,47 @@
+{
+  "repo": "wshobson/agents",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Claude CodeやCodexなど複数のAIコーディングツールで共通に使えるプラグイン集",
+  "features": [
+    "Claude Code、OpenAI Codex CLI、Cursor、OpenCode、Antigravity CLI、GitHub Copilot、Piの7種類のAIコーディングツール（README では「ハーネス」と呼ぶ）で同じプラグイン群を使えます。",
+    "94個のプラグイン（ローカル92個と外部2個）を収録し、202のエージェント、185のスキル、105のコマンドを含みます。",
+    "Python・JavaScript/TypeScript開発、コードレビュー、テスト、インフラ、セキュリティなど用途別のプラグインを必要なものだけ選んでインストールできます。",
+    "Claude CodeやCodex CLIではマーケットプレイス（プラグインの配布元）として登録し、コマンド1つでプラグインを追加できます。",
+    "gh skill や npx skills を使えば、リポジトリをクローンせずに個別のスキルだけをインストールできます。",
+    "plugin-evalというツールで、モデルを呼ばずにスキルを静的にチェックできます（LLMによる採点やモンテカルロ法による評価は実験的機能です）。"
+  ],
+  "why": "AIコーディングツールが次々に登場する中で、エージェントやスキルを1つのMarkdownの原本で管理し、各ツール向けに変換して使い回せる点が特徴です。推測: 200を超えるエージェントや180を超えるスキルがすぐ使える規模の大きさと、Claude Code以外の主要ツールにも対応範囲を広げたことが関心を集めていると考えられます。",
+  "whoFor": "Claude CodeやCodex CLI、Cursorなどを日常的に使い、コードレビューやテスト、セキュリティチェックといった作業を専門のサブエージェントに任せたい開発者に役立ちます。複数のAIコーディングツールを併用していて、設定やプロンプトを共通化したい人にも向いています。",
+  "tech": [
+    "プラグインは関連するエージェント（作業を任される専門のサブエージェント用の指示）、スキル（必要なときに読み込まれる手引きや参考資料）、コマンド（名前を付けて呼び出す作業手順）をまとめた単位で、plugins/ 以下に置かれています。",
+    "原本はClaude Codeのプラグイン形式のMarkdownで1つだけ管理し、アダプタ（形式を変換するプログラム）が各ツール用の形式を生成します。たとえばCodex向けにはTOML形式のエージェントを生成し、コマンドはスキルやプロンプトテンプレートに変換されます。",
+    "エージェントには opus・sonnet・haiku・inherit などのモデル別名を指定し、アダプタが各ツールのモデル設定や権限設定に対応付けます。",
+    "Codex向けの生成物では、8KBの上限に収まるよう長すぎるスキル本文を参照ファイルに分割します。",
+    "uvとPython 3.12以上を使い、make generate-all や make validate STRICT=1 でプラグイン構造や生成物、ドキュメントを検証します。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Claude Codeの中でマーケットプレイスを登録し、Python開発用プラグインをインストールします。",
+      "Claudeに作業を頼むときにPython用エージェントを使うよう指示するか、プラグインの雛形作成コマンドを実行します。",
+      "Codex CLIを使う場合はターミナルからマーケットプレイスを追加してプラグインをインストールします。",
+      "スキルだけ欲しい場合は gh skill（GitHub CLI 2.90以上）か npx skills（Node.jsとnpmが必要）で個別にインストールします。",
+      "OpenCode、Antigravity CLI、GitHub Copilot、Piではuvと Python 3.12以上を用意し、リポジトリをクローンして各ツール用のmakeターゲットを実行します（Piのエージェントにはsubagent拡張が必要です）。"
+    ],
+    "commands": [
+      "/plugin marketplace add wshobson/agents",
+      "/plugin install python-development@claude-code-workflows",
+      "/python-development:python-scaffold Create a FastAPI service with tests",
+      "codex plugin marketplace add wshobson/agents",
+      "codex plugin add python-development@claude-code-workflows",
+      "gh skill install wshobson/agents python-testing-patterns",
+      "npx skills add wshobson/agents --skill python-testing-patterns",
+      "gh repo clone wshobson/agents ~/agents",
+      "cd ~/agents",
+      "make install-opencode",
+      "make install-antigravity",
+      "make install-copilot",
+      "make install-pi"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "repo": "heygen-com/hyperframes",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "HTMLで書いた構成をMP4動画に変換する、AIエージェント向けの動画フレームワーク",
+  "features": [
+    "HTML、CSS、メディア、アニメーションで動画を定義し、毎回同じ結果になる MP4 動画として書き出せます。",
+    "data 属性で各要素の開始時刻、長さ、トラック（重ね順）を指定し、タイムラインを組み立てられます。",
+    "CLI でプロジェクトの作成、ブラウザでのプレビュー、リント（記述ミスの検査）、レンダリングができます。",
+    "製品紹介動画、プルリクエストの解説動画、字幕付けなどの作業手順をAIエージェントに教える21個のスキルを提供します。",
+    "トランジション、SNS 風オーバーレイ、アニメーショングラフなどの部品をカタログから追加できます。",
+    "ブラウザ上の編集画面（Studio）や、AWS Lambda を使った分散レンダリングにも対応しています。"
+  ],
+  "why": "README によると HeyGen の本番環境で使われており、リポジトリページでは6万を超えるスターを集めています。React を前提とする Remotion と違い、エージェントも人も書きやすい素の HTML で動画を作れることと、Apache 2.0 ライセンスでレンダリングごとの料金がないことを特徴として挙げています。推測: AIエージェントに動画制作を任せたいという需要の高まりが注目の背景と考えられます。",
+  "whoFor": "製品紹介やデータ可視化などの動画をコードで量産したい開発者や、Claude Code などのAIエージェントに動画を作らせたい人に向いています。",
+  "tech": [
+    "レンダラーはヘッドレス Chrome（画面を表示しないブラウザ）で1フレームずつ時刻を進めて描画し、FFmpeg で動画にエンコードします。",
+    "GSAP、CSS アニメーション、Lottie、Three.js、Anime.js、WAAPI などのアニメーションを、時刻を指定して再生できるアダプタ経由で扱います。",
+    "ビルド工程が不要で、index.html の構成をそのままブラウザでプレビューできます。",
+    "CLI、core、engine（Puppeteer と FFmpeg による取り込み）、producer、studio、player などのパッケージに分かれた構成で、動作には Node.js 22 以上と FFmpeg が必要です。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node.js 22 以上と FFmpeg を用意します。",
+      "npx hyperframes init でプロジェクトを作成し、そのディレクトリに移動します。",
+      "preview でブラウザ上にライブリロード付きでプレビューし、render で MP4 に書き出します。",
+      "Claude Code から使う場合はプラグインを導入し、/hyperframes で作りたい動画を指示します。"
+    ],
+    "commands": [
+      "npx hyperframes init my-video",
+      "cd my-video",
+      "npx hyperframes preview",
+      "npx hyperframes render",
+      "claude plugin marketplace add heygen-com/hyperframes",
+      "claude plugin install hyperframes@hyperframes"
+    ]
+  }
+}

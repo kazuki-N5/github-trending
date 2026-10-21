@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>storytold/pdfcraft | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📁</div><div>
+<h1>storytold/pdfcraft</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-10-19（Star History 10位）</span>
+<a class="gh" href="https://github.com/storytold/pdfcraft" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="storytold__pdfcraft" data-repo="storytold/pdfcraft" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">PDF の閲覧・整理・結合・分割・保護ができる、純 Rust 製のオープンソース PDF ワークベンチ</p>
+<h3>何ができるか</h3><ul><li>右から左に書く文字や縦書き日本語、カラー絵文字、透明効果などを含む PDF を忠実に表示し、拡大してもタイル描画で文字がくっきりしている。</li><li>ページの回転・削除・挿入・並べ替えを一覧画面で行え、取り消し操作は保存後も使える。</li><li>複数 PDF の結合や、ページ抽出・分割をリンク、フォーム、レイヤー、添付ファイルを保ったまま行える。</li><li>RC4 から AES-256 までの PDF 標準セキュリティ（暗号化とパスワード）に対応し、作成者が設定した権限を守る。</li><li>フォーム入力、スレッド形式のコメント、オプショナルコンテンツ（表示を切り替えられるレイヤー）、添付ファイルを扱える。</li><li>pdfcraft-cli やオプトインの MCP サーバー（AI エージェントがツールを呼び出すための規格）から、GUI なしで同じ機能を実行できる。</li></ul>
+<h3>なぜ注目されているか</h3><p>アカウント不要・テレメトリなし・オフライン動作で、保存時は元のバイト列を残す追記保存と原子的な書き込みにより安全性を重視している。pdf.js のテスト用ファイル983件を開いてクラッシュ0件という頑健さも示している。<span class="guess">推測</span> 有料の PDF 編集ソフトに代わるオープンソースの選択肢として注目されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>PDF の閲覧やページ整理、結合・分割、フォーム入力をローカルで安全に行いたい人に向く。PDF 処理をスクリプトや AI エージェントで自動化したい人、PDF の内部構造を学びたい人にも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>フィルター、暗号、オブジェクト層、ページ操作、注釈、フォーム、描画、エンジン、自動化、UI をクレートに分け、コアが UI に依存しない層構造にしている。</li><li>保存は増分更新（ファイル末尾に変更だけを追記する PDF の仕組み）と、一時ファイルに書いてから差し替える原子的書き込みで行い、qpdf で毎回 CI 検証している。</li><li>ISO 32000（PDF の国際規格）とブラックボックス観察だけに基づくクリーンルーム実装で、ページ描画は現在 hayro クレートを使いつつ独自レンダラーを開発中である。</li><li>egui ベースの UI で macOS、Windows、Linux、FreeBSD にネイティブ対応し、WebAssembly でブラウザでも動く。</li></ul>
+<h3>試し方</h3>
+<ol><li>手軽に使うなら getartcraft.com の PdfCraft ページか GitHub のリリースからビルド済みのものを入手する。</li><li>ソースからビルドするには Rust 1.95 以降を用意し、リポジトリを clone して cargo でデスクトップアプリを起動する。</li><li>pdfcraft-cli を使うと、コマンドラインから PDF の結合・抽出・分割や情報の確認ができる。</li></ol>
+<pre><code>git clone https://github.com/storytold/pdfcraft
+cd pdfcraft
+cargo xtask models
+cargo run --release -p pdfcraft -- some.pdf
+pdfcraft-cli combine report.pdf appendix.pdf --out combined.pdf
+pdfcraft-cli extract report.pdf --pages 1,3,5-8 --out highlights.pdf
+pdfcraft-cli split   report.pdf --every 10 --out-dir parts/
+pdfcraft-cli info  form.pdf</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-19.html#w-storytold__pdfcraft">2026-10-19 週間</a>
+<span class="src starhistory">Star History 10位</span><span>★ +7,342（週）</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
