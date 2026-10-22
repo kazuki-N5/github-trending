@@ -63,7 +63,11 @@ def text_of(fragment: str) -> str:
 
 
 def github_trending() -> list[dict]:
-    page = fetch("https://github.com/trending?since=daily")
+    try:
+        page = fetch("https://github.com/trending?since=daily")
+    except Exception as e:
+        print(f"GitHub Trending の取得をスキップ: {e}", file=sys.stderr)
+        return []
     items = []
     for row in page.split('<article class="Box-row">')[1:]:
         name = re.search(r'<h2[^>]*>\s*<a[^>]*href="/([^"]+)"', row)
@@ -171,9 +175,6 @@ def main() -> int:
     weekly = args.weekly or dt.date.fromisoformat(args.date).weekday() == WEEKLY_WEEKDAY
 
     gh = github_trending()[:GITHUB_MAX]
-    if not gh:
-        print("GitHub Trending を読めなかった", file=sys.stderr)
-        return 1
     seen = {e["repo"].lower() for e in gh}
     fill = [e for e in trendshift() if e["repo"].lower() not in seen][: DAILY_TOTAL - len(gh)]
     day = {
