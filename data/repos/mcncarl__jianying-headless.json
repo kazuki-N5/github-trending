@@ -1,0 +1,38 @@
+{
+  "repo": "mcncarl/jianying-headless",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "剪映専業版（macOS）をヘッドレス操作し、JSONの剪辑计画から編集可能な草稿を生成してネイティブエンジンでMP4を書き出すPython自動化ツール",
+  "features": [
+    "構造化された剪辑計画（JSON）から、剪映で開いて編集できる草稿ファイルを自動生成できる。",
+    "動画分割・マルチトラック・変速・音量・字幕・画中画など多彩な編集要素をプログラムから制御できる。",
+    "既存プロジェクトの独立コピーを作成して編集するため、元のプロジェクトを壊さずに安全に変更を加えられる。",
+    "剪映の本体エンジンを呼び出してH.264/AAC形式のMP4をネイティブ品質で書き出せる。",
+    "環境チェック（doctorコマンド）で剪映バージョン・コンポーネント身元・必要ツールを事前に確認できる。",
+    "Agent Skillとして組み込める独立モジュールも提供しており、AIワークフローに組み込みやすい。"
+  ],
+  "why": "AIを使ったビデオ生成ワークフローでは「最終的に人間が使う編集ソフトの草稿を自動で作りたい」というニーズが高まっている。推測: 中国で最大のシェアを持つ動画編集アプリ「剪映」の草稿形式を直接操作するオープンソース実装は珍しく、AIビデオ制作の工程を大幅に自動化できる点が注目を集めている。",
+  "whoFor": "AI動画ワークフローを構築したいエンジニアや、剪映への工程引き渡しを自動化したいコンテンツ制作者に向いている。Agentやスクリプトで大量の草稿を一括生成・エクスポートしたい用途にも適している。macOS + Apple Silicon + 剪映専業版11.5.0の環境が必要。",
+  "tech": [
+    "剪映の内部草稿形式（JSON）をリバースエンジニアリングして草稿ファイルを構築している。",
+    "Apple clang/macOS SDKを使ったネイティブブリッジ層を持ち、剪映の本体ライブラリをバインドして真のネイティブエクスポートを実現している。",
+    "コンポーネントの署名・バージョン・ハッシュを厳格に検証し、不一致な環境では動作を拒否する安全設計になっている。",
+    "WindowsではFFmpegを使った独立エクスポートパスも用意されており、剪映なしでMP4を生成できる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンし、python3 tools/build_native_codec.pyでブリッジをコンパイルする。",
+      "python3 skills/yichen-jianying-edit/scripts/headless_draft.py doctorで環境チェックを実行する。",
+      "剪辑計画JSONを用意し、buildコマンドで草稿を生成する。",
+      "publishコマンドで剪映のホーム画面に草稿を登録し、exportコマンドでMP4を書き出す。"
+    ],
+    "commands": [
+      "git clone https://github.com/mcncarl/jianying-headless.git",
+      "cd jianying-headless",
+      "python3 tools/build_native_codec.py",
+      "python3 skills/yichen-jianying-edit/scripts/headless_draft.py doctor",
+      "python3 skills/yichen-jianying-edit/scripts/headless_draft.py build --plan /absolute/path/to/plan.json --out \"$PWD/work/new-build\"",
+      "python3 skills/yichen-jianying-edit/scripts/headless_draft.py export --build \"$PWD/work/new-build\" --out \"$PWD/work/new-export\""
+    ]
+  }
+}

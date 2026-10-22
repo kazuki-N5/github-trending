@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ikow/php2shell-poc | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔎</div><div>
+<h1>ikow/php2shell-poc</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-23（Trendshift 17位）</span>
+<a class="gh" href="https://github.com/ikow/php2shell-poc" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="ikow__php2shell-poc" data-repo="ikow/php2shell-poc" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">PHPのセッションアップロード進捗機能を悪用した認証不要RCE脆弱性（CVE-2026-109618/109619）の検証・検出ツールキット</p>
+<h3>何ができるか</h3><ul><li>5種類のRCEエクスプロイトチェーン（Chain A〜E）を収録し、セッションインジェクションからOOMメモリ破壊まで多様な攻撃経路を網羅している。</li><li>Suricata/Snort・Sigma・ModSecurity・OpenResty Luaなど複数形式の検出ルールを提供し、IDS/WAF/SIEMへ即座に展開できる。</li><li>Docker Composeで構築できる検証用ラボ環境（PHP-FPM + nginx + Apache mod_php）が付属している。</li><li>Chain A・B・Cのエクスプロイトスクリプト（Python/PHP）が公開されており、コマンド一つでRCEを再現できる。</li><li>INI設定（session.upload_progress.enabled = Off）や緊急パッチバージョンなど、具体的な緩和策も詳述している。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> PHP 5.4（2012年）から14年間存在した認証不要のRCE脆弱性であり、世界のウェブサイトの78%（WordPressやJoomlaなど）に影響するとされるため、セキュリティ研究者や運用者の注目度が非常に高い。CVSS9.2のクリティカル評価でChain Dはゼロ依存・前提条件なしの完全なpre-auth RCEであるため、影響範囲の広さと深刻さから急速に拡散した。</p>
+<h3>どんな人に役立つか</h3><p>ペネトレーションテスターやセキュリティ研究者が脆弱性の仕組みを学び、許可された環境で検証する用途に向いている。WAF・IDS管理者は検出ルールをすぐに取り込める。サーバー管理者やPHP利用企業のエンジニアには、パッチ適用前の緩和設定の参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>PHP内部のsession.upload_progress機能とZendエンジンのOOMバイルアウト（longjmp）を組み合わせた複数のRCEチェーンを実装している。</li><li>Chain BはEG()（Zendのグローバル状態）経由でzif_systemのアドレスを探索し、/proc/self/memでハンドラを上書きするUAF（use-after-free）攻撃を利用する。</li><li>Suricata・Sigma・ModSecurity・OpenResty Luaの4形式でシグネチャを提供し、異なるセキュリティ製品に対応できる。</li><li>Docker Composeによる再現環境で、各チェーンの検証スクリプトをワンコマンドで実行できる構成になっている。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンし、lab/ディレクトリでdocker compose up -dを実行して検証ラボを起動する。</li><li>poc/verify_session_injection.pyなどの検証スクリプトでチェーンが再現できることを確認する。</li><li>exploit/chain_a_session_lfi.pyで実際のRCEを試す（必ず許可された環境で実施）。</li></ol>
+<pre><code>git clone https://github.com/ikow/php2shell-poc.git &amp;&amp; cd php2shell-poc
+cd lab &amp;&amp; docker compose up -d
+python3 ../poc/verify_session_injection.py --target http://127.0.0.1:18080
+python3 ../exploit/chain_a_session_lfi.py --host 127.0.0.1 --port 18080 --command &#x27;id&#x27;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#d-ikow__php2shell-poc">2026-10-23</a>
+<span class="src trendshift">Trendshift 17位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

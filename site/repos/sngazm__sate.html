@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sngazm/sate | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>sngazm/sate</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-10-23（はてなブックマーク 3位）</span>
+<a class="gh" href="https://github.com/sngazm/sate" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="sngazm__sate" data-repo="sngazm/sate" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">macOS向けの「書くことに集中できる」ミニマルなテキストエディタ</p>
+<h3>何ができるか</h3><ul><li>起動時に全画面表示され、画面中央からすぐに書き始められるフォーカス環境を提供する。</li><li>タイトルもフォルダ階層も不要で、日付+連番のファイル名が自動付与され、全文検索で後から探せる。</li><li>タイムボクシング（時間区切り）用のタイマーを内蔵し、書くことへの集中をサポートする。</li><li>タイピングを止めると1.5秒後に自動保存され、バージョン履歴もデータベースに自動記録される。</li><li>Privateモードを設定した文章は一覧・検索から除外され、うっかり中身が見られる心配を減らす。</li><li>カスタムコマンドを登録しておくと公開ボタン1つで任意のスクリプトを実行できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 多機能エディタやAIによる自動整理に疲れた人が「ただ書く」体験を求めてトレンド入りしたと考えられる。Markdownで保存されるためベンダーロックインがなく、いつでも他環境に移行できる点も評価されている。</p>
+<h3>どんな人に役立つか</h3><p>macOSユーザーで、思考を整理するためにキーボードで書く習慣がある人に向いている。日記・アイデアメモ・下書きなど、誰にも見せない文章を安心して書きたい人の文具として設計されている。</p>
+<h3>技術的なポイント</h3><ul><li>Tauri（Rust + WebView）フレームワークで、ネイティブmacOSアプリとして動作する。</li><li>MarkdownとFrontmatterで文章データを保存するため、ファイルはどのエディタでも開ける標準形式。</li><li>全文検索とバージョン履歴はSQLiteデータベース（sate.db）に保存され、ファイルを消しても再生成される。</li><li>pnpm + Node.js 22以上とRust（Cargo）でビルドし、Xcode CLIツールが必要。</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubのReleasesページから最新の.dmgをダウンロードしてSate.appをApplicationsにコピーする。</li><li>初回起動時に「壊れているため開けません」と表示されたらターミナルでxattr -dr com.apple.quarantineを実行する。</li><li>またはリポジトリをクローンし、pnpm installとpnpm tauri buildでソースからビルドする。</li></ol>
+<pre><code>git clone https://github.com/sngazm/sate.git
+cd sate
+pnpm install
+pnpm tauri build
+xattr -dr com.apple.quarantine /Applications/Sate.app</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#h-sngazm__sate">2026-10-23 はてブ</a>
+<span class="src hatena">はてなブックマーク 3位</span><span>5 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

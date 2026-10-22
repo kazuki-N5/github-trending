@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mmparko/dsh-purge | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧩</div><div>
+<h1>mmparko/dsh-purge</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-10-23（Trendshift 11位）</span>
+<a class="gh" href="https://github.com/mmparko/dsh-purge" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="mmparko__dsh-purge" data-repo="mmparko/dsh-purge" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">DeepSeek Harness向けサイバーセキュリティ赤チームプラグインのミラーリポジトリ</p>
+<h3>何ができるか</h3><ul><li>DeepSeek Harness（公式Web版・デスクトップEXE版）に適用できるレッドチーム評価プラグインを提供する。</li><li>Apply操作でホストのプロンプト書き換え・承認ゲート・サンドボックスポリシーを一時的に変更し、モデル拒否とホスト層ブロックを切り分けられる。</li><li>Clean/Drillの2ページUI、プロンプトエディタ、複数ルールセットを提供する。</li><li>Restore操作で変更を元に戻せ、npm更新後も自動で再適用される。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 上流の YuJunZhiXue/dsh-purge がリポジトリを削除する可能性があるため、全ブランチ・73タグ・完全コミット履歴を保存したミラーとして注目を集めている。dsh-purgeはDSHのホスト層とモデルのポリシーを分離して評価できるツールとして研究者の間で知られており、その保存版としての価値がある。</p>
+<h3>どんな人に役立つか</h3><p>DeepSeek Harness上でAIモデルの安全性評価やレッドチームテストを行いたいセキュリティ研究者向け（自分が管理する環境のみで使用すること）。上流リポジトリのバックアップが欲しいdsh-purgeユーザーにも有用。</p>
+<h3>技術的なポイント</h3><ul><li>JavaScriptで実装されたDSHプラグインで、dsh 0.2系（0.2.0-rc.2）に対応している。</li><li>ホストの@deepseek-aiパッケージとローカルプロファイルのみを変更し、公開インターネットへの攻撃トラフィックは送信しない。</li><li>適用・復元・アンインストールはすべてローカルファイルとプロセス内で完結する。</li></ul>
+<h3>試し方</h3>
+<ol><li>dsh web版またはデスクトップ版がインストール済みであることを確認する。</li><li>以下のコマンドでプラグインをインストールする（Web/デスクトップで別途実施）。</li><li>セッションタイトル横の「dsh-purge」ボタン→Clean→Applyの順にクリックして適用する。</li></ol>
+<pre><code>dsh plugin --profile web add dsh-purge
+dsh plugin --profile desktop add dsh-purge</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#d-mmparko__dsh-purge">2026-10-23</a>
+<span class="src trendshift">Trendshift 11位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

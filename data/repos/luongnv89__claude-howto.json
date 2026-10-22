@@ -1,0 +1,34 @@
+{
+  "repo": "luongnv89/claude-howto",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Claude Codeを週末で使いこなすための、図解・テンプレート付き実践的学習ガイド（10モジュール・11〜13時間の学習ロードマップ）",
+  "features": [
+    "スラッシュコマンド・メモリ・スキル・フック・MCP・サブエージェント・プラグインをカバーする10モジュールの体系的なチュートリアルを提供している。",
+    "Mermaidダイアグラムで各機能の内部動作を可視化しており、仕組みを理解しながら学べる。",
+    "プロジェクトにそのままコピーして使えるCLAUDE.mdテンプレート・フックスクリプト・MCPコンフィグなどの設定ファイルを同梱している。",
+    "/self-assessmentや/lesson-quizコマンドをClaude Code内で実行して、自分の習熟度に応じた学習ルートを把握できる。",
+    "自動コードレビューやCI/CD自動化、ドキュメント生成など、複数機能を組み合わせた実践的なユースケースを解説している。"
+  ],
+  "why": "推測: Claude Codeは高機能だが公式ドキュメントが機能リファレンス中心で、機能同士の組み合わせ方が分かりにくい。本ガイドは段階的な学習パスとコピペ可能なテンプレートを用意しているため、エンジニアが「実際に使える状態」に素早く到達できると評価され注目されている。GitHubトレンドでトップを獲得するほどの関心を集めている。",
+  "whoFor": "Claude Codeをインストールしたもののフルに活用できていないエンジニアに最適。チームへのオンボーディング資料として使いたい開発リーダーにも向いている。Claude Code v2.1以降（ネイティブバイナリ版）の利用者を対象としている。",
+  "tech": [
+    "Claude CodeのCLAUD.md・スラッシュコマンド・フック・スキル・MCPサーバー・サブエージェント・プラグインを段階的に組み合わせる学習設計になっている。",
+    "Mermaidダイアグラムをガイド内に埋め込み、機能の動作フローを視覚的に説明している。",
+    "Claude Code内でそのまま実行できる/self-assessmentスラッシュコマンドで、双方向の自己診断が可能。"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンして、01-slash-commands/以下のコマンドをプロジェクトの.claude/commands/にコピーする。",
+      "02-memory/project-CLAUDE.mdをCLAUDE.mdとして自分のプロジェクトにコピーする。",
+      "Claude Codeを起動し/self-assessmentを実行して、自分の習熟度に合ったモジュールから学習を始める。"
+    ],
+    "commands": [
+      "git clone https://github.com/luongnv89/claude-howto.git",
+      "cd claude-howto",
+      "cp 01-slash-commands/*.md .claude/commands/",
+      "cp 02-memory/project-CLAUDE.md ./CLAUDE.md",
+      "cp -r 03-skills/code-review-specialist ~/.claude/skills/"
+    ]
+  }
+}

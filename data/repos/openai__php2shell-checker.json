@@ -1,0 +1,33 @@
+{
+  "repo": "openai/php2shell-checker",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "WebサイトまたはローカルPHPバイナリがphp2shell脆弱性（CVE-2026-109618/619）に対してパッチ済みかをチェックするNode.jsツール",
+  "features": [
+    "URLを指定してWebサイトのPHPバージョンをHTTPレスポンスヘッダーから検出し、脆弱かどうかを判定できる。",
+    "ローカルにインストールされているPHPバイナリのバージョンも--localオプションで確認できる。",
+    "OK・VULNERABLE・UNKNOWNの3段階の判定結果と終了コードを返し、スクリプトや自動化ツールへの組み込みが簡単。",
+    "--jsonオプションでJSON形式の機械可読な出力を得られ、他ツールとの連携に便利。",
+    "Claude Codeのphpcheck-serverとphpcheck-urlの2つのスキルとしても使用できる。"
+  ],
+  "why": "推測: CVE-2026-109618/619の公開後、自社サーバーが脆弱かどうかをすばやく確認したいエンジニアのニーズが急増している。OpenAIが提供するシンプルなチェッカーとして信頼性が高く、ワンコマンドで状態確認できる手軽さが注目を集めている。",
+  "whoFor": "サーバー管理者やDevOpsエンジニアがphp2shell脆弱性パッチの適用状況を素早く確認するのに役立つ。CI/CDパイプラインや自動セキュリティ監査スクリプトに組み込むのにも向いている。",
+  "tech": [
+    "Node.jsで実装されており、HTTPのX-Powered-ByとServerヘッダーを読んでPHPバージョンを取得する。",
+    "HEAD→GETのフォールバックロジックを持ち、405/501レスポンスにも対応している。",
+    "バージョン比較は固定のカットオフ値に基づき、各メジャー/マイナーブランチごとに脆弱判定を行う。",
+    "ローカルHTTPサーバーとフェイクPHP実行ファイルを使ったテストスイートが付属し、外部環境なしで動作確認できる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンし、Node.jsが入った環境でphpcheck.jsを実行する。",
+      "URLを引数に渡してWebサイトのPHPバージョンを確認するか、--localでローカルのPHPを確認する。",
+      "node --test phpcheck.test.jsでテストスイートを実行して動作を確認する。"
+    ],
+    "commands": [
+      "node phpcheck.js \"https://example.com\"",
+      "node phpcheck.js --local",
+      "node --test phpcheck.test.js"
+    ]
+  }
+}

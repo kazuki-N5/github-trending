@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>syhunt/php2shell-protection | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>syhunt/php2shell-protection</h1>
+<div class="meta">
+<span>初掲載 2026-10-23（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/syhunt/php2shell-protection" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="syhunt__php2shell-protection" data-repo="syhunt/php2shell-protection" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">php2shell（CVE-2026-109618/619）に対するApacheのmultipart POSTブロックルールと機能テストキット</p>
+<h3>何ができるか</h3><ul><li>Apacheの.htaccessでmultipart/form-data POSTリクエストをブロックするRewriteルールを提供しており、攻撃経路の一つを遮断できる。</li><li>アップロード不要サイト向け（8MiB制限＋全multipartブロック）とアップロード必要サイト向け（32MiB制限）の2種類の設定例を用意している。</li><li>テストキットでApacheルールが正しくmultipart POSTを拒否しつつ通常のPOSTを許可しているかを検証できる。</li><li>PHPのsession.upload_progress.enabledを無効化するINI設定例やmemory_limit緩和策など、CVEごとの推奨PHPコンフィグを文書化している。</li><li>最新の研究動向（パッチ後の追加PoC発見や他の研究者報告）を随時README内で更新しており、セキュリティ情報のハブとしても機能している。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 公式パッチ（PHP 8.2.35〜8.5.12）適用前の緊急緩和策として、Apache側でリクエストをブロックするアプローチは多くの組織で即座に実施できる。Syhuntが詳細な背景情報と段階的な設定例を整備したことで、セキュリティ担当者のリファレンスとして広く参照されている。</p>
+<h3>どんな人に役立つか</h3><p>パッチ適用が即座にできないサーバー管理者や、多層防御として追加の緩和策を設けたいセキュリティエンジニアに向いている。Apache（mod_php・mod_rewrite）環境が前提で、CGI/FastCGI/PHP-FPM環境では一部設定の扱いが異なる点に注意が必要。</p>
+<h3>技術的なポイント</h3><ul><li>ApacheのRewriteEngineとLimitRequestBodyディレクティブを組み合わせてリクエストレベルのブロックを実現している。</li><li>PHPのsession.upload_progress.enabled=0を有効なPHP設定（php.iniまたはFPMプール設定）で無効化することで、CVE-2026-109619のセッション関連攻撃経路を絞り込める。</li><li>CVE-2026-109618向けには一時的にmemory_limit=-1を設定してOOMによるZendエンジン破壊を回避する方法を解説している（恒久的推奨ではない）。</li><li>テストキットはApacheルールが期待通りに動作しているかをHTTPレスポンス（403/通過）で確認できる構成になっている。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリのhttp/.htaccessまたはhttps/.htaccessをApacheのドキュメントルートに配置する。</li><li>Apacheがmod_rewriteを有効にしていること、.htaccess内のRewriteが許可されていることを確認する。</li><li>テストキットを使ってmultipart POSTが403で拒否されることと通常のPOSTが通ることを検証する。</li><li>PHPのphp.iniでsession.upload_progress.enabled=0を設定し、Webワーカーを再起動する。</li></ol>
+<pre><code># .htaccessの設置（Apacheドキュメントルート）
+# session.upload_progress.enabled = 0 をphp.iniに追記してApacheを再起動</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#h-syhunt__php2shell-protection">2026-10-23 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>6 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

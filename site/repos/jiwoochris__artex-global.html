@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jiwoochris/artex-global | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛡️</div><div>
+<h1>jiwoochris/artex-global</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-10-23（はてなブックマーク 6位）</span>
+<a class="gh" href="https://github.com/jiwoochris/artex-global" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="jiwoochris__artex-global" data-repo="jiwoochris/artex-global" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">LLMマルチエージェントが自律的にペネトレーションテストを実行するフレームワークの多言語版</p>
+<h3>何ができるか</h3><ul><li>複数のLLMエージェント（Goals/Planner/Worker/MainAgent）が協調して偵察から侵入・レポートまでを自律的に実行する。</li><li>英語・韓国語・中国語・スペイン語・日本語に表示言語を切り替えられ、エージェントの出力もその言語で生成される。</li><li>GoバックエンドにNext.jsフロントエンドを埋め込んだシングルバイナリで、PostgreSQLと合わせてDocker Composeで起動できる。</li><li>Webダッシュボードから検出ファインディングの一覧・資産グラフ・チャット経由の人間介入（ヒント注入）を操作できる。</li><li>AnthropicとOpenAIのAPIキー、またはOpenAI互換エンドポイントを指定して任意のLLMモデルを使用できる。</li></ul>
+<h3>なぜ注目されているか</h3><p>2026年10月に韓国の金融機関を狙ったデータ侵害に上流リポジトリが関与した疑いが報じられ、防御・検知技術の研究目的で注目された。自律型AI攻撃がどう動くかを理解し検知シグネチャを構築するための教材として国際的に需要が高まっている。</p>
+<h3>どんな人に役立つか</h3><p>CTFや自分の管理下にある隔離環境（OWASP Juice Shop・DVWAなど）でペネトレーションテストを学びたいセキュリティ学習者に向いている。企業のセキュリティチームが自律型AI攻撃の挙動を把握し防御策を検討する際の参考にもなる。未授権のシステムへの使用は法律違反であり、使用には明示的な書面による許可が必要。</p>
+<h3>技術的なポイント</h3><ul><li>GoバックエンドにNext.js静的ビルドをgo:embedで埋め込み、シングルバイナリとして配布・起動できる。</li><li>資産グラフと探索グラフの二重グラフ構造でスキャン中に発見された資産・脆弱性情報を蓄積・共有する。</li><li>norma SDKを通じてエージェントにツール実行能力を与え、LLMプロバイダはAPIキーまたはARTEX_LLM_BASE_URLで切り替えられる。</li><li>セットアップトークン認証とデフォルトのloopbackバインド（127.0.0.1:8787）で初回セットアップ前の不正アクセスを防止する。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンして.env.exampleをコピーし、POSTGRES_PASSWORDを設定する。</li><li>docker compose up -dで起動し、http://localhost:8787にアクセスする。</li><li>初回アクセス時にセットアップトークン（docker compose logs artex | grep &#x27;[auth]&#x27;）を使い管理者パスワードを設定する。</li></ol>
+<pre><code>git clone https://github.com/jiwoochris/artex-global.git
+cd artex-global
+cp .env.example .env
+docker compose up -d
+docker compose logs artex | grep -F &#x27;[auth]&#x27;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#h-jiwoochris__artex-global">2026-10-23 はてブ</a>
+<span class="src hatena">はてなブックマーク 6位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kividbio/kividb | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔎</div><div>
+<h1>kividbio/kividb</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-10-23（はてなブックマーク 7位）</span>
+<a class="gh" href="https://github.com/kividbio/kividb" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="kividbio__kividb" data-repo="kividbio/kividb" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Redisプロトコル互換・全文＆ベクター検索内蔵の高速インメモリDBをRustで実装</p>
+<h3>何ができるか</h3><ul><li>RESP2/RESP3プロトコルに対応しており、既存のRedisクライアントやredis-cliをそのまま使える。</li><li>全文検索・タグ・数値・ベクターANN（FLAT/HNSW）をFT.*コマンドで操作できるRedis Stack互換の検索機能を内蔵する。</li><li>シャーディングされたインメモリ設計で全コアを活用し、パイプライン処理で毎秒2100万GETを達成する。</li><li>スナップショット（dump.kdb）とオプションのAOF（追記ログ）によりデータとHNSWグラフを永続化できる。</li><li>Cargoのfeatureフラグでデフォルト・Luaスクリプティング・TLS・フルの4バリアントをビルド時に選択できる。</li></ul>
+<h3>なぜ注目されているか</h3><p>Rustによるゼロコストなメモリアクセスとシャーディングアーキテクチャで、Redis 8の約9倍・Dragonflyの約2.3倍のスループットをベンチマークで示したことが注目を集めた。RedisのライセンスがSSPLに変更されたため、BSD/MIT系のオープンソース代替を探す需要も背景にある（KiviDBはAGPL-3.0）。</p>
+<h3>どんな人に役立つか</h3><p>大量のキャッシュ処理や低レイテンシのベクター検索を必要とするアプリケーション開発者に適している。既存のRedisクライアントコードをほぼ変更せずにスイッチしたいチームにも使いやすい設計になっている。</p>
+<h3>技術的なポイント</h3><ul><li>Rustの2024エディションで実装され、Linuxではio_uringを優先的に使用してI/Oを効率化する。</li><li>全コアにシャーディングされたインメモリKVSで、パイプラインGET時にDragonflyの2.3倍のスループットを実現する。</li><li>HNSWグラフを含むベクターインデックスをBGSAVEで永続化し、再起動後にグラフ再構築なしで検索を再開できる。</li><li>Tokioの非同期ランタイム上に構築され、io_uringが利用不可の環境では自動的にTokioにフォールバックする。</li></ul>
+<h3>試し方</h3>
+<ol><li>DockerでKiviDBを起動してredis-cliで接続確認する。</li><li>ソースからビルドする場合はRust stable（1.89以上）が必要でcargo build --releaseを実行する。</li></ol>
+<pre><code>docker run -d -p 6380:6380 kividb/kividdb
+redis-cli -p 6380 PING
+git clone https://github.com/kividbio/kividb.git
+cd kividb
+cargo build --release
+./target/release/kividb</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#h-kividbio__kividb">2026-10-23 はてブ</a>
+<span class="src hatena">はてなブックマーク 7位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

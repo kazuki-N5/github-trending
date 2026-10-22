@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nikopueringer/CorridorKey2.0 | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎬</div><div>
+<h1>nikopueringer/CorridorKey2.0</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-23（Trendshift 20位）</span>
+<a class="gh" href="https://github.com/nikopueringer/CorridorKey2.0" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="nikopueringer__corridorkey2.0" data-repo="nikopueringer/CorridorKey2.0" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Corridor Digitalが開発したAIベースのグリーン/ブルースクリーン除去モデル（ヒント動画対応・商用利用可）</p>
+<h3>何ができるか</h3><ul><li>ヒントなし・最初のフレームのマット画像・フル動画ヒントの3つの推論モードで、様々な撮影条件に対応できる。</li><li>Windows用のドラッグ＆ドロップランチャーとLinux用のシェルスクリプトランチャーが付属しており、コマンドの知識がなくても使える。</li><li>C-RADIOv4-SO400M（NVIDIA）・MoGe-2 ViT-B（Microsoft）・RVM small（Google DeepMind）の3つの基盤モデルを組み合わせた高精度なマット抽出を実現している。</li><li>ハンウィンドウ（Hann window）によるオーバーラップ推論で時間方向の安定性（フリッカー低減）を確保している。</li><li>VRAMが4GB以上あれば1440pまで、6GB以上で4K映像の処理が可能。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Corridor Digitalは映像技術系のYouTubeチャンネルとして世界的に有名で、そのチームが開発したAIマット抽出モデルが商用利用可能なオープンソースとして公開されたことで注目を集めている。既存のグリーンスクリーン除去ツールと比べて精度が高く、クリエイターが日常の映像制作で使えるクオリティになっているとされる。</p>
+<h3>どんな人に役立つか</h3><p>動画制作者・映像クリエイター・VFXアーティストがグリーン/ブルースクリーン映像のマット抽出に使える。PythonスクリプトやCLIを使いたいTinkererにも向いており、NVIDIA GPU（VRAM 4GB以上）が必要。</p>
+<h3>技術的なポイント</h3><ul><li>NVIDIA C-RADIOv4-SO400M・Microsoft MoGe-2 ViT-B・Google DeepMind RVM smallの3つの事前学習済みモデルをローカルにダウンロードして推論に使用する。</li><li>Hann窓によるオーバーラップ推論でフレーム間の連続性を保ち、動画全体を通じて一貫したマットを生成する。</li><li>ヒント品質スコア（--hint_quality）をモデルに渡すことで、ヒントの信頼度に応じた条件付き推論が可能。</li><li>CUDA対応PyTorchを使用し、GPU VRAMに応じた「Long Clips And Low VRAM」モードも用意されている。</li></ul>
+<h3>試し方</h3>
+<ol><li>NVIDIA GPUを搭載したPC（VRAM 4GB以上）でPython仮想環境を作成し、CUDA対応PyTorchをインストールする。</li><li>python scripts/download_weights.pyでCorridorKey 2.0の重みと基盤モデルをダウンロードする（約5GB）。</li><li>Windowsなら.batファイル、Linuxなら.shファイルにクリップをドラッグ＆ドロップして処理する。</li></ol>
+<pre><code>python -m venv venv
+source venv/bin/activate
+pip install torch==2.9.1 torchvision==0.24.1 --index-url https://download.pytorch.org/whl/cu128
+pip install -r requirements.txt
+python scripts/download_weights.py
+python infer.py --input /path/to/input.mp4 --output_dir /path/to/output</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#d-nikopueringer__corridorkey2.0">2026-10-23</a>
+<span class="src trendshift">Trendshift 20位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

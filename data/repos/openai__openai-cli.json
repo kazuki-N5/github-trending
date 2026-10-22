@@ -1,0 +1,35 @@
+{
+  "repo": "openai/openai-cli",
+  "language": "Go",
+  "readme": true,
+  "oneLiner": "OpenAI REST APIをターミナルから直接操作できる公式CLIツール",
+  "features": [
+    "画像生成・ファイルアップロード・バッチ処理などOpenAI APIの主要機能をコマンド一発で実行できる。",
+    "出力をJSON/JSONL/YAML形式で切り替えられ、jqなどと組み合わせたスクリプト処理に対応する。",
+    "--transformフラグでGJSONシンタックスを使い、レスポンスから必要フィールドだけを抽出できる。",
+    "管理者APIキーを使ってOrganizationの利用状況（usage）を取得するadminサブコマンドを持つ。",
+    "プリビルドバイナリ・Homebrew・Goインストールの3種類の導入方法をサポートし、対話形式のセットアップガイドを備える。"
+  ],
+  "why": "OpenAIが公式に提供するCLIが登場したことで、APIの動作確認やシェルスクリプトへの組み込みが大幅に簡単になった。コーディングエージェントのCodex CLIとは役割が明確に分かれており、API操作を自動化したい開発者や運用担当者に広く注目されている。",
+  "whoFor": "OpenAI APIを使って画像生成やファイル処理をスクリプト化したい開発者に適している。APIの動作確認・デバッグをブラウザのPlaygroundではなくターミナルで完結させたい人にも便利。",
+  "tech": [
+    "Go言語で実装されており、go installコマンドでGo 1.26以上の環境にシングルバイナリとして導入できる。",
+    "GJSONシンタックスによるフィールド抽出機能を内蔵し、パイプを使ったシェルスクリプトでの活用を想定した設計になっている。",
+    "OPENAI_API_KEY環境変数またはopenai help setupのガイドでAPIキーを安全に設定し、管理者操作はOPENAI_ADMIN_KEYを別途利用する。",
+    "バイナリはCI/CDでmacOS・Linux・Windowsの各プラットフォーム向けにリリースされている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubのReleasesから自分のOSとアーキテクチャに合ったバイナリをダウンロードしてPATHに置く。",
+      "openai help setupを実行してAPIキーを設定する。",
+      "openai responses create --model gpt-5.5 --input \"Say this is a test\"で動作確認する。"
+    ],
+    "commands": [
+      "brew install openai/tools/openai",
+      "go install 'github.com/openai/openai-cli/cmd/openai@latest'",
+      "openai help setup",
+      "openai images generate --prompt \"A tiny orange robot watering a houseplant\"",
+      "openai models list --format jsonl | jq '.id'"
+    ]
+  }
+}

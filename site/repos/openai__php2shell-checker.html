@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>openai/php2shell-checker | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>openai/php2shell-checker</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-10-23（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/openai/php2shell-checker" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="openai__php2shell-checker" data-repo="openai/php2shell-checker" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">WebサイトまたはローカルPHPバイナリがphp2shell脆弱性（CVE-2026-109618/619）に対してパッチ済みかをチェックするNode.jsツール</p>
+<h3>何ができるか</h3><ul><li>URLを指定してWebサイトのPHPバージョンをHTTPレスポンスヘッダーから検出し、脆弱かどうかを判定できる。</li><li>ローカルにインストールされているPHPバイナリのバージョンも--localオプションで確認できる。</li><li>OK・VULNERABLE・UNKNOWNの3段階の判定結果と終了コードを返し、スクリプトや自動化ツールへの組み込みが簡単。</li><li>--jsonオプションでJSON形式の機械可読な出力を得られ、他ツールとの連携に便利。</li><li>Claude Codeのphpcheck-serverとphpcheck-urlの2つのスキルとしても使用できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> CVE-2026-109618/619の公開後、自社サーバーが脆弱かどうかをすばやく確認したいエンジニアのニーズが急増している。OpenAIが提供するシンプルなチェッカーとして信頼性が高く、ワンコマンドで状態確認できる手軽さが注目を集めている。</p>
+<h3>どんな人に役立つか</h3><p>サーバー管理者やDevOpsエンジニアがphp2shell脆弱性パッチの適用状況を素早く確認するのに役立つ。CI/CDパイプラインや自動セキュリティ監査スクリプトに組み込むのにも向いている。</p>
+<h3>技術的なポイント</h3><ul><li>Node.jsで実装されており、HTTPのX-Powered-ByとServerヘッダーを読んでPHPバージョンを取得する。</li><li>HEAD→GETのフォールバックロジックを持ち、405/501レスポンスにも対応している。</li><li>バージョン比較は固定のカットオフ値に基づき、各メジャー/マイナーブランチごとに脆弱判定を行う。</li><li>ローカルHTTPサーバーとフェイクPHP実行ファイルを使ったテストスイートが付属し、外部環境なしで動作確認できる。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンし、Node.jsが入った環境でphpcheck.jsを実行する。</li><li>URLを引数に渡してWebサイトのPHPバージョンを確認するか、--localでローカルのPHPを確認する。</li><li>node --test phpcheck.test.jsでテストスイートを実行して動作を確認する。</li></ol>
+<pre><code>node phpcheck.js &quot;https://example.com&quot;
+node phpcheck.js --local
+node --test phpcheck.test.js</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#h-openai__php2shell-checker">2026-10-23 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>17 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

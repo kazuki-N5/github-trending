@@ -1,0 +1,35 @@
+{
+  "repo": "kividbio/kividb",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "Redisプロトコル互換・全文＆ベクター検索内蔵の高速インメモリDBをRustで実装",
+  "features": [
+    "RESP2/RESP3プロトコルに対応しており、既存のRedisクライアントやredis-cliをそのまま使える。",
+    "全文検索・タグ・数値・ベクターANN（FLAT/HNSW）をFT.*コマンドで操作できるRedis Stack互換の検索機能を内蔵する。",
+    "シャーディングされたインメモリ設計で全コアを活用し、パイプライン処理で毎秒2100万GETを達成する。",
+    "スナップショット（dump.kdb）とオプションのAOF（追記ログ）によりデータとHNSWグラフを永続化できる。",
+    "Cargoのfeatureフラグでデフォルト・Luaスクリプティング・TLS・フルの4バリアントをビルド時に選択できる。"
+  ],
+  "why": "Rustによるゼロコストなメモリアクセスとシャーディングアーキテクチャで、Redis 8の約9倍・Dragonflyの約2.3倍のスループットをベンチマークで示したことが注目を集めた。RedisのライセンスがSSPLに変更されたため、BSD/MIT系のオープンソース代替を探す需要も背景にある（KiviDBはAGPL-3.0）。",
+  "whoFor": "大量のキャッシュ処理や低レイテンシのベクター検索を必要とするアプリケーション開発者に適している。既存のRedisクライアントコードをほぼ変更せずにスイッチしたいチームにも使いやすい設計になっている。",
+  "tech": [
+    "Rustの2024エディションで実装され、Linuxではio_uringを優先的に使用してI/Oを効率化する。",
+    "全コアにシャーディングされたインメモリKVSで、パイプラインGET時にDragonflyの2.3倍のスループットを実現する。",
+    "HNSWグラフを含むベクターインデックスをBGSAVEで永続化し、再起動後にグラフ再構築なしで検索を再開できる。",
+    "Tokioの非同期ランタイム上に構築され、io_uringが利用不可の環境では自動的にTokioにフォールバックする。"
+  ],
+  "tryIt": {
+    "steps": [
+      "DockerでKiviDBを起動してredis-cliで接続確認する。",
+      "ソースからビルドする場合はRust stable（1.89以上）が必要でcargo build --releaseを実行する。"
+    ],
+    "commands": [
+      "docker run -d -p 6380:6380 kividb/kividdb",
+      "redis-cli -p 6380 PING",
+      "git clone https://github.com/kividbio/kividb.git",
+      "cd kividb",
+      "cargo build --release",
+      "./target/release/kividb"
+    ]
+  }
+}

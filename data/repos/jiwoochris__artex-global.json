@@ -1,0 +1,35 @@
+{
+  "repo": "jiwoochris/artex-global",
+  "language": "Go",
+  "readme": true,
+  "oneLiner": "LLMマルチエージェントが自律的にペネトレーションテストを実行するフレームワークの多言語版",
+  "features": [
+    "複数のLLMエージェント（Goals/Planner/Worker/MainAgent）が協調して偵察から侵入・レポートまでを自律的に実行する。",
+    "英語・韓国語・中国語・スペイン語・日本語に表示言語を切り替えられ、エージェントの出力もその言語で生成される。",
+    "GoバックエンドにNext.jsフロントエンドを埋め込んだシングルバイナリで、PostgreSQLと合わせてDocker Composeで起動できる。",
+    "Webダッシュボードから検出ファインディングの一覧・資産グラフ・チャット経由の人間介入（ヒント注入）を操作できる。",
+    "AnthropicとOpenAIのAPIキー、またはOpenAI互換エンドポイントを指定して任意のLLMモデルを使用できる。"
+  ],
+  "why": "2026年10月に韓国の金融機関を狙ったデータ侵害に上流リポジトリが関与した疑いが報じられ、防御・検知技術の研究目的で注目された。自律型AI攻撃がどう動くかを理解し検知シグネチャを構築するための教材として国際的に需要が高まっている。",
+  "whoFor": "CTFや自分の管理下にある隔離環境（OWASP Juice Shop・DVWAなど）でペネトレーションテストを学びたいセキュリティ学習者に向いている。企業のセキュリティチームが自律型AI攻撃の挙動を把握し防御策を検討する際の参考にもなる。未授権のシステムへの使用は法律違反であり、使用には明示的な書面による許可が必要。",
+  "tech": [
+    "GoバックエンドにNext.js静的ビルドをgo:embedで埋め込み、シングルバイナリとして配布・起動できる。",
+    "資産グラフと探索グラフの二重グラフ構造でスキャン中に発見された資産・脆弱性情報を蓄積・共有する。",
+    "norma SDKを通じてエージェントにツール実行能力を与え、LLMプロバイダはAPIキーまたはARTEX_LLM_BASE_URLで切り替えられる。",
+    "セットアップトークン認証とデフォルトのloopbackバインド（127.0.0.1:8787）で初回セットアップ前の不正アクセスを防止する。"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンして.env.exampleをコピーし、POSTGRES_PASSWORDを設定する。",
+      "docker compose up -dで起動し、http://localhost:8787にアクセスする。",
+      "初回アクセス時にセットアップトークン（docker compose logs artex | grep '[auth]'）を使い管理者パスワードを設定する。"
+    ],
+    "commands": [
+      "git clone https://github.com/jiwoochris/artex-global.git",
+      "cd artex-global",
+      "cp .env.example .env",
+      "docker compose up -d",
+      "docker compose logs artex | grep -F '[auth]'"
+    ]
+  }
+}

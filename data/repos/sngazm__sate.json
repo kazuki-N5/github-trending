@@ -1,0 +1,36 @@
+{
+  "repo": "sngazm/sate",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "macOS向けの「書くことに集中できる」ミニマルなテキストエディタ",
+  "features": [
+    "起動時に全画面表示され、画面中央からすぐに書き始められるフォーカス環境を提供する。",
+    "タイトルもフォルダ階層も不要で、日付+連番のファイル名が自動付与され、全文検索で後から探せる。",
+    "タイムボクシング（時間区切り）用のタイマーを内蔵し、書くことへの集中をサポートする。",
+    "タイピングを止めると1.5秒後に自動保存され、バージョン履歴もデータベースに自動記録される。",
+    "Privateモードを設定した文章は一覧・検索から除外され、うっかり中身が見られる心配を減らす。",
+    "カスタムコマンドを登録しておくと公開ボタン1つで任意のスクリプトを実行できる。"
+  ],
+  "why": "推測: 多機能エディタやAIによる自動整理に疲れた人が「ただ書く」体験を求めてトレンド入りしたと考えられる。Markdownで保存されるためベンダーロックインがなく、いつでも他環境に移行できる点も評価されている。",
+  "whoFor": "macOSユーザーで、思考を整理するためにキーボードで書く習慣がある人に向いている。日記・アイデアメモ・下書きなど、誰にも見せない文章を安心して書きたい人の文具として設計されている。",
+  "tech": [
+    "Tauri（Rust + WebView）フレームワークで、ネイティブmacOSアプリとして動作する。",
+    "MarkdownとFrontmatterで文章データを保存するため、ファイルはどのエディタでも開ける標準形式。",
+    "全文検索とバージョン履歴はSQLiteデータベース（sate.db）に保存され、ファイルを消しても再生成される。",
+    "pnpm + Node.js 22以上とRust（Cargo）でビルドし、Xcode CLIツールが必要。"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubのReleasesページから最新の.dmgをダウンロードしてSate.appをApplicationsにコピーする。",
+      "初回起動時に「壊れているため開けません」と表示されたらターミナルでxattr -dr com.apple.quarantineを実行する。",
+      "またはリポジトリをクローンし、pnpm installとpnpm tauri buildでソースからビルドする。"
+    ],
+    "commands": [
+      "git clone https://github.com/sngazm/sate.git",
+      "cd sate",
+      "pnpm install",
+      "pnpm tauri build",
+      "xattr -dr com.apple.quarantine /Applications/Sate.app"
+    ]
+  }
+}

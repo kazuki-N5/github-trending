@@ -1,0 +1,36 @@
+{
+  "repo": "nikopueringer/CorridorKey2.0",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Corridor Digitalが開発したAIベースのグリーン/ブルースクリーン除去モデル（ヒント動画対応・商用利用可）",
+  "features": [
+    "ヒントなし・最初のフレームのマット画像・フル動画ヒントの3つの推論モードで、様々な撮影条件に対応できる。",
+    "Windows用のドラッグ＆ドロップランチャーとLinux用のシェルスクリプトランチャーが付属しており、コマンドの知識がなくても使える。",
+    "C-RADIOv4-SO400M（NVIDIA）・MoGe-2 ViT-B（Microsoft）・RVM small（Google DeepMind）の3つの基盤モデルを組み合わせた高精度なマット抽出を実現している。",
+    "ハンウィンドウ（Hann window）によるオーバーラップ推論で時間方向の安定性（フリッカー低減）を確保している。",
+    "VRAMが4GB以上あれば1440pまで、6GB以上で4K映像の処理が可能。"
+  ],
+  "why": "推測: Corridor Digitalは映像技術系のYouTubeチャンネルとして世界的に有名で、そのチームが開発したAIマット抽出モデルが商用利用可能なオープンソースとして公開されたことで注目を集めている。既存のグリーンスクリーン除去ツールと比べて精度が高く、クリエイターが日常の映像制作で使えるクオリティになっているとされる。",
+  "whoFor": "動画制作者・映像クリエイター・VFXアーティストがグリーン/ブルースクリーン映像のマット抽出に使える。PythonスクリプトやCLIを使いたいTinkererにも向いており、NVIDIA GPU（VRAM 4GB以上）が必要。",
+  "tech": [
+    "NVIDIA C-RADIOv4-SO400M・Microsoft MoGe-2 ViT-B・Google DeepMind RVM smallの3つの事前学習済みモデルをローカルにダウンロードして推論に使用する。",
+    "Hann窓によるオーバーラップ推論でフレーム間の連続性を保ち、動画全体を通じて一貫したマットを生成する。",
+    "ヒント品質スコア（--hint_quality）をモデルに渡すことで、ヒントの信頼度に応じた条件付き推論が可能。",
+    "CUDA対応PyTorchを使用し、GPU VRAMに応じた「Long Clips And Low VRAM」モードも用意されている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "NVIDIA GPUを搭載したPC（VRAM 4GB以上）でPython仮想環境を作成し、CUDA対応PyTorchをインストールする。",
+      "python scripts/download_weights.pyでCorridorKey 2.0の重みと基盤モデルをダウンロードする（約5GB）。",
+      "Windowsなら.batファイル、Linuxなら.shファイルにクリップをドラッグ＆ドロップして処理する。"
+    ],
+    "commands": [
+      "python -m venv venv",
+      "source venv/bin/activate",
+      "pip install torch==2.9.1 torchvision==0.24.1 --index-url https://download.pytorch.org/whl/cu128",
+      "pip install -r requirements.txt",
+      "python scripts/download_weights.py",
+      "python infer.py --input /path/to/input.mp4 --output_dir /path/to/output"
+    ]
+  }
+}
