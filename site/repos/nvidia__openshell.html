@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NVIDIA/OpenShell | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>NVIDIA/OpenShell</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-10-23（Trendshift 13位）</span>
+<a class="gh" href="https://github.com/NVIDIA/OpenShell" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="nvidia__openshell" data-repo="NVIDIA/OpenShell" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">自律型AIエージェントを権限付きサンドボックスで安全に動かす実行環境</p>
+<h3>何ができるか</h3><ul><li>各エージェントを隔離されたサンドボックス（外部から切り離された実行環境）で動かし、アクセスできるファイルやシステムコールを制限できます。</li><li>すべてのネットワーク接続はサンドボックスを出る前にポリシー（許可ルール）で検査されます。</li><li>エージェントには本物の認証情報を見せず、承認済みの宛先へのリクエストにだけ OpenShell が認証情報を付け加えます。</li><li>ポリシー変更を適用する前に形式検証（数学的に性質を確かめる手法）で危険な新しいアクセスを検出し、人間のレビュー待ちにできます。</li><li>Python、TypeScript、Go、Rust の SDK からゲートウェイに接続でき、Kubernetes には Helm でゲートウェイを配置できます。</li><li>コーディングエージェント向けのスキルを導入すると、CLI 操作やポリシー作成、ゲートウェイのデバッグをエージェントに任せられます。</li></ul>
+<h3>なぜ注目されているか</h3><p>エージェントにファイル操作やパッケージ導入、API 呼び出しをさせつつ、データや秘密情報、ネットワークへの無制限なアクセスは与えないという課題に、カーネルレベルの強制と形式検証で取り組んでいます。NVIDIA が公開しており、リポジトリページでは1万8千を超えるスターを集めています。<span class="guess">推測</span> AIエージェントを業務で動かす際の安全対策への関心の高まりが注目の理由と考えられます。</p>
+<h3>どんな人に役立つか</h3><p>AIエージェントに実際のファイルや認証情報を扱わせたいが、アクセス範囲をきちんと制限したい開発者や運用担当者に向いています。複数のエージェントを組織で運用する際のガバナンス（管理の仕組み）づくりにも使えます。</p>
+<h3>技術的なポイント</h3><ul><li>カーネルを計装（監視用の仕組みを組み込むこと）し、ファイルアクセス、システムコール、ネットワーク接続のたびに実行時にポリシーを強制します。</li><li>ゲートウェイ（サンドボックス・ポリシー・アクセスを管理する制御面）、スーパーバイザー、サンドボックスの3層で構成されています。</li><li>サンドボックスは Docker、Podman、またはホストの仮想化機能の上で動き、Linux、Apple Silicon の macOS、WSL 2（実験的）に対応します。</li><li>ミドルウェア、インターセプター、計算ドライバーを差し込める拡張の仕組みがあります。</li><li>匿名のテレメトリを収集しますが、OPENSHELL_TELEMETRY_ENABLED=false で無効化できます。</li></ul>
+<h3>試し方</h3>
+<ol><li>Linux、Apple Silicon の macOS、または WSL 2 の Windows に、Docker か Podman を用意します。</li><li>インストールスクリプトで CLI とローカルのゲートウェイを導入します。</li><li>openshell sandbox create でサンドボックスを作成します（既定のイメージはエージェント未導入の最小構成 Ubuntu です）。</li><li>実際のエージェントを動かすには、ドキュメントの Run Your First Agent に従って OpenCode を動かし、必要に応じて新しいアクセスを承認します。</li></ol>
+<pre><code>curl -LsSf https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh | sh
+openshell sandbox create --name demo
+npx skills add NVIDIA/OpenShell
+uv add openshell</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#d-nvidia__openshell">2026-10-23</a>
+<span class="src trendshift">Trendshift 13位</span></li><li><a href="../days/2026-10-24.html#d-nvidia__openshell">2026-10-24</a>
+<span class="src github">GitHub Trending 4位</span><span>★ +1,240</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

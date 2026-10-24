@@ -1,0 +1,35 @@
+{
+  "repo": "EthanArbuckle/fairplay-decrypt",
+  "language": "C",
+  "readme": true,
+  "oneLiner": "FairPlay暗号化されたiOSアプリ（IPA）をオフラインで復号するツール",
+  "features": [
+    "App Store の DRM（コピー防止技術）である FairPlay で暗号化された IPA（iOS アプリのパッケージ）を復号できます。",
+    "復号には IPA を所有するアカウントの16バイトの認証情報を使い、対応する脱獄済み端末から credential.bin として取り出す仕組みが用意されています。",
+    "IPA 内の SINF と SUPF というレコードからページ鍵を導出し、暗号化された arm64 のページを復号します。",
+    "復号後に cryptid（暗号化済みかを示すフラグ）をクリアした IPA を出力します。",
+    "復号処理は macOS と Linux で動作します。"
+  ],
+  "why": "推測: 実機上でアプリを動かして復号する従来の方法と違い、鍵を独自に導出してオフラインで復号できる点が、iOS アプリの解析やセキュリティ研究に関わる人の関心を集めていると考えられます。リポジトリページでは公開から数日で1千を超えるスターを集めています。",
+  "whoFor": "iOS アプリのリバースエンジニアリング（バイナリを解析して仕組みを調べること）やセキュリティ研究をする人に向いています。復号には対象アプリを所有するアカウントの認証情報が必要です。",
+  "tech": [
+    "バージョン3と5の SUPF、448バイトと440バイトの SINF priv レコード、暗号化された arm64 の Mach-O（Apple のOSで使われる実行ファイル形式）スライスに対応します。",
+    "Python 3.9 以上のスクリプト decrypt.py と、C で書かれ make でビルドする復号部で構成されています。",
+    "macOS では make で認証情報取得用のバンドルもビルドされ、Xcode と ldid（コード署名ツール）が必要です。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Python 3.9 以上と C コンパイラを用意し、仮想環境を作って依存パッケージを入れます。",
+      "make で復号ツールをビルドします。",
+      "対応する脱獄済み端末から credential.bin を取得します。",
+      "decrypt.py に暗号化された IPA、出力先、認証情報ファイルを指定して実行します（出力先は存在しないパスにします）。"
+    ],
+    "commands": [
+      "python3 -m venv .venv",
+      ". .venv/bin/activate",
+      "python -m pip install -r requirements.txt",
+      "make",
+      "python decrypt.py /path/to/encrypted.ipa /path/to/decrypted.ipa --credential /path/to/credential.bin"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nutlope/hallmark | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛠️</div><div>
+<h1>Nutlope/hallmark</h1>
+<div class="meta"><span>CSS</span>
+<span>初掲載 2026-10-24（Trendshift 14位）</span>
+<a class="gh" href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="nutlope__hallmark" data-repo="Nutlope/hallmark" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIが作ったっぽく見えないWebページを作らせるAIエージェント用デザインスキル</p>
+<h3>何ができるか</h3><ul><li>Claude Code、Codex、Cursor、OpenCode にスキルとして入れると、AI らしさのない Web ページを設計・作成させられます。</li><li>48種類のテーマ（紙、書体、色、部品などをまとめた素材）から、依頼に合う3つを提示してページを組み立てます。</li><li>予約ページなら予約、ショップなら購入のように、訪問者の目的に合わせて行動ボタンを配置します。</li><li>見出し上の小見出しや見出し中の1語だけの色付けなど、機械生成っぽい特徴を実際のブラウザで8つの画面幅にわたってチェックします。</li><li>/hallmark redesign で既存ページの内容と動作を保ったまま作り直し、/hallmark audit で問題点の報告だけを行えます。</li><li>Wikimedia Commons にある公開ライセンスの写真755枚から、題材に合う写真を選びクレジット付きで使います。</li></ul>
+<h3>なぜ注目されているか</h3><p>AI が作る Web ページは似た見た目になりがちで、その特徴を「AI slop（AI が量産する質の低い成果物）」として避ける仕組みを具体的なルールとして実装しています。Together AI が作っており、リポジトリページでは3万を超えるスターを集めています。<span class="guess">推測</span> AI コーディングツールでサイトを作る人が増え、見た目の質を上げたいという需要に合ったことが注目の理由と考えられます。</p>
+<h3>どんな人に役立つか</h3><p>AI コーディングエージェントでランディングページや製品サイトを作っていて、ありがちな AI 風デザインから抜け出したい人に向いています。既存ページのデザイン監査にも使えます。</p>
+<h3>技術的なポイント</h3><ul><li>チェックは3段階で、Floor（コントラスト、フォーカス、モーション軽減、事実の捏造、スマホ表示崩れ）は絶対に通さず、Reflex は理由があれば上書きでき、Finish は出荷を止めない仕上げの確認です。</li><li>scripts/theme.mjs がテーマを選び、scripts/sloplint.mjs --render がページを描画してチェックし、最後に新しいコンテキストのサブエージェントがレビューします。</li><li>各ページは自己完結した HTML と CSS で、最初の CSS コメントに採用した設計判断が記録されます。</li><li>Node 18 以上が必要で、ブラウザでのチェックには puppeteer-core と Chrome を使います。</li></ul>
+<h3>試し方</h3>
+<ol><li>Node 18 以上を用意し、npx skills でスキルをインストールします（-g で全プロジェクト向け）。</li><li>ブラウザでのチェックも使う場合は puppeteer-core と Chrome を用意します。</li><li>Claude Code などで /hallmark を呼ぶか、新しいページの作成を依頼します。</li><li>既存ページは /hallmark redesign で作り直すか、/hallmark audit で監査します。</li></ol>
+<pre><code>npx skills add nutlope/hallmark -g
+npm i -g puppeteer-core
+npx skills add nutlope/hallmark -g --agent claude-code
+/plugin marketplace add nutlope/hallmark
+/plugin install hallmark@hallmark
+node skills/hallmark/scripts/sloplint.mjs &lt;file-or-dir&gt; --render</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-24.html#d-nutlope__hallmark">2026-10-24</a>
+<span class="src trendshift">Trendshift 14位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

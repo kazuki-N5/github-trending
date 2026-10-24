@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>colinhacks/reylo | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>colinhacks/reylo</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-10-24（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/colinhacks/reylo" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="colinhacks__reylo" data-repo="colinhacks/reylo" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">SQLファイルを型付きでTypeScriptからimportできる、コード生成不要のツール</p>
+<h3>何ができるか</h3><ul><li>.sql ファイルを TypeScript から直接 import し、.run() に DB ドライバーのクライアントを渡してクエリを実行できます。</li><li>クエリの結果や引数の型を SQL そのものから推論するため、行の型を手書きしたりスキーマファイルを同期したりする必要がありません。</li><li>列名の誤字、間違ったパラメータ、削除されたテーブルなどを、tsc やエディタ上で型エラーとして検出できます。</li><li>主キー一致なら Row | null、集計なら Row、returning の無い更新なら void のように、返る行数に応じて戻り値の型が変わります。</li><li>Postgres、MySQL、SQLite に対応し、pg、postgres.js、mysql2、better-sqlite3、Bun.sql、Cloudflare D1 など手持ちのドライバーを使えます。</li></ul>
+<h3>なぜ注目されているか</h3><p>作者は TypeScript のスキーマ検証ライブラリ Zod の作者として知られる Colin McDonnell（colinhacks）です。TypeScript 7.1 ベータで導入された content mappers（外部ファイルの種類に静的な型を与える仕組み）を使い、コード生成なしで SQL に型を付ける点が新しいです。<span class="guess">推測</span> README が「エージェント時代に最適」とうたうように、型情報が1か所にまとまり AI エージェントが古い型を残しにくい点も関心を集めていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>ORM を使わずに生の SQL を書きたいが、TypeScript の型安全性も欲しい開発者に向いています。AI コーディングエージェントに DB まわりのコードを書かせる場合にも、型チェックで見落としを拾えます。</p>
+<h3>技術的なポイント</h3><ul><li>TypeScript 7.1（ベータ）の content mappers を使い、型チェッカーが直接 Reylo に問い合わせるため、生成ファイルやファイル監視が不要です。</li><li>型を付けるとき、開発用データベースにクエリを実行せずに prepare（事前解析）させ、各列とパラメータの型を読み取ります。</li><li>スキーマや join、where 条件から NULL になりうるかを推論し、enum やチェック制約の値はユニオン型にします。</li><li>実行時は node --import reylo/register で読み込むほか、Bun、Vite、Next.js、esbuild、webpack などのプラグインも用意されています。</li></ul>
+<h3>試し方</h3>
+<ol><li>Node 24 以上と、動いている開発用データベース（Postgres、MySQL 8.0.22 以上、または SQLite ファイル）を用意します。</li><li>Reylo、使うデータベース用のエンジン、TypeScript 7.1 ベータをインストールします。</li><li>tsconfig.json の contentMappers に Reylo を追加し、.env に DATABASE_URL を書きます。</li><li>tsc --noEmit --runExternalCode で型チェックし、node の --import reylo/register 付きでコードを実行します。</li></ol>
+<pre><code>npm install reylo
+npm install -D @reylosql/postgres
+npm install -D typescript@beta
+tsc --noEmit --runExternalCode
+node --env-file=.env --import reylo/register main.ts</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-24.html#h-colinhacks__reylo">2026-10-24 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -2,33 +2,38 @@
   "repo": "luongnv89/claude-howto",
   "language": "Python",
   "readme": true,
-  "oneLiner": "Claude Codeを週末で使いこなすための、図解・テンプレート付き実践的学習ガイド（10モジュール・11〜13時間の学習ロードマップ）",
+  "oneLiner": "図解とコピペ用テンプレートでClaude Codeを基礎から上級まで学べるガイド",
   "features": [
-    "スラッシュコマンド・メモリ・スキル・フック・MCP・サブエージェント・プラグインをカバーする10モジュールの体系的なチュートリアルを提供している。",
-    "Mermaidダイアグラムで各機能の内部動作を可視化しており、仕組みを理解しながら学べる。",
-    "プロジェクトにそのままコピーして使えるCLAUDE.mdテンプレート・フックスクリプト・MCPコンフィグなどの設定ファイルを同梱している。",
-    "/self-assessmentや/lesson-quizコマンドをClaude Code内で実行して、自分の習熟度に応じた学習ルートを把握できる。",
-    "自動コードレビューやCI/CD自動化、ドキュメント生成など、複数機能を組み合わせた実践的なユースケースを解説している。"
+    "スラッシュコマンド、メモリ、チェックポイント、スキル、フック、MCP、サブエージェント、プラグインなど、Claude Code の機能を10のモジュールで順に学べます。",
+    "スラッシュコマンド、CLAUDE.md のテンプレート、フックのスクリプト、MCP の設定、サブエージェントの定義などを、自分のプロジェクトにそのままコピーして使えます。",
+    "Mermaid（テキストから図を描く記法）の図で、各機能が内部でどう動くかを説明しています。",
+    "Claude Code で /self-assessment や /lesson-quiz を実行すると、クイズで自分の理解度を確かめ、足りない部分を見つけられます。",
+    "初心者から上級者までのレベル別の学習順序と所要時間（全体で11〜13時間）が示されています。",
+    "英語のほか、ベトナム語、中国語、ウクライナ語、日本語の README があり、EPUB の電子書籍も生成できます。"
   ],
-  "why": "推測: Claude Codeは高機能だが公式ドキュメントが機能リファレンス中心で、機能同士の組み合わせ方が分かりにくい。本ガイドは段階的な学習パスとコピペ可能なテンプレートを用意しているため、エンジニアが「実際に使える状態」に素早く到達できると評価され注目されている。GitHubトレンドでトップを獲得するほどの関心を集めている。",
-  "whoFor": "Claude Codeをインストールしたもののフルに活用できていないエンジニアに最適。チームへのオンボーディング資料として使いたい開発リーダーにも向いている。Claude Code v2.1以降（ネイティブバイナリ版）の利用者を対象としている。",
+  "why": "公式ドキュメントが機能の説明中心なのに対し、機能を組み合わせて実際のワークフローを作る方法を、学習順序付きで教える点を打ち出しています。リポジトリページでは4万を超えるスターを集めており、README では Claude Code のリリースごとに内容を更新していると述べています。推測: Claude Code の利用者が増え、体系的に学べる教材の需要が高まっていることが注目の理由と考えられます。",
+  "whoFor": "Claude Code を入れたものの基本的な使い方にとどまっている人や、フックやサブエージェントを組み合わせてコードレビューやドキュメント生成を自動化したい開発者に向いています。チームの新人向けの学習教材としても使えます。",
   "tech": [
-    "Claude CodeのCLAUD.md・スラッシュコマンド・フック・スキル・MCPサーバー・サブエージェント・プラグインを段階的に組み合わせる学習設計になっている。",
-    "Mermaidダイアグラムをガイド内に埋め込み、機能の動作フローを視覚的に説明している。",
-    "Claude Code内でそのまま実行できる/self-assessmentスラッシュコマンドで、双方向の自己診断が可能。"
+    "各機能はフォルダ（01-slash-commands/ から 10-cli/ まで）に分かれ、説明とすぐ使えるサンプルファイルが入っています。",
+    "スラッシュコマンドやサブエージェントは Markdown ファイルとして .claude/commands/ や .claude/agents/ に置くだけで使える形式です。",
+    "フックはシェルスクリプトとして ~/.claude/hooks/ に置き、イベントに応じて自動実行させます。",
+    "EPUB の生成は uv run scripts/build_epub.py で行い、ライセンスは MIT です。"
   ],
   "tryIt": {
     "steps": [
-      "リポジトリをクローンして、01-slash-commands/以下のコマンドをプロジェクトの.claude/commands/にコピーする。",
-      "02-memory/project-CLAUDE.mdをCLAUDE.mdとして自分のプロジェクトにコピーする。",
-      "Claude Codeを起動し/self-assessmentを実行して、自分の習熟度に合ったモジュールから学習を始める。"
+      "ガイドのリポジトリをクローンします。",
+      "最初のスラッシュコマンドを自分のプロジェクトの .claude/commands/ にコピーし、Claude Code で /optimize と入力して試します。",
+      "続けてプロジェクトメモリ（CLAUDE.md）やスキルをコピーして導入します。",
+      "学習ロードマップに沿って各モジュールを進め、終わるたびに /lesson-quiz で理解度を確かめます。"
     ],
     "commands": [
       "git clone https://github.com/luongnv89/claude-howto.git",
       "cd claude-howto",
-      "cp 01-slash-commands/*.md .claude/commands/",
-      "cp 02-memory/project-CLAUDE.md ./CLAUDE.md",
-      "cp -r 03-skills/code-review-specialist ~/.claude/skills/"
+      "mkdir -p /path/to/your-project/.claude/commands",
+      "cp 01-slash-commands/optimize.md /path/to/your-project/.claude/commands/",
+      "cp 02-memory/project-CLAUDE.md /path/to/your-project/CLAUDE.md",
+      "cp -r 03-skills/code-review-specialist ~/.claude/skills/",
+      "uv run scripts/build_epub.py"
     ]
   }
 }

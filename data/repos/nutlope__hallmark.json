@@ -1,0 +1,38 @@
+{
+  "repo": "Nutlope/hallmark",
+  "language": "CSS",
+  "readme": true,
+  "oneLiner": "AIが作ったっぽく見えないWebページを作らせるAIエージェント用デザインスキル",
+  "features": [
+    "Claude Code、Codex、Cursor、OpenCode にスキルとして入れると、AI らしさのない Web ページを設計・作成させられます。",
+    "48種類のテーマ（紙、書体、色、部品などをまとめた素材）から、依頼に合う3つを提示してページを組み立てます。",
+    "予約ページなら予約、ショップなら購入のように、訪問者の目的に合わせて行動ボタンを配置します。",
+    "見出し上の小見出しや見出し中の1語だけの色付けなど、機械生成っぽい特徴を実際のブラウザで8つの画面幅にわたってチェックします。",
+    "/hallmark redesign で既存ページの内容と動作を保ったまま作り直し、/hallmark audit で問題点の報告だけを行えます。",
+    "Wikimedia Commons にある公開ライセンスの写真755枚から、題材に合う写真を選びクレジット付きで使います。"
+  ],
+  "why": "AI が作る Web ページは似た見た目になりがちで、その特徴を「AI slop（AI が量産する質の低い成果物）」として避ける仕組みを具体的なルールとして実装しています。Together AI が作っており、リポジトリページでは3万を超えるスターを集めています。推測: AI コーディングツールでサイトを作る人が増え、見た目の質を上げたいという需要に合ったことが注目の理由と考えられます。",
+  "whoFor": "AI コーディングエージェントでランディングページや製品サイトを作っていて、ありがちな AI 風デザインから抜け出したい人に向いています。既存ページのデザイン監査にも使えます。",
+  "tech": [
+    "チェックは3段階で、Floor（コントラスト、フォーカス、モーション軽減、事実の捏造、スマホ表示崩れ）は絶対に通さず、Reflex は理由があれば上書きでき、Finish は出荷を止めない仕上げの確認です。",
+    "scripts/theme.mjs がテーマを選び、scripts/sloplint.mjs --render がページを描画してチェックし、最後に新しいコンテキストのサブエージェントがレビューします。",
+    "各ページは自己完結した HTML と CSS で、最初の CSS コメントに採用した設計判断が記録されます。",
+    "Node 18 以上が必要で、ブラウザでのチェックには puppeteer-core と Chrome を使います。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node 18 以上を用意し、npx skills でスキルをインストールします（-g で全プロジェクト向け）。",
+      "ブラウザでのチェックも使う場合は puppeteer-core と Chrome を用意します。",
+      "Claude Code などで /hallmark を呼ぶか、新しいページの作成を依頼します。",
+      "既存ページは /hallmark redesign で作り直すか、/hallmark audit で監査します。"
+    ],
+    "commands": [
+      "npx skills add nutlope/hallmark -g",
+      "npm i -g puppeteer-core",
+      "npx skills add nutlope/hallmark -g --agent claude-code",
+      "/plugin marketplace add nutlope/hallmark",
+      "/plugin install hallmark@hallmark",
+      "node skills/hallmark/scripts/sloplint.mjs <file-or-dir> --render"
+    ]
+  }
+}

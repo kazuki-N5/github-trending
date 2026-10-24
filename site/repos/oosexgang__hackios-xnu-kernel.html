@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>oosexgang/hackios-xnu-kernel | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧪</div><div>
+<h1>oosexgang/hackios-xnu-kernel</h1>
+<div class="meta"><span>C</span>
+<span>初掲載 2026-10-23（Trendshift 9位）</span>
+<a class="gh" href="https://github.com/oosexgang/hackios-xnu-kernel" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="oosexgang__hackios-xnu-kernel" data-repo="oosexgang/hackios-xnu-kernel" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AppleのXNUカーネルをAndroidスマホ上で起動し、無改変のiOS 16.5を動かす研究</p>
+<h3>何ができるか</h3><ul><li>Apple が公開している XNU カーネル（iOS や macOS の中核となるOSカーネル）を Android スマートフォン POCO X5 Pro 5G 上で起動します。</li><li>その上で無改変の iOS 16.5 のユーザー空間を動かし、ロック画面、ホーム画面、設定、写真、Safari などのアプリが使えます。</li><li>QEMU（CPU やハードウェアをソフトウェアで再現するエミュレータ）上でも動くため、スマートフォンが無くても Linux PC で試せます。</li><li>スマートフォンでは何も書き込まず、fastboot boot で UEFI を起動してシステム全体を RAM 上で動かし、再起動すれば Android に戻ります。</li><li>タッチパネル、Adreno GPU、Wi-Fi、スピーカーとマイク、カメラが動作し、携帯回線、Bluetooth、充電、App Store などはまだ動きません。</li><li>xl コマンドで USB 経由のカーネル実行、ログ取得、スクリーンショット、画面と音声の録画ができます。</li></ul>
+<h3>なぜ注目されているか</h3><p>iOS を Apple 製以外のハードウェアで、しかも iOS 側のプログラムを1バイトも変えずに動かしている点が大きな特徴です。リポジトリページでは公開から数日で1千を超えるスターを集めています。<span class="guess">推測</span> iOS の内部構造やカーネル移植の手法を示す珍しい事例として、OS 研究やリバースエンジニアリングに関心のある人の注目を集めていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>OS カーネルの移植、ブートローダー、デバイスドライバーの仕組みを実例で学びたい人や、iOS の内部を研究したい人に向いています。README によるとこれは日常利用向けの ROM ではなく、決まった秒数だけ動く研究用の環境です。</p>
+<h3>技術的なポイント</h3><ul><li>起動は fastboot boot、UEFI（Mu-Silicium）、自作の EFI ローダー xnuloader、XNU カーネルの順に進みます。</li><li>Apple の非公開ドライバーの代わりに、IOSurface、IOMobileFramebuffer、AppleKeyStore、ネットワークスタックなどの代替ドライバーを自作しています。</li><li>Wi-Fi は Linux の ath11k ドライバーを FreeBSD の LinuxKPI（Linux 用ドライバーを別のカーネルで動かす互換層）を通して動かしています。</li><li>iOS 側で足りない処理は、カーネルが DYLD_INSERT_LIBRARIES で注入するライブラリが補います。</li><li>Apple のファイルはリポジトリに含まれず、ios165/fetch.sh が Apple の CDN から iOS 16.5 の IPSW（iOS のファームウェアファイル）を手元にダウンロードして必要な部分を取り出します。</li></ul>
+<h3>試し方</h3>
+<ol><li>空き容量約12GB、空きメモリ4GBの x86-64 Linux を用意し、必要なパッケージをインストールします。</li><li>リポジトリをクローンし、common/setup.sh でユーザーランド側のリポジトリを取り込みます。</li><li>ios165/fetch.sh で Apple の CDN から IPSW をダウンロードし、common/build.sh qemu-virt で APFS イメージを作ります。</li><li>common/run.sh qemu-virt で QEMU を起動すると、2〜3分でロック画面が表示され、マウスの左ボタンを押しながら動かして指の操作をします。</li></ol>
+<pre><code>sudo pacman -S --needed git python 7zip lz4 gcc qemu-system-aarch64 qemu-ui-gtk edk2-aarch64
+git clone https://github.com/oosexgang/hackios-xnu-kernel.git hackios
+cd hackios
+common/setup.sh
+ios165/fetch.sh
+common/build.sh qemu-virt
+common/run.sh qemu-virt
+common/build.sh redwood GL=1
+common/run.sh redwood 900</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#d-oosexgang__hackios-xnu-kernel">2026-10-23</a>
+<span class="src trendshift">Trendshift 9位</span></li><li><a href="../days/2026-10-24.html#d-oosexgang__hackios-xnu-kernel">2026-10-24</a>
+<span class="src trendshift">Trendshift 11位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "repo": "SnailSploit/Claude-Red",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Claudeを攻撃側セキュリティの専門家として動かすためのスキル集",
+  "features": [
+    "Claude の Skills 機能向けに、攻撃的セキュリティ（システムの弱点を攻撃者の視点で検証する分野）の手法を SKILL.md ファイルとしてまとめています。",
+    "SQL インジェクション、XSS、SSRF などの Web 脆弱性から、Active Directory、無線、クラウド、モバイル、エクスプロイト開発まで、23カテゴリ78のスキルを収録しています。",
+    "会話の内容に応じて必要なスキルだけが読み込まれるため、使わないスキルでコンテキスト（モデルに渡す文脈の量）を消費しません。",
+    "Claude Code ではスキルファイルをシステムプロンプトとして渡して使え、Claude.ai ではプロジェクトのシステムプロンプトに貼り付けて使えます。",
+    "インストールスクリプトで、導入先やカテゴリを選んでスキルを入れられます。"
+  ],
+  "why": "許可を得たレッドチーム演習（攻撃者役として組織の防御を試す活動）やバグバウンティ、CTF の準備などに向けて、専門的な手順を Claude に持たせられる点を打ち出しています。リポジトリページでは8千を超えるスターを集めています。推測: AI エージェント向けのスキルという仕組みが広がる中で、セキュリティ分野に特化した大規模なスキル集が少ないことが注目の理由と考えられます。",
+  "whoFor": "許可された範囲でペネトレーションテスト（侵入テスト）やバグバウンティ、セキュリティ研究を行う人、CTF の練習をする人に向いています。攻撃手法を学んで防御に生かしたい学生の学習用の参照資料にもなります。",
+  "tech": [
+    "各スキルは構造化された SKILL.md ファイルで、手法、ツール、例外的なケース、権限昇格の道筋などを記述しています。",
+    "Claude の Skills 機能は会話中のきっかけとなる語に応じてスキルを自動で読み込み、たとえば SQL インジェクションに触れると offensive-sqli が読み込まれます。",
+    "git の sparse-checkout（リポジトリの一部だけを取り出す機能）を使って、特定カテゴリだけを導入できます。",
+    "Sahar Shlichov 氏の offensive-checklist を土台にしたスキルが多く含まれ、ライセンスは MIT です。"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリを ~/.claude/skills/claude-red にクローンします。",
+      "Claude との会話で対象の攻撃手法に触れると、対応するスキルが自動で読み込まれます。",
+      "特定カテゴリだけを使いたい場合は、sparse-checkout かインストールスクリプトの --category で選びます。"
+    ],
+    "commands": [
+      "git clone https://github.com/SnailSploit/claude-red ~/.claude/skills/claude-red",
+      "git clone --filter=blob:none --sparse https://github.com/SnailSploit/claude-red",
+      "cd claude-red && git sparse-checkout set Skills/web Skills/active-directory",
+      "cat Skills/web/offensive-sqli/SKILL.md | claude --system-file -",
+      "./install.sh",
+      "./install.sh --target ~/.claude/skills",
+      "./install.sh --category web"
+    ]
+  }
+}

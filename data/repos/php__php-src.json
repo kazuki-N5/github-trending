@@ -1,0 +1,37 @@
+{
+  "repo": "php/php-src",
+  "language": "C",
+  "readme": true,
+  "oneLiner": "Web開発で広く使われるスクリプト言語PHPの公式処理系のソースコード",
+  "features": [
+    "PHP の言語処理系（インタプリタ：ソースコードを読み込んでその場で実行するプログラム）本体をソースからビルドできます。",
+    "make test で実行できる大規模なテストスイートが同梱されており、並列実行や特定ディレクトリだけのテストもできます。",
+    "make install で、自分でビルドした PHP をシステムにインストールできます。",
+    "多数の拡張機能（PHP に機能を追加するモジュール）が同梱され、追加の拡張は PIE（PHP Installer for Extensions）で導入できます。",
+    "Windows 向けには windows.php.net でビルド済みバイナリが配布されており、展開するだけで使えます。"
+  ],
+  "why": "PHP はブログから世界的な大規模サイトまでを支える汎用スクリプト言語であり、このリポジトリはその公式ソースコードです。リポジトリページでは4万を超えるスターを集めています。推測: 新バージョンの開発や RFC（新機能の提案と投票の仕組み）による変更が継続的に進んでいるため、注目が集まりやすいと考えられます。",
+  "whoFor": "PHP の内部実装（言語処理系の仕組み）を学びたい人や、PHP 本体へのバグ修正・機能追加に貢献したい人に役立ちます。開発用に --enable-debug 付きでビルドして挙動を調べる使い方もできます。",
+  "tech": [
+    "処理系は C 言語で書かれており、ライセンスは Modified BSD License（BSD-3-Clause）です。",
+    "ビルドには autoconf、bison（構文解析器の生成ツール）、re2c（字句解析器の生成ツール）が必要で、標準構成では libxml2 と libsqlite3 も使います。",
+    "./buildconf で configure スクリプトを生成し、./configure と make で組み立てる、Autotools 方式のビルド手順を採っています。",
+    "新機能の追加には RFC と開発者による承認が必要で、バグ修正は GitHub の issue 番号をコミットメッセージで参照する決まりになっています。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Ubuntu などで、ビルドに必要なパッケージをインストールします。",
+      "./buildconf で configure スクリプトを生成します。",
+      "開発用なら ./configure --enable-debug で構成し、make -j4 でビルドします。",
+      "make test でテストスイートを実行し、問題なければ make install でインストールします。"
+    ],
+    "commands": [
+      "sudo apt install -y pkg-config build-essential autoconf bison re2c libxml2-dev libsqlite3-dev",
+      "./buildconf",
+      "./configure --enable-debug",
+      "make -j4",
+      "make TEST_PHP_ARGS=-j4 test",
+      "make install"
+    ]
+  }
+}

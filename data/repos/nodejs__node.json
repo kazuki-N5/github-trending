@@ -1,0 +1,31 @@
+{
+  "repo": "nodejs/node",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "ブラウザの外でJavaScriptを動かす実行環境Node.jsの公式リポジトリ",
+  "features": [
+    "Node.js は、オープンソースでクロスプラットフォーム（複数のOSで動くこと）の JavaScript 実行環境（ランタイム）です。",
+    "nodejs.org/dist/ からバイナリ、インストーラー、ソースコードの tarball を入手できます。",
+    "ダウンロードしたファイルは、SHASUMS256.txt.asc のチェックサムとリリース担当者の PGP 署名で改ざんがないか検証できます。",
+    "BUILDING.md の手順に従って、ソースから Node.js をビルドできます。",
+    "最新の Current 版と長期サポートの LTS 版それぞれについて、バージョンごとの API ドキュメントが提供されています。"
+  ],
+  "why": "Node.js は JavaScript 実行環境の代表的なプロジェクトで、リポジトリページでは12万を超えるスターを集めています。README によると、2026年10月からは毎年10月に新しいリリースラインが Alpha として分岐し、翌年4月に Current、10月に LTS になる新しいリリーススケジュールに移行しています。推測: このリリース方式の変更や新しいメジャーバージョンの登場が、改めて注目を集めている理由と考えられます。",
+  "whoFor": "JavaScript でサーバーサイドのプログラムやコマンドラインツールを作る開発者全般に関係します。Node.js 本体の開発に貢献したい人や、大規模なオープンソースプロジェクトの運営の仕組みを知りたい人にも参考になります。",
+  "tech": [
+    "セマンティックバージョニング（互換性を壊す変更があるとメジャー番号を上げる番号の付け方）に従っています。",
+    "リリースは Alpha、Current、LTS、Nightly の4種類で、LTS は30か月のサポートを受け、最初の Current から終了まで合計36か月です。",
+    "Nightly 版は main ブランチに変更があるときに24時間ごとに自動ビルドされますが、テストはされていません。",
+    "オープンなガバナンスモデルを採り、TSC（技術運営委員会）が運営し、OpenJS Foundation が支援しています。"
+  ],
+  "tryIt": {
+    "steps": [
+      "nodejs.org/dist/ から目的のバージョンのバイナリかインストーラーをダウンロードします。",
+      "nodejs/release-keys から信頼できる鍵束を取得し、gpgv で SHASUMS256.txt.asc の署名を検証します。",
+      "ソースからビルドする場合は BUILDING.md の手順に従います。"
+    ],
+    "commands": [
+      "curl -fsLo \"/path/to/nodejs-keyring.kbx\" \"https://github.com/nodejs/release-keys/raw/HEAD/gpg/pubring.kbx\""
+    ]
+  }
+}

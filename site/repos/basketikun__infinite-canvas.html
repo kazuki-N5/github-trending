@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>basketikun/infinite-canvas | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🖼️</div><div>
+<h1>basketikun/infinite-canvas</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-10-24（Trendshift 9位）</span>
+<a class="gh" href="https://github.com/basketikun/infinite-canvas" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="basketikun__infinite-canvas" data-repo="basketikun/infinite-canvas" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AI生成画像を無限キャンバス上で並べて試行錯誤できる、オープンソースの制作ツール</p>
+<h3>何ができるか</h3><ul><li>複数のキャンバスを持つプロジェクトで、ノード（キャンバス上の部品）のドラッグや拡大縮小、線でのつなぎ合わせ、ミニマップ、元に戻す・やり直しができます。</li><li>設定した OpenAI 互換 API に接続し、テキストからの画像生成、画像からの画像生成、参考画像の編集、文章での質問、音声や動画の生成ができます。</li><li>キャンバスアシスタントが、選んだノードやその上流のノードについて対話や画像生成を行い、結果をキャンバスに戻します。</li><li>ローカルの Canvas Agent を通じて Codex や Claude Code をつなぎ、エージェントに MCP 経由で現在のキャンバスを操作させられます。</li><li>URL からリモートのノードプラグインを導入・更新・削除でき、TypeScript SDK で独自のノードも作れます。</li><li>7つのオープンソースのプロンプト集を内蔵し、独自の JSON 形式のプロンプト集も追加できます。</li></ul>
+<h3>なぜ注目されているか</h3><p>キャンバスでの配置、AI 画像生成、参考画像の編集、対話アシスタント、プロンプト集、素材管理を1つの画面にまとめた点が特徴です。リポジトリページでは8千を超えるスターを集めています。<span class="guess">推測</span> OpenAI 互換の API なら中継サービスや自前のサーバーも含めて自由に接続でき、MIT ライセンスで商用利用もできる点が支持されていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>AI で画像や動画を作りながら、複数の案を並べて比べたり連続して改良したりしたいクリエイターに向いています。AI エージェントにキャンバスを操作させる仕組みを試したい開発者にも参考になります。</p>
+<h3>技術的なポイント</h3><ul><li>フロントエンドは TypeScript で書かれ、開発では Bun（高速な JavaScript 実行環境）を使います。</li><li>API キー、Base URL、キャンバス、素材、生成履歴は既定でブラウザ内に保存され、ブラウザから直接 API にアクセスします。</li><li>プロンプト集はブラウザから直接取得して IndexedDB（ブラウザ内のデータベース）にキャッシュします。</li><li>エージェント連携には MCP（Model Context Protocol：AI がツールを呼び出すための標準的な仕組み）を使っています。</li><li>README によると開発段階のため、過去のデータとの互換性は保証されていません。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンし、web ディレクトリで Bun を使って開発サーバーを起動するか、Docker Compose で起動します。</li><li>ブラウザで http://localhost:3000 を開きます（Docker の場合）。</li><li>右上の設定から、自分の OpenAI 互換 API の Base URL と API Key を入力します。</li></ol>
+<pre><code>git clone git@github.com:basketikun/infinite-canvas.git
+cd infinite-canvas
+cd web
+bun install
+bun run dev
+docker compose up -d</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-24.html#d-basketikun__infinite-canvas">2026-10-24</a>
+<span class="src trendshift">Trendshift 9位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

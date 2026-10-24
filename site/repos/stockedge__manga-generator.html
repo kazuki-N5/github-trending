@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stockedge/manga-generator | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📁</div><div>
+<h1>stockedge/manga-generator</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-10-24（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/stockedge/manga-generator" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="stockedge__manga-generator" data-repo="stockedge/manga-generator" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">原作からCodexと脚本・作画・組版・PDF出力まで進める漫画制作ツール</p>
+<h3>何ができるか</h3><ul><li>小説や文章の原作から、脚本、ネーム（コマ割りと構成の下書き）、画像生成、文字入れ、検品、PDF 出力までを Codex と一緒に進められます。</li><li>文字や吹き出しを絵とは別に配置するため、後から台詞を直しやすくなっています。</li><li>コピー用プロンプトを Codex に送るだけで、必要なソフトの確認と導入が自動で進みます。</li><li>生成した画像を実際に確認して直す検品や、サブエージェントによるレビューの工程があります。</li><li>Claude Code でも使え、その場合は画像生成を外部の ComfyUI が担当します。</li></ul>
+<h3>なぜ注目されているか</h3><p>README では制作例として Amazon で販売中の作品や X で公開している漫画を紹介しています。<span class="guess">推測</span> 非エンジニアでもコマンド操作を AI エージェントに任せて、原作から完成した漫画の PDF まで作れる点が注目されていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>自分の小説や文章を漫画にしたい人に向いています。画像生成や視覚確認が使える Codex 環境（Claude Code の場合は GPU 環境と ComfyUI）が必要です。</p>
+<h3>技術的なポイント</h3><ul><li>Node.js 24、ブラウザ（Chrome または Edge）、日本語フォント、Python の PDF 用ライブラリ（reportlab、pypdf、Pillow）、Poppler を使います。</li><li>組版、読書画面、PDF、履歴、再現パッケージは共通の CLI（コマンドラインツール）が担当します。</li><li>AGENTS.md や docs/AUTOMATIC.md にエージェント向けの手順を書き、エージェントがそれに従って制作を進める設計です。</li><li>原作内の文章は資料として扱い、命令として実行しないようにプロンプトで指示しています。</li></ul>
+<h3>試し方</h3>
+<ol><li>README のコピー用プロンプトを Codex の新しいチャットに送ります。</li><li>必要なソフトの確認と導入が自動で進むので、OS の許可画面などが出たときだけ対応します。</li><li>準備完了の報告が来たら、原作ファイル（UTF-8 のテキスト）を添付するか本文を貼り付け、「この原作を最後まで漫画化して」と伝えます。</li></ol>
+<pre><code>npm run check</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-24.html#h-stockedge__manga-generator">2026-10-24 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

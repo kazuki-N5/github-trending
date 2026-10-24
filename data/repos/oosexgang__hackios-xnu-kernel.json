@@ -1,0 +1,42 @@
+{
+  "repo": "oosexgang/hackios-xnu-kernel",
+  "language": "C",
+  "readme": true,
+  "oneLiner": "AppleのXNUカーネルをAndroidスマホ上で起動し、無改変のiOS 16.5を動かす研究",
+  "features": [
+    "Apple が公開している XNU カーネル（iOS や macOS の中核となるOSカーネル）を Android スマートフォン POCO X5 Pro 5G 上で起動します。",
+    "その上で無改変の iOS 16.5 のユーザー空間を動かし、ロック画面、ホーム画面、設定、写真、Safari などのアプリが使えます。",
+    "QEMU（CPU やハードウェアをソフトウェアで再現するエミュレータ）上でも動くため、スマートフォンが無くても Linux PC で試せます。",
+    "スマートフォンでは何も書き込まず、fastboot boot で UEFI を起動してシステム全体を RAM 上で動かし、再起動すれば Android に戻ります。",
+    "タッチパネル、Adreno GPU、Wi-Fi、スピーカーとマイク、カメラが動作し、携帯回線、Bluetooth、充電、App Store などはまだ動きません。",
+    "xl コマンドで USB 経由のカーネル実行、ログ取得、スクリーンショット、画面と音声の録画ができます。"
+  ],
+  "why": "iOS を Apple 製以外のハードウェアで、しかも iOS 側のプログラムを1バイトも変えずに動かしている点が大きな特徴です。リポジトリページでは公開から数日で1千を超えるスターを集めています。推測: iOS の内部構造やカーネル移植の手法を示す珍しい事例として、OS 研究やリバースエンジニアリングに関心のある人の注目を集めていると考えられます。",
+  "whoFor": "OS カーネルの移植、ブートローダー、デバイスドライバーの仕組みを実例で学びたい人や、iOS の内部を研究したい人に向いています。README によるとこれは日常利用向けの ROM ではなく、決まった秒数だけ動く研究用の環境です。",
+  "tech": [
+    "起動は fastboot boot、UEFI（Mu-Silicium）、自作の EFI ローダー xnuloader、XNU カーネルの順に進みます。",
+    "Apple の非公開ドライバーの代わりに、IOSurface、IOMobileFramebuffer、AppleKeyStore、ネットワークスタックなどの代替ドライバーを自作しています。",
+    "Wi-Fi は Linux の ath11k ドライバーを FreeBSD の LinuxKPI（Linux 用ドライバーを別のカーネルで動かす互換層）を通して動かしています。",
+    "iOS 側で足りない処理は、カーネルが DYLD_INSERT_LIBRARIES で注入するライブラリが補います。",
+    "Apple のファイルはリポジトリに含まれず、ios165/fetch.sh が Apple の CDN から iOS 16.5 の IPSW（iOS のファームウェアファイル）を手元にダウンロードして必要な部分を取り出します。"
+  ],
+  "tryIt": {
+    "steps": [
+      "空き容量約12GB、空きメモリ4GBの x86-64 Linux を用意し、必要なパッケージをインストールします。",
+      "リポジトリをクローンし、common/setup.sh でユーザーランド側のリポジトリを取り込みます。",
+      "ios165/fetch.sh で Apple の CDN から IPSW をダウンロードし、common/build.sh qemu-virt で APFS イメージを作ります。",
+      "common/run.sh qemu-virt で QEMU を起動すると、2〜3分でロック画面が表示され、マウスの左ボタンを押しながら動かして指の操作をします。"
+    ],
+    "commands": [
+      "sudo pacman -S --needed git python 7zip lz4 gcc qemu-system-aarch64 qemu-ui-gtk edk2-aarch64",
+      "git clone https://github.com/oosexgang/hackios-xnu-kernel.git hackios",
+      "cd hackios",
+      "common/setup.sh",
+      "ios165/fetch.sh",
+      "common/build.sh qemu-virt",
+      "common/run.sh qemu-virt",
+      "common/build.sh redwood GL=1",
+      "common/run.sh redwood 900"
+    ]
+  }
+}

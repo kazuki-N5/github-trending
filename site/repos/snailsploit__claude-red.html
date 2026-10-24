@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SnailSploit/Claude-Red | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛡️</div><div>
+<h1>SnailSploit/Claude-Red</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-24（GitHub Trending 6位）</span>
+<a class="gh" href="https://github.com/SnailSploit/Claude-Red" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="snailsploit__claude-red" data-repo="SnailSploit/Claude-Red" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Claudeを攻撃側セキュリティの専門家として動かすためのスキル集</p>
+<h3>何ができるか</h3><ul><li>Claude の Skills 機能向けに、攻撃的セキュリティ（システムの弱点を攻撃者の視点で検証する分野）の手法を SKILL.md ファイルとしてまとめています。</li><li>SQL インジェクション、XSS、SSRF などの Web 脆弱性から、Active Directory、無線、クラウド、モバイル、エクスプロイト開発まで、23カテゴリ78のスキルを収録しています。</li><li>会話の内容に応じて必要なスキルだけが読み込まれるため、使わないスキルでコンテキスト（モデルに渡す文脈の量）を消費しません。</li><li>Claude Code ではスキルファイルをシステムプロンプトとして渡して使え、Claude.ai ではプロジェクトのシステムプロンプトに貼り付けて使えます。</li><li>インストールスクリプトで、導入先やカテゴリを選んでスキルを入れられます。</li></ul>
+<h3>なぜ注目されているか</h3><p>許可を得たレッドチーム演習（攻撃者役として組織の防御を試す活動）やバグバウンティ、CTF の準備などに向けて、専門的な手順を Claude に持たせられる点を打ち出しています。リポジトリページでは8千を超えるスターを集めています。<span class="guess">推測</span> AI エージェント向けのスキルという仕組みが広がる中で、セキュリティ分野に特化した大規模なスキル集が少ないことが注目の理由と考えられます。</p>
+<h3>どんな人に役立つか</h3><p>許可された範囲でペネトレーションテスト（侵入テスト）やバグバウンティ、セキュリティ研究を行う人、CTF の練習をする人に向いています。攻撃手法を学んで防御に生かしたい学生の学習用の参照資料にもなります。</p>
+<h3>技術的なポイント</h3><ul><li>各スキルは構造化された SKILL.md ファイルで、手法、ツール、例外的なケース、権限昇格の道筋などを記述しています。</li><li>Claude の Skills 機能は会話中のきっかけとなる語に応じてスキルを自動で読み込み、たとえば SQL インジェクションに触れると offensive-sqli が読み込まれます。</li><li>git の sparse-checkout（リポジトリの一部だけを取り出す機能）を使って、特定カテゴリだけを導入できます。</li><li>Sahar Shlichov 氏の offensive-checklist を土台にしたスキルが多く含まれ、ライセンスは MIT です。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリを ~/.claude/skills/claude-red にクローンします。</li><li>Claude との会話で対象の攻撃手法に触れると、対応するスキルが自動で読み込まれます。</li><li>特定カテゴリだけを使いたい場合は、sparse-checkout かインストールスクリプトの --category で選びます。</li></ol>
+<pre><code>git clone https://github.com/SnailSploit/claude-red ~/.claude/skills/claude-red
+git clone --filter=blob:none --sparse https://github.com/SnailSploit/claude-red
+cd claude-red &amp;&amp; git sparse-checkout set Skills/web Skills/active-directory
+cat Skills/web/offensive-sqli/SKILL.md | claude --system-file -
+./install.sh
+./install.sh --target ~/.claude/skills
+./install.sh --category web</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-24.html#d-snailsploit__claude-red">2026-10-24</a>
+<span class="src github">GitHub Trending 6位</span><span>★ +209</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

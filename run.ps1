@@ -32,5 +32,19 @@ if ($pending.repos.Count -gt 0) {
 
 & python build.py 2>&1 | ForEach-Object { "$_" } | Out-File $log -Encoding utf8 -Append
 if ($LASTEXITCODE -ne 0) { Log "build failed ($LASTEXITCODE)"; exit 1 }
+
+# 生成物を GitHub に push して Pages を更新する（.github/workflows/pages.yml が site/ を公開する）。
+Log 'publish start'
+& git -C $root add -A 2>&1 | Out-File $log -Encoding utf8 -Append
+& git -C $root diff --cached --quiet 2>&1 | Out-Null
+if ($LASTEXITCODE -eq 0) {
+    Log 'no changes to publish'
+} else {
+    & git -C $root commit -m "daily: $date" 2>&1 | Out-File $log -Encoding utf8 -Append
+    Log "commit exit code $LASTEXITCODE"
+    & git -C $root push origin main 2>&1 | Out-File $log -Encoding utf8 -Append
+    Log "push exit code $LASTEXITCODE"
+}
+
 Log 'done'
 exit 0

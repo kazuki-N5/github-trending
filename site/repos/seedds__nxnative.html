@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>seedds/nxnative | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎮</div><div>
+<h1>seedds/nxnative</h1>
+<div class="meta"><span>C</span>
+<span>初掲載 2026-10-23（Trendshift 2位）</span>
+<a class="gh" href="https://github.com/seedds/nxnative" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="seedds__nxnative" data-repo="seedds/nxnative" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">手持ちのSwitchゲームをエミュレータなしでiPhoneやiPadでネイティブ実行する変換ツール</p>
+<h3>何ができるか</h3><ul><li>自分の Nintendo Switch ゲームの NSP ファイル（ゲームのパッケージ）と prod.keys から、スクリプト1本で iPhone や iPad 用の IPA（iOS アプリのパッケージ）を作れます。</li><li>作った IPA は AltStore や Sideloadly などのサイドロード（App Store を通さずにアプリを入れること）ツールで端末にインストールします。</li><li>スーパーマリオブラザーズ ワンダー、ゼルダの伝説 ブレス オブ ザ ワイルドなど多数のタイトルが iPhone で動作確認済みで、一部は更新データ適用時に60fpsで動きます。</li><li>起動前の設定画面でフレームレート、描画解像度、据え置き・携帯モード、言語を選べ、タッチ操作の2D・3Dレイアウトやゲームコントローラーにも対応します。</li><li>Apple の開発者アカウントがあれば、IPA の代わりに Xcode プロジェクトを作って実機へ直接インストールすることもできます。</li></ul>
+<h3>なぜ注目されているか</h3><p>エミュレータ（別の機械の動作をソフトウェアで再現するもの）ではなく、ゲーム自身のコードを Apple のチップで直接動かし、グラフィックスを Metal で作り直すという方式を採っています。リポジトリページでは公開から短期間で2千を超えるスターを集めています。<span class="guess">推測</span> 人気タイトルが iPhone で、しかも元の Switch より高いフレームレートで動く例があることが注目の理由と考えられます。</p>
+<h3>どんな人に役立つか</h3><p>Switch のゲームを自分で所有していて、iPhone 15 Pro 以降や M1 以降の iPad で遊びたい人に向いています。ゲーム機のバイナリ変換やグラフィックス API の変換の仕組みを学びたい人にも参考になります。</p>
+<h3>技術的なポイント</h3><ul><li>NSO（Switch の実行ファイル形式）を書き換えるリライター、Switch の OS である Horizon の代わりを務めるホスト、NVN（Switch のグラフィックス API）を Metal 上で動かす層で構成されています。</li><li>Ryujinx のシェーダー変換器でゲームの Maxwell 向けシェーダーを SPIR-V に変換し、SPIRV-Cross で Metal Shading Language に変換します。</li><li>ゲームのテクスチャは BC 圧縮形式のため、それを読める A17 Pro 以降の iPhone か M1 以降の iPad と、iOS/iPadOS 26 以降が必要です。</li><li>d2r-mobile が開発したネイティブ実行の手法をもとにしており、NSP の読み込みには LibHac を使っています。</li><li>リポジトリにはゲームのデータは一切含まれず、ライセンスは MIT です。</li></ul>
+<h3>試し方</h3>
+<ol><li>Xcode と Homebrew の入った Mac にリポジトリを取得し、必要なツールをインストールします。</li><li>1本のゲームの NSP（本体、あれば更新データと DLC）を1つのフォルダに入れます。</li><li>build_ipa_from_nsp.py にフォルダと prod.keys を指定して IPA を作ります（初回は30〜60分かかります）。</li><li>できた IPA をサイドロードツールでインストールし、可能なら Increased Memory Limit の権限を付けて署名します。</li></ol>
+<pre><code>git clone https://github.com/seedds/nxnative.git &amp;&amp; cd nxnative
+brew install xcodegen zstd spirv-cross glslang
+brew install --cask dotnet-sdk
+python3 -m pip install lz4 capstone fonttools &quot;backports.zstd; python_version &lt; &#x27;3.14&#x27;&quot;
+python3 scripts/build_ipa_from_nsp.py ~/Games/MarioWonder -k ~/keys/prod.keys</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#d-seedds__nxnative">2026-10-23</a>
+<span class="src trendshift">Trendshift 2位</span></li><li><a href="../days/2026-10-24.html#d-seedds__nxnative">2026-10-24</a>
+<span class="src trendshift">Trendshift 5位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

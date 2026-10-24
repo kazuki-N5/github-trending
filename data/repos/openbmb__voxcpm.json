@@ -1,0 +1,40 @@
+{
+  "repo": "OpenBMB/VoxCPM",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "30言語対応で声のデザインや声のクローンもできる、オープンな音声合成モデル",
+  "features": [
+    "30言語のテキストを、言語の指定なしでそのまま音声に変換できます（日本語も含まれます）。",
+    "性別、年齢、口調、感情、話す速さなどを自然な言葉で書くだけで、参照音声なしに新しい声を作れます（Voice Design）。",
+    "短い参照音声から声をまね（ボイスクローン）、感情や速さなどのスタイルを指示で調整できます。",
+    "参照音声とその書き起こしを両方渡すと、声の細かな特徴まで再現して続きを話させられます（Ultimate Cloning）。",
+    "48kHz の高音質で出力でき、ストリーミング（音声を少しずつ逐次生成すること）にも対応します。",
+    "5〜10分程度の音声で、全体のファインチューニングや LoRA による軽量なファインチューニングができます。"
+  ],
+  "why": "テキストを離散的なトークンに区切らずに連続的な音声表現を直接生成する方式で、自然で表現力のある音声を目指しています。最新の VoxCPM2 は200万時間を超える多言語音声で学習した20億パラメータのモデルで、重みとコードが Apache-2.0 で商用利用可能な形で公開されています。README によると以前の版も GitHub Trending や Hugging Face Trending で1位になっており、リポジトリページでは4万を超えるスターを集めています。",
+  "whoFor": "ナレーションや多言語の読み上げ音声を作りたい人、音声合成を自分のアプリやサービスに組み込みたい開発者に向いています。音声生成モデルの仕組みを研究したい学生にも参考になります。なお README は、なりすましや詐欺、偽情報への利用を厳しく禁じています。",
+  "tech": [
+    "拡散モデル（ノイズから少しずつデータを生成する手法）と自己回帰（前の出力をもとに次を順に生成する手法）を組み合わせたエンドツーエンドの構成です。",
+    "言語モデルの土台に MiniCPM-4 を使い、AudioVAE V2 が16kHz の参照音声を受けて48kHz の音声を直接出力します。",
+    "RTX 4090 での RTF（生成時間を音声の長さで割った値、小さいほど速い）は標準で約0.3、Nano-vLLM や vLLM-Omni を使うと約0.13です。",
+    "vLLM-Omni では OpenAI 互換の /v1/audio/speech API として提供でき、llama.cpp-omni を使えば Python なしで CPU や Metal、CUDA 上で動かせます。",
+    "動作には Python 3.10 以上 3.13 未満、PyTorch 2.5.0 以上、CUDA 12.0 以上が必要です。"
+  ],
+  "tryIt": {
+    "steps": [
+      "pip で voxcpm パッケージをインストールします。",
+      "Python から VoxCPM.from_pretrained でモデルを読み込み、generate にテキストを渡して音声ファイルを保存します。",
+      "コマンドラインでは voxcpm design で声をデザインし、voxcpm clone で参照音声から声をクローンします。",
+      "Web デモは python app.py --port 8808 で起動し、ブラウザで http://localhost:8808 を開きます。"
+    ],
+    "commands": [
+      "pip install voxcpm",
+      "voxcpm design --text \"VoxCPM2 brings studio-quality multilingual speech synthesis.\" --output out.wav",
+      "voxcpm clone --text \"This is a voice cloning demo.\" --reference-audio path/to/voice.wav --output out.wav",
+      "voxcpm --help",
+      "python app.py --port 8808",
+      "pip install nano-vllm-voxcpm",
+      "vllm serve openbmb/VoxCPM2 --omni --port 8000"
+    ]
+  }
+}

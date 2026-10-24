@@ -20,7 +20,7 @@
 <div class="rhead"><div class="emoji big">📦</div><div>
 <h1>syhunt/php2shell-protection</h1>
 <div class="meta">
-<span>初掲載 2026-10-23（はてなブックマーク 2位）</span>
+<span>初掲載 2026-10-23（はてなブックマーク 3位）</span>
 <a class="gh" href="https://github.com/syhunt/php2shell-protection" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="syhunt__php2shell-protection" data-repo="syhunt/php2shell-protection" aria-pressed="false">♡ いいね</button></div></div></div>
 <div class="content"><p class="lead">php2shell（CVE-2026-109618/619）に対するApacheのmultipart POSTブロックルールと機能テストキット</p>
 <h3>何ができるか</h3><ul><li>Apacheの.htaccessでmultipart/form-data POSTリクエストをブロックするRewriteルールを提供しており、攻撃経路の一つを遮断できる。</li><li>アップロード不要サイト向け（8MiB制限＋全multipartブロック）とアップロード必要サイト向け（32MiB制限）の2種類の設定例を用意している。</li><li>テストキットでApacheルールが正しくmultipart POSTを拒否しつつ通常のPOSTを許可しているかを検証できる。</li><li>PHPのsession.upload_progress.enabledを無効化するINI設定例やmemory_limit緩和策など、CVEごとの推奨PHPコンフィグを文書化している。</li><li>最新の研究動向（パッチ後の追加PoC発見や他の研究者報告）を随時README内で更新しており、セキュリティ情報のハブとしても機能している。</li></ul>
@@ -32,7 +32,7 @@
 <pre><code># .htaccessの設置（Apacheドキュメントルート）
 # session.upload_progress.enabled = 0 をphp.iniに追記してApacheを再起動</code></pre></div>
 <h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#h-syhunt__php2shell-protection">2026-10-23 はてブ</a>
-<span class="src hatena">はてなブックマーク 2位</span><span>6 users</span></li></ul>
+<span class="src hatena">はてなブックマーク 3位</span><span>6 users</span></li></ul>
 </article>
 </main></div>
 <script src="../assets/likes.js"></script>

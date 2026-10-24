@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wesbos/3d-model-anything | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🖼️</div><div>
+<h1>wesbos/3d-model-anything</h1>
+<div class="meta"><span>Swift</span>
+<span>初掲載 2026-10-24（Trendshift 12位）</span>
+<a class="gh" href="https://github.com/wesbos/3d-model-anything" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="wesbos__3d-model-anything" data-repo="wesbos/3d-model-anything" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">iPhoneのLiDARで部屋を記録し、AIで編集可能なThree.js 3Dシーンに再構成</p>
+<h3>何ができるか</h3><ul><li>iPhone アプリで部屋をスキャンし、LiDAR（レーザーで距離を測るセンサー）による形状と写真を記録できます。</li><li>scan-to-threejs というエージェント用スキルで、AIコーディングエージェントに寸法の確認、モデリング、元写真との見比べをさせながら部屋を再構成できます。</li><li>Three.js（ブラウザで3Dを描くJavaScriptライブラリ）製のビューアで、ドールハウス、歩行、俯瞰、ワイヤーフレーム、ノーリングの各視点で部屋を見て回れます。</li><li>作者のオフィスを再構成したデモが含まれ、Web 上でも閲覧できます。</li></ul>
+<h3>なぜ注目されているか</h3><p>作者は Web 開発の講座で知られる Wes Bos で、紹介動画も公開されています。<span class="guess">推測</span> スマートフォンのスキャン結果を AI エージェントに渡して、編集できる3Dシーンに作り直すという新しいワークフローが関心を集めていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>自分の部屋やインテリアをブラウザで見て回れる3Dモデルにしたい人や、Three.js と AI エージェントを組み合わせた3D制作を試したい人に向いています。スキャンには LiDAR 搭載の iPhone か iPad が必要です。</p>
+<h3>技術的なポイント</h3><ul><li>iPhone アプリは Swift で書かれ、Xcode でビルドします。</li><li>これはワンクリックで完璧なモデルを作る変換器ではなく、エージェントが寸法を測り、モデル化し、元写真と同じカメラ位置のレンダリングを比べて直す反復型の再構成です。</li><li>補助スクリプトは Python 3 を使い、写真比較には Pillow、任意の深度再構成には NumPy と Open3D を使います。</li><li>ビューアは Node.js 22.12 以上で動き、開発サーバーは npm run dev で起動します。</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js 22.12 以上を用意し、依存パッケージを入れてビューアを起動します。</li><li>ブラウザで http://localhost:5188 を開き、オフィスのデモを見て回ります。</li><li>自分の部屋を試す場合は、iPhone アプリでスキャンして書き出し、data/captures-in/ 以下に展開します。</li><li>ローカルのスキルに対応したエージェントでこのリポジトリを開き、scan-to-threejs を使って部屋を再構成するよう依頼します。</li></ol>
+<pre><code>npm ci
+npm run dev
+npm run build
+npm run preview</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-24.html#d-wesbos__3d-model-anything">2026-10-24</a>
+<span class="src trendshift">Trendshift 12位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

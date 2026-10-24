@@ -1,0 +1,211 @@
+{
+  "date": "2026-10-24",
+  "collectedAt": "2026-10-24T08:00:13+09:00",
+  "entries": [
+    {
+      "repo": "cloudflare/security-audit-skill",
+      "source": "github",
+      "sourceRank": 1,
+      "desc": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "starsTotal": "42,041",
+      "stars": "+2,706"
+    },
+    {
+      "repo": "php/php-src",
+      "source": "github",
+      "sourceRank": 2,
+      "desc": "The PHP Interpreter",
+      "language": "C",
+      "starsTotal": "41,547",
+      "stars": "+722"
+    },
+    {
+      "repo": "anthropics/knowledge-work-plugins",
+      "source": "github",
+      "sourceRank": 3,
+      "desc": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "language": "Python",
+      "starsTotal": "32,184",
+      "stars": "+643"
+    },
+    {
+      "repo": "NVIDIA/OpenShell",
+      "source": "github",
+      "sourceRank": 4,
+      "desc": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "language": "Rust",
+      "starsTotal": "18,746",
+      "stars": "+1,240"
+    },
+    {
+      "repo": "Renhuai123/ziwei-doushu",
+      "source": "github",
+      "sourceRank": 5,
+      "desc": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "language": "TypeScript",
+      "starsTotal": "6,836",
+      "stars": "+547"
+    },
+    {
+      "repo": "SnailSploit/Claude-Red",
+      "source": "github",
+      "sourceRank": 6,
+      "desc": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+      "language": "Python",
+      "starsTotal": "8,435",
+      "stars": "+209"
+    },
+    {
+      "repo": "OpenBMB/VoxCPM",
+      "source": "github",
+      "sourceRank": 7,
+      "desc": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+      "language": "Python",
+      "starsTotal": "40,230",
+      "stars": "+144"
+    },
+    {
+      "repo": "nodejs/node",
+      "source": "github",
+      "sourceRank": 8,
+      "desc": "Node.js JavaScript runtime ✨🐢🚀✨",
+      "language": "JavaScript",
+      "starsTotal": "122,837",
+      "stars": "+93"
+    },
+    {
+      "repo": "peach-mitao/peach",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Peach 蜜桃：单用户、本地优先的个人媒体系统 · Single-user, local-first personal media system",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Gathin23/cleanyourtv",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "Your TV, minus the ads. Debloat any Android TV over ADB and give it a clean, tvOS-inspired launcher. Built in an afternoon with Claude Code.",
+      "language": "Java",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "EthanArbuckle/fairplay-decrypt",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "Offline FairPlay App Store IPA decryption with independent key derivation",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "seedds/nxnative",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "morluto/rea",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "luongnv89/claude-howto",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "basketikun/infinite-canvas",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "面向 AI 创作的开源无限画布工作台，集成 AI 生图、参考图编辑、视频生成、Agent 智能助手、画布编排、对话创作、提示词库与素材管理等能力，支持可视化创作流程与多 Agent 协同工作。兼容 OpenAI 接口生态，支持 chatgpt2api、grok2api、flow2api、newapi 等渠道接入。",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "deepseek-ai/deepseek-harness",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "DeepSeek Harness: Everything is a Plugin.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "oosexgang/hackios-xnu-kernel",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "wesbos/3d-model-anything",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
+      "language": "Swift",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pengchujin/aerial-tv",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管。A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
+      "language": "Kotlin",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Nutlope/hallmark",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "stockedge/manga-generator",
+        "source": "hatena",
+        "desc": "原作から脚本・画像生成・組版・PDF出力まで進める、Codex向け漫画制作ツール",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 1
+      },
+      {
+        "repo": "colinhacks/reylo",
+        "source": "hatena",
+        "desc": "Import .sql files into TypeScript with full type inference and zero codegen.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 2
+      }
+    ]
+  }
+}

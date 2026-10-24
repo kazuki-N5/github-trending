@@ -1,0 +1,36 @@
+{
+  "repo": "colinhacks/reylo",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "SQLファイルを型付きでTypeScriptからimportできる、コード生成不要のツール",
+  "features": [
+    ".sql ファイルを TypeScript から直接 import し、.run() に DB ドライバーのクライアントを渡してクエリを実行できます。",
+    "クエリの結果や引数の型を SQL そのものから推論するため、行の型を手書きしたりスキーマファイルを同期したりする必要がありません。",
+    "列名の誤字、間違ったパラメータ、削除されたテーブルなどを、tsc やエディタ上で型エラーとして検出できます。",
+    "主キー一致なら Row | null、集計なら Row、returning の無い更新なら void のように、返る行数に応じて戻り値の型が変わります。",
+    "Postgres、MySQL、SQLite に対応し、pg、postgres.js、mysql2、better-sqlite3、Bun.sql、Cloudflare D1 など手持ちのドライバーを使えます。"
+  ],
+  "why": "作者は TypeScript のスキーマ検証ライブラリ Zod の作者として知られる Colin McDonnell（colinhacks）です。TypeScript 7.1 ベータで導入された content mappers（外部ファイルの種類に静的な型を与える仕組み）を使い、コード生成なしで SQL に型を付ける点が新しいです。推測: README が「エージェント時代に最適」とうたうように、型情報が1か所にまとまり AI エージェントが古い型を残しにくい点も関心を集めていると考えられます。",
+  "whoFor": "ORM を使わずに生の SQL を書きたいが、TypeScript の型安全性も欲しい開発者に向いています。AI コーディングエージェントに DB まわりのコードを書かせる場合にも、型チェックで見落としを拾えます。",
+  "tech": [
+    "TypeScript 7.1（ベータ）の content mappers を使い、型チェッカーが直接 Reylo に問い合わせるため、生成ファイルやファイル監視が不要です。",
+    "型を付けるとき、開発用データベースにクエリを実行せずに prepare（事前解析）させ、各列とパラメータの型を読み取ります。",
+    "スキーマや join、where 条件から NULL になりうるかを推論し、enum やチェック制約の値はユニオン型にします。",
+    "実行時は node --import reylo/register で読み込むほか、Bun、Vite、Next.js、esbuild、webpack などのプラグインも用意されています。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node 24 以上と、動いている開発用データベース（Postgres、MySQL 8.0.22 以上、または SQLite ファイル）を用意します。",
+      "Reylo、使うデータベース用のエンジン、TypeScript 7.1 ベータをインストールします。",
+      "tsconfig.json の contentMappers に Reylo を追加し、.env に DATABASE_URL を書きます。",
+      "tsc --noEmit --runExternalCode で型チェックし、node の --import reylo/register 付きでコードを実行します。"
+    ],
+    "commands": [
+      "npm install reylo",
+      "npm install -D @reylosql/postgres",
+      "npm install -D typescript@beta",
+      "tsc --noEmit --runExternalCode",
+      "node --env-file=.env --import reylo/register main.ts"
+    ]
+  }
+}

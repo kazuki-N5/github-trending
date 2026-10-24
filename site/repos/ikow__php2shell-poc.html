@@ -17,10 +17,10 @@
 </div></header>
 <div class="area"><main class="wrap narrow">
 <article class="card repo-page">
-<div class="rhead"><div class="emoji big">🔎</div><div>
+<div class="rhead"><div class="emoji big">🛡️</div><div>
 <h1>ikow/php2shell-poc</h1>
 <div class="meta"><span>Python</span>
-<span>初掲載 2026-10-23（Trendshift 17位）</span>
+<span>初掲載 2026-10-23（はてなブックマーク 2位）</span>
 <a class="gh" href="https://github.com/ikow/php2shell-poc" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="ikow__php2shell-poc" data-repo="ikow/php2shell-poc" aria-pressed="false">♡ いいね</button></div></div></div>
 <div class="content"><p class="lead">PHPのセッションアップロード進捗機能を悪用した認証不要RCE脆弱性（CVE-2026-109618/109619）の検証・検出ツールキット</p>
 <h3>何ができるか</h3><ul><li>5種類のRCEエクスプロイトチェーン（Chain A〜E）を収録し、セッションインジェクションからOOMメモリ破壊まで多様な攻撃経路を網羅している。</li><li>Suricata/Snort・Sigma・ModSecurity・OpenResty Luaなど複数形式の検出ルールを提供し、IDS/WAF/SIEMへ即座に展開できる。</li><li>Docker Composeで構築できる検証用ラボ環境（PHP-FPM + nginx + Apache mod_php）が付属している。</li><li>Chain A・B・Cのエクスプロイトスクリプト（Python/PHP）が公開されており、コマンド一つでRCEを再現できる。</li><li>INI設定（session.upload_progress.enabled = Off）や緊急パッチバージョンなど、具体的な緩和策も詳述している。</li></ul>
@@ -33,8 +33,8 @@
 cd lab &amp;&amp; docker compose up -d
 python3 ../poc/verify_session_injection.py --target http://127.0.0.1:18080
 python3 ../exploit/chain_a_session_lfi.py --host 127.0.0.1 --port 18080 --command &#x27;id&#x27;</code></pre></div>
-<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#d-ikow__php2shell-poc">2026-10-23</a>
-<span class="src trendshift">Trendshift 17位</span></li></ul>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#h-ikow__php2shell-poc">2026-10-23 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>15 users</span></li></ul>
 </article>
 </main></div>
 <script src="../assets/likes.js"></script>

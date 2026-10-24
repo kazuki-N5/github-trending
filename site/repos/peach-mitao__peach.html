@@ -20,17 +20,18 @@
 <div class="rhead"><div class="emoji big">🎬</div><div>
 <h1>peach-mitao/peach</h1>
 <div class="meta"><span>Python</span>
-<span>初掲載 2026-10-23（Trendshift 3位）</span>
+<span>初掲載 2026-10-23（Trendshift 1位）</span>
 <a class="gh" href="https://github.com/peach-mitao/peach" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="peach-mitao__peach" data-repo="peach-mitao/peach" aria-pressed="false">♡ いいね</button></div></div></div>
-<div class="content"><p class="lead">シングルユーザー向けローカルファーストの成人向け動画ライブラリ管理システム</p>
-<h3>何ができるか</h3><ul><li>ローカルHDDやクラウドストレージ（115・PikPak・OneDriveなど）をまとめて一つのコレクションとして管理できる。</li><li>全画面カバー壁から作品を選んでその場で再生でき、同じ番号の異なるバージョンも切り替えられる。</li><li>プレイヤーでSubtitleCatの中国語字幕を番号で検索してロードできる（APIキー不要）。</li><li>FANBOXやPatreon・Kemonoなど複数サイトのクリエイター更新をまとめてフォローできる。</li><li>番号でリソースを検索・磁力リンクをペーストして115やPikPakへクラウドダウンロードし、自動整理入庫できる。</li><li>鑑賞履歴・ブックマーク・フォロー関係をもとにユーザーの好みを分析するTasteシステムを備える。</li></ul>
-<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> ローカルファーストな設計でコレクションをすべて自分のPC上で管理でき、プライバシーが保たれる点が注目を集めている。Windows・macOS・Docker(VPS/NAS)向けにインストーラーが整備され、一般ユーザーでも導入しやすい。成人向けコンテンツ管理に特化したオープンソースツールは少なく、分野での希少性もスターを集める要因と考えられる。</p>
-<h3>どんな人に役立つか</h3><p>自分の成人向けメディアコレクションをローカルでプライベートに管理したい成人ユーザー向け。VPSやNASへのDocker展開にも対応しているため、自宅サーバー構築に興味があるエンジニアにも使いやすい。</p>
-<h3>技術的なポイント</h3><ul><li>Python製バックエンドとWebブラウザUIで動作し、ローカルまたはLAN内からアクセスする。</li><li>NFOファイル・ポスター画像を読み込み、複数ソースからメタデータ（タイトル・女優・カバー）を自動補完する。</li><li>観看記録・ブックマーク・ブラウザ閲覧履歴を組み合わせた多次元のTaste分析エンジンを内蔵する。</li><li>クラウドダウンロードはAPI連携（115・PikPak）で行い、ダウンロード後に自動整理される。</li><li>エラー診断はSentryへのオプション送信で行い、データベースや視聴履歴は送信しない。</li></ul>
+<div class="content"><p class="lead">ローカルとクラウドの動画を1か所で管理・視聴できる個人用メディアシステム</p>
+<h3>何ができるか</h3><ul><li>ローカルのハードディスクと、マウントした115、PikPak、OneDrive などのクラウドストレージを1つのコレクションとしてまとめられます。</li><li>全画面のカバー画像の壁から作品を選び、その場で再生できます。</li><li>既存の NFO（作品情報を書いたメタデータファイル）やポスター画像を読み込み、足りない情報を複数のソースから補えます。</li><li>FANBOX、Patreon、Kemono など複数サイトのクリエイターの更新をまとめて追えます。</li><li>番号の検索や磁力リンクから115や PikPak へのクラウドダウンロードを依頼し、完了後に自動で整理・登録できます。</li><li>視聴記録やブラウザ履歴、ブックマークなどから好みを分析します。</li></ul>
+<h3>なぜ注目されているか</h3><p>README によると、18歳以上の利用者が自分の成人向けコンテンツのコレクションを管理するためのツールです。リポジトリページでは公開から短期間で8千を超えるスターを集めています。<span class="guess">推測</span> ローカルファースト（データを自分のPCに保存する設計）で複数のストレージやサイトをまとめて扱える点が支持されていると考えられます。</p>
+<h3>どんな人に役立つか</h3><p>18歳以上で、ローカルやクラウドに散らばった自分の動画コレクションを1か所で整理・視聴したい人向けです。同じ LAN 内のスマートフォンからも閲覧できます。</p>
+<h3>技術的なポイント</h3><ul><li>Python で書かれ、ソースから動かすには Git、uv（Python のパッケージ管理ツール）、Python 3.14 以上が必要です。</li><li>アプリはローカルで動き、ブラウザから閲覧・再生する構成で、データは本機の peach-data フォルダに保存されます。</li><li>クラウドストレージは CloudDrive2 などでローカルディレクトリとしてマウントして扱います。</li><li>Windows 用インストーラー、macOS 用の .app と DMG、VPS や NAS 向けの Docker で配布されます。</li><li>スキャンや更新取得は進捗を保存し、再起動後に未完了分から再開します。</li></ul>
 <h3>試し方</h3>
-<ol><li>Releasesページから完整安装包（Windows x64 setup.exe）をダウンロードしてインストールする。</li><li>ブラウザで初回設定ページを開き、メディアディレクトリとアクセス範囲を選択する。</li><li>スキャンを開始して、ブラウザでコレクションを閲覧・再生する。</li></ol></div>
+<ol><li>Windows では Releases から完全版インストーラーを入手してインストールします（管理者権限は不要です）。</li><li>ブラウザで初回設定ページが開いたら、メディアのディレクトリとアクセス範囲を選びます。</li><li>スキャンを開始し、ブラウザで閲覧・再生します。</li></ol></div>
 <h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#d-peach-mitao__peach">2026-10-23</a>
-<span class="src trendshift">Trendshift 3位</span></li></ul>
+<span class="src trendshift">Trendshift 1位</span></li><li><a href="../days/2026-10-24.html#d-peach-mitao__peach">2026-10-24</a>
+<span class="src trendshift">Trendshift 1位</span></li></ul>
 </article>
 </main></div>
 <script src="../assets/likes.js"></script>

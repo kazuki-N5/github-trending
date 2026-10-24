@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>php/php-src | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>php/php-src</h1>
+<div class="meta"><span>C</span>
+<span>初掲載 2026-10-23（GitHub Trending 1位）</span>
+<a class="gh" href="https://github.com/php/php-src" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="php__php-src" data-repo="php/php-src" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Web開発で広く使われるスクリプト言語PHPの公式処理系のソースコード</p>
+<h3>何ができるか</h3><ul><li>PHP の言語処理系（インタプリタ：ソースコードを読み込んでその場で実行するプログラム）本体をソースからビルドできます。</li><li>make test で実行できる大規模なテストスイートが同梱されており、並列実行や特定ディレクトリだけのテストもできます。</li><li>make install で、自分でビルドした PHP をシステムにインストールできます。</li><li>多数の拡張機能（PHP に機能を追加するモジュール）が同梱され、追加の拡張は PIE（PHP Installer for Extensions）で導入できます。</li><li>Windows 向けには windows.php.net でビルド済みバイナリが配布されており、展開するだけで使えます。</li></ul>
+<h3>なぜ注目されているか</h3><p>PHP はブログから世界的な大規模サイトまでを支える汎用スクリプト言語であり、このリポジトリはその公式ソースコードです。リポジトリページでは4万を超えるスターを集めています。<span class="guess">推測</span> 新バージョンの開発や RFC（新機能の提案と投票の仕組み）による変更が継続的に進んでいるため、注目が集まりやすいと考えられます。</p>
+<h3>どんな人に役立つか</h3><p>PHP の内部実装（言語処理系の仕組み）を学びたい人や、PHP 本体へのバグ修正・機能追加に貢献したい人に役立ちます。開発用に --enable-debug 付きでビルドして挙動を調べる使い方もできます。</p>
+<h3>技術的なポイント</h3><ul><li>処理系は C 言語で書かれており、ライセンスは Modified BSD License（BSD-3-Clause）です。</li><li>ビルドには autoconf、bison（構文解析器の生成ツール）、re2c（字句解析器の生成ツール）が必要で、標準構成では libxml2 と libsqlite3 も使います。</li><li>./buildconf で configure スクリプトを生成し、./configure と make で組み立てる、Autotools 方式のビルド手順を採っています。</li><li>新機能の追加には RFC と開発者による承認が必要で、バグ修正は GitHub の issue 番号をコミットメッセージで参照する決まりになっています。</li></ul>
+<h3>試し方</h3>
+<ol><li>Ubuntu などで、ビルドに必要なパッケージをインストールします。</li><li>./buildconf で configure スクリプトを生成します。</li><li>開発用なら ./configure --enable-debug で構成し、make -j4 でビルドします。</li><li>make test でテストスイートを実行し、問題なければ make install でインストールします。</li></ol>
+<pre><code>sudo apt install -y pkg-config build-essential autoconf bison re2c libxml2-dev libsqlite3-dev
+./buildconf
+./configure --enable-debug
+make -j4
+make TEST_PHP_ARGS=-j4 test
+make install</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#d-php__php-src">2026-10-23</a>
+<span class="src github">GitHub Trending 1位</span><span>★ +287</span></li><li><a href="../days/2026-10-24.html#d-php__php-src">2026-10-24</a>
+<span class="src github">GitHub Trending 2位</span><span>★ +722</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

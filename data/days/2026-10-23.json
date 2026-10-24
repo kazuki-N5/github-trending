@@ -1,184 +1,184 @@
 {
   "date": "2026-10-23",
-  "collectedAt": "2026-10-23T07:10:33+09:00",
+  "collectedAt": "2026-10-23T11:46:09+09:00",
   "entries": [
     {
-      "repo": "cloudflare/security-audit-skill",
-      "source": "trendshift",
+      "repo": "php/php-src",
+      "source": "github",
       "sourceRank": 1,
-      "desc": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-      "language": "JavaScript",
-      "starsTotal": "",
-      "stars": ""
+      "desc": "The PHP Interpreter",
+      "language": "C",
+      "starsTotal": "41,219",
+      "stars": "+287"
     },
     {
-      "repo": "Gathin23/cleanyourtv",
-      "source": "trendshift",
+      "repo": "anthropics/knowledge-work-plugins",
+      "source": "github",
       "sourceRank": 2,
-      "desc": "Your TV, minus the ads. Debloat any Android TV over ADB and give it a clean, tvOS-inspired launcher. Built in an afternoon with Claude Code.",
-      "language": "Java",
-      "starsTotal": "",
-      "stars": ""
+      "desc": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "language": "Python",
+      "starsTotal": "31,672",
+      "stars": "+303"
+    },
+    {
+      "repo": "DietrichGebert/ponytail",
+      "source": "github",
+      "sourceRank": 3,
+      "desc": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "language": "JavaScript",
+      "starsTotal": "173,638",
+      "stars": "+1,948"
+    },
+    {
+      "repo": "cloudflare/security-audit-skill",
+      "source": "github",
+      "sourceRank": 4,
+      "desc": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "starsTotal": "39,731",
+      "stars": "+2,979"
+    },
+    {
+      "repo": "Graphify-Labs/graphify",
+      "source": "github",
+      "sourceRank": 5,
+      "desc": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "language": "Python",
+      "starsTotal": "133,061",
+      "stars": "+1,408"
+    },
+    {
+      "repo": "supabase/supabase",
+      "source": "github",
+      "sourceRank": 6,
+      "desc": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+      "language": "TypeScript",
+      "starsTotal": "113,524",
+      "stars": "+693"
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "source": "github",
+      "sourceRank": 7,
+      "desc": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+      "language": "Python",
+      "starsTotal": "103,810",
+      "stars": "+101"
+    },
+    {
+      "repo": "luongnv89/claude-howto",
+      "source": "github",
+      "sourceRank": 8,
+      "desc": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+      "language": "Python",
+      "starsTotal": "43,321",
+      "stars": "+177"
+    },
+    {
+      "repo": "Meloong-Git/PCL",
+      "source": "github",
+      "sourceRank": 9,
+      "desc": "Minecraft 启动器 Plain Craft Launcher（PCL）。",
+      "language": "Visual Basic .NET",
+      "starsTotal": "8,733",
+      "stars": "+119"
     },
     {
       "repo": "peach-mitao/peach",
       "source": "trendshift",
-      "sourceRank": 3,
+      "sourceRank": 1,
       "desc": "Peach 蜜桃：单用户、本地优先的个人媒体系统 · Single-user, local-first personal media system",
       "language": "Python",
       "starsTotal": "",
       "stars": ""
     },
     {
-      "repo": "ifixai-ai/iFixAi",
+      "repo": "seedds/nxnative",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Revivedx/SavageWindRecomp",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "Work-in-progress static recompilation of The Legend of Zelda: Breath of the Wild (Switch, v1.8.2) for Windows and Linux. Bring your own dump: no game files, keys or dumping tools included.",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Gathin23/cleanyourtv",
       "source": "trendshift",
       "sourceRank": 4,
-      "desc": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
-      "language": "Python",
+      "desc": "Your TV, minus the ads. Debloat any Android TV over ADB and give it a clean, tvOS-inspired launcher. Built in an afternoon with Claude Code.",
+      "language": "Java",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Centralforhose/AI-FPS-BOOSTER-MAIN",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "AI FPS Booster is a Windows optimization tool designed to improve FPS, enhance gameplay stability, reduce unnecessary background processes, and make your system more responsive — helping you get the most out of your hardware without intentionally sacrificing visual quality.",
+      "language": "",
       "starsTotal": "",
       "stars": ""
     },
     {
       "repo": "morluto/rea",
       "source": "trendshift",
-      "sourceRank": 5,
+      "sourceRank": 6,
       "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "language": "TypeScript",
       "starsTotal": "",
       "stars": ""
     },
     {
+      "repo": "EthanArbuckle/fairplay-decrypt",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "Offline FairPlay App Store IPA decryption with independent key derivation",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "oosexgang/hackios-xnu-kernel",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
       "repo": "pengchujin/aerial-tv",
       "source": "trendshift",
-      "sourceRank": 6,
+      "sourceRank": 11,
       "desc": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管。A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
       "language": "Kotlin",
       "starsTotal": "",
       "stars": ""
     },
     {
-      "repo": "Renhuai123/ziwei-doushu",
-      "source": "trendshift",
-      "sourceRank": 7,
-      "desc": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-      "language": "TypeScript",
-      "starsTotal": "",
-      "stars": ""
-    },
-    {
-      "repo": "Graphify-Labs/graphify",
-      "source": "trendshift",
-      "sourceRank": 8,
-      "desc": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
-      "language": "Python",
-      "starsTotal": "",
-      "stars": ""
-    },
-    {
-      "repo": "Ebony-Vinyl/dsh-our-free-model",
-      "source": "trendshift",
-      "sourceRank": 9,
-      "desc": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
-      "language": "JavaScript",
-      "starsTotal": "",
-      "stars": ""
-    },
-    {
-      "repo": "stablyai/orca",
-      "source": "trendshift",
-      "sourceRank": 10,
-      "desc": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
-      "language": "TypeScript",
-      "starsTotal": "",
-      "stars": ""
-    },
-    {
-      "repo": "mmparko/dsh-purge",
-      "source": "trendshift",
-      "sourceRank": 11,
-      "desc": "DeepSeek Harness 破甲 (mirror of YuJunZhiXue/dsh-purge) — 上游即将删库，此为本仓库全量镜像：含全部分支/73 个 tag/完整提交历史。原作者署名与二开要求见 README 署名章节。",
-      "language": "JavaScript",
-      "starsTotal": "",
-      "stars": ""
-    },
-    {
-      "repo": "deepseek-ai/DeepInfer",
+      "repo": "liguobao/ds-harness-remote",
       "source": "trendshift",
       "sourceRank": 12,
-      "desc": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
-      "language": "Python",
-      "starsTotal": "",
-      "stars": ""
-    },
-    {
-      "repo": "jbiaojerry/ebook-treasure-chest",
-      "source": "trendshift",
-      "sourceRank": 13,
-      "desc": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。",
-      "language": "Python",
-      "starsTotal": "",
-      "stars": ""
-    },
-    {
-      "repo": "DietrichGebert/ponytail",
-      "source": "trendshift",
-      "sourceRank": 14,
-      "desc": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "language": "JavaScript",
-      "starsTotal": "",
-      "stars": ""
-    },
-    {
-      "repo": "DeanChensj/jiangshan-map",
-      "source": "trendshift",
-      "sourceRank": 15,
-      "desc": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 164 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
-      "language": "HTML",
-      "starsTotal": "",
-      "stars": ""
-    },
-    {
-      "repo": "deepseek-ai/deepseek-harness",
-      "source": "trendshift",
-      "sourceRank": 16,
-      "desc": "DeepSeek Harness: Everything is a Plugin.",
+      "desc": "一个基于 DeepSeek Harness 插件机制构建的多端远程访问方案，通过安全、低延迟、端到端加密的 P2P 优先网络，支持从 PC、Android 和 Web 随时访问并操作远程 Harness 和 CodeX。 (A multi-device remote access solution built on the DeepSeek Harness plugin system, enabling PC, Android, and Web clients to securely access and operate remote Harness and CodeX over a low-latency, end-to-end encrypted, P2P-first network.)",
       "language": "TypeScript",
       "starsTotal": "",
       "stars": ""
     },
     {
-      "repo": "ikow/php2shell-poc",
+      "repo": "NVIDIA/OpenShell",
       "source": "trendshift",
-      "sourceRank": 17,
-      "desc": "CVE-2026-109618/109619 PHP session.upload_progress Exploit Research — POC & Analysis",
-      "language": "Python",
-      "starsTotal": "",
-      "stars": ""
-    },
-    {
-      "repo": "mcncarl/jianying-headless",
-      "source": "trendshift",
-      "sourceRank": 18,
-      "desc": "Private source preview: native Jianying drafts, isolated editing/export, and standalone Agent Skill.",
-      "language": "Python",
-      "starsTotal": "",
-      "stars": ""
-    },
-    {
-      "repo": "luongnv89/claude-howto",
-      "source": "trendshift",
-      "sourceRank": 19,
-      "desc": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
-      "language": "Python",
-      "starsTotal": "",
-      "stars": ""
-    },
-    {
-      "repo": "nikopueringer/CorridorKey2.0",
-      "source": "trendshift",
-      "sourceRank": 20,
-      "desc": "Corridor Key 2.0 for all your green and blue screen needs",
-      "language": "Python",
+      "sourceRank": 13,
+      "desc": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "language": "Rust",
       "starsTotal": "",
       "stars": ""
     }
@@ -197,6 +197,16 @@
         "sourceRank": 1
       },
       {
+        "repo": "ikow/php2shell-poc",
+        "source": "hatena",
+        "desc": "CVE-2026-109618/109619 — 5 RCE chains + detection rules (Suricata, Sigma, ModSecurity). PHP session.upload_progress pre-auth exploit research.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 15,
+        "sourceRank": 2
+      },
+      {
         "repo": "syhunt/php2shell-protection",
         "source": "hatena",
         "desc": "Emergency Apache mitigation and testing toolkit for php2shell (CVE-2026-109618 / CVE-2026-109619), featuring multipart POST blocking, request-size limits, and additional hardening measures.",
@@ -204,7 +214,17 @@
         "starsTotal": "",
         "stars": "",
         "users": 6,
-        "sourceRank": 2
+        "sourceRank": 3
+      },
+      {
+        "repo": "openai/openai-cli",
+        "source": "hatena",
+        "desc": "Official CLI for the OpenAI API",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 5,
+        "sourceRank": 4
       },
       {
         "repo": "sngazm/sate",
@@ -214,7 +234,7 @@
         "starsTotal": "",
         "stars": "",
         "users": 5,
-        "sourceRank": 3
+        "sourceRank": 5
       },
       {
         "repo": "enactive-systems/CVE-2026-109618-poc",
@@ -224,17 +244,7 @@
         "starsTotal": "",
         "stars": "",
         "users": 4,
-        "sourceRank": 4
-      },
-      {
-        "repo": "openai/openai-cli",
-        "source": "hatena",
-        "desc": "Official CLI for the OpenAI API",
-        "language": "",
-        "starsTotal": "",
-        "stars": "",
-        "users": 3,
-        "sourceRank": 5
+        "sourceRank": 6
       },
       {
         "repo": "jiwoochris/artex-global",
@@ -244,7 +254,7 @@
         "starsTotal": "",
         "stars": "",
         "users": 3,
-        "sourceRank": 6
+        "sourceRank": 7
       },
       {
         "repo": "kividbio/kividb",
@@ -254,7 +264,7 @@
         "starsTotal": "",
         "stars": "",
         "users": 3,
-        "sourceRank": 7
+        "sourceRank": 8
       },
       {
         "repo": "obsidianmd/pele",
@@ -264,7 +274,7 @@
         "starsTotal": "",
         "stars": "",
         "users": 3,
-        "sourceRank": 8
+        "sourceRank": 9
       }
     ]
   }

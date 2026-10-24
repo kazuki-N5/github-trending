@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EthanArbuckle/fairplay-decrypt | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📱</div><div>
+<h1>EthanArbuckle/fairplay-decrypt</h1>
+<div class="meta"><span>C</span>
+<span>初掲載 2026-10-23（Trendshift 7位）</span>
+<a class="gh" href="https://github.com/EthanArbuckle/fairplay-decrypt" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="ethanarbuckle__fairplay-decrypt" data-repo="EthanArbuckle/fairplay-decrypt" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">FairPlay暗号化されたiOSアプリ（IPA）をオフラインで復号するツール</p>
+<h3>何ができるか</h3><ul><li>App Store の DRM（コピー防止技術）である FairPlay で暗号化された IPA（iOS アプリのパッケージ）を復号できます。</li><li>復号には IPA を所有するアカウントの16バイトの認証情報を使い、対応する脱獄済み端末から credential.bin として取り出す仕組みが用意されています。</li><li>IPA 内の SINF と SUPF というレコードからページ鍵を導出し、暗号化された arm64 のページを復号します。</li><li>復号後に cryptid（暗号化済みかを示すフラグ）をクリアした IPA を出力します。</li><li>復号処理は macOS と Linux で動作します。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 実機上でアプリを動かして復号する従来の方法と違い、鍵を独自に導出してオフラインで復号できる点が、iOS アプリの解析やセキュリティ研究に関わる人の関心を集めていると考えられます。リポジトリページでは公開から数日で1千を超えるスターを集めています。</p>
+<h3>どんな人に役立つか</h3><p>iOS アプリのリバースエンジニアリング（バイナリを解析して仕組みを調べること）やセキュリティ研究をする人に向いています。復号には対象アプリを所有するアカウントの認証情報が必要です。</p>
+<h3>技術的なポイント</h3><ul><li>バージョン3と5の SUPF、448バイトと440バイトの SINF priv レコード、暗号化された arm64 の Mach-O（Apple のOSで使われる実行ファイル形式）スライスに対応します。</li><li>Python 3.9 以上のスクリプト decrypt.py と、C で書かれ make でビルドする復号部で構成されています。</li><li>macOS では make で認証情報取得用のバンドルもビルドされ、Xcode と ldid（コード署名ツール）が必要です。</li></ul>
+<h3>試し方</h3>
+<ol><li>Python 3.9 以上と C コンパイラを用意し、仮想環境を作って依存パッケージを入れます。</li><li>make で復号ツールをビルドします。</li><li>対応する脱獄済み端末から credential.bin を取得します。</li><li>decrypt.py に暗号化された IPA、出力先、認証情報ファイルを指定して実行します（出力先は存在しないパスにします）。</li></ol>
+<pre><code>python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements.txt
+make
+python decrypt.py /path/to/encrypted.ipa /path/to/decrypted.ipa --credential /path/to/credential.bin</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-23.html#d-ethanarbuckle__fairplay-decrypt">2026-10-23</a>
+<span class="src trendshift">Trendshift 7位</span></li><li><a href="../days/2026-10-24.html#d-ethanarbuckle__fairplay-decrypt">2026-10-24</a>
+<span class="src trendshift">Trendshift 4位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
