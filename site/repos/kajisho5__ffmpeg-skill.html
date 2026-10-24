@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kajisho5/ffmpeg-skill | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎬</div><div>
+<h1>kajisho5/ffmpeg-skill</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-25（Trendshift 20位）</span>
+<a class="gh" href="https://github.com/kajisho5/ffmpeg-skill" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="kajisho5__ffmpeg-skill" data-repo="kajisho5/ffmpeg-skill" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIコーディングエージェント向けのローカル動画編集スキル（FFmpegツール42種内蔵）</p>
+<h3>何ができるか</h3><ul><li>動画のカット・無音区間削除・デュレーションやアスペクト比への自動調整ができる</li><li>字幕（キャプション）の追加や音量の正規化（ラウドネス）を処理できる</li><li>TikTok・Reels・Shorts・YouTube・LinkedIn・ポッドキャスト向けの納品フォーマットへ書き出せる</li><li>HDRからSDRへの変換など映像品質の変換ができる</li><li>JSONファイルからプロジェクト全体をレンダリングするオーケストレーション機能を持つ</li><li>MCPサーバーとして動作し、Claude Code・Cursor・Codexなど複数のAIエージェントから呼び出せる</li></ul>
+<h3>なぜ注目されているか</h3><p>クラウドや外部APIを一切使わずローカルだけで動作するため、コストやプライバシーの面で優れている。各ツールの入出力・要件を機械読み取り可能な「コントラクト（仕様書）」形式で提供しており、AIエージェントが自律的にツールを選択・実行しやすい設計になっている。<span class="guess">推測</span> AIエージェントによる動画制作の自動化需要が高まる中、エージェントが直接操作できる堅牢なローカル動画編集エンジンとして注目されている。</p>
+<h3>どんな人に役立つか</h3><p>Claude Code・Cursor・Codexなどのコーディングエージェントを使って動画編集ワークフローを自動化したい開発者に役立つ。APIキー不要でオフライン動作するため、プライバシーを重視するユーザーやCI/CDパイプラインに動画処理を組み込みたいエンジニアにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>Python標準ライブラリのみを使用しており、外部Pythonパッケージへの依存がない</li><li>argparse（Pythonの引数解析ライブラリ）の定義からMCPツールのスキーマを自動生成している</li><li>`contract --json`コマンドで各ツールの入出力・要件を機械読み取り可能なJSON形式で提供する</li><li>MCP（Model Context Protocol：AIエージェントがツールを呼び出すための標準プロトコル）サーバーとして動作する</li><li>Linux・macOS・Windows上でCIテストを実施し、FFmpeg 5.1〜9.x の複数バージョンに対応している</li></ul>
+<h3>試し方</h3>
+<ol><li>FFmpegをシステムにインストールする（macOSはHomebrewを使用、WindowsやLinuxは公式バイナリや各パッケージマネージャー経由）</li><li>`npx ffmpeg-skill`を実行して、使用するエージェント向けにスキルをインストールする</li><li>`npx ffmpeg-skill doctor`を実行して、FFmpegとツールの依存関係が正しく揃っているか確認する</li></ol>
+<pre><code>npx ffmpeg-skill
+npx ffmpeg-skill doctor</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-25.html#d-kajisho5__ffmpeg-skill">2026-10-25</a>
+<span class="src trendshift">Trendshift 20位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

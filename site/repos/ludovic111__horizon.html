@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ludovic111/horizon | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>ludovic111/horizon</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-10-25（Trendshift 10位）</span>
+<a class="gh" href="https://github.com/ludovic111/horizon" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="ludovic111__horizon" data-repo="ludovic111/horizon" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Minecraft Java版をRustでゼロから再実装した完全互換クライアント</p>
+<h3>何ができるか</h3><ul><li>バニラ（公式版）と同じワールド生成・Mob・レッドストーン・コマンドをシングルプレイヤーで再現する</li><li>281件のディファレンシャルハーネス（バニラとの自動差分比較テスト）で公式との挙動一致を継続検証している</li><li>WebAssembly（ブラウザ等でも動く軽量なバイナリ形式）ベースの独自Modシステムを持つ</li><li>Modrinth・CurseForgeのModpackからデータパック・アセットModをインポートできる</li><li>horizon-ctlというCLIツールおよびMCPサーバー経由でAIエージェントやスクリプトからゲームを制御できる</li><li>専用ランチャーでサーバーを管理でき、Javaなしでhorizon-serverをVPS上で動かせる</li></ul>
+<h3>なぜ注目されているか</h3><p>RustによるMinecraftの完全再実装という技術的挑戦と、281件の差分テストによる検証可能な互換性保証が注目を集めている。<span class="guess">推測</span> ネイティブコードによるパフォーマンス向上や、公式ランチャー・Javaへの依存を排除した独立性の高さも評価されている可能性がある。</p>
+<h3>どんな人に役立つか</h3><p>Minecraftを軽量・高速な環境でプレイしたいユーザーや、ゲームエンジン実装をRustで学びたいエンジニアに向いている。AIエージェントでMinecraftを自動操作したい研究者・開発者にも、MCP（Model Context Protocol）サーバー機能を通じて有用なプラットフォームとなる。</p>
+<h3>技術的なポイント</h3><ul><li>Rust 1.90以上でゲーム全機能をゼロから実装し、ガベージコレクションなしの高速・省メモリな実行を実現している</li><li>Vulkan（GPU向けの低レベルグラフィクスAPI）を採用したレンダリングエンジンを持つ</li><li>WebAssemblyをMod実行サンドボックスとして使用し、Javaコードなしの安全な拡張を可能にしている</li><li>research-lock.jsonにハッシュ値を管理し、ビルド時にユーザー自身のMinecraftインストールからリソースを生成することで著作物を同梱しない設計になっている</li><li>horizon-ctl mcp コマンドでMCPサーバー（AIエージェントとの連携規格）として機能し、外部からゲーム状態を操作できる</li></ul>
+<h3>試し方</h3>
+<ol><li>Minecraft 26.3を正規購入し、少なくとも1回起動しておく</li><li>Java 25 JDKをインストールする（初回セットアップの一度限り必要）</li><li>Vulkan対応GPUを用意する（LinuxまたはWindowsを使う場合）</li><li>Horizonランチャーを公式サイトからダウンロードしてインストールする（Linux x86-64・macOS Apple Silicon・Windows x64に対応）</li><li>ランチャーからHorizonを起動する</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-25.html#d-ludovic111__horizon">2026-10-25</a>
+<span class="src trendshift">Trendshift 10位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

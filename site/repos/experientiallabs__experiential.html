@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>experientiallabs/experiential | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📚</div><div>
+<h1>experientiallabs/experiential</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-25（Trendshift 3位）</span>
+<a class="gh" href="https://github.com/experientiallabs/experiential" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="experientiallabs__experiential" data-repo="experientiallabs/experiential" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">BYOK・セルフホスト・1000以上のモデルに対応するコスト最適化AIゲートウェイ</p>
+<h3>何ができるか</h3><ul><li>OpenAI互換のAPIエンドポイントを提供し、BYOK（自分のAPIキーを持ち込む方式）・セルフホスト・クラウドモデルを単一のAPIで統一的に利用できる</li><li>トラフィック（実際のリクエスト使用データ）を学習してコストを削減し、より良いモデルを自動的に推奨する</li><li>ユーザーやエージェントごとにモデルの利用制限・用途・予算上限を設定できるアクセス制御機能を持つ</li><li>本番トラフィックからOpenTelemetryトレースを収集し、独自のルーターやカスタムモデルをファインチューニングして構築できる</li><li>`exp capture` コマンドでClaude CodeやCodexなどのAIコーディングエージェントのリクエストをキャプチャできる（macOS限定・実験的機能）</li></ul>
+<h3>なぜ注目されているか</h3><p>AIエージェントや複数のLLMを組み合わせる開発が増える中、プロバイダーをまたいだ統一管理とコスト最適化のニーズが高まっている。<span class="guess">推測</span> 自社データを使ってカスタムモデルを育て所有できる点が、ベンダーロックイン（特定サービスへの依存）を避けたい組織から注目を集めていると考えられる。<span class="guess">推測</span> オープンソースで自己ホストできるゲートウェイとして、プライバシーやセキュリティを重視する用途での採用も期待されていると思われる。</p>
+<h3>どんな人に役立つか</h3><p>複数のLLMプロバイダーを本番環境で運用し、コスト管理やアクセス制御が必要な開発者・チームに役立つ。自社のトラフィックデータから特化モデルを作りたいMLエンジニアや、Claude CodeやCodexなどのAIコーディングツールを組織全体で統制したい管理者にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>OpenTelemetry（分散トレーシングの標準規格）でリクエストのトレースを収集し、モデル選択の最適化シミュレーションに活用する</li><li>OpenAI互換フォーマットとAnthropic Messages形式の両APIをサポートし、既存のツールやSDKをそのまま接続できる</li><li>Tinker を使用してオープンソースモデルのファインチューニング（特定用途向けの追加学習）が可能</li><li>`uv` でパッケージ管理し、Ruff でフォーマット・リント、`ty` で型チェック、pytest でテストを行うモダンなPython開発スタックを採用</li></ul>
+<h3>試し方</h3>
+<ol><li>pip で experiential をインストールする</li><li>`exp` コマンドを実行し、セットアップウィザードでプロバイダー・モデル・予算などを設定してワンタイムキーを取得する</li><li>取得したキーを使って `http://127.0.0.1:8000/v1/chat/completions` にリクエストを送信する</li><li>Python からは `exp.load_router()` でフィット済みルーターをOpenAIクライアントとして読み込む</li></ol>
+<pre><code>pip install experiential
+exp</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-25.html#d-experientiallabs__experiential">2026-10-25</a>
+<span class="src trendshift">Trendshift 3位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>humanlayer/humanlayer | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>humanlayer/humanlayer</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-10-25（Trendshift 12位）</span>
+<a class="gh" href="https://github.com/humanlayer/humanlayer" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="humanlayer__humanlayer" data-repo="humanlayer/humanlayer" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIコーディングエージェントをチーム全体で一元管理するプラットフォーム</p>
+<h3>何ができるか</h3><ul><li>Claude Code・Codex・OpenCode・Piなど複数のAIコーディングエージェントを自分のマシン上で実行できる</li><li>タスク・セッション・プラン・レビューをデスクトップアプリ・WebアプリおよびホストのデーモンでリアルタイムSync（同期）できる</li><li>Claude Code・OpenCode・Piのセッションをミラーリングして取り込むプラグインが用意されている</li><li>Research-Plan-Implementスキルや組み込みスキルでエージェントに高度な作業フローを持たせられる</li><li>ソースからビルドした場合は外部へのデータ送信がなく、セルフホスティングも可能</li></ul>
+<h3>なぜ注目されているか</h3><p>AIコーディングエージェントが急速に普及し、複数のエージェントをチームで同時に使う場面が増えている。HumanLayerはそれらを一か所から管理・監視できる仕組みを提供し、複雑なコードベースでの難題解決を組織的に進められる点が注目されている。<span class="guess">推測</span> チームによるAIエージェント管理のニーズが高まる中、オープンソースかつセルフホスト可能な選択肢として関心を集めているとみられる。</p>
+<h3>どんな人に役立つか</h3><p>Claude CodeやCodexなどのAIコーディングエージェントを複数台のマシンやチームメンバーにわたって運用したい開発チームに最適。特に大規模・複雑なコードベースを扱う組織や、エージェントの作業を承認フロー付きで管理したいチームに向いている。</p>
+<h3>技術的なポイント</h3><ul><li>TurborepoモノレポとBun（高速なJavaScriptランタイム兼パッケージマネージャ）で構成されている</li><li>バックエンドAPIはoRPC（型安全なRPCフレームワーク）とHono（軽量Webフレームワーク）で実装されている</li><li>ElectricによるPostgresリアルタイム同期と専用の認証プロキシでデータをアプリ間に届ける</li><li>macOSデスクトップアプリはElectronとTauriの二種類のシェルで提供される（TauriはRustが必要）</li><li>Effect RPC（関数型プログラミングライブラリEffectを用いたRPC）でアプリ間のコントラクトを型安全に定義している</li></ul>
+<h3>試し方</h3>
+<ol><li>BunとDockerをインストールする</li><li>リポジトリをクローンし、依存関係をインストールする</li><li>.env.exampleをコピーして.envを作成し、必要な環境変数を設定する</li><li>型チェックとテストを実行して環境が正常か確認する</li><li>ローカルフルスタックの起動方法は `bun --bun run devstack help` で確認する</li></ol>
+<pre><code>bun install
+cp .env.example .env
+bun --bun run typecheck
+bun run test
+bun --bun run devstack help</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-25.html#d-humanlayer__humanlayer">2026-10-25</a>
+<span class="src trendshift">Trendshift 12位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

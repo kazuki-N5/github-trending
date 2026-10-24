@@ -1,0 +1,41 @@
+{
+  "repo": "GortexAI/franco",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Claude CodeサブスクをAIエンジンに使うアウトバウンド営業自動化エージェント",
+  "features": [
+    "ターゲット企業を自動で探し、Webサイトを読んで担当者への個別メール文章を生成して送信する",
+    "テンプレートモードでは、事前に用意した承認済みコピーをそのままメール送信できる",
+    "キャンペーンはデフォルトでプレビュー状態で始まり、人間が承認するまで一切送信されない",
+    "返信・オプトアウト・バウンスを自動検知して処理し、抑制リストで全キャンペーンを横断管理する",
+    "ローカルダッシュボード（localhost:5555）でキュー・シグナル・会話・送信箱を一元管理できる",
+    "CAN-SPAMやGDPR/PECRなどのコンプライアンス要件に沿った送信ガイダンスが組み込まれている"
+  ],
+  "why": "Claude CodeまたはCodexの既存サブスクリプションをAIエンジンとしてそのまま使うため、別途モデルのAPI課金が発生しない点が独自の強みである。推測:アウトバウンド営業の自動化に対する需要が高まる中、安全制御（プレビュー必須・キルスイッチ・事前ゲートチェック）が充実しており実用的に見える設計が注目を集めていると思われる。",
+  "whoFor": "スタートアップや中小企業の営業担当者で、大量のアウトバウンドメールの調査・作成・管理を手動でこなすのが難しい人向け。すでにClaude CodeやOpenAI Codexのサブスクリプションを持っており、追加コストなしで営業活動を自動化したいエンジニアや創業者に特に役立つ。",
+  "tech": [
+    "Claude Code（プロ/マックスプラン）またはOpenAI Codex（バージョン固定: 0.159.3）をAI推論エンジンとして使用し、独自のAPIキー契約が不要",
+    "Chromiumを内蔵ブラウザとして使い、LinkedInなどJavaScriptが多いサイトからも企業・連絡先情報を収集する",
+    "Gmailをはじめとするメールプロバイダに直接認証してユーザー自身のメールボックスから送信するため、到達率が高い",
+    "設定はYAML形式のfranco.local.yamlと.envファイルで管理し、プロバイダ・モデル・送信ルールを細かく制御できる",
+    "Dockerイメージでも提供されており、ghcr.io/gortexai/franco からコンテナを取得してすぐに起動できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "Python 3.11以上（推奨3.13）とClaude Codeのサブスクリプション（ProまたはMaxプラン）を用意する",
+      "pipxでfrancoをインストールし、franco initコマンドで作業フォルダを初期化する",
+      ".envファイルを編集してメールプロバイダのキーを設定し、Gmailを使う場合はfranco gmail authでブラウザ認証を行う",
+      "franco dashboardでWebUIを起動（http://localhost:5555）し、franco runでエージェントのメインループを起動する"
+    ],
+    "commands": [
+      "pipx install franco",
+      "franco init ~/franco && cd ~/franco",
+      "franco install",
+      "$EDITOR .env",
+      "franco gmail auth",
+      "franco gmail test",
+      "franco dashboard",
+      "franco run"
+    ]
+  }
+}

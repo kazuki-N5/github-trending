@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xerj-org/xerj | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔍</div><div>
+<h1>xerj-org/xerj</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-10-25（Trendshift 14位）</span>
+<a class="gh" href="https://github.com/xerj-org/xerj" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="xerj-org__xerj" data-repo="xerj-org/xerj" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェント向けローカルファーストの全文・ベクトル検索エンジンとMCPサーバー</p>
+<h3>何ができるか</h3><ul><li>コード・ドキュメント・ログ・JSONL/CSV・PDFをシングルバイナリで索引化し、BM25全文検索（キーワードマッチング方式）・ベクトル検索・ハイブリッド検索を提供する</li><li>grepなしでコード定義へジャンプできるシンボル検索（go-to-definition）機能を持つ</li><li>Elasticsearch互換API（同じリクエスト形式）を備え、既存ツールからそのまま利用できる</li><li>MCPサーバーとして動作し、Claude Code・Cursor等のAIエージェントのRAG（検索拡張生成）やエージェントメモリとして機能する</li><li>Corpus Hubを通じて数百の参照用メモリコーパス（事前構築済みの知識集合）を配信できる</li><li>autoindexコマンド一発でローカルプロジェクトを自動的に索引化できる</li></ul>
+<h3>なぜ注目されているか</h3><p>AIコーディングエージェントが巨大なコードベースや外部ドキュメントを効率よく参照するには、高速な検索インフラが必要になっている。<span class="guess">推測</span> このプロジェクトはgrepやElasticsearchに頼らずローカルで完結する選択肢として注目を集めていると考えられる。公開ベンチマーク（プロジェクト自己計測）では、類似OSSの解法を検索して参照するワークフローでgrepと比べて出力トークン数を2.7倍削減し、ES準拠テストでは1454件中1444件をパスしたと報告されている。</p>
+<h3>どんな人に役立つか</h3><p>AIコーディングエージェント（Claude Code・Cursorなど）を使って大規模コードベースや社内ドキュメントを検索したい開発者に向いている。ローカル環境でElasticsearch互換の検索APIが必要なチームや、エージェントのRAGパイプライン（外部知識を検索して回答精度を高める仕組み）を自前で構築したいMLエンジニアにも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>Rustで実装されたシングルバイナリで、インストールが容易かつ実行時依存が少ない</li><li>BM25（キーワードの出現頻度と逆文書頻度を組み合わせたランキングアルゴリズム）・ベクトル類似度・ハイブリッドの3種類の検索モードを持つ</li><li>Elasticsearch互換REST APIを実装しており、既存のElasticクライアントやクエリをそのまま流用できる</li><li>MCPプロトコル（Model Context Protocol）のstdioサーバーとして動作し、対応AIクライアントからツールとして呼び出せる</li><li>CPUネイティブ最適化ビルド（RUSTFLAGS=&quot;-C target-cpu=native&quot;）でスループットを向上できる</li></ul>
+<h3>試し方</h3>
+<ol><li>インストールスクリプトを実行してバイナリを取得する（Linux/macOS）</li><li>ローカルノードを--insecureモード（TLS・認証なし）でバックグラウンド起動する</li><li>xerj initで初期化する</li><li>autoindexコマンドで索引化したいプロジェクトフォルダを指定する</li><li>xerj searchコマンドで自然言語クエリを試す</li><li>xerj defコマンドでシンボル名を指定してgo-to-definitionを試す</li></ol>
+<pre><code>curl -fsSL https://xerj.org/get | sh
+xerj --insecure --data-dir ~/xerj-data &amp;
+xerj init
+xerj autoindex ~/my-project
+xerj search &quot;how do we rotate the WAL segment&quot;
+xerj def &quot;euler_to_rotationmatrix&quot;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-25.html#d-xerj-org__xerj">2026-10-25</a>
+<span class="src trendshift">Trendshift 14位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

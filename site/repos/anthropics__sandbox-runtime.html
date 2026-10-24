@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>anthropics/sandbox-runtime | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>anthropics/sandbox-runtime</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-10-25（Trendshift 16位）</span>
+<a class="gh" href="https://github.com/anthropics/sandbox-runtime" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="anthropics__sandbox-runtime" data-repo="anthropics/sandbox-runtime" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">コンテナ不要でOSレベルのファイル・ネットワーク制限を課す軽量サンドボックスツール</p>
+<h3>何ができるか</h3><ul><li>CLIツール srt &lt;コマンド&gt; で任意のプロセスをサンドボックス化して実行できる</li><li>ネットワーク通信はデフォルト全拒否で、許可ドメインリストに登録したドメインだけ通過させる</li><li>ファイルシステムの書き込みはデフォルト拒否、読み取りはデフォルト許可で、パス単位で細かく制御できる</li><li>Node.js ライブラリとしてアプリに組み込み、プログラムからサンドボックスを起動できる</li><li>TLS 終端（通信の復号・再暗号化）機能でリクエストの内容をフィルタリングし、認証情報を動的に注入できる</li><li>環境変数やファイルに含まれる認証情報を拒否またはマスクするモードを持つ</li></ul>
+<h3>なぜ注目されているか</h3><p>Claude Code 向けに開発されたツールで、AIエージェントやローカルMCPサーバー、bashコマンドなどのサンドボックス化を想定した研究プレビュー版として公開されている。コンテナを使わずmacOS・Linux・Windows それぞれのOS固有の仕組みを使うため、オーバーヘッドが小さく既存の開発フローに組み込みやすい。<span class="guess">推測</span> AIエージェントがローカル環境でコードを実行する用途が増える中、軽量かつ柔軟な隔離手段として注目されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>AIエージェントや任意コードを実行するツールを開発しており、コンテナを使わずにプロセスを安全に隔離したいエンジニアに役立つ。Claude Code のようなコーディング支援ツールや、ローカルで動くMCPサーバーの開発・運用にも使いどころがある。</p>
+<h3>技術的なポイント</h3><ul><li>macOS では sandbox-exec（Appleの Seatbelt 機構）向けのプロファイルを動的生成してプロセスのシステムコールを制限する</li><li>Linux では bubblewrap（非特権サンドボックスツール）でネットワーク名前空間を削除し、seccomp フィルタで Unix ソケットやネストされたユーザー名前空間を禁止する</li><li>ネットワーク制限は localhost プロキシ（macOS）または Unix ソケット経由のプロキシ（Linux）を介して行い、許可ドメインのみ通過させる</li><li>Windows（アルファ版）では専用ローカルアカウントへの実行委譲、Windows Filtering Platform によるエグレスフェンス、NTFS ACE による書き込み制限を組み合わせる</li></ul>
+<h3>試し方</h3>
+<ol><li>npm でグローバルインストールする</li><li>srt &lt;実行したいコマンド&gt; の形でコマンドをサンドボックス化して実行する</li><li>~/.srt-settings.json に allowedDomains などを記述して許可ルールを設定する</li></ol>
+<pre><code>npm install -g @anthropic-ai/sandbox-runtime
+srt &lt;command&gt;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-25.html#d-anthropics__sandbox-runtime">2026-10-25</a>
+<span class="src trendshift">Trendshift 16位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

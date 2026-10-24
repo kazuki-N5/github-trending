@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yeqv111/mccarbon | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>yeqv111/mccarbon</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-25（Trendshift 11位）</span>
+<a class="gh" href="https://github.com/yeqv111/mccarbon" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="yeqv111__mccarbon" data-repo="yeqv111/mccarbon" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">マクドナルドMCPで1年分の食事の炭素排出量を計算・削減シミュレーションするツール</p>
+<h3>何ができるか</h3><ul><li>食品・包装・配達の3層モデルで炭素排出量（CO2換算）を推定する</li><li>マクドナルド公式MCP（AIエージェント連携プロトコル）を通じて注文履歴・栄養データをリアルタイム取得できる</li><li>セット商品を個別アイテムに自動分解して正確な計算を行う</li><li>牛肉→鶏肉への変更やデリバリー→持ち帰りへの切り替えなど、削減効果をシミュレーションできる</li><li>炭素グレード（A〜E）・月別トレンド・木換算距離換算を含む単一ファイルのHTMLレポートを生成する</li><li>MCPトークンなしで試せるオフラインデモモードも用意されている</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> MCP（Model Context Protocol）というAIエージェント連携の新技術を実際のサービスAPIに適用した珍しい実装例として注目されている。個人の食生活を具体的な炭素数値で可視化するアイデアの新鮮さもあり、コンテスト応募作品として創造的なMCP活用事例として評価されやすい。外部ライブラリゼロで動く実用ツールという点も関心を集めやすい。</p>
+<h3>どんな人に役立つか</h3><p>マクドナルドをよく利用し自分の食事の環境負荷を把握・改善したい人に役立つ。MCPの具体的な実装例やPythonによる炭素排出量計算の仕組みを学びたいCS学生にも参考になる教材的な価値がある。</p>
+<h3>技術的なポイント</h3><ul><li>MCP（Model Context Protocol）を介してマクドナルド公式APIから注文履歴・栄養情報・アカウント情報を取得する</li><li>炭素排出係数は英国の実測データ（食品）・中国のライフサイクルデータベース（包装）・国内配達研究（配達）を参照する</li><li>Pythonの標準ライブラリのみで実装されており外部パッケージが不要（Python 3.9以上）</li><li>セット商品を個別アイテムに分解するコンボ展開ロジックを内部に持つ</li><li>生成されるHTMLレポートは単一ファイルで外部依存なし・会員カード番号はデフォルトでマスキングされる</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンする</li><li>オフラインデモを実行して2026年のサンプルデータで動作を確認する</li><li>実際の注文履歴を使う場合はマクドナルドMCPトークンを取得して--liveオプションで実行する</li></ol>
+<pre><code>PYTHONPATH=src python3 -m mccarbon demo</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-25.html#d-yeqv111__mccarbon">2026-10-25</a>
+<span class="src trendshift">Trendshift 11位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

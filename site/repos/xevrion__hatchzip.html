@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xevrion/hatchzip | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>xevrion/hatchzip</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-10-25（Trendshift 7位）</span>
+<a class="gh" href="https://github.com/xevrion/hatchzip" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="xevrion__hatchzip" data-repo="xevrion/hatchzip" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">アーカイブを縮小しながら展開し、出力ファイル分のディスク容量だけで巨大ZIPや7zを解凍できるツール</p>
+<h3>何ができるか</h3><ul><li>展開しながらアーカイブを縮小するため、出力ファイル分の空き容量だけで解凍できる（アーカイブと展開後ファイルの合計は不要）</li><li>展開前に空き容量が足りるかチェックし、途中でディスクが満杯になる事態を防ぐ</li><li>途中で停止・クラッシュしても、同じコマンドを再実行するだけで再開できる</li><li>ZIP、7z、tar、tar.gz、RARボリュームセット、分割アーカイブに対応</li><li>ファイルをディスクに書き込んでからアーカイブを削る順序を守り、CRC-32（チェックサム：データ破損検出用の値）で各ファイルを検証する</li></ul>
+<h3>なぜ注目されているか</h3><p>180 GB のダウンロードを200 GBに展開する場合、従来ツール（WinRAR・7-Zip・unzip）では両方合わせて380 GB の空き領域が必要だったが、HatchZip なら約200 GB で済む。<span class="guess">推測</span> ストレージが限られるゲーマーやダウンロードサイズが大きい開発者の間で話題になっていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>大容量ゲームや配布ファイルをダウンロードするユーザーで、ストレージの空き容量が少ない人に特に役立つ。サーバー管理者やCI環境など、ディスク使用量を最小化したい場面でも活用できる。</p>
+<h3>技術的なポイント</h3><ul><li>Rust 製のCLIツールで、Cargo でビルド・インストールできる</li><li>展開と同時にアーカイブの末尾を切り詰めることで、ディスク使用量をリアルタイムに削減する</li><li>進行状況を2つのサイドファイル（.hatchzip と .hatchzip-tail）に保存し、再開可能にしている</li><li>RAR サポートは UnRAR ソースを利用する別ライセンス機能で、`--features rar` フラグでオプトイン（任意有効化）できる</li><li>MIT または Apache-2.0 のデュアルライセンスを採用し、企業・個人どちらも利用しやすい</li></ul>
+<h3>試し方</h3>
+<ol><li>インストールスクリプトまたは Cargo でインストールする</li><li>`hatchzip check archive.zip` で空き容量が足りるか確認する</li><li>`hatchzip extract archive.zip` で展開を開始する（途中停止後も同じコマンドで再開できる）</li></ol>
+<pre><code>curl -fsSL https://raw.githubusercontent.com/xevrion/hatchzip/main/install.sh | sh
+cargo install hatchzip
+brew install xevrion/tap/hatchzip
+winget install Xevrion.HatchZip
+hatchzip check game.zip
+hatchzip extract game.zip
+hatchzip extract game.zip -o D:\Games\Foo
+hatchzip x game.7z.001
+hatchzip list game.7z
+hatchzip test game.7z
+hatchzip restore game.zip</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-25.html#d-xevrion__hatchzip">2026-10-25</a>
+<span class="src trendshift">Trendshift 7位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
