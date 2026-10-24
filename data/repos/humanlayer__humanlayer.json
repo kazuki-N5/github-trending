@@ -1,0 +1,38 @@
+{
+  "repo": "humanlayer/humanlayer",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "AIコーディングエージェントをチーム全体で一元管理するプラットフォーム",
+  "features": [
+    "Claude Code・Codex・OpenCode・Piなど複数のAIコーディングエージェントを自分のマシン上で実行できる",
+    "タスク・セッション・プラン・レビューをデスクトップアプリ・WebアプリおよびホストのデーモンでリアルタイムSync（同期）できる",
+    "Claude Code・OpenCode・Piのセッションをミラーリングして取り込むプラグインが用意されている",
+    "Research-Plan-Implementスキルや組み込みスキルでエージェントに高度な作業フローを持たせられる",
+    "ソースからビルドした場合は外部へのデータ送信がなく、セルフホスティングも可能"
+  ],
+  "why": "AIコーディングエージェントが急速に普及し、複数のエージェントをチームで同時に使う場面が増えている。HumanLayerはそれらを一か所から管理・監視できる仕組みを提供し、複雑なコードベースでの難題解決を組織的に進められる点が注目されている。推測: チームによるAIエージェント管理のニーズが高まる中、オープンソースかつセルフホスト可能な選択肢として関心を集めているとみられる。",
+  "whoFor": "Claude CodeやCodexなどのAIコーディングエージェントを複数台のマシンやチームメンバーにわたって運用したい開発チームに最適。特に大規模・複雑なコードベースを扱う組織や、エージェントの作業を承認フロー付きで管理したいチームに向いている。",
+  "tech": [
+    "TurborepoモノレポとBun（高速なJavaScriptランタイム兼パッケージマネージャ）で構成されている",
+    "バックエンドAPIはoRPC（型安全なRPCフレームワーク）とHono（軽量Webフレームワーク）で実装されている",
+    "ElectricによるPostgresリアルタイム同期と専用の認証プロキシでデータをアプリ間に届ける",
+    "macOSデスクトップアプリはElectronとTauriの二種類のシェルで提供される（TauriはRustが必要）",
+    "Effect RPC（関数型プログラミングライブラリEffectを用いたRPC）でアプリ間のコントラクトを型安全に定義している"
+  ],
+  "tryIt": {
+    "steps": [
+      "BunとDockerをインストールする",
+      "リポジトリをクローンし、依存関係をインストールする",
+      ".env.exampleをコピーして.envを作成し、必要な環境変数を設定する",
+      "型チェックとテストを実行して環境が正常か確認する",
+      "ローカルフルスタックの起動方法は `bun --bun run devstack help` で確認する"
+    ],
+    "commands": [
+      "bun install",
+      "cp .env.example .env",
+      "bun --bun run typecheck",
+      "bun run test",
+      "bun --bun run devstack help"
+    ]
+  }
+}

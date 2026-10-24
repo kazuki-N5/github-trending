@@ -1,0 +1,41 @@
+{
+  "repo": "xerj-org/xerj",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "AIエージェント向けローカルファーストの全文・ベクトル検索エンジンとMCPサーバー",
+  "features": [
+    "コード・ドキュメント・ログ・JSONL/CSV・PDFをシングルバイナリで索引化し、BM25全文検索（キーワードマッチング方式）・ベクトル検索・ハイブリッド検索を提供する",
+    "grepなしでコード定義へジャンプできるシンボル検索（go-to-definition）機能を持つ",
+    "Elasticsearch互換API（同じリクエスト形式）を備え、既存ツールからそのまま利用できる",
+    "MCPサーバーとして動作し、Claude Code・Cursor等のAIエージェントのRAG（検索拡張生成）やエージェントメモリとして機能する",
+    "Corpus Hubを通じて数百の参照用メモリコーパス（事前構築済みの知識集合）を配信できる",
+    "autoindexコマンド一発でローカルプロジェクトを自動的に索引化できる"
+  ],
+  "why": "AIコーディングエージェントが巨大なコードベースや外部ドキュメントを効率よく参照するには、高速な検索インフラが必要になっている。推測: このプロジェクトはgrepやElasticsearchに頼らずローカルで完結する選択肢として注目を集めていると考えられる。公開ベンチマーク（プロジェクト自己計測）では、類似OSSの解法を検索して参照するワークフローでgrepと比べて出力トークン数を2.7倍削減し、ES準拠テストでは1454件中1444件をパスしたと報告されている。",
+  "whoFor": "AIコーディングエージェント（Claude Code・Cursorなど）を使って大規模コードベースや社内ドキュメントを検索したい開発者に向いている。ローカル環境でElasticsearch互換の検索APIが必要なチームや、エージェントのRAGパイプライン（外部知識を検索して回答精度を高める仕組み）を自前で構築したいMLエンジニアにも役立つ。",
+  "tech": [
+    "Rustで実装されたシングルバイナリで、インストールが容易かつ実行時依存が少ない",
+    "BM25（キーワードの出現頻度と逆文書頻度を組み合わせたランキングアルゴリズム）・ベクトル類似度・ハイブリッドの3種類の検索モードを持つ",
+    "Elasticsearch互換REST APIを実装しており、既存のElasticクライアントやクエリをそのまま流用できる",
+    "MCPプロトコル（Model Context Protocol）のstdioサーバーとして動作し、対応AIクライアントからツールとして呼び出せる",
+    "CPUネイティブ最適化ビルド（RUSTFLAGS=\"-C target-cpu=native\"）でスループットを向上できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "インストールスクリプトを実行してバイナリを取得する（Linux/macOS）",
+      "ローカルノードを--insecureモード（TLS・認証なし）でバックグラウンド起動する",
+      "xerj initで初期化する",
+      "autoindexコマンドで索引化したいプロジェクトフォルダを指定する",
+      "xerj searchコマンドで自然言語クエリを試す",
+      "xerj defコマンドでシンボル名を指定してgo-to-definitionを試す"
+    ],
+    "commands": [
+      "curl -fsSL https://xerj.org/get | sh",
+      "xerj --insecure --data-dir ~/xerj-data &",
+      "xerj init",
+      "xerj autoindex ~/my-project",
+      "xerj search \"how do we rotate the WAL segment\"",
+      "xerj def \"euler_to_rotationmatrix\""
+    ]
+  }
+}

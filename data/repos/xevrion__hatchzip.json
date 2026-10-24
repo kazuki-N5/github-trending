@@ -1,0 +1,42 @@
+{
+  "repo": "xevrion/hatchzip",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "アーカイブを縮小しながら展開し、出力ファイル分のディスク容量だけで巨大ZIPや7zを解凍できるツール",
+  "features": [
+    "展開しながらアーカイブを縮小するため、出力ファイル分の空き容量だけで解凍できる（アーカイブと展開後ファイルの合計は不要）",
+    "展開前に空き容量が足りるかチェックし、途中でディスクが満杯になる事態を防ぐ",
+    "途中で停止・クラッシュしても、同じコマンドを再実行するだけで再開できる",
+    "ZIP、7z、tar、tar.gz、RARボリュームセット、分割アーカイブに対応",
+    "ファイルをディスクに書き込んでからアーカイブを削る順序を守り、CRC-32（チェックサム：データ破損検出用の値）で各ファイルを検証する"
+  ],
+  "why": "180 GB のダウンロードを200 GBに展開する場合、従来ツール（WinRAR・7-Zip・unzip）では両方合わせて380 GB の空き領域が必要だったが、HatchZip なら約200 GB で済む。推測: ストレージが限られるゲーマーやダウンロードサイズが大きい開発者の間で話題になっていると考えられる。",
+  "whoFor": "大容量ゲームや配布ファイルをダウンロードするユーザーで、ストレージの空き容量が少ない人に特に役立つ。サーバー管理者やCI環境など、ディスク使用量を最小化したい場面でも活用できる。",
+  "tech": [
+    "Rust 製のCLIツールで、Cargo でビルド・インストールできる",
+    "展開と同時にアーカイブの末尾を切り詰めることで、ディスク使用量をリアルタイムに削減する",
+    "進行状況を2つのサイドファイル（.hatchzip と .hatchzip-tail）に保存し、再開可能にしている",
+    "RAR サポートは UnRAR ソースを利用する別ライセンス機能で、`--features rar` フラグでオプトイン（任意有効化）できる",
+    "MIT または Apache-2.0 のデュアルライセンスを採用し、企業・個人どちらも利用しやすい"
+  ],
+  "tryIt": {
+    "steps": [
+      "インストールスクリプトまたは Cargo でインストールする",
+      "`hatchzip check archive.zip` で空き容量が足りるか確認する",
+      "`hatchzip extract archive.zip` で展開を開始する（途中停止後も同じコマンドで再開できる）"
+    ],
+    "commands": [
+      "curl -fsSL https://raw.githubusercontent.com/xevrion/hatchzip/main/install.sh | sh",
+      "cargo install hatchzip",
+      "brew install xevrion/tap/hatchzip",
+      "winget install Xevrion.HatchZip",
+      "hatchzip check game.zip",
+      "hatchzip extract game.zip",
+      "hatchzip extract game.zip -o D:\\Games\\Foo",
+      "hatchzip x game.7z.001",
+      "hatchzip list game.7z",
+      "hatchzip test game.7z",
+      "hatchzip restore game.zip"
+    ]
+  }
+}

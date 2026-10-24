@@ -1,0 +1,35 @@
+{
+  "repo": "pbakaus/impeccable",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "AIコーディングエージェントのデザイン品質を高める、ガイドライン・コマンド・検出ルールのセット",
+  "features": [
+    "1つのスキルと24のコマンド（craft・critique・audit・polish・animate等）でAIのUI生成を誘導できる",
+    "62のデザインルールを持つ決定論的な検出エンジンがLLMもAPIキーも不要で動作する",
+    "/impeccable init コマンドでプロダクト固有のコンテキストを PRODUCT.md に書き出し、セットアップが完結する",
+    "Cursor・Claude Code・GitHub Copilot・Gemini CLI など多数のAIコーディングツールに対応している",
+    "ライブブラウザ反復モード（live コマンド）により、ローカルプロジェクトのUIをリアルタイムで改善できる"
+  ],
+  "why": "AIが生成するフロントエンドのUIには、Inter（フォント）の多用・色背景上のグレー文字・ネストされたカード・バウンスアニメーションなど典型的な粗さがある。ImpeccableはそれらのアンチパターンをAIエージェントに直接注入することで、エージェントが出力するデザインの品質を底上げする仕組みを提供している。推測: Vibe Coding（AIが主体的にコードを書くスタイル）の普及に伴い、AIが生成するUIのデザイン品質を管理したいニーズが高まっていることが注目を集めている理由と考えられる。",
+  "whoFor": "Claude Code・Cursor などのAIコーディングツールを使ってフロントエンド開発を行うエンジニアやデザイナーに役立つ。デザインの専門知識が少なくても、AIに高品質なUIを生成させたい人に特に向いている。また、チームやプロジェクトに一貫したデザイン基準を持ち込みたい場合にも活用できる。",
+  "tech": [
+    "62のルールを定義した決定論的（確率に依存しない）検出エンジンをCLIとブラウザ拡張の両方から実行できる",
+    "CLIフックをAIツールのハーネス（エージェントの動作環境）に組み込み、UIファイル編集後に自動で検出結果をエージェントにフィードバックする",
+    "Anthropicのfrontend-designスキルをベースに構築されており、Claude Codeネイティブのスキル機構を活用している",
+    "dist/ 配下にツールごとのプロバイダービルドが用意されており、npx・Gitサブモジュール・プラグインなど複数の導入方法をサポートする"
+  ],
+  "tryIt": {
+    "steps": [
+      "npx impeccable install を実行してインストールする",
+      "対象プロジェクトのディレクトリで /impeccable init を実行し、プロダクトコンテキストをセットアップする",
+      "npx impeccable detect <ファイルパスまたはURL> でデザインルール違反を検出する",
+      "npx impeccable update で最新のルールセットに更新する"
+    ],
+    "commands": [
+      "npx impeccable install",
+      "npx impeccable update",
+      "npx impeccable detect",
+      "npx impeccable telemetry off"
+    ]
+  }
+}
