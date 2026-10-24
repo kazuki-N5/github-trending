@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-25",
+  "collectedAt": "2026-10-25T07:08:43+09:00",
+  "entries": [
+    {
+      "repo": "Zagitta/gpu-unlock",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "peach-mitao/peach",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "Peach 蜜桃：单用户、本地优先的个人媒体系统 · Single-user, local-first personal media system",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "experientiallabs/experiential",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "Experiential is the open source, zero markup gateway for BYOK, self-hosted and 1000+ marketplace models. It learns from your traffic to cut costs, recommend better models, and train a specialized model you own.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Gathin23/cleanyourtv",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "Your TV, minus the ads. Debloat any Android TV over ADB and give it a clean, tvOS-inspired launcher. Built in an afternoon with Claude Code.",
+      "language": "Java",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "cloudflare/security-audit-skill",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "openJiuwen-ai/jiuwenswarm",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "JiuwenSwarm is an intelligent AI Agent built on openJiuwen. It extends the powerful capabilities of large language models directly to your fingertips through various communication apps you use daily.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "xevrion/hatchzip",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "Extract huge archives in place: the archive shrinks as your files hatch, so you only need room for the output. ZIP, 7z, tar, split archives.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Nutlope/hallmark",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "morluto/rea",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ludovic111/horizon",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Minecraft: Java Edition 26.3 rewritten from scratch in Rust, checked against vanilla with 281 differential harnesses. Get it with the Horizon launcher.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "yeqv111/mccarbon",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "麦麦碳账本 · 基于麦当劳 MCP 的个人餐饮碳足迹估算与减排模拟器 | Personal dining carbon footprint estimator powered by McDonald's MCP",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "humanlayer/humanlayer",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "The best way to get AI coding agents to solve hard problems in complex codebases.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "YuJunZhiXue/dsh-purge",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "xerj-org/xerj",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Local-first search engine and MCP server for AI agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory and RAG. Elasticsearch-compatible API; Corpus Hub serves hundreds of reference memory corpora.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "wesbos/3d-model-anything",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
+      "language": "Swift",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anthropics/sandbox-runtime",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "A lightweight sandboxing tool for enforcing filesystem and network restrictions on arbitrary processes at the OS level, without requiring a container.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "makecindy/cindy",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pbakaus/impeccable",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "The design language that makes your AI harness better at design.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "GortexAI/franco",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Franco: an outbound sales agent that runs on your Claude Code or Codex subscription",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "kajisho5/ffmpeg-skill",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": []
+  }
+}
