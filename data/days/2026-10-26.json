@@ -1,0 +1,406 @@
+{
+  "date": "2026-10-26",
+  "collectedAt": "2026-10-26T07:07:47+09:00",
+  "entries": [
+    {
+      "repo": "Zagitta/gpu-unlock",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "elayadesign/ai-design-skills",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "JustAResearcher/gpu-unlock-ada",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "GPU tensor unlock source for RTX 4090 and experimental RTX 4070 Ti SUPER; firmware generated locally",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Nutlope/hallmark",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "seedds/nxnative",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "liquidslr/leetcode-company-wise-problems",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Lists of company wise questions. Every csv file in the companies directory corresponds to a list of questions on leetcode for a specific company based on the leetcode company tags. Updated as of 20 June, 2025",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pbakaus/impeccable",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "The design language that makes your AI harness better at design.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ludovic111/horizon",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "Minecraft: Java Edition 26.3 rewritten from scratch in Rust, checked against vanilla with 281 differential harnesses. Get it with the Horizon launcher.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "cloudflare/security-audit-skill",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "experientiallabs/experiential",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Experiential is the open source, zero markup gateway for BYOK, self-hosted and 1000+ marketplace models. It learns from your traffic to cut costs, recommend better models, and train a specialized model you own.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "morluto/rea",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "TauricResearch/TradingAgents",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Gathin23/cleanyourtv",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "Your TV, minus the ads. Debloat any Android TV over ADB and give it a clean, tvOS-inspired launcher. Built in an afternoon with Claude Code.",
+      "language": "Java",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "makecindy/cindy",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "AgriciDaniel/claude-seo",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Nikii-w/McLife-Desk",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "忙碌了一天，回到家，你打开麦当劳，却突然纠结：今天吃了什么？这周点了几次？这个月花了多少钱？热量会不会超标？  于是有了 **McLife Desk 麦门人生工作台**。它记录每一次点麦：日期、餐品、金额与热量，生成专属点餐日历；按当月消费次数和金额解锁麦门等级，还能通过趣味测试发现自己的麦门消费人格。  它不劝你戒掉麦当劳，只陪你在忙碌、独处和奖励自己的时刻，看见自己的选择，管理预算与生活节奏。  **记录每一次点麦，也记录你的生活。**",
+      "language": "HTML",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pollen-robotics/microduck",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "A Tiny biped duck robot 🦆",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "rddmwmddr/android-ad-cleaner",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "amosblomqvist/learnharness",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Agent harness for learning difficult things.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "coollabsio/coolify",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack applications and 280+ one-click services on your own servers.",
+      "language": "PHP",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "weekly": {
+    "label": "Star History 週間（Oct 18, 2026 – Oct 24, 2026）",
+    "entries": [
+      {
+        "repo": "morluto/rea",
+        "source": "starhistory",
+        "sourceRank": 1,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+69,390（週）"
+      },
+      {
+        "repo": "google-research/harness2",
+        "source": "starhistory",
+        "sourceRank": 2,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+17,193（週）"
+      },
+      {
+        "repo": "cloudflare/security-audit-skill",
+        "source": "starhistory",
+        "sourceRank": 3,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+14,517（週）"
+      },
+      {
+        "repo": "ai-job-search-dev/ai-job-search",
+        "source": "starhistory",
+        "sourceRank": 4,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+14,281（週）"
+      },
+      {
+        "repo": "debpalash/voicestudio",
+        "source": "starhistory",
+        "sourceRank": 5,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+11,704（週）"
+      },
+      {
+        "repo": "peach-mitao/peach",
+        "source": "starhistory",
+        "sourceRank": 6,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+11,063（週）"
+      },
+      {
+        "repo": "stablyai/orca",
+        "source": "starhistory",
+        "sourceRank": 7,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+9,650（週）"
+      },
+      {
+        "repo": "dietrichgebert/ponytail",
+        "source": "starhistory",
+        "sourceRank": 8,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+9,523（週）"
+      },
+      {
+        "repo": "deepseek-ai/deepseek-harness",
+        "source": "starhistory",
+        "sourceRank": 9,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+8,642（週）"
+      },
+      {
+        "repo": "mattpocock/skills",
+        "source": "starhistory",
+        "sourceRank": 10,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+7,604（週）"
+      },
+      {
+        "repo": "xerj-org/xerj",
+        "source": "starhistory",
+        "sourceRank": 11,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+7,588（週）"
+      },
+      {
+        "repo": "graphify-labs/graphify",
+        "source": "starhistory",
+        "sourceRank": 12,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+6,852（週）"
+      },
+      {
+        "repo": "yujunzhixue/dsh-purge",
+        "source": "starhistory",
+        "sourceRank": 13,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+6,647（週）"
+      },
+      {
+        "repo": "storytold/photocraft",
+        "source": "starhistory",
+        "sourceRank": 14,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+6,062（週）"
+      },
+      {
+        "repo": "boykopovar/anyps5",
+        "source": "starhistory",
+        "sourceRank": 15,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+5,980（週）"
+      },
+      {
+        "repo": "anomalyco/opencode",
+        "source": "starhistory",
+        "sourceRank": 16,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+5,932（週）"
+      },
+      {
+        "repo": "affaan-m/ecc",
+        "source": "starhistory",
+        "sourceRank": 17,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+5,908（週）"
+      },
+      {
+        "repo": "yetone/magpie",
+        "source": "starhistory",
+        "sourceRank": 18,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+5,721（週）"
+      },
+      {
+        "repo": "tangency-labs/solidcraft",
+        "source": "starhistory",
+        "sourceRank": 19,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+5,694（週）"
+      },
+      {
+        "repo": "heygen-com/hyperframes",
+        "source": "starhistory",
+        "sourceRank": 20,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+5,566（週）"
+      }
+    ]
+  },
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "enesozturk/dimensional-drawing",
+        "source": "hatena",
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 13,
+        "sourceRank": 1
+      },
+      {
+        "repo": "Vesperino/MerMarkEditor",
+        "source": "hatena",
+        "desc": "Elegant and simple Markdown, Mermaid editor",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 4,
+        "sourceRank": 2
+      },
+      {
+        "repo": "Till0196/coax",
+        "source": "hatena",
+        "desc": "Tuner daemon and client that tune and stream",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 3
+      }
+    ]
+  }
+}

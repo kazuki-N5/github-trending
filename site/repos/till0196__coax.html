@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Till0196/coax | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">⌨️</div><div>
+<h1>Till0196/coax</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-10-26（はてなブックマーク 3位）</span>
+<a class="gh" href="https://github.com/Till0196/coax" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="till0196__coax" data-repo="Till0196/coax" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">TVチューナーの操作とストリーミングを行うデーモン・クライアント</p>
+<h3>何ができるか</h3><ul><li>チューナーデーモン（coaxd）とCLIクライアント（coax）の組み合わせでTV受信環境を構築できる</li><li>ISDB-T・ISDB-C・ISDB-S・ISDB-S3やDVB-T/T2・DVB-S/S2など複数の放送規格に対応している</li><li>チャンネルスキャンと周波数リストを使った自動チャンネルリスト生成ができる</li><li>Mirakurun・BonDriver・DVBv5・TVTest・EDCB形式にスキャン結果をエクスポートできる</li><li>BonDriverとしてTVTestやEDCBと連携できる</li><li>内蔵ICカードリーダーへのPC/SCソケット経由アクセスに対応している</li></ul>
+<h3>なぜ注目されているか</h3><p>OS固有のUSBアクセス方法（WinUSB・IOKit・usbfs）やDVB API・BDA APIの差異を吸収し、Windows・macOS・Linuxで統一的なチューナー操作インターフェースを提供する点が特徴である。GoでCGO_ENABLED=0のままビルドできるためクロスコンパイルが容易で、既存のMirakurunやTVTest環境とも連携しやすい設計になっている。</p>
+<h3>どんな人に役立つか</h3><p>日本のTV視聴環境（特にISDB系）を自前で構築したいユーザーに向いている。既存のMirakurun・TVTest・EDCB環境と連携させたい上級ユーザーにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>Go 1.25以上で実装されており、CGO_ENABLED=0でLinux・Windows・macOSにクロスコンパイルできる</li><li>coaxdデーモンとcoaxクライアントはHTTP APIを介して通信する</li><li>USB・PCIe・Linux DVB・Windows BDAの異なるハードウェアアクセス方式を統一的に扱う</li><li>TSMFマルチプレックスとTLVストリーム（IP・UDP・MMTP・TLV-NIT）のパースに対応している</li><li>コードはApache-2.0またはGPL-2.0-or-laterのデュアルライセンスで提供されている</li></ul>
+<h3>試し方</h3>
+<ol><li>Go 1.25以上をインストールする</li><li>リポジトリをクローンしてcoaxとcoaxdをビルドする</li><li>coaxd listでチューナー一覧を確認してcoax tuneでチューニングする</li></ol>
+<pre><code>CGO_ENABLED=0 go build ./cmd/coax
+CGO_ENABLED=0 go build ./cmd/coaxd
+coaxd
+coax list
+coax tune</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-26.html#h-till0196__coax">2026-10-26 はてブ</a>
+<span class="src hatena">はてなブックマーク 3位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

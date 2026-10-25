@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JustAResearcher/gpu-unlock-ada | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔎</div><div>
+<h1>JustAResearcher/gpu-unlock-ada</h1>
+<div class="meta"><span>C</span>
+<span>初掲載 2026-10-26（Trendshift 3位）</span>
+<a class="gh" href="https://github.com/JustAResearcher/gpu-unlock-ada" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="justaresearcher__gpu-unlock-ada" data-repo="JustAResearcher/gpu-unlock-ada" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">RTX 4090等のテンソル演算制限をLinuxで解除するカーネルモジュール</p>
+<h3>何ができるか</h3><ul><li>Linuxカーネルモジュールとしてinitramfsで動作し、NVIDIAドライバがバインドする前にSMスピードセレクトオーバーライドを適用する。</li><li>RTX 4090（10de:2684）でFP16/FP32およびBF16/FP32テンソル命令スループットを約2倍（約165→330 TF/s）に向上させることを確認している。</li><li>RTX 4070 Ti SUPER（10de:2705）ではFP16/FP32とTF32/FP32の発行レートが約2倍になることを確認している。</li><li>RTX 4060 Ti 16GB（10de:2805）は実験的サポートで、SM速度レジスタの変更は確認済みだが同一カードでのベースライン比較は未実施。</li><li>ファームウェアペイロードをSHA-256で検証し、FLR（Function Level Reset）を実施してからNVIDIAドライバを起動させる安全手順を実装している。</li><li>ファームウェアはビルド時にローカル生成・ハッシュ検証されるため、プリビルドバイナリは配布されない。</li></ul>
+<h3>なぜ注目されているか</h3><p>コンシューマー向けGPUにハードウェアレベルで制限されているテンソル演算のスループットをソフトウェアで解除できる稀有なツールであり、ローカルAI推論や研究用途でのコスト対性能比向上に直結する。GPU内部のSMスピードセレクト機構をLinuxカーネルモジュールとして操作する技術的アプローチが注目されている。<span class="guess">推測</span> NVIDIA公式サポート外の操作であるため、動作保証やドライバ更新後の互換性には注意が必要と考えられる。</p>
+<h3>どんな人に役立つか</h3><p>ローカルでLLM推論や機械学習ワークロードを実行しており、RTX 4090などのコンシューマーGPUのテンソル演算性能を最大化したい研究者や開発者に向いている。Linuxカーネルモジュールのビルドやinitramfsの設定経験がある中級以上のユーザーを想定している。</p>
+<h3>技術的なポイント</h3><ul><li>カーネルモジュールはinitramfsステージで実行され、NVIDIAドライバのバインド前にGPUのファームウェアトランザクションを実行する。</li><li>AD102ペイロードとデバッグブーター解析はTOTORONG/AD103_win_unlockerに由来し、LinuxモジュールはZagitta/gpu-unlockから派生している。</li><li>ビルド時にピン留めされたNVIDAの入力ファイルをダウンロードしてハッシュ検証することでサプライチェーン攻撃を防ぐ設計になっている。</li><li>カーネルコマンドラインオプション（gpu_unlock.targets=）でターゲットGPUのPCIアドレスを指定して動作させる。</li><li>カーネルモジュールとパッケージングはGPL-2.0-only、NVIDIAファームウェアはNVIDIA独自ライセンスが適用される。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンしてソースからビルドする（make install、またはArch/Debian/RPM向けターゲットを使用）。</li><li>初回試行前にコールドパワーオフ（完全電源断）を行い、ウォームリブートを避ける。</li><li>カーネルコマンドラインにgpu_unlock.targets=をPCIアドレスとともに追加してターゲットGPUを指定する。</li><li>initramfsにモジュールを組み込み、NVIDIAドライバより前にロードされるよう設定する。</li></ol>
+<pre><code>make install</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-26.html#d-justaresearcher__gpu-unlock-ada">2026-10-26</a>
+<span class="src trendshift">Trendshift 3位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

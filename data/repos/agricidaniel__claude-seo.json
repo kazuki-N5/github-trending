@@ -1,0 +1,33 @@
+{
+  "repo": "AgriciDaniel/claude-seo",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Claude Code向けの無料オープンソースSEO監査プラグイン",
+  "features": [
+    "テクニカルSEO、Core Web Vitals、E-E-A-T品質など幅広い領域を網羅した完全監査を10〜15分で実施できる。",
+    "26のサブスキルと19の専門エージェントが搭載されており、最大17エージェントが並列で動作する。",
+    "Schema.orgマークアップ、AI検索対応（GEO/AEO）、ローカルSEO、ECサイトSEO、国際SEOにも対応している。",
+    "Google APIキーなしで動作し、オプションで無料のGoogle APIを連携するとフィールドデータも取得できる。",
+    "監査レポートはMarkdown形式でローカルに保存され、PDFレポートの生成コマンドも提供される。",
+    "SE Ranking、Bing Webmaster、Unlighthouseなどの拡張機能によって機能を追加できる。"
+  ],
+  "why": "Claude Code上でSEO監査をコードと同じ環境で完結できる点が新しい。APIキー不要で即座に使い始められ、MITライセンスで無料公開されているため、個人開発者からプロまで気軽に導入できる。推測: 著者自身のサイトで10.8KのSearch Consoleクリックを記録したと主張しており、実際の運用で検証されたツールである可能性がある。",
+  "whoFor": "Claude Codeを使ってWeb開発を行うエンジニアやフリーランスのSEO担当者に向いている。Google APIの知識がなくてもSEO監査を自動化したい人にも適している。",
+  "tech": [
+    "Claude Code 1.0.33以上が必須で、Python 3.11〜3.14の環境が必要。",
+    "26のサブスキルと19の専門エージェントで構成されており、最大17エージェントが並列実行される設計になっている。",
+    "Core Web VitalsはAPIキーなしの場合はラボ推定値となり、完全なフィールドデータにはGoogle APIキーが必要。",
+    "完全監査ではOpusモデルで5エージェントが動作するため、Claudeプランの使用量が増加する。",
+    "レポートはMarkdown形式でローカル保存され、PDFエクスポートも`/seo google report`コマンドで実行できる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "マーケットプレイスを追加するコマンドを実行する。",
+      "プラグインをインストールするコマンドを実行する。",
+      "`/seo setup`コマンドで初期設定を行う。"
+    ],
+    "commands": [
+      "/seo setup"
+    ]
+  }
+}

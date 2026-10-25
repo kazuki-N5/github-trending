@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TauricResearch/TradingAgents | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔎</div><div>
+<h1>TauricResearch/TradingAgents</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-26（Trendshift 12位）</span>
+<a class="gh" href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="tauricresearch__tradingagents" data-repo="TauricResearch/TradingAgents" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">マルチエージェントLLMによる金融トレーディング研究フレームワーク</p>
+<h3>何ができるか</h3><ul><li>ファンダメンタルズ・センチメント・ニュース・テクニカルの4つのアナリストエージェントが並列で分析を行う。</li><li>強気・弱気の2つのリサーチャーエージェントがアナリストの分析結果を巡って議論し、多角的な視点を提供する。</li><li>トレーダーエージェントがレポートと議論を元に売買タイミングとポジションサイズを決定する。</li><li>リスク管理エージェントとポートフォリオマネージャーエージェントがトレーダーの提案を審査・承認または却下する。</li><li>Yahoo Financeを通じて米国・香港・日本・インド・中国A株・暗号資産などグローバル市場に対応している。</li><li>過去のトレード決定と振り返りを記憶ログとして保持し、後続の実行に活かすパーシスタンス機能を持つ。</li></ul>
+<h3>なぜ注目されているか</h3><p>単一エージェントではなく、実際の証券会社の組織構造（アナリスト・リサーチャー・トレーダー・リスク管理）を模倣したマルチエージェント設計が学術的に注目されており、arXiv（2412.20138）にも掲載されている。SECのEDGARから取得した米国ファンダメンタルズデータを利用することでルックアヘッドバイアスを避けたバックテストが可能な点が研究用途として差別化されている。<span class="guess">推測</span> 対応するLLMプロバイダーの幅広さ（OpenAI・Anthropic・Google・DeepSeekなど）から、特定のモデルへの依存を避けた設計思想が伺える。</p>
+<h3>どんな人に役立つか</h3><p>LLMを使った金融トレーディング戦略の研究や実験に興味があるデータサイエンティストや機械学習エンジニアに向いている。マルチエージェントシステムの設計パターンをファイナンス領域で学びたい学生や研究者にも適している。なお、本フレームワークは研究目的であり、実際の投資アドバイスを意図するものではないとREADMEに明記されている。</p>
+<h3>技術的なポイント</h3><ul><li>Python 3.11以降が必要で、pip install .またはuv、あるいはDockerでセットアップできる。</li><li>OpenAI・Google・Anthropic・DeepSeek・Ollamaなど多数のLLMプロバイダーに対応しており、OpenAI互換エンドポイントも使用できる。</li><li>SECのEDGARから財務データを取得することでバックテスト時のルックアヘッドバイアスを排除している。</li><li>対話型CLIと非対話型モード（フラグ・環境変数）およびPython API（TradingAgentsGraph）の3つのインターフェースを提供している。</li><li>チェックポイント再開機能により中断されたバックテストを途中から継続できる。</li></ul>
+<h3>試し方</h3>
+<ol><li>Python 3.11以降がインストールされていることを確認する。</li><li>リポジトリをクローンしてpip install .でインストールする（またはuvやDockerを使用）。</li><li>使用するLLMプロバイダーのAPIキーを環境変数に設定する。</li><li>対話型CLIを起動して分析したいティッカーシンボルと日付を入力する。</li></ol>
+<pre><code>pip install .
+pip install uv &amp;&amp; uv sync</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-26.html#d-tauricresearch__tradingagents">2026-10-26</a>
+<span class="src trendshift">Trendshift 12位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

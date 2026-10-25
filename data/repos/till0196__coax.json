@@ -1,0 +1,37 @@
+{
+  "repo": "Till0196/coax",
+  "language": "Go",
+  "readme": true,
+  "oneLiner": "TVチューナーの操作とストリーミングを行うデーモン・クライアント",
+  "features": [
+    "チューナーデーモン（coaxd）とCLIクライアント（coax）の組み合わせでTV受信環境を構築できる",
+    "ISDB-T・ISDB-C・ISDB-S・ISDB-S3やDVB-T/T2・DVB-S/S2など複数の放送規格に対応している",
+    "チャンネルスキャンと周波数リストを使った自動チャンネルリスト生成ができる",
+    "Mirakurun・BonDriver・DVBv5・TVTest・EDCB形式にスキャン結果をエクスポートできる",
+    "BonDriverとしてTVTestやEDCBと連携できる",
+    "内蔵ICカードリーダーへのPC/SCソケット経由アクセスに対応している"
+  ],
+  "why": "OS固有のUSBアクセス方法（WinUSB・IOKit・usbfs）やDVB API・BDA APIの差異を吸収し、Windows・macOS・Linuxで統一的なチューナー操作インターフェースを提供する点が特徴である。GoでCGO_ENABLED=0のままビルドできるためクロスコンパイルが容易で、既存のMirakurunやTVTest環境とも連携しやすい設計になっている。",
+  "whoFor": "日本のTV視聴環境（特にISDB系）を自前で構築したいユーザーに向いている。既存のMirakurun・TVTest・EDCB環境と連携させたい上級ユーザーにも適している。",
+  "tech": [
+    "Go 1.25以上で実装されており、CGO_ENABLED=0でLinux・Windows・macOSにクロスコンパイルできる",
+    "coaxdデーモンとcoaxクライアントはHTTP APIを介して通信する",
+    "USB・PCIe・Linux DVB・Windows BDAの異なるハードウェアアクセス方式を統一的に扱う",
+    "TSMFマルチプレックスとTLVストリーム（IP・UDP・MMTP・TLV-NIT）のパースに対応している",
+    "コードはApache-2.0またはGPL-2.0-or-laterのデュアルライセンスで提供されている"
+  ],
+  "tryIt": {
+    "steps": [
+      "Go 1.25以上をインストールする",
+      "リポジトリをクローンしてcoaxとcoaxdをビルドする",
+      "coaxd listでチューナー一覧を確認してcoax tuneでチューニングする"
+    ],
+    "commands": [
+      "CGO_ENABLED=0 go build ./cmd/coax",
+      "CGO_ENABLED=0 go build ./cmd/coaxd",
+      "coaxd",
+      "coax list",
+      "coax tune"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pollen-robotics/microduck | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>pollen-robotics/microduck</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-10-26（Trendshift 17位）</span>
+<a class="gh" href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="pollen-robotics__microduck" data-repo="pollen-robotics/microduck" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">強化学習で動く小型二足歩行ダックロボットのソフトウェア</p>
+<h3>何ができるか</h3><ul><li>高さ約25cm・重さ約800gの小型二足歩行ロボット「Microduck」のソフトウェア一式を提供している。</li><li>50Hzの制御ループで15本のサーボを動かし、無線・カメラ制御・アップデート機能もサポートしている。</li><li>歩行・車輪走行・物体つかみ・転倒後の起き上がりなど複数の強化学習ポリシーをONNX形式で読み込んで実行できる。</li><li>ゲームパッドで歩行制御ができ、`duckctl`ツールでBluetooth経由のラップトップ操作も可能。</li><li>ロールバック機能付きのアップデートシステムにより、安全にソフトウェアを更新できる。</li><li>MuJoCoシミュレーターを使ったデスクトップシミュレーション環境が提供されており、実機なしで開発・テストできる。</li></ul>
+<h3>なぜ注目されているか</h3><p>強化学習で訓練したポリシーをONNX経由で小型ロボットに直接デプロイする一貫したパイプラインが整備されている。Rustで書かれた複数デーモン構成でJSON-RPCを使った疎結合設計が採用されており、拡張性が高い。</p>
+<h3>どんな人に役立つか</h3><p>ロボット工学や強化学習に興味があるCS学生・研究者向け。小型二足歩行ロボットの実装やMuJoCoを使ったシミュレーションを学びたい人に特に役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>ソフトウェアはRustのシングルワークスペースで実装されており、制御・更新・WiFi・Bluetooth・カメラなどを担当する複数のデーモンで構成されている。</li><li>デーモン間の通信はUnixソケット上のJSON-RPCで行われており、疎結合な設計になっている。</li><li>強化学習ポリシーは別リポジトリ（microduck_rl）でMuJoCo＋PPOを使って訓練し、ONNXファイルとしてエクスポートして本リポジトリで実行する。</li><li>ゲームパッド・カメラ・深度センサーを扱うデーモンがそれぞれ独立して動作する構成になっている。</li><li>`scripts/duck-sim`スクリプトでMuJoCoモデルに対してデーモン群を動かすシミュレーター環境が利用できる。</li></ul>
+<h3>試し方</h3>
+<ol><li>`robotctl`コマンドでロボットの状態確認やコマンド操作を行う。</li><li>ゲームパッドをペアリングして歩行制御を試す。</li><li>`duckctl`ツールでBluetoothを経由してラップトップからロボットを操作する。</li><li>シミュレーターを試す場合は`scripts/duck-sim`を実行してMuJoCo環境で動作確認する。</li></ol>
+<pre><code>robotctl
+duckctl
+scripts/duck-sim</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-26.html#d-pollen-robotics__microduck">2026-10-26</a>
+<span class="src trendshift">Trendshift 17位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

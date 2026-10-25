@@ -1,0 +1,42 @@
+{
+  "repo": "rddmwmddr/android-ad-cleaner",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "中国製Androidのシステム広告・ホット検索・通知を一括オフにするツール",
+  "features": [
+    "root不要・ロック解除不要でADB接続するだけで、中国製Androidスマホのシステム広告設定をオフにできる。",
+    "ホット検索・ニュースフィード・アプリストアのプロモーション・マーケティング通知を無効化できる。",
+    "広告コンポーネントの一時停止（`pm suspend`）機能により、アプリを削除せずに広告を抑制できる。",
+    "AIエージェントによるワンクリック実行、チャットAIによる手動ガイド、ブランド別手動チェックリスト、デスクトップクライアントの4つの使用方法がある。",
+    "バックアップ機能が提供されており、変更を元に戻すリストアガイドも用意されている。",
+    "Mac（Apple Silicon・Intel）とWindows 10/11向けのデスクトップクライアントが利用できる。"
+  ],
+  "why": "rootやシステム変更なしにADBだけで広告を無効化できる点が実用的。AIエージェントによる自動実行モードも備えており、技術に詳しくないユーザーでも使いやすい工夫がされている。バックアップ・リストア機能があるため、元に戻せる安心感がある。",
+  "whoFor": "Xiaomi・OPPO・OnePlus・vivoなど中国製Androidスマホを使っていて、広告や不要な通知をroot不要で消したいユーザー向け。ADBを触ったことがあるCS学生にも導入しやすい。",
+  "tech": [
+    "ADB（Android Debug Bridge）接続を使って端末を操作する仕組みで、root権限もシステム書き換えも不要。",
+    "ネイティブHarmonyOS（HDCプロトコル）には対応しておらず、ADB接続可能なAndroid端末のみサポートしている。",
+    "コマンドは`devices`→`check`→`backup`→`recipe`→`chan-scan`→`chan-off`→`finish`の順で実行するワークフロー設計になっている。",
+    "OSバージョンによって設定メニューが変わるため、デバイスごとのレシピファイルで対応差を管理する構成になっている。",
+    "広告チャンネルの無効化には`pm suspend`コマンドを使い、アプリ自体は削除せずに広告機能だけを停止する。"
+  ],
+  "tryIt": {
+    "steps": [
+      "スマホでUSBデバッグを有効にしてPCとADB接続する。",
+      "`devices`コマンドで接続確認を行う。",
+      "`check`コマンドで現在の広告設定を確認する。",
+      "`backup`コマンドで変更前の状態をバックアップする。",
+      "`recipe`コマンドでデバイスに対応したレシピを適用する。",
+      "`finish`コマンドで作業を完了する。"
+    ],
+    "commands": [
+      "python main.py devices",
+      "python main.py check",
+      "python main.py backup",
+      "python main.py recipe",
+      "python main.py chan-scan",
+      "python main.py chan-off",
+      "python main.py finish"
+    ]
+  }
+}

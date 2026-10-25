@@ -1,0 +1,35 @@
+{
+  "repo": "Vesperino/MerMarkEditor",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "MermaidとAIを内蔵したデスクトップMarkdownエディタ",
+  "features": [
+    "WYSIWYGモードとコードビューを切り替えてMarkdownを編集できる",
+    "Mermaidのフローチャート・シーケンス図・クラス図など多様なダイアグラムをリアルタイムプレビュー付きで編集できる",
+    "Marpを使ってMarkdownでスライドプレゼンテーションを作成し、フルスクリーン発表ができる",
+    "Ollama・Claude・CodexなどのローカルまたはクラウドAIアシスタントと連携してドキュメントを直接編集できる",
+    "PDF・Markdown・DOCX形式でエクスポートできる",
+    "マルチルートサイドバー・クイックスイッチャー・全文検索などのワークスペース機能を備えている"
+  ],
+  "why": "Tauri 2.0を採用した軽量なデスクトップアプリでMarkdownとMermaidダイアグラムを統合して扱える点が特徴である。ローカルAIアシスタントとの統合により、AIによる自動スナップショットと一クリックでの元に戻す機能を備えたドキュメント編集が可能である。英語・日本語・中国語・ドイツ語・ポーランド語のUI多言語対応も行われている。",
+  "whoFor": "MarkdownとUMLダイアグラムを同じエディタで作業したい開発者や技術ライターに向いている。AIアシスタントをドキュメント編集に活用したいユーザーにも適している。",
+  "tech": [
+    "Tauri 2.0（RustバックエンドとWebViewフロントエンド）でクロスプラットフォームに動作する",
+    "Vue 3とTipTap・Viteを使ったフロントエンドで構成されている",
+    "Mermaid.jsを統合してダイアグラムのリアルタイムレンダリングを実現している",
+    "OpenAI互換APIに対応しているためOllamaなどのローカルサーバーにも接続できる",
+    "pnpm tauri devで開発起動し、pnpm tauri buildでビルドする"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node.js 18以上とRustとpnpmをインストールする",
+      "リポジトリをクローンしてpnpm installで依存関係をインストールする",
+      "pnpm tauri devで開発モードで起動する"
+    ],
+    "commands": [
+      "pnpm install",
+      "pnpm tauri dev",
+      "pnpm tauri build"
+    ]
+  }
+}
