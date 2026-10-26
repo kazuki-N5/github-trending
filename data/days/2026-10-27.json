@@ -1,0 +1,231 @@
+{
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-27T07:09:25+09:00",
+  "entries": [
+    {
+      "repo": "Nutlope/hallmark",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Zagitta/gpu-unlock",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "elayadesign/ai-design-skills",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "hmjz100/LinkSwift",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "seedds/nxnative",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "makecindy/cindy",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "TauricResearch/TradingAgents",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "AgriciDaniel/claude-seo",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "JustAResearcher/gpu-unlock-ada",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "GPU tensor unlock source for RTX 4090 and experimental RTX 4070 Ti SUPER; firmware generated locally",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "designfuchen/word-atlas",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "词光 · 一词一画，点亮雅思 — 7,298 IELTS words, each with an original illustration, UK/US audio, 14,596 example sentences and FSRS review. Free, open source, no login. Dataset CC BY 4.0.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "JetBrains/thinkrail",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "rddmwmddr/android-ad-cleaner",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pbakaus/impeccable",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "The design language that makes your AI harness better at design.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Gathin23/cleanyourtv",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Your TV, minus the ads. Debloat any Android TV over ADB and give it a clean, tvOS-inspired launcher. Built in an afternoon with Claude Code.",
+      "language": "Java",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "morluto/rea",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "HKUDS/DeepTutor",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "google/elephant-goldfish-model",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "An open-source method and skill set created at Google for spec-driven development with LLMs",
+      "language": "Astro",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "togg53192-cmd/jailbreaks",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "LIST OF ALL MY JAILBREAKS",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "xerj-org/xerj",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Local-first search engine and MCP server for AI agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory and RAG. Elasticsearch-compatible API; Corpus Hub serves hundreds of reference memory corpora.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "amosblomqvist/learnharness",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "Agent harness for learning difficult things.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "apple/security-pcc",
+        "source": "hatena",
+        "desc": "Private Cloud Compute (PCC)",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 14,
+        "sourceRank": 1
+      },
+      {
+        "repo": "NyxFoundation/nyxis",
+        "source": "hatena",
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 12,
+        "sourceRank": 2
+      },
+      {
+        "repo": "nicotakuya/How-to-Create-FC-Games",
+        "source": "hatena",
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 11,
+        "sourceRank": 3
+      },
+      {
+        "repo": "KillaBoi/StealMyBitcoin-PoC",
+        "source": "hatena",
+        "desc": "A public release of the Steal My Bitcoin challenge",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 5,
+        "sourceRank": 4
+      }
+    ]
+  }
+}

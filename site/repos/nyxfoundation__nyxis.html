@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NyxFoundation/nyxis | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>NyxFoundation/nyxis</h1>
+<div class="meta">
+<span>初掲載 2026-10-27（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/NyxFoundation/nyxis" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="nyxfoundation__nyxis" data-repo="NyxFoundation/nyxis" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">認可の安全性を形式的に証明済みのLean製バックエンドフレームワーク</p>
+<h3>何ができるか</h3><ul><li>CedarスキーマとポリシーだけでHTTPリクエストの認可ルールを定義でき、Leanのコードを書く必要がない</li><li>lake buildのたびに「認証済みユーザーが正当な権限外のデータにアクセス・変更・削除できない」という数学的証明を自動検証する</li><li>read・list・insert・update・deleteのデータ操作と、ファイルストレージ・メール通知・外部API呼び出しをすべて認可層経由で制御できる</li><li>ハンドラーはSupabase Auth（JWT認証サービス）のJWTトークンから主体を取得するため、ハンドラーコード内で認証情報を偽造できない</li><li>AIツール（Claude Codeなど）がハンドラーコードを生成しても、証明が通らない限りビルドが失敗するため安全に利用できる</li></ul>
+<h3>なぜ注目されているか</h3><p>AIエージェントが生成するWebアプリコードの認可ロジックに潜むバグは従来のテストでは見逃されがちだが、このフレームワークは形式証明（定理証明）によって数学的に安全性を保証する点が新しい。v0.1.0リリース直後で実験的な段階ながら、AIコーディング全盛期における認可の信頼性という課題に正面から取り組んでいるとして注目されている。</p>
+<h3>どんな人に役立つか</h3><p>AIエージェントを使ってWebアプリを一人で開発するソロ開発者や、認可ロジックのセキュリティ保証に不安を感じているエンジニアに向いている。また、形式検証や定理証明（Lean 4）に興味がある研究者・学生にとっても実用的なユースケースとして参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>Lean 4（マイクロソフト研究所が開発した定理証明支援系兼プログラミング言語）でコアロジックと証明を記述している</li><li>Cedar（AWSが開発したポリシー言語）でスキーマ定義とアクセス制御ポリシーを記述し、エンティティ型がDBテーブルに対応する</li><li>主定理 Nyxis.Runtime.authorization_safety がすべての認可安全性を保証しており、lake buildのたびにLeanカーネルが証明を再検査する</li><li>データベースはPostgreSQL（Supabase）を使用し、認証はSupabase AuthのJWTトークンに依存することで接続コードが証明の前提条件を守る設計になっている</li><li>依存ライブラリはSHA256で固定管理されており、scripts/prepare-dependencies.pyで取得・検証するためサプライチェーン攻撃への耐性がある</li></ul>
+<h3>試し方</h3>
+<ol><li>Lean 4（elan経由）、Python 3.12以上、OpenSSL CLI、Cコンパイラ、libpqとlibcryptoの開発ファイルをインストールする</li><li>リポジトリをクローンしてprepare-dependencies.pyでピン留め済み依存ライブラリを取得する</li><li>lake buildでコア・証明・テストをビルドし、証明が通ることを確認する</li><li>examples/bulletin-board/を参考にCedarスキーマとポリシーを書き、ハンドラーを実装して動作確認する</li></ol>
+<pre><code>python3 scripts/prepare-dependencies.py
+lake build</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-27.html#h-nyxfoundation__nyxis">2026-10-27 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>12 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

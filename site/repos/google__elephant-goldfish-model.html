@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>google/elephant-goldfish-model | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧩</div><div>
+<h1>google/elephant-goldfish-model</h1>
+<div class="meta"><span>Astro</span>
+<span>初掲載 2026-10-27（Trendshift 17位）</span>
+<a class="gh" href="https://github.com/google/elephant-goldfish-model" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="google__elephant-goldfish-model" data-repo="google/elephant-goldfish-model" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIコーディングエージェント向けの仕様書駆動開発を支援するオープンソースプラグイン</p>
+<h3>何ができるか</h3><ul><li>/egm-brainstormコマンドで、複数のゴールドフィッシュ（文脈なしのサブエージェント）を使ってアイデアを出しストレステストできる</li><li>/egm-draftコマンドで、コンセプトからセクションごとにマークダウン形式の設計仕様書を自動生成できる</li><li>/egm-reviewコマンドで、多段階パイプライン（ズームアウト・理解度確認・批評・完成度確認）を通じて仕様書をレビューできる</li><li>/egm-drift-reportコマンドで、ASTスキャナーによりコードと仕様書の乖離（ドリフト）を自動検出できる</li><li>/egm-bootstrapコマンドで、既存コードベースをボトムアップで再帰的にドキュメント化できる</li><li>/egm-resolveコマンドで、レビューで検出された問題をインタラクティブにトリアージし、パッチを自動適用できる</li></ul>
+<h3>なぜ注目されているか</h3><p>AIコーディングエージェントが普及する中、コードを書く前に仕様をしっかり固める「仕様書駆動開発」を自動化するツールとして注目されている。エレファント（深い文脈を持つセッション）とゴールドフィッシュ（ゼロ文脈の独立したサブエージェント）という2種類のAIを組み合わせた斬新なレビュー手法が革新的で、Google発のオープンソースとして公開されている点も注目度が高い。</p>
+<h3>どんな人に役立つか</h3><p>Claude CodeやCodexなどのAIコーディングエージェントを使って開発するソフトウェアエンジニアやチームに役立つ。コードを書く前に設計仕様をしっかりレビューしたい開発者や、仕様とコードのズレを継続的に検知したいチームに特に適している。</p>
+<h3>技術的なポイント</h3><ul><li>エレファント（深い文脈セッション）とゴールドフィッシュ（ゼロ文脈サブエージェント）の2ロール構成で仕様書のストレステストを実現している</li><li>AST（抽象構文木）スキャナーを使って、実装コードと仕様書の乖離（ドリフト）を静的解析で検出する仕組みを持つ</li><li>Claude Code・Codex・Antigravity・ChatGPTなど複数のAIエージェントハーネスに対応するプラグイン形式で配布される</li><li>ドキュメントサイト（egm.dev）はAstroフレームワークで構築されており、Apache 2.0ライセンスで公開されている</li></ul>
+<h3>試し方</h3>
+<ol><li>Claude Codeの場合: マーケットプレイスにgoogle/elephant-goldfish-modelを追加し、egm@egmをインストールする</li><li>Codexの場合: マーケットプレイスを追加してからcodex plugin add egm@egmを実行する</li><li>Antigravityの場合: agy plugin installコマンドにリポジトリURLを指定してインストールする</li><li>/egm:egm-brainstormコマンドでアイデア出しと検証を開始する</li><li>/egm:egm-draftコマンドでコンセプトから設計仕様書を作成する</li><li>/egm:egm-review docs/designs/&lt;機能名&gt;.mdコマンドでレビューを実行し、/egm:egm-resolveで問題を解決する</li></ol>
+<pre><code>codex plugin add egm@egm
+agy plugin install google/elephant-goldfish-model</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-27.html#d-google__elephant-goldfish-model">2026-10-27</a>
+<span class="src trendshift">Trendshift 17位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

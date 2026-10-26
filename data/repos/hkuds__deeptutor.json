@@ -1,0 +1,36 @@
+{
+  "repo": "HKUDS/DeepTutor",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "AIを活用した個人最適化チュータリングのオールインワン学習ワークスペース",
+  "features": [
+    "チャット・クイズ・リサーチ・可視化・コース学習など多彩な学習機能を一つのシステムで統合して提供する",
+    "RAG（検索拡張生成）に複数のエンジン（LlamaIndex・LightRAG・GraphRAGなど）を対応し、独自の知識ベースを構築できる",
+    "ソースドキュメントをインタラクティブな「リビングブック」に変換し、クイズやフラッシュカード、アニメーションを埋め込める",
+    "YouTube・Bilibiliの動画を再生しながらトランスクリプト検索や時刻付きメモを取れる動画学習機能を持つ",
+    "Feishu・Telegram・Slack・Discordなどと連携した常駐AIパートナーが個別の記憶とペルソナを持ち継続的に支援する",
+    "3層構造のファイルベースメモリ（L1：履歴トレース、L2：事実情報、L3：統合知識）でユーザーの学習状況を長期保持する"
+  ],
+  "why": "個別最適化されたAIチュータリングの需要が高まる中、単なるチャットボットではなく知識ベース・記憶・エージェント連携を備えた本格的な学習プラットフォームとして注目されている。オープンソースでDockerやPyPIから手軽に試せる点や、MCP（Model Context Protocol）サーバーやエージェントスキルなど最新のAIエコシステムに対応している点も評価されている。香港大学のデータインテリジェンス研究室による研究成果が実用的なプロダクトとして公開されているため、学術的信頼性も高い。",
+  "whoFor": "AIを活用して自分のペースで学習を深めたい学生や独学者に特に役立つ。自前のPDFや資料を知識ベースに取り込み、それをもとにクイズや解説を生成したいエンジニアや教育者にも適している。CLIとJSON出力に対応しているため、学習支援ツールを自動化・拡張したい開発者にとっても扱いやすい基盤となる。",
+  "tech": [
+    "バックエンドはPython 3.11以上＋FastAPIで構築され、OpenAI・AnthropicのSDKを直接利用してLLM（大規模言語モデル）を呼び出す",
+    "フロントエンドはNext.js 16＋React 19＋TypeScriptで実装されており、モダンなウェブUIを提供する",
+    "RAG（Retrieval-Augmented Generation：検索拡張生成）にLlamaIndex・LightRAG・GraphRAG・FAISSなど複数のエンジンを組み合わせて精度の高い文書検索を実現する",
+    "Dockerコンテナ・Docker Compose・Podmanによるデプロイに対応しており、本番環境への展開が容易",
+    "コード実行にはbubblewrapやサンドボックスランナーを使い安全な隔離実行環境を提供する"
+  ],
+  "tryIt": {
+    "steps": [
+      "DockerがインストールされているPCでdocker runコマンドを実行する",
+      "ブラウザでhttp://127.0.0.1:3782を開いてUIにアクセスする",
+      "Settings → Providers でLLMプロバイダー（OpenAIやAnthropicなど）のAPIキーを設定する"
+    ],
+    "commands": [
+      "docker run -it --rm -p 3782:3782 -v $(pwd)/data:/app/data ghcr.io/hkuds/deeptutor:latest",
+      "pip install -U deeptutor",
+      "deeptutor init",
+      "deeptutor start"
+    ]
+  }
+}

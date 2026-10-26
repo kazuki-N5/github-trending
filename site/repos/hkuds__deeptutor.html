@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HKUDS/DeepTutor | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>HKUDS/DeepTutor</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-27（Trendshift 16位）</span>
+<a class="gh" href="https://github.com/HKUDS/DeepTutor" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="hkuds__deeptutor" data-repo="HKUDS/DeepTutor" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIを活用した個人最適化チュータリングのオールインワン学習ワークスペース</p>
+<h3>何ができるか</h3><ul><li>チャット・クイズ・リサーチ・可視化・コース学習など多彩な学習機能を一つのシステムで統合して提供する</li><li>RAG（検索拡張生成）に複数のエンジン（LlamaIndex・LightRAG・GraphRAGなど）を対応し、独自の知識ベースを構築できる</li><li>ソースドキュメントをインタラクティブな「リビングブック」に変換し、クイズやフラッシュカード、アニメーションを埋め込める</li><li>YouTube・Bilibiliの動画を再生しながらトランスクリプト検索や時刻付きメモを取れる動画学習機能を持つ</li><li>Feishu・Telegram・Slack・Discordなどと連携した常駐AIパートナーが個別の記憶とペルソナを持ち継続的に支援する</li><li>3層構造のファイルベースメモリ（L1：履歴トレース、L2：事実情報、L3：統合知識）でユーザーの学習状況を長期保持する</li></ul>
+<h3>なぜ注目されているか</h3><p>個別最適化されたAIチュータリングの需要が高まる中、単なるチャットボットではなく知識ベース・記憶・エージェント連携を備えた本格的な学習プラットフォームとして注目されている。オープンソースでDockerやPyPIから手軽に試せる点や、MCP（Model Context Protocol）サーバーやエージェントスキルなど最新のAIエコシステムに対応している点も評価されている。香港大学のデータインテリジェンス研究室による研究成果が実用的なプロダクトとして公開されているため、学術的信頼性も高い。</p>
+<h3>どんな人に役立つか</h3><p>AIを活用して自分のペースで学習を深めたい学生や独学者に特に役立つ。自前のPDFや資料を知識ベースに取り込み、それをもとにクイズや解説を生成したいエンジニアや教育者にも適している。CLIとJSON出力に対応しているため、学習支援ツールを自動化・拡張したい開発者にとっても扱いやすい基盤となる。</p>
+<h3>技術的なポイント</h3><ul><li>バックエンドはPython 3.11以上＋FastAPIで構築され、OpenAI・AnthropicのSDKを直接利用してLLM（大規模言語モデル）を呼び出す</li><li>フロントエンドはNext.js 16＋React 19＋TypeScriptで実装されており、モダンなウェブUIを提供する</li><li>RAG（Retrieval-Augmented Generation：検索拡張生成）にLlamaIndex・LightRAG・GraphRAG・FAISSなど複数のエンジンを組み合わせて精度の高い文書検索を実現する</li><li>Dockerコンテナ・Docker Compose・Podmanによるデプロイに対応しており、本番環境への展開が容易</li><li>コード実行にはbubblewrapやサンドボックスランナーを使い安全な隔離実行環境を提供する</li></ul>
+<h3>試し方</h3>
+<ol><li>DockerがインストールされているPCでdocker runコマンドを実行する</li><li>ブラウザでhttp://127.0.0.1:3782を開いてUIにアクセスする</li><li>Settings → Providers でLLMプロバイダー（OpenAIやAnthropicなど）のAPIキーを設定する</li></ol>
+<pre><code>docker run -it --rm -p 3782:3782 -v $(pwd)/data:/app/data ghcr.io/hkuds/deeptutor:latest
+pip install -U deeptutor
+deeptutor init
+deeptutor start</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-27.html#d-hkuds__deeptutor">2026-10-27</a>
+<span class="src trendshift">Trendshift 16位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
