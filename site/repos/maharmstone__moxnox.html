@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>maharmstone/moxnox | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>maharmstone/moxnox</h1>
+<div class="meta"><span>C++</span>
+<span>初掲載 2026-10-30（はてなブックマーク 8位）</span>
+<a class="gh" href="https://github.com/maharmstone/moxnox" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="maharmstone__moxnox" data-repo="maharmstone/moxnox" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">趣味で作られたNT設計のPOSIX互換自作OS（約13万行のC++）</p>
+<h3>何ができるか</h3><ul><li>WindowsのNTカーネルに似たシステムコールインターフェースを持ちながら、PEバイナリ（.exe/.dll）で動作するオリジナルOSカーネルを提供する。</li><li>POSIX 2024の約642関数を実装し、forkを含むUNIX系プログラムをリコンパイルして動かせる。</li><li>bash・coreutils・git・vim・python・gcc（amd64のみ）・llvmなど多数のGNUツールやOSSソフトウェアをポートとして同梱している。</li><li>amd64（x86-64-v3以降）とaarch64（Raspberry Pi 5など）の2アーキテクチャをサポートする。</li><li>QEMUイメージが公開されており、実機なしでもKVM仮想マシン上で試せる。</li><li>btrfsファイルシステム上で動作し、OS自身をOS上でセルフホストビルドできる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> WindowsのNTアーキテクチャはブラックボックスになりがちだが、MoxnoxはそのNTライクな設計をC++でゼロから再実装して公開しており、OSの内部構造を学ぶ貴重な実例として注目されている。約13万行の本格的な実装でありながら個人趣味プロジェクトという点も話題になっている。</p>
+<h3>どんな人に役立つか</h3><p>OSの内部実装や設計に興味があるCS学生・OS開発愛好家に向いている。NTアーキテクチャとPOSIXの両立がどのように実現されるかを学びたい人や、QEMUで実際に動かしながらカーネルの動作を体験したい人にも有用。本番運用や業務利用には向かない。</p>
+<h3>技術的なポイント</h3><ul><li>C++モジュールを活用しており、ビルドにはCMakeとNinjaが必須。GCCではなくClangベースのクロスコンパイラをDockerイメージとして提供している。</li><li>C++例外処理にはWindowsのSEH（Structured Exception Handling: 構造化例外処理）を採用し、POSIXシグナルはAPC（Asynchronous Procedure Call: 非同期プロシージャ呼び出し）で配信している。</li><li>Linuxのdentryキャッシュ（ファイルパス解決高速化の仕組み）・large folios・物理メモリマッピング・evdev（入力デバイス抽象化）などのアイデアを取り込んでいる。</li><li>virtio-net/block/gpu/input・NVMe・SATA・USB HID・RTL8168/8125などの各種デバイスドライバーをOS自身に実装している（virtio: 仮想マシン向け高効率I/Oフレームワーク）。</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubリリースページからmoxnox-amd64-1.0.img.gzとmoxnox-kernel-amd64-1.0.efiをダウンロードする。</li><li>gunzip でイメージを解凍する。</li><li>QEMUで以下のコマンドを実行して起動する。</li></ol>
+<pre><code>qemu-system-x86_64 -M q35 -enable-kvm -cpu host -m 1024 -smp cores=4,threads=1 -kernel moxnox-kernel-amd64-1.0.efi -append &quot;root=/dev/sda&quot; -device ich9-ahci,id=ahci -drive id=disk,file=moxnox-amd64-1.0.img,if=none -device ide-hd,drive=disk,bus=ahci.0 -nic user,model=virtio-net-pci -device qemu-xhci -device usb-kbd,id=kbd -device usb-tablet,id=tablet -serial stdio</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-30.html#h-maharmstone__moxnox">2026-10-30 はてブ</a>
+<span class="src hatena">はてなブックマーク 8位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

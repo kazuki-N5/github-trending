@@ -1,0 +1,38 @@
+{
+  "repo": "azu/chizu",
+  "language": "",
+  "readme": true,
+  "oneLiner": "URLルールに基づいて特定ブラウザ・プロファイルへリンクを振り分けるmacOSデフォルトブラウザ",
+  "features": [
+    "クリックしたリンクをルール設定に基づいてDia・Chrome・Firefoxの指定プロファイルへ自動転送する",
+    "JSONC形式の設定ファイルをリンク受信のたびに読み直し、再起動なしで設定変更を反映する",
+    "URLの文字列一致・正規表現・ホスト名・パスプレフィックス・送信元アプリのBundle IDで振り分け条件を指定できる",
+    "chizu check URLコマンドでブラウザを実際に開かずにルールの動作を確認できる",
+    "chizu-https:スキームを使うユーザースクリプトでページ内リンクも振り分けルールに通せる"
+  ],
+  "why": "推測: 仕事用・プライベート用など複数のブラウザプロファイルを使い分けるエンジニアが、リンクを手動で振り分ける手間を省くために開発された。設定ファイルベースで動作し、GUIウィンドウが不要な点がCLIに慣れた開発者に受け入れられている。",
+  "whoFor": "複数のChromeプロファイルやブラウザを用途別に使い分けているmacOSユーザー向け。特にApple Siliconチップ搭載のMacを使う開発者に適している。",
+  "tech": [
+    "Apple Silicon Mac (macOS 14以降)専用のSwiftネイティブアプリとして実装されている",
+    "設定ファイルにJSONC（コメント付きJSON）形式を採用し、起動のたびに再読込することでデーモン再起動を不要にしている",
+    "CaddyによるmTLS（相互TLS認証）でブラウザプロセスへのアクセスを制御できる設計になっている",
+    "自己署名のため公証なし（notarized未対応）であり、初回起動時にmacOSのゲートキーパー警告が出る"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubのReleasesページからZIPをダウンロードし、SHA-256チェックサムを確認する",
+      "~/Applications/Chizu.app に展開してインストールする",
+      "chizu default setでChizuをmacOSのデフォルトブラウザに設定する",
+      "chizu config initで設定ファイルの雛形を作成する",
+      "~/.config/chizu/config.jsoncを編集してルールを追加する",
+      "chizu config checkで設定の構文を検証する"
+    ],
+    "commands": [
+      "chizu default set",
+      "chizu config init",
+      "chizu config check",
+      "chizu check <URL>",
+      "chizu open <URL>"
+    ]
+  }
+}

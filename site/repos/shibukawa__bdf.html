@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shibukawa/bdf | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>shibukawa/bdf</h1>
+<div class="meta">
+<span>初掲載 2026-10-30（はてなブックマーク 6位）</span>
+<a class="gh" href="https://github.com/shibukawa/bdf" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="shibukawa__bdf" data-repo="shibukawa/bdf" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ブラウザ向け軽量ドキュメントプレビュースイート（約23KB）</p>
+<h3>何ができるか</h3><ul><li>PDF・Word・PowerPoint・Excel・CSV・Parquet・HTML・Markdown・EPUBなど多数のドキュメント形式をブラウザでプレビューできる。</li><li>draw.io・Illustrator・Photoshopなどの図形・グラフィクスファイルにも対応している。</li><li>DXF・Jw_cad・SXFなどのCADフォーマット、GerberやKiCadなどの基板設計ファイルも変換できる。</li><li>MML・MIDI・MusicXML・MP3・FLAC・WAVなど音楽・音声ファイルをブラウザ内で再生できる。</li><li>Excel・Word・PowerPoint・PDFのフォームにデータを埋め込む帳票出力（バーコード・QRコード付き）が可能。</li><li>変換処理をサーバー側でもブラウザ側（WebAssembly）でも実行でき、ファイルをアップロードせずに変換できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 従来のドキュメントプレビューはサーバーにLibreOfficeや無頭ブラウザを動かす必要があり、運用コストが高かった。BDFはGoで書かれた軽量コンバーターとCanvas 2D描画を組み合わせることでその依存を排除し、ブラウザだけで完結するプレビューを実現した点が注目される。</p>
+<h3>どんな人に役立つか</h3><p>社内ポータルやSaaSにドキュメントプレビュー機能を組み込みたいWebアプリ開発者に向いている。サーバーレス構成や静的サイト上でも多形式のファイルを表示したいケースで特に有用。</p>
+<h3>技術的なポイント</h3><ul><li>Goでエンコーダーとデコーダーおよびフォーマット別コンバーターを実装しており、TinyGoでWebAssembly（WASM）にもビルドできる。</li><li>ブラウザ側ではCanvas 2D APIをWeb Worker上で使ってレンダリングを行い、メインスレッドをブロックしない設計になっている。</li><li>表形式データはApache Parquet形式でエンコードされ、効率的な列指向圧縮が活用されている（列指向：行単位ではなく列単位でデータを保存する形式）。</li><li>npmパッケージとしてデコーダー・レンダラー・ビューアーサーフェス・ブラウザ用コンバーターが提供されており、既存のWebフロントエンドに組み込みやすい。</li></ul>
+<h3>試し方</h3>
+<ol><li>Go 1.27以上とNode.jsをインストールする。</li><li>リポジトリをクローンしてデモを起動する。</li><li>ブラウザで http://127.0.0.1:8765/examples/viewer/.out/?src=/report.bdf を開く。</li></ol>
+<pre><code>go run ./cmd/bdf generate report.pptx report.bdf
+go run ./cmd/bdf ls report.bdf
+npm ci &amp;&amp; npm run demo</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-30.html#h-shibukawa__bdf">2026-10-30 はてブ</a>
+<span class="src hatena">はてなブックマーク 6位</span><span>4 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

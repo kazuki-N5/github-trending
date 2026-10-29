@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pfnet-research/pfpdf | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📁</div><div>
+<h1>pfnet-research/pfpdf</h1>
+<div class="meta">
+<span>初掲載 2026-10-30（はてなブックマーク 3位）</span>
+<a class="gh" href="https://github.com/pfnet-research/pfpdf" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="pfnet-research__pfpdf" data-repo="pfnet-research/pfpdf" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Markdownファイルから日本語組版に対応したPDFを生成するコマンドラインツール</p>
+<h3>何ができるか</h3><ul><li>MarkdownファイルをPDFに変換し、表紙・目次・数式・コードハイライトを自動生成する</li><li>GitHub Flavored Markdown・TeXの数式・Mermaid図・BibTeX文献引用に対応する</li><li>複数の.mdファイルをファイル名順に結合して一つのPDFにまとめる</li><li>フロントマター（ファイル先頭のメタデータ）でタイトル・テンプレート・言語を設定できる</li><li>--doctorオプションで環境の依存関係を自動チェックできる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 研究機関での論文・技術レポート作成にMarkdownを使いたいが、日本語組版（禁則処理・行間調整など）に対応したPDFを手軽に生成するツールが少なかったため、Preferred Networks Researchが公開した。</p>
+<h3>どんな人に役立つか</h3><p>技術レポートや研究論文をMarkdownで書きたいエンジニア・研究者向け。日本語コンテンツをPDF化したいCI/CDパイプラインの構築にも利用できる。</p>
+<h3>技術的なポイント</h3><ul><li>内部でChromium（ヘッドレスブラウザ）を使いHTMLをPDFにレンダリングするため、初回実行時にChromiumを自動ダウンロードする</li><li>Vivliostyle CLI（PDFページ組版エンジン、AGPL-3.0ライセンス）を利用して日本語組版を実現している</li><li>npxで実行できるため、ローカルインストール不要でCI環境でも利用しやすい設計になっている</li><li>入力HTMLのスクリプト実行やローカルファイルへのアクセスが可能なため、信頼できるドキュメントのみに使用することが推奨される</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js 22.12.0以降をインストールする</li><li>npxコマンドで実行する（初回はChromiumをダウンロードするため時間がかかる）</li><li>Markdownファイルを用意してPDFに変換する</li></ol>
+<pre><code>npx @pfnet-research/pfpdf@latest
+npx @pfnet-research/pfpdf@latest --doctor
+npx @pfnet-research/pfpdf@latest input.md output.pdf</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-30.html#h-pfnet-research__pfpdf">2026-10-30 はてブ</a>
+<span class="src hatena">はてなブックマーク 3位</span><span>16 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

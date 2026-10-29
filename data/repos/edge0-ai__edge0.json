@@ -1,0 +1,42 @@
+{
+  "repo": "Edge0-AI/Edge0",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "35BのMoEモデルをSSDストリーミングで約2.9GBのRAMで動かす推論フレームワーク",
+  "features": [
+    "SSDからエキスパート重みをオンデマンドでストリーミングし、全パラメータ数ではなく使用中のエキスパート数に比例したメモリ使用量でMoEモデルを実行できる。",
+    "プレルーター（事前ルーター）が次ステップのエキスパートロードを1ステップ先読み予測し、重みの読み込みとフォワードパスを並行実行してデコード速度を最大59%向上させる。",
+    "Recover-LoRAにより、int4量子化（4bit圧縮）済みベースモデルを凍結したままLoRAアダプターをFP16教師からの蒸留で学習し、精度劣化を抑制する。",
+    "OpenAI互換サーバーとして起動でき、既存のAPIクライアントからそのまま利用できる。",
+    "Mac（Apple Silicon）・iPhone・Android・Windowsのマルチプラットフォームに対応し、各OSネイティブの実装が提供されている。"
+  ],
+  "why": "推測: 35BパラメータのMoEモデル（スパース混合専門家モデル）がわずか2.9GBのRAMで動作するという衝撃的なメモリ効率が注目を集めた。高価なGPUを持たない一般ユーザーでも最新の大規模言語モデルをローカル実行できる可能性を示した点が評価されたと考えられる。",
+  "whoFor": "Apple SiliconのMacを持つ開発者やMLエンジニアで、大規模モデルをクラウドAPIなしにローカルで実行・評価したい人に適している。MoEアーキテクチャやモデル量子化を学んでいる学生にとっても、実装の参考として有用だ。",
+  "tech": [
+    "MoE（Mixture of Experts：混合専門家）アーキテクチャは全パラメータのうち一部の専門家のみを各トークン処理に使う仕組みで、edge0はその専門家重みをSSDからメモリにストリーミングすることでRAMを節約する。",
+    "プレルーター（prerouter）はTransformerの次のステップでどの専門家が選ばれるかを事前予測し、SSDからの読み込みを先行して開始することでレイテンシを隠蔽する。",
+    "int4量子化はモデルの重みを4ビット整数で表現してストレージと転送量を削減する手法で、edge0-35bは元の35BモデルをFP16換算で約23GBのディスクに圧縮する。",
+    "Python実装はApple SiliconのGPU・NPUを活用するMLXフレームワーク（Apple製）を使用し、MLX上でSSDオフロードとプレルーターを実装する。",
+    "transformers互換のAutoModel/AutoConfig/AutoEngine APIを提供し、モデルディレクトリのconfig.jsonからモデルティアを自動検出する設計になっている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "pythonディレクトリに移動して仮想環境を作成・アクティブにする。",
+      "パッケージをインストールする（dev・fetchオプション含む）。",
+      "モデルをダウンロードする（edge0-35bは約23GB、edge0-8bは約4.2GB必要）。",
+      "環境変数でモデルパスを設定する。",
+      "デモを実行するかOpenAI互換サーバーを起動する。"
+    ],
+    "commands": [
+      "cd python",
+      "python3.12 -m venv .venv && .venv/bin/pip install -e '.[dev,fetch]'",
+      ".venv/bin/python scripts/fetch_models.py --tier edge0-35b --target-dir models",
+      ".venv/bin/python scripts/fetch_models.py --tier edge0-8b --target-dir models",
+      "export EDGE0_35B_MODEL=$PWD/models/edge0-35b",
+      "export EDGE0_8B_MODEL=$PWD/models/edge0-8b",
+      "edge0 demo edge0-35b",
+      "edge0 serve edge0-35b",
+      "edge0 chat edge0-35b --prompt \"...\""
+    ]
+  }
+}

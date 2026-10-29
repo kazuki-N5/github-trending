@@ -1,0 +1,33 @@
+{
+  "repo": "unclebob/ub-mode",
+  "language": "",
+  "readme": true,
+  "oneLiner": "AIエージェントに規律あるコーディングを強制するスキル",
+  "features": [
+    "TDD（テスト駆動開発）と根本原因思考で「まず動かす」第1フェーズのガイドラインを提供する",
+    "CRAPスコア（循環的複雑度とカバレッジを掛け合わせた品質指標）を10以下に保つCrapperツールで品質計測する",
+    "コードの構造的な重複を0.8の類似度しきい値以下に抑えるDryerツールで重複を検出・排除する",
+    "ミューテーションテスト（ソースコードに意図的なバグを注入してテストの有効性を検証する手法）でデッドコードを発見する",
+    "小さく順序立てたコミットでの変更管理とAIのコンテキストウィンドウの適切な管理方法を指示する"
+  ],
+  "why": "推測: AIエージェントが書くコードは動くが品質が低くなりがちという問題への対策として注目されている。クリーンコードの提唱者として著名なUncle Bob（Robert C. Martin）が作成したスキルであり、ソフトウェアエンジニアリングの原則をAI開発ワークフローに組み込んだ実践的なアプローチとして評価されている。",
+  "whoFor": "Claude Code、Cursor等のAIコーディングエージェントを使ってコードを書くエンジニアで、技術的負債を抑えながら高品質なコードを維持したい人に向いている。専用の品質計測ツール（crapper、dryer、mutator）と組み合わせることでより効果的に活用できる。",
+  "tech": [
+    "CRAP（Change Risk Anti-Pattern）スコアを計算する：循環的複雑度（cyclomatic complexity、コードの分岐の多さ）とコードカバレッジを組み合わせた品質指標",
+    "構造的重複検出（structural duplication detection）でコードの意味的な類似性を判定し、DRY原則（Don't Repeat Yourself）違反を発見する",
+    "ミューテーションテスト（mutation testing）でソースコードに意図的なバグを注入し、テストスイートがそれを検出できるかを検証する",
+    "UMLビューワーでコンポーネント依存関係、カバレッジ、CRAPスコア、ミューテーションスコアをグラフィカルに可視化する"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubリポジトリからSKILL.mdをダウンロードする",
+      "SKILL.mdをエージェントのスキルディレクトリにub-mode/SKILL.mdとしてコピーする",
+      "エージェントで/ub-modeと入力してスキルを起動する"
+    ],
+    "commands": [
+      "cp SKILL.md ~/.claude/skills/ub-mode/SKILL.md",
+      "cp SKILL.md ~/.grok/skills/ub-mode/SKILL.md",
+      "cp SKILL.md ~/.cursor/skills/ub-mode/SKILL.md"
+    ]
+  }
+}

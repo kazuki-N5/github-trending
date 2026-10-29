@@ -1,0 +1,41 @@
+{
+  "repo": "milind-soni/OpenMausBot",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "Claude・Codex・GrokのCLIをチャットUIで動かすオープンソースAIボットチャットアプリ",
+  "features": [
+    "各ボットが独自のモデル・クラウドコンピューター・連携アプリを持つエージェントとして動作し、チャット内でシェルコマンドやファイル編集の承認・拒否を行える。",
+    "Composioを通じてGmail・Slack・GitHub・Notionなど500以上のアプリとOAuth連携でき、ボットがこれらをツールとして使用できる。",
+    "JevモデルによるAutoルームでは、宛先を指定しないメッセージを最適なボットに自動ルーティングする機能を持つ。",
+    "スケジュール・Webhook・アプリイベントのトリガーをサポートし、定期実行や外部イベント起因のタスク自動化が可能。",
+    "チャンネル（ワーク・プライベート・プロジェクト）で会話・共有指示・ワーキングフォルダを分離して管理できる。",
+    "ElevenLabs・Fish AudioなどのTTSプロバイダーや内蔵Mac音声でボットの返答を読み上げるボイス機能を持つ。"
+  ],
+  "why": "推測: Grok Bot・Meta Muse・OpenAI DotsなどのクローズドAIエージェントチャットアプリの完全オープンソース版として注目された。既存のclaude・codex・grok CLIをそのまま活用するため追加のAPIコスト設定が不要で、ローカルファーストによるプライバシー保護も評価されたと考えられる。",
+  "whoFor": "複数のAIエージェントCLIを一つのチャットUIで統合管理したい開発者や、AIボットに自動タスク実行させるワークフローを構築したいエンジニアに適している。また、ElectronとTypeScriptによるデスクトップアプリ開発や、AIエージェントのハーネス設計（複数のプロセスを管理・調整する仕組み）を学びたい学生にとっても参考になる。",
+  "tech": [
+    "アーキテクチャはReactフロントエンドアプリ（ポート5199）とハーネスサーバー（ポート8799）の2プロセス構成で、フロントはHTTPコマンドを送りSSEストリームで返答を受信する。",
+    "ドライバー層（server/drivers/）がClaude・Codex・Grokの各プロバイダーのプロトコルを統一イベントストリームに正規化し、NDJSON（1行1JSONのログ形式）でスレッドごとに記録する。",
+    "Electron（ChromiumとNode.jsを内包するデスクトップアプリフレームワーク）によりmacOS・Windows・Ubuntuで動作するネイティブアプリとして配布される。",
+    "Composio Sessions経由で500以上の外部サービスとのOAuth連携を管理し、ボットがツールとして外部APIを呼び出せる仕組みを提供する。",
+    "stdioのMCPサーバー（Model Context Protocolを使う外部ツール接続仕様）を内蔵しており、Claude DesktopやCursorなどのクライアントからボット管理・タスク実行ができる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンしてプロジェクトディレクトリに移動する。",
+      "pnpm installで依存関係をインストールする。",
+      "pnpm dev:serverでハーネスサーバーを起動する。",
+      "別のターミナルでpnpm devでアプリを起動してブラウザで開く。",
+      "Electronのデスクトップシェルも使う場合はpnpm dev:desktopを追加で実行する。"
+    ],
+    "commands": [
+      "git clone https://github.com/milind-soni/OpenMausBot && cd OpenMausBot",
+      "pnpm install",
+      "pnpm dev:server",
+      "pnpm dev",
+      "pnpm dev:desktop",
+      "npm install -g openmausbot",
+      "openmausbot"
+    ]
+  }
+}

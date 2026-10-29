@@ -1,0 +1,34 @@
+{
+  "repo": "indexable-inc/blaze",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "cargo互換のRustビルドツールで差分ビルドを最大92倍高速化",
+  "features": [
+    "変更された関数だけを再コンパイルしてすでにビルド済みのプログラムに書き込むインクリメンタルビルドを実現し、cargo buildより平均10〜24倍高速に再ビルドできる。",
+    "ファイル保存から約20msで実行中のプログラムに変更を反映するライブ編集モード（オプトイン）を提供する。",
+    "cargo fmt / clippy / doc / tree などの主要なcargoコマンドをblazeコマンドからそのまま実行できる。",
+    "stable（安定版）とcanary（最新ビルド）の2リリースチャンネルを持ち、用途に応じて選べる。"
+  ],
+  "why": "推測: Rustはコンパイル時間の長さが開発体験の課題として広く知られており、blazeは関数レベルの差分コンパイルという手法でその問題に正面から取り組んでいる。ripgrep・nushell・helixといった実際のOSSプロジェクトで計測した具体的なベンチマーク（helix: 2.15s→116ms）が公開され、実効性が示された点で注目を集めている。",
+  "whoFor": "Rustで中〜大規模プロジェクトを開発するエンジニアで、繰り返しのビルド待ち時間を削減したい人に向いている。フロントエンドのホットリロードのような即時フィードバックをRustアプリ開発でも得たい人や、CI/CDのビルド時間短縮を検討しているチームにも有用。",
+  "tech": [
+    "rust-analyzerの解析とMIR（Mid-level Intermediate Representation: Rustコンパイラの中間表現）を活用して変更された関数を特定し、salsa（インクリメンタル計算フレームワーク）で差分管理を行っている。",
+    "高速コード生成にはCranelift（LLVMより高速なコードジェネレーター）を使い、最適化ビルドにはLLVM（inkwell経由）を使い分けている。",
+    "自前のRustツールチェーン（blaze-2026-10-27）を使うため、プロジェクトのrust-toolchain.tomlの設定によらず動作し、#![feature(...)]を使うnightly機能も扱える。",
+    "実行中プログラムへのライブ編集は変更関数のみをobjectクレートで書き換えて既存プロセスに注入する仕組みで、数GBのメモリを使用するトレードオフがある。"
+  ],
+  "tryIt": {
+    "steps": [
+      "インストールスクリプトを実行してblazeをインストールする（初回起動時にRust nightlyツールチェーンを自動ダウンロード、約125〜160MB）。",
+      "既存のRustプロジェクトのディレクトリに移動する。",
+      "cargo の代わりにblazeコマンドを使ってビルドや実行を行う。"
+    ],
+    "commands": [
+      "curl -fsSL https://ix.dev/blaze | sh",
+      "blaze build",
+      "blaze run",
+      "blaze test",
+      "nix run github:indexable-inc/blaze#life"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JimLiu/baoyu-design | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛠️</div><div>
+<h1>JimLiu/baoyu-design</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-10-30（Trendshift 20位）</span>
+<a class="gh" href="https://github.com/JimLiu/baoyu-design" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="jimliu__baoyu-design" data-repo="JimLiu/baoyu-design" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ローカルのAIエージェントでClaude Designの機能を使えるスキル集</p>
+<h3>何ができるか</h3><ul><li>UIモックアップ、プロトタイプ、ワイヤーフレーム、ランディングページを自己完結HTMLとしてリポジトリ内に生成する</li><li>CSVやJSONデータセットからライブチャート付きダッシュボードを自動生成するclaude-dashboardスキルを提供する</li><li>スライドデッキをPDF・HTML・PowerPoint形式でエクスポートできるclaude-slidesスキルを含む</li><li>デザインシステムをトークン・ブランドドキュメント・コンポーネントプレビューとして構築するスキルを持つ</li><li>FigmaファイルをオフラインでデコードしてAIエージェントのデザイン素材として取り込める</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> claude.ai/designのデザイン機能をCursorやClaude Code等ローカルのAIエージェントでも使いたいという開発者の需要から注目されている。サブスクリプション不要でデザイン成果物がリポジトリ内に残る点が開発者フレンドリーとして評価されており、Claude Opus 5.5との組み合わせで高品質な出力が得られる点も特徴である。</p>
+<h3>どんな人に役立つか</h3><p>Claude CodeやCursor等のAIコーディングエージェントを使っているエンジニアで、UIデザイン作業も同じ環境で行いたい人に向いている。特にデザイナーのいない小規模チームや個人開発者、claude.ai/designの代替を探している人に有益である。</p>
+<h3>技術的なポイント</h3><ul><li>エージェントスキルとして実装されており、npx skills addコマンドでClaude Code・Cursor・Codex等に簡単にインストールできる</li><li>Node.js 20以上（ダッシュボードはNode 22以上）で動作するscripts/artifact.mjsがアーティファクトエディタを提供する</li><li>Playwright（ブラウザ自動化ライブラリ）とPptxGenJS CLIを組み合わせてPPTX（PowerPoint）エクスポートを実現する</li><li>localhostでHTTPサーバーを起動しブラウザプレビューを提供する仕組みを採用しており、claude.ai不要でローカル確認できる</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js 20以上をインストールする（ダッシュボードはNode 22以上が必要）</li><li>npx skills addコマンドでbaoyu-designをインストールする</li><li>エージェントにデザインタスクを説明するか、/baoyu-designで呼び出す</li><li>python3 -m http.serverコマンドでローカルサーバーを起動してブラウザでプレビューを確認する</li></ol>
+<pre><code>npx skills add JimLiu/baoyu-design
+npx skills update baoyu-design
+python3 -m http.server 4311 --directory designs</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-30.html#d-jimliu__baoyu-design">2026-10-30</a>
+<span class="src trendshift">Trendshift 20位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

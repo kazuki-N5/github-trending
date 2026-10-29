@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>impacifist/Windows-GPU-UNLOCK | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>impacifist/Windows-GPU-UNLOCK</h1>
+<div class="meta">
+<span>初掲載 2026-10-30（はてなブックマーク 7位）</span>
+<a class="gh" href="https://github.com/impacifist/Windows-GPU-UNLOCK" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="impacifist__windows-gpu-unlock" data-repo="impacifist/Windows-GPU-UNLOCK" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">RTX 3090などのGPUをWindowsとヘッドレス同時起動するUEFIロック解除ツール</p>
+<h3>何ができるか</h3><ul><li>RTX 3090 FE（デフォルト）をはじめRTX 3060/3070/3070 Ti/3090 Tiなど複数のNVIDIA GPUに対応したUEFIレベルのGPUロック解除を行う。</li><li>BIOSのPOST後にGPUのGOP（Graphics Output Protocol）を取り外してからWindowsを直接起動するヘッドレスブートパスを提供する（GOPはUEFI起動画面表示に使われる仕組み）。</li><li>USB接続のGPUを活用するヘッドレスUSBパスや、AMD内蔵GPUのディスプレイ出力を残したままにするレガシーUSBマニュアルパスも選択できる。</li><li>既存のプローブキャプチャデータを使ったオフラインの互換性チェッカーが含まれており、実際に試す前に対応確認ができる。</li><li>Windows-firstへの復元（-RestoreWindowsFirst）など複数の回復オプションが用意されており、起動失敗時のリカバリー手順も明記されている。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> NVIDIAのコンシューマー向けGPUには複数GPUの同時使用を制限するUEFIレベルのロックが存在するとされており、このツールはそのロックをUEFIブートプロセスへの介入によって回避しようとするコミュニティプロジェクトとして注目されている。FP16テンソル演算で約1.9倍のパフォーマンス向上を報告するベンチマーク証跡が含まれており、AI・機械学習用途でのGPU活用拡大を目指す研究者や自作PCユーザーの関心を集めている。</p>
+<h3>どんな人に役立つか</h3><p>特定のサポートされたNVIDIA RTX 30シリーズGPUと対応マザーボードを持ち、UEFIのブート設定変更に慣れた上級者向け。AI・機械学習用に自作PCのGPU性能を最大限引き出したい研究者・エンジニアにも向いているが、互換性は特定のカードとシステム構成に限定される。</p>
+<h3>技術的なポイント</h3><ul><li>PowerShellスクリプトとClang/LLDを使ってUEFIアプリケーションをビルドし、EFIシステムパーティションに配置してWindowsブートマネージャーより先に実行させる仕組み。</li><li>Pythonで実装されたオフライン互換性チェッカーがPCIデバイスのプローブキャプチャデータを解析し、GPU/PROM/PCI状態を検証する。</li><li>PCIブリッジチェーン探索とセグメント対応のLOCAL検出により、最大4台のNVIDIAディスプレイチャイルドデバイスをEDIDドライバーなしで認識できる。</li><li>GPUファミリー層（GA102/GA104/GA106共通）とカード固有の設定を分離した設計で、コミュニティ貢献による新機種プロファイル追加を容易にしている。</li></ul>
+<h3>試し方</h3>
+<ol><li>Secure BootをBIOSで無効化し、BitLockerが無効なことを確認する。</li><li>少なくとも1GiBのGPT FAT32 EFIシステムパーティションをUEFIシステムパーティション（例: Uドライブ）として用意する。</li><li>管理者権限のPowerShellからリポジトリルートでConfigure.psとbuild-unlock.ps1を実行してビルドする。</li><li>Headless.ps1 -Assets &#x27;.\assets&#x27; -Register でF8テストエントリを登録し、テスト成功後に-EnableAutomaticで自動ブートを有効にする。</li></ol>
+<pre><code>.\internal-boot\Configure.ps1 -UnlockDriveLetter U -WindowsEspGuid &#x27;YOUR-WINDOWS-ESP-GUID&#x27;
+.\research\headless\build-unlock.ps1 -Clang &#x27;C:\TOOLS\LLVM20\bin\clang.exe&#x27; -LldLink &#x27;C:\TOOLS\LLVM20\bin\lld-link.exe&#x27;
+.\internal-boot\Headless.ps1 -Assets &#x27;.\assets&#x27; -Register
+.\internal-boot\Headless.ps1 -EnableAutomatic -ConfirmedSuccess
+.\internal-boot\Headless.ps1 -RestoreWindowsFirst
+python -I research/profile/check-compatibility.py &quot;D:\RTX3090-UNLOCK&quot;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-30.html#h-impacifist__windows-gpu-unlock">2026-10-30 はてブ</a>
+<span class="src hatena">はてなブックマーク 7位</span><span>4 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

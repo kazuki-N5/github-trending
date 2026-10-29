@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edge0-AI/Edge0 | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>Edge0-AI/Edge0</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-30（Trendshift 5位）</span>
+<a class="gh" href="https://github.com/Edge0-AI/Edge0" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="edge0-ai__edge0" data-repo="Edge0-AI/Edge0" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">35BのMoEモデルをSSDストリーミングで約2.9GBのRAMで動かす推論フレームワーク</p>
+<h3>何ができるか</h3><ul><li>SSDからエキスパート重みをオンデマンドでストリーミングし、全パラメータ数ではなく使用中のエキスパート数に比例したメモリ使用量でMoEモデルを実行できる。</li><li>プレルーター（事前ルーター）が次ステップのエキスパートロードを1ステップ先読み予測し、重みの読み込みとフォワードパスを並行実行してデコード速度を最大59%向上させる。</li><li>Recover-LoRAにより、int4量子化（4bit圧縮）済みベースモデルを凍結したままLoRAアダプターをFP16教師からの蒸留で学習し、精度劣化を抑制する。</li><li>OpenAI互換サーバーとして起動でき、既存のAPIクライアントからそのまま利用できる。</li><li>Mac（Apple Silicon）・iPhone・Android・Windowsのマルチプラットフォームに対応し、各OSネイティブの実装が提供されている。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 35BパラメータのMoEモデル（スパース混合専門家モデル）がわずか2.9GBのRAMで動作するという衝撃的なメモリ効率が注目を集めた。高価なGPUを持たない一般ユーザーでも最新の大規模言語モデルをローカル実行できる可能性を示した点が評価されたと考えられる。</p>
+<h3>どんな人に役立つか</h3><p>Apple SiliconのMacを持つ開発者やMLエンジニアで、大規模モデルをクラウドAPIなしにローカルで実行・評価したい人に適している。MoEアーキテクチャやモデル量子化を学んでいる学生にとっても、実装の参考として有用だ。</p>
+<h3>技術的なポイント</h3><ul><li>MoE（Mixture of Experts：混合専門家）アーキテクチャは全パラメータのうち一部の専門家のみを各トークン処理に使う仕組みで、edge0はその専門家重みをSSDからメモリにストリーミングすることでRAMを節約する。</li><li>プレルーター（prerouter）はTransformerの次のステップでどの専門家が選ばれるかを事前予測し、SSDからの読み込みを先行して開始することでレイテンシを隠蔽する。</li><li>int4量子化はモデルの重みを4ビット整数で表現してストレージと転送量を削減する手法で、edge0-35bは元の35BモデルをFP16換算で約23GBのディスクに圧縮する。</li><li>Python実装はApple SiliconのGPU・NPUを活用するMLXフレームワーク（Apple製）を使用し、MLX上でSSDオフロードとプレルーターを実装する。</li><li>transformers互換のAutoModel/AutoConfig/AutoEngine APIを提供し、モデルディレクトリのconfig.jsonからモデルティアを自動検出する設計になっている。</li></ul>
+<h3>試し方</h3>
+<ol><li>pythonディレクトリに移動して仮想環境を作成・アクティブにする。</li><li>パッケージをインストールする（dev・fetchオプション含む）。</li><li>モデルをダウンロードする（edge0-35bは約23GB、edge0-8bは約4.2GB必要）。</li><li>環境変数でモデルパスを設定する。</li><li>デモを実行するかOpenAI互換サーバーを起動する。</li></ol>
+<pre><code>cd python
+python3.12 -m venv .venv &amp;&amp; .venv/bin/pip install -e &#x27;.[dev,fetch]&#x27;
+.venv/bin/python scripts/fetch_models.py --tier edge0-35b --target-dir models
+.venv/bin/python scripts/fetch_models.py --tier edge0-8b --target-dir models
+export EDGE0_35B_MODEL=$PWD/models/edge0-35b
+export EDGE0_8B_MODEL=$PWD/models/edge0-8b
+edge0 demo edge0-35b
+edge0 serve edge0-35b
+edge0 chat edge0-35b --prompt &quot;...&quot;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-30.html#d-edge0-ai__edge0">2026-10-30</a>
+<span class="src trendshift">Trendshift 5位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

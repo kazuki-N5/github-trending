@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orkas-AI/Orkas | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>Orkas-AI/Orkas</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-10-30（Trendshift 6位）</span>
+<a class="gh" href="https://github.com/Orkas-AI/Orkas" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="orkas-ai__orkas" data-repo="Orkas-AI/Orkas" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">目標を入力するとAIエージェントチームがタスク分解・実行するローカルファーストデスクトップアプリ</p>
+<h3>何ができるか</h3><ul><li>コマンダーが目標をToDoに分解し、16種の組み込みエージェントやClaude Code・Codexなどの外部CLIエージェントに適切なタスクを割り当てて実行を調整する。</li><li>プロジェクト機能でゴール・ルール・記憶・ファイルを保存でき、新しい会話でも以前の文脈を引き継いで作業を継続できる。</li><li>Gmail・Google Calendar・Sheets・Notion・Slack・Shopifyなどのコネクターにより、外部サービスとの連携タスクをエージェントが実行できる。</li><li>時間・日次・週次・月次のスケジュール自動化をサポートし、PC起動時やアプリ起動時に実行漏れをキャッチアップする機能も持つ。</li><li>アプリ内でローカルツール（Apps）を構築でき、APIキーなしで付属クレジットを使い始められるため初期設定コストが低い。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Claude CodeやCodexなどの既存AIエージェントCLIを統合してチームとして動かす「AIマルチエージェントオーケストレーター」としての役割が注目を集めた。ローカルファーストで会話・ファイル・プロバイダーキーがデバイス上に残るプライバシー設計と、MITライセンスによる無料公開が評価されたと考えられる。</p>
+<h3>どんな人に役立つか</h3><p>複数のAIエージェントを連携させて複雑なタスクを自動化したいエンジニアやプロダクトマネージャーに適している。また、Claude CodeやCodexの使い方を既に知っているが、それらをより高度なワークフローで組み合わせる方法を探している開発者にも有用だ。</p>
+<h3>技術的なポイント</h3><ul><li>dispatch_to（指定エージェントへの同期・非同期委託）、hand_off_to（制御の完全移譲）、run_worker（匿名サブタスク実行）の3種のタスクルーティング機構を持つ。</li><li>ライブラリ機能はSQLiteのベクトルインデックス（意味検索用データベース）にドキュメントを段落単位で格納し、ローカル実行の埋め込みモデルで類似検索を行う。</li><li>コンテキスト管理機構がモデルの入力上限に対してバジェット管理を行い、長いタスクではチェックポイントを作成してファイル読み書き・コマンド実行の記録を保持する。</li><li>Node 22.12以上（推奨Node 24 LTS）を必要とし、ElectronでmacOS・Windows・Linuxのデスクトップアプリとして動作する。</li><li>Claude・OpenAI・Gemini・DeepSeekなど複数のAIプロバイダーAPIキーを切り替えられるほか、OpenAI互換・Anthropic互換のローカルエンドポイントにも対応する。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンしてプロジェクトディレクトリに移動する。</li><li>macOS/Linuxはrun.sh、Windowsはrun.cmdを実行する（初回は依存関係のインストールに時間がかかる）。</li><li>起動後にSettings → AI ProvidersでAPIキーまたはOAuth認証を設定する。</li><li>パッケージアプリ版は公式サイトからダウンロードして起動するだけで始められる（500クレジット付き）。</li></ol>
+<pre><code>git clone https://github.com/Orkas-AI/Orkas.git
+cd Orkas
+./run.sh
+run.cmd
+npm run native:repair
+npm run native:check</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-30.html#d-orkas-ai__orkas">2026-10-30</a>
+<span class="src trendshift">Trendshift 6位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

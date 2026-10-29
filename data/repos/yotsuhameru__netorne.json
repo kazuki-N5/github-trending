@@ -1,0 +1,33 @@
+{
+  "repo": "YotsuhaMeru/NeToRne",
+  "language": "",
+  "readme": true,
+  "oneLiner": "CECH-ZD1J地デジチューナーをWindows/LinuxでTVTest/Mirakurunから使えるドライバ",
+  "features": [
+    "PlayStationの周辺機器CECH-ZD1JをWindowsでTVTest用BonDriverとして動作させる",
+    "LinuxでMirakurun（録画サーバーミドルウェア）から利用できるレシーバーを提供する",
+    "NixOSモジュールとNixパッケージを同梱しNixOSへの導入を簡略化する",
+    "ファームウェアにパッチを当ててデータ放送対応や非スクランブルTS出力を有効化できる",
+    "--checkオプションで実機を接続せずにファームウェアと設定ファイルの検証ができる"
+  ],
+  "why": "推測: 市販のB-CASカード対応地デジチューナーとして入手しやすいCECH-ZD1Jをソフトウェア的に活用しようとするコミュニティニーズに応えて開発された。AIを活用した録画・番組管理ツールとの連携を想定した「AI Slop torne driver」という名称から、AI連携への関心も伺える。",
+  "whoFor": "CECH-ZD1Jチューナーを所持しており、自宅録画サーバーを構築したいLinux・Windowsユーザー向け。特にNixOSを使っている録画マニアに適している。",
+  "tech": [
+    "WindowsではZadigを使いWinUSBドライバをデバイスに割り当て、DLLをTVTestフォルダに配置するだけで動作する",
+    "LinuxはglibuC 2.35以降とlibusb 1.0に依存し、--rootオプションでファームウェアフォルダを指定して起動する",
+    "Python 3.10以降のスクリプトでファームウェアにパッチを適用し、オリジナルを上書きせずfirmware/build/に新ファイルを生成する",
+    "スクランブル保持ファームウェアはLinux非対応のWindows専用実験的機能として提供される"
+  ],
+  "tryIt": {
+    "steps": [
+      "CECH-ZD1Jデバイス本体と復号済みファームウェア・モジュールファイルを用意する（配布なし・自己取得が必要）",
+      "GitHubのReleasesページからプラットフォーム別のファイルをダウンロードする",
+      "Windowsの場合はZadigでWinUSBドライバを割り当て、BonDriverのDLLとINIをTVTestフォルダにコピーする",
+      "Linuxの場合はレシーバーバイナリを--rootオプション付きで実行する"
+    ],
+    "commands": [
+      "./neterne-linux --root /path/to/firmware --check",
+      "./neterne-linux --root /path/to/firmware"
+    ]
+  }
+}

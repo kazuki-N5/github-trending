@@ -1,0 +1,291 @@
+{
+  "date": "2026-10-30",
+  "collectedAt": "2026-10-30T07:09:51+09:00",
+  "entries": [
+    {
+      "repo": "togg53192-cmd/jailbreaks",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "LIST OF ALL MY JAILBREAKS",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pbakaus/impeccable",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "The design language that makes your AI harness better at design.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "HKUDS/DeepTutor",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anhao/ai-pose-gallery-zh",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Edge0-AI/Edge0",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "Run 35B MoE models in ~2.5 GB of RAM. Weights stream from SSD; a trained router predicts loads a step ahead. Mac, iPhone, Android, Windows supported",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Orkas-AI/Orkas",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus Claude Code, Codex, OpenCode, OpenClaw and Hermes, with projects, scheduled automations and connectors. Free app for macOS & Windows; built-in models or your own keys.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "hmjz100/LinkSwift",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Renhuai123/ziwei-doushu",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "interplains/Zero-Breach-Toolkit",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "Free, open-source, offline checks for traces of known mercenary spyware. Works on Windows, macOS and Linux, Android phones and iPhone backups.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "milind-soni/OpenMausBot",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "morluto/rea",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "google/elephant-goldfish-model",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "Open-source skills for designing and reviewing software with AI agents",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Leonxlnx/taste-skill",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "unclebob/ub-mode",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "obra/superpowers",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "JetBrains/thinkrail",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Donchitos/Claude-Code-Game-Studios",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+      "language": "Shell",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "KnifeLemon/Filee",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "Free, open-source file converter. Convert 255 formats offline by drag & drop — images, PDF, Word, Excel, PowerPoint, HWP/HWPX, video, audio, e-books and archives. No upload, no Office needed.",
+      "language": "C#",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "JimLiu/baoyu-design",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "Run Claude Design locally as an Agent Skill — Cursor, Claude Code & more. Produce polished UI mockups, prototypes, decks & wireframes as self-contained HTML, without claude.ai/design. Best with Opus or Claude.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "yuiseki/map-from-scratch",
+        "source": "hatena",
+        "desc": "「Xをしたいから地図を作って」という依頼ごとに、その目的だけを満たす最小・最速の地図描画器をほぼゼロから作り、性能と正しさを計測して確かめる、 AI エージェントのためのスキルとハーネス",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 132,
+        "sourceRank": 1
+      },
+      {
+        "repo": "azu/chizu",
+        "source": "hatena",
+        "desc": "🧀 Chīzu is a small macOS default browser that sends links to a configured browser and, for Google Chrome/Dia/Firefox, a named profile.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 52,
+        "sourceRank": 2
+      },
+      {
+        "repo": "pfnet-research/pfpdf",
+        "source": "hatena",
+        "desc": "PDF typesetting tool for Markdown files",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 16,
+        "sourceRank": 3
+      },
+      {
+        "repo": "ysuito/RabbitWall",
+        "source": "hatena",
+        "desc": "RabbitWall is a web console for a Linux gateway that lets you observe traffic from an AI network and switch its Internet access on or off.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 11,
+        "sourceRank": 4
+      },
+      {
+        "repo": "YotsuhaMeru/NeToRne",
+        "source": "hatena",
+        "desc": "AI Slop torne driver",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 9,
+        "sourceRank": 5
+      },
+      {
+        "repo": "shibukawa/bdf",
+        "source": "hatena",
+        "desc": "BDF is a browser document-preview suite: it combines converters for many formats (Go/WASM), a browser renderer of about 23 KB gzipped, and a compact intermediate format.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 4,
+        "sourceRank": 6
+      },
+      {
+        "repo": "impacifist/Windows-GPU-UNLOCK",
+        "source": "hatena",
+        "desc": "Windows GPU UNLOCK: RTX3090 UEFI port, Korean no-reset Windows boot guide, verified source and benchmark evidence",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 4,
+        "sourceRank": 7
+      },
+      {
+        "repo": "maharmstone/moxnox",
+        "source": "hatena",
+        "desc": "NT-like POSIX-compatible operating system",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 8
+      },
+      {
+        "repo": "DilawarShafiq/nietzschian-debugger",
+        "source": "hatena",
+        "desc": "It won't fix your bug. It'll fix you. The debugger that hands the question back instead of the answer.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 9
+      },
+      {
+        "repo": "indexable-inc/blaze",
+        "source": "hatena",
+        "desc": "Incremental rust builds up to 92x faster than cargo/rustc",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 10
+      }
+    ]
+  }
+}

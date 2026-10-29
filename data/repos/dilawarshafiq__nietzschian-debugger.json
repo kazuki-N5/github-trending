@@ -1,0 +1,41 @@
+{
+  "repo": "DilawarShafiq/nietzschian-debugger",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "答えを教えない哲学者風デバッガー：バグでなく自分を直す",
+  "features": [
+    "バグの内容を入力すると答えを教えず、ソクラテス・ニーチェ・ツァラトゥストラのいずれかの視点で問いを返すデバッグセッションを開始できる。",
+    "ユーザーの状態に応じてアプローチを自動で切り替える：混乱には定義を迫るソクラテス、回避には前提を突くニーチェ、挫折にはリフレーミングするツァラトゥストラ。",
+    "未コミットのgit差分をコンテキストとして取り込み（--diff）、参照ファイルのコードも読み込んでセッションに活用できる。",
+    "指定したファイルの関数に対して出力を予測させ、実際に実行した結果と照合するpredictモードで自己採点できる。",
+    "ユーモアのあるコード批評を行うroastモード、過去セッションの成長推移グラフ表示、markdownへのセッションエクスポートができる。",
+    "Claude（デフォルト）のほかOpenAI・Gemini・Ollama等のローカルモデルも利用でき、APIキー不要のデモモードも備えている。"
+  ],
+  "why": "推測: AIにコードを貼り付ければすぐ答えが得られる時代に、あえて答えを返さずに思考を促すという逆張りのアプローチが注目を集めている。「AIへの依存でデバッグ力が退化する」という問題意識に共感したエンジニアが多く、学習支援ツールとしてユニークなポジションを確立している。",
+  "whoFor": "プログラミング学習中の学生やジュニアエンジニアで、自分でバグを解決する力を鍛えたい人に向いている。AIのコピペ回答に頼りすぎていると感じている人や、ソクラテス式問答（Socratic method）で思考を深める学習スタイルを試したい人にも有用。",
+  "tech": [
+    "PythonのAnthropic SDKを使ってClaude APIを呼び出し、OpenAI互換APIレイヤー経由で他社モデルにも対応している。",
+    "CLIフレームワークにClick、ターミナルUI（カラー・テーブル・バーグラフ）にRichを採用している。",
+    "predictコマンドは指定した関数を別プロセス・タイムアウト付きで実行し、LLMの予測結果と照合する安全な仕組みになっている。",
+    "セッションデータはローカルの.nietzschian/sessions/に保存され、長期セッションはコンテキスト管理のために自動要約される。"
+  ],
+  "tryIt": {
+    "steps": [
+      "pip install nietzschian-debugger でインストールする。",
+      "ANTHROPIC_API_KEY環境変数にAnthropicのAPIキーをセットする（デモモードはキー不要）。",
+      "nietzschian debug \"<バグの内容>\" でデバッグセッションを開始する。",
+      "solved と入力して解決済みとしてセッションを終了するか、I give up でヒントを1つもらって終了する。"
+    ],
+    "commands": [
+      "pip install nietzschian-debugger",
+      "pip install \"nietzschian-debugger[providers]\"",
+      "export ANTHROPIC_API_KEY=\"sk-ant-...\"",
+      "nietzschian debug \"<bug>\"",
+      "nietzschian debug --lens socrates \"<bug>\"",
+      "nietzschian debug --diff \"<problem>\"",
+      "nietzschian predict <file>",
+      "nietzschian roast <file>",
+      "nietzschian demo"
+    ]
+  }
+}

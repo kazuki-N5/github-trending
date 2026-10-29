@@ -1,0 +1,34 @@
+{
+  "repo": "JimLiu/baoyu-design",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "ローカルのAIエージェントでClaude Designの機能を使えるスキル集",
+  "features": [
+    "UIモックアップ、プロトタイプ、ワイヤーフレーム、ランディングページを自己完結HTMLとしてリポジトリ内に生成する",
+    "CSVやJSONデータセットからライブチャート付きダッシュボードを自動生成するclaude-dashboardスキルを提供する",
+    "スライドデッキをPDF・HTML・PowerPoint形式でエクスポートできるclaude-slidesスキルを含む",
+    "デザインシステムをトークン・ブランドドキュメント・コンポーネントプレビューとして構築するスキルを持つ",
+    "FigmaファイルをオフラインでデコードしてAIエージェントのデザイン素材として取り込める"
+  ],
+  "why": "推測: claude.ai/designのデザイン機能をCursorやClaude Code等ローカルのAIエージェントでも使いたいという開発者の需要から注目されている。サブスクリプション不要でデザイン成果物がリポジトリ内に残る点が開発者フレンドリーとして評価されており、Claude Opus 5.5との組み合わせで高品質な出力が得られる点も特徴である。",
+  "whoFor": "Claude CodeやCursor等のAIコーディングエージェントを使っているエンジニアで、UIデザイン作業も同じ環境で行いたい人に向いている。特にデザイナーのいない小規模チームや個人開発者、claude.ai/designの代替を探している人に有益である。",
+  "tech": [
+    "エージェントスキルとして実装されており、npx skills addコマンドでClaude Code・Cursor・Codex等に簡単にインストールできる",
+    "Node.js 20以上（ダッシュボードはNode 22以上）で動作するscripts/artifact.mjsがアーティファクトエディタを提供する",
+    "Playwright（ブラウザ自動化ライブラリ）とPptxGenJS CLIを組み合わせてPPTX（PowerPoint）エクスポートを実現する",
+    "localhostでHTTPサーバーを起動しブラウザプレビューを提供する仕組みを採用しており、claude.ai不要でローカル確認できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node.js 20以上をインストールする（ダッシュボードはNode 22以上が必要）",
+      "npx skills addコマンドでbaoyu-designをインストールする",
+      "エージェントにデザインタスクを説明するか、/baoyu-designで呼び出す",
+      "python3 -m http.serverコマンドでローカルサーバーを起動してブラウザでプレビューを確認する"
+    ],
+    "commands": [
+      "npx skills add JimLiu/baoyu-design",
+      "npx skills update baoyu-design",
+      "python3 -m http.server 4311 --directory designs"
+    ]
+  }
+}

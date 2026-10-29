@@ -1,0 +1,33 @@
+{
+  "repo": "pfnet-research/pfpdf",
+  "language": "",
+  "readme": true,
+  "oneLiner": "Markdownファイルから日本語組版に対応したPDFを生成するコマンドラインツール",
+  "features": [
+    "MarkdownファイルをPDFに変換し、表紙・目次・数式・コードハイライトを自動生成する",
+    "GitHub Flavored Markdown・TeXの数式・Mermaid図・BibTeX文献引用に対応する",
+    "複数の.mdファイルをファイル名順に結合して一つのPDFにまとめる",
+    "フロントマター（ファイル先頭のメタデータ）でタイトル・テンプレート・言語を設定できる",
+    "--doctorオプションで環境の依存関係を自動チェックできる"
+  ],
+  "why": "推測: 研究機関での論文・技術レポート作成にMarkdownを使いたいが、日本語組版（禁則処理・行間調整など）に対応したPDFを手軽に生成するツールが少なかったため、Preferred Networks Researchが公開した。",
+  "whoFor": "技術レポートや研究論文をMarkdownで書きたいエンジニア・研究者向け。日本語コンテンツをPDF化したいCI/CDパイプラインの構築にも利用できる。",
+  "tech": [
+    "内部でChromium（ヘッドレスブラウザ）を使いHTMLをPDFにレンダリングするため、初回実行時にChromiumを自動ダウンロードする",
+    "Vivliostyle CLI（PDFページ組版エンジン、AGPL-3.0ライセンス）を利用して日本語組版を実現している",
+    "npxで実行できるため、ローカルインストール不要でCI環境でも利用しやすい設計になっている",
+    "入力HTMLのスクリプト実行やローカルファイルへのアクセスが可能なため、信頼できるドキュメントのみに使用することが推奨される"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node.js 22.12.0以降をインストールする",
+      "npxコマンドで実行する（初回はChromiumをダウンロードするため時間がかかる）",
+      "Markdownファイルを用意してPDFに変換する"
+    ],
+    "commands": [
+      "npx @pfnet-research/pfpdf@latest",
+      "npx @pfnet-research/pfpdf@latest --doctor",
+      "npx @pfnet-research/pfpdf@latest input.md output.pdf"
+    ]
+  }
+}

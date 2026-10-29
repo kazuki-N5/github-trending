@@ -1,0 +1,39 @@
+{
+  "repo": "interplains/Zero-Breach-Toolkit",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Pegasusなど商用スパイウェアの痕跡をオフラインで検査する無料ツールキット",
+  "features": [
+    "Windows・macOS・Linuxのブラウザ履歴・ダウンロード・起動設定・DNS記録・シェル履歴などをスキャンし、既知スパイウェアの痕跡を検出する。",
+    "AndroidQFで収集したAndroid端末のデータや、ローカルのiPhoneバックアップ（暗号化済み含む）をスキャンしてモバイル端末も検査できる。",
+    "Pegasus・Predator・Graphite・Candiduなど29ソース由来の約1万2400件のIoC（侵害の痕跡インジケーター）を収録し、オフラインで照合する。",
+    "スキャンは読み取り専用で実行され、ネットワークリクエストを一切行わないためスキャン自体がデータ漏洩リスクになりにくい。",
+    "HTMLの可読レポートとJSONの機械可読レポートを出力でき、エビデンスバンドルのZIPも作成できる。"
+  ],
+  "why": "推測: ジャーナリスト・活動家・一般市民向けのスパイウェア自己診断ツールとして、専門的なフォレンジクス知識がなくても実行できるシンプルさが注目された。商用スパイウェアの被害が世界的に問題視されている中で、無料・オープンソース・オフライン動作という特性が評価されたと考えられる。",
+  "whoFor": "自分のデバイスがPegasusなどの商用スパイウェアに感染していないか確認したいジャーナリスト・NGO活動家・セキュリティ研究者に適している。また、デジタルフォレンジクス（デジタル証拠の調査・解析）やマルウェア検出の仕組みを学びたいセキュリティ系の学生にとっても実装の参考になる。",
+  "tech": [
+    "Python 3.8以上のみを要件とし（暗号化iPhoneバックアップにはcryptographyライブラリが追加で必要）、外部依存を最小化した設計でインストールが容易。",
+    "IoC（Indicators of Compromise：侵害の痕跡）とはIPアドレス・ドメイン・ファイルハッシュ・プロセス名などの既知攻撃の特徴値で、本ツールはこれら約1.24万件を端末データと照合する。",
+    "AndroidQFは端末のSMS・アプリ・システムログを収集するAndroid向けフォレンジクスツールで、そのZIP出力をzero-breach-toolkitが解析する。",
+    "GPG署名とSHA-256ハッシュによるリリース検証機能を持ち、build/bundle.pyで単一実行ファイルをソースから再現してハッシュ比較できる。",
+    "exit codeで「一致あり」「カバレッジ不完全」「エラー」を区別する設計で、CIパイプラインや自動化スクリプトからの呼び出しに対応する。"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubからZIPをダウンロードするかリポジトリをクローンする。",
+      "ターミナルでツールキットのフォルダを開く。",
+      "必要であれば--updateでインジケーターリストを最新化する（インターネット接続が必要なのはこの手順のみ）。",
+      "macOSはターミナルにフルディスクアクセスを付与してからスキャンを実行する。",
+      "ブラウザやチャットアプリを閉じてからスキャンを実行する。"
+    ],
+    "commands": [
+      "python -X utf8 scan/zero-breach-toolkit.py --update",
+      "python -X utf8 scan/zero-breach-toolkit.py",
+      "python -X utf8 scan/zero-breach-toolkit.py --quick",
+      "python -X utf8 scan/zero-breach-toolkit.py --phone FOLDER",
+      "python -X utf8 scan/zero-breach-toolkit.py --json report.json",
+      "python -X utf8 scan/zero-breach-toolkit.py --report report.txt"
+    ]
+  }
+}

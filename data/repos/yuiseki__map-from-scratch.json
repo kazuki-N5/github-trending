@@ -1,0 +1,36 @@
+{
+  "repo": "yuiseki/map-from-scratch",
+  "language": "",
+  "readme": true,
+  "oneLiner": "リクエストごとにゼロから最小・最速の地図描画器を生成するAIエージェント向けスキル",
+  "features": [
+    "リクエストの目的だけを満たす最小限の地図レンダラーをその都度生成する",
+    "Canvas 2D・WebGL2・C言語(EGL/GLES3)・マイコン向けCなど用途に応じた技術を自動選択する",
+    "spec.yamlに定義した要件・ベンチマーク・検証項目をハーネスが自動チェックする",
+    "Dockerだけで動作し、GPUベンチマークはNVIDIAコンテナランタイムを利用する",
+    "都道府県ピッカー・世界人口地図・3D都市モデル・OpenStreetMap惑星ビューなど24種類のサンプルを収録する"
+  ],
+  "why": "推測: 汎用地図ライブラリ（MapLibre GLなど）はファイルサイズや起動時間が大きく、AIエージェントが動的に地図を生成する用途には過剰である。同プロジェクトの計測では同等タスクでgzip後3.2KBvs279KB、初回描画159msvs770msという差が示されており、最小構成の優位性を実証するための実験的ハーネスとして注目されている。",
+  "whoFor": "地図可視化に興味があるWebフロントエンドエンジニアやAIエージェント開発者向け。WebGLやCanvas APIを低レイヤーから学びたい学生にも参考になる。",
+  "tech": [
+    "TypeScript製の依存ゼロCLIがヘッドレスChromiumをCDP（Chrome DevTools Protocol）で制御してベンチマークを取得する",
+    "ポリゴン三角形分割にearcut、3D点群圧縮にDracoデコーダのみを外部依存として採用する",
+    "GPUソフトウェアエミュレーション（SwiftShader）を拒否し実GPUでの計測を保証する",
+    "Natural Earth・USGS ComCat・OpenStreetMap(ODbLライセンス)のデータを利用する"
+  ],
+  "tryIt": {
+    "steps": [
+      "DockerとNVIDIAコンテナランタイムをインストールする",
+      "リポジトリをクローンする",
+      "bin/mfs imageでDockerイメージをビルドする",
+      "bin/mfs testで全サンプルのテストを実行する",
+      "bin/mfs serveでローカルサーバーを起動して結果を確認する"
+    ],
+    "commands": [
+      "bin/mfs image",
+      "bin/mfs test",
+      "bin/mfs bench",
+      "bin/mfs serve"
+    ]
+  }
+}

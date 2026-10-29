@@ -1,0 +1,34 @@
+{
+  "repo": "shibukawa/bdf",
+  "language": "",
+  "readme": true,
+  "oneLiner": "ブラウザ向け軽量ドキュメントプレビュースイート（約23KB）",
+  "features": [
+    "PDF・Word・PowerPoint・Excel・CSV・Parquet・HTML・Markdown・EPUBなど多数のドキュメント形式をブラウザでプレビューできる。",
+    "draw.io・Illustrator・Photoshopなどの図形・グラフィクスファイルにも対応している。",
+    "DXF・Jw_cad・SXFなどのCADフォーマット、GerberやKiCadなどの基板設計ファイルも変換できる。",
+    "MML・MIDI・MusicXML・MP3・FLAC・WAVなど音楽・音声ファイルをブラウザ内で再生できる。",
+    "Excel・Word・PowerPoint・PDFのフォームにデータを埋め込む帳票出力（バーコード・QRコード付き）が可能。",
+    "変換処理をサーバー側でもブラウザ側（WebAssembly）でも実行でき、ファイルをアップロードせずに変換できる。"
+  ],
+  "why": "推測: 従来のドキュメントプレビューはサーバーにLibreOfficeや無頭ブラウザを動かす必要があり、運用コストが高かった。BDFはGoで書かれた軽量コンバーターとCanvas 2D描画を組み合わせることでその依存を排除し、ブラウザだけで完結するプレビューを実現した点が注目される。",
+  "whoFor": "社内ポータルやSaaSにドキュメントプレビュー機能を組み込みたいWebアプリ開発者に向いている。サーバーレス構成や静的サイト上でも多形式のファイルを表示したいケースで特に有用。",
+  "tech": [
+    "Goでエンコーダーとデコーダーおよびフォーマット別コンバーターを実装しており、TinyGoでWebAssembly（WASM）にもビルドできる。",
+    "ブラウザ側ではCanvas 2D APIをWeb Worker上で使ってレンダリングを行い、メインスレッドをブロックしない設計になっている。",
+    "表形式データはApache Parquet形式でエンコードされ、効率的な列指向圧縮が活用されている（列指向：行単位ではなく列単位でデータを保存する形式）。",
+    "npmパッケージとしてデコーダー・レンダラー・ビューアーサーフェス・ブラウザ用コンバーターが提供されており、既存のWebフロントエンドに組み込みやすい。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Go 1.27以上とNode.jsをインストールする。",
+      "リポジトリをクローンしてデモを起動する。",
+      "ブラウザで http://127.0.0.1:8765/examples/viewer/.out/?src=/report.bdf を開く。"
+    ],
+    "commands": [
+      "go run ./cmd/bdf generate report.pptx report.bdf",
+      "go run ./cmd/bdf ls report.bdf",
+      "npm ci && npm run demo"
+    ]
+  }
+}

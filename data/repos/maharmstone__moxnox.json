@@ -1,0 +1,32 @@
+{
+  "repo": "maharmstone/moxnox",
+  "language": "C++",
+  "readme": true,
+  "oneLiner": "趣味で作られたNT設計のPOSIX互換自作OS（約13万行のC++）",
+  "features": [
+    "WindowsのNTカーネルに似たシステムコールインターフェースを持ちながら、PEバイナリ（.exe/.dll）で動作するオリジナルOSカーネルを提供する。",
+    "POSIX 2024の約642関数を実装し、forkを含むUNIX系プログラムをリコンパイルして動かせる。",
+    "bash・coreutils・git・vim・python・gcc（amd64のみ）・llvmなど多数のGNUツールやOSSソフトウェアをポートとして同梱している。",
+    "amd64（x86-64-v3以降）とaarch64（Raspberry Pi 5など）の2アーキテクチャをサポートする。",
+    "QEMUイメージが公開されており、実機なしでもKVM仮想マシン上で試せる。",
+    "btrfsファイルシステム上で動作し、OS自身をOS上でセルフホストビルドできる。"
+  ],
+  "why": "推測: WindowsのNTアーキテクチャはブラックボックスになりがちだが、MoxnoxはそのNTライクな設計をC++でゼロから再実装して公開しており、OSの内部構造を学ぶ貴重な実例として注目されている。約13万行の本格的な実装でありながら個人趣味プロジェクトという点も話題になっている。",
+  "whoFor": "OSの内部実装や設計に興味があるCS学生・OS開発愛好家に向いている。NTアーキテクチャとPOSIXの両立がどのように実現されるかを学びたい人や、QEMUで実際に動かしながらカーネルの動作を体験したい人にも有用。本番運用や業務利用には向かない。",
+  "tech": [
+    "C++モジュールを活用しており、ビルドにはCMakeとNinjaが必須。GCCではなくClangベースのクロスコンパイラをDockerイメージとして提供している。",
+    "C++例外処理にはWindowsのSEH（Structured Exception Handling: 構造化例外処理）を採用し、POSIXシグナルはAPC（Asynchronous Procedure Call: 非同期プロシージャ呼び出し）で配信している。",
+    "Linuxのdentryキャッシュ（ファイルパス解決高速化の仕組み）・large folios・物理メモリマッピング・evdev（入力デバイス抽象化）などのアイデアを取り込んでいる。",
+    "virtio-net/block/gpu/input・NVMe・SATA・USB HID・RTL8168/8125などの各種デバイスドライバーをOS自身に実装している（virtio: 仮想マシン向け高効率I/Oフレームワーク）。"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubリリースページからmoxnox-amd64-1.0.img.gzとmoxnox-kernel-amd64-1.0.efiをダウンロードする。",
+      "gunzip でイメージを解凍する。",
+      "QEMUで以下のコマンドを実行して起動する。"
+    ],
+    "commands": [
+      "qemu-system-x86_64 -M q35 -enable-kvm -cpu host -m 1024 -smp cores=4,threads=1 -kernel moxnox-kernel-amd64-1.0.efi -append \"root=/dev/sda\" -device ich9-ahci,id=ahci -drive id=disk,file=moxnox-amd64-1.0.img,if=none -device ide-hd,drive=disk,bus=ahci.0 -nic user,model=virtio-net-pci -device qemu-xhci -device usb-kbd,id=kbd -device usb-tablet,id=tablet -serial stdio"
+    ]
+  }
+}

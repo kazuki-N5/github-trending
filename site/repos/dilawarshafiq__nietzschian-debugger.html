@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DilawarShafiq/nietzschian-debugger | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>DilawarShafiq/nietzschian-debugger</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-30（はてなブックマーク 9位）</span>
+<a class="gh" href="https://github.com/DilawarShafiq/nietzschian-debugger" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="dilawarshafiq__nietzschian-debugger" data-repo="DilawarShafiq/nietzschian-debugger" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">答えを教えない哲学者風デバッガー：バグでなく自分を直す</p>
+<h3>何ができるか</h3><ul><li>バグの内容を入力すると答えを教えず、ソクラテス・ニーチェ・ツァラトゥストラのいずれかの視点で問いを返すデバッグセッションを開始できる。</li><li>ユーザーの状態に応じてアプローチを自動で切り替える：混乱には定義を迫るソクラテス、回避には前提を突くニーチェ、挫折にはリフレーミングするツァラトゥストラ。</li><li>未コミットのgit差分をコンテキストとして取り込み（--diff）、参照ファイルのコードも読み込んでセッションに活用できる。</li><li>指定したファイルの関数に対して出力を予測させ、実際に実行した結果と照合するpredictモードで自己採点できる。</li><li>ユーモアのあるコード批評を行うroastモード、過去セッションの成長推移グラフ表示、markdownへのセッションエクスポートができる。</li><li>Claude（デフォルト）のほかOpenAI・Gemini・Ollama等のローカルモデルも利用でき、APIキー不要のデモモードも備えている。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIにコードを貼り付ければすぐ答えが得られる時代に、あえて答えを返さずに思考を促すという逆張りのアプローチが注目を集めている。「AIへの依存でデバッグ力が退化する」という問題意識に共感したエンジニアが多く、学習支援ツールとしてユニークなポジションを確立している。</p>
+<h3>どんな人に役立つか</h3><p>プログラミング学習中の学生やジュニアエンジニアで、自分でバグを解決する力を鍛えたい人に向いている。AIのコピペ回答に頼りすぎていると感じている人や、ソクラテス式問答（Socratic method）で思考を深める学習スタイルを試したい人にも有用。</p>
+<h3>技術的なポイント</h3><ul><li>PythonのAnthropic SDKを使ってClaude APIを呼び出し、OpenAI互換APIレイヤー経由で他社モデルにも対応している。</li><li>CLIフレームワークにClick、ターミナルUI（カラー・テーブル・バーグラフ）にRichを採用している。</li><li>predictコマンドは指定した関数を別プロセス・タイムアウト付きで実行し、LLMの予測結果と照合する安全な仕組みになっている。</li><li>セッションデータはローカルの.nietzschian/sessions/に保存され、長期セッションはコンテキスト管理のために自動要約される。</li></ul>
+<h3>試し方</h3>
+<ol><li>pip install nietzschian-debugger でインストールする。</li><li>ANTHROPIC_API_KEY環境変数にAnthropicのAPIキーをセットする（デモモードはキー不要）。</li><li>nietzschian debug &quot;&lt;バグの内容&gt;&quot; でデバッグセッションを開始する。</li><li>solved と入力して解決済みとしてセッションを終了するか、I give up でヒントを1つもらって終了する。</li></ol>
+<pre><code>pip install nietzschian-debugger
+pip install &quot;nietzschian-debugger[providers]&quot;
+export ANTHROPIC_API_KEY=&quot;sk-ant-...&quot;
+nietzschian debug &quot;&lt;bug&gt;&quot;
+nietzschian debug --lens socrates &quot;&lt;bug&gt;&quot;
+nietzschian debug --diff &quot;&lt;problem&gt;&quot;
+nietzschian predict &lt;file&gt;
+nietzschian roast &lt;file&gt;
+nietzschian demo</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-30.html#h-dilawarshafiq__nietzschian-debugger">2026-10-30 はてブ</a>
+<span class="src hatena">はてなブックマーク 9位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>interplains/Zero-Breach-Toolkit | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>interplains/Zero-Breach-Toolkit</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-30（Trendshift 9位）</span>
+<a class="gh" href="https://github.com/interplains/Zero-Breach-Toolkit" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="interplains__zero-breach-toolkit" data-repo="interplains/Zero-Breach-Toolkit" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Pegasusなど商用スパイウェアの痕跡をオフラインで検査する無料ツールキット</p>
+<h3>何ができるか</h3><ul><li>Windows・macOS・Linuxのブラウザ履歴・ダウンロード・起動設定・DNS記録・シェル履歴などをスキャンし、既知スパイウェアの痕跡を検出する。</li><li>AndroidQFで収集したAndroid端末のデータや、ローカルのiPhoneバックアップ（暗号化済み含む）をスキャンしてモバイル端末も検査できる。</li><li>Pegasus・Predator・Graphite・Candiduなど29ソース由来の約1万2400件のIoC（侵害の痕跡インジケーター）を収録し、オフラインで照合する。</li><li>スキャンは読み取り専用で実行され、ネットワークリクエストを一切行わないためスキャン自体がデータ漏洩リスクになりにくい。</li><li>HTMLの可読レポートとJSONの機械可読レポートを出力でき、エビデンスバンドルのZIPも作成できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> ジャーナリスト・活動家・一般市民向けのスパイウェア自己診断ツールとして、専門的なフォレンジクス知識がなくても実行できるシンプルさが注目された。商用スパイウェアの被害が世界的に問題視されている中で、無料・オープンソース・オフライン動作という特性が評価されたと考えられる。</p>
+<h3>どんな人に役立つか</h3><p>自分のデバイスがPegasusなどの商用スパイウェアに感染していないか確認したいジャーナリスト・NGO活動家・セキュリティ研究者に適している。また、デジタルフォレンジクス（デジタル証拠の調査・解析）やマルウェア検出の仕組みを学びたいセキュリティ系の学生にとっても実装の参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>Python 3.8以上のみを要件とし（暗号化iPhoneバックアップにはcryptographyライブラリが追加で必要）、外部依存を最小化した設計でインストールが容易。</li><li>IoC（Indicators of Compromise：侵害の痕跡）とはIPアドレス・ドメイン・ファイルハッシュ・プロセス名などの既知攻撃の特徴値で、本ツールはこれら約1.24万件を端末データと照合する。</li><li>AndroidQFは端末のSMS・アプリ・システムログを収集するAndroid向けフォレンジクスツールで、そのZIP出力をzero-breach-toolkitが解析する。</li><li>GPG署名とSHA-256ハッシュによるリリース検証機能を持ち、build/bundle.pyで単一実行ファイルをソースから再現してハッシュ比較できる。</li><li>exit codeで「一致あり」「カバレッジ不完全」「エラー」を区別する設計で、CIパイプラインや自動化スクリプトからの呼び出しに対応する。</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubからZIPをダウンロードするかリポジトリをクローンする。</li><li>ターミナルでツールキットのフォルダを開く。</li><li>必要であれば--updateでインジケーターリストを最新化する（インターネット接続が必要なのはこの手順のみ）。</li><li>macOSはターミナルにフルディスクアクセスを付与してからスキャンを実行する。</li><li>ブラウザやチャットアプリを閉じてからスキャンを実行する。</li></ol>
+<pre><code>python -X utf8 scan/zero-breach-toolkit.py --update
+python -X utf8 scan/zero-breach-toolkit.py
+python -X utf8 scan/zero-breach-toolkit.py --quick
+python -X utf8 scan/zero-breach-toolkit.py --phone FOLDER
+python -X utf8 scan/zero-breach-toolkit.py --json report.json
+python -X utf8 scan/zero-breach-toolkit.py --report report.txt</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-30.html#d-interplains__zero-breach-toolkit">2026-10-30</a>
+<span class="src trendshift">Trendshift 9位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

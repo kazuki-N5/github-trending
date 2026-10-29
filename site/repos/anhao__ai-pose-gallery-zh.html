@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>anhao/ai-pose-gallery-zh | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🖼️</div><div>
+<h1>anhao/ai-pose-gallery-zh</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-30（Trendshift 4位）</span>
+<a class="gh" href="https://github.com/anhao/ai-pose-gallery-zh" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="anhao__ai-pose-gallery-zh" data-repo="anhao/ai-pose-gallery-zh" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">1439枚の人体ポーズ参考画像を中国語UIで閲覧できる零依存静的ギャラリー</p>
+<h3>何ができるか</h3><ul><li>4つの体系・26カテゴリ・288ポーズ・1439枚の画像を収録し、正面・斜め・側面・俯瞰・仰角の5視点で閲覧できる。</li><li>ポーズ名・番号・ID・カテゴリキーワードによる全文検索と、視点・動作分類の組み合わせフィルタリングができる。</li><li>グループ表示と1枚ずつのブラウズ両モードに対応し、サムネイルをクリックすると原寸PNG（900×1200）のライトボックスが開く。</li><li>キーボードの左右キーで視点切り替え、上下キーでポーズ切り替え、Escで閉じるなどキーボードナビゲーションをサポートする。</li><li>JSONデータと翻訳スクリプトがすべて公開されており、自分で中国語訳を修正・再生成してデプロイできる。</li><li>Cloudflare Pagesへの自動デプロイに対応しており、build.shで必要ファイルだけをdistに出力するためファイル数制限内に収まる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIイラスト生成の普及でポーズ参考資料の需要が高まる中、元の日本語サイトを中国語話者が使いやすいよう完全漢化した点が評価された。外部ライブラリ不要の単一HTMLで動作するため、フォークしてすぐに自分のドメインで公開できる手軽さも注目を集めた可能性がある。</p>
+<h3>どんな人に役立つか</h3><p>AIイラスト・3Dモデリング・写真撮影でポーズ参考を探している中国語話者のクリエイターに役立つ。また、静的サイト構築やCloudflare Pagesへのデプロイを学びたいフロントエンド初学者にとっても、依存関係なしで動くシンプルな実装例として参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>index.html1ファイルで完結する零依存（フレームワーク・ライブラリなし）の静的ウェブアプリで、JavaScriptのfetch APIでpose-zh.jsonを読み込む設計。</li><li>i18n.pyとapply_translation.pyの翻訳スクリプトにより、日本語→中国語の323件の対訳辞書を元データに自動適用してpose-zh.jsonを生成する。</li><li>download.pyは48スレッドの並列ダウンロードと断点再開をサポートし、約660MBの画像を効率よく取得できる。</li><li>Cloudflare Pagesのキャッシュ戦略（_headers）で画像ディレクトリに1年間の強キャッシュを設定し、配信コストを削減する。</li><li>JSON-LDによる構造化データとOpen Graph / Twitter Cardメタタグで、SNSシェア時のプレビューとSEOを強化する。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンまたはZIPでダウンロードする。</li><li>プロジェクトディレクトリでPython内蔵HTTPサーバーを起動する。</li><li>ブラウザで http://127.0.0.1:8000 を開く。</li><li>画像ファイルが必要な場合はdownload.pyを実行して約660MBの画像をダウンロードする。</li></ol>
+<pre><code>python3 -m http.server 8000
+python download.py
+python scripts/apply_translation.py
+python scripts/verify.py
+bash scripts/build.sh
+npx wrangler pages deploy dist --project-name ai-pose-gallery-zh</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-30.html#d-anhao__ai-pose-gallery-zh">2026-10-30</a>
+<span class="src trendshift">Trendshift 4位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
