@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>microsoft/TokenEconomizer | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧩</div><div>
+<h1>microsoft/TokenEconomizer</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-10-31（Trendshift 5位）</span>
+<a class="gh" href="https://github.com/microsoft/TokenEconomizer" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="microsoft__tokeneconomizer" data-repo="microsoft/TokenEconomizer" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">コーディングエージェントの実行コストをブラックボックスのまま自動削減するプラグイン</p>
+<h3>何ができるか</h3><ul><li>マイクロスキル機能により、リポジトリ固有の知識（テストコマンドなど）を複数セッションから自動学習し、次回セッション冒頭で共有することで無駄な試行を削減する。</li><li>ツール剪定（Tool Pruning）により、複数のプロンプトやセッションにわたって使われないツールをエージェントの設定から自動除去し、コンテキスト消費を減らす。</li><li>ループガード（Loop Guard）により、エージェントが同じ処理を繰り返している場合に判定モデルが検知し、リダイレクト通知を送って無限ループによる無駄なコストを防ぐ。</li><li>Claude Code・Codex・GitHub Copilot CLI・Piなど複数のコーディングエージェントに対応しており、エージェント本体のコードを変更せずにプラグインとして導入できる。</li><li>SWE-Benchの評価では5つのエージェント・モデルの組み合わせで平均18.4〜30.9%のコスト削減を達成し、うち4つでPass@1スコアも向上した。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> LLMを使ったコーディングエージェントの利用コストが急増する中、エージェント本体を改変せずコストを削減できる手法として注目を集めていると考えられる。UC Berkeley・Microsoft Research・Microsoft Securityの共同研究としてarXivに論文（2610.22732）が公開されており、学術的な裏付けがあることも関心を集める要因と推測される。<span class="guess">推測</span> 実際のSWE-Benchベンチマークで精度を落とさずコスト削減を示した実証結果が、エンジニアや研究者にとって実用性の高いツールとして評価されているとみられる。</p>
+<h3>どんな人に役立つか</h3><p>Claude CodeやGitHub Copilot CLIなどのAIコーディングエージェントを業務や研究で使いながらAPIコストを抑えたい開発者向け。エージェントの動作原理を変えずにコスト最適化を行いたいチームや組織にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>Python 3.10以上で動作し、学習データは~/.tokeneconomizerディレクトリにローカル保存されるため外部サービスへのデータ送信が不要。</li><li>ツール剪定はエージェントが持つ設定ファイルを直接操作することで実現しており、restore用の1コマンドで元の状態に戻せる。</li><li>ループガード判定には別途モデル呼び出しを行うため、プラグイン自体のモデル呼び出しコストも計測結果に含まれた上でのコスト削減効果が報告されている。</li><li>マイクロスキルはデフォルト無効（追加モデル呼び出しが発生するため）で、TE_DISABLE=1などの環境変数やconfig setコマンドで各機能の有効・無効を切り替えられる。</li></ul>
+<h3>試し方</h3>
+<ol><li>各エージェントのプラグインマーケットプレイスからインストールする（opencode の場合はリポジトリをクローンしてファイルをリンク）。</li><li>Python 3.10以上がインストールされていることを確認する。</li><li>通常通りエージェントを使用する。プラグインが自動的に動作し、~/.tokeneconomizerにデータを蓄積する。</li><li>設定を変更する場合はconfig setコマンドまたはTE_DISABLE=1などの環境変数を使用する。</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-31.html#d-microsoft__tokeneconomizer">2026-10-31</a>
+<span class="src trendshift">Trendshift 5位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lightpanda-io/browser | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>lightpanda-io/browser</h1>
+<div class="meta"><span>Zig</span>
+<span>初掲載 2026-10-31（Trendshift 20位）</span>
+<a class="gh" href="https://github.com/lightpanda-io/browser" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="lightpanda-io__browser" data-repo="lightpanda-io/browser" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントと自動化向けに設計された軽量ヘッドレスブラウザ</p>
+<h3>何ができるか</h3><ul><li>HTMLページのフェッチとMarkdown・PNG・PDF・構造化データへの変換が可能。</li><li>CDP（Chrome DevTools Protocol）サーバーを起動してPuppeteerやPlaywrightから操作できる。</li><li>LLMと連携するエージェントモードを搭載し、自然言語やスラッシュコマンドでブラウザを操作できる。</li><li>MCPサーバーとして動作し、AIエージェントからPandaScript（ブラウザ操作のJavaScript）を実行できる。</li><li>ヘッドレスChromeと比較して約16倍少ないメモリ使用量と約9倍の速度を実現している。</li><li>ネットワーク傍受、広告ブロック、カスタムヘッダー、プロキシなどの高度な機能に対応している。</li></ul>
+<h3>なぜ注目されているか</h3><p>AIエージェントによるWeb操作の需要が急増する中、ChromiumベースのヘッドレスブラウザはメモリやCPUの消費が大きく、スケールしにくいという課題があった。<span class="guess">推測</span> LLMエージェントフレームワークとの統合を念頭に置いたMCPサーバー機能や、セッションのエクスポート・再生機能が注目を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>AIエージェントの開発者やWebスクレイピング・自動化エンジニアが主な対象で、特に大量のページを処理するクローラーや、LLMにブラウザ操作をさせたいシステム構築者に有用。</p>
+<h3>技術的なポイント</h3><ul><li>Zig言語でゼロからスクラッチ実装されており、ChromiumやWebKitのコードベースには依存していない。</li><li>JavaScriptエンジンにV8を採用し、HTTPクライアントにlibcurl、HTMLパーサーにhtml5everを使用している。</li><li>CDP（Chrome DevTools Protocol）とWebDriver BiDiの両プロトコルをサポートし、既存のテストフレームワークと互換性がある。</li><li>エージェントが実行したブラウザ操作をPandaScriptとして保存・再生でき、LLMなしで再現実行が可能。</li></ul>
+<h3>試し方</h3>
+<ol><li>Homebrew、AUR、Nixまたは公式ページからバイナリをダウンロードしてインストールする。</li><li>ページをフェッチして内容を確認する。</li><li>CDPサーバーを起動してPuppeteerやPlaywrightから接続する。</li></ol>
+<pre><code>./lightpanda fetch --dump markdown https://example.com
+./lightpanda serve
+./lightpanda agent</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-31.html#d-lightpanda-io__browser">2026-10-31</a>
+<span class="src trendshift">Trendshift 20位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

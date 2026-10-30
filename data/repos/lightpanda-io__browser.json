@@ -1,0 +1,34 @@
+{
+  "repo": "lightpanda-io/browser",
+  "language": "Zig",
+  "readme": true,
+  "oneLiner": "AIエージェントと自動化向けに設計された軽量ヘッドレスブラウザ",
+  "features": [
+    "HTMLページのフェッチとMarkdown・PNG・PDF・構造化データへの変換が可能。",
+    "CDP（Chrome DevTools Protocol）サーバーを起動してPuppeteerやPlaywrightから操作できる。",
+    "LLMと連携するエージェントモードを搭載し、自然言語やスラッシュコマンドでブラウザを操作できる。",
+    "MCPサーバーとして動作し、AIエージェントからPandaScript（ブラウザ操作のJavaScript）を実行できる。",
+    "ヘッドレスChromeと比較して約16倍少ないメモリ使用量と約9倍の速度を実現している。",
+    "ネットワーク傍受、広告ブロック、カスタムヘッダー、プロキシなどの高度な機能に対応している。"
+  ],
+  "why": "AIエージェントによるWeb操作の需要が急増する中、ChromiumベースのヘッドレスブラウザはメモリやCPUの消費が大きく、スケールしにくいという課題があった。推測: LLMエージェントフレームワークとの統合を念頭に置いたMCPサーバー機能や、セッションのエクスポート・再生機能が注目を集めていると考えられる。",
+  "whoFor": "AIエージェントの開発者やWebスクレイピング・自動化エンジニアが主な対象で、特に大量のページを処理するクローラーや、LLMにブラウザ操作をさせたいシステム構築者に有用。",
+  "tech": [
+    "Zig言語でゼロからスクラッチ実装されており、ChromiumやWebKitのコードベースには依存していない。",
+    "JavaScriptエンジンにV8を採用し、HTTPクライアントにlibcurl、HTMLパーサーにhtml5everを使用している。",
+    "CDP（Chrome DevTools Protocol）とWebDriver BiDiの両プロトコルをサポートし、既存のテストフレームワークと互換性がある。",
+    "エージェントが実行したブラウザ操作をPandaScriptとして保存・再生でき、LLMなしで再現実行が可能。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Homebrew、AUR、Nixまたは公式ページからバイナリをダウンロードしてインストールする。",
+      "ページをフェッチして内容を確認する。",
+      "CDPサーバーを起動してPuppeteerやPlaywrightから接続する。"
+    ],
+    "commands": [
+      "./lightpanda fetch --dump markdown https://example.com",
+      "./lightpanda serve",
+      "./lightpanda agent"
+    ]
+  }
+}

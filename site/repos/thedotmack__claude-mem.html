@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>thedotmack/claude-mem | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧠</div><div>
+<h1>thedotmack/claude-mem</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-10-31（Trendshift 3位）</span>
+<a class="gh" href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="thedotmack__claude-mem" data-repo="thedotmack/claude-mem" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントのセッション間でコンテキストを永続化する記憶圧縮システム。</p>
+<h3>何ができるか</h3><ul><li>セッション中のツール使用を観察してAIが意味的なサマリーを生成し、将来のセッションに自動的に引き継げる。</li><li>SessionStart・PostToolUse・Stopなど複数のライフサイクルフック（セッションの各段階で自動実行される処理）でエージェントの行動をキャプチャする。</li><li>MCPツール（search・timeline・get_observations）によりセッション横断の記憶をハイブリッド検索（テキスト＋ベクトル）できる。</li><li>`&lt;private&gt;` タグで機密情報をコンテキスト注入から除外し、プライバシーを守れる。</li><li>Claude Code以外にもOpenCode・DeepSeek Harness・Gemini CLIなど多くのAIエージェントと連携できる。</li><li>cmem.aiへのクラウド同期機能により複数端末間で記憶を共有できる。</li></ul>
+<h3>なぜ注目されているか</h3><p>AIコーディングエージェントはセッションをまたぐとコンテキストが失われ、毎回同じ説明を繰り返す必要があるという課題がある。<span class="guess">推測</span> Claude Code・OpenCode・Codexなど多くのエージェントが普及するにつれ、セッション間記憶の欠如が実用上の大きなボトルネックになっていると考えられる。<span class="guess">推測</span> LLMのコンテキストウィンドウ節約（約10倍のトークン削減を主張）という経済的メリットも注目を集める要因と思われる。</p>
+<h3>どんな人に役立つか</h3><p>Claude CodeやOpenCodeなどのAIコーディングエージェントを日常的に使う開発者で、セッションをまたいでプロジェクトの文脈を引き継ぎたい人に向いている。複数のAIエージェントを横断的に使い分けるエンジニアにも有用である。</p>
+<h3>技術的なポイント</h3><ul><li>TypeScriptで実装されたライフサイクルフック（Claude Codeプラグインシステム対応）により、ツール呼び出しの前後やセッション開始・終了時に記憶の読み書きを行う。</li><li>SQLiteデータベース（軽量なファイルベースDB）でセッション・観察・サマリーをローカル保存し、Chromaベクトルデータベース（意味的類似検索用）でセマンティック検索を実現している。</li><li>Bunで管理されるローカルワーカーサービスがHTTP APIとWebビューアを提供し、蓄積された記憶を管理・閲覧できる。</li><li>3層ワークフロー（search→timeline→get_observations）で段階的にコンテキストを絞り込み、不要なトークン消費を抑えて約10倍のトークン節約を実現すると主張している。</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js 20以上がインストールされていることを確認する</li><li>ターミナルで `npx claude-mem install` を実行するか、Claude Code内で `/plugin marketplace add thedotmack/claude-mem` を実行する</li><li>Claude Code内で `/plugin install claude-mem` を実行してプラグインを有効化する</li><li>サインインして30日間の無料トライアルを開始するか、`--provider` フラグでオフライン利用を選択する</li></ol>
+<pre><code>npx claude-mem install
+/plugin marketplace add thedotmack/claude-mem
+/plugin install claude-mem</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-31.html#d-thedotmack__claude-mem">2026-10-31</a>
+<span class="src trendshift">Trendshift 3位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+{
+  "date": "2026-10-31",
+  "collectedAt": "2026-10-31T07:08:03+09:00",
+  "entries": [
+    {
+      "repo": "ccch1mneyyy/dsh-Go",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。Android · Unofficial.",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "togg53192-cmd/jailbreaks",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "LIST OF ALL MY JAILBREAKS",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "thedotmack/claude-mem",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Donchitos/Claude-Code-Game-Studios",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+      "language": "Shell",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "microsoft/TokenEconomizer",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "Experience-Driven Black-Box Cost Control for Coding Agents",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "milind-soni/OpenMausBot",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Orkas-AI/Orkas",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus Claude Code, Codex, OpenCode, OpenClaw and Hermes, with projects, scheduled automations and connectors. Free app for macOS & Windows; built-in models or your own keys.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "HKUDS/DeepTutor",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ifixai-ai/iFixAi",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "lexifina/global-law",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Git for Global Law: the law of every country as one git history, each country's record a submodule, every commit one law taking effect",
+      "language": "HTML",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Renhuai123/ziwei-doushu",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "HeyPuter/everything",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "We're rebuilding and open-sourcing the world’s software from scratch.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pingdotgg/t3code",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pbakaus/impeccable",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "The design language that makes your AI harness better at design.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "qybaihe/bla",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -> Exhaust -> Hallucinate.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "valentderah/totk-pc-recomp",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows x86-64, with a Vulkan renderer. Game files not included.",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "morluto/rea",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "l0ng-ai/openidea",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "The IDE you know, rebuilt in Rust. IntelliJ IDEA–style keymap, tool windows and search-everywhere in a fast native app: editor, code insight, debugger, Git, terminal, database and HTTP clients for 60+ languages.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "CopilotKit/OpenBot",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "lightpanda-io/browser",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "Lightpanda: the headless browser designed for AI and automation",
+      "language": "Zig",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "SheepSeb/tinyworldformer",
+        "source": "hatena",
+        "desc": "Tiny world model generates games and stream ac plays them all on Pico 2W",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 5,
+        "sourceRank": 1
+      },
+      {
+        "repo": "elementary-swift/elementary-ui",
+        "source": "hatena",
+        "desc": "Build SwiftUI-style apps that run in the browser",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 2
+      }
+    ]
+  }
+}

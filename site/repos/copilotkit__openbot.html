@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CopilotKit/OpenBot | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>CopilotKit/OpenBot</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-10-31（Trendshift 19位）</span>
+<a class="gh" href="https://github.com/CopilotKit/OpenBot" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="copilotkit__openbot" data-repo="CopilotKit/OpenBot" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">各AIエージェントに専用コンピュータを与えるオープンソースAIコワーカー基盤</p>
+<h3>何ができるか</h3><ul><li>各BotにChromiumブラウザ・ファイル・ツールを持つ専用コンテナ（コンピュータ）を割り当てる。</li><li>すべての操作をポリシーゲートウェイで事前チェックし、実行後に監査ログへ記録する。</li><li>BotがログインやMFA壁に当たった際に人間がリアルタイムで操作を引き継げる。</li><li>AG-UI仕様（エージェントとUIの標準インターフェース）に対応する任意の外部エージェントを持ち込める。</li><li>CEL言語（Google製ポリシー記述言語）によるdeny-firstポリシールールと暗号化された認証情報管理を提供する。</li><li>スケジュール実行ワーカーとMCPコネクタのサンドボックス環境を内包する。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AI Agentがブラウザ操作やファイルアクセスをする際のセキュリティ・監査・ガバナンスが企業導入の障壁となっており、それをオープンソースで解決する点が注目されていると考えられる。<span class="guess">推測</span> AG-UIという新興標準への対応と、自社インフラへのセルフホスト可能な構成が、ベンダーロックインを避けたい組織に響いている可能性がある。</p>
+<h3>どんな人に役立つか</h3><p>社内業務にAIエージェントを安全に導入したい企業エンジニアや、監査・ポリシー管理が必要な組織に向いている。AG-UI対応エージェントを既に持ち、それをチームのワークフローに組み込みたい開発者にも有用である。</p>
+<h3>技術的なポイント</h3><ul><li>フロントエンドはReact＋Vite（ポート3010）、APIサーバーはHono（軽量TypeScript Webフレームワーク、ポート3001）で構成される。</li><li>データベースにPostgreSQLとpgvector（ベクトル検索拡張）を使用し、スレッドやメモリを管理する。</li><li>Drizzle ORM（TypeScript向けSQLツールキット）でマイグレーションを管理する。</li><li>コンテナ化にDockerを使用し、Helmチャートによるk8sデプロイもサポートする。</li><li>Google・Microsoft・OktaおよびSAML/OIDCによるSSO認証に対応する。</li></ul>
+<h3>試し方</h3>
+<ol><li>Docker、Bun 1.4以上をインストールし、リポジトリをクローンする。</li><li>.env.exampleを.envにコピーしてbun installを実行する。</li><li>CopilotKit CLIでIntelligenceプロジェクトを接続しbun scripts/setup-learning.tsを実行する。</li><li>OPENAI_API_KEYとKEY_ENCRYPTION_KEYを.envに設定する。</li><li>bash scripts/start.shを実行してhttp://localhost:3010を開く。</li></ol>
+<pre><code>cp .env.example .env
+bun install
+bun scripts/setup-learning.ts
+openssl rand -base64 32
+bash scripts/start.sh
+bash scripts/stop.sh</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-31.html#d-copilotkit__openbot">2026-10-31</a>
+<span class="src trendshift">Trendshift 19位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

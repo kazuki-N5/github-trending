@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>valentderah/totk-pc-recomp | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎮</div><div>
+<h1>valentderah/totk-pc-recomp</h1>
+<div class="meta"><span>C</span>
+<span>初掲載 2026-10-31（Trendshift 16位）</span>
+<a class="gh" href="https://github.com/valentderah/totk-pc-recomp" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="valentderah__totk-pc-recomp" data-repo="valentderah/totk-pc-recomp" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ゼルダの伝説ティアーズオブザキングダムをWindowsネイティブアプリへ静的リコンパイル</p>
+<h3>何ができるか</h3><ul><li>静的リコンパイル（Static Recompilation）技術でゲームをネイティブx86-64コードに変換し、エミュレータなしで実行できる。</li><li>デフォルトで60fps動作し、実験的に最大144fpsまでサポートしている。</li><li>カスタム解像度、スーパーサンプリング（高解像度でレンダリングして縮小する高画質化技術）、AMD FSR 1アップスケーリングに対応している。</li><li>ゲームパッド・キーボード・マウスをサポートし、ボタンのリマッピングやバイブレーション・ジャイロにも対応している。</li><li>F1キーでゲーム内設定メニュー、F10キーでパフォーマンスオーバーレイを表示できる。</li><li>シェーダー（グラフィック描画プログラム）をインストール時にあらかじめコンパイルするため、プレイ中のカクつきを軽減できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Switch専用タイトルをエミュレータなしでPCネイティブ動作させるという技術的挑戦が、ゲーマーとエンジニア双方の強い関心を集めていると考えられる。<span class="guess">推測</span> N64Recompなどの先行プロジェクトで静的リコンパイルへの注目が高まる中、最新の大作タイトルへの適用として話題になっていると推測される。コードの大部分がAIコーディングエージェントによって書かれている点も注目されている。</p>
+<h3>どんな人に役立つか</h3><p>Switchを持っていないがティアーズオブザキングダムを高フレームレートでプレイしたいPCゲーマーが主な対象である。なお、自身で合法的に入手したゲームのダンプデータが必要であり、著作権には注意が必要である。静的リコンパイル技術に興味のあるエンジニアや研究者にとっても参考になるプロジェクトである。</p>
+<h3>技術的なポイント</h3><ul><li>静的リコンパイル技術を採用しており、Nintendo Switch用のARM命令をオフラインで解析しx86-64ネイティブコードに変換する。</li><li>グラフィックAPIにVulkan 1.3を使用しており、`VK_EXT_external_memory_host`拡張を必要とする。</li><li>LAS Recomp・MacNativeGames・nxnativeなど既存のリコンパイル関連OSSプロジェクトの成果を組み合わせて構築されている。</li><li>SDL 3、Dear ImGuiなどのライブラリを採用しており、入力処理やUIを実装している。</li><li>セットアップ時にゲームデータからシェーダーをビルドするため、初回セットアップに約36GiBのディスク空き容量が必要である（セットアップ後は約20GiB）。</li></ul>
+<h3>試し方</h3>
+<ol><li>自身で合法的に取得したTears of the Kingdomの本体データとアップデート1.2.1または1.4.3のダンプを用意する。</li><li>GitHubのReleasesからzipファイルをダウンロードし、展開する。</li><li>`TotK-Setup.exe`を実行する（SmartScreenの警告が出た場合は「実行する」を選択）。</li><li>ゲームファイルのパス、言語、インストール先フォルダを選択してセットアップを開始する。</li><li>セットアップ完了後、インストールフォルダ内の`totk.exe`を起動してプレイする。</li></ol>
+<pre><code>TotK-Setup.exe
+totk.exe</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-31.html#d-valentderah__totk-pc-recomp">2026-10-31</a>
+<span class="src trendshift">Trendshift 16位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

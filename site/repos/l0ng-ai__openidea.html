@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>l0ng-ai/openidea | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔎</div><div>
+<h1>l0ng-ai/openidea</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-10-31（Trendshift 18位）</span>
+<a class="gh" href="https://github.com/l0ng-ai/openidea" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="l0ng-ai__openidea" data-repo="l0ng-ai/openidea" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">RustコアのネイティブIDEで、IntelliJ IDEAのキーマップとUIを高速再現</p>
+<h3>何ができるか</h3><ul><li>IntelliJ IDEAと同じキーマップ・ツールウィンドウ・Search Everywherを採用し、既存ユーザーがすぐ使い始められる。</li><li>エディタ・コードインサイト・デバッガ・Git・ターミナル・データベースクライアント・HTTPクライアントを内包する。</li><li>60以上の言語をサポートし、幅広いプロジェクトに対応できる。</li><li>macOS・Windows・Linuxのクロスプラットフォームで動作する。</li><li>起動時間約0.9秒・メモリ使用量169MBと、IntelliJ IDEA比で大幅に軽量・高速である。</li></ul>
+<h3>なぜ注目されているか</h3><p>IntelliJ IDEAは高機能である一方、起動が遅くメモリ消費が2GB超になるという長年の課題があった。<span class="guess">推測</span> Rustによるネイティブ実装でその課題を解消しつつIDEAの操作感を維持するという点が開発者コミュニティで注目されていると考えられる。<span class="guess">推測</span> JetBrainsの有料ライセンスを不要にする無償代替として関心を集めている可能性もある。</p>
+<h3>どんな人に役立つか</h3><p>IntelliJ IDEAの操作体系に慣れているがパフォーマンスや軽量さを求める開発者に向いている。低スペックマシンや多数のプロジェクトを並行して扱うエンジニアにも有用である。</p>
+<h3>技術的なポイント</h3><ul><li>コアをRust（システムプログラミング言語）で実装することで、起動速度とメモリ効率を大幅に向上させている。</li><li>UIレイヤーにはTauri（RustバックエンドとWebフロントエンドを組み合わせるデスクトップフレームワーク）を使用している。</li><li>フロントエンドはTypeScript＋pnpmで管理され、Node 22が必要である。</li><li>パフォーマンス比較ツールがperf/compareディレクトリに含まれており、IntelliJ IDEAとの定量的比較を再現できる。</li><li>ノートブック実行テストはipykernelを持つPython環境2つを環境変数で指定するオプトイン方式である。</li></ul>
+<h3>試し方</h3>
+<ol><li>Rust 1.96、Node 22、pnpm、およびTaurの前提条件をインストールする。</li><li>リポジトリをクローンし、pnpmで依存関係をインストールする。</li><li>Tauri CLIを通じてアプリを開発モードで起動する。</li></ol>
+<pre><code>pnpm install
+pnpm tauri dev</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-10-31.html#d-l0ng-ai__openidea">2026-10-31</a>
+<span class="src trendshift">Trendshift 18位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

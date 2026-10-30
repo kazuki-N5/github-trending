@@ -1,0 +1,35 @@
+{
+  "repo": "thedotmack/claude-mem",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "AIエージェントのセッション間でコンテキストを永続化する記憶圧縮システム。",
+  "features": [
+    "セッション中のツール使用を観察してAIが意味的なサマリーを生成し、将来のセッションに自動的に引き継げる。",
+    "SessionStart・PostToolUse・Stopなど複数のライフサイクルフック（セッションの各段階で自動実行される処理）でエージェントの行動をキャプチャする。",
+    "MCPツール（search・timeline・get_observations）によりセッション横断の記憶をハイブリッド検索（テキスト＋ベクトル）できる。",
+    "`<private>` タグで機密情報をコンテキスト注入から除外し、プライバシーを守れる。",
+    "Claude Code以外にもOpenCode・DeepSeek Harness・Gemini CLIなど多くのAIエージェントと連携できる。",
+    "cmem.aiへのクラウド同期機能により複数端末間で記憶を共有できる。"
+  ],
+  "why": "AIコーディングエージェントはセッションをまたぐとコンテキストが失われ、毎回同じ説明を繰り返す必要があるという課題がある。推測: Claude Code・OpenCode・Codexなど多くのエージェントが普及するにつれ、セッション間記憶の欠如が実用上の大きなボトルネックになっていると考えられる。推測: LLMのコンテキストウィンドウ節約（約10倍のトークン削減を主張）という経済的メリットも注目を集める要因と思われる。",
+  "whoFor": "Claude CodeやOpenCodeなどのAIコーディングエージェントを日常的に使う開発者で、セッションをまたいでプロジェクトの文脈を引き継ぎたい人に向いている。複数のAIエージェントを横断的に使い分けるエンジニアにも有用である。",
+  "tech": [
+    "TypeScriptで実装されたライフサイクルフック（Claude Codeプラグインシステム対応）により、ツール呼び出しの前後やセッション開始・終了時に記憶の読み書きを行う。",
+    "SQLiteデータベース（軽量なファイルベースDB）でセッション・観察・サマリーをローカル保存し、Chromaベクトルデータベース（意味的類似検索用）でセマンティック検索を実現している。",
+    "Bunで管理されるローカルワーカーサービスがHTTP APIとWebビューアを提供し、蓄積された記憶を管理・閲覧できる。",
+    "3層ワークフロー（search→timeline→get_observations）で段階的にコンテキストを絞り込み、不要なトークン消費を抑えて約10倍のトークン節約を実現すると主張している。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node.js 20以上がインストールされていることを確認する",
+      "ターミナルで `npx claude-mem install` を実行するか、Claude Code内で `/plugin marketplace add thedotmack/claude-mem` を実行する",
+      "Claude Code内で `/plugin install claude-mem` を実行してプラグインを有効化する",
+      "サインインして30日間の無料トライアルを開始するか、`--provider` フラグでオフライン利用を選択する"
+    ],
+    "commands": [
+      "npx claude-mem install",
+      "/plugin marketplace add thedotmack/claude-mem",
+      "/plugin install claude-mem"
+    ]
+  }
+}

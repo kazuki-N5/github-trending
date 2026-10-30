@@ -1,0 +1,31 @@
+{
+  "repo": "elementary-swift/elementary-ui",
+  "language": "",
+  "readme": true,
+  "oneLiner": "SwiftUIスタイルの宣言的APIでブラウザ上で動くWebアプリを構築できるSwiftフロントエンドフレームワーク",
+  "features": [
+    "SwiftUIに似た宣言的なビューAPIでUIコンポーネントを記述できる。",
+    "@State・@Environment・@Reactiveを使ったリアクティブな状態管理が組み込まれている。",
+    "Embedded Swift（組み込み向け最適化コンパイルモード）によってWebAssemblyバンドルサイズを小さく保てる。",
+    "CSSアニメーションとFLIPトランジション（要素位置変化を自動アニメーションする技術）を標準サポートしている。",
+    "Viteベースの開発サーバーとホットリロードによって快適な開発体験を提供する。",
+    "ElementaryWebComponentsライブラリで型安全なWebコンポーネントを定義できる。"
+  ],
+  "why": "SwiftはiOSやmacOS開発では広く使われているが、フロントエンドWeb開発には一般的に使われてこなかった。推測: WebAssembly技術の成熟とEmbedded Swiftの登場により、Swiftエコシステム全体でフルスタック開発ができる可能性が現実的になってきたことが注目を集めている要因と思われる。",
+  "whoFor": "SwiftやSwiftUIに慣れたiOS/macOS開発者でWebフロントエンドも同じ言語で書きたい人や、WebAssemblyベースのSwift Webアプリ開発に興味を持つエンジニアに向いている。",
+  "tech": [
+    "WebAssembly（Wasm）：Swiftコードをブラウザで実行可能なバイナリ形式にコンパイルする技術で、Swift 6.4以降とswift.orgのWasm向けSwift SDKが必要。",
+    "Embedded Swift：メモリ使用量を抑えるためのコンパイル最適化モードで、標準ランタイムの多くを省略し小さなWasmバンドルを生成する。",
+    "FLIP（First Last Invert Play）トランジション：DOM要素の位置変化を自動検出してアニメーション補間する手法で、宣言的UIと自然に組み合わせられる。",
+    "Elementary（サーバーサイドHTMLレンダリングライブラリ）を基盤とし、そのコンポーネントモデルをブラウザのリアクティブUIに拡張している。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Swift 6.4以降をインストールし、swift.orgからWebAssembly向けSwift SDKを追加する。",
+      "Package.swiftにElementaryUIを依存関係として追加する。",
+      "Viteベースの開発サーバーを起動してブラウザで確認する。",
+      "Examplesディレクトリ内のSwiftleデモアプリを参考にする。"
+    ],
+    "commands": []
+  }
+}

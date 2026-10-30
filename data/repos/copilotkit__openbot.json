@@ -1,0 +1,40 @@
+{
+  "repo": "CopilotKit/OpenBot",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "各AIエージェントに専用コンピュータを与えるオープンソースAIコワーカー基盤",
+  "features": [
+    "各BotにChromiumブラウザ・ファイル・ツールを持つ専用コンテナ（コンピュータ）を割り当てる。",
+    "すべての操作をポリシーゲートウェイで事前チェックし、実行後に監査ログへ記録する。",
+    "BotがログインやMFA壁に当たった際に人間がリアルタイムで操作を引き継げる。",
+    "AG-UI仕様（エージェントとUIの標準インターフェース）に対応する任意の外部エージェントを持ち込める。",
+    "CEL言語（Google製ポリシー記述言語）によるdeny-firstポリシールールと暗号化された認証情報管理を提供する。",
+    "スケジュール実行ワーカーとMCPコネクタのサンドボックス環境を内包する。"
+  ],
+  "why": "推測: AI Agentがブラウザ操作やファイルアクセスをする際のセキュリティ・監査・ガバナンスが企業導入の障壁となっており、それをオープンソースで解決する点が注目されていると考えられる。推測: AG-UIという新興標準への対応と、自社インフラへのセルフホスト可能な構成が、ベンダーロックインを避けたい組織に響いている可能性がある。",
+  "whoFor": "社内業務にAIエージェントを安全に導入したい企業エンジニアや、監査・ポリシー管理が必要な組織に向いている。AG-UI対応エージェントを既に持ち、それをチームのワークフローに組み込みたい開発者にも有用である。",
+  "tech": [
+    "フロントエンドはReact＋Vite（ポート3010）、APIサーバーはHono（軽量TypeScript Webフレームワーク、ポート3001）で構成される。",
+    "データベースにPostgreSQLとpgvector（ベクトル検索拡張）を使用し、スレッドやメモリを管理する。",
+    "Drizzle ORM（TypeScript向けSQLツールキット）でマイグレーションを管理する。",
+    "コンテナ化にDockerを使用し、Helmチャートによるk8sデプロイもサポートする。",
+    "Google・Microsoft・OktaおよびSAML/OIDCによるSSO認証に対応する。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Docker、Bun 1.4以上をインストールし、リポジトリをクローンする。",
+      ".env.exampleを.envにコピーしてbun installを実行する。",
+      "CopilotKit CLIでIntelligenceプロジェクトを接続しbun scripts/setup-learning.tsを実行する。",
+      "OPENAI_API_KEYとKEY_ENCRYPTION_KEYを.envに設定する。",
+      "bash scripts/start.shを実行してhttp://localhost:3010を開く。"
+    ],
+    "commands": [
+      "cp .env.example .env",
+      "bun install",
+      "bun scripts/setup-learning.ts",
+      "openssl rand -base64 32",
+      "bash scripts/start.sh",
+      "bash scripts/stop.sh"
+    ]
+  }
+}
