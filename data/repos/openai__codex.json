@@ -1,0 +1,35 @@
+{
+  "repo": "openai/codex",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "ターミナルで動くOpenAI製の軽量コーディングエージェント",
+  "features": [
+    "ターミナル上でCLIとして起動し、自然言語の指示でコードの生成・編集・実行を行う",
+    "ChatGPTのアカウント（Plus/Pro等）またはAPIキーで認証して利用できる",
+    "VS Code・Cursor・Windsurf向けのIDE統合（拡張機能）として使用できる",
+    "デスクトップアプリとして起動する `codex app` モードも用意されている",
+    "Mac・Linux・Windowsに対応しており、ワンライナーのスクリプトや npm・Homebrew で簡単にインストールできる"
+  ],
+  "why": "推測: OpenAIが公式に提供するターミナル向けコーディングエージェントとして、ChatGPTのサブスクリプションをそのまま活用できる手軽さが注目を集めていると思われる。推測: GitHub Copilot等の既存ツールとは異なり、IDE不要でターミナルだけで完結する軽量な設計が開発者に支持されていると考えられる。",
+  "whoFor": "ターミナルを中心に開発を行うエンジニアや、IDEを使わずCLIベースの環境でAIコーディング支援を試したい人に適している。ChatGPT Plus/Pro等のプランを既に契約しているユーザーは追加費用なしで利用を始められる。",
+  "tech": [
+    "Rustで実装されており、musl（Linuxの軽量標準Cライブラリ）を使ったスタティックリンクバイナリとして配布されるため、依存関係なしで動作する",
+    "npm パッケージ（`@openai/codex`）としても配布されており、Node.js環境でも利用できる",
+    "OpenAI APIまたはChatGPTアカウント認証を通じてLLM（大規模言語モデル）と通信してコーディングタスクを処理する",
+    "Apache-2.0ライセンスのオープンソースプロジェクトとして公開されている"
+  ],
+  "tryIt": {
+    "steps": [
+      "インストールスクリプトを実行してCodex CLIをインストールする（Mac/Linuxの場合）",
+      "`codex` コマンドを実行し、初回起動時に「Sign in with ChatGPT」を選んで認証する",
+      "認証後、ターミナル上でコーディングの指示を自然言語で入力して使用する"
+    ],
+    "commands": [
+      "curl -fsSL https://chatgpt.com/codex/install.sh | sh",
+      "npm install -g @openai/codex",
+      "brew install --cask codex",
+      "codex",
+      "codex app"
+    ]
+  }
+}

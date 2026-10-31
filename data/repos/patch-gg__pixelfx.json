@@ -1,0 +1,37 @@
+{
+  "repo": "patch-gg/pixelfx",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "244種類のピクセルアートエフェクトをコード1つずつで実装したライブラリ",
+  "features": [
+    "火・爆発・水・氷・雷・SF・近接・聖・影・天候・UI・アイテム・遷移・生き物など244種類のエフェクトを収録している",
+    "npmまたはsrcフォルダのコピーだけで依存関係なしにブラウザのcanvasで動作する",
+    "nodeツールでスプライトシートとAseprite形式のJSONを出力しGodot・Unity・Phaserなどのゲームエンジンに対応している",
+    "paletteオプションでコードを変更せずにエフェクトの色を自由に変更できる",
+    "Claude Codeのプラグインとして追加すれば、エフェクトの検索・使用・エクスポート・新規作成をAIに依頼できる",
+    "tools/new.mjs・render.mjs・check.mjs でエフェクトの雛形作成・プレビュー・品質チェックができる"
+  ],
+  "why": "推測: ゲーム開発でよく使われるピクセルアートのエフェクトをコード単位で再利用できる形にまとめた点が注目を集めている。さらにClaude Codeと連携してAIが新しいエフェクトを生成できる仕組みを提供しており、AIを活用したゲームアセット制作ワークフローへの関心と合致している。",
+  "whoFor": "ピクセルアートスタイルの2Dゲームを開発するインディーゲーム開発者やゲームジャム参加者に役立つ。GodotやUnity・Phaserなどのエンジンユーザーがスプライトシート出力機能を使ってすぐにアセットとして取り込める。Claude Codeを使って独自エフェクトを自動生成したいエンジニアにも適している。",
+  "tech": [
+    "エフェクトは時間値のみから各フレームを計算するピュアな関数として実装されており、シームレスなループを実現している（純粋関数: 同じ入力に対して常に同じ出力を返す関数）",
+    "パーティクル（粒子）をシミュレートするエフェクトは120Hzでステップ計算し、ランダム値はシード（再現可能な乱数の初期値）付きで生成される",
+    "色情報とadditive light（加算ブレンド: 光の重ね合わせ表現）を別バッファで管理することで発光表現を実現している",
+    "グレーのダミーキャラクターはフラットトーンとインクラインで描画された3Dスケルトンをレンダリングしている",
+    "node tools/render.mjs でAseprite形式のJSONとスプライトシートを出力しエンジン向けエクスポートに対応している"
+  ],
+  "tryIt": {
+    "steps": [
+      "npmでインストールするか、src/coreと必要なエフェクトファイルをコピーする",
+      "ブラウザのcanvas要素にエフェクトをインポートして実行する",
+      "エンジン向けにスプライトシートを出力する場合はnode tools/render.mjs <id> --sheetを実行する",
+      "Claude Codeプラグインとして使う場合は/plugin marketplace add patch-gg/pixelfxを実行後、/plugin install pixelfx@pixelfxを実行する"
+    ],
+    "commands": [
+      "npm i github:patch-gg/pixelfx",
+      "node tools/render.mjs <id> --sheet",
+      "/plugin marketplace add patch-gg/pixelfx",
+      "/plugin install pixelfx@pixelfx"
+    ]
+  }
+}

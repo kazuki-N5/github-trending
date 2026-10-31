@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>openai/codex | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>openai/codex</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-01（Trendshift 18位）</span>
+<a class="gh" href="https://github.com/openai/codex" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="openai__codex" data-repo="openai/codex" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ターミナルで動くOpenAI製の軽量コーディングエージェント</p>
+<h3>何ができるか</h3><ul><li>ターミナル上でCLIとして起動し、自然言語の指示でコードの生成・編集・実行を行う</li><li>ChatGPTのアカウント（Plus/Pro等）またはAPIキーで認証して利用できる</li><li>VS Code・Cursor・Windsurf向けのIDE統合（拡張機能）として使用できる</li><li>デスクトップアプリとして起動する `codex app` モードも用意されている</li><li>Mac・Linux・Windowsに対応しており、ワンライナーのスクリプトや npm・Homebrew で簡単にインストールできる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> OpenAIが公式に提供するターミナル向けコーディングエージェントとして、ChatGPTのサブスクリプションをそのまま活用できる手軽さが注目を集めていると思われる。<span class="guess">推測</span> GitHub Copilot等の既存ツールとは異なり、IDE不要でターミナルだけで完結する軽量な設計が開発者に支持されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>ターミナルを中心に開発を行うエンジニアや、IDEを使わずCLIベースの環境でAIコーディング支援を試したい人に適している。ChatGPT Plus/Pro等のプランを既に契約しているユーザーは追加費用なしで利用を始められる。</p>
+<h3>技術的なポイント</h3><ul><li>Rustで実装されており、musl（Linuxの軽量標準Cライブラリ）を使ったスタティックリンクバイナリとして配布されるため、依存関係なしで動作する</li><li>npm パッケージ（`@openai/codex`）としても配布されており、Node.js環境でも利用できる</li><li>OpenAI APIまたはChatGPTアカウント認証を通じてLLM（大規模言語モデル）と通信してコーディングタスクを処理する</li><li>Apache-2.0ライセンスのオープンソースプロジェクトとして公開されている</li></ul>
+<h3>試し方</h3>
+<ol><li>インストールスクリプトを実行してCodex CLIをインストールする（Mac/Linuxの場合）</li><li>`codex` コマンドを実行し、初回起動時に「Sign in with ChatGPT」を選んで認証する</li><li>認証後、ターミナル上でコーディングの指示を自然言語で入力して使用する</li></ol>
+<pre><code>curl -fsSL https://chatgpt.com/codex/install.sh | sh
+npm install -g @openai/codex
+brew install --cask codex
+codex
+codex app</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-01.html#d-openai__codex">2026-11-01</a>
+<span class="src trendshift">Trendshift 18位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>deepseek-ai/dsh-superagent-prototype | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>deepseek-ai/dsh-superagent-prototype</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-01（Trendshift 7位）</span>
+<a class="gh" href="https://github.com/deepseek-ai/dsh-superagent-prototype" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="deepseek-ai__dsh-superagent-prototype" data-repo="deepseek-ai/dsh-superagent-prototype" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">GitHubリポジトリ向けの自律型コーディングエージェント</p>
+<h3>何ができるか</h3><ul><li>GitHubのイシューやコメントを監視し、許可されたユーザーからのリクエストに応じて自動的に作業を開始する</li><li>作業を独立したエージェントセッションとディレクトリで実行し、完了するとプルリクエストを作成して返答する</li><li>Feishu（Lark、企業向けチャットツール）との連携により、チャットからコーディング作業を依頼できる</li><li>チームが定義したポリシー（ルール）に基づき、エージェントが自律的に行動できる範囲を細かく制御できる</li><li>Webパネルで人間の確認が必要な作業アイテムを一覧表示し、作業状況をひと目で把握できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> GitHubでの自動コーディングエージェントへの関心が高まる中、DeepSeekがその実装の仕組みを研究プロトタイプとして公開したことで注目を集めていると考えられる。「人間の注意を最小限に抑えつつ最大の価値を提供する」という設計思想と、実際に動作するプロトタイプが公開されている点が評価されているとみられる。</p>
+<h3>どんな人に役立つか</h3><p>GitHubリポジトリを管理する開発チームで、イシュー対応や反復的なコーディング作業を自動化したいエンジニアに役立つ。DeepSeek Harness（DSH）を使ったマルチエージェントシステムの研究者や、エージェント型AIシステムの設計パターンを学びたい学生にも参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>TypeScriptで実装されており、DeepSeek Harness（DSH）というエージェント実行基盤（ランタイム）上で動作する</li><li>Cordisプラグインシステム（依存性注入を使ったモジュール構成の仕組み）を採用し、GitHubやFeishuなどの外部サービスとの連携を拡張可能な設計にしている</li><li>tmux（ターミナルの多重化ツール）を使って独立したセッションでエージェントの作業を実行し、プロセスを分離する</li><li>GitHub CLI（gh）でGitHub APIの認証・操作を行い、プルリクエストの作成などを自動化する</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js 22.19以上、pnpm、git 2.32以上、tmux、Python 3.8以上、GitHub CLI 2.48以上をインストールし、DSHのバージョンがpackage.jsonのengines.dsh範囲内であることを確認する</li><li>SETUP.mdとdocs/000-philosophy.mdを読んでから作業を始める</li><li>プローブコマンドを実行して必要なツールが揃っているか確認する</li><li>エージェント用のGitHubアカウントを作成し、対象リポジトリへの招待を承認する</li><li>docs/006-deployment.mdに従いインストール・マシン設定・起動停止の手順を実施する</li></ol>
+<pre><code>node -v; pnpm -v; git --version; tmux -V; python3 --version; gh --version | head -1; dsh --version
+gh api user --jq .login
+pnpm check</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-01.html#d-deepseek-ai__dsh-superagent-prototype">2026-11-01</a>
+<span class="src trendshift">Trendshift 7位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

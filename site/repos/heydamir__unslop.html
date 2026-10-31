@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>heydamir/unslop | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛠️</div><div>
+<h1>heydamir/unslop</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-11-01（Trendshift 4位）</span>
+<a class="gh" href="https://github.com/heydamir/unslop" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="heydamir__unslop" data-repo="heydamir/unslop" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIっぽいUIを本物のデザインへ変換するClaudeスキル</p>
+<h3>何ができるか</h3><ul><li>UIの「スロップ（AI特有の没個性な見た目）」を自動検出し、紫グラデーション・グロー・絵文字ラベル・不揃いな余白などを洗い出す。</li><li>プロダクトの内容に合わせたデザイン方向性を提案し、複数パスで段階的にUIを修正する。</li><li>Next.js・React・Vue・Svelte・Tailwind・プレーンHTML/CSSなど主要なスタックに対応している。</li><li>ダッシュボード・アプリ・ランディングページのほか、URLで渡したライブサイトにも対応している。</li><li>確認を取ったうえで画像生成サービスを通じてヒービジュアルを生成できる。</li><li>Playwrightとffmpegがあれば、画面の短い正方形ストーリー動画を生成できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIコーディングツールで量産されるUIが特定のパターン（紫グラデーション・グロー・絵文字多用など）に偏りがちという問題が開発者コミュニティで広く認識され始めている。<span class="guess">推測</span> Claude自身をデザインエージェントとして活用しUIを自動改善するというアプローチが新しく、デザイナー不在のチームでも手軽にUI品質を高められる点が注目を集めている可能性がある。</p>
+<h3>どんな人に役立つか</h3><p>AIコーディングツールでプロトタイプを作成したがデザインが「AI感丸出し」になってしまった開発者に向いている。デザイナーが不在で見た目をなんとかしたいスタートアップやソロ開発者にも役立つ。/unslopコマンド一つでデザイン改善を試したい人に適している。</p>
+<h3>技術的なポイント</h3><ul><li>ClaudeのスキルシステムはSlashコマンド（/unslop）で呼び出せるプラグイン機構で、~/.claude/skills/または.claude/skills/ディレクトリに配置するだけで導入できる。</li><li>LLM（大規模言語モデル）が画面を「監査」してUI上の視覚的問題を検出し、複数パスで段階的に修正するアプローチを採用している。</li><li>Playwright（ブラウザ自動操作ライブラリ）でスクリーンショットを撮影し、ffmpeg（動画処理ツール）で短い動画を生成する。</li><li>外部の画像生成サービスと連携してヒービジュアルを作成でき、有料APIの呼び出し前に必ず確認を求める設計になっている。</li></ul>
+<h3>試し方</h3>
+<ol><li>skills/unslopフォルダを~/.claude/skills/（全プロジェクト共通）またはプロジェクトの.claude/skills/（プロジェクト固有）にコピーする。</li><li>ClaudeのCLIで/unslopと入力してスキルを呼び出し、改善したい画面やURLを伝える。</li></ol>
+<pre><code>cp -r skills/unslop ~/.claude/skills/</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-01.html#d-heydamir__unslop">2026-11-01</a>
+<span class="src trendshift">Trendshift 4位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

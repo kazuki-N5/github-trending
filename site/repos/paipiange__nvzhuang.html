@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>paipiange/nvzhuang | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🖼️</div><div>
+<h1>paipiange/nvzhuang</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-11-01（Trendshift 19位）</span>
+<a class="gh" href="https://github.com/paipiange/nvzhuang" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="paipiange__nvzhuang" data-repo="paipiange/nvzhuang" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">1407点のAI生成服飾画像ギャラリーと仮想試着ウェブサイト</p>
+<h3>何ができるか</h3><ul><li>春夏秋冬・ランジェリー・パーティー・水着など8カテゴリで1407点のAI生成服飾参考画像を閲覧できる</li><li>中国語・英語のキーワード検索とカテゴリフィルタリング、フルスクリーン表示・キーボードナビゲーションに対応している</li><li>ポートレート写真をアップロードしてギャラリーの服や自前の画像を選びAI仮想試着画像を生成できる</li><li>OpenAI互換API・Gemini・Doubao Seedreamなど複数のAIバックエンドをAPIキーとBase URLで切り替えて使える</li><li>生成した画像はブラウザのIndexedDB（端末内のローカルDBで、サーバーには送られない）にのみ保存される</li><li>フロントエンドはビルド不要の静的サイトで、Dockerまたはローカルのコマンド一つで起動できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AI生成の服飾参考画像を1407点まとめた大規模ギャラリーとして、コスチューム制作やファッションデザインの参考に活用できるため注目されている。<span class="guess">推測</span> 自前のAPIキーとBase URLを設定するだけでOpenAI・Gemini・Doubaoなど複数のAIサービスを使った仮想試着機能を自己ホストで実現できるため、APIコストやプライバシーを意識するユーザーに支持されている。<span class="guess">推測</span> GoFrame v2製バックエンドとDockerによる簡単デプロイの組み合わせで、技術的な参入ハードルが低い点も評価されている。</p>
+<h3>どんな人に役立つか</h3><p>AIファッションや仮想試着ツールに興味のあるエンジニアやデザイナーに役立つ。自前のAPIキーを使って試着システムを構築・自己ホストしたい開発者や、服飾の参考画像を大量にまとめて検索したいクリエイターにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>バックエンドはGoFrame v2（GoのフルスタックWebフレームワーク）で実装されており、ComfyUI・Gemini・Doubao・OpenAI互換APIをプラグイン形式で切り替えられる設計になっている</li><li>フロントエンドは純粋な静的HTML/JavaScriptで構成されており、npmやバンドラーなどのビルドツールが不要でそのまま配信できる</li><li>AIが生成した画像の履歴はブラウザのIndexedDB（クライアント側の非同期Key-Valueストア）にのみ保存され、サーバーに個人データを送らないプライバシー配慮の設計になっている</li><li>BearerトークンにSHA-256ハッシュと定時間比較（タイミング攻撃対策の手法）、レート制限（10回/分・100回/日）、同時実行制限（グローバル2・呼び出し元1）などのセキュリティ機能を実装している</li><li>docker compose up -d 一コマンドでバックエンドとフロントエンドをまとめて起動するDockerデプロイに対応している</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンする</li><li>backend/.env.example を backend/.env にコピーし、使用するAIサービスのAPIキーを設定する</li><li>docker compose up -d を実行してバックエンドをポート8000で起動する</li><li>フロントエンドは python3 -m http.server 3000 などで配信するか、index.html をブラウザで直接開く</li></ol>
+<pre><code>cp backend/.env.example backend/.env
+docker compose up -d
+python3 -m http.server 3000
+npx serve -l 3000 .
+go run main.go</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-01.html#d-paipiange__nvzhuang">2026-11-01</a>
+<span class="src trendshift">Trendshift 19位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

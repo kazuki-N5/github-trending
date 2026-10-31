@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mainplane-ai/mainplane | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>mainplane-ai/mainplane</h1>
+<div class="meta">
+<span>初掲載 2026-11-01（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/mainplane-ai/mainplane" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="mainplane-ai__mainplane" data-repo="mainplane-ai/mainplane" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">複数のコンピュータをまたいでAIエージェントを動かすオープンソース基盤</p>
+<h3>何ができるか</h3><ul><li>AnthropicやOpenAI、Googleなど複数のプロバイダのモデルをシームレスに切り替えて利用できる。</li><li>エージェントが自身でコンテキスト（会話の文脈情報）を管理し、他のセッションから必要な情報を取得することで効率的に動作する。</li><li>Tailscale不要で複数のコンピュータを接続し、細かいセキュリティ設定でエージェントを制御できる。</li><li>複数デバイスで同時利用しても同期が崩れないリモートファイルシステムを提供する。</li><li>実際のブラウザやアプリをネイティブのコンピュータ操作で自動制御できる。</li><li>TUI（テキストベースのUI）で複数モデル上のセッションを一覧管理できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIエージェントを単一マシンに閉じず、複数コンピュータにまたがって動かしたいニーズが高まっている。<span class="guess">推測</span> Claude CodeやChatGPT Codexのサブスクリプション枠やAPIキーをそのまま使えるため、追加コストなしで既存環境を活かせる点が評価されていると考えられる。<span class="guess">推測</span> オープンソースであることで、企業が自社インフラ上でデータを外部に渡さずエージェント基盤を構築できる点も注目される要因と思われる。</p>
+<h3>どんな人に役立つか</h3><p>複数台のサーバーやPCをまたいでAIエージェントを自動化したいエンジニアやMLエンジニアに向いている。自社データを外部クラウドに送らずにエージェント基盤を自前で運用したい企業・個人開発者にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>Mainplane Serverがシークレット（APIキーなどの機密情報）や認証・認可、可観測性（ログ・監視）、ファイルサーバーを一元管理する中央サーバーとして機能する。</li><li>Connectorと呼ばれる仕組みでサーバーと各ワーカー（エージェントが動作するコンピュータ）を接続し、メッセージングやコマンド送受信を行う。</li><li>Anthropic・OpenAI・Google等の主要LLMプロバイダをモデル非依存の設計で統合している。</li><li>リモートファイルシステムにより、複数デバイスからの同時アクセスでもデータの競合・非同期を防ぐ共有ドライブを実現している。</li></ul>
+<h3>試し方</h3>
+<ol><li>常時起動しているサーバーマシン（Linux/macOSまたはWindows）でインストールコマンドを実行する。</li><li>クイックスタートの指示に従い、利用するプロバイダ（AnthropicなどのAIサービス）を追加する。</li><li>エージェントが操作するワーカー（コンピュータ）とコネクタ（メッセージ受信手段）を設定する。</li><li>詳細はリポジトリ内の docs/self-hosting.md を参照する。</li></ol>
+<pre><code>curl -fsSL https://mainplane.ai/install | sh -s -- server quickstart
+&amp; ([scriptblock]::Create((irm https://mainplane.ai/install.ps1))) server quickstart</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-01.html#h-mainplane-ai__mainplane">2026-11-01 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

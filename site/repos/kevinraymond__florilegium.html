@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kevinraymond/florilegium | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>kevinraymond/florilegium</h1>
+<div class="meta"><span>Lua</span>
+<span>初掲載 2026-11-01（Trendshift 20位）</span>
+<a class="gh" href="https://github.com/kevinraymond/florilegium" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="kevinraymond__florilegium" data-repo="kevinraymond/florilegium" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">LuaLaTeX用のデルフト・ブルー（オランダ陶器風の青色）で手続き生成される花模様ページマージンパッケージ</p>
+<h3>何ができるか</h3><ul><li>ページ番号をシードにLuaでページごとに異なる花・葉・茎を手続き生成し、外部画像なしで美しいマージン装飾を描画できる</li><li>手動配置の「Authored」モードとページの空きスペースに合わせて植物が自動成長する「Grown」モードの2種類が選べる</li><li>章番号付き見出しの横に花を配置するオプションや、特定行の横にインライン花飾りを挿入できる</li><li>「春の蕾」から「秋の種」まで季節変化（aging）オプションで経年変化する植物を表現できる</li><li>蝶・蜂・カタツムリ・鳥などの訪問者キャラクターが自動配置される（無効化も可能）</li><li>LaTeXなしでLuaコードをそのまま実行してSVGを出力でき、ブラウザのWebAssemblyプレイグラウンドでもリアルタイム調整・エクスポートができる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> LuaLaTeX文書に外部画像を一切使わず美麗な装飾マージンを自動生成できる点が独自の価値を持つ。<span class="guess">推測</span> 1998年のSIGGRAPH論文に基づく植物成長アルゴリズムをLaTeXパッケージとして実用化した学術的・芸術的な完成度が注目を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>学術論文・書籍・同人誌などをLuaLaTeXで組版しており、独自の植物装飾デザインを低コストで取り入れたい人に向いている。デジタルアーツや手続き生成グラフィクス（プログラムで自動的に図形を生成する技術）に興味があるCS学生にとっても、実際に動くコードとして参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>すべての花・葉・茎をLuaで算術計算し、LuaLaTeXのPDFドライバに直接描画命令を送ることで外部依存ゼロを実現している</li><li>色空間にOKLCH（知覚的に均一な色空間で、人間の視覚に合わせた色計算が可能）を使い、1つのインク色から全パレットを自動生成している</li><li>植物の成長アルゴリズムはWong・Zongker・Salesin（SIGGRAPH 1998）の花飾りアルゴリズムを参考にしたグリーディ空間充填ループを採用している</li><li>同じLuaコードをWebAssembly（ブラウザ上でネイティブ並みの速度で動くバイナリ形式）に変換してブラウザプレイグラウンドとして提供し、LaTeX・Typst・SVGにエクスポートできる</li><li>Makefile・Dockerイメージ・Overleafと複数のビルド環境に対応しており、TeX未インストール環境でも試せる</li></ul>
+<h3>試し方</h3>
+<ol><li>LuaLaTeXがインストールされた環境（またはDockerかOverleaf）を用意する</li><li>LaTeXファイルのプリアンブルに \usepackage[grown]{florilegium} を追加する</li><li>lualatex コマンドで文書をコンパイルすると花模様付きマージンのPDFが生成される</li><li>TeX環境がない場合はリポジトリのDockerイメージを使うか、ブラウザプレイグラウンドでオンライン確認できる</li></ol>
+<pre><code>make
+\usepackage[grown]{florilegium}</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-01.html#d-kevinraymond__florilegium">2026-11-01</a>
+<span class="src trendshift">Trendshift 20位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
