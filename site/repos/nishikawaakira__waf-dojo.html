@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nishikawaakira/waf-dojo | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎮</div><div>
+<h1>nishikawaakira/waf-dojo</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-11-02（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/nishikawaakira/waf-dojo" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="nishikawaakira__waf-dojo" data-repo="nishikawaakira/waf-dojo" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AWS WAFの防御ルールをゲーム感覚で実践的に学べるハンズオン道場</p>
+<h3>何ができるか</h3><ul><li>SQLインジェクションやXSS、レート制限など6種のチュートリアルで段階的にAWS WAFの基礎を学べる</li><li>チュートリアル修了後に解放されるゲームモードでは、攻撃概要だけを渡されて自力でWAFルールを設計する6ステージに挑戦できる</li><li>41件の脆弱性ラボと2件のログ分析オペドリルで、実際の攻撃パターンに対するルール作成を繰り返し練習できる</li><li>攻撃ブロック率と誤検知率を組み合わせたスコアリングで、ルールの精度を数値で確認できる</li><li>管理者がコンテストモードを有効化すると、時間制限付きの問題セットを複数プレイヤーで競うことができる</li><li>uTLSでブラウザやツールのTLSフィンガープリントを再現したトラフィックジェネレータが自動的に攻撃と正常リクエストを送信する</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AWS WAFは設定の自由度が高い一方で、実際に攻撃を受けて試行錯誤できる環境を個人で用意するのは難しい。本リポジトリはその環境をTerraform一発で構築し、ゲームのスコアで達成度を可視化することで学習継続のモチベーションを維持しやすい点が注目されている。<span class="guess">推測</span> JA4フィンガープリントやBot検出といった最新トピックも含む幅広いカバレッジも評価されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>AWS WAFの設定を実務で担当するインフラ・セキュリティエンジニアや、社内セキュリティ研修のコンテンツを探しているトレーナーに役立つ。個人学習・学校教育・社内研修は無償で利用でき、AWS環境さえあれば手軽にデプロイして試せる。</p>
+<h3>技術的なポイント</h3><ul><li>バックエンドはGo 1.26以上で実装されたAWS Lambda関数URLで動作し、プレイヤーごとにALB・Web ACL・DynamoDBリソースをTerraform 1.6以上で払い出す</li><li>ダミーショップアプリはすべてのリクエストに200を返すため、4xxレスポンスはWAFによるブロックと明確に判別できる</li><li>トラフィックジェネレータがuTLSライブラリを使ってブラウザや攻撃ツールのTLSフィンガープリント（JA4）を再現した攻撃リクエストを生成する</li><li>オプションでCloudFrontを前段に配置することでCloudFront向けWAFルールの学習も可能</li></ul>
+<h3>試し方</h3>
+<ol><li>Go 1.26以上、Terraform 1.6以上、および管理者相当のAWS認証情報を用意する</li><li>aws sts get-caller-identityでデプロイ先のAWSアカウントを確認する</li><li>terraform/terraform.tfvars.exampleをterraform/terraform.tfvarsにコピーしてplayer_countなどを編集する</li><li>make deployでLambdaのビルドとTerraformのapplyを一括実行する</li><li>terraform -chdir=terraform output -json player_accessで各プレイヤーのゲームURLとAWSコンソールURLを取得し、それぞれに配布する</li><li>終了後はmake destroyで環境を削除する</li></ol>
+<pre><code>aws sts get-caller-identity
+cp terraform/terraform.tfvars.example terraform/terraform.tfvars
+make deploy
+terraform -chdir=terraform output -json player_access
+make dev
+make destroy</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-02.html#h-nishikawaakira__waf-dojo">2026-11-02 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>39 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "repo": "nishikawaakira/waf-dojo",
+  "language": "Go",
+  "readme": true,
+  "oneLiner": "AWS WAFの防御ルールをゲーム感覚で実践的に学べるハンズオン道場",
+  "features": [
+    "SQLインジェクションやXSS、レート制限など6種のチュートリアルで段階的にAWS WAFの基礎を学べる",
+    "チュートリアル修了後に解放されるゲームモードでは、攻撃概要だけを渡されて自力でWAFルールを設計する6ステージに挑戦できる",
+    "41件の脆弱性ラボと2件のログ分析オペドリルで、実際の攻撃パターンに対するルール作成を繰り返し練習できる",
+    "攻撃ブロック率と誤検知率を組み合わせたスコアリングで、ルールの精度を数値で確認できる",
+    "管理者がコンテストモードを有効化すると、時間制限付きの問題セットを複数プレイヤーで競うことができる",
+    "uTLSでブラウザやツールのTLSフィンガープリントを再現したトラフィックジェネレータが自動的に攻撃と正常リクエストを送信する"
+  ],
+  "why": "推測: AWS WAFは設定の自由度が高い一方で、実際に攻撃を受けて試行錯誤できる環境を個人で用意するのは難しい。本リポジトリはその環境をTerraform一発で構築し、ゲームのスコアで達成度を可視化することで学習継続のモチベーションを維持しやすい点が注目されている。推測: JA4フィンガープリントやBot検出といった最新トピックも含む幅広いカバレッジも評価されていると考えられる。",
+  "whoFor": "AWS WAFの設定を実務で担当するインフラ・セキュリティエンジニアや、社内セキュリティ研修のコンテンツを探しているトレーナーに役立つ。個人学習・学校教育・社内研修は無償で利用でき、AWS環境さえあれば手軽にデプロイして試せる。",
+  "tech": [
+    "バックエンドはGo 1.26以上で実装されたAWS Lambda関数URLで動作し、プレイヤーごとにALB・Web ACL・DynamoDBリソースをTerraform 1.6以上で払い出す",
+    "ダミーショップアプリはすべてのリクエストに200を返すため、4xxレスポンスはWAFによるブロックと明確に判別できる",
+    "トラフィックジェネレータがuTLSライブラリを使ってブラウザや攻撃ツールのTLSフィンガープリント（JA4）を再現した攻撃リクエストを生成する",
+    "オプションでCloudFrontを前段に配置することでCloudFront向けWAFルールの学習も可能"
+  ],
+  "tryIt": {
+    "steps": [
+      "Go 1.26以上、Terraform 1.6以上、および管理者相当のAWS認証情報を用意する",
+      "aws sts get-caller-identityでデプロイ先のAWSアカウントを確認する",
+      "terraform/terraform.tfvars.exampleをterraform/terraform.tfvarsにコピーしてplayer_countなどを編集する",
+      "make deployでLambdaのビルドとTerraformのapplyを一括実行する",
+      "terraform -chdir=terraform output -json player_accessで各プレイヤーのゲームURLとAWSコンソールURLを取得し、それぞれに配布する",
+      "終了後はmake destroyで環境を削除する"
+    ],
+    "commands": [
+      "aws sts get-caller-identity",
+      "cp terraform/terraform.tfvars.example terraform/terraform.tfvars",
+      "make deploy",
+      "terraform -chdir=terraform output -json player_access",
+      "make dev",
+      "make destroy"
+    ]
+  }
+}

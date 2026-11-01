@@ -1,0 +1,36 @@
+{
+  "repo": "D4Vinci/Scrapling",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "HTTPリクエストからフルクロールまで対応するPython製Webスクレイピングフレームワーク",
+  "features": [
+    "CSSセレクタ・XPath・正規表現でHTML要素を抽出でき、サイト変更後も要素を追跡する適応型セレクタ機能を持つ。",
+    "CloudflareのTurnstileやInterstitialを回避しつつJavaScriptをレンダリングするブラウザ自動操作に対応する。",
+    "Scrapy風のスパイダーAPIで並行クロールが可能で、per-domainスロットリングやpause/resume機能も備える。",
+    "JSON・JSONL・CSV・XMLへのエクスポートが標準装備されており、コマンドライン(CLI)からも利用できる。",
+    "AIエージェント向けのMCPサーバーや、インタラクティブシェル、RAGパイプラインへの組み込みをサポートする。"
+  ],
+  "why": "Webスクレイピングに必要な機能（HTTPリクエスト、ブラウザ操作、パース、クロール）を1ライブラリで統合している点が注目される。プロジェクト公表のベンチマークでは5000要素のパースがBeautifulSoup比で約780倍高速とされており、大規模用途での性能が評価されている。推測: AI・RAG向けのMCPサーバー統合が、LLMエージェントによるWebデータ取得需要の増加と合致し、注目を集めていると考えられる。",
+  "whoFor": "Pythonで中規模から大規模のスクレイピングを行うエンジニアや、Cloudflare等のボット対策を持つサイトからデータ収集が必要な開発者に適する。AIエージェントやRAGパイプライン（検索強化生成：LLMにリアルタイムのWeb情報を与える仕組み）を構築するチームにも活用できる。",
+  "tech": [
+    "Python 3.10以上が必要で、ブラウザ操作にはPlaywright（Chromiumまたは Chrome）を使用し、CDP経由でリモートブラウザにも接続できる。",
+    "TLS指紋偽装やブラウザヘッダーの模倣により、一般的なボット検出を回避するHTTPフェッチャーを搭載する。",
+    "サイト構造変更後も要素を再発見する適応型トラッキング機能を、パーサーレベルで実装している。",
+    "AIエージェントとの連携用にMCP（Model Context Protocol）サーバーを内蔵しており、`pip install 'scrapling[ai]'`で有効化できる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "pipでscraplingをインストールする。",
+      "ブラウザ操作が必要な場合は`scrapling[fetchers]`オプションを追加してインストールし、`scrapling install`でPlaywrightを初期化する。",
+      "Pythonスクリプト内でFetcherをインポートし、URLを取得してCSSセレクタで要素を抽出する。",
+      "CLIを使う場合は`scrapling extract get <URL> <出力ファイル>`コマンドで直接抽出できる。"
+    ],
+    "commands": [
+      "pip install scrapling",
+      "pip install \"scrapling[fetchers]\"",
+      "scrapling install",
+      "docker pull pyd4vinci/scrapling",
+      "scrapling extract get 'https://quotes.toscrape.com/' quotes.md"
+    ]
+  }
+}
