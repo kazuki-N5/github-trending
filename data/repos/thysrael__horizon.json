@@ -1,0 +1,35 @@
+{
+  "repo": "Thysrael/Horizon",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "AIが複数ソースから英語・中国語の日次ニュースブリーフィングを自動生成・配信するツール",
+  "features": [
+    "RSS/Atom・Hacker News・Reddit・Telegram・Twitter・GitHubなど多数のソースからニュースを収集できる",
+    "編集ルールを定義した「プロファイル」でフィルタリング・スコアリング・出力形式を制御できる",
+    "Markdown・GitHub Pages・メール・Feishu/Lark・Slack・Discordへの多様な配信方式に対応している",
+    "1カテゴリが占有しすぎないバランス配信機能でニュースの偏りを防止できる",
+    "OpenAI・Gemini・DeepSeek・Ollamaなど複数のAIプロバイダーに対応している",
+    "MCPサーバーとして動作し、AIアシスタントからニュース収集機能をツールとして呼び出せる"
+  ],
+  "why": "推測: 英語と中国語の両方でニュースブリーフィングを自動生成できる多言語対応と、多数のソース・AIプロバイダーに対応した柔軟性が、情報収集を自動化したい開発者の注目を集めている。個人向けの自動ニュース配信ツールへの需要が高まっていることもトレンド入りの背景にある。",
+  "whoFor": "毎日のニュースをAIで自動収集・要約して配信したい開発者向け。技術系・AIニュースのダイジェストをFeishuやSlackなどのチャンネルに自動送信したい個人や組織に特に適している。",
+  "tech": [
+    "Pythonで実装されており、`uv sync`でのインストールまたはDockerで動作する",
+    "`horizon-wizard`というインタラクティブな設定ウィザードとJSONベースの設定ファイルで管理する",
+    "MCPサーバーとしても動作し、AIアシスタントのツールとして組み込むことができる",
+    "`npx skills add Thysrael/Horizon --skill horizon -g`でエージェントスキルとしてもインストールできる"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンしてuvをインストールする",
+      "`uv sync`で依存関係をインストールする",
+      "`uv run horizon-wizard`で対話的に設定ファイルを作成する",
+      "`uv run horizon`でニュース収集・ブリーフィング生成を実行する"
+    ],
+    "commands": [
+      "uv sync",
+      "uv run horizon-wizard",
+      "uv run horizon"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>calesthio/OpenMontage | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎬</div><div>
+<h1>calesthio/OpenMontage</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-03（Trendshift 20位）</span>
+<a class="gh" href="https://github.com/calesthio/OpenMontage" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="calesthio__openmontage" data-repo="calesthio/OpenMontage" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIコーディングアシスタントを動画制作スタジオに変えるオープンソースのエージェント型動画制作システム</p>
+<h3>何ができるか</h3><ul><li>自然言語で動画の内容を指示するだけで、リサーチ・スクリプト・素材生成・編集・レンダリングまでの全工程をエージェントが自動実行する</li><li>Animated Explainer・Cinematic・Podcastリパーパス・ローカライズ＆吹き替えなど11種類の制作パイプラインを搭載している</li><li>APIキーなしでもPiper（オフラインTTS）やArchive.org・NASAなどの無料素材を利用してゼロコストで動画を生成できる</li><li>各制作段階でユーザーが承認ゲートを通過する仕組みにより、エージェントの暴走を防いだ人間主導のワークフローを実現している</li><li>制作進捗をリアルタイムで確認できるローカルのバックロットダッシュボードを備えている</li><li>100以上のツールと700以上のエージェントスキルファイルを収録しており、Claude Code・Cursor・Copilot等のAIコーディング環境で動作する</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIによるコード生成が急速に普及する中、同様のアプローチを動画制作に応用した世界初のオープンソースエージェント型システムとして注目を集めている。APIキー不要のゼロコストパスを備え、誰でも試せる敷居の低さも評価されている。<span class="guess">推測</span> 動画制作の民主化とAIエージェント活用の新たなユースケースとして関心が高まっている。</p>
+<h3>どんな人に役立つか</h3><p>AIコーディングアシスタントを使いこなしており、動画制作の自動化や効率化に興味のある開発者・クリエイターに向いている。解説動画・ドキュメンタリー・ポッドキャスト編集など多様な用途に対応しており、動画制作の経験が少なくても使い始めることができる。</p>
+<h3>技術的なポイント</h3><ul><li>Python 3.10+ と FFmpeg、Node.js 18+ を組み合わせてレンダリングパイプラインを構築している</li><li>Remotionを用いてプログラマブルな動画コンポジションを実現している</li><li>YAML形式のパイプライン定義ファイルとスキルファイルにより、エージェントの行動指針とワークフローを宣言的に管理している</li><li>BaseTool を継承した拡張可能なツール設計で、プロバイダーや機能のプラグイン追加が容易になっている</li><li>ffprobe・フレームサンプリング・音声チェックなどの事後検証機構と予算上限機能でコスト管理と品質保証を行っている</li></ul>
+<h3>試し方</h3>
+<ol><li>Python 3.10+・FFmpeg・Node.js 18+ と任意のAIコーディングアシスタントを用意する</li><li>リポジトリをクローンし make setup を実行して依存関係をインストールする</li><li>.env.example を .env にコピーし、必要なAPIキーを設定する（省略可）</li><li>AIコーディングアシスタントを開き、作りたい動画の内容を自然言語で指示する</li><li>バックロットダッシュボードで制作進捗を確認する</li></ol>
+<pre><code>git clone https://github.com/calesthio/OpenMontage.git
+cd OpenMontage
+make setup
+python3 -m venv .venv &amp;&amp; source .venv/bin/activate
+python -m pip install -r requirements.txt
+cd remotion-composer &amp;&amp; npm install &amp;&amp; cd ..
+python -m pip install piper-tts
+cp .env.example .env
+python -m backlot open
+python -m backlot open &lt;project-id&gt;
+make test-contracts
+make test</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-03.html#d-calesthio__openmontage">2026-11-03</a>
+<span class="src trendshift">Trendshift 20位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "repo": "ivankovic/omnidiff",
+  "language": "",
+  "readme": true,
+  "oneLiner": "コード・画像・バイナリを内容に応じたアルゴリズムで差分表示するTUIツール",
+  "features": [
+    "25言語をtree-sitterで構文解析してコンテンツ対応の差分アルゴリズムで比較できる",
+    "画像・アーカイブ・フォント・PDF・メッセージカタログなどバイナリ形式も内容を認識して差分表示できる",
+    "インタラクティブTUIモードとヘッドレス（--headless/--batch）モードの両方で使用できる",
+    "JSON出力モード（--mode json）でCI/CDパイプラインへの組み込みも可能",
+    "GitおよびJujutsuのdifftoolとして設定でき、設定ウィザードコマンドも提供している",
+    "VS CodeとNeovimのエディタ統合プラグインを提供している"
+  ],
+  "why": "推測: 単一の差分ツールでコード・バイナリ・画像を一括して扱えるオールインワン設計が開発者の興味を引いていると考えられる。tree-sitterによる言語認識で意味のある差分を提供し、中央値4.2ms・p99 177msという高速性能も評価されている。Claude Codeを活用した開発プロセスの透明性ある開示もコミュニティの関心を集めている。",
+  "whoFor": "コードレビューやリポジトリ変更の確認に差分ツールを頻繁に使う開発者に役立つ。GitやJujutsuのdifftoolを高機能なものに置き換えたいエンジニアや、CI/CDで差分情報をJSON形式で活用したい自動化担当者にも適している。",
+  "tech": [
+    "Rustで実装されており、`cargo install --locked omnidiff`でインストールできる（Cコンパイラとrustc 1.92以上が必要）",
+    "tree-sitterを使用して25言語を構文解析し、言語固有のコンテンツ対応差分アルゴリズムを適用している",
+    "ファイル内容のバイトシグネチャで形式を識別するため、拡張子に依存せず画像・PDF等を自動認識できる",
+    "AGPL-3.0ライセンスで、商用利用向けにはGitHub Sponsorsを通じた商用ライセンスを提供している"
+  ],
+  "tryIt": {
+    "steps": [
+      "rustc 1.92以上とCコンパイラをインストールする",
+      "cargoでomnidiffをインストールするか、GitHubリリースページからプレビルドバイナリをダウンロードする",
+      "`omnidiff BEFORE AFTER`で2つのファイルを比較するインタラクティブTUIを起動する",
+      "`?`キーでキーバインド一覧を表示して操作を確認する",
+      "`omnidiff git configure`でGitのdifftoolとして設定する"
+    ],
+    "commands": [
+      "cargo install --locked omnidiff",
+      "omnidiff BEFORE AFTER",
+      "omnidiff --headless BEFORE AFTER",
+      "omnidiff git configure",
+      "omnidiff jj configure",
+      "GIT_EXTERNAL_DIFF=omnidiff git diff"
+    ]
+  }
+}

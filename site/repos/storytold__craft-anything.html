@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>storytold/craft-anything | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔍</div><div>
+<h1>storytold/craft-anything</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-03（Trendshift 3位）</span>
+<a class="gh" href="https://github.com/storytold/craft-anything" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="storytold__craft-anything" data-repo="storytold/craft-anything" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">任意のソフトウェアを解析・模倣再構築するオープンソースのリバースエンジニアリングエンジン</p>
+<h3>何ができるか</h3><ul><li>WebサイトやアプリをAIエージェントで調査し、指定したスタックで再構築プロジェクトを自動生成できる</li><li>ディスアセンブル・デコンパイル・コールグラフ表示などを備えたAdvancedワークベンチモードを持つ</li><li>Claude CodeやACP対応エージェントなど複数のコーディングエージェントと連携できる</li><li>合計314のツールをCLIコマンドとMCPツールとして公開しており、エージェントから直接利用できる</li><li>クリーンルームモード（ユーザー可視情報のみ使用）とディープモード（全ツール使用）の2方式で解析できる</li><li>Windows・macOS・Linux・FreeBSDおよびWebAssemblyブラウザビューア向けのビルドを提供している</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIエージェントによるリバースエンジニアリングの自動化は従来の手動解析に比べて参入障壁が大幅に低く、開発者コミュニティの関心を集めている。314ものMCPツールを備えたエコシステムの規模感と、Claude Codeを筆頭にした複数エージェント対応が注目を集めていると考えられる。純Rust実装でクロスプラットフォームに対応している点も評価されている。</p>
+<h3>どんな人に役立つか</h3><p>自分が所有または検査許可を持つソフトウェアの仕組みを理解したいエンジニアや研究者に役立つ。既存ソフトウェアと互換性のある代替実装を作りたい開発者や、リバースエンジニアリングの自動化パイプラインを構築したいセキュリティ研究者にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>純Rust（バージョン1.97以上）で実装されており、`cargo run --release`でビルドできる</li><li>全機能をCLIコマンドとMCPツールの両方として公開する二重インターフェース設計を採用している</li><li>オプションでGhidraを統合してより高度なディスアセンブル・デコンパイルを行うことができる</li><li>Claude CodeをはじめACP（Agent Communication Protocol）対応の各種エージェントと連携できる設計になっている</li></ul>
+<h3>試し方</h3>
+<ol><li>Rust 1.97以上をインストールする</li><li>リポジトリをクローンしてビルドする、またはCLIをcargoでインストールする</li><li>ターゲットのWebサイト・アプリ・ゲームを指定して解析を開始する</li><li>Study→Build→Check→Refineの4ステップに従い再構築を進める</li></ol>
+<pre><code>cargo run --release -p craft-anything
+cargo install craft-anything</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-03.html#d-storytold__craft-anything">2026-11-03</a>
+<span class="src trendshift">Trendshift 3位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

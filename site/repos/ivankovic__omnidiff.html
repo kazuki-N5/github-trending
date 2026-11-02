@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ivankovic/omnidiff | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🖼️</div><div>
+<h1>ivankovic/omnidiff</h1>
+<div class="meta">
+<span>初掲載 2026-11-03（はてなブックマーク 3位）</span>
+<a class="gh" href="https://github.com/ivankovic/omnidiff" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="ivankovic__omnidiff" data-repo="ivankovic/omnidiff" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">コード・画像・バイナリを内容に応じたアルゴリズムで差分表示するTUIツール</p>
+<h3>何ができるか</h3><ul><li>25言語をtree-sitterで構文解析してコンテンツ対応の差分アルゴリズムで比較できる</li><li>画像・アーカイブ・フォント・PDF・メッセージカタログなどバイナリ形式も内容を認識して差分表示できる</li><li>インタラクティブTUIモードとヘッドレス（--headless/--batch）モードの両方で使用できる</li><li>JSON出力モード（--mode json）でCI/CDパイプラインへの組み込みも可能</li><li>GitおよびJujutsuのdifftoolとして設定でき、設定ウィザードコマンドも提供している</li><li>VS CodeとNeovimのエディタ統合プラグインを提供している</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 単一の差分ツールでコード・バイナリ・画像を一括して扱えるオールインワン設計が開発者の興味を引いていると考えられる。tree-sitterによる言語認識で意味のある差分を提供し、中央値4.2ms・p99 177msという高速性能も評価されている。Claude Codeを活用した開発プロセスの透明性ある開示もコミュニティの関心を集めている。</p>
+<h3>どんな人に役立つか</h3><p>コードレビューやリポジトリ変更の確認に差分ツールを頻繁に使う開発者に役立つ。GitやJujutsuのdifftoolを高機能なものに置き換えたいエンジニアや、CI/CDで差分情報をJSON形式で活用したい自動化担当者にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>Rustで実装されており、`cargo install --locked omnidiff`でインストールできる（Cコンパイラとrustc 1.92以上が必要）</li><li>tree-sitterを使用して25言語を構文解析し、言語固有のコンテンツ対応差分アルゴリズムを適用している</li><li>ファイル内容のバイトシグネチャで形式を識別するため、拡張子に依存せず画像・PDF等を自動認識できる</li><li>AGPL-3.0ライセンスで、商用利用向けにはGitHub Sponsorsを通じた商用ライセンスを提供している</li></ul>
+<h3>試し方</h3>
+<ol><li>rustc 1.92以上とCコンパイラをインストールする</li><li>cargoでomnidiffをインストールするか、GitHubリリースページからプレビルドバイナリをダウンロードする</li><li>`omnidiff BEFORE AFTER`で2つのファイルを比較するインタラクティブTUIを起動する</li><li>`?`キーでキーバインド一覧を表示して操作を確認する</li><li>`omnidiff git configure`でGitのdifftoolとして設定する</li></ol>
+<pre><code>cargo install --locked omnidiff
+omnidiff BEFORE AFTER
+omnidiff --headless BEFORE AFTER
+omnidiff git configure
+omnidiff jj configure
+GIT_EXTERNAL_DIFF=omnidiff git diff</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-03.html#h-ivankovic__omnidiff">2026-11-03 はてブ</a>
+<span class="src hatena">はてなブックマーク 3位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

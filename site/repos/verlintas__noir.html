@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verlintas/NOIR | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛡️</div><div>
+<h1>Verlintas/NOIR</h1>
+<div class="meta"><span>Kotlin</span>
+<span>初掲載 2026-11-03（Trendshift 8位）</span>
+<a class="gh" href="https://github.com/Verlintas/NOIR" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="verlintas__noir" data-repo="Verlintas/NOIR" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Androidデバイスの情報漏洩リスクをadb経由で監査し修正案を提示するデスクトップツール</p>
+<h3>何ができるか</h3><ul><li>接続したAndroidデバイスのアプリごとにネットワーク・センシティブ権限の一覧を取得できる</li><li>APKのdexファイルからURLエンドポイントを抽出してテレメトリ・広告・位置情報などに分類しリスクスコアを付与する</li><li>権限とデータ種別（位置情報・連絡先・SMS・カメラ等）を紐付けて報告ドメインとのマッピングを行う</li><li>バイナリAXMLを解析してエクスポートコンポーネント・クリアテキスト通信・バックアップ設定などのマニフェスト問題を検出する</li><li>安全な自動適用項目・手動確認項目・触れてはいけない項目に分類したロールバックコマンド付き推奨事項を出力する</li><li>jadxを使用して単一APKをDeepScanし`Runtime.exec`や`DexClassLoader`などの高リスク呼び出しを検索できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> ルート不要・アカウント不要・ネットワーク通信なしでAndroidデバイスのプライバシーリスクを可視化できる点が評価されていると考えられる。スマートフォンのデータ収集に対するユーザーの関心が高まる中、自分のデバイスを手軽に監査できるツールとして注目を集めている。</p>
+<h3>どんな人に役立つか</h3><p>自分のAndroidデバイスやアプリが何を外部に送信しているか把握したいプライバシー意識の高いユーザーに役立つ。セキュリティ研究者や企業のIT管理者が許可を得たデバイスの監査に使用するケースにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>Kotlin（Compose Multiplatform）で実装されており、macOS・Windows・Debian/Ubuntuに対応している</li><li>adbを通じてデバイスと通信し、unzipとstringsをデバイス上で実行してAPKからエンドポイントを抽出する</li><li>jadxを使用したDeepScan機能でAPKを逆コンパイルして高リスクなAPIコールをソースレベルで検索する</li><li>JDK 17以上が必要だが、ポータブルリリースはランタイムを同梱しているため不要</li></ul>
+<h3>試し方</h3>
+<ol><li>macOS・Windows 10/11・Debian/Ubuntuいずれかの環境にJDK 17以上とAndroid platform-toolsをインストールする</li><li>GitHubリリースページからポータブルパッケージをダウンロードする（JDK不要）</li><li>AndroidデバイスをUSBデバッグ有効でPCに接続する</li><li>`noir`を起動してセットアップウィザードに従いスキャンを実行する</li><li>生成されたreport.json・report.md・plan.txt・rollback.txtを確認して推奨事項を適用する</li></ol>
+<pre><code>noir
+noir scan
+noir auto --apply
+noir deepscan</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-03.html#d-verlintas__noir">2026-11-03</a>
+<span class="src trendshift">Trendshift 8位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

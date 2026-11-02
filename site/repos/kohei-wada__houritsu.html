@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kohei-Wada/houritsu | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>Kohei-Wada/houritsu</h1>
+<div class="meta">
+<span>初掲載 2026-11-03（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/Kohei-Wada/houritsu" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="kohei-wada__houritsu" data-repo="Kohei-Wada/houritsu" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">e-Govの法令APIから生成した、改正ごとにコミットが積み上がる日本法令のgitリポジトリ</p>
+<h3>何ができるか</h3><ul><li>日本の法令をe-Gov法令APIから取得し、各改正が施行された順にgitコミットとして積み上げることで法令の変遷をgit履歴で追跡できる</li><li>git show &lt;コミット&gt; で特定の改正がどの条文をどう変えたかをdiff形式で確認できる</li><li>法令ファイルはMarkdown形式で、YAMLフロントマターに法令IDや施行日などのメタデータを持つ</li><li>mainブランチには施行済みの改正のみ、upcomingブランチには公布済みで未施行の改正が管理されている</li><li>git grep や git log -L を使ったコマンドラインでの法令検索・条文の変更履歴追跡が可能になっている</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 日本の法令は頻繁に改正されるが、従来のe-Govサイトでは差分を視覚的に確認しにくかった。gitのdiff機能で改正内容を即座に把握できるこのアプローチは開発者や法律を扱う技術者に刺さる独自の切り口として注目されている。<span class="guess">推測</span> リーガルテックへの関心の高まりとgitを活用したデータ管理の斬新さが話題を呼んでいる。</p>
+<h3>どんな人に役立つか</h3><p>日本の法令改正の内容や履歴をプログラムで調べたいエンジニア・リサーチャーに役立つ。法律条文の差分確認やリーガルテック開発の素材として活用できる。ただし官報や公式テキストの代替ではなく、重要な判断前には必ずe-Govや官報で原文を確認することが推奨されている。</p>
+<h3>技術的なポイント</h3><ul><li>gitのコミット日時を施行日に設定し、コミットトレーラーに改正法令ID・施行日・国会提出法案番号などのメタデータを埋め込む設計になっている</li><li>法令ファイルはlaws/&lt;法令種別&gt;/&lt;ID先頭3文字&gt;/&lt;e-Gov法令ID&gt;.md という階層構造で管理されている</li><li>表はHTMLで記述し、図はe-Govの添付ファイルへのリンクで表現している</li><li>MarkdownリントはuvxでrumdlをインストールしてCIと手動確認に使用している</li><li>データはe-Gov法令検索のPDL1.0ライセンスに基づき、法令テキスト自体は著作権法第13条により著作権がないとされている</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンしてローカルに取得する</li><li>git grep で法令名から対象ファイルのパスを特定する</li><li>git log や git show で改正の履歴や差分を確認する</li><li>特定条文の変更履歴はgit log -L でファイル内の行範囲を指定して追跡する</li></ol>
+<pre><code>git grep -l &#x27;^title: &quot;個人情報の保護に関する法律&quot;&#x27; -- laws
+git log -L &#x27;/^##*  *第十六条/,/^##*  *第十七条/:laws/act/415/415AC0000000057.md&#x27;
+uvx rumdl@0.2.79 check</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-03.html#h-kohei-wada__houritsu">2026-11-03 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

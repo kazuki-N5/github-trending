@@ -1,0 +1,46 @@
+{
+  "repo": "calesthio/OpenMontage",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "AIコーディングアシスタントを動画制作スタジオに変えるオープンソースのエージェント型動画制作システム",
+  "features": [
+    "自然言語で動画の内容を指示するだけで、リサーチ・スクリプト・素材生成・編集・レンダリングまでの全工程をエージェントが自動実行する",
+    "Animated Explainer・Cinematic・Podcastリパーパス・ローカライズ＆吹き替えなど11種類の制作パイプラインを搭載している",
+    "APIキーなしでもPiper（オフラインTTS）やArchive.org・NASAなどの無料素材を利用してゼロコストで動画を生成できる",
+    "各制作段階でユーザーが承認ゲートを通過する仕組みにより、エージェントの暴走を防いだ人間主導のワークフローを実現している",
+    "制作進捗をリアルタイムで確認できるローカルのバックロットダッシュボードを備えている",
+    "100以上のツールと700以上のエージェントスキルファイルを収録しており、Claude Code・Cursor・Copilot等のAIコーディング環境で動作する"
+  ],
+  "why": "推測: AIによるコード生成が急速に普及する中、同様のアプローチを動画制作に応用した世界初のオープンソースエージェント型システムとして注目を集めている。APIキー不要のゼロコストパスを備え、誰でも試せる敷居の低さも評価されている。推測: 動画制作の民主化とAIエージェント活用の新たなユースケースとして関心が高まっている。",
+  "whoFor": "AIコーディングアシスタントを使いこなしており、動画制作の自動化や効率化に興味のある開発者・クリエイターに向いている。解説動画・ドキュメンタリー・ポッドキャスト編集など多様な用途に対応しており、動画制作の経験が少なくても使い始めることができる。",
+  "tech": [
+    "Python 3.10+ と FFmpeg、Node.js 18+ を組み合わせてレンダリングパイプラインを構築している",
+    "Remotionを用いてプログラマブルな動画コンポジションを実現している",
+    "YAML形式のパイプライン定義ファイルとスキルファイルにより、エージェントの行動指針とワークフローを宣言的に管理している",
+    "BaseTool を継承した拡張可能なツール設計で、プロバイダーや機能のプラグイン追加が容易になっている",
+    "ffprobe・フレームサンプリング・音声チェックなどの事後検証機構と予算上限機能でコスト管理と品質保証を行っている"
+  ],
+  "tryIt": {
+    "steps": [
+      "Python 3.10+・FFmpeg・Node.js 18+ と任意のAIコーディングアシスタントを用意する",
+      "リポジトリをクローンし make setup を実行して依存関係をインストールする",
+      ".env.example を .env にコピーし、必要なAPIキーを設定する（省略可）",
+      "AIコーディングアシスタントを開き、作りたい動画の内容を自然言語で指示する",
+      "バックロットダッシュボードで制作進捗を確認する"
+    ],
+    "commands": [
+      "git clone https://github.com/calesthio/OpenMontage.git",
+      "cd OpenMontage",
+      "make setup",
+      "python3 -m venv .venv && source .venv/bin/activate",
+      "python -m pip install -r requirements.txt",
+      "cd remotion-composer && npm install && cd ..",
+      "python -m pip install piper-tts",
+      "cp .env.example .env",
+      "python -m backlot open",
+      "python -m backlot open <project-id>",
+      "make test-contracts",
+      "make test"
+    ]
+  }
+}
