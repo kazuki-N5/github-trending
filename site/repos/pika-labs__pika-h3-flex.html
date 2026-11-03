@@ -22,8 +22,22 @@
 <div class="meta"><span>Python</span>
 <span>初掲載 2026-11-04（Trendshift 19位）</span>
 <a class="gh" href="https://github.com/Pika-Labs/Pika-H3-Flex" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="pika-labs__pika-h3-flex" data-repo="Pika-Labs/Pika-H3-Flex" aria-pressed="false">♡ いいね</button></div></div></div>
-<div class="content"><p class="missing">解説はまだありません（作成に失敗したか、作成待ちです）。</p>
-<p class="en">Pika H3 Flex: video and audio generation inference</p></div>
+<div class="content"><p class="lead">MiniMax-H3ベースで動画と立体音響を同時に生成するオープンソース推論パッケージ</p>
+<h3>何ができるか</h3><ul><li>テキストプロンプトや画像フレームを条件として、動画と32kHzステレオ音声を6サンプリングステップで同時に生成できる</li><li>最大9枚の画像・3本の動画・3つの音声クリップをマルチモーダル参照として使うref2vaモードをサポートする</li><li>480pまたは768pの解像度と11種類のアスペクト比で5〜15秒の動画をH.264/AACエンコードのMP4形式で出力する</li><li>最初のフレーム・最後のフレーム・両端フレームを指定して生成をコントロールするエンドポイント条件付け（i2va / l2va / fl2va）に対応する</li><li>pip・Conda・Dockerの3通りでインストールでき、コマンドラインツールpika-h3-proから操作できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> MiniMax-H3という大規模基盤モデルにアダプタを追加する構成で映像と音声を同時生成できる点が技術的な独自性として注目されていると考えられる。<span class="guess">推測</span> テキスト・画像・音声などのマルチモーダル入力をサポートしつつオープンソースで公開されたことで、動画生成AI分野の研究者や開発者コミュニティから関心を集めていると推測される。</p>
+<h3>どんな人に役立つか</h3><p>H100 80GBなど大容量NVIDIAのGPUを持つ研究者や開発者が、テキストや画像・音声を組み合わせた動画生成をローカル環境で検証したい場合に適している。生成動画にマッチした効果音や音楽を自動で付けたいクリエイターや映像エンジニアにも有用だ。</p>
+<h3>技術的なポイント</h3><ul><li>MiniMax-H3基盤モデルにFL2VA（エンドポイントフレーム条件付け）とRef2VA（マルチモーダル参照）の2種類のタスクアダプタを追加した構成を採用している</li><li>動画と音声を6サンプリングステップで同時生成し、H.264映像とAAC音声をひとつのMP4ファイルにまとめて出力する</li><li>Diffusers（拡散モデル用ライブラリ）にパッチを当てて利用する構造で、tools/apply_diffusers_patches.pyで適用する</li><li>ベースモデルのダウンロードに約210GB、アダプタに約5.5GBのストレージが必要で、NVIDIA H100 80GB 1枚で動作検証されている</li></ul>
+<h3>試し方</h3>
+<ol><li>Python 3.12とNVIDIA GPU（H100 80GB相当）、git・patch・ffmpeg・Cコンパイラなど必要なシステムツールを用意する</li><li>リポジトリをクローンしてディレクトリに移動する</li><li>pip install -r requirements.txtで依存ライブラリをインストールする</li><li>python tools/apply_diffusers_patches.pyでDiffusersへのパッチを適用する</li><li>python -m pip install --no-deps -e .でパッケージをインストールする</li><li>pika-h3-pro --helpでCLIの使い方を確認し、--task t2vaなどのオプションで動画を生成する</li></ol>
+<pre><code>git clone https://github.com/Pika-Labs/Pika-H3-Flex.git
+cd Pika-H3-Flex
+python -m pip install -r requirements.txt
+python tools/apply_diffusers_patches.py
+python -m pip install --no-deps -e .
+pika-h3-pro --help
+export MODEL_REPO=Pika-Labs/Pika-H3-Flex
+export MODEL_REVISION=0ddf55ad7067ca1e76812253bd7b4600df87f759
+pika-h3-pro --task t2va --prompt-file examples/prompts/t2va.txt --model-repo &quot;$MODEL_REPO&quot; --revision &quot;$MODEL_REVISION&quot; --resolution 480p --aspect 16:9 --duration 5 --seed 42 --output outputs/sample.mp4</code></pre></div>
 <h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-04.html#d-pika-labs__pika-h3-flex">2026-11-04</a>
 <span class="src trendshift">Trendshift 19位</span></li></ul>
 </article>
