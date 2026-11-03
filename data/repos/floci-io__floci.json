@@ -1,0 +1,34 @@
+{
+  "repo": "floci-io/floci",
+  "language": "Java",
+  "readme": true,
+  "oneLiner": "AWSサービスをローカルで無料で動かせるオープンソースのクラウドエミュレーター",
+  "features": [
+    "Lambda・RDS・ElastiCache・ECSなど主要AWSサービスをDockerを使ってローカルマシン上で実行できる。",
+    "AWS CLI・SDK・Terraform・CDK・OpenTofuなど多くのツールをエンドポイントURLを変えるだけで接続できる。",
+    "ブラウザからhttp://localhost:4566/_floci/uiでWebコンソール（管理画面）を利用できる。",
+    "メモリ・永続化・ハイブリッド・WAL（Write-Ahead Log）の4種類のストレージモードを選択できる。",
+    "12桁のアクセスキーIDをアカウントIDとして使うマルチアカウント分離に対応している。",
+    "LocalStack（同種の有名ツール）コミュニティ版のドロップイン代替として、イメージを差し替えるだけで移行できる。"
+  ],
+  "why": "推測: LocalStackが有料機能制限を強化する中、クラウドアカウントも認証トークンも不要で同等機能を無料提供する代替として注目されている。CI環境でもコストなしに本格的なAWS統合テストが行える点が開発者に評価されている。Java・Python・Node.js・.NETのTestcontainers（テスト用コンテナ管理ライブラリ）モジュールも整備され、テスト自動化のエコシステムが充実している。",
+  "whoFor": "AWSを使ったアプリをローカル環境やCIでテスト・開発したい開発者に役立つ。クラウド費用を抑えたい個人開発者やスタートアップ、LocalStackの有料プランへの移行を避けたいチームに特に適している。",
+  "tech": [
+    "DockerコンテナでLambdaやRDSなどのサービスを実際に近い形で実行する高忠実度エミュレーション方式を採用している。",
+    "floci startコマンドで起動するCLIと、Docker不要のネイティブバイナリの2種類の実行方式を提供している。",
+    "FLOCI_プレフィックスの環境変数で設定を管理し、LocalStackの環境変数を自動変換して後方互換性を保っている。",
+    "Java・Python・Node.js・.NET向けにTestcontainersモジュールを提供し、約2576件の自動テストで5種のSDKと3種のIaCツールとの互換性を検証している。"
+  ],
+  "tryIt": {
+    "steps": [
+      "floci CLIをインストールする。",
+      "floci startでエミュレーターを起動する。",
+      "eval $(floci env)を実行してAWS環境変数をシェルにエクスポートする。",
+      "AWS CLIやSDKのエンドポイントURLをhttp://localhost:4566に向けて動作確認する。"
+    ],
+    "commands": [
+      "floci start",
+      "eval $(floci env)"
+    ]
+  }
+}

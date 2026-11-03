@@ -1,0 +1,190 @@
+{
+  "date": "2026-11-04",
+  "collectedAt": "2026-11-04T07:09:31+09:00",
+  "entries": [
+    {
+      "repo": "storytold/craft-anything",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Craft Anything: understand how any software works, and craft your own.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "JiaFeiMiao-K-Cat/DiscImageStudio",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "",
+      "language": "C#",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "deepseek-ai/dsh-superagent-prototype",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "Towards a More Autonomous Agent System",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "vercel-labs/agent-desktop",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "Computer use CLI for AI agents",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "NVIDIA/auto-ontology",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "D4Vinci/Scrapling",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "BryceYuuu/RUN",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "RUN · 润：海外移居手册（欧洲 36 国 · 110 条路线 · 主要移民地区）",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "edenfunf/reelmimic",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "Show it a video you love. Get a new video in the same style. An AI crew (Claude Code or Codex) plans, builds and reviews it with you.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "github/spec-kit",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "💫 Toolkit to help you get started with SDD or any other process!",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pingdotgg/t3code",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "modelflare-ai/AnyModelBot",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "🤖 Open-source, local-first alternative to Grok Bot, OpenAI dots and Claude Duet. Your own AI bots on any model: GPT, Claude, Gemini, Grok, DeepSeek, Kimi, GLM and 70+ more through one Modelflare key. Reach them in the app, WeChat or Feishu; they remember you, work in the background, run commands and use your computer. Pay per use.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ccch1mneyyy/dsh-Go",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
+      "language": "Dart",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "deepseek-ai/deepseek-harness",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "DeepSeek Harness: Everything is a Plugin.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Orkas-AI/Orkas",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus Claude Code, Codex, OpenCode, OpenClaw and Hermes, with projects, scheduled automations and connectors. Free app for macOS & Windows; built-in models or your own keys.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "floci-io/floci",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+      "language": "Java",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "harry0703/MoneyPrinterTurbo",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mattpocock/skills",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "p-e-w/heretic",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Pika-Labs/Pika-H3-Flex",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Pika H3 Flex: video and audio generation inference",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "heydamir/unslop",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": []
+  }
+}

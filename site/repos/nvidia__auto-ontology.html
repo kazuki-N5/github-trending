@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NVIDIA/auto-ontology | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>NVIDIA/auto-ontology</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-04（Trendshift 5位）</span>
+<a class="gh" href="https://github.com/NVIDIA/auto-ontology" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="nvidia__auto-ontology" data-repo="NVIDIA/auto-ontology" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">企業メタデータからオントロジー（概念の意味関係を定義した知識構造）層を構築し、AIエージェントへ文脈情報を提供するオープンライブラリ</p>
+<h3>何ができるか</h3><ul><li>自然言語の質問をSQLに変換し、接続されたデータベースに対してクエリを実行できる</li><li>リレーショナルデータソース上にセマンティックカタログ（意味的な分類目録）とオントロジー層を構築し、Postgresとpgvectorで管理する</li><li>Better AuthによるRBAC（ロールベースアクセス制御）とSSO（シングルサインオン）認証に対応している</li><li>チャット・分析・データカタログ・設定などを備えたWebUIを提供する</li><li>HelmチャートによるKubernetesデプロイとDocker Composeによるローカル環境構築の両方に対応している</li><li>MCP（Model Context Protocol）・CLI・APIを通じてエージェントへ文脈情報を提供できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> LLMやAIエージェントが企業内の複数システムにまたがるデータを正確に扱うには、各システム間での用語・定義の不一致を解消する「意味の橋渡し」が必要とされており、この課題を解決するツールとして注目されている。<span class="guess">推測</span> NVIDIAが公式に公開したプロジェクトであり、NVIDIA NIMという自社の推論インフラと組み合わせて使える点も関心を集めている一因と考えられる。</p>
+<h3>どんな人に役立つか</h3><p>エンタープライズ（企業向け）データを扱うAIエージェントやRAGシステムを構築するエンジニアや、組織内の複数データソースにまたがるセマンティック検索や自然言語クエリを実現したいデータエンジニアに適している。KubernetesやDockerを用いた本番環境へのデプロイを前提とした設計のため、インフラ構築の知識も必要となる。</p>
+<h3>技術的なポイント</h3><ul><li>バックエンドはFastAPI（Python製Webフレームワーク）、フロントエンドはNext.jsで構成されている</li><li>ベクトル検索（意味的な類似検索）にはPostgresの拡張機能であるpgvectorを使用している</li><li>自然言語処理と埋め込みモデルにはNVIDIA NIMエンドポイント（ホスト型またはセルフホスト型）を利用する</li><li>Kubernetesデプロイ用のHelmチャートとローカル開発用のDocker Composeを両方サポートしている</li><li>オプションでHashiCorp Vaultを用いて接続情報（DBクレデンシャル等）を安全に管理できる</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンする</li><li>テンプレートから.envファイルを作成し、AUTH_SECRETとAPP_URLを設定する</li><li>Docker Composeでスタックを起動する</li><li>ブラウザでlocalhost:3000にアクセスしてWebUIを開く</li></ol>
+<pre><code>docker compose up -d --build</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-04.html#d-nvidia__auto-ontology">2026-11-04</a>
+<span class="src trendshift">Trendshift 5位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

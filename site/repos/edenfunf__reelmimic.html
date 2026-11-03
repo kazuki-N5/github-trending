@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>edenfunf/reelmimic | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎬</div><div>
+<h1>edenfunf/reelmimic</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-11-04（Trendshift 8位）</span>
+<a class="gh" href="https://github.com/edenfunf/reelmimic" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="edenfunf__reelmimic" data-repo="edenfunf/reelmimic" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">参照動画のスタイルを解析し、同スタイルの新しい2Dアニメーション動画をAIエージェントが自動制作するローカルツール。</p>
+<h3>何ができるか</h3><ul><li>参照動画のショット数・テンポ・色・構図・カメラワークを詳細に分析する。</li><li>AIが絵コンテ・キャラクター・アセットのプランを生成し、ユーザーがチャットで修正・承認できる。</li><li>最大6体のAIエージェントが並列で各ショットを制作し、別のエージェントが品質をレビューする。</li><li>完成動画にタイムスタンプ付きのメモを残してフィードバックをエージェントに伝えられる。</li><li>7種類の2Dドローイングエンジンに対応し、スタイルはMarkdownファイルで定義・追加できる。</li><li>明示的な--sendフラグなしには投稿しない安全設計で、TikTok・Instagram・YouTubeへの動画公開に対応している。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 動画生成AIが注目される中、参照動画のスタイルだけを学習して新映像を作る独自アプローチが評価されているとみられる。ローカル実行かつAPIキーを自己管理できる点がプライバシー意識の高いユーザーに響くと考えられる。複数のAIエージェントが分業・レビューし合う自律的なワークフローの実験事例としても関心を集めているとみられる。</p>
+<h3>どんな人に役立つか</h3><p>AIを活用して動画コンテンツを制作したいクリエイターやVTuber制作者に向いている。Claude CodeやCodex CLIのAPIキーを持ち、マルチエージェントによる自動制作パイプラインを試したい開発者・研究者にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>Node.js 22.18以上とPython 3.10以上を組み合わせたローカルサーバー構成で動作する。</li><li>Claude Code（Anthropic製AIコーディングエージェント）またはOpenAI Codex CLIをAIエージェントとして利用し、最大6エージェントを並列実行する。</li><li>FFmpeg（動画処理ツール）とChromeを用いて動画の解析・フレーム抽出・レンダリングを行う。</li><li>スタイル定義をMarkdownファイルで管理することで、7種類の2Dエンジンをプラグイン的に切り替えられる設計になっている。</li><li>Upload-Postライブラリを介して複数のSNSプラットフォームへの動画投稿を一元管理している。</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js 22.18以上、Python 3.10以上、FFmpeg、Chromeをインストールする。</li><li>Claude CodeまたはCodex CLIをセットアップし、APIキーを用意する。</li><li>リポジトリをクローンし、install.sh を実行して依存関係をインストールする。</li><li>start.sh を実行してローカルサーバーを起動し、http://localhost:4318 にアクセスする。</li><li>APIキーを ~/.reelmimic/secrets.json に記載する。</li></ol>
+<pre><code>./install.sh
+./start.sh</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-04.html#d-edenfunf__reelmimic">2026-11-04</a>
+<span class="src trendshift">Trendshift 8位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

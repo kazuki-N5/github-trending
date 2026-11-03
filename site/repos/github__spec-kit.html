@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>github/spec-kit | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>github/spec-kit</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-04（Trendshift 9位）</span>
+<a class="gh" href="https://github.com/github/spec-kit" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="github__spec-kit" data-repo="github/spec-kit" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIコーディングエージェントが構造化プロセスで開発を進めるためのツールキット</p>
+<h3>何ができるか</h3><ul><li>仕様駆動開発（SDD）：仕様定義から計画・タスク・実装・収束まで段階的にエージェントを誘導できる</li><li>バグ修正拡張機能：原因の調査、修正、症状の消去確認をワークフロー化し、verified／partial／failedで結果を記録する</li><li>アイデア評価拡張機能：証拠を収集しながら「go・needs-clarification・kill」の判定を下せる</li><li>拡張機能・プリセット・ワークフロー・バンドルを組み合わせて独自の開発プロセスを構築できる</li><li>CLIツール（specify-cli）でプロジェクトの初期化とエージェント連携（GitHub Copilotなど）を簡単に設定できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIコーディングエージェントの普及に伴い、エージェントに構造化されたプロセスを踏ませるための標準的な手法が求められるようになっている。GitHub公式のリポジトリとしてリリースされており、特にGitHub Copilotとの連携を想定した設計が注目を集めている。<span class="guess">推測</span> 仕様・バグ修正・アイデア評価という実務に直結したユースケースを網羅している点が評価されている。</p>
+<h3>どんな人に役立つか</h3><p>AIコーディングエージェント（GitHub Copilotなど）を活用して開発する個人開発者やチーム向け。場当たり的なエージェント利用ではなく、仕様駆動開発などの体系的なプロセスを取り入れたい開発者に役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>Python 3.11以上を必要とし、uvパッケージマネージャー経由でCLIツールをインストールする</li><li>specify-cliというCLIがプロジェクト初期化とエージェントインテグレーションの設定を担う</li><li>拡張機能・プリセット・ワークフロー・オーバーレイ・バンドルという階層的なカスタマイズ機構を持つ</li><li>コミュニティカタログを通じてサードパーティ製コンポーネントを探して導入できる（利用前のソースコード確認を推奨）</li></ul>
+<h3>試し方</h3>
+<ol><li>Python 3.11以上とuvをインストールする</li><li>specify-cliをuvでグローバルインストールする</li><li>specifyコマンドでプロジェクトを初期化し、使用するエージェントを指定する</li></ol>
+<pre><code>uv tool install specify-cli
+specify init my-project --integration copilot</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-04.html#d-github__spec-kit">2026-11-04</a>
+<span class="src trendshift">Trendshift 9位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

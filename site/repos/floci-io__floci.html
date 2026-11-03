@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>floci-io/floci | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>floci-io/floci</h1>
+<div class="meta"><span>Java</span>
+<span>初掲載 2026-11-04（Trendshift 15位）</span>
+<a class="gh" href="https://github.com/floci-io/floci" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="floci-io__floci" data-repo="floci-io/floci" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AWSサービスをローカルで無料で動かせるオープンソースのクラウドエミュレーター</p>
+<h3>何ができるか</h3><ul><li>Lambda・RDS・ElastiCache・ECSなど主要AWSサービスをDockerを使ってローカルマシン上で実行できる。</li><li>AWS CLI・SDK・Terraform・CDK・OpenTofuなど多くのツールをエンドポイントURLを変えるだけで接続できる。</li><li>ブラウザからhttp://localhost:4566/_floci/uiでWebコンソール（管理画面）を利用できる。</li><li>メモリ・永続化・ハイブリッド・WAL（Write-Ahead Log）の4種類のストレージモードを選択できる。</li><li>12桁のアクセスキーIDをアカウントIDとして使うマルチアカウント分離に対応している。</li><li>LocalStack（同種の有名ツール）コミュニティ版のドロップイン代替として、イメージを差し替えるだけで移行できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> LocalStackが有料機能制限を強化する中、クラウドアカウントも認証トークンも不要で同等機能を無料提供する代替として注目されている。CI環境でもコストなしに本格的なAWS統合テストが行える点が開発者に評価されている。Java・Python・Node.js・.NETのTestcontainers（テスト用コンテナ管理ライブラリ）モジュールも整備され、テスト自動化のエコシステムが充実している。</p>
+<h3>どんな人に役立つか</h3><p>AWSを使ったアプリをローカル環境やCIでテスト・開発したい開発者に役立つ。クラウド費用を抑えたい個人開発者やスタートアップ、LocalStackの有料プランへの移行を避けたいチームに特に適している。</p>
+<h3>技術的なポイント</h3><ul><li>DockerコンテナでLambdaやRDSなどのサービスを実際に近い形で実行する高忠実度エミュレーション方式を採用している。</li><li>floci startコマンドで起動するCLIと、Docker不要のネイティブバイナリの2種類の実行方式を提供している。</li><li>FLOCI_プレフィックスの環境変数で設定を管理し、LocalStackの環境変数を自動変換して後方互換性を保っている。</li><li>Java・Python・Node.js・.NET向けにTestcontainersモジュールを提供し、約2576件の自動テストで5種のSDKと3種のIaCツールとの互換性を検証している。</li></ul>
+<h3>試し方</h3>
+<ol><li>floci CLIをインストールする。</li><li>floci startでエミュレーターを起動する。</li><li>eval $(floci env)を実行してAWS環境変数をシェルにエクスポートする。</li><li>AWS CLIやSDKのエンドポイントURLをhttp://localhost:4566に向けて動作確認する。</li></ol>
+<pre><code>floci start
+eval $(floci env)</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-04.html#d-floci-io__floci">2026-11-04</a>
+<span class="src trendshift">Trendshift 15位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
