@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>google/opensk | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛡️</div><div>
+<h1>google/opensk</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-05（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/google/opensk" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="google__opensk" data-repo="google/opensk" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">FIDO U2F/FIDO2対応のセキュリティキーをRustで実装した研究・教育向けOSS</p>
+<h3>何ができるか</h3><ul><li>FIDO2（WebAuthn）とFIDO U2F両対応のセキュリティキー機能をRustで完全実装している</li><li>最新のCTAP v2.2仕様（リリース候補版）を追跡しており、CTAP 2.0版はFIDO認定済み</li><li>nRF52840マイコンボード（Nordic製の低消費電力マイコン）上でWasefireアプレットまたはライブラリとして動作する</li><li>どちらのプロトコルで作成した非発見的認証情報も相互に利用できる互換性を持つ</li><li>量子コンピューター耐性を持つポスト量子暗号のハイブリッド実装をhybrid-pqcタグで別途提供している</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> GoogleがFIDO2セキュリティキーの完全なオープンソース実装を公開しており、ハードウェアセキュリティキーの内部構造を学ぶ研究・教育用途として注目されている。ポスト量子暗号ハイブリッド実装が2023年ACNS国際会議（暗号実装に関する著名な学術会議）でベストペーパー賞を受賞した点も話題の一因となっている。</p>
+<h3>どんな人に役立つか</h3><p>FIDOセキュリティキーの内部実装を学びたいセキュリティ研究者や情報系学生に適している。自作ハードウェアセキュリティキーを作りたい組込み開発者や、ポスト量子暗号を実際のデバイスで実験したい研究者にも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>nRF52840マイコン（BLE・USBを備えた低消費電力マイコン）をターゲットハードウェアとして使用し、複数のボードバリアントに対応する</li><li>暗号処理はRustCryptoライブラリで実装しており、将来的にはARM CryptoCell-310ハードウェアアクセラレーターへの移行が予定されている</li><li>ポスト量子暗号のハイブリッド実装がhybrid-pqcタグで提供されており、既存の公開鍵暗号と組み合わせて量子耐性を高める研究に活用できる</li></ul>
+<h3>試し方</h3>
+<ol><li>docs/install.md の手順に従い開発環境とツールチェーンをセットアップする</li><li>nRF52840対応ボード（nRF52840-DK等）にファームウェアを書き込む</li><li>webauthn.io などのデモサイトでセキュリティキーの登録・ログインをテストする</li><li>問題が発生した場合はdocs/debugging.mdを参照する</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-05.html#h-google__opensk">2026-11-05 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

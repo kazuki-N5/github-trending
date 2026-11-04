@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appllama/appllama-skills | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔎</div><div>
+<h1>Appllama/appllama-skills</h1>
+<div class="meta">
+<span>初掲載 2026-11-05（Trendshift 17位）</span>
+<a class="gh" href="https://github.com/Appllama/appllama-skills" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="appllama__appllama-skills" data-repo="Appllama/appllama-skills" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">トップ収益アプリのパターンを学習してネイティブ品質の画面を生成するAIエージェントスキル集</p>
+<h3>何ができるか</h3><ul><li>appllama-usageスキルを使ってAppllamaのMCP（AIツール接続プロトコル）経由で人気アプリの画面・フロー・UIパターンをリサーチできる</li><li>appllama-app-design-skillスキルでExpo / React Nativeのモバイル画面を設計・生成できる</li><li>Apple Human Interface Guidelines（Appleの公式デザイン標準）に準拠した配色・コントロール・ナビゲーションを自動適用できる</li><li>シミュレーターループでアプリのアニメーションや画面遷移をフレーム単位で記録・レビューできる</li><li>npxコマンド一発でClaude CodeやCursorなど70以上のAIエージェントにスキルをインストールできる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIエージェントによるモバイルアプリ開発が広まる中、実際にトップセールスアプリのUIパターンを参照してネイティブ品質の画面を生成できる点が注目されている。MCPプロトコルとスキル配布の仕組みを組み合わせることで、既存のAI開発環境にシームレスに統合できる点も評価されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>React NativeやExpoでモバイルアプリを開発しているエンジニアで、AIエージェントを使って開発を効率化したい人に向いている。App Storeで収益上位のアプリのUI/UXパターンを参考にしながら設計したい場合にも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>Expo / React Native：生成されるモバイルアプリのUIフレームワーク</li><li>MCP（Model Context Protocol）：AppllamaのリサーチAPIとAIエージェントを接続する標準プロトコル</li><li>skills.sh / npx skills：スキルの配布とインストールを行うCLIツール</li><li>Apple Human Interface Guidelines：iOSデザイン標準。スキル内のビルドルールとして組み込まれている</li></ul>
+<h3>試し方</h3>
+<ol><li>プロジェクトルートで npx skills@latest add appllama/appllama-skills を実行してスキルをインストールする</li><li>MCPを使う場合はhttps://mcp.appllama.io/mcpをMCPクライアントに登録し、Appllamaアカウント（Proプラン必要）で承認する</li><li>対応するAIエージェント（Claude Codeなど）でスキルを呼び出し、アプリ画面の研究・生成を行う</li></ol>
+<pre><code>npx skills@latest add appllama/appllama-skills
+npx skills@latest add appllama/appllama-skills -a claude-code -a cursor -y
+npx skills@latest add appllama/appllama-skills -g
+npx skills@latest add appllama/appllama-skills --skill appllama-app-design-skill
+git clone https://github.com/appllama/appllama-skills
+cp -r appllama-skills/skills/* ~/.claude/skills/</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-05.html#d-appllama__appllama-skills">2026-11-05</a>
+<span class="src trendshift">Trendshift 17位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

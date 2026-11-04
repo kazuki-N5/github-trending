@@ -1,0 +1,41 @@
+{
+  "repo": "OpenSelena/omniget",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "Udemy・YouTube等1,800+サイト対応のオープンソースメディアダウンローダー",
+  "features": [
+    "UdemyやHotmartなどのオンライン講座をはじめ、YouTube・Instagram・TikTokなど1,800以上のサイトから動画・音声・字幕をダウンロードできる。",
+    "MP4・MKV・WebMなどの動画形式、MP3・FLACなどの音声形式、SRT・VTTなどの字幕形式に対応している。",
+    "ブラウザ拡張機能と連携してCookieを自動で渡すことで、ログイン必須の有料コンテンツもダウンロードできる。",
+    "whisper.cpp（Whisperモデルのオフライン実装ライブラリ）を使った文字起こしやテキスト読み上げなど25カテゴリ・158種のツールを内蔵している。",
+    "Claude CodeなどのAIエージェント向けにMCPサーバーとして37種のツールを公開しており、エージェントから直接メディア取得・変換を操作できる。",
+    "ダウンロードキューの中断再開・自動リトライ・接続数制限など、堅牢なキュー管理機能を備えている。"
+  ],
+  "why": "推測: オープンソースの講座ダウンローダーは少なく、購入済み講座をオフラインで視聴したいというニーズに応える点で注目されていると考えられる。Tauri 2とRustを採用した軽量なデスクトップアプリで広告・テレメトリなし・ローカル保存という設計が信頼性を高めており、AIエージェントとのMCP連携という新しいユースケースも話題を集めている可能性がある。",
+  "whoFor": "オンライン講座を購入したがオフライン視聴もしたい学習者や、動画・画像を一括でアーカイブしたいクリエイター・研究者に向いている。AIエージェントにメディア取得・処理を任せたい開発者にも活用できる。",
+  "tech": [
+    "Tauri 2（RustとWebViewを組み合わせた軽量クロスプラットフォームデスクトップアプリフレームワーク）とRustをバックエンドに採用している。",
+    "フロントエンドはSvelteKit（Svelte 5）で構築されており、UIの状態管理とルーティングを担っている。",
+    "yt-dlp・gallery-dl・FFmpeg・aria2などの実績あるオープンソースCLIツールをバックエンドで呼び出すことで幅広いサイト対応と変換処理を実現している。",
+    "SQLiteをローカルストレージとして使用してダウンロードキューや設定を管理し、データはすべてユーザーのPC内にとどまる。",
+    "whisper.cppを組み込むことでインターネット接続不要のオフライン音声文字起こしを可能にしている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubのReleasesページから自分のOS向けインストーラーをダウンロードする（Windowsは.exe/.msi、macOSは.dmg、Linuxは.deb/.rpm/.AppImage）。",
+      "Windowsの場合はSmartScreen警告で「詳細情報→実行」を選ぶ。macOSの場合はターミナルでxattrとcodesignコマンドを実行してセキュリティ制限を解除する。",
+      "初回起動時に言語とテーマを選択すると、yt-dlpとFFmpegがSHA-256検証付きで自動インストールされる。",
+      "ダウンロードしたいURLをコピーしてCtrl+Shift+D（macOSはCmd+Shift+D）を押すとすぐダウンロードが始まる。"
+    ],
+    "commands": [
+      "winget install -e --id OpenSelena.OmniGet",
+      "brew install --cask OpenSelena/tap/omniget",
+      "xattr -cr /Applications/omniget.app",
+      "codesign --force --deep --sign - /Applications/omniget.app",
+      "sudo apt install gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav",
+      "git clone https://github.com/OpenSelena/omniget.git",
+      "pnpm install",
+      "pnpm tauri dev"
+    ]
+  }
+}

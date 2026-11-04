@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UncensoredLabs/uncensored-ai-api | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>UncensoredLabs/uncensored-ai-api</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-11-05（Trendshift 19位）</span>
+<a class="gh" href="https://github.com/UncensoredLabs/uncensored-ai-api" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="uncensoredlabs__uncensored-ai-api" data-repo="UncensoredLabs/uncensored-ai-api" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">検閲なしDeepSeek・GLMモデルを提供するOpenAI互換のAI APIサービス</p>
+<h3>何ができるか</h3><ul><li>DeepSeekおよびGLMの検閲除去（abliterated）・非検閲（uncensored）モデルへのAPIアクセスを提供する</li><li>既存のOpenAIクライアントのベースURLを変更するだけで利用できるOpenAI互換インターフェースを持つ</li><li>全モデルで100万トークン（1,000,000トークン）の大きなコンテキストウィンドウをサポートする</li><li>ストリーミング（逐次テキスト生成）とファンクションツール呼び出しに対応している</li><li>PythonおよびTypeScript向けのSDKサンプルとストリーミングガイドが付属している</li><li>ブラウザ上のチャットUIとダッシュボードからも利用できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 通常のAI APIでは応じてもらえないセキュリティリサーチや逆アセンブル解析など、既存サービスが制限する用途に対応できる点で注目されている。OpenAI互換インターフェースを持つため、ClineやContinueなど既存のコーディングアシスタントをそのまま利用でき、移行コストが低い点も評価されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>セキュリティリサーチや脆弱性チェーンの解析、逆アセンブルコードの説明が必要なエンジニアに向いている。またClineやContinueなどのコーディングアシスタントを独自モデルで動かしたい開発者や、難しいテーマを扱う創作活動にも活用できる。</p>
+<h3>技術的なポイント</h3><ul><li>OpenAI互換REST API（/v1/chat/completions、/v1/models）：既存のOpenAIクライアントをそのまま流用できる</li><li>Abliteration（重み改変技術）：モデルの重みを修正して拒否応答を減らす手法。正確な答えや完全な無拒否は保証されない</li><li>Server-Sent Events（SSE）方式のストリーミング：リアルタイムのテキスト逐次生成に対応</li><li>Python・TypeScript向けOpenAI SDK：ベースURLとモデル名を変えるだけで接続可能</li></ul>
+<h3>試し方</h3>
+<ol><li>uncensoredlabs.devでアカウントを作成し、ダッシュボードでアプリケーション用APIキーを取得する（16桁のサインインキーとは別物なので注意）</li><li>環境変数 UNCENSOREDLABS_API_KEY にAPIキーをセットする</li><li>OpenAIクライアントのbase_urlをhttps://uncensoredlabs.dev/v1に変更し、モデルIDを指定してリクエストを送る</li></ol>
+<pre><code>export UNCENSOREDLABS_API_KEY=your_api_key</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-05.html#d-uncensoredlabs__uncensored-ai-api">2026-11-05</a>
+<span class="src trendshift">Trendshift 19位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

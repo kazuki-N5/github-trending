@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tembo/voxl | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>tembo/voxl</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-05（Trendshift 20位）</span>
+<a class="gh" href="https://github.com/tembo/voxl" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="tembo__voxl" data-repo="tembo/voxl" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">X11・Mac・Windows画面をブラウザへH.264でリアルタイム配信するリモートデスクトップツール</p>
+<h3>何ができるか</h3><ul><li>デスクトップ画面をH.264動画としてWebSocket1本でブラウザへ低遅延ストリーミングする</li><li>キーボード・マウス・クリップボード・デスクトップ音声・マイク入力をブラウザ側から操作できる</li><li>ファイルやフォルダをブラウザとホスト間で双方向転送できる</li><li>視聴者のブラウザウィンドウサイズに合わせて配信解像度を動的に変更する</li><li>パスワード認証・接続元ホスト制限・読み取り専用モードでアクセス制御を設定できる</li><li>スクリーンショット取得・MP4録画・画面変化検知（/wait API）などAIエージェント向けのエンドポイントを備える</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> WebRTC・TURN・UDPポートを一切使わずWebSocket1本とCPUエンコードのH.264だけで動作するシンプルな設計が注目を集めている。KasmVNC・noVNC・Nekoなど競合ツールとの60FPSベンチマーク比較で優位な性能を示しており、実用性が裏付けられている。AIエージェントからデスクトップを制御するユースケースを明示的に想定している点も現在のAIブームと合致している。</p>
+<h3>どんな人に役立つか</h3><p>DockerコンテナやVMのデスクトップをブラウザから手軽に操作・公開したい開発者やインフラ担当者に役立つ。AIエージェントにデスクトップGUIを操作させたい機械学習エンジニアにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>エンコードはCPUベースのx264（H.264エンコーダー）で行い、WebRTC・TURN・UDPポートを使わずWebSocket1本で映像を転送する</li><li>画面キャプチャはX11ではXDamage、macOSではScreenCaptureKit、WindowsではDXGI Desktop DuplicationとプラットフォームごとにネイティブAPIを使用する</li><li>ブラウザ側の映像デコードはWebCodecs API（Chromium 94+・Firefox 130+・Safari 16.4+対応）を利用し、プラグイン不要で再生する</li><li>x264がGPL-2.0ライセンスのため、ソースコード自体はMITだが配布バイナリにはGPLが適用される</li></ul>
+<h3>試し方</h3>
+<ol><li>Cargo（Rustのパッケージマネージャー）でvoxl-serverをインストールする</li><li>環境変数DISPLAYを設定してvoxlをポート指定で起動する</li><li>起動時に表示されたURLをブラウザで開いてサインインする</li></ol>
+<pre><code>cargo install voxl-server
+DISPLAY=:1 voxl --port=6901</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-05.html#d-tembo__voxl">2026-11-05</a>
+<span class="src trendshift">Trendshift 20位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

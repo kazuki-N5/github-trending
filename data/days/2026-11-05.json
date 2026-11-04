@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-05",
+  "collectedAt": "2026-11-05T07:08:17+09:00",
+  "entries": [
+    {
+      "repo": "storytold/craft-anything",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Craft Anything: understand how any software works, and craft your own.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "NVIDIA/auto-ontology",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "OpenSelena/omniget",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "Open-source download manager for courses (Udemy/Hotmart), YouTube, music & 1,800+ sites. Built with Tauri 2.0, Rust & Svelte.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "D4Vinci/Scrapling",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "KKKKhazix/agent-autoloop",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mattpocock/skills",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ccch1mneyyy/dsh-Go",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
+      "language": "Dart",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "JiaFeiMiao-K-Cat/DiscImageStudio",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "",
+      "language": "C#",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "govijr/terminal-mac",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "",
+      "language": "Swift",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "vercel-labs/agent-desktop",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Computer use CLI for AI agents",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "deepseek-ai/deepseek-harness",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "DeepSeek Harness: Everything is a Plugin.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "floci-io/floci",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+      "language": "Java",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Usagi-org/ai-goofish-monitor",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "JuneYaooo/rea-video",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "逆向一切视频：实拍口播、桌拍、AI 视频、3D、代码动效、混剪，逐镜拆出画面、花字、剪辑和声音是怎么做的，并给出复刻方案。Reverse-engineer any video, shot by shot.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pingdotgg/t3code",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "wquguru/cicada",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "知了 Cicada · 任意会议与直播的实时字幕、同声传译、AI 会议纪要（macOS）。Live subtitles, interpreting and meeting notes for any call or stream on your Mac.",
+      "language": "Swift",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Appllama/appllama-skills",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "A builder, not just a researcher. Agent skills that turn top-grossing app patterns into native-quality mobile screens.",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "deepseek-ai/dsh-superagent-prototype",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "Towards a More Autonomous Agent System",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "UncensoredLabs/uncensored-ai-api",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Uncensored AI API and browser chat: DeepSeek and GLM models, streaming, Python and TypeScript examples, pricing and setup guides.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "tembo/voxl",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "extremely fast web remote desktop streaming",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "google/opensk",
+        "source": "hatena",
+        "desc": "OpenSK is an open-source implementation for security keys written in Rust that supports both FIDO U2F and FIDO2 standards.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 1
+      }
+    ]
+  }
+}

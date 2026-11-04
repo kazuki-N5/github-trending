@@ -1,0 +1,36 @@
+{
+  "repo": "Appllama/appllama-skills",
+  "language": "",
+  "readme": true,
+  "oneLiner": "トップ収益アプリのパターンを学習してネイティブ品質の画面を生成するAIエージェントスキル集",
+  "features": [
+    "appllama-usageスキルを使ってAppllamaのMCP（AIツール接続プロトコル）経由で人気アプリの画面・フロー・UIパターンをリサーチできる",
+    "appllama-app-design-skillスキルでExpo / React Nativeのモバイル画面を設計・生成できる",
+    "Apple Human Interface Guidelines（Appleの公式デザイン標準）に準拠した配色・コントロール・ナビゲーションを自動適用できる",
+    "シミュレーターループでアプリのアニメーションや画面遷移をフレーム単位で記録・レビューできる",
+    "npxコマンド一発でClaude CodeやCursorなど70以上のAIエージェントにスキルをインストールできる"
+  ],
+  "why": "推測: AIエージェントによるモバイルアプリ開発が広まる中、実際にトップセールスアプリのUIパターンを参照してネイティブ品質の画面を生成できる点が注目されている。MCPプロトコルとスキル配布の仕組みを組み合わせることで、既存のAI開発環境にシームレスに統合できる点も評価されていると考えられる。",
+  "whoFor": "React NativeやExpoでモバイルアプリを開発しているエンジニアで、AIエージェントを使って開発を効率化したい人に向いている。App Storeで収益上位のアプリのUI/UXパターンを参考にしながら設計したい場合にも役立つ。",
+  "tech": [
+    "Expo / React Native：生成されるモバイルアプリのUIフレームワーク",
+    "MCP（Model Context Protocol）：AppllamaのリサーチAPIとAIエージェントを接続する標準プロトコル",
+    "skills.sh / npx skills：スキルの配布とインストールを行うCLIツール",
+    "Apple Human Interface Guidelines：iOSデザイン標準。スキル内のビルドルールとして組み込まれている"
+  ],
+  "tryIt": {
+    "steps": [
+      "プロジェクトルートで npx skills@latest add appllama/appllama-skills を実行してスキルをインストールする",
+      "MCPを使う場合はhttps://mcp.appllama.io/mcpをMCPクライアントに登録し、Appllamaアカウント（Proプラン必要）で承認する",
+      "対応するAIエージェント（Claude Codeなど）でスキルを呼び出し、アプリ画面の研究・生成を行う"
+    ],
+    "commands": [
+      "npx skills@latest add appllama/appllama-skills",
+      "npx skills@latest add appllama/appllama-skills -a claude-code -a cursor -y",
+      "npx skills@latest add appllama/appllama-skills -g",
+      "npx skills@latest add appllama/appllama-skills --skill appllama-app-design-skill",
+      "git clone https://github.com/appllama/appllama-skills",
+      "cp -r appllama-skills/skills/* ~/.claude/skills/"
+    ]
+  }
+}

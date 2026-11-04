@@ -1,0 +1,34 @@
+{
+  "repo": "govijr/terminal-mac",
+  "language": "Swift",
+  "readme": true,
+  "oneLiner": "Apple シリコン Mac 上でmacOS仮想マシンをターミナルから操作するツール",
+  "features": [
+    "curl インストーラで terminal-mac コマンドを追加し、`terminal-mac up` 一発で macOS の VM を起動できる",
+    "Kitty・iTerm2・Ghostty のグラフィクス対応ターミナル上で、VM の画面をターミナル内に表示する",
+    "スクリーンショット・クリック・ドラッグ・スクロール・テキスト入力など、ゲスト VM のマウス・キー操作をターミナルから行える",
+    "MCP サーバーとスキルを通じて AI エージェントがゲスト VM をプログラム的に操作できる",
+    "VM データは ~/Library/Application Support/terminal-mac/machines/ に保存され、Ctrl+] でビューワを抜けても VM は起動し続ける",
+    "--offline フラグで VM のネットワークを切り、ホストの環境から隔離した状態で実行できる"
+  ],
+  "why": "推測: AI エージェントに実際の macOS 環境を安全に操作させたいというニーズが高まっており、Apple Virtualization を活用して手軽に macOS VM を立ち上げられる点が注目されている。推測: ターミナル内で VM 画面を直接表示できる新鮮なアプローチが開発者の関心を集めている。",
+  "whoFor": "macOS を使う開発者で、AI エージェントにデスクトップ GUI タスクを自動実行させたい人に向いている。また、ホスト環境を汚さずに macOS の動作検証をしたいエンジニアにも有用。",
+  "tech": [
+    "Apple Virtualization フレームワーク（macOS 14 以降）を使い、Apple シリコン上でネイティブ macOS ゲストを動かす",
+    "Kitty Graphics Protocol などのターミナルグラフィクス仕様を利用して VM 画面をインラインレンダリングする",
+    "MCP（Model Context Protocol）サーバーを内蔵し、AI エージェントへのツール（スクショ・操作系）提供を標準化している",
+    "VM ディスクはスパースイメージ（論理 64 GiB）で作成され、実際の使用量に応じてホストストレージを消費する"
+  ],
+  "tryIt": {
+    "steps": [
+      "macOS 14 以降の Apple シリコン Mac で、curl インストーラを実行して terminal-mac コマンドをインストールする",
+      "`terminal-mac up` を実行して macOS リストアイメージをダウンロードし VM を起動する",
+      "VM 内で macOS のセットアップを完了し、ゲストヘルパーに Screen Recording と Accessibility の権限を付与する",
+      "ターミナルのビューワで VM を操作し、Ctrl+] でビューワを終了しても VM はバックグラウンドで動き続ける"
+    ],
+    "commands": [
+      "curl -fsSL https://raw.githubusercontent.com/govijr/terminal-mac/HEAD/install.sh | sh",
+      "terminal-mac up"
+    ]
+  }
+}

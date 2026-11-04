@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usagi-org/ai-goofish-monitor | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>Usagi-org/ai-goofish-monitor</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-05（Trendshift 13位）</span>
+<a class="gh" href="https://github.com/Usagi-org/ai-goofish-monitor" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="usagi-org__ai-goofish-monitor" data-repo="Usagi-org/ai-goofish-monitor" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIと Playwright で闲鱼（フリマアプリ）を自動監視・分析するシステム</p>
+<h3>何ができるか</h3><ul><li>キーワード・価格帯・送料無料・地域などの条件を設定したタスクを複数同時に実行し、闲鱼の新着商品をリアルタイム・定時監視できる</li><li>マルチモーダル AI モデルが商品画像と説明を総合的に解析し、ユーザー定義のプロンプトに基づいて購入価値を判定する</li><li>ntfy.sh・企業 WeChat・Bark・Telegram・Webhook など複数チャンネルへの通知に対応し、条件に合う商品が見つかると即座にアラートを送れる</li><li>タスク管理・アカウント管理・実行ログ・結果閲覧をブラウザから操作できる Web 管理 UI を備える</li><li>複数の闲鱼アカウントとプロキシプールを設定でき、タスクごとにアカウントを割り当てて運用できる</li><li>Docker Compose 一コマンドでデプロイでき、SQLite でデータを永続化する</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 人気商品や掘り出し物をいち早く見つけたいフリマアプリユーザーの需要が高く、AI による自動判定で大量の商品を人手なしに絞り込める点が評価されている。<span class="guess">推測</span> Playwright を使ったブラウザ自動化と AI 分析を組み合わせた実用的な構成が、スクレイピング学習の参考としても注目を集めている。</p>
+<h3>どんな人に役立つか</h3><p>闲鱼でレアな商品や特定ジャンルのアイテムをいち早く購入したいユーザーに向いている。また、Playwright・FastAPI・AI API を組み合わせた Web スクレイピングシステムの構築を学びたい学生・エンジニアにも参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>Playwright（ブラウザ自動操作ライブラリ）で闲鱼の商品ページをスクレイピングし、ログインセッションを Cookie として管理する</li><li>OpenAI 互換 API（画像入力対応モデルが必須）に商品画像と説明を送り、ユーザー定義プロンプトで AI 判定を行う</li><li>FastAPI バックエンドと Vite ビルドのフロントエンドで構成され、両者は同一ポート 8000 でサービングされる</li><li>SQLite（data/app.sqlite3）でタスク・ログ・結果を永続化し、Docker ボリュームマウントでコンテナ再起動後も保持する</li><li>Cron スケジューリングで定期実行に対応し、プロキシローテーションとタスク失敗時の自動リトライ機能を持つ</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンし、ディレクトリに移動する</li><li>.env.example を .env にコピーし、OPENAI_API_KEY・OPENAI_BASE_URL・OPENAI_MODEL_NAME を設定する（画像入力対応モデルが必要）</li><li>Docker Compose でコンテナを起動する</li><li>http://127.0.0.1:8000 にアクセスし、Chrome 拡張でエクスポートした闲鱼ログイン状態 JSON をアカウント管理からインポートする</li><li>タスクを作成してアカウントを紐付け、実行する</li></ol>
+<pre><code>git clone https://github.com/Usagi-org/ai-goofish-monitor.git &amp;&amp; cd ai-goofish-monitor
+cp .env.example .env
+docker compose up -d
+docker compose logs -f app
+docker compose down</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-05.html#d-usagi-org__ai-goofish-monitor">2026-11-05</a>
+<span class="src trendshift">Trendshift 13位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

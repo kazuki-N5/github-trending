@@ -1,0 +1,32 @@
+{
+  "repo": "UncensoredLabs/uncensored-ai-api",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "検閲なしDeepSeek・GLMモデルを提供するOpenAI互換のAI APIサービス",
+  "features": [
+    "DeepSeekおよびGLMの検閲除去（abliterated）・非検閲（uncensored）モデルへのAPIアクセスを提供する",
+    "既存のOpenAIクライアントのベースURLを変更するだけで利用できるOpenAI互換インターフェースを持つ",
+    "全モデルで100万トークン（1,000,000トークン）の大きなコンテキストウィンドウをサポートする",
+    "ストリーミング（逐次テキスト生成）とファンクションツール呼び出しに対応している",
+    "PythonおよびTypeScript向けのSDKサンプルとストリーミングガイドが付属している",
+    "ブラウザ上のチャットUIとダッシュボードからも利用できる"
+  ],
+  "why": "推測: 通常のAI APIでは応じてもらえないセキュリティリサーチや逆アセンブル解析など、既存サービスが制限する用途に対応できる点で注目されている。OpenAI互換インターフェースを持つため、ClineやContinueなど既存のコーディングアシスタントをそのまま利用でき、移行コストが低い点も評価されていると考えられる。",
+  "whoFor": "セキュリティリサーチや脆弱性チェーンの解析、逆アセンブルコードの説明が必要なエンジニアに向いている。またClineやContinueなどのコーディングアシスタントを独自モデルで動かしたい開発者や、難しいテーマを扱う創作活動にも活用できる。",
+  "tech": [
+    "OpenAI互換REST API（/v1/chat/completions、/v1/models）：既存のOpenAIクライアントをそのまま流用できる",
+    "Abliteration（重み改変技術）：モデルの重みを修正して拒否応答を減らす手法。正確な答えや完全な無拒否は保証されない",
+    "Server-Sent Events（SSE）方式のストリーミング：リアルタイムのテキスト逐次生成に対応",
+    "Python・TypeScript向けOpenAI SDK：ベースURLとモデル名を変えるだけで接続可能"
+  ],
+  "tryIt": {
+    "steps": [
+      "uncensoredlabs.devでアカウントを作成し、ダッシュボードでアプリケーション用APIキーを取得する（16桁のサインインキーとは別物なので注意）",
+      "環境変数 UNCENSOREDLABS_API_KEY にAPIキーをセットする",
+      "OpenAIクライアントのbase_urlをhttps://uncensoredlabs.dev/v1に変更し、モデルIDを指定してリクエストを送る"
+    ],
+    "commands": [
+      "export UNCENSOREDLABS_API_KEY=your_api_key"
+    ]
+  }
+}

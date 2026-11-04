@@ -1,0 +1,37 @@
+{
+  "repo": "wquguru/cicada",
+  "language": "Swift",
+  "readme": true,
+  "oneLiner": "任意の会議・ライブ配信にリアルタイム字幕・同時通訳・AI議事録を提供するmacOSアプリ",
+  "features": [
+    "Zoom・Feishu・Teamsなど任意のアプリのシステム音声をリアルタイムで認識し、バイリンガル字幕を表示できる",
+    "右⌥キーを押しながら話すと音声が翻訳・合成されて会議参加者に届く同時通訳機能がある",
+    "要点・結論・アクションアイテム・フィッシュボーン図などの構造化された議事録をリアルタイムで生成できる",
+    "音声認識・翻訳・録音をデバイス上で処理し、音声データが外部サーバーに送信されない設計になっている",
+    "文字起こし・議事録をMarkdown、Word、SRT形式でエクスポートでき、話者識別（実験的機能）にも対応している"
+  ],
+  "why": "推測: 会議ツール側のBot参加なしにMacのシステム音声を直接処理するアーキテクチャが、プライバシーを重視するユーザーから支持を集めている。Ling APIの無料枠（月10元相当）内でも基本機能を使える手頃さと、macOS 26のオンデバイスAI機能を最大限に活用している点が注目されている。",
+  "whoFor": "外国語の会議・ウェビナーに参加する機会の多いビジネスパーソンや研究者に役立つ。会議録やアクションアイテムの整理を自動化したいエンジニアや学生にも適している。Apple Siliconの最新MacBook・Mac miniを持っている人が主なターゲット。",
+  "tech": [
+    "Apple SpeechAnalyzer／SpeechTranscriberを用いてオンデバイスで音声認識を行い、Swift 5で実装されている",
+    "BlackHole 2chという仮想マイクドライバー（GPL）をインストール時に追加し、同時通訳音声をシステム音声として会議アプリに注入する",
+    "WeSpeaker ResNet34-LM（話者識別用のディープラーニングモデル）をCore MLでローカル実行し、発言者の識別を行う",
+    "翻訳・議事録にはLing APIを使用し、外部に送信されるのは音声認識後のテキストのみに限定されている"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubのReleasesページからCicada-<バージョン>-macOS-AppleSilicon.dmgをダウンロードする（macOS 26・Apple Silicon必須）",
+      "checksums.txtと照合してshasumコマンドでチェックサムを確認する",
+      "アプリをApplicationsフォルダにドラッグしてインストールする",
+      "System Settings（システム設定）のプライバシーとセキュリティで起動を許可する",
+      "初回起動時のオンボーディングに従い、権限設定・Ling APIキー入力・BlackHoleインストールを行う"
+    ],
+    "commands": [
+      "shasum -a 256 Cicada-*.dmg",
+      "scripts/build.sh",
+      "open build/Cicada.app",
+      "scripts/package.sh",
+      "defaults delete com.wquguru.cicada"
+    ]
+  }
+}

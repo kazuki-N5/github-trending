@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JuneYaooo/rea-video | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔍</div><div>
+<h1>JuneYaooo/rea-video</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-05（Trendshift 14位）</span>
+<a class="gh" href="https://github.com/JuneYaooo/rea-video" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="juneyaooo__rea-video" data-repo="JuneYaooo/rea-video" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">任意の動画を1ショットずつ逆解析し、映像・テロップ・編集・音の再現方法を提案するツール</p>
+<h3>何ができるか</h3><ul><li>動画を1ショット単位で分解し、撮影方法・カメラワーク・照明・カラーグレーディングを特定できる</li><li>実写・AI生成・3D・コードのいずれで作られたショットかを自動判定し、AI生成の場合は逆算したプロンプトを提示できる</li><li>テロップのタイミング・色・アニメーションを解析し、SRT／ASS形式で書き出せる</li><li>音声・BGM・効果音の種類と構造（BPM・キー・発声位置など）を分析できる</li><li>再現計画（実写・AI・コードの3区分）とショットごとのスクリーンショット付きHTMLレポートを出力できる</li><li>コード系映像（テキストアニメーション・UIデモ・グラフ）はRemotionプロジェクト（ReactベースのWeb動画フレームワーク）として自動生成できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 動画制作のブラックボックスを自動で解析するという斬新なコンセプトが注目を集めている。AIを活用した映像生成が普及する中、既存動画の制作手法を学んで再現したいというニーズに応えるツールとして支持されている。ツール単体で98〜100%という高い精度でショット種別を判定できる点も評価されている。</p>
+<h3>どんな人に役立つか</h3><p>映像クリエイターや動画制作を学びたい学生、AIツールを活用して動画を再現・リミックスしたいエンジニアに役立つ。参考にしたい動画の制作手法を知りたい場合や、撮影なしにAI映像で代替できる部分を見極めたい場合に特に有用。</p>
+<h3>技術的なポイント</h3><ul><li>Python 3.10以上で動作し、ffmpegを用いて動画をショット単位に分割・音声分離する</li><li>ピクセル解析（フレームレートパターン・ノイズ・カメラモーション・AIGCメタデータ）でAI生成の有無をオフラインかつ無料で判定する</li><li>オプションでGemini／Doubaoなどのビジョンモデルと連携し、画像を直接評価することで判定精度をさらに向上できる</li><li>Claude CodeやCodexなどのAIエージェントをオーケストレーターとして使い、自然言語の指示だけでCLIのインストールからワークフロー実行まで自動化する</li></ul>
+<h3>試し方</h3>
+<ol><li>ffmpegとPython 3.10以上をインストールする</li><li>Claude CodeまたはCodexなどのAIエージェントを用意する</li><li>エージェントにこのリポジトリのリンクと解析したい動画のパスを自然言語で伝える</li><li>エージェントが自動でCLIをインストールし、ワークフローを読んで実行する</li><li>出力されたreport.htmlで各ショットの解析結果と再現方法を確認する</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-05.html#d-juneyaooo__rea-video">2026-11-05</a>
+<span class="src trendshift">Trendshift 14位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wquguru/cicada | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📐</div><div>
+<h1>wquguru/cicada</h1>
+<div class="meta"><span>Swift</span>
+<span>初掲載 2026-11-05（Trendshift 16位）</span>
+<a class="gh" href="https://github.com/wquguru/cicada" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="wquguru__cicada" data-repo="wquguru/cicada" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">任意の会議・ライブ配信にリアルタイム字幕・同時通訳・AI議事録を提供するmacOSアプリ</p>
+<h3>何ができるか</h3><ul><li>Zoom・Feishu・Teamsなど任意のアプリのシステム音声をリアルタイムで認識し、バイリンガル字幕を表示できる</li><li>右⌥キーを押しながら話すと音声が翻訳・合成されて会議参加者に届く同時通訳機能がある</li><li>要点・結論・アクションアイテム・フィッシュボーン図などの構造化された議事録をリアルタイムで生成できる</li><li>音声認識・翻訳・録音をデバイス上で処理し、音声データが外部サーバーに送信されない設計になっている</li><li>文字起こし・議事録をMarkdown、Word、SRT形式でエクスポートでき、話者識別（実験的機能）にも対応している</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 会議ツール側のBot参加なしにMacのシステム音声を直接処理するアーキテクチャが、プライバシーを重視するユーザーから支持を集めている。Ling APIの無料枠（月10元相当）内でも基本機能を使える手頃さと、macOS 26のオンデバイスAI機能を最大限に活用している点が注目されている。</p>
+<h3>どんな人に役立つか</h3><p>外国語の会議・ウェビナーに参加する機会の多いビジネスパーソンや研究者に役立つ。会議録やアクションアイテムの整理を自動化したいエンジニアや学生にも適している。Apple Siliconの最新MacBook・Mac miniを持っている人が主なターゲット。</p>
+<h3>技術的なポイント</h3><ul><li>Apple SpeechAnalyzer／SpeechTranscriberを用いてオンデバイスで音声認識を行い、Swift 5で実装されている</li><li>BlackHole 2chという仮想マイクドライバー（GPL）をインストール時に追加し、同時通訳音声をシステム音声として会議アプリに注入する</li><li>WeSpeaker ResNet34-LM（話者識別用のディープラーニングモデル）をCore MLでローカル実行し、発言者の識別を行う</li><li>翻訳・議事録にはLing APIを使用し、外部に送信されるのは音声認識後のテキストのみに限定されている</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubのReleasesページからCicada-&lt;バージョン&gt;-macOS-AppleSilicon.dmgをダウンロードする（macOS 26・Apple Silicon必須）</li><li>checksums.txtと照合してshasumコマンドでチェックサムを確認する</li><li>アプリをApplicationsフォルダにドラッグしてインストールする</li><li>System Settings（システム設定）のプライバシーとセキュリティで起動を許可する</li><li>初回起動時のオンボーディングに従い、権限設定・Ling APIキー入力・BlackHoleインストールを行う</li></ol>
+<pre><code>shasum -a 256 Cicada-*.dmg
+scripts/build.sh
+open build/Cicada.app
+scripts/package.sh
+defaults delete com.wquguru.cicada</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-05.html#d-wquguru__cicada">2026-11-05</a>
+<span class="src trendshift">Trendshift 16位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

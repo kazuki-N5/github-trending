@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KKKKhazix/agent-autoloop | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>KKKKhazix/agent-autoloop</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-05（Trendshift 5位）</span>
+<a class="gh" href="https://github.com/KKKKhazix/agent-autoloop" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="kkkkhazix__agent-autoloop" data-repo="KKKKhazix/agent-autoloop" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントをバックグラウンドで自律実行し、必要なときだけ人間に判断を求めるハブ</p>
+<h3>何ができるか</h3><ul><li>cron式またはイベントをトリガーにClaude Code・Codexなどのコマンドラインエージェントをバックグラウンドで自動実行できる。</li><li>エージェントが判断に迷ったときだけFeishu・Slack・Discordなどへカード通知を送り、ユーザーの承認を受けてから処理を再開する。</li><li>待機中はプロセスもトークン消費もゼロで、返信があったときだけセッションが再開される設計になっている。</li><li>~/.agent-autoloop/rules.jsonにルールを記述するだけで動作し、エージェントのSDK変更や追加コードは不要。</li><li>agent-autoloop why コマンドで任意の実行がなぜ起動したか・何を生成したかを追跡・説明できる。</li><li>GitHub・GitLabのWebhookやHTTP APIなどを入力源にでき、CI/CDパイプラインへの配信プラグインも備えている。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> コマンドラインAIエージェントがターミナルを見ている人間のそばにいる間しか使われていないという課題を解決しようとしており、非同期・バックグラウンド実行へのニーズが高まっていると考えられる。ゼロ外部依存のカーネル設計や、イベントソーシング（全状態をイベントログから再構築する手法）による信頼性の高い実装、プロンプトインジェクション対策など技術的な堅牢さが注目されている可能性がある。</p>
+<h3>どんな人に役立つか</h3><p>Claude CodeやCodexを普段使いしており、夜間や離席中もエージェントに作業を続けてほしい開発者に向いている。GitHubのIssue対応・PRのCI待ち・マージなど、非同期で一連のワークフローを自動化したい場面に特に活用できる。</p>
+<h3>技術的なポイント</h3><ul><li>TypeScript + Node 24上に構築されており、カーネル本体は約1,650行・ランタイム依存ゼロで実装されている。</li><li>イベントソーシング（全状態をSQLiteへ追記されるイベントログから再構築する手法）を採用し、強制終了後も状態を完全復元できる。</li><li>エージェントへの指示と外部入力データを明示的に分離することでプロンプトインジェクション（外部データでAIを誤動作させる攻撃）を防ぐ設計になっている。</li><li>エージェント間のイベント連鎖は最大8ホップに制限されており、無限ループを防いでいる。</li></ul>
+<h3>試し方</h3>
+<ol><li>Node 24・Git・curlがインストール済みであることを確認する（macOS/Linuxのみ対応。Windowsは未サポート）。</li><li>インストールスクリプトを実行してセットアップする。</li><li>agent-autoloop tryコマンドでテスト実行し、エージェントが多肢選択の質問を出してくるのを確認する。</li><li>agent-autoloop answer 1 &lt;番号&gt;で回答し、agent-autoloop statusで進捗を確認する。</li><li>~/.agent-autoloop/rules.jsonにトリガー・対象エージェント・作業ディレクトリ・プロンプトを記述して本番利用を始める。</li></ol>
+<pre><code>curl -fsSL https://raw.githubusercontent.com/KKKKhazix/agent-autoloop/main/install.sh | sh
+agent-autoloop try
+agent-autoloop answer 1 &lt;number&gt;
+agent-autoloop status
+agent-autoloop check
+agent-autoloop why &lt;n&gt;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-05.html#d-kkkkhazix__agent-autoloop">2026-11-05</a>
+<span class="src trendshift">Trendshift 5位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
