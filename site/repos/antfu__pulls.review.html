@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>antfu/pulls.review | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>antfu/pulls.review</h1>
+<div class="meta">
+<span>初掲載 2026-11-06（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/antfu/pulls.review" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="antfu__pulls.review" data-repo="antfu/pulls.review" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">変更ファイルをグループ化・要約してPRレビューをシンプルにするツール</p>
+<h3>何ができるか</h3><ul><li>変更されたファイルをスコープ（範囲）ごとにグループ化し、一度に一つずつレビューできる</li><li>ウェブサイト（pulls.review）にアクセスしGitHubアカウントを連携するだけで即座に使える</li><li>ユーザースクリプトをインストールするとGitHub本体のUIにpulls.reviewの機能を組み込める</li><li>CIワークフロー（GitHub Actions）でPRを自動解析し、結果をPRコメントとして投稿できる</li><li>CLIツール（@pulls.review/actions）を使って環境変数だけで任意の環境から解析を実行できる</li><li>Vercel AI Gateway・Anthropic・OpenAI互換など複数のAIプロバイダーに対応している</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> GitHubのデフォルトのPRレビュー画面は変更ファイルが多い場合に全体像を把握しにくいという課題があり、Linear社のPRレビューガイドに触発されて開発された。<span class="guess">推測</span> AIを活用して差分を要約・グループ化することで、レビュアーの認知負荷を減らし効率的なコードレビューを実現しようとしている点が注目されている。</p>
+<h3>どんな人に役立つか</h3><p>多数のファイルにわたる大規模なPRをレビューする開発者や、コードレビューの質と速度を向上させたいチームに役立つ。CIに組み込むことでレビュアー全員が同じAI解析結果を共有でき、個人のAPIキーが不要になるため組織での導入にも向いている。</p>
+<h3>技術的なポイント</h3><ul><li>コアライブラリ（@pulls.review/core）はブラウザとNode.jsの両方で動作し、差分の取得・解析・グループ化・要約を担う</li><li>GitHub Actionsのワークフローとして動作するアクション（antfu/pulls.review@main）を提供しており、CIへの組み込みが簡単にできる</li><li>ユーザースクリプト（Tampermonkey等で動くブラウザ拡張スクリプト）でGitHub本体のUIを拡張する仕組みを持つ</li><li>AIプロバイダーの抽象化により、APIキーの種類からプロバイダーを自動推定する設計になっている</li><li>モノレポ（複数パッケージを一つのリポジトリで管理する構成）でapp・core・actions・cliの4パッケージを管理している</li></ul>
+<h3>試し方</h3>
+<ol><li>pulls.review にアクセスしてGitHubアカウントを連携する</li><li>レビューしたいPRのURLをサイトに入力してレビューを開始する</li><li>GitHubのUIで使いたい場合はサイトのGitHubセクションからユーザースクリプトをインストールする</li><li>CIで使いたい場合はリポジトリに .github/workflows/pulls-review.yml を作成しAPIキーをSecretsに登録する</li></ol>
+<pre><code>GITHUB_TOKEN=... ANTHROPIC_API_KEY=... npx @pulls.review/actions owner/repo#123
+npx @pulls.review/actions --help</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-06.html#h-antfu__pulls.review">2026-11-06 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>4 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

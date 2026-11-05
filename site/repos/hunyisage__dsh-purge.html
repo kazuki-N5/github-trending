@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HunYiSage/dsh-purge | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧩</div><div>
+<h1>HunYiSage/dsh-purge</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-11-06（Trendshift 19位）</span>
+<a class="gh" href="https://github.com/HunYiSage/dsh-purge" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="hunyisage__dsh-purge" data-repo="HunYiSage/dsh-purge" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">DeepSeek Harness向けパッチプラグインで、モデルのデフォルト制限を解除しプロンプトを差し替える</p>
+<h3>何ができるか</h3><ul><li>DeepSeek Harness（DSH）のローカルインストールに直接パッチを当て、デフォルトのポリシー制限を変更する</li><li>モデル自体の拒否応答と、ホスト層のポリシーによるブロックを区別して可視化できる</li><li>暗号化されたデフォルトプロンプトを注入し、パーミッション（権限）やツールの使用制限を上書きする</li><li>改変前に元ファイルを自動バックアップするため、元の状態に戻すことができる</li><li>モデルごとに異なるプロンプトを使い分けられ、デフォルトは国産モデル「小码酱」向けに設定されている</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> DeepSeek Harnessのデフォルト設定が過剰に制限的だと感じるユーザーが、モデル本来の制限とホスト側のポリシー設定を切り分けて検証したいというニーズに応えるために注目されている。<span class="guess">推測</span> 「破甲（防御を破る）」という直接的なネーミングとGitHubでのStar獲得への呼びかけにより、AIのジェイルブレイク（制限解除）に関心を持つコミュニティで話題になっていると思われる。</p>
+<h3>どんな人に役立つか</h3><p>DeepSeek Harnessを使用している開発者や研究者で、モデルの応答制限の仕組みを調査・検証したい人に向いている。AIの安全性や制限ポリシーを研究する目的で、どの制限がどのレイヤーに由来するかを評価したい人にも有用かもしれない。なお、公共システムへの攻撃や特定地域の政府・金融機関への悪用は禁止されており、あくまでローカルのHarnessインストールに対してのみ使用可能とされている。</p>
+<h3>技術的なポイント</h3><ul><li>JavaScriptで書かれたDSHプラグインとして動作し、`dsh plugin add`コマンドでtarball（圧縮アーカイブ）形式のURLを指定してインストールする</li><li>`@deepseek-ai`パッケージ内の特定ファイルをマッチングして直接置き換えるファイルパッチ方式を採用している</li><li>デフォルトのシステムプロンプトを暗号化した形式で保存・注入する仕組みを持つ</li><li>DSH（DeepSeek Harness）バージョン0.2.1-rc.2および0.2.0に対応した特定バージョン向けの設計になっている</li><li>Apache-2.0ライセンスを採用しており、フォーク（派生版の作成）時には元リポジトリへの帰属表示が必要とされている</li></ul>
+<h3>試し方</h3>
+<ol><li>DeepSeek Harness（DSH）をローカル環境にインストールする（バージョン0.2.1-rc.2または0.2.0が対象）</li><li>公式プラグインマーケットプレイスではなく、GitHubのcodeload.github.comからtarball URLを使って`dsh plugin add`コマンドでプラグインを追加する</li><li>DSHのDock（ドック）にあるCleanページからApply（適用）を実行してパッチを当てる</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-06.html#d-hunyisage__dsh-purge">2026-11-06</a>
+<span class="src trendshift">Trendshift 19位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

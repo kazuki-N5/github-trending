@@ -1,0 +1,35 @@
+{
+  "repo": "antfu/pulls.review",
+  "language": "",
+  "readme": true,
+  "oneLiner": "変更ファイルをグループ化・要約してPRレビューをシンプルにするツール",
+  "features": [
+    "変更されたファイルをスコープ（範囲）ごとにグループ化し、一度に一つずつレビューできる",
+    "ウェブサイト（pulls.review）にアクセスしGitHubアカウントを連携するだけで即座に使える",
+    "ユーザースクリプトをインストールするとGitHub本体のUIにpulls.reviewの機能を組み込める",
+    "CIワークフロー（GitHub Actions）でPRを自動解析し、結果をPRコメントとして投稿できる",
+    "CLIツール（@pulls.review/actions）を使って環境変数だけで任意の環境から解析を実行できる",
+    "Vercel AI Gateway・Anthropic・OpenAI互換など複数のAIプロバイダーに対応している"
+  ],
+  "why": "推測: GitHubのデフォルトのPRレビュー画面は変更ファイルが多い場合に全体像を把握しにくいという課題があり、Linear社のPRレビューガイドに触発されて開発された。推測: AIを活用して差分を要約・グループ化することで、レビュアーの認知負荷を減らし効率的なコードレビューを実現しようとしている点が注目されている。",
+  "whoFor": "多数のファイルにわたる大規模なPRをレビューする開発者や、コードレビューの質と速度を向上させたいチームに役立つ。CIに組み込むことでレビュアー全員が同じAI解析結果を共有でき、個人のAPIキーが不要になるため組織での導入にも向いている。",
+  "tech": [
+    "コアライブラリ（@pulls.review/core）はブラウザとNode.jsの両方で動作し、差分の取得・解析・グループ化・要約を担う",
+    "GitHub Actionsのワークフローとして動作するアクション（antfu/pulls.review@main）を提供しており、CIへの組み込みが簡単にできる",
+    "ユーザースクリプト（Tampermonkey等で動くブラウザ拡張スクリプト）でGitHub本体のUIを拡張する仕組みを持つ",
+    "AIプロバイダーの抽象化により、APIキーの種類からプロバイダーを自動推定する設計になっている",
+    "モノレポ（複数パッケージを一つのリポジトリで管理する構成）でapp・core・actions・cliの4パッケージを管理している"
+  ],
+  "tryIt": {
+    "steps": [
+      "pulls.review にアクセスしてGitHubアカウントを連携する",
+      "レビューしたいPRのURLをサイトに入力してレビューを開始する",
+      "GitHubのUIで使いたい場合はサイトのGitHubセクションからユーザースクリプトをインストールする",
+      "CIで使いたい場合はリポジトリに .github/workflows/pulls-review.yml を作成しAPIキーをSecretsに登録する"
+    ],
+    "commands": [
+      "GITHUB_TOKEN=... ANTHROPIC_API_KEY=... npx @pulls.review/actions owner/repo#123",
+      "npx @pulls.review/actions --help"
+    ]
+  }
+}

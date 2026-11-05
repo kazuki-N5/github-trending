@@ -1,0 +1,34 @@
+{
+  "repo": "garrytan/gstack",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "Claude Codeに23の専門家役割を追加するGarry TanのMDスラッシュコマンド集",
+  "features": [
+    "/office-hoursコマンドでアイデアを再構成し、設計ドキュメントを自動生成する",
+    "/plan-ceo-review・/plan-eng-review・/plan-design-reviewでプロダクト・アーキテクチャ・デザインの各観点から計画をレビューする",
+    "/reviewコマンドでCIを通過しても残る本番バグを検出する",
+    "/qaコマンドで実際のブラウザやCLI・API・バッチジョブ上でテストを自動実行する",
+    "/shipコマンドでテストとレビューを実行し、プルリクエストを自動作成する",
+    "GBrain統合により会話をまたいでエージェントの記憶を永続化する"
+  ],
+  "why": "推測: YCombinator代表のGarry Tanが公開した設定ファイルであることから、スタートアップ開発者の間で注目を集めている。AIコーディングエージェントにCEO・エンジニアリングマネージャー・QAなど専門家チームの視点を持たせるアプローチが、実際の開発ワークフロー改善に有効と見られている。",
+  "whoFor": "Claude Codeを使って開発しているエンジニアや、AIコーディングエージェントのワークフローを体系化したい人に役立つ。少人数のスタートアップや個人開発者が、設計・実装・レビュー・QA・リリースの各フェーズを専門チームのようにエージェントに任せたい場合に特に適している。",
+  "tech": [
+    "Markdownファイルで書かれたスラッシュコマンドをClaude Codeの~/.claude/skills/ディレクトリに配置することで動作するシンプルな仕組み",
+    "JavaScriptランタイムのBun（v1.4.2以上）を使ってsetupスクリプトでインストールを管理する",
+    "スキルはsprintの順序（think→plan→build→review→test→ship→reflect）でパイプライン実行され、各スキルの出力が次のスキルへ渡される",
+    "Claude Code以外にもCodex・Cursor・Gemini CLI・Copilot CLIなど複数のAIコーディングエージェントに対応する"
+  ],
+  "tryIt": {
+    "steps": [
+      "Claude CodeとGitとBun v1.4.2以上をインストールする",
+      "リポジトリを~/.claude/skills/gstackにクローンする",
+      "setupスクリプトを実行してセットアップする",
+      "Claude Codeのプロジェクトで/office-hoursなどのコマンドを試す"
+    ],
+    "commands": [
+      "git clone https://github.com/garrytan/gstack ~/.claude/skills/gstack",
+      "cd ~/.claude/skills/gstack && ./setup"
+    ]
+  }
+}

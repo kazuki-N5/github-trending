@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zortos293/Lichii | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>zortos293/Lichii</h1>
+<div class="meta"><span>C++</span>
+<span>初掲載 2026-11-06（Trendshift 4位）</span>
+<a class="gh" href="https://github.com/zortos293/Lichii" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="zortos293__lichii" data-repo="zortos293/Lichii" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Nintendo Switch / Switch 2向け実験的オープンソースエミュレータ（C++製）</p>
+<h3>何ができるか</h3><ul><li>Nintendo SwitchおよびSwitch 2のゲームをPCでエミュレートして動作させることができる</li><li>Eglantine・Eden・yuzu・Sudachiという複数の上流プロジェクトをベースにしたフォーク版として開発されている</li><li>Windowsではアーカイブを解凍してlichii.exeを実行するだけで起動できる</li><li>既存のEden/Eglantineのセーブデータ・設定・シェーダーキャッシュの保存先をそのまま引き継ぐため、既存ユーザーがスムーズに移行できる</li><li>ゲームの動作互換性はタイトル・ハードウェア・ドライバによって異なり、レンダリングエラーや動作不安定が発生する場合があることを明示している</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Nintendo Switch 2のエミュレーションに対応しようとする数少ない実験的プロジェクトとして注目されている。Eglantine・Eden・yuzu・Sudachiという複数の実績あるエミュレータ実装をベースにしており、既存エコシステムとの互換性を保ちながら新世代機への対応を図っている点が評価されている。<span class="guess">推測</span> Switch 2エミュレーション分野における先駆的な試みとして、エミュレータ開発者や研究者の関心を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>Nintendo Switch / Switch 2のゲームをPCで動かすことに興味を持つ開発者・研究者向けのプロジェクト。C++でエミュレータ開発やゲーム保存・アーカイブに関心を持つ開発者にとって貢献しやすいオープンソースプロジェクトでもある。既存のEden/Eglantineユーザーで、Switch 2対応を試してみたいユーザーにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>C++で実装されたNintendo Switch向けエミュレータで、ユーザー空間でのCPU・GPU・OSエミュレーションを行う</li><li>Eglantine・Eden・yuzu・Sudachiという複数のオープンソースエミュレータのコードベースをフォーク・統合して開発されている</li><li>シェーダーキャッシュ（GPUプログラムを変換・保存することでグラフィックス処理を高速化する仕組み）を既存エミュレータの保存先から引き継いで利用できる</li><li>ビルドシステムでは内部的にupstream（上流プロジェクト）のターゲット名を維持しており、GUIターゲットは引き続きyuzuという名称が使われている</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubのリリースページから最新ビルドのアーカイブをダウンロードする</li><li>ダウンロードしたアーカイブを完全に解凍する（部分的な展開は不可）</li><li>lichii.exeを実行して起動する</li><li>別途入手したゲームファイル・暗号化キー（prod.keys等）・ファームウェアを用意して設定する</li><li>実験的ビルドをテストする前に既存のセーブデータのバックアップを取ることを推奨する</li></ol>
+<pre><code>lichii.exe</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-06.html#d-zortos293__lichii">2026-11-06</a>
+<span class="src trendshift">Trendshift 4位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

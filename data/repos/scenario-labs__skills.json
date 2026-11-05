@@ -1,0 +1,37 @@
+{
+  "repo": "scenario-labs/skills",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "AIエージェントがScenarioのMCPサーバーを通じて画像・動画・音声・3Dアセットを生成するためのスキル集",
+  "features": [
+    "SKILL.mdファイル形式のエージェントスキルを提供し、Claude CodeやCursorなどのAIコーディングエージェントに画像・動画・音声・3Dの生成方法を教える",
+    "Scenario MCPサーバーを経由してAIモデルを適切に選択し、生成コストを事前に確認してからコンテンツを作成できる",
+    "キャラクターやブランドの一貫性を保つカスタムモデルのトレーニングと再利用をサポートする",
+    "ZBrush・Blender・Maya・Unreal Engine・Unity・Godot・Roblox StudioなどDCCツール（3Dや映像制作ソフト）を操作するエキスパートツールを搭載する",
+    "npx skills addの一コマンドで全スキルをインストールでき、役割・目的別のグループインストールにも対応する",
+    "release-pleaseで管理されるリリースを追跡し、npx skills updateで最新版に更新できる"
+  ],
+  "why": "推測: AIエージェントによるゲームアート・マーケティング素材・3Dアセット生成の需要が高まる中、Scenario MCPを介してプロ向けのコンテンツ制作パイプラインをコーディングエージェントから直接操作できる点が注目されている。推測: 単なるAPI呼び出しではなく、モデル選択・コスト管理・一貫性維持をスキルとして体系化することで、AIエージェントが制作ワークフローに組み込みやすくなっている点も評価されている。",
+  "whoFor": "ゲーム開発者やクリエイティブ制作者で、AIコーディングエージェント（Claude Codeなど）を使って画像・動画・3Dアセット生成を自動化・効率化したい人に適している。Blender・Unreal Engineなどのプロ向けDCCツールをAIエージェントから操作したいアーティストや技術者にも役立つ。",
+  "tech": [
+    "SKILL.md形式: AIエージェントが読み込む自然言語のスキル定義ファイルで、エージェントに特定の作業手順を教える仕組み",
+    "MCP（Model Context Protocol）: AIエージェントと外部サービスをつなぐプロトコルで、Scenario APIへの接続に使用される",
+    "npxベースのCLIインストーラー（npx skills add / update）でスキルの追加・更新を管理する",
+    "Python 3.11+とvitest（JavaScriptテストフレームワーク）を使ったバリデーション・テスト環境を持つ",
+    "Conventional Commitsに準拠したPRタイトルルールとrelease-pleaseによる自動リリース管理を採用している"
+  ],
+  "tryIt": {
+    "steps": [
+      "Scenario MCPサーバーをOAuthまたはAPIキーでMCPクライアントに追加する（例: claude mcp add）",
+      "npx skills addコマンドを実行してScenarioスキルをインストールする",
+      "Claude CodeなどのAIエージェントからスキルを呼び出してコンテンツ生成を試す",
+      "特定のエキスパートツール（Blenderなど）が必要な場合はIINSTALL.mdを参照してロール別インストールを行う"
+    ],
+    "commands": [
+      "npx skills add",
+      "npx skills update",
+      "claude mcp add",
+      "pnpm run validate"
+    ]
+  }
+}
