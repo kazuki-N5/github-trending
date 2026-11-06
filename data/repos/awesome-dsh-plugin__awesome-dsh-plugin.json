@@ -1,0 +1,28 @@
+{
+  "repo": "awesome-dsh-plugin/awesome-dsh-plugin",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "DeepSeek Harness（dsh）プラグインのコミュニティキュレーションリスト",
+  "features": [
+    "dsh plugin addコマンドで一発インストールできるプラグインを24カテゴリに分類してまとめている",
+    "UIカスタマイズ・使用量管理・テーマ・モデル追加・メモリ・ブラウザ連携など多岐にわたるプラグインを収録している",
+    "dsh-marketというプラグインマーケットを経由してワンクリックでインストールや更新ができる",
+    "掲載基準（dsh plugin add対応・説明の正確さ・カテゴリ適合・メンテナンス継続）が定められており品質管理している",
+    "プラグインが第三者コードを実行するためソースコード確認を促すセキュリティ警告を掲載している"
+  ],
+  "why": "DeepSeek Harness（dsh）はDeepSeekが公開したオープンソースのエージェントハーネスで、プラグイン生態系が急速に広がっている。awesome系のまとめリストはコミュニティの入り口として需要が高い。",
+  "whoFor": "DeepSeek Harness（dsh）を使っている開発者やAIエージェントユーザーで、便利なプラグインを探している人、またはプラグインを公開したい開発者に向いている。",
+  "tech": [
+    "dsh.bundleマニフェストをプラグインが宣言しdsh plugin addコマンドで管理する仕組みになっている",
+    "プラグインはユーザー自身の権限で動作するためツール承認があってもサンドボックスはなく未知のプラグインには注意が必要"
+  ],
+  "tryIt": {
+    "steps": [
+      "dsh plugin add awesome-dsh-plugin/awesome-dsh-plugin でdsh-marketを導入してDiscoverタブからプラグインを選ぶ",
+      "個別プラグインはdsh plugin add <リポジトリ名>で直接インストールできる"
+    ],
+    "commands": [
+      "dsh plugin add awesome-dsh-plugin/awesome-dsh-plugin"
+    ]
+  }
+}

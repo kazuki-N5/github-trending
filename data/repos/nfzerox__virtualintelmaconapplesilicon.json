@@ -1,0 +1,29 @@
+{
+  "repo": "nfzerox/VirtualIntelMacOnAppleSilicon",
+  "language": "",
+  "readme": true,
+  "oneLiner": "Appleシリコン上でIntel macOS（Tiger〜Big Sur）をグラフィックアクセラレーション付きで動かすアプリ",
+  "features": [
+    "Mac OS X Tiger 10.4からmacOS Big Sur 11まで全てのIntel macOSバージョンを動作させられる",
+    "OpenGLアクセラレーション（Tiger〜High Sierra）とMetalサポート（Mojave〜Big Sur）により快適なグラフィクス性能を実現している",
+    "32ビットIntelアプリや古いiWork・iLifeなどのレガシーアプリを実行できる",
+    "Retinaディスプレイ・USB/オーディオパススルー・ファイル共有・クリップボード同期などをサポートしている",
+    "Appleシリコンホストではグラフィクスはハードウェアアクセラレーション、CPUはエミュレーションで動作する"
+  ],
+  "why": "Appleシリコン移行後に動かなくなった32ビットIntelアプリや古いmacOSを再び使えるようにするニーズに応えるプロジェクトとして注目を集めている。グラフィクスアクセラレーション付きというのが類似ツールとの差別化点である。",
+  "whoFor": "古いIntel向けmacOSアプリ（特に32ビットアプリや旧iWork・iLife）をAppleシリコンMacで動かしたいユーザー、またはレガシーmacOS環境を検証目的で使いたいエンジニアに向いている。",
+  "tech": [
+    "Tiger〜High SierraではカスタムOpenGLパススルーでホストのGPUを活用している",
+    "Mojave・CatalinaにはBig SurからバックポートしたMetalサポートを適用している",
+    "Intelグラフィクスのスライスをarm64 QEMUとRosetta 2の下で動かし、高速なx86エミュレーションを実現している",
+    "ホスト要件はmacOS Sequoia 15またはTahoe 26以降で、Universal AppなのでIntelホストでも動く"
+  ],
+  "tryIt": {
+    "steps": [
+      "macOS Sequoia 15以降を搭載したMacにアプリをインストールする",
+      "仮想マシンを作成しゲストmacOSをインストールする（約1〜2時間かかる）",
+      "グラフィクスドライバーをセットアップする（約15〜30分）"
+    ],
+    "commands": []
+  }
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cristianoc/TScert | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧪</div><div>
+<h1>cristianoc/TScert</h1>
+<div class="meta">
+<span>初掲載 2026-11-07（はてなブックマーク 3位）</span>
+<a class="gh" href="https://github.com/cristianoc/TScert" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="cristianoc__tscert" data-repo="cristianoc/TScert" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Leanで健全性を証明したTypeScript型チェッカーの研究実装</p>
+<h3>何ができるか</h3><ul><li>TypeScriptの関数が型安全であることを証明付きで検証し、証明なしの関数は受け付けない</li><li>Lean（定理証明支援系）を使ってチェッカー自体の健全性を形式証明している</li><li>anyや型アサーションを使った関数を明示的に拒否し、TypeScriptの既知の不健全な部分を除外している</li><li>OCamlの「producer」が型を提案し、Leanが証明書を検証するという分離アーキテクチャを採用している</li><li>プロジェクト自身のtools/ディレクトリ内686関数のうち643関数（v0.94時点）を検証済みである</li></ul>
+<h3>なぜ注目されているか</h3><p>TypeScriptは実用的だが型システムに不健全な部分（any・型アサーション・非チェックインデックスアクセスなど）が存在する。形式検証を組み合わせた健全な型チェッカーの研究実装として学術的・技術的に注目を集めている。</p>
+<h3>どんな人に役立つか</h3><p>型理論や形式検証（Lean・Coqなど）に興味がある研究者、またはTypeScriptの型安全性の限界を深く理解したいエンジニアに向いている。</p>
+<h3>技術的なポイント</h3><ul><li>TypeScriptフロントエンドでソースを読み込み、OCamlのproducerが型を提案し、Leanが証明書を検証するパイプラインになっている</li><li>小さな形式計算系にTypeScript関数を変換してLeanで定理を証明しており、主定理はcheckUnitJson_safeである</li><li>NON-AI MITライセンスを採用しており、機械学習システムの訓練や改善への利用を禁止している</li><li>async/await・クラス・ジェネリクスを含む主要な構文サブセットに対応しているが、anyと型アサーションは常に拒否される</li></ul>
+<h3>試し方</h3>
+<ol><li>make setupで依存関係をセットアップする</li><li>make buildでビルドする</li><li>make check FILE=&lt;対象ファイル&gt;で指定ファイルを検証する</li><li>make testでテストスイートを実行する</li></ol>
+<pre><code>make setup
+make build
+make check FILE=...
+make test</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-07.html#h-cristianoc__tscert">2026-11-07 はてブ</a>
+<span class="src hatena">はてなブックマーク 3位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

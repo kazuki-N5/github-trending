@@ -1,0 +1,28 @@
+{
+  "repo": "microsoft/VibeVoice",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Microsoftのオープンソース音声AI：ASR（文字起こし）とTTSを統合した大規模音声モデル",
+  "features": [
+    "VibeVoice-ASR-7Bは最大60分の音声を一括で文字起こしし、話者ラベル・タイムスタンプ・ホットワード検出に対応する",
+    "VibeVoice-ASR-Streamingは音声が届きながらリアルタイムで文字起こしできる",
+    "VibeVoice-ASR-BitNetは量子化によりCPUのみで約1.58GBで動作する軽量版である",
+    "VibeVoice-Realtime-0.5Bは約300msの遅延で音声合成を行う軽量ストリーミングTTSモデルである",
+    "50以上の言語に対応したASRと複数話者（最大4名）の音声合成をサポートしている"
+  ],
+  "why": "Microsoftが公開したオープンソースの大規模音声AIとして、文字起こしと音声合成を高精度かつ多言語・多話者で実現できる点が注目されている。Hugging Face TransformersやvLLMとの統合も進んでいる。",
+  "whoFor": "音声認識・音声合成をアプリに組み込みたい開発者、またはオープンソースの高精度音声モデルを研究・実験したい研究者に向いている。",
+  "tech": [
+    "7.5Hzフレームレートの連続音声トークナイザー、LLM、拡散ヘッドを組み合わせたアーキテクチャを採用している",
+    "ベースモデルはQwen2.5 1.5Bで、そのバイアスを引き継ぐ点に注意が必要",
+    "Azure AI Foundry LabsおよびHugging Face Transformersへの統合が提供されている",
+    "深刻な悪用（ディープフェイク・偽情報）リスクがあるとしてTTSコードは2025年9月にリポジトリから削除されている"
+  ],
+  "tryIt": {
+    "steps": [
+      "Hugging Face Transformersまたはvllmを使って各モデルをダウンロードし推論を実行する",
+      "ASRはaudio入力を渡してtranscribeを呼び出す"
+    ],
+    "commands": []
+  }
+}

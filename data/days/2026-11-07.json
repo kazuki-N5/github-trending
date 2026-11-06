@@ -1,0 +1,221 @@
+{
+  "date": "2026-11-07",
+  "collectedAt": "2026-11-07T07:08:03+09:00",
+  "entries": [
+    {
+      "repo": "anomalyco/rune",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Rune: Native UI framework",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "sherlock-project/sherlock",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "zortos293/Lichii",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "VERY experimental Nintendo Switch 2 emulator",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "milind-soni/OpenMausBot",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "storytold/craft-anything",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "Craft Anything: understand how any software works, and craft your own.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "larashero3-dotcom/lieflat-less-ai-tone",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "一个基于 520 万字语料统计的去 AI 味 skill · An AI-tone removal skill grounded in a 5.2-million-character corpus study",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "cloudflare/security-audit-skill",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "vAPI-Network/vapi-network",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "Buyer-controlled client for x402 API payments in USDC on Base.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "JuneYaooo/rea-video",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "逆向一切视频：实拍口播、桌拍、AI 视频、3D、代码动效、混剪，逐镜拆出画面、花字、剪辑和声音是怎么做的，并给出复刻方案。Reverse-engineer any video, shot by shot.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ppmpreetham/BUI",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Blender's GPU Accelerated UI, Decoupled from it's original codebase",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "NVIDIA/auto-ontology",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mattpocock/skills",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mmdoctor/google-pro-helper",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Frizti/Lichii",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "VERY experimental Nintendo Switch 2 emulator",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "livliv-dev/player",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "A lightweight 2.5D character player for the web, with lip sync and webcam face tracking.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "zed-industries/zed",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "awesome-dsh-plugin/awesome-dsh-plugin",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "microsoft/VibeVoice",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Open-Source Frontier Voice AI",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ccch1mneyyy/dsh-Go",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
+      "language": "Dart",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "rudderlabs/devbox",
+        "source": "hatena",
+        "desc": "Open source autonomous engineering harness in your cloud. One sandbox per task, no real secrets inside.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 12,
+        "sourceRank": 1
+      },
+      {
+        "repo": "nfzerox/VirtualIntelMacOnAppleSilicon",
+        "source": "hatena",
+        "desc": "Run every Intel version of macOS between Mac OS X Tiger 10.4 and macOS Big Sur 11 on Apple silicon with graphics acceleration, so you can run older 32-bit and 64-bit Intel apps like iWork ’09, iLife ’11, Ape",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 2
+      },
+      {
+        "repo": "cristianoc/TScert",
+        "source": "hatena",
+        "desc": "TScert: a sound core for TypeScript. An independent checker, whose soundness is proved in Lean, accepts a TypeScript function only with a proof.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 3
+      }
+    ]
+  }
+}

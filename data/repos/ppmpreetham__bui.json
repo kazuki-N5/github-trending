@@ -1,0 +1,31 @@
+{
+  "repo": "ppmpreetham/BUI",
+  "language": "C++",
+  "readme": true,
+  "oneLiner": "BlenderのGPUアクセラレートUIウィジェットを独立したクロス言語ライブラリとして提供",
+  "features": [
+    "Blenderのスライダー・パネル・ノードエディタなどのウィジェットをBlender不要で使える",
+    "Python・Rust・JavaScript（React/Svelte）・C/C++・Dear ImGuiなど複数の言語バインディングを提供する",
+    "数値フィールドをドラッグしてスクラブ操作したり数式入力したりするBlender式インタラクションを再現する",
+    "ダメージベースレンダリングにより、アイドル時のCPU使用率がゼロになる",
+    "WindowsではDirect3D 11、LinuxではOpenGL 3.3でGPUレンダリングを行い、CPU描画フォールバックもある"
+  ],
+  "why": "BlenderのUIはプロ向けツールとして長年磨かれた操作感を持ち、それをスタンドアロンライブラリとして使える点が珍しい。特にPythonではtkinter互換APIを提供するため既存コードをほぼそのまま移行できる点が注目される。",
+  "whoFor": "高品質なデスクトップGUIを多言語（Python・Rust・JSなど）から使いたい開発者、またはBlenderの操作感を自作アプリに取り込みたい人に向いている。",
+  "tech": [
+    "C言語ランタイムでレイアウト・入力・描画を処理し、各言語バインディングがその上に乗る構造になっている",
+    "Dear ImGuiとの統合を提供しており、既存のImGuiアプリにBlenderウィジェットを混在させられる",
+    "macOSサポートは実験的段階であり、WindowsとLinuxが主要プラットフォームとなっている"
+  ],
+  "tryIt": {
+    "steps": [
+      "Pythonの場合はpip install blenderuiでインストールする",
+      "Rustの場合はcargo add blenderuiでインストールする",
+      "JavaScriptの場合はbui buildコマンドでスタンドアロン実行ファイルを生成する"
+    ],
+    "commands": [
+      "pip install blenderui",
+      "cargo add blenderui"
+    ]
+  }
+}

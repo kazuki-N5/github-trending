@@ -1,0 +1,31 @@
+{
+  "repo": "livliv-dev/player",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "リップシンクとWebカメラ顔追跡付きの軽量2.5DキャラクタープレイヤーWeb向けライブラリ",
+  "features": [
+    "LivLiv・VRM・PNGTuberの3種類のキャラクター形式を同一APIで再生できる",
+    "MediaPipeを使ったWebカメラによる顔追跡をブラウザ上でリアルタイム実行できる",
+    "リップシンクモジュールを使って音声に合わせた口の動きを制御できる",
+    "コアは約30KB（gzip後）で外部依存なし、WebGL2のみで動作する",
+    "OBS Browser Sourceとして利用できるiframeエンベッドURLを提供している"
+  ],
+  "why": "VTuber・PNGTuber・AIキャラクターをWebブラウザだけで動かせる軽量実装は珍しく、外部サーバー不要でカメラ映像をローカル処理する点がプライバシー面でも評価されている。",
+  "whoFor": "WebアプリやOBS配信にVTuber・PNGTuberのキャラクターを組み込みたい開発者、またはlivliv.aiで作成したAIキャラクターを自作サービスに埋め込みたい人に向いている。",
+  "tech": [
+    "WebGL2のみを使用したレンダラーで追加ライブラリ不要の30KB軽量コアを実現している",
+    "顔追跡にはMediaPipe（Googleのリアルタイム機械学習ライブラリ）をブラウザ上で動かしている",
+    "リップシンクと顔追跡は別モジュールとして分割されており必要なときだけ読み込める",
+    "Chrome/Edge 97以降、Firefox 104以降、Safari 15.4以降をサポートしている"
+  ],
+  "tryIt": {
+    "steps": [
+      "npm install @livliv-dev/player でインストールする",
+      "canvas要素にPlayerを作成しload()でキャラクターフォルダまたは.livlivファイルを読み込む",
+      "setExpression()やsetAction()でキャラクターの表情や動作を制御する"
+    ],
+    "commands": [
+      "npm install @livliv-dev/player"
+    ]
+  }
+}

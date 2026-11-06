@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>microsoft/VibeVoice | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎙️</div><div>
+<h1>microsoft/VibeVoice</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-07（Trendshift 19位）</span>
+<a class="gh" href="https://github.com/microsoft/VibeVoice" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="microsoft__vibevoice" data-repo="microsoft/VibeVoice" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Microsoftのオープンソース音声AI：ASR（文字起こし）とTTSを統合した大規模音声モデル</p>
+<h3>何ができるか</h3><ul><li>VibeVoice-ASR-7Bは最大60分の音声を一括で文字起こしし、話者ラベル・タイムスタンプ・ホットワード検出に対応する</li><li>VibeVoice-ASR-Streamingは音声が届きながらリアルタイムで文字起こしできる</li><li>VibeVoice-ASR-BitNetは量子化によりCPUのみで約1.58GBで動作する軽量版である</li><li>VibeVoice-Realtime-0.5Bは約300msの遅延で音声合成を行う軽量ストリーミングTTSモデルである</li><li>50以上の言語に対応したASRと複数話者（最大4名）の音声合成をサポートしている</li></ul>
+<h3>なぜ注目されているか</h3><p>Microsoftが公開したオープンソースの大規模音声AIとして、文字起こしと音声合成を高精度かつ多言語・多話者で実現できる点が注目されている。Hugging Face TransformersやvLLMとの統合も進んでいる。</p>
+<h3>どんな人に役立つか</h3><p>音声認識・音声合成をアプリに組み込みたい開発者、またはオープンソースの高精度音声モデルを研究・実験したい研究者に向いている。</p>
+<h3>技術的なポイント</h3><ul><li>7.5Hzフレームレートの連続音声トークナイザー、LLM、拡散ヘッドを組み合わせたアーキテクチャを採用している</li><li>ベースモデルはQwen2.5 1.5Bで、そのバイアスを引き継ぐ点に注意が必要</li><li>Azure AI Foundry LabsおよびHugging Face Transformersへの統合が提供されている</li><li>深刻な悪用（ディープフェイク・偽情報）リスクがあるとしてTTSコードは2025年9月にリポジトリから削除されている</li></ul>
+<h3>試し方</h3>
+<ol><li>Hugging Face Transformersまたはvllmを使って各モデルをダウンロードし推論を実行する</li><li>ASRはaudio入力を渡してtranscribeを呼び出す</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-07.html#d-microsoft__vibevoice">2026-11-07</a>
+<span class="src trendshift">Trendshift 19位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

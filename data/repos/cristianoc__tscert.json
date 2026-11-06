@@ -1,0 +1,35 @@
+{
+  "repo": "cristianoc/TScert",
+  "language": "",
+  "readme": true,
+  "oneLiner": "Leanで健全性を証明したTypeScript型チェッカーの研究実装",
+  "features": [
+    "TypeScriptの関数が型安全であることを証明付きで検証し、証明なしの関数は受け付けない",
+    "Lean（定理証明支援系）を使ってチェッカー自体の健全性を形式証明している",
+    "anyや型アサーションを使った関数を明示的に拒否し、TypeScriptの既知の不健全な部分を除外している",
+    "OCamlの「producer」が型を提案し、Leanが証明書を検証するという分離アーキテクチャを採用している",
+    "プロジェクト自身のtools/ディレクトリ内686関数のうち643関数（v0.94時点）を検証済みである"
+  ],
+  "why": "TypeScriptは実用的だが型システムに不健全な部分（any・型アサーション・非チェックインデックスアクセスなど）が存在する。形式検証を組み合わせた健全な型チェッカーの研究実装として学術的・技術的に注目を集めている。",
+  "whoFor": "型理論や形式検証（Lean・Coqなど）に興味がある研究者、またはTypeScriptの型安全性の限界を深く理解したいエンジニアに向いている。",
+  "tech": [
+    "TypeScriptフロントエンドでソースを読み込み、OCamlのproducerが型を提案し、Leanが証明書を検証するパイプラインになっている",
+    "小さな形式計算系にTypeScript関数を変換してLeanで定理を証明しており、主定理はcheckUnitJson_safeである",
+    "NON-AI MITライセンスを採用しており、機械学習システムの訓練や改善への利用を禁止している",
+    "async/await・クラス・ジェネリクスを含む主要な構文サブセットに対応しているが、anyと型アサーションは常に拒否される"
+  ],
+  "tryIt": {
+    "steps": [
+      "make setupで依存関係をセットアップする",
+      "make buildでビルドする",
+      "make check FILE=<対象ファイル>で指定ファイルを検証する",
+      "make testでテストスイートを実行する"
+    ],
+    "commands": [
+      "make setup",
+      "make build",
+      "make check FILE=...",
+      "make test"
+    ]
+  }
+}
