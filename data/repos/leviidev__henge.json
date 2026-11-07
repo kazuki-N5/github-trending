@@ -1,0 +1,30 @@
+{
+  "repo": "Leviidev/Henge",
+  "language": "C",
+  "readme": true,
+  "oneLiner": "iPhoneやiPadでmacOSをエミュレート動作させるツール",
+  "features": [
+    "独自のJITコンパイラとMMU（メモリ管理ユニット）でMacのarm64コードを実行できる",
+    "QEMUやVirtualization.frameworkを使わず、Appleのリストアイメージを直接ダウンロードしてmacOSをインストールできる",
+    "仮想GPUのコマンドをMetalで再生し、グラフィックを表示できる",
+    "タッチスクリーンをトラックパッドとして使え、Magic KeyboardやBluetoothキーボード・マウスも対応している",
+    "USB-C接続で外部モニターにmacOS画面を出力できる",
+    "macOSとiOSデバイス間でコピー＆ペーストや共有フォルダが使える"
+  ],
+  "why": "推測: iOSデバイス上でmacOSを動かすという珍しい試みが注目を集めている。Apple Silicon（A14やM1以降）のアーキテクチャがMacと同じarm64であるため、JITエミュレーションによる実現が技術的に可能となったことが背景にある。推測: GPL-2.0ライセンスでオープンソース公開され、App Storeを経由せずに試せる点も話題を呼んでいる。",
+  "whoFor": "iOSやiPadOSデバイスでmacOSを動かすことに興味がある開発者・研究者向け。iOS 17以降、A14またはM1以降のチップ、JITサポート、約43GBの空き容量が必要。",
+  "tech": [
+    "独自実装のJIT（Just-In-Time）コンパイラでarm64コードをネイティブ実行する",
+    "MMU（メモリ管理ユニット）をソフトウェアでエミュレートし、macOSのメモリ管理を再現する",
+    "Appleの仮想GPUコマンドをiOSのグラフィックAPI「Metal」で描画する",
+    "macOS Sequoia 15.6.1を検証済みとし、Tahoe 26.6.2やmacOS 27.2も起動可能（未検証）"
+  ],
+  "tryIt": {
+    "steps": [
+      "iOS/iPadOS 17以降、A14またはM1チップ以降のデバイスを用意し、JITサポートを有効にする",
+      "約43GBの空き容量を確保する",
+      "App Store経由ではなく、プロジェクトのリリースページからアプリをサイドロードする"
+    ],
+    "commands": []
+  }
+}

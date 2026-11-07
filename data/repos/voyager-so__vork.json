@@ -1,0 +1,36 @@
+{
+  "repo": "voyager-so/vork",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "AIエージェント向けのヘッドレス3D・VFXエンジン（リサーチプレビュー）",
+  "features": [
+    "シーンをコード（JSON・TypeScript・Python）で記述してGPUでレンダリングでき、動画モデルを使わない",
+    "百万羽の鳥の群れシミュレーションや、実写映像へのVFX合成などのサンプルが用意されている",
+    "GPUによる液体シミュレーション（水のシミュレーション）をサポートしている",
+    "光の伝播プログラムでシュワルツシルト・レンズイング（ブラックホールによる光の屈折）を近似できる",
+    "BlenderのEEVEEと比較した速度ベンチマークが公開されており、特定条件下で1.4〜1.7倍高速とされている"
+  ],
+  "why": "推測: AIエージェントがコードでシーンを記述して自律的にレンダリングできるという設計コンセプトが、AIワークフロー自動化の文脈で注目されていると考えられる。推測: RustとSlang（GPUシェーダー言語）でVulkanとMetalの両方に対応するという技術選択も、高性能グラフィックスへの関心を持つ開発者を惹きつけている可能性がある。",
+  "whoFor": "3DレンダリングやVFXのパイプラインをプログラムで自動化したいAIエージェント開発者、またはRustとGPUプログラミング（Vulkan・Metal）に興味があるCS学生や研究者向けである。Apple SiliconまたはNVIDIA GPU（Vulkan Ray Queriesサポート）が必要である。",
+  "tech": [
+    "RustとSlang（Microsoftが開発したGPUシェーダー言語）で実装されており、VulkanとMetalの両APIで動作する",
+    "シーン記述はJSON・TypeScript・Pythonで記述でき、エージェントがコードからレンダリングを制御しやすい設計になっている",
+    "Blender EEVEEとの比較ベンチマーク（同等品質での比較ではないと注記あり）でfinalスチルが約1.4〜1.7倍高速とされているが、パストレーシングはCyclesより遅い結果が示されている",
+    "フォグ・ボリュームは現バージョンで未対応であり、大規模シーンではメモリ不足になる場合がある",
+    "オプションのBlenderブリッジはGPL（オープンソースライセンスの一つ）でライセンスされており、本体とは別ライセンスである"
+  ],
+  "tryIt": {
+    "steps": [
+      "Apple SiliconまたはNVIDIA GPU（Vulkan Ray Queries対応）とffmpegを用意する",
+      "Linux・Windows・MacのそれぞれのREADMEに記載のインストール手順に従いvorkをセットアップする",
+      "vork init my-shotでプロジェクトを初期化する",
+      "scene.jsonを編集してシーンを記述し、vork render scene.json --profile std/draft --out render.pngでレンダリングする",
+      "vork helpでシーンの概念やフィールドのドキュメントを確認する"
+    ],
+    "commands": [
+      "vork init my-shot",
+      "vork render scene.json --profile std/draft --out render.png",
+      "vork help"
+    ]
+  }
+}

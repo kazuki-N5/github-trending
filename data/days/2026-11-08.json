@@ -1,0 +1,211 @@
+{
+  "date": "2026-11-08",
+  "collectedAt": "2026-11-08T07:07:36+09:00",
+  "entries": [
+    {
+      "repo": "sherlock-project/sherlock",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "zortos293/Lichii",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "VERY experimental Nintendo Switch 2 emulator",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Albert-Weasker/niubigeo",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "Open-source AI brand visibility and competitor reports. Official website: https://niubigeo.ai/ | Paid services: AI testing by real people and GEO optimization. Pricing: https://niubigeo.ai/pricing",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "NotRexed/Hookshot",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "JenkinWoo/sheeridVerify",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "milind-soni/OpenMausBot",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anomalyco/rune",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "Rune: Native UI framework",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "storytold/craft-anything",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "Craft Anything: understand how any software works, and craft your own.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "LNPANDY/NX2Apple",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "Play your own Switch games on iPhone/iPad — one-click macOS app, no terminal. | 把 Switch 游戏装进 iPhone：图形界面一键构建，不用命令行。Bring your own game.",
+      "language": "Swift",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ppmpreetham/BUI",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Blender's GPU Accelerated UI, Decoupled from it's original codebase",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "sostenesfreitas/ocarina-recomp",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "Ocarina of Time running natively on Windows, no emulator. Built on your PC from your own copy. No game files included.",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Minireel/HGhub",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "YellowFruit third-party client",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "zed-industries/zed",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "voyager-so/vork",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Headless 3D and VFX engine for agents. Research preview.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Frizti/Lichii",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "VERY experimental Nintendo Switch 2 emulator",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ccch1mneyyy/dsh-Go",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
+      "language": "Dart",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "google/skills",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Agent Skills for Google products and technologies",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "cloudflare/security-audit-skill",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Leviidev/Henge",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Emulate macOS on iOS and iPadOS",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "reacher-z/Awesome-REA",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "Awesome Reverse Engineering Anything: tools, projects, case studies and research papers for websites, games, apps, binaries, firmware and communication protocols.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "soudai/postgresql-use-improve-agents-skill",
+        "source": "hatena",
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 16,
+        "sourceRank": 1
+      },
+      {
+        "repo": "INDXDev/jevlint",
+        "source": "hatena",
+        "desc": "A model-based linter that tells you what to refactor first.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 4,
+        "sourceRank": 2
+      }
+    ]
+  }
+}

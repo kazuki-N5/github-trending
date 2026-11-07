@@ -1,0 +1,37 @@
+{
+  "repo": "Minireel/HGhub",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "短編ドラマ配信サービス向けの非公式サードパーティクライアントアプリ",
+  "features": [
+    "短編ドラマ配信サービスのコンテンツをデスクトップ（Windows・macOS）とAndroidで視聴できる",
+    "hls.js（HLSストリーミング再生ライブラリ）を使って動画を再生する",
+    "Tauri 2とRustをベースにしたシェルにReact 19のフロントエンドを組み合わせたネイティブアプリとして動作する",
+    "reqwest（RustのHTTPクライアント）とrustlsでネットワーク通信を行いセキュリティを確保する",
+    "公式リリースページからインストーラーを取得でき、管理者権限が不要なケースにも対応する"
+  ],
+  "why": "推測: Tauriという軽量なクロスプラットフォームフレームワーク（RustとWebフロントエンドを組み合わせるツール）をTypeScriptとReactと組み合わせた実装例として、技術的な学習目的で注目されていると考えられる。推測: 非公式クライアントの実装パターンやhls.jsを使った動画再生の実例としても参考にされている可能性がある。",
+  "whoFor": "Tauri・Rust・Reactを使ったクロスプラットフォームアプリ開発を学びたいCS学生や、短編ドラマサービスをデスクトップやAndroidから利用したいユーザー向けである。学習・技術交流目的に限定されており、商用利用は禁止されている。",
+  "tech": [
+    "Tauri 2（RustバックエンドとWebフロントエンドを組み合わせるフレームワーク）をシェルとして使用し、軽量なネイティブアプリを実現する",
+    "フロントエンドはReact 19・TypeScript・Vite 7・Tailwind CSS 4で構成されており、モダンなWeb技術スタックを採用している",
+    "ライセンスはPolyForm Noncommercial 1.0.0（v1.1.0以降）で、非商用利用のみを許可する独自ライセンスである",
+    "AndroidビルドにはAndroid SDK・NDK・JDK 17が必要で、pnpmのnpmrcでnode-linker=hoistedを設定する必要がある"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node.jsとpnpmをインストールし、リポジトリをクローンする",
+      "pnpm installで依存関係をインストールする",
+      "デスクトップ版はpnpm app:devで開発サーバーを起動するか、pnpm app:buildでインストーラーをビルドする",
+      "Androidビルドの場合はAndroid SDK・NDK・JDK 17を用意し、pnpm android:initの後にpnpm android:devまたはandroid:buildを実行する"
+    ],
+    "commands": [
+      "pnpm install",
+      "pnpm app:dev",
+      "pnpm app:build",
+      "pnpm android:init",
+      "pnpm android:dev",
+      "pnpm android:build"
+    ]
+  }
+}

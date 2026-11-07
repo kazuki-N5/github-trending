@@ -1,0 +1,33 @@
+{
+  "repo": "google/skills",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "GoogleプロダクトとGoogle Cloud向けのAIエージェントスキル集",
+  "features": [
+    "npxコマンド一つでGoogle Cloud・AI/ML・データベース・セキュリティなど多数のカテゴリのスキルをエージェントに追加できる",
+    "Claude Code・Codex・Antigravity CLIなど複数のAIエージェント向けにスキルとMCPサーバーを組み合わせたプラグインを提供する",
+    "npx skills updateコマンドで最新バージョンへの更新と不要なスキルの削除ができる",
+    "インストール時にスキルの種類・対象エージェント・スコープ（プロジェクト単位またはグローバル）を対話的に選択できる",
+    "Android・Flutter・Firestore・Google Maps Platformなど追加の外部リポジトリのスキルへのリンクも提供される"
+  ],
+  "why": "推測: GoogleがAIエージェント向けに自社プロダクトの操作方法を体系化したスキル集を公式提供することで、エージェントが自然言語でGCPサービスを扱えるようになると注目されていると考えられる。推測: Claude CodeなどのAIコーディングツールとの連携が実装例として紹介されており、AIエージェント開発コミュニティでの関心が高まっている可能性がある。",
+  "whoFor": "Google CloudやGoogleプロダクトをAIエージェントから操作・自動化したい開発者や、Claude CodeなどのAIコーディングツールにGoogleサービスの知識を追加したいCS学生・エンジニア向けである。Node.js（npx提供元）が利用できる環境であれば簡単にインストールできる。",
+  "tech": [
+    "スキルはPythonで実装されており、npx skills addコマンドでNode.js経由で配布・インストールされる仕組みを採用している",
+    "MCP（Model Context Protocol：AIエージェントがツールを呼び出すための標準プロトコル）サーバーとスキルを組み合わせたプラグイン形式をサポートする",
+    "プロジェクト単位またはグローバル単位でインストールスコープを選択でき、エージェントごとに適用範囲を管理できる",
+    "ライセンスはApache 2.0（商用利用も可能なオープンソースライセンス）で公開されている"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node.jsがインストールされている環境でターミナルを開く",
+      "npx skills add google/skillsを実行する",
+      "対話形式のプロンプトでインストールするスキル・対象エージェント・スコープを選択する",
+      "最新版に更新したい場合はnpx skills updateを実行する"
+    ],
+    "commands": [
+      "npx skills add google/skills",
+      "npx skills update"
+    ]
+  }
+}

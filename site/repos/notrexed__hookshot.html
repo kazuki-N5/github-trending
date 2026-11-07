@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NotRexed/Hookshot | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>NotRexed/Hookshot</h1>
+<div class="meta"><span>C++</span>
+<span>初掲載 2026-11-08（Trendshift 4位）</span>
+<a class="gh" href="https://github.com/NotRexed/Hookshot" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="notrexed__hookshot" data-repo="NotRexed/Hookshot" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ゼルダOoTをPCでネイティブ実行する静的リコンパイルツール（README 未確認）</p>
+<p class="missing">README を読めなかったため、トレンドページの情報だけで書いています。</p>
+<h3>何ができるか</h3><ul><li>ゲームのARM64コードをCに変換してPCネイティブバイナリとしてコンパイルする静的リコンパイル（エミュレーターなし）を実現する。</li><li>サウンド、コントローラー・キーボード操作、セーブデータに対応している。</li><li>フレーム生成（2〜4倍）、解像度スケーリング、アップスケーリング、ゲームスピード調整などのゲーム内メニューを備える。</li><li>ウルトラワイドモードとFPSカウンターをサポートする。</li><li>Switch 2のAmpereシェーダーをMaxwell経由でSPIR-V（VulkanのGPU命令形式）に変換する。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Nintendo Switch 2版「ゼルダの伝説 時のオカリナ」が静的リコンパイルという手法でPC上でエミュレーターなしに動作するとして話題になっている。高フレームレートやアップスケーリングなどPC向けの拡張機能を備えており、ゲーム技術面での注目も集めている。<span class="guess">推測</span> 静的リコンパイル技術そのものへの学習・研究目的でも関心を持たれていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>自分で合法的に入手したゲームをPCで高画質・高フレームレートでプレイしたいユーザー。静的リコンパイルやVulkanグラフィックスバックエンドの実装を学びたい開発者。</p>
+<h3>技術的なポイント</h3><ul><li>静的リコンパイルとはゲームのバイナリコードを別アーキテクチャ向けのコードに事前変換し、エミュレーターなしで実行する技術。</li><li>グラフィックスAPIにVulkan 1.3（メッシュシェーダー対応）を使用しており、現時点ではNVIDIA GPUのみテスト済み。</li><li>ビルドには約40分かかり、約60GBの空きディスクが必要。</li><li>Windows 10/11（64ビット）またはglibc 2.35以上の64ビットLinuxで動作する。</li><li>ビルドツールとしてPythonスクリプト（`nx2/make_game.py`）によるCLIビルドもサポートする。</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubのReleasesページからHookshot Builderをダウンロードする（Linuxの場合はAppImage）。</li><li>ビルダーに自分のゲームの`.nup`ファイル、またはromfsとexefsフォルダを指定する。</li><li>言語と出力フォルダを選択し、ビルドを開始する（約40分かかる）。</li><li>出力フォルダの`hookshot.exe`（Linuxでは`hookshot`）を起動する。</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-08.html#d-notrexed__hookshot">2026-11-08</a>
+<span class="src trendshift">Trendshift 4位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

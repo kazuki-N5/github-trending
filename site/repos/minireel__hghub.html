@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minireel/HGhub | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">⌨️</div><div>
+<h1>Minireel/HGhub</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-08（Trendshift 12位）</span>
+<a class="gh" href="https://github.com/Minireel/HGhub" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="minireel__hghub" data-repo="Minireel/HGhub" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">短編ドラマ配信サービス向けの非公式サードパーティクライアントアプリ</p>
+<h3>何ができるか</h3><ul><li>短編ドラマ配信サービスのコンテンツをデスクトップ（Windows・macOS）とAndroidで視聴できる</li><li>hls.js（HLSストリーミング再生ライブラリ）を使って動画を再生する</li><li>Tauri 2とRustをベースにしたシェルにReact 19のフロントエンドを組み合わせたネイティブアプリとして動作する</li><li>reqwest（RustのHTTPクライアント）とrustlsでネットワーク通信を行いセキュリティを確保する</li><li>公式リリースページからインストーラーを取得でき、管理者権限が不要なケースにも対応する</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Tauriという軽量なクロスプラットフォームフレームワーク（RustとWebフロントエンドを組み合わせるツール）をTypeScriptとReactと組み合わせた実装例として、技術的な学習目的で注目されていると考えられる。<span class="guess">推測</span> 非公式クライアントの実装パターンやhls.jsを使った動画再生の実例としても参考にされている可能性がある。</p>
+<h3>どんな人に役立つか</h3><p>Tauri・Rust・Reactを使ったクロスプラットフォームアプリ開発を学びたいCS学生や、短編ドラマサービスをデスクトップやAndroidから利用したいユーザー向けである。学習・技術交流目的に限定されており、商用利用は禁止されている。</p>
+<h3>技術的なポイント</h3><ul><li>Tauri 2（RustバックエンドとWebフロントエンドを組み合わせるフレームワーク）をシェルとして使用し、軽量なネイティブアプリを実現する</li><li>フロントエンドはReact 19・TypeScript・Vite 7・Tailwind CSS 4で構成されており、モダンなWeb技術スタックを採用している</li><li>ライセンスはPolyForm Noncommercial 1.0.0（v1.1.0以降）で、非商用利用のみを許可する独自ライセンスである</li><li>AndroidビルドにはAndroid SDK・NDK・JDK 17が必要で、pnpmのnpmrcでnode-linker=hoistedを設定する必要がある</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.jsとpnpmをインストールし、リポジトリをクローンする</li><li>pnpm installで依存関係をインストールする</li><li>デスクトップ版はpnpm app:devで開発サーバーを起動するか、pnpm app:buildでインストーラーをビルドする</li><li>Androidビルドの場合はAndroid SDK・NDK・JDK 17を用意し、pnpm android:initの後にpnpm android:devまたはandroid:buildを実行する</li></ol>
+<pre><code>pnpm install
+pnpm app:dev
+pnpm app:build
+pnpm android:init
+pnpm android:dev
+pnpm android:build</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-08.html#d-minireel__hghub">2026-11-08</a>
+<span class="src trendshift">Trendshift 12位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

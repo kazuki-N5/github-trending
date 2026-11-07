@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>voyager-so/vork | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📐</div><div>
+<h1>voyager-so/vork</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-08（Trendshift 14位）</span>
+<a class="gh" href="https://github.com/voyager-so/vork" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="voyager-so__vork" data-repo="voyager-so/vork" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェント向けのヘッドレス3D・VFXエンジン（リサーチプレビュー）</p>
+<h3>何ができるか</h3><ul><li>シーンをコード（JSON・TypeScript・Python）で記述してGPUでレンダリングでき、動画モデルを使わない</li><li>百万羽の鳥の群れシミュレーションや、実写映像へのVFX合成などのサンプルが用意されている</li><li>GPUによる液体シミュレーション（水のシミュレーション）をサポートしている</li><li>光の伝播プログラムでシュワルツシルト・レンズイング（ブラックホールによる光の屈折）を近似できる</li><li>BlenderのEEVEEと比較した速度ベンチマークが公開されており、特定条件下で1.4〜1.7倍高速とされている</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIエージェントがコードでシーンを記述して自律的にレンダリングできるという設計コンセプトが、AIワークフロー自動化の文脈で注目されていると考えられる。<span class="guess">推測</span> RustとSlang（GPUシェーダー言語）でVulkanとMetalの両方に対応するという技術選択も、高性能グラフィックスへの関心を持つ開発者を惹きつけている可能性がある。</p>
+<h3>どんな人に役立つか</h3><p>3DレンダリングやVFXのパイプラインをプログラムで自動化したいAIエージェント開発者、またはRustとGPUプログラミング（Vulkan・Metal）に興味があるCS学生や研究者向けである。Apple SiliconまたはNVIDIA GPU（Vulkan Ray Queriesサポート）が必要である。</p>
+<h3>技術的なポイント</h3><ul><li>RustとSlang（Microsoftが開発したGPUシェーダー言語）で実装されており、VulkanとMetalの両APIで動作する</li><li>シーン記述はJSON・TypeScript・Pythonで記述でき、エージェントがコードからレンダリングを制御しやすい設計になっている</li><li>Blender EEVEEとの比較ベンチマーク（同等品質での比較ではないと注記あり）でfinalスチルが約1.4〜1.7倍高速とされているが、パストレーシングはCyclesより遅い結果が示されている</li><li>フォグ・ボリュームは現バージョンで未対応であり、大規模シーンではメモリ不足になる場合がある</li><li>オプションのBlenderブリッジはGPL（オープンソースライセンスの一つ）でライセンスされており、本体とは別ライセンスである</li></ul>
+<h3>試し方</h3>
+<ol><li>Apple SiliconまたはNVIDIA GPU（Vulkan Ray Queries対応）とffmpegを用意する</li><li>Linux・Windows・MacのそれぞれのREADMEに記載のインストール手順に従いvorkをセットアップする</li><li>vork init my-shotでプロジェクトを初期化する</li><li>scene.jsonを編集してシーンを記述し、vork render scene.json --profile std/draft --out render.pngでレンダリングする</li><li>vork helpでシーンの概念やフィールドのドキュメントを確認する</li></ol>
+<pre><code>vork init my-shot
+vork render scene.json --profile std/draft --out render.png
+vork help</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-08.html#d-voyager-so__vork">2026-11-08</a>
+<span class="src trendshift">Trendshift 14位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
