@@ -1,0 +1,416 @@
+{
+  "date": "2026-11-09",
+  "collectedAt": "2026-11-09T07:07:49+09:00",
+  "entries": [
+    {
+      "repo": "sherlock-project/sherlock",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "meta/astryx",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "NotRexed/Hookshot",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anomalyco/rune",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "Rune: Native UI framework",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "qybaihe/bla",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents like REA. Poison -> Exhaust -> Hallucinate.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Minireel/HGhub",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "YellowFruit third-party client",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anefzaoui/misterdownloadmanager",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "sarpstar/cinecode",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "zortos293/Lichii",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "VERY experimental Nintendo Switch 2 emulator",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "vercel-labs/agent-browser",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ccch1mneyyy/dsh-Go",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
+      "language": "Dart",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Frizti/Fritchii",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "VERY experimental Nintendo Switch 2 emulator",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "vAPI-Network/vapi-network",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "Buyer-controlled client for x402 API payments in USDC on Base.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "google/elephant-goldfish-model",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Open-source skills for designing and reviewing software with AI agents",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "tangerineturtle1/NX2navi",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "IainKay/ram-altman",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Monitors your RAM and reports any \"quite terrible\" unused capacity directly to the CEO of OpenAI.",
+      "language": "Shell",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anthropics/skills",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Public repository for Agent Skills",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "jamesondh/chimera-vocal-synth",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "the ultimate vocal synthesizer - sing, speak, beatbox, and more",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "kepano/kepano-obsidian",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "My personal Obsidian vault template. A bottom-up approach to note-taking and organizing things I am interested in.",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "DIYgod/pinky",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "Let AI agents use your phone, with you in the loop.",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "weekly": {
+    "label": "Star History 週間（Nov 1, 2026 – Nov 7, 2026）",
+    "entries": [
+      {
+        "repo": "morluto/rea",
+        "source": "starhistory",
+        "sourceRank": 1,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+26,289（週）"
+      },
+      {
+        "repo": "pingdotgg/t3code",
+        "source": "starhistory",
+        "sourceRank": 2,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+15,611（週）"
+      },
+      {
+        "repo": "vercel-labs/agent-desktop",
+        "source": "starhistory",
+        "sourceRank": 3,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+14,212（週）"
+      },
+      {
+        "repo": "cloudflare/security-audit-skill",
+        "source": "starhistory",
+        "sourceRank": 4,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+10,640（週）"
+      },
+      {
+        "repo": "mattpocock/skills",
+        "source": "starhistory",
+        "sourceRank": 5,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+9,663（週）"
+      },
+      {
+        "repo": "nvidia/auto-ontology",
+        "source": "starhistory",
+        "sourceRank": 6,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+9,202（週）"
+      },
+      {
+        "repo": "deepseek-ai/deepseek-harness",
+        "source": "starhistory",
+        "sourceRank": 7,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+8,651（週）"
+      },
+      {
+        "repo": "d4vinci/scrapling",
+        "source": "starhistory",
+        "sourceRank": 8,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+8,425（週）"
+      },
+      {
+        "repo": "jiafeimiao-k-cat/discimagestudio",
+        "source": "starhistory",
+        "sourceRank": 9,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+8,262（週）"
+      },
+      {
+        "repo": "milind-soni/openmausbot",
+        "source": "starhistory",
+        "sourceRank": 10,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+7,550（週）"
+      },
+      {
+        "repo": "pbakaus/impeccable",
+        "source": "starhistory",
+        "sourceRank": 11,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+7,338（週）"
+      },
+      {
+        "repo": "debpalash/voicestudio",
+        "source": "starhistory",
+        "sourceRank": 12,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+7,260（週）"
+      },
+      {
+        "repo": "stablyai/orca",
+        "source": "starhistory",
+        "sourceRank": 13,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+7,110（週）"
+      },
+      {
+        "repo": "thedotmack/claude-mem",
+        "source": "starhistory",
+        "sourceRank": 14,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+6,613（週）"
+      },
+      {
+        "repo": "nutlope/hallmark",
+        "source": "starhistory",
+        "sourceRank": 15,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+6,417（週）"
+      },
+      {
+        "repo": "gathin23/cleanyourtv",
+        "source": "starhistory",
+        "sourceRank": 16,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+6,030（週）"
+      },
+      {
+        "repo": "sherlock-project/sherlock",
+        "source": "starhistory",
+        "sourceRank": 17,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+5,933（週）"
+      },
+      {
+        "repo": "sindresorhus/awesome",
+        "source": "starhistory",
+        "sourceRank": 18,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+5,512（週）"
+      },
+      {
+        "repo": "affaan-m/ecc",
+        "source": "starhistory",
+        "sourceRank": 19,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+5,408（週）"
+      },
+      {
+        "repo": "donchitos/claude-code-game-studios",
+        "source": "starhistory",
+        "sourceRank": 20,
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "+5,389（週）"
+      }
+    ]
+  },
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "tanakh/plamo-translate-desktop",
+        "source": "hatena",
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 4,
+        "sourceRank": 1
+      },
+      {
+        "repo": "kait-cronos/sdplane-oss",
+        "source": "hatena",
+        "desc": "open-source version of sdplane.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 2
+      },
+      {
+        "repo": "shikokuchuo/pymizu",
+        "source": "hatena",
+        "desc": "Thread-speed async and parallel Python over shared memory",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 3
+      },
+      {
+        "repo": "omonomo/Cyroit",
+        "source": "hatena",
+        "desc": "全角英数や半角カナが判別しやすい、文字間隔調整機能付き等幅フォント",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 4
+      }
+    ]
+  }
+}
