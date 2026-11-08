@@ -1,0 +1,34 @@
+{
+  "repo": "IainKay/ram-altman",
+  "language": "Shell",
+  "readme": true,
+  "oneLiner": "未使用RAMをOpenAI CEOに毎日メール報告する風刺Bashスクリプト",
+  "features": [
+    "/proc/meminfo のMemAvailableを読み取り、空きRAMの割合を計算する。",
+    "空きRAMが設定した閾値（デフォルト10%）を超えていた場合に、Sam Altman宛てのメールを1日1回だけ送信する。",
+    "--statusや--dry-runオプションで実際に送信せず動作確認ができる。",
+    "サンプルデータをCSVに記録し、awkで平均RAM使用率を算出できる。",
+    "sendmail・msmtp・mailなど複数のメール送信バックエンドに対応している。",
+    "14個のテストスイートを備え、シミュレートされたメモリデータと偽のsendmailで動作検証できる。"
+  ],
+  "why": "推測: Sam AltmanがPCのRAMは「ひどい」と発言したことへの風刺として作られており、ユーモアと実用的なメモリ監視スクリプトの組み合わせがSNSで話題を集めている。コードは小さいが実際のRAM計算ロジックはきちんと実装されている。",
+  "whoFor": "Linuxユーザーでシステムリソース監視に興味のある人、あるいはBashスクリプトとcronによる自動化を学びたい学生に役立つ。風刺的なプロジェクトの実例としても参考になる。",
+  "tech": [
+    "Linuxの/proc/meminfoからMemTotalとMemAvailableを読み取ってRAM使用率を計算している。",
+    "カーネル3.14未満ではMemAvailableが存在しないため、推定値を使うフォールバック処理を実装している。",
+    "cronで5分ごとに実行し、状態ディレクトリを使って1日1回のみ送信するレート制限を実現している。",
+    "受信者・送信者・閾値・状態ディレクトリを環境変数で設定できるようにしている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Linux環境でsendmail、msmtp、またはmailをインストールする。",
+      "スクリプトをダウンロードして実行権限を付与する。",
+      "./ram-altman --dry-run で動作を確認する。",
+      "crontab -e で5分ごとに実行するエントリを追加する（例: */5 * * * * /path/to/ram-altman）。"
+    ],
+    "commands": [
+      "./ram-altman --status",
+      "./ram-altman --dry-run"
+    ]
+  }
+}

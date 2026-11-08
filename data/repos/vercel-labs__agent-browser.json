@@ -1,0 +1,36 @@
+{
+  "repo": "vercel-labs/agent-browser",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "AIエージェントがシェルコマンド1つでブラウザを操作できるRust製CLI",
+  "features": [
+    "`snapshot`コマンドでページ内容を`@e1`形式のrefを持つコンパクトなテキストとして取得できる。",
+    "refを指定してクリック・入力などを実行し、コマンド間でブラウザを開いたままにできる。",
+    "npm・Homebrew・npxで手軽にインストールでき、`agent-browser install`でChrome for Testingも取得できる。",
+    "MCPサーバーとして動作させることでAIエージェントから統合できる。",
+    "バックグラウンドデーモン方式で`--session`ごとにブラウザを制御し、1時間アイドルで自動終了する。",
+    "クラウドブラウザプロバイダー・iOSシミュレーターのMobile Safariにも対応する。"
+  ],
+  "why": "推測: AIエージェントがWebブラウザを操作する需要が高まる中、Vercelが軽量なコマンドラインツールとして公開したことで注目を集めている。ヘッドレスPlaywrightと違いシェル1コマンドで使える手軽さが評価されている。",
+  "whoFor": "ブラウザ自動化をAIエージェントのタスクに組み込みたい開発者に適している。LLMベースのワークフローでWebスクレイピングやフォーム操作を自動化したいエンジニアにも向いている。",
+  "tech": [
+    "Rustで実装されたネイティブCLIで、macOS・Linux・Windows向けバイナリを提供する。",
+    "Chrome DevTools Protocol（CDP）経由でバックグラウンドデーモンがブラウザを制御する。",
+    "refが古くなる（ナビゲーション後など）とクリックが失敗し、再スナップショットを促す安全設計になっている。",
+    "バージョン管理されたスキルシステム（`agent-browser skills get core`）で機能を拡張できる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "`npx agent-browser install`でChrome for Testingをダウンロードする（初回のみ）。",
+      "`npx agent-browser open https://example.com`でブラウザを開く。",
+      "`npx agent-browser snapshot`でページのテキスト表現を取得する。",
+      "表示されたrefを使って`npx agent-browser click @e1`のように操作する。"
+    ],
+    "commands": [
+      "npm install -g agent-browser",
+      "npx agent-browser install",
+      "npx agent-browser open https://example.com",
+      "npx agent-browser snapshot"
+    ]
+  }
+}

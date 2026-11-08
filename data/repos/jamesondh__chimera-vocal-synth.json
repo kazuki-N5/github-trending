@@ -1,0 +1,35 @@
+{
+  "repo": "jamesondh/chimera-vocal-synth",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "ブラウザ上で動く物理モデリングベースの声道シミュレーター",
+  "features": [
+    "肺・声帯・声道・唇・鼻を物理的にシミュレートし、サンプル音源を使わずに声を合成する。",
+    "Playモードでは舌・唇・顎を画面上でドラッグして母音やピッチをリアルタイムに変化させられる。",
+    "Speakモードでは英語テキストまたはIPAをジェスチャーと韻律に変換して発話を合成する。",
+    "Singモードではピアノロールに歌詞を入力し、子音を拍の直前に配置したリアルな歌声を合成できる。",
+    "Beatboxモードではドラムパッドとステップシーケンサーで打楽器を調音ジェスチャーとして表現する。",
+    "男声・女声・子供声を連続的にブレンドでき、ソングバード・アザラシ・ワニ・ゾウなどの動物声も再現できる。"
+  ],
+  "why": "サンプル音源ではなく声道の物理モデルで音声を生成するアプローチは研究・教育上珍しく、WebAssemblyとAudioWorkletを組み合わせてブラウザで低遅延実行を実現している点が技術的に高く評価されている。推測: 音声合成とインタラクティブなUI実装の事例として研究者や音楽制作者から注目を集めている。",
+  "whoFor": "音声合成や音響工学を学ぶ学生、物理モデリングに興味のある研究者、また実験的な楽器を試したい音楽制作者に役立つ。RustとWebAssemblyの組み合わせを学びたいエンジニアにも参考になる。",
+  "tech": [
+    "エンジンはRustで実装されており、wasm32-unknown-unknownターゲットにコンパイルしてWebAssemblyとして動作する。",
+    "ブラウザ上ではWeb Audio APIのAudioWorkletとしてWebAssemblyモジュールを実行し、低遅延なリアルタイム音声処理を実現している。",
+    "英語テキストの音素変換にCMUdictを使用し、辞書にない単語はレター対音素（letter-to-sound）ルールでフォールバックする。",
+    "CLIツール（chimera）で音声レンダリングや診断を行い、Children's Song DatasetやTSP音声データベースと比較検証できる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Rustをインストールし、wasm32-unknown-unknownターゲットを追加する（rustup target add wasm32-unknown-unknown）。",
+      "Bunをインストールする。",
+      "bun run dev で開発サーバーを起動する（127.0.0.1:5317）。",
+      "bun run test でテストスイートを実行する。"
+    ],
+    "commands": [
+      "rustup target add wasm32-unknown-unknown",
+      "bun run dev",
+      "bun run test"
+    ]
+  }
+}

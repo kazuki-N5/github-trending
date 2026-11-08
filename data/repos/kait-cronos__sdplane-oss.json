@@ -1,0 +1,32 @@
+{
+  "repo": "kait-cronos/sdplane-oss",
+  "language": "",
+  "readme": true,
+  "oneLiner": "DPDKベースのソフトウェアデータプレーン（パケット処理基盤）のOSS版",
+  "features": [
+    "DPDKを使ったソフトウェアデータプレーンとして、高速なパケット処理スレッドを提供する。",
+    "telnet経由のインタラクティブシェルでパケット処理スレッドをランタイムに設定・制御できる。",
+    "Ubuntu 24.04・26.04（amd64）向けのDebianパッケージをGitHubリリースで配布している。",
+    "systemdサービスとして動作し、設定ファイルは/etc/sdplane/に配置する。"
+  ],
+  "why": "推測: sdplaneの商用版をベースにしたOSS版として公開されており、ソフトウェアルーター・ファイアウォール・NFV（ネットワーク機能仮想化）基盤を自前で構築したい開発者やネットワーク研究者の関心を集めていると考えられる。",
+  "whoFor": "ネットワーク機能仮想化（NFV）や高速パケット処理を研究・開発するエンジニアに役立つ。DPDKベースのデータプレーンを手軽に試したいネットワーク系の開発者にも適している。",
+  "tech": [
+    "DPDK（Data Plane Development Kit）を利用し、カーネルバイパスによる高速パケット処理を実現する。",
+    "パケット処理スレッドをランタイムに制御するインタラクティブシェルをlocalhost:9882でtelnet提供する。",
+    "詳細なインストール・設定・ユーザーガイドは別リポジトリsdplane-docに分離されている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubリリースページからUbuntu向けDebianパッケージをダウンロードしてインストールする（DPDKランタイムライブラリが自動で入る）。",
+      "/etc/sdplane/sdplane.confをサンプルファイルを元に作成する。",
+      "systemctlでsdplaneサービスを有効化・起動する。",
+      "telnet localhost 9882でインタラクティブシェルに接続して操作する。"
+    ],
+    "commands": [
+      "sudo systemctl enable sdplane",
+      "sudo systemctl start sdplane",
+      "telnet localhost 9882"
+    ]
+  }
+}

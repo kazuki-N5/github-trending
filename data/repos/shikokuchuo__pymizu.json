@@ -1,0 +1,33 @@
+{
+  "repo": "shikokuchuo/pymizu",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "共有メモリIPC上で動作するスレッド並みの速度を持つ非同期・並列Pythonライブラリ",
+  "features": [
+    "タスクのラウンドトリップが1µs未満で、ソケット経由の約100µsと比べて大幅に高速。",
+    "concurrent.futuresのExecutorインターフェースを実装しており、既存コードを最小限の変更で切り替えられる。",
+    "asyncioのawaitに対応し、ポーリングではなくイベント駆動でウェイクアップする。",
+    "NumpyアレイやArrowテーブルなどをゼロコピーで共有メモリ越しにPythonとR間で交換できる。",
+    "ワーカープロセスがクラッシュしてもホストプロセスに影響を与えない（プロセス分離）。",
+    "seed=でワーカー数に依らず再現性のある並列乱数生成が可能。"
+  ],
+  "why": "推測: Pythonの並列処理はGILやプロセス間通信のオーバーヘッドが課題だったが、pymizuは共有メモリとロックフリーIPCで大幅に改善している。RとのゼロコピーデータOSS連携という独自性も注目を集める理由と考えられる。",
+  "whoFor": "高速な並列・非同期処理が必要なデータサイエンティストや機械学習エンジニアに役立つ。RとPythonを併用する研究者にも適している。",
+  "tech": [
+    "内部でC言語製のロックフリー共有メモリIPCライブラリlibmizuを使用している。",
+    "RのmizuパッケージとArrow/polars/pandasを介したゼロコピーデータ共有が可能。",
+    "Pool.mapはネストしたマップがデッドロックしない設計になっている。",
+    "Python 3.10以上・64ビット環境が必要で、cloudpickle等のオプション依存が選択可能。"
+  ],
+  "tryIt": {
+    "steps": [
+      "pip install pymizuでインストールする（Python 3.10以上・64ビット）。",
+      "PoolExecutorをconcurrent.futuresのExecutorの代替として使う。"
+    ],
+    "commands": [
+      "pip install pymizu",
+      "pip install pymizu[numpy]",
+      "pip install pymizu[cloudpickle]"
+    ]
+  }
+}

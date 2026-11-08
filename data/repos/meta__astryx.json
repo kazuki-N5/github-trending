@@ -1,0 +1,33 @@
+{
+  "repo": "meta/astryx",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "Metaが8年かけて育てたオープンソースのReactデザインシステム",
+  "features": [
+    "150以上のアクセシブルなReactコンポーネントを提供する。",
+    "CSSカスタムプロパティによるテーマシステムで、7種類の公式テーマを選べる。",
+    "`swizzle`コマンドでコンポーネントのソースを自プロジェクトにエジェクト（取り出し）できる。",
+    "TailwindやCSS Modulesなど任意のCSSアプローチで`className`から上書き可能。",
+    "CLIでドキュメント閲覧・テンプレート生成・テーマ適用・コードモッドを実行できる。",
+    "人間とAIエージェントが同一のAPIとドキュメントで利用できる設計になっている。"
+  ],
+  "why": "推測: MetaがReact 19とStyleXをベースに社内設計システムをOSS化したことで注目を集めている。AIエージェントが直接利用できるAPIを明示的に設計している点が、他のデザインシステムとの差別化要因として評価されている。",
+  "whoFor": "ReactアプリやAIエージェント向けUIを構築したいフロントエンドエンジニアに適している。ブランドテーマを一元管理したいプロダクトチームにも役立つ。",
+  "tech": [
+    "React 19以降を必須とし、StyleXでスタイルを管理している。",
+    "テーマはCSSカスタムプロパティのオーバーライドで実装されており、コンポーネントのフォークが不要。",
+    "モノレポ構成で`core`・`cli`・`build`・`theme-*`の各パッケージに分割されている。",
+    "ビルドプラグイン不要でプリビルドCSSをインポートするだけで使い始められる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "React 19以降のプロジェクトを用意する。",
+      "`@astryxdesign/core`・テーマパッケージ・`@stylexjs/stylex`をインストールする。",
+      "CLIをdevDependencyとして追加し、`package.json`のscriptsに登録する。"
+    ],
+    "commands": [
+      "npm install @astryxdesign/core @astryxdesign/theme-neutral @stylexjs/stylex",
+      "npm install --save-dev @astryxdesign/cli"
+    ]
+  }
+}
