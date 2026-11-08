@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>meta/astryx | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>meta/astryx</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-09（Trendshift 2位）</span>
+<a class="gh" href="https://github.com/meta/astryx" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="meta__astryx" data-repo="meta/astryx" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Metaが8年かけて育てたオープンソースのReactデザインシステム</p>
+<h3>何ができるか</h3><ul><li>150以上のアクセシブルなReactコンポーネントを提供する。</li><li>CSSカスタムプロパティによるテーマシステムで、7種類の公式テーマを選べる。</li><li>`swizzle`コマンドでコンポーネントのソースを自プロジェクトにエジェクト（取り出し）できる。</li><li>TailwindやCSS Modulesなど任意のCSSアプローチで`className`から上書き可能。</li><li>CLIでドキュメント閲覧・テンプレート生成・テーマ適用・コードモッドを実行できる。</li><li>人間とAIエージェントが同一のAPIとドキュメントで利用できる設計になっている。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> MetaがReact 19とStyleXをベースに社内設計システムをOSS化したことで注目を集めている。AIエージェントが直接利用できるAPIを明示的に設計している点が、他のデザインシステムとの差別化要因として評価されている。</p>
+<h3>どんな人に役立つか</h3><p>ReactアプリやAIエージェント向けUIを構築したいフロントエンドエンジニアに適している。ブランドテーマを一元管理したいプロダクトチームにも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>React 19以降を必須とし、StyleXでスタイルを管理している。</li><li>テーマはCSSカスタムプロパティのオーバーライドで実装されており、コンポーネントのフォークが不要。</li><li>モノレポ構成で`core`・`cli`・`build`・`theme-*`の各パッケージに分割されている。</li><li>ビルドプラグイン不要でプリビルドCSSをインポートするだけで使い始められる。</li></ul>
+<h3>試し方</h3>
+<ol><li>React 19以降のプロジェクトを用意する。</li><li>`@astryxdesign/core`・テーマパッケージ・`@stylexjs/stylex`をインストールする。</li><li>CLIをdevDependencyとして追加し、`package.json`のscriptsに登録する。</li></ol>
+<pre><code>npm install @astryxdesign/core @astryxdesign/theme-neutral @stylexjs/stylex
+npm install --save-dev @astryxdesign/cli</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-09.html#d-meta__astryx">2026-11-09</a>
+<span class="src trendshift">Trendshift 2位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

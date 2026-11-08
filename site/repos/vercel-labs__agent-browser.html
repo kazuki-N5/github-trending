@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vercel-labs/agent-browser | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>vercel-labs/agent-browser</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-09（Trendshift 10位）</span>
+<a class="gh" href="https://github.com/vercel-labs/agent-browser" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="vercel-labs__agent-browser" data-repo="vercel-labs/agent-browser" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントがシェルコマンド1つでブラウザを操作できるRust製CLI</p>
+<h3>何ができるか</h3><ul><li>`snapshot`コマンドでページ内容を`@e1`形式のrefを持つコンパクトなテキストとして取得できる。</li><li>refを指定してクリック・入力などを実行し、コマンド間でブラウザを開いたままにできる。</li><li>npm・Homebrew・npxで手軽にインストールでき、`agent-browser install`でChrome for Testingも取得できる。</li><li>MCPサーバーとして動作させることでAIエージェントから統合できる。</li><li>バックグラウンドデーモン方式で`--session`ごとにブラウザを制御し、1時間アイドルで自動終了する。</li><li>クラウドブラウザプロバイダー・iOSシミュレーターのMobile Safariにも対応する。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIエージェントがWebブラウザを操作する需要が高まる中、Vercelが軽量なコマンドラインツールとして公開したことで注目を集めている。ヘッドレスPlaywrightと違いシェル1コマンドで使える手軽さが評価されている。</p>
+<h3>どんな人に役立つか</h3><p>ブラウザ自動化をAIエージェントのタスクに組み込みたい開発者に適している。LLMベースのワークフローでWebスクレイピングやフォーム操作を自動化したいエンジニアにも向いている。</p>
+<h3>技術的なポイント</h3><ul><li>Rustで実装されたネイティブCLIで、macOS・Linux・Windows向けバイナリを提供する。</li><li>Chrome DevTools Protocol（CDP）経由でバックグラウンドデーモンがブラウザを制御する。</li><li>refが古くなる（ナビゲーション後など）とクリックが失敗し、再スナップショットを促す安全設計になっている。</li><li>バージョン管理されたスキルシステム（`agent-browser skills get core`）で機能を拡張できる。</li></ul>
+<h3>試し方</h3>
+<ol><li>`npx agent-browser install`でChrome for Testingをダウンロードする（初回のみ）。</li><li>`npx agent-browser open https://example.com`でブラウザを開く。</li><li>`npx agent-browser snapshot`でページのテキスト表現を取得する。</li><li>表示されたrefを使って`npx agent-browser click @e1`のように操作する。</li></ol>
+<pre><code>npm install -g agent-browser
+npx agent-browser install
+npx agent-browser open https://example.com
+npx agent-browser snapshot</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-09.html#d-vercel-labs__agent-browser">2026-11-09</a>
+<span class="src trendshift">Trendshift 10位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

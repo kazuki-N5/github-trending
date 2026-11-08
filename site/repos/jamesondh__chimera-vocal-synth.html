@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jamesondh/chimera-vocal-synth | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>jamesondh/chimera-vocal-synth</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-09（Trendshift 18位）</span>
+<a class="gh" href="https://github.com/jamesondh/chimera-vocal-synth" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="jamesondh__chimera-vocal-synth" data-repo="jamesondh/chimera-vocal-synth" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ブラウザ上で動く物理モデリングベースの声道シミュレーター</p>
+<h3>何ができるか</h3><ul><li>肺・声帯・声道・唇・鼻を物理的にシミュレートし、サンプル音源を使わずに声を合成する。</li><li>Playモードでは舌・唇・顎を画面上でドラッグして母音やピッチをリアルタイムに変化させられる。</li><li>Speakモードでは英語テキストまたはIPAをジェスチャーと韻律に変換して発話を合成する。</li><li>Singモードではピアノロールに歌詞を入力し、子音を拍の直前に配置したリアルな歌声を合成できる。</li><li>Beatboxモードではドラムパッドとステップシーケンサーで打楽器を調音ジェスチャーとして表現する。</li><li>男声・女声・子供声を連続的にブレンドでき、ソングバード・アザラシ・ワニ・ゾウなどの動物声も再現できる。</li></ul>
+<h3>なぜ注目されているか</h3><p>サンプル音源ではなく声道の物理モデルで音声を生成するアプローチは研究・教育上珍しく、WebAssemblyとAudioWorkletを組み合わせてブラウザで低遅延実行を実現している点が技術的に高く評価されている。<span class="guess">推測</span> 音声合成とインタラクティブなUI実装の事例として研究者や音楽制作者から注目を集めている。</p>
+<h3>どんな人に役立つか</h3><p>音声合成や音響工学を学ぶ学生、物理モデリングに興味のある研究者、また実験的な楽器を試したい音楽制作者に役立つ。RustとWebAssemblyの組み合わせを学びたいエンジニアにも参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>エンジンはRustで実装されており、wasm32-unknown-unknownターゲットにコンパイルしてWebAssemblyとして動作する。</li><li>ブラウザ上ではWeb Audio APIのAudioWorkletとしてWebAssemblyモジュールを実行し、低遅延なリアルタイム音声処理を実現している。</li><li>英語テキストの音素変換にCMUdictを使用し、辞書にない単語はレター対音素（letter-to-sound）ルールでフォールバックする。</li><li>CLIツール（chimera）で音声レンダリングや診断を行い、Children&#x27;s Song DatasetやTSP音声データベースと比較検証できる。</li></ul>
+<h3>試し方</h3>
+<ol><li>Rustをインストールし、wasm32-unknown-unknownターゲットを追加する（rustup target add wasm32-unknown-unknown）。</li><li>Bunをインストールする。</li><li>bun run dev で開発サーバーを起動する（127.0.0.1:5317）。</li><li>bun run test でテストスイートを実行する。</li></ol>
+<pre><code>rustup target add wasm32-unknown-unknown
+bun run dev
+bun run test</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-09.html#d-jamesondh__chimera-vocal-synth">2026-11-09</a>
+<span class="src trendshift">Trendshift 18位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

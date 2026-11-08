@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tanakh/plamo-translate-desktop | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>tanakh/plamo-translate-desktop</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-09（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/tanakh/plamo-translate-desktop" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="tanakh__plamo-translate-desktop" data-repo="tanakh/plamo-translate-desktop" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">PLaMo 3 Translateをローカルで動かすオフライン対応デスクトップ翻訳アプリ</p>
+<h3>何ができるか</h3><ul><li>53言語に対応したPLaMo 3 Translateモデルをローカル実行し、オフラインで翻訳できる。</li><li>0.8B・2B・8B・31BのGGUFモデルを選択でき、HuggingFaceからダウンロードして利用する。</li><li>日本語出力スタイル（丁寧体・普通体）の切り替えや、参照コンテキスト・用語集の設定が可能。</li><li>Chrome・Edge向けブラウザ拡張機能を提供し、選択テキストやページ全体の翻訳に対応する。</li><li>CPU（AVX2/AVX-512）・GPU（Vulkan/Metal/ROCm）・Intel NPU（実験的）で動作する。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Preferred Networks（PFN）が開発したPLaMo翻訳モデルをオフラインで手軽に使えるデスクトップアプリとして注目されている。プライバシーを守りながらローカル翻訳できる点と、ブラウザ拡張連携の実用性が評価されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>クラウドAPIを使わずにローカルで高品質な翻訳を行いたい開発者や研究者に役立つ。プライバシーを重視しつつ日本語・英語間の翻訳を頻繁に行うユーザーにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>RustとGPUI（Zedエディタが使うGPUベースUIフレームワーク）で実装されている。</li><li>GGUFフォーマットのモデルをllama.cpp互換の推論エンジンで実行する。</li><li>モデルダウンロード時はSHA-256でチェックサム検証を行い、中断後も再開できる。</li><li>英語・日本語UIとライト・ダークテーマを備え、ソース・訳文の同期スクロールに対応する。</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubリリースページからWindows（x86_64）・Linux（x86_64）・macOS（Apple Silicon）向けパッケージをダウンロードする。</li><li>アプリを起動し、使用するモデルサイズを選択してPFNのHugging Faceページからダウンロードする。</li><li>テキストを貼り付けまたは入力して翻訳する。</li></ol>
+<pre><code>cargo build --release</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-09.html#h-tanakh__plamo-translate-desktop">2026-11-09 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>4 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

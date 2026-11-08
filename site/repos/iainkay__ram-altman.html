@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IainKay/ram-altman | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>IainKay/ram-altman</h1>
+<div class="meta"><span>Shell</span>
+<span>初掲載 2026-11-09（Trendshift 16位）</span>
+<a class="gh" href="https://github.com/IainKay/ram-altman" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="iainkay__ram-altman" data-repo="IainKay/ram-altman" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">未使用RAMをOpenAI CEOに毎日メール報告する風刺Bashスクリプト</p>
+<h3>何ができるか</h3><ul><li>/proc/meminfo のMemAvailableを読み取り、空きRAMの割合を計算する。</li><li>空きRAMが設定した閾値（デフォルト10%）を超えていた場合に、Sam Altman宛てのメールを1日1回だけ送信する。</li><li>--statusや--dry-runオプションで実際に送信せず動作確認ができる。</li><li>サンプルデータをCSVに記録し、awkで平均RAM使用率を算出できる。</li><li>sendmail・msmtp・mailなど複数のメール送信バックエンドに対応している。</li><li>14個のテストスイートを備え、シミュレートされたメモリデータと偽のsendmailで動作検証できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Sam AltmanがPCのRAMは「ひどい」と発言したことへの風刺として作られており、ユーモアと実用的なメモリ監視スクリプトの組み合わせがSNSで話題を集めている。コードは小さいが実際のRAM計算ロジックはきちんと実装されている。</p>
+<h3>どんな人に役立つか</h3><p>Linuxユーザーでシステムリソース監視に興味のある人、あるいはBashスクリプトとcronによる自動化を学びたい学生に役立つ。風刺的なプロジェクトの実例としても参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>Linuxの/proc/meminfoからMemTotalとMemAvailableを読み取ってRAM使用率を計算している。</li><li>カーネル3.14未満ではMemAvailableが存在しないため、推定値を使うフォールバック処理を実装している。</li><li>cronで5分ごとに実行し、状態ディレクトリを使って1日1回のみ送信するレート制限を実現している。</li><li>受信者・送信者・閾値・状態ディレクトリを環境変数で設定できるようにしている。</li></ul>
+<h3>試し方</h3>
+<ol><li>Linux環境でsendmail、msmtp、またはmailをインストールする。</li><li>スクリプトをダウンロードして実行権限を付与する。</li><li>./ram-altman --dry-run で動作を確認する。</li><li>crontab -e で5分ごとに実行するエントリを追加する（例: */5 * * * * /path/to/ram-altman）。</li></ol>
+<pre><code>./ram-altman --status
+./ram-altman --dry-run</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-09.html#d-iainkay__ram-altman">2026-11-09</a>
+<span class="src trendshift">Trendshift 16位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kait-cronos/sdplane-oss | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>kait-cronos/sdplane-oss</h1>
+<div class="meta">
+<span>初掲載 2026-11-09（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/kait-cronos/sdplane-oss" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="kait-cronos__sdplane-oss" data-repo="kait-cronos/sdplane-oss" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">DPDKベースのソフトウェアデータプレーン（パケット処理基盤）のOSS版</p>
+<h3>何ができるか</h3><ul><li>DPDKを使ったソフトウェアデータプレーンとして、高速なパケット処理スレッドを提供する。</li><li>telnet経由のインタラクティブシェルでパケット処理スレッドをランタイムに設定・制御できる。</li><li>Ubuntu 24.04・26.04（amd64）向けのDebianパッケージをGitHubリリースで配布している。</li><li>systemdサービスとして動作し、設定ファイルは/etc/sdplane/に配置する。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> sdplaneの商用版をベースにしたOSS版として公開されており、ソフトウェアルーター・ファイアウォール・NFV（ネットワーク機能仮想化）基盤を自前で構築したい開発者やネットワーク研究者の関心を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>ネットワーク機能仮想化（NFV）や高速パケット処理を研究・開発するエンジニアに役立つ。DPDKベースのデータプレーンを手軽に試したいネットワーク系の開発者にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>DPDK（Data Plane Development Kit）を利用し、カーネルバイパスによる高速パケット処理を実現する。</li><li>パケット処理スレッドをランタイムに制御するインタラクティブシェルをlocalhost:9882でtelnet提供する。</li><li>詳細なインストール・設定・ユーザーガイドは別リポジトリsdplane-docに分離されている。</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubリリースページからUbuntu向けDebianパッケージをダウンロードしてインストールする（DPDKランタイムライブラリが自動で入る）。</li><li>/etc/sdplane/sdplane.confをサンプルファイルを元に作成する。</li><li>systemctlでsdplaneサービスを有効化・起動する。</li><li>telnet localhost 9882でインタラクティブシェルに接続して操作する。</li></ol>
+<pre><code>sudo systemctl enable sdplane
+sudo systemctl start sdplane
+telnet localhost 9882</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-09.html#h-kait-cronos__sdplane-oss">2026-11-09 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
