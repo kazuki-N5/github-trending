@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jammaru/sakutto | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>jammaru/sakutto</h1>
+<div class="meta">
+<span>初掲載 2026-11-10（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/jammaru/sakutto" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="jammaru__sakutto" data-repo="jammaru/sakutto" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ローカル LLM（PLaMo）でオンデバイス翻訳するブラウザ拡張機能</p>
+<h3>何ができるか</h3><ul><li>PLaMo 3 Translate モデルをデバイス上で動かしてページ全体を翻訳できる</li><li>Alt+A でページ翻訳・Alt+B で原文との対訳表示・Alt+S で選択テキスト翻訳ができる</li><li>入力フィールドにテキストを打ちながらリアルタイムで翻訳プレビューを確認できる</li><li>Chrome では PLaMo が対応しない言語ペアをブラウザ組み込みの翻訳 API で補完する</li><li>Chrome Web Store からインストールでき、Firefox は手動インストールに対応している</li></ul>
+<h3>なぜ注目されているか</h3><p>オンデバイス翻訳は外部サーバーに文章を送らずプライバシーを保てる点が評価されており、PLaMo 3 Translate という高品質な日本語対応モデルの登場がこの拡張機能への注目を高めていると考えられる。無料・無広告・テレメトリなしというシンプルな設計も支持される理由の一つ。</p>
+<h3>どんな人に役立つか</h3><p>翻訳にプライバシーを重視するユーザーや、外部 API に依存せず無料で多言語翻訳を使いたい人に向いている。日本語を含む53言語に対応している。</p>
+<h3>技術的なポイント</h3><ul><li>wllama（WebAssembly ベースの LLAMA 推論ライブラリ）でブラウザ内モデル実行を実現している</li><li>PLaMo 3 Translate モデルをオンデバイスで動かし、翻訳リクエストを外部サーバーに送らない</li><li>Chrome の built-in Translator API と組み合わせて53言語以外もカバーする設計になっている</li><li>モデルのダウンロードは Hugging Face からのみ行われ、それ以外のネットワークアクセスは発生しない</li><li>MIT ライセンスだが、PLaMo モデルの重みは別ライセンスで商用利用に制限がある</li></ul>
+<h3>試し方</h3>
+<ol><li>Chrome Web Store から「さくっと翻訳」を検索してインストールする</li><li>Firefox は Node.js 24 と pnpm 12 でビルドして手動インストールする</li><li>初回起動時にモデル（約500MB）が Hugging Face からダウンロードされる</li><li>翻訳したいページで Alt+A（Mac は Option+A）を押す</li></ol>
+<pre><code>pnpm install
+pnpm build</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-10.html#h-jammaru__sakutto">2026-11-10 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

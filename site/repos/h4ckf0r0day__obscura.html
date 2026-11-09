@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>h4ckf0r0day/obscura | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>h4ckf0r0day/obscura</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-10（Trendshift 10位）</span>
+<a class="gh" href="https://github.com/h4ckf0r0day/obscura" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="h4ckf0r0day__obscura" data-repo="h4ckf0r0day/obscura" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントとスクレイピング向けの軽量ヘッドレスブラウザエンジン</p>
+<h3>何ができるか</h3><ul><li>V8 エンジンで JavaScript を実行し、Chrome DevTools Protocol (CDP) サーバーとして動作する</li><li>Puppeteer や Playwright がそのまま接続できるため既存の自動化スクリプトを流用できる</li><li>スクリーンショット撮影・ライブページのスクリーンキャスト・PDF 出力が Chromium なしで動作する</li><li>ステルスモードでフィンガープリントをランダム化し、数千のトラッカードメインをブロックする</li><li>MCP サーバーとして起動でき、AI エージェントから直接操作できる</li></ul>
+<h3>なぜ注目されているか</h3><p>ヘッドレスブラウザは従来 Chromium ベースが主流だったが、メモリ消費が大きく起動も遅いという課題があった。Obscura は Rust で書かれており、メモリ使用量・バイナリサイズ・起動速度の面で大幅な改善を主張している。AIエージェントからブラウザを操作するユースケースが増えたことも注目理由の一つと考えられる。</p>
+<h3>どんな人に役立つか</h3><p>大量のウェブスクレイピングを高速・低コストで行いたい開発者や、AIエージェントにブラウザ操作を組み込みたいエンジニアに向いている。</p>
+<h3>技術的なポイント</h3><ul><li>Rust で実装され、V8 JavaScript エンジンを組み込んでいる</li><li>Chrome DevTools Protocol を実装し、既存の Puppeteer/Playwright と互換性がある</li><li>CDP サーバーまたは MCP サーバーとして起動できる二重モードを持つ</li><li>オプションのステルスビルドでフィンガープリントランダム化とトラッカーブロックを追加できる</li></ul>
+<h3>試し方</h3>
+<ol><li>Linux・macOS・Windows 向けのプリビルドバイナリをリリースページからダウンロードする</li><li>または Docker イメージを使って即座に起動する</li><li>CLI でページ取得・リンク抽出・並列スクレイプを実行する</li><li>Playwright/Puppeteer から CDP エンドポイントに接続して利用する</li></ol>
+<pre><code>docker pull obscura/obscura</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-10.html#d-h4ckf0r0day__obscura">2026-11-10</a>
+<span class="src trendshift">Trendshift 10位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

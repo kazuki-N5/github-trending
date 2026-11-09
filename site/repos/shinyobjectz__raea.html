@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shinyobjectz/raea | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎮</div><div>
+<h1>shinyobjectz/raea</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-10（Trendshift 14位）</span>
+<a class="gh" href="https://github.com/shinyobjectz/raea" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="shinyobjectz__raea" data-repo="shinyobjectz/raea" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">React/TypeScript で書いた動画・3D・ゲームを自分の GPU でレンダリングするエンジン</p>
+<h3>何ができるか</h3><ul><li>React コンポーネントで映像・モーショングラフィックス・3Dシーンを記述してレンダリングできる</li><li>raea render コマンドで動画ファイルを出力し、raea play でリアルタイムプレビューができる</li><li>ゲームとして入力・物理演算・サウンドを追加してスタンドアロンアプリとしてエクスポートできる</li><li>ローカルモデルを使ったサウンドミキサーでフォーリーや楽器音を生成できる</li><li>エージェントが検証・レンダリング・品質チェックを人手を介さずに実行できるワークフローを持つ</li></ul>
+<h3>なぜ注目されているか</h3><p>AIが生成したコードで動画やゲームを作るワークフローが注目されており、raea はそのパイプラインの実行エンジンとして位置づけられている。Rust + Bevy ベースで自分の GPU を使うため外部サービス不要でプライバシーも守られる点が評価されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>AIエージェントに動画・ゲームの制作を任せたい開発者や、React の知識を活かして映像・3D コンテンツを作りたいエンジニアに向いている。現時点ではカナリーリリースのため実験的な用途向け。</p>
+<h3>技術的なポイント</h3><ul><li>Rust と Bevy 0.20 ゲームエンジンをベースに構築されている</li><li>React と TypeScript でコンポジション（シーン定義）を記述し、GPU でレンダリングする仕組みを持つ</li><li>raea-skills リポジトリと Claude Code プラグインでエージェント連携が可能</li><li>RAEA_OFFLINE=1 環境変数でテレメトリや通信を完全にブロックできるプライバシー設計</li><li>FSL-1.1-ALv2 ライセンスで、リリースから2年後に Apache-2.0 に移行する条件付き</li></ul>
+<h3>試し方</h3>
+<ol><li>macOS (Apple Silicon) または Linux (x86_64) でインストールスクリプトを実行する</li><li>Windows の場合は PowerShell スクリプトを実行する</li><li>raea init でプロジェクトを初期化する</li><li>React コンポーネントでシーンを記述し raea render で動画を出力する</li></ol>
+<pre><code>curl -fsSL https://raea.dev/install.sh | sh
+raea init my-project
+raea render
+raea play</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-10.html#d-shinyobjectz__raea">2026-11-10</a>
+<span class="src trendshift">Trendshift 14位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

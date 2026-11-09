@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-10",
+  "collectedAt": "2026-11-10T07:08:36+09:00",
+  "entries": [
+    {
+      "repo": "sherlock-project/sherlock",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "meta/astryx",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Minireel/HGhub",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "YellowFruit third-party client",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anefzaoui/misterdownloadmanager",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "NotRexed/Hookshot",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "janestreet/agent_skills",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Agent skills",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "jhaizhou-ops/S2Arm",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "Run your own Switch games natively on iPhone, iPad and Mac: game code rewritten to ARM64, graphics direct to Metal, one app for the whole library. Bring your own games and keys. 把你自己的 Switch 游戏原生带到 iPhone / iPad / Mac。",
+      "language": "C#",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anthropics/skills",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "Public repository for Agent Skills",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "amosblomqvist/learnharness",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "Agent harness for learning difficult things.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "h4ckf0r0day/obscura",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "The headless browser for AI agents and web scraping",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "tangerineturtle1/NX2navi",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "huamidev/GestaltX",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups, and support for 7 languages.",
+      "language": "Swift",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "google/elephant-goldfish-model",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "Open-source skills for designing and reviewing software with AI agents",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "shinyobjectz/raea",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Render Anything Engine: tell your AI what to make. Videos, motion graphics, 3D and games as React and TypeScript, rendered on your own GPU. Rust + Bevy, macOS, Linux and Windows.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "vercel-labs/agent-browser",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "JuneYaooo/rea-video",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "逆向一切视频：实拍口播、桌拍、AI 视频、3D、代码动效、混剪，逐镜拆出画面、花字、剪辑和声音是怎么做的，并给出复刻方案。Reverse-engineer any video, shot by shot.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "DIYgod/pinky",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Let AI agents use your phone, with you in the loop.",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "IainKay/ram-altman",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "Monitors your RAM and reports any \"quite terrible\" unused capacity directly to the CEO of OpenAI.",
+      "language": "Shell",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "kingcharleslzy-ai/dsh-purge",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "dsh-purge Community · DeepSeek Harness 社区维护版：宿主兼容、状态诊断、提示词管理、更新与本机备份回滚。基于小杨 / YuJunZhiXue 的 dsh-purge。",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "milind-soni/OpenMausBot",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "jammaru/sakutto",
+        "source": "hatena",
+        "desc": "A browser extension for easy on-device translation with a local LLM (PLaMo). Private, free, no server needed.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 1
+      }
+    ]
+  }
+}
