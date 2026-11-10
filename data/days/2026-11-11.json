@@ -1,0 +1,251 @@
+{
+  "date": "2026-11-11",
+  "collectedAt": "2026-11-11T07:15:02+09:00",
+  "entries": [
+    {
+      "repo": "huamidev/GestaltX",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups, and support for 7 languages.",
+      "language": "Swift",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "meta/astryx",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Minireel/HGhub",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "YellowFruit third-party client",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "janestreet/agent_skills",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "Agent skills",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "expo/exact",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anefzaoui/misterdownloadmanager",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "NotRexed/Hookshot",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anthropics/skills",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "Public repository for Agent Skills",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "FluentRead/FluentRead",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "An open-source browser extension for bilingual translation. 一款开源的浏览器双语翻译插件。",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "experientiallabs/experiential",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Experiential is the open source, zero markup gateway for BYOK, self-hosted and 1000+ marketplace models. It learns from your traffic to cut costs, recommend better models, and train a specialized model you own.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "RunanywhereAI/trnrt",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "The open LLM inference engine for AWS Trainium: NKI megakernels, 1M-token context, OpenAI-compatible API. By RunAnywhere.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "sherlock-project/sherlock",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "PotterRemember37/Capri-AI-Desktop",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "🎯 minecraft-hacked-client-mod-and-cheats 🎯",
+      "language": "HTML",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Usagi-org/ai-goofish-monitor",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "homeassistant-ai/ha-mcp",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "jhaizhou-ops/S2Arm",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Run your own Switch games natively on iPhone, iPad and Mac: game code rewritten to ARM64, graphics direct to Metal, one app for the whole library. Bring your own games and keys. 把你自己的 Switch 游戏原生带到 iPhone / iPad / Mac。",
+      "language": "C#",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Lee-xeo/Claude-Cage",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "Cage：Mac 上的独立 Claude 编码工作区，集成 Linux 终端、浏览器与项目编辑器。",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Zleap-AI/SAG-Wiki",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "A lightweight knowledge base for people and agents",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "we-promise/sure",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "The personal finance app for everyone (by everyone)",
+      "language": "Ruby",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "paisu-supai/sonoba",
+        "source": "hatena",
+        "desc": "画面の文字をその場で訳文に置き換える Windows 11 用の常駐アプリ。OCR も翻訳も PC の中で動きます（PP-OCRv6、PLaMo 3 Translate）。",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 24,
+        "sourceRank": 1
+      },
+      {
+        "repo": "highants/PlaMo_translate_ex",
+        "source": "hatena",
+        "desc": "「PLaMo 3 Translate」をブラウザ内蔵WebGPU（Wllama）またはLM Studio連携で実行できるローカル動作型翻訳Chrome拡張機能です。外部クラウド不要で安全・高速に翻訳します。",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 16,
+        "sourceRank": 2
+      },
+      {
+        "repo": "ShayanAbbas1/dbdelve",
+        "source": "hatena",
+        "desc": "Fast and lightweight DB Client made in Rust and GPUI.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 3
+      },
+      {
+        "repo": "minorun365/unslop-ai-app",
+        "source": "hatena",
+        "desc": "AI臭くないAIエージェントアプリを作るスキル",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 4
+      },
+      {
+        "repo": "geekfujiwara/powerpoint-agent-skills",
+        "source": "hatena",
+        "desc": "Geek's frequently used skills for a more productive Copilot in PowerPoint agent mode. 日本語 / English.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 5
+      },
+      {
+        "repo": "crmne/zapfast",
+        "source": "hatena",
+        "desc": "ZapFast: a fast, native WhatsApp client in Rust and egui",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 6
+      }
+    ]
+  }
+}
