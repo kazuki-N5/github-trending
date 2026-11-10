@@ -1,0 +1,31 @@
+{
+  "repo": "PotterRemember37/Capri-AI-Desktop",
+  "language": "HTML",
+  "readme": true,
+  "oneLiner": "サイバーパンク風デザインのWindowsデスクトップAIエージェント。Claude Code・Codexなど複数のAIを統合して音声・操作・ゲームを支援する",
+  "features": [
+    "テキストまたは音声でチャットでき、「Hey Capri」と呼びかけて起動し80言語で返答できる",
+    "アプリ起動・音楽再生・タブを閉じるなどのデスクトップ操作を自然言語の指示で自動実行できる",
+    "Discord通話に参加して友人へのメッセージを代わりに伝えたり、友人が遊んでいるゲームを起動したりできる",
+    "コードの執筆・リファクタリング・デバッグをClaude Code・Codex等好みのAIエンジンを介して実行できる",
+    ".capri-mod（設定変更）・.capri-skin（外観変更）・.capri-code（コード拡張）の3種類のModシステムで機能と見た目を拡張できる"
+  ],
+  "why": "推測: 単一のチャットUIではなく、PCのデスクトップに常駐して音声操作・ゲーム連携・通話参加まで行う体験型AIエージェントとして差別化されている。サイバーパンクというビジュアルアイデンティティがゲーマー・開発者層の共感を得ており、Claude Code等をラップするデスクトップGUIとしても注目を集めている。",
+  "whoFor": "普段WindowsでゲームやPCを使いながらAIアシスタントを常用したいユーザー。Claude CodeやCodexをターミナルではなくGUIで手軽に使いたい開発者。AIエージェントをデスクトップのあらゆる操作に統合したい人。",
+  "tech": [
+    "Electronベースのデスクトップアプリで、Windows 10以降に対応。macOS・Linuxは開発ロードマップに含まれる",
+    "Claude Code・Codex・Antigravity等の複数AIバックエンドをプラグイン的に切り替え可能な設計になっている",
+    ".capri-code形式のコードModはカスタム権限申請の仕組みを持ち、マルウェアチェック済みのMod配布ディレクトリが公開されている",
+    "音声通話モードではDiscord・Zoom・Teams等のボイスチャネルを自動クリックで参加し、AIの音声を仮想マイク経由で友人に届ける機能を持つ"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubのReleasesページからCapri-Portable.zipまたはCapri-Setup.exeをダウンロードする",
+      "Portable版は解凍してそのまま実行し、インストーラー版はウィザードに従ってインストールする",
+      "SmartScreen警告が出た場合は「詳細情報」→「実行」をクリックする",
+      "起動後、MainframeでAIエンジン（Claude Code等）とAPIキーを設定する",
+      "テキストを入力するか音声で「Hey Capri」と呼びかけて使い始める"
+    ],
+    "commands": []
+  }
+}

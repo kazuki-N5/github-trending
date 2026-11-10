@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RunanywhereAI/trnrt | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>RunanywhereAI/trnrt</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-11（Trendshift 12位）</span>
+<a class="gh" href="https://github.com/RunanywhereAI/trnrt" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="runanywhereai__trnrt" data-repo="RunanywhereAI/trnrt" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AWS Trainium2専用のオープンLLM推論エンジン（NKIメガカーネル・100万トークンコンテキスト・OpenAI互換API）</p>
+<h3>何ができるか</h3><ul><li>AWS Trainium2（trn2.48xlarge）上でOpenAI互換APIとしてLLMを高速サービングできる</li><li>NKI（Neuron Kernel Interface）メガカーネルにより、デコードを1レイヤー半あたり1カーネルに融合し高効率化する</li><li>スパースアテンションと線形アテンションを組み合わせて固定サイズのステートで100万トークンのコンテキスト長を実現する</li><li>FP8 KVページのラディックスツリーとホストメモリ階層によるプレフィックスキャッシュで、キャッシュ済みプロンプトの先頭トークン応答を高速化する</li><li>グラフコンパイルはCPUホストでオフライン実行し、サービングボックスはコンパイル済みグラフをロードするだけで起動できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AWS Trainiumは安価なAI専用ハードウェアだが公式以外の推論ツールが少なく、オープンな実装として希少価値が高い。GLM-5.3-Flash（320B MoEモデル）をスポット価格で100万トークンあたり$0.040という低コストで実行できる点が注目されている。<span class="guess">推測</span> NKIカーネルによる独自最適化の知見を公開したことで、Trainium向けLLM推論研究のベースラインとして関心を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>AWS Trainiumを使ってLLMを低コストで提供したいMLエンジニア・インフラエンジニア。OpenAI APIを代替する自前の推論サーバーを構築したい企業。大規模MoEモデル（複数の小モデルを組み合わせた大規模モデル）の推論最適化に興味がある研究者。</p>
+<h3>技術的なポイント</h3><ul><li>NKI（Neuron Kernel Interface）でTensorFlow・PyTorchを経由せずKDAアテンション・DSAレイヤー・MoE FFNを融合カーネルとして直接プログラムし、デコードステップを高速化する</li><li>テンソル並列度32のNeuronCoreにまたがる2エンジン構成とセッションアフィンルーター（同一会話を同じエンジンに転送する仕組み）でプレフィックスキャッシュの効果を最大化する</li><li>グラフコンパイルはNeuronCoreを持たないx86_64ホストで完結でき、サービングボックスはコンパイル済みグラフをロードするだけで追加コンパイルなしに起動する</li><li>OpenAI Pythonクライアントで直接使えるOpenAI互換APIとして動作し、ストリーミング・ツールコール・reasoning outputも対応している</li></ul>
+<h3>試し方</h3>
+<ol><li>任意のx86_64ホストでDockerイメージをビルドする</li><li>コンパイルキャッシュを生成する（NeuronCore不要だが数時間かかる）</li><li>生成したキャッシュとモデルをtrn2.48xlargeにコピーする</li><li>trn2.48xlarge上でDockerコンテナとしてサービングを起動する</li><li>OpenAI Pythonクライアントでlocalhost:8000に接続して動作確認する</li></ol>
+<pre><code>git clone https://github.com/RunanywhereAI/trnrt.git &amp;&amp; cd trnrt
+docker build -f docker/Dockerfile --build-arg TRNRT_VERSION=$(python3 -c &#x27;import trnrt; print(trnrt.__version__)&#x27;) --build-arg TRNRT_REVISION=$(git rev-parse HEAD) -t trnrt .
+trnrt compile shapes zai-org/GLM-5.3-Flash --revision $REV --out $OUT
+trnrt compile decisions --model zai-org/GLM-5.3-Flash --revision $REV --out $OUT
+trnrt compile capture --out $OUT -- --model $OUT/shapes
+trnrt compile compile --out $OUT --work-root $OUT/work
+trnrt compile strip --out $OUT
+docker run --rm --privileged --network host --ipc=host -v /data/trnrt/cache:/cache -v /data/trnrt/nki:/var/tmp/nki-intermediate-cache -v /models/GLM-5.3-Flash:/model -e NEURON_LIBTORCH_CACHE_ROOT=/cache trnrt serve --model /model --port 8000</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-11.html#d-runanywhereai__trnrt">2026-11-11</a>
+<span class="src trendshift">Trendshift 12位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

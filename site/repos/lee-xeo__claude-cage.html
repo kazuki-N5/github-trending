@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lee-xeo/Claude-Cage | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>Lee-xeo/Claude-Cage</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-11-11（Trendshift 18位）</span>
+<a class="gh" href="https://github.com/Lee-xeo/Claude-Cage" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="lee-xeo__claude-cage" data-repo="Lee-xeo/Claude-Cage" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Claudeを使うための隔離ワークスペースをMac/Windows/Linuxで提供するデスクトップアプリ</p>
+<h3>何ができるか</h3><ul><li>ホストPCとは独立したネットワーク設定とフィンガープリント（端末識別情報）管理で、Claude利用環境を隔離できる</li><li>ターミナル・ブラウザ・コードエディタ（code-server）を1つのウィンドウにまとめたワークベンチを提供する</li><li>macOS・Windows・Linuxの仮想マシンを作成し、各プラットフォームのネイティブツールをそのまま使える</li><li>Clash/Mihomoを使ったプロキシ管理でノードの選択や出口IPの確認ができる</li><li>Tailscale（プライベートVPN）を通じてVPSやLAN内のデバイスに接続できる</li><li>スマートフォン（Android/iPhone）から電脑上のClaude Codeセッションを引き継いで操作できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Claudeは地域制限やアカウント停止リスクがあり、VPSや指紋ブラウザを個別に管理する手間を解消するために作られたと考えられる。仮想マシンとプロキシを1つのアプリに統合することで、セットアップの複雑さを大幅に減らしている点が評価されている。</p>
+<h3>どんな人に役立つか</h3><p>地域制限のある環境でClaudeを安定して使いたい開発者や、Claude Codeを複数のプロジェクトで安全に切り替えて使いたい人に向いている。VPSやリモート環境にClaudeの作業環境を移したいエンジニアにも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>Goで実装されたデスクトップアプリで、agent-vm（Lima）を基盤に仮想マシンを管理している</li><li>MihomoをプロキシコアとしてVM内のすべてのトラフィックを制御し、ホストのネットワークとの直接接続を防ぐ</li><li>noVNCでブラウザ経由のリモートデスクトップ表示を実現している</li><li>gvisor-tap-vsockで仮想マシンと外部ネットワーク間の通信を管理している</li></ul>
+<h3>試し方</h3>
+<ol><li>プロジェクト公式ページ（https://lee-xeo.github.io/Claude-Cage/#download）からプラットフォームに合ったインストーラーをダウンロードする</li><li>macOSでは.dmgを開いてCageをApplicationsにドラッグし、WindowsではREADMEのWindows手順に従う</li><li>アプリを起動してClash/Mihomo形式のプロキシ設定をインポートし、ノードを選んで「プロキシを適用」をクリックする</li><li>クライアントOSを選択して環境を起動し、ターミナルで `claude` と入力してClaudeを始める</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-11.html#d-lee-xeo__claude-cage">2026-11-11</a>
+<span class="src trendshift">Trendshift 18位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

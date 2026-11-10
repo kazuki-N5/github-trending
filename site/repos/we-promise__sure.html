@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>we-promise/sure | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>we-promise/sure</h1>
+<div class="meta"><span>Ruby</span>
+<span>初掲載 2026-11-11（Trendshift 20位）</span>
+<a class="gh" href="https://github.com/we-promise/sure" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="we-promise__sure" data-repo="we-promise/sure" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">廃止された個人資産管理アプリMaybe Financeのコミュニティ継続フォーク</p>
+<h3>何ができるか</h3><ul><li>キャッシュフロー・純資産・支出を可視化するダッシュボードで家計の全体像を把握できる</li><li>AIアシスタントに資産に関する質問をテキストで問い合わせできる</li><li>Dockerを使って自分のサーバーにセルフホスティングでき、データを外部に送らない運用が可能</li><li>ブラウザ・macOSデスクトップアプリ・モバイルアプリ・APIクライアント・LLMエージェントからアクセスできる</li><li>RenderやPikaPodsなどのプラットフォームへのワンクリックデプロイが用意されている</li></ul>
+<h3>なぜ注目されているか</h3><p>2021〜2022年に約100万ドルをかけて開発されたMaybe Financeがビジネス継続不能となり、コードがオープンソース化された。その後コミュニティが「Sure」という名前でフォークを継続しており、既に完成度の高い機能セットを無料で自己ホストできる点が注目されている。<span class="guess">推測</span> 商用サービスの廃止後にオープンソースとして再出発するという形が、個人ファイナンスアプリの需要とマッチして支持を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>自分の資産・支出を一元管理したい個人や家庭に向いている。クラウドサービスへのデータ預け入れを避けたい人がDockerで自己ホストする用途に特に適している。</p>
+<h3>技術的なポイント</h3><ul><li>Ruby on RailsとPostgreSQL・RedisをバックエンドとしたWebアプリケーション</li><li>AIアシスタント機能はOpenAIのAPIを通じて提供されており、pgvector（PostgreSQLのベクトル検索拡張）にも対応している</li><li>AGPLv3ライセンスで公開されており、フォークや改変が可能（ただしMaybeの商標使用は不可）</li></ul>
+<h3>試し方</h3>
+<ol><li>自己ホストする場合はDocs（docs/hosting/docker.md）のDockerガイドに従ってセットアップする</li><li>開発環境を試す場合はRuby（.ruby-versionファイル参照）・PostgreSQL・Redisをインストールする</li><li>リポジトリをクローンして `bin/setup` を実行し、 `bin/dev` でサーバーを起動する</li><li>オプションで `rake demo_data:default` を実行するとデモデータが読み込まれる</li><li>http://localhost:3000 にアクセスし、メール user@example.com / パスワード Password1! でログインする</li></ol>
+<pre><code>cd sure
+cp .env.local.example .env.local
+bin/setup
+bin/dev
+rake demo_data:default</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-11.html#d-we-promise__sure">2026-11-11</a>
+<span class="src trendshift">Trendshift 20位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

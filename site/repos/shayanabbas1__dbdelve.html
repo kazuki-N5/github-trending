@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShayanAbbas1/dbdelve | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">⌨️</div><div>
+<h1>ShayanAbbas1/dbdelve</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-11（はてなブックマーク 3位）</span>
+<a class="gh" href="https://github.com/ShayanAbbas1/dbdelve" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="shayanabbas1__dbdelve" data-repo="ShayanAbbas1/dbdelve" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">RustとGPUIで作られた高速・軽量なネイティブDBクライアント</p>
+<h3>何ができるか</h3><ul><li>PostgreSQL・MySQL・SQLite・MongoDB・Redisなど12以上のデータベースエンジンに対応している。</li><li>ODBCドライバ経由でIBM Db2・Oracle・Amazon Redshiftなど多数のDBにも接続できる。</li><li>セルを編集するとUPDATE文が自動生成されて実行前に確認できる。</li><li>CSVやExcel・ParquetファイルをドロップするだけでDuckDBでクエリできる。</li><li>クエリプランを見やすく表示し、行数の推定が大きく外れているノードを強調表示する。</li><li>コネクション・保存クエリ・履歴をまとめて検索できるコマンドパレットがある。</li></ul>
+<h3>なぜ注目されているか</h3><p>ElectronやJVMを使わないネイティブアプリのため、DBeaver比で起動5倍速・メモリ使用量4.5分の1という圧倒的な軽さが注目を集めている。有料機能が一切なくオープンソースで提供されている点も評価されている。</p>
+<h3>どんな人に役立つか</h3><p>重いDBeaver・TablePlusに不満を持つバックエンドエンジニアやDBA（データベース管理者）に最適。複数種類のDBを日常的に触る開発者にも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>UIフレームワークにGPUI（Zedエディタと同じレンダリングエンジン）を使っており、Electronを一切使用していない。</li><li>SSHトンネルは再実装せず、ユーザーのローカルsshコマンドをそのまま呼び出すことでSSH設定やハードウェアキーを引き継いでいる。</li><li>パスワードを毎回コマンドで生成する「Passwordコマンド」機能によりAWS RDSのIAM認証など短期トークンに対応している。</li><li>診断ログをローカルにのみ保存し、テレメトリ（使用状況の自動送信）が一切ない設計になっている。</li></ul>
+<h3>試し方</h3>
+<ol><li>macOSはHomebrewでインストールし、quarantineフラグを解除する。</li><li>Linux（Arch系）はAURからインストールするか、GitHubリリースからtarballかAppImageをダウンロードする。</li><li>WindowsはGitHubリリースからインストーラーを実行するかzipを展開してdbdelve.exeを起動する。</li><li>起動後、接続URLを貼り付けるかエンジンを選んで接続情報を入力する。</li></ol>
+<pre><code>brew install --cask ShayanAbbas1/dbdelve/dbdelve
+xattr -dr com.apple.quarantine /Applications/DBDelve.app
+yay -S dbdelve-bin</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-11.html#h-shayanabbas1__dbdelve">2026-11-11 はてブ</a>
+<span class="src hatena">はてなブックマーク 3位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

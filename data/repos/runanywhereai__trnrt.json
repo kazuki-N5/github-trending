@@ -1,0 +1,40 @@
+{
+  "repo": "RunanywhereAI/trnrt",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "AWS Trainium2専用のオープンLLM推論エンジン（NKIメガカーネル・100万トークンコンテキスト・OpenAI互換API）",
+  "features": [
+    "AWS Trainium2（trn2.48xlarge）上でOpenAI互換APIとしてLLMを高速サービングできる",
+    "NKI（Neuron Kernel Interface）メガカーネルにより、デコードを1レイヤー半あたり1カーネルに融合し高効率化する",
+    "スパースアテンションと線形アテンションを組み合わせて固定サイズのステートで100万トークンのコンテキスト長を実現する",
+    "FP8 KVページのラディックスツリーとホストメモリ階層によるプレフィックスキャッシュで、キャッシュ済みプロンプトの先頭トークン応答を高速化する",
+    "グラフコンパイルはCPUホストでオフライン実行し、サービングボックスはコンパイル済みグラフをロードするだけで起動できる"
+  ],
+  "why": "推測: AWS Trainiumは安価なAI専用ハードウェアだが公式以外の推論ツールが少なく、オープンな実装として希少価値が高い。GLM-5.3-Flash（320B MoEモデル）をスポット価格で100万トークンあたり$0.040という低コストで実行できる点が注目されている。推測: NKIカーネルによる独自最適化の知見を公開したことで、Trainium向けLLM推論研究のベースラインとして関心を集めていると考えられる。",
+  "whoFor": "AWS Trainiumを使ってLLMを低コストで提供したいMLエンジニア・インフラエンジニア。OpenAI APIを代替する自前の推論サーバーを構築したい企業。大規模MoEモデル（複数の小モデルを組み合わせた大規模モデル）の推論最適化に興味がある研究者。",
+  "tech": [
+    "NKI（Neuron Kernel Interface）でTensorFlow・PyTorchを経由せずKDAアテンション・DSAレイヤー・MoE FFNを融合カーネルとして直接プログラムし、デコードステップを高速化する",
+    "テンソル並列度32のNeuronCoreにまたがる2エンジン構成とセッションアフィンルーター（同一会話を同じエンジンに転送する仕組み）でプレフィックスキャッシュの効果を最大化する",
+    "グラフコンパイルはNeuronCoreを持たないx86_64ホストで完結でき、サービングボックスはコンパイル済みグラフをロードするだけで追加コンパイルなしに起動する",
+    "OpenAI Pythonクライアントで直接使えるOpenAI互換APIとして動作し、ストリーミング・ツールコール・reasoning outputも対応している"
+  ],
+  "tryIt": {
+    "steps": [
+      "任意のx86_64ホストでDockerイメージをビルドする",
+      "コンパイルキャッシュを生成する（NeuronCore不要だが数時間かかる）",
+      "生成したキャッシュとモデルをtrn2.48xlargeにコピーする",
+      "trn2.48xlarge上でDockerコンテナとしてサービングを起動する",
+      "OpenAI Pythonクライアントでlocalhost:8000に接続して動作確認する"
+    ],
+    "commands": [
+      "git clone https://github.com/RunanywhereAI/trnrt.git && cd trnrt",
+      "docker build -f docker/Dockerfile --build-arg TRNRT_VERSION=$(python3 -c 'import trnrt; print(trnrt.__version__)') --build-arg TRNRT_REVISION=$(git rev-parse HEAD) -t trnrt .",
+      "trnrt compile shapes zai-org/GLM-5.3-Flash --revision $REV --out $OUT",
+      "trnrt compile decisions --model zai-org/GLM-5.3-Flash --revision $REV --out $OUT",
+      "trnrt compile capture --out $OUT -- --model $OUT/shapes",
+      "trnrt compile compile --out $OUT --work-root $OUT/work",
+      "trnrt compile strip --out $OUT",
+      "docker run --rm --privileged --network host --ipc=host -v /data/trnrt/cache:/cache -v /data/trnrt/nki:/var/tmp/nki-intermediate-cache -v /models/GLM-5.3-Flash:/model -e NEURON_LIBTORCH_CACHE_ROOT=/cache trnrt serve --model /model --port 8000"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>highants/PlaMo_translate_ex | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>highants/PlaMo_translate_ex</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-11-11（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/highants/PlaMo_translate_ex" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="highants__plamo_translate_ex" data-repo="highants/PlaMo_translate_ex" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">PLaMo 3 Translateをブラウザ内だけでローカル翻訳できるChrome拡張</p>
+<h3>何ができるか</h3><ul><li>WebGPU/WebAssemblyを使ったブラウザ内完結翻訳（モードB）とLM Studio連携翻訳（モードA）の2種類の推論エンジンを搭載している。</li><li>53言語の相互翻訳と、やさしい日本語への変換に対応している。</li><li>選択テキストのインライン翻訳ポップアップ（リサイズ・ドラッグ移動対応）を利用できる。</li><li>Webページ全体をスマートに本文抽出しながら対訳を並べて表示できる。</li><li>日本語の文体（敬体・常体・やさしい日本語）や専門用語集（Glossary）を指定して翻訳できる。</li><li>翻訳結果が1文字ずつリアルタイムにストリーミング表示され、終了マーカーを検知すると即座に推論を止めるEarly-Stop機能を持つ。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Preferred Networks公開の高品質翻訳LLM「PLaMo 3 Translate」をクラウドAPI不要でブラウザ単体から使える点が珍しく注目を集めていると思われる。WebGPUを使った完全オフライン翻訳は機密文書の安全な処理にも使えることが評価されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>社内ドキュメントや機密情報をクラウドに送らず翻訳したい社会人・研究者に役立つ。高品質なAI翻訳を無料で手軽に試したいエンジニアや学生にも向いている。</p>
+<h3>技術的なポイント</h3><ul><li>モードBではWebAssembly製LLMランタイム「Wllama」とWebGPUを組み合わせてブラウザ内で推論している。</li><li>モデルファイルはOrigin Private File System（OPFS）という高速ブラウザストレージにキャッシュし、2回目以降はダウンロード不要にしている。</li><li>Chrome拡張のOffscreen DocumentとService Workerを組み合わせ、複数リクエストを排他キュー（Mutex）で制御している。</li><li>モードAではLM Studio（localhost:1234）とServer-Sent Events（SSE）でストリーミング通信している。</li><li>PFML3と呼ばれるPLaMo 3独自のプロンプトフォーマットを拡張機能内で自動構築してモデルに渡している。</li></ul>
+<h3>試し方</h3>
+<ol><li>chrome://extensions/ を開き、右上の「デベロッパーモード」をONにする。</li><li>「パッケージ化されていない拡張機能を読み込む」を押し、クローンしたフォルダーを選択する。</li><li>拡張機能アイコンをクリックし「モードB: ブラウザ内蔵 (Wllama)」タブで「モデルをロード」を押す。</li><li>ダウンロード完了後、翻訳したいテキストをサイドバーに貼り付けてCtrl+Enterで翻訳する。</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-11.html#h-highants__plamo_translate_ex">2026-11-11 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>16 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>paisu-supai/sonoba | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>paisu-supai/sonoba</h1>
+<div class="meta">
+<span>初掲載 2026-11-11（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/paisu-supai/sonoba" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="paisu-supai__sonoba" data-repo="paisu-supai/sonoba" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">画面上の文字をOCRで読み取り訳文に置き換えて表示するWindows 11向け常駐アプリ</p>
+<h3>何ができるか</h3><ul><li>画面の任意の範囲を選ぶだけでOCR（画像から文字を認識する技術）と翻訳を実行し、訳文を元の文字の位置に重ねて表示する</li><li>リアルタイムモードでは画面の変化を検知して自動的に訳文を更新し続ける</li><li>翻訳先として日本語・やさしい日本語・英語・韓国語・中国語を選べる</li><li>処理はすべてPC内で完結するため、テキストが外部サーバーに送られない</li><li>PLaMo 3 Translate（0.8B〜31B）とHy-MT2から翻訳モデルを選択でき、GPU・CPU混在実行にも対応する</li><li>DiscordやOBSの画面共有・録画に訳文を映す機能を持つ</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Google翻訳の画像翻訳に近い体験をオフラインで実現し、ゲームや動画視聴など外国語コンテンツのリアルタイム翻訳に使える点が注目されていると考えられる。PC内完結でプライバシーを守りながら高品質な翻訳が使える点と、PLaMo 3 Translateという日本語特化モデルを採用している点も話題になっている。</p>
+<h3>どんな人に役立つか</h3><p>外国語のゲーム・動画・ソフトウェアを日本語で楽しみたいWindows 11ユーザーに向いている。機密データを含む業務画面を翻訳したいが外部送信を避けたい場合にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>OCRにはPP-OCRv6 smallをrtenn（Rustのニューラルネット実行ライブラリ）でCPU実行しており、OCRモデルはexeに埋め込まれている</li><li>翻訳エンジンとしてllama-serverを起動しHTTPでリクエストを送る方式を採用している</li><li>翻訳テキストを約240文字ずつ4並列でllama-serverに送り、1行生成されるごとに画面に表示する</li><li>重ね表示はWindows APIの透過色付き最前面ウィンドウで実現しており、クリック・スクロール操作が訳文を通り抜けて下のウィンドウに届く</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubのリリースページからsonoba.zipをダウンロードして好きなフォルダに展開する</li><li>sonoba.exeを起動すると初回ガイドが開くので、表示言語と翻訳モデルを選ぶ</li><li>PLaMo 3 Translateを選択した場合はPLaMoコミュニティライセンスへの同意が必要なので画面の指示に従う</li><li>Ctrl+Alt+Tを押して翻訳したい範囲をドラッグで選択すると翻訳が実行される</li><li>Ctrl+Alt+Rでリアルタイム翻訳モードを開始し、Ctrl+Alt+Xで停止できる</li></ol>
+<pre><code>cargo build --release
+powershell -ExecutionPolicy Bypass -File scripts/package.ps1</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-11.html#h-paisu-supai__sonoba">2026-11-11 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>24 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

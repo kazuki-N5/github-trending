@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZhuLinsen/daily_stock_analysis | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>ZhuLinsen/daily_stock_analysis</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-11（Trendshift 11位）</span>
+<a class="gh" href="https://github.com/ZhuLinsen/daily_stock_analysis" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="zhulinsen__daily_stock_analysis" data-repo="ZhuLinsen/daily_stock_analysis" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">LLMが毎日株式を自動分析して決策ダッシュボードをチャットツールに通知するPythonシステム</p>
+<h3>何ができるか</h3><ul><li>A股・港股・米株・日本株・韓国株・台湾株・ETFを対象にLLMが毎日自動で分析レポートを生成する</li><li>核心結論・評価スコア・トレンド・売買ポイント・リスク警報・催化因素を含む「決策ダッシュボード」を出力できる</li><li>企業WeChat・飛書・Telegram・Discord・Slack・メールなど複数の通知チャネルにレポートを自動送信できる</li><li>GitHub Actions・Docker・ローカル定時タスク・FastAPIサービスなど複数のデプロイ方式でゼロコスト運用できる</li><li>AIエージェントによる「策略問股」機能で均線・波浪・トレンド・ホットトピック等15種類の内蔵戦略で多段追問できる</li><li>WebワークスペースのGUIから手動分析・履歴レポート閲覧・バックテスト・ポジション管理ができる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 個人投資家がLLMを使って株式分析を自動化したいというニーズが高まっており、GitHub Actionsを使ったゼロコスト・サーバー不要の運用方式が導入ハードルを大幅に下げている点が支持されている。多市場対応と複数通知チャネルへの対応が実用性の高さを示しており、A株を含むアジア市場のカバレッジも差別化になっている。</p>
+<h3>どんな人に役立つか</h3><p>株式投資をしているが分析に時間をかけられない個人投資家。LLMを活用したfintechシステム（金融技術システム）を作りたいPythonエンジニア。GitHub Actionsを使って無料でデータ分析パイプラインを試したい人。</p>
+<h3>技術的なポイント</h3><ul><li>AkShare・Tushare・Pytdx・Baostock・YFinance・Longbridgeなど複数の株価データソースをフォールバック付きで統合し、無料ソースのみでもゼロコスト動作する</li><li>OpenAI互換・Gemini・Claude・DeepSeek・通義千問・Ollamaなど多数のLLMをAPIキー一つで切り替え可能な設計になっている</li><li>SerpAPI・Tavily・Brave・博查など複数のWeb検索APIを統合して最新ニュース・公告を分析に組み込む</li><li>GitHub ActionsのスケジュールトリガーでCIとして定時実行することにより、外部サーバーを持たなくても自動化できる</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubでリポジトリをForkする</li><li>Settings &gt; Secrets and variables &gt; Actionsで、STOCK_LIST（例: 600519,AAPL）とLLMのAPIキーを設定する</li><li>通知チャネル（Telegram等）のWebhook URLをSecretとして設定する</li><li>ActionsタブでワークフローをEnableする</li><li>手動でワークフローをトリガーしてテスト実行する</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-11.html#d-zhulinsen__daily_stock_analysis">2026-11-11</a>
+<span class="src trendshift">Trendshift 11位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

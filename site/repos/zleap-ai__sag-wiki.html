@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zleap-AI/SAG-Wiki | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔎</div><div>
+<h1>Zleap-AI/SAG-Wiki</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-11（Trendshift 19位）</span>
+<a class="gh" href="https://github.com/Zleap-AI/SAG-Wiki" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="zleap-ai__sag-wiki" data-repo="Zleap-AI/SAG-Wiki" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">LLM不要のインデックスでローカルファイルを高速検索できる軽量知識ベースアプリ</p>
+<h3>何ができるか</h3><ul><li>ローカルフォルダを追加するだけでMarkdown・PDF・Office・EPUBファイルをインデックス化できる</li><li>LLMも埋め込みモデルも使わずに100万文字を約200msでインデックスし、高速な全文検索ができる</li><li>独自開発のSAG2検索技術でRAGやGraphRAGより高い再現率（Recall@10）を達成している</li><li>引用元の段落を明示したQ&amp;A（質問応答）が利用可能で、どのファイルのどの部分が根拠かを確認できる</li><li>CLIとスキル（エージェント向け設定ファイル）を通じてClaude Code・Codex・OpenCodeから同じ知識ベースを参照できる</li><li>デスクトップなしでもnpmでCLIをインストールして使えるため、AIエージェントのみでの利用も可能</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> LLMを使った知識ベース（KarpathyのLLM Wikiパターンなど）はコストや速度の問題があり、ベクトルRAGは精度が不十分なケースがある。SAG2という独自アルゴリズムでこれらを超えるパフォーマンスを示したことと、14MBという軽さが開発者コミュニティの注目を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>大量のドキュメント・ノート・コードを手元に持ち、AIエージェントや自分自身がそれを参照しながら作業したい開発者や研究者に向いている。セキュリティ上の理由でクラウドにデータを送りたくない人にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>RustとTauri（デスクトップアプリフレームワーク）・Svelte（フロントエンド）で実装されている</li><li>SAG2はJev（エビデンススコアリング）とクエリ時の語彙展開を組み合わせたオリジナルの検索手法で、埋め込みベクトルを使わない</li><li>インデックスデータはSQLiteにローカル保存され、外部データベースのインストールが不要</li><li>RustのCLI（sagコマンド）がローカルサービスとして動き、デスクトップアプリもCLIも同じコアを共有する</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubのリリースページからmacOSのDMGまたはWindowsのインストーラーをダウンロードしてインストールする</li><li>アプリを開いてサイドバーの「Folders」で「+」をクリックし、検索したいフォルダを追加する</li><li>インデックスが完了したら「Search」でパッセージを検索するか、「Chat」で質問する</li><li>エージェント向けにはターミナルで `npm install -g @zleap-ai/sag` でCLIをインストールし、 `sag add` でフォルダを追加する</li></ol>
+<pre><code>npm install -g @zleap-ai/sag
+sag --version
+sag add
+sag check
+sag &quot;Where is permission checked?&quot; . -m 5
+git clone https://github.com/Zleap-AI/SAG-Wiki.git
+cd SAG-Wiki
+npm ci
+npm run tauri dev</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-11.html#d-zleap-ai__sag-wiki">2026-11-11</a>
+<span class="src trendshift">Trendshift 19位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
