@@ -1,0 +1,32 @@
+{
+  "repo": "geekfujiwara/powerpoint-agent-skills",
+  "language": "",
+  "readme": true,
+  "oneLiner": "PowerPointのCopilotエージェントモード向けスキル集（日英対応）",
+  "features": [
+    "スライドの主張に合わせて図解の型（比較・フロー・階層・収束など）を最適化するスキル（optimize-slide-diagram）がある。",
+    "明暗2種のテーマ・表紙・区切りページのデザインを統一するスキル（presentation-theme）がある。",
+    "カードに収まるフラットイラストを挿入するスキル（slide-illustrations）がある。",
+    "重複生成された図形を検出・整理するスキル（remove-duplicate-shapes）がある。",
+    "フェードインと下からの順次表示アニメーションを付けるスキル（fade-in-rise-animation）がある。",
+    "ロングテール図・階層図・工程図など目的別の図解作成スキルが複数含まれている。"
+  ],
+  "why": "Microsoft 365のCopilot（エージェントモード）という普及しているツールをより便利に使うためのスキルをまとめた実用的なコレクションとして注目されている。日英両対応で公開されており、日本語でも英語でもすぐに使える点が評価されている。",
+  "whoFor": "Microsoft 365のPowerPoint Copilotを日常的に使う社会人・ビジネスパーソンに最適。スライド作成の繰り返し作業を自動化したいプレゼン作成者に役立つ。",
+  "tech": [
+    "スキルファイルはYAMLヘッダー付きのMarkdownファイル（SKILL.md）として作成し、OneDriveの特定フォルダーに配置することでCopilotが認識する。",
+    "Agent Skills標準仕様（agentskills.io）に準拠したフォーマットを採用している。",
+    "GitHubのActionsによってスキルファイルの形式とZIP構造を自動検証している。",
+    "スキルは独立したフォルダー単位で管理されており、必要なものだけを選んで導入できる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubのReleasesページから全スキル入りのZIPをダウンロードしてPCで展開する。",
+      "PowerPointのCopilot → + → Choose plugins → Manage plugins → Open skills folderを開く。",
+      "展開したスキルフォルダーをOneDriveのスキルフォルダー直下にコピーする。",
+      "OneDriveの同期を待ち、PowerPointのスキル管理画面でRefreshを押して使いたいスキルを有効にする。",
+      "Copilotの入力欄の「+」→「プラグインの選択」から使いたいスキルを選ぶか、@スキル名で指定する。"
+    ],
+    "commands": []
+  }
+}

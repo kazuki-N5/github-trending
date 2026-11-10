@@ -1,0 +1,41 @@
+{
+  "repo": "Zleap-AI/SAG-Wiki",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "LLM不要のインデックスでローカルファイルを高速検索できる軽量知識ベースアプリ",
+  "features": [
+    "ローカルフォルダを追加するだけでMarkdown・PDF・Office・EPUBファイルをインデックス化できる",
+    "LLMも埋め込みモデルも使わずに100万文字を約200msでインデックスし、高速な全文検索ができる",
+    "独自開発のSAG2検索技術でRAGやGraphRAGより高い再現率（Recall@10）を達成している",
+    "引用元の段落を明示したQ&A（質問応答）が利用可能で、どのファイルのどの部分が根拠かを確認できる",
+    "CLIとスキル（エージェント向け設定ファイル）を通じてClaude Code・Codex・OpenCodeから同じ知識ベースを参照できる",
+    "デスクトップなしでもnpmでCLIをインストールして使えるため、AIエージェントのみでの利用も可能"
+  ],
+  "why": "推測: LLMを使った知識ベース（KarpathyのLLM Wikiパターンなど）はコストや速度の問題があり、ベクトルRAGは精度が不十分なケースがある。SAG2という独自アルゴリズムでこれらを超えるパフォーマンスを示したことと、14MBという軽さが開発者コミュニティの注目を集めていると考えられる。",
+  "whoFor": "大量のドキュメント・ノート・コードを手元に持ち、AIエージェントや自分自身がそれを参照しながら作業したい開発者や研究者に向いている。セキュリティ上の理由でクラウドにデータを送りたくない人にも適している。",
+  "tech": [
+    "RustとTauri（デスクトップアプリフレームワーク）・Svelte（フロントエンド）で実装されている",
+    "SAG2はJev（エビデンススコアリング）とクエリ時の語彙展開を組み合わせたオリジナルの検索手法で、埋め込みベクトルを使わない",
+    "インデックスデータはSQLiteにローカル保存され、外部データベースのインストールが不要",
+    "RustのCLI（sagコマンド）がローカルサービスとして動き、デスクトップアプリもCLIも同じコアを共有する"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubのリリースページからmacOSのDMGまたはWindowsのインストーラーをダウンロードしてインストールする",
+      "アプリを開いてサイドバーの「Folders」で「+」をクリックし、検索したいフォルダを追加する",
+      "インデックスが完了したら「Search」でパッセージを検索するか、「Chat」で質問する",
+      "エージェント向けにはターミナルで `npm install -g @zleap-ai/sag` でCLIをインストールし、 `sag add` でフォルダを追加する"
+    ],
+    "commands": [
+      "npm install -g @zleap-ai/sag",
+      "sag --version",
+      "sag add",
+      "sag check",
+      "sag \"Where is permission checked?\" . -m 5",
+      "git clone https://github.com/Zleap-AI/SAG-Wiki.git",
+      "cd SAG-Wiki",
+      "npm ci",
+      "npm run tauri dev"
+    ]
+  }
+}

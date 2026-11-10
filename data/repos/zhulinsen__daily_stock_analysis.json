@@ -1,0 +1,32 @@
+{
+  "repo": "ZhuLinsen/daily_stock_analysis",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "LLMが毎日株式を自動分析して決策ダッシュボードをチャットツールに通知するPythonシステム",
+  "features": [
+    "A股・港股・米株・日本株・韓国株・台湾株・ETFを対象にLLMが毎日自動で分析レポートを生成する",
+    "核心結論・評価スコア・トレンド・売買ポイント・リスク警報・催化因素を含む「決策ダッシュボード」を出力できる",
+    "企業WeChat・飛書・Telegram・Discord・Slack・メールなど複数の通知チャネルにレポートを自動送信できる",
+    "GitHub Actions・Docker・ローカル定時タスク・FastAPIサービスなど複数のデプロイ方式でゼロコスト運用できる",
+    "AIエージェントによる「策略問股」機能で均線・波浪・トレンド・ホットトピック等15種類の内蔵戦略で多段追問できる",
+    "WebワークスペースのGUIから手動分析・履歴レポート閲覧・バックテスト・ポジション管理ができる"
+  ],
+  "why": "推測: 個人投資家がLLMを使って株式分析を自動化したいというニーズが高まっており、GitHub Actionsを使ったゼロコスト・サーバー不要の運用方式が導入ハードルを大幅に下げている点が支持されている。多市場対応と複数通知チャネルへの対応が実用性の高さを示しており、A株を含むアジア市場のカバレッジも差別化になっている。",
+  "whoFor": "株式投資をしているが分析に時間をかけられない個人投資家。LLMを活用したfintechシステム（金融技術システム）を作りたいPythonエンジニア。GitHub Actionsを使って無料でデータ分析パイプラインを試したい人。",
+  "tech": [
+    "AkShare・Tushare・Pytdx・Baostock・YFinance・Longbridgeなど複数の株価データソースをフォールバック付きで統合し、無料ソースのみでもゼロコスト動作する",
+    "OpenAI互換・Gemini・Claude・DeepSeek・通義千問・Ollamaなど多数のLLMをAPIキー一つで切り替え可能な設計になっている",
+    "SerpAPI・Tavily・Brave・博查など複数のWeb検索APIを統合して最新ニュース・公告を分析に組み込む",
+    "GitHub ActionsのスケジュールトリガーでCIとして定時実行することにより、外部サーバーを持たなくても自動化できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubでリポジトリをForkする",
+      "Settings > Secrets and variables > Actionsで、STOCK_LIST（例: 600519,AAPL）とLLMのAPIキーを設定する",
+      "通知チャネル（Telegram等）のWebhook URLをSecretとして設定する",
+      "ActionsタブでワークフローをEnableする",
+      "手動でワークフローをトリガーしてテスト実行する"
+    ],
+    "commands": []
+  }
+}

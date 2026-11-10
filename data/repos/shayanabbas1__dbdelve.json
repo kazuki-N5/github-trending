@@ -1,0 +1,35 @@
+{
+  "repo": "ShayanAbbas1/dbdelve",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "RustとGPUIで作られた高速・軽量なネイティブDBクライアント",
+  "features": [
+    "PostgreSQL・MySQL・SQLite・MongoDB・Redisなど12以上のデータベースエンジンに対応している。",
+    "ODBCドライバ経由でIBM Db2・Oracle・Amazon Redshiftなど多数のDBにも接続できる。",
+    "セルを編集するとUPDATE文が自動生成されて実行前に確認できる。",
+    "CSVやExcel・ParquetファイルをドロップするだけでDuckDBでクエリできる。",
+    "クエリプランを見やすく表示し、行数の推定が大きく外れているノードを強調表示する。",
+    "コネクション・保存クエリ・履歴をまとめて検索できるコマンドパレットがある。"
+  ],
+  "why": "ElectronやJVMを使わないネイティブアプリのため、DBeaver比で起動5倍速・メモリ使用量4.5分の1という圧倒的な軽さが注目を集めている。有料機能が一切なくオープンソースで提供されている点も評価されている。",
+  "whoFor": "重いDBeaver・TablePlusに不満を持つバックエンドエンジニアやDBA（データベース管理者）に最適。複数種類のDBを日常的に触る開発者にも役立つ。",
+  "tech": [
+    "UIフレームワークにGPUI（Zedエディタと同じレンダリングエンジン）を使っており、Electronを一切使用していない。",
+    "SSHトンネルは再実装せず、ユーザーのローカルsshコマンドをそのまま呼び出すことでSSH設定やハードウェアキーを引き継いでいる。",
+    "パスワードを毎回コマンドで生成する「Passwordコマンド」機能によりAWS RDSのIAM認証など短期トークンに対応している。",
+    "診断ログをローカルにのみ保存し、テレメトリ（使用状況の自動送信）が一切ない設計になっている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "macOSはHomebrewでインストールし、quarantineフラグを解除する。",
+      "Linux（Arch系）はAURからインストールするか、GitHubリリースからtarballかAppImageをダウンロードする。",
+      "WindowsはGitHubリリースからインストーラーを実行するかzipを展開してdbdelve.exeを起動する。",
+      "起動後、接続URLを貼り付けるかエンジンを選んで接続情報を入力する。"
+    ],
+    "commands": [
+      "brew install --cask ShayanAbbas1/dbdelve/dbdelve",
+      "xattr -dr com.apple.quarantine /Applications/DBDelve.app",
+      "yay -S dbdelve-bin"
+    ]
+  }
+}

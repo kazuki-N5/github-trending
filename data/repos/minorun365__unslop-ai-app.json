@@ -1,0 +1,31 @@
+{
+  "repo": "minorun365/unslop-ai-app",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "AIエージェントに読ませるとAI臭くない画面を作れるスキル集",
+  "features": [
+    "AIが作りがちな「余計な部品・絵文字・宣伝風の見出し」を避けるためのデザイン規則（app-ui-design）が含まれている。",
+    "エージェントのチャット画面固有の作法（考え中表示・ログイン画面・人前で操作する画面）をまとめたスキル（agent-app-ui）がある。",
+    "スマホ表示をiOS Simulatorで確かめる手順とiOS Safari固有の罠をまとめたスキル（mobile-web-check）がある。",
+    "依存ライブラリ不要の検査スクリプト（check-ui.mjs）でソースコードからAIらしい書き方を自動検出できる。",
+    "修正前後の比較サンプル（examples/）が付属しており、スキルの効果を確認できる。"
+  ],
+  "why": "AIエージェントが生成するWebアプリのUI品質は実際の開発現場で課題になっており、その解決策をスキル形式にまとめた珍しいアプローチが注目されている。日本語の組版や画面文言まで踏み込んでいる点が日本語圏の開発者に特に役立つ。",
+  "whoFor": "Claude CodeなどのAIエージェントを使ってWebアプリを開発するエンジニア・デザイナーに役立つ。日本語向けのUI品質を高めたいAIアプリ開発者に特に向いている。",
+  "tech": [
+    "Claude Codeのスキル機能（~/.claude/skills/に配置するMarkdownファイル）を使ってAIエージェントへ指示を渡す仕組みになっている。",
+    "check-ui.mjsはNode.js標準機能だけで動作し、外部パッケージへの依存がない。",
+    "スキル本文はAIエージェントだけでなく人間が読んでも理解できる日本語で書かれている。",
+    "Damir SokolovskyのUnslop（CC BY 4.0）を参考に日本語画面向けに書き直した内容を含んでいる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "ClaudeデスクトップアプリのCodeタブまたはClaude Codeを開く。",
+      "「https://github.com/minorun365/unslop-ai-app のスキルを入れて」と依頼する。",
+      "新しいセッションを開始して、「このダッシュボード、なんかAIっぽいので直して」などと普通の言葉で頼む。"
+    ],
+    "commands": [
+      "node ~/.claude/skill-repos/unslop-ai-app/tools/check-ui.mjs src/"
+    ]
+  }
+}

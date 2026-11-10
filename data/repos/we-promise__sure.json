@@ -1,0 +1,36 @@
+{
+  "repo": "we-promise/sure",
+  "language": "Ruby",
+  "readme": true,
+  "oneLiner": "廃止された個人資産管理アプリMaybe Financeのコミュニティ継続フォーク",
+  "features": [
+    "キャッシュフロー・純資産・支出を可視化するダッシュボードで家計の全体像を把握できる",
+    "AIアシスタントに資産に関する質問をテキストで問い合わせできる",
+    "Dockerを使って自分のサーバーにセルフホスティングでき、データを外部に送らない運用が可能",
+    "ブラウザ・macOSデスクトップアプリ・モバイルアプリ・APIクライアント・LLMエージェントからアクセスできる",
+    "RenderやPikaPodsなどのプラットフォームへのワンクリックデプロイが用意されている"
+  ],
+  "why": "2021〜2022年に約100万ドルをかけて開発されたMaybe Financeがビジネス継続不能となり、コードがオープンソース化された。その後コミュニティが「Sure」という名前でフォークを継続しており、既に完成度の高い機能セットを無料で自己ホストできる点が注目されている。推測: 商用サービスの廃止後にオープンソースとして再出発するという形が、個人ファイナンスアプリの需要とマッチして支持を集めていると考えられる。",
+  "whoFor": "自分の資産・支出を一元管理したい個人や家庭に向いている。クラウドサービスへのデータ預け入れを避けたい人がDockerで自己ホストする用途に特に適している。",
+  "tech": [
+    "Ruby on RailsとPostgreSQL・RedisをバックエンドとしたWebアプリケーション",
+    "AIアシスタント機能はOpenAIのAPIを通じて提供されており、pgvector（PostgreSQLのベクトル検索拡張）にも対応している",
+    "AGPLv3ライセンスで公開されており、フォークや改変が可能（ただしMaybeの商標使用は不可）"
+  ],
+  "tryIt": {
+    "steps": [
+      "自己ホストする場合はDocs（docs/hosting/docker.md）のDockerガイドに従ってセットアップする",
+      "開発環境を試す場合はRuby（.ruby-versionファイル参照）・PostgreSQL・Redisをインストールする",
+      "リポジトリをクローンして `bin/setup` を実行し、 `bin/dev` でサーバーを起動する",
+      "オプションで `rake demo_data:default` を実行するとデモデータが読み込まれる",
+      "http://localhost:3000 にアクセスし、メール user@example.com / パスワード Password1! でログインする"
+    ],
+    "commands": [
+      "cd sure",
+      "cp .env.local.example .env.local",
+      "bin/setup",
+      "bin/dev",
+      "rake demo_data:default"
+    ]
+  }
+}

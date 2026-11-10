@@ -1,0 +1,36 @@
+{
+  "repo": "homeassistant-ai/ha-mcp",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Claude・ChatGPT などのAIでHome Assistantを設定・自動化するMCPサーバー",
+  "features": [
+    "オートメーション・スクリプト・シーン・ダッシュボードをAIとの会話だけで作成・編集できる",
+    "デバイスの一括制御やリアルタイム状態取得、サービス呼び出しが可能",
+    "オートメーションの実行トレースやログ・履歴を取得してAIがデバッグを支援する",
+    "バックアップ作成・復元や、HACS（拡張機能マネージャー）の管理ができる",
+    "ツールごとの有効化・無効化や読み取り専用モードなどのセキュリティ機能を備える",
+    "HACS経由またはHome Assistant標準マーケットプレイスからインストールしてHA内部で動かせる"
+  ],
+  "why": "Home Assistantには公式のMCPサーバーもあるが、音声スタイルの操作のみに対応している。ha-mcpはオートメーション作成やダッシュボード構築など設定・構築作業まで87種類のツールでカバーし、AIを本格的なスマートホーム管理者として使えるようにした点が注目されている。推測: Home AssistantユーザーがAIアシスタントとの対話でシステムをゼロから組めるという体験が大きな反響を呼んでいると考えられる。",
+  "whoFor": "Home Assistantを使っているスマートホーム愛好家や開発者で、設定作業をAIに任せたい人に役立つ。Claude DesktopやChatGPTなどのMCPクライアントを持っていれば、テキストの指示だけで複雑な自動化を構築できる。",
+  "tech": [
+    "MCP（Model Context Protocol）という標準規格でAIクライアントとHome Assistantを接続する",
+    "FastMCPライブラリ（Python）を使ってMCPサーバーを実装している",
+    "Home Assistant OS・Supervised・Container・Coreすべての構成で動作するHACS統合コンポーネントとして動かせる",
+    "WebhookやNabu Casa（有料リモートアクセスサービス）を通じてリモートからのAIアクセスにも対応している"
+  ],
+  "tryIt": {
+    "steps": [
+      "Home Assistantにログインし、HACS（拡張機能ストア）またはマーケットプレイスで「HA-MCP」を検索してインストールする",
+      "Home Assistantを再起動し、設定 → デバイスとサービス → 統合を追加 で「HA-MCP Server」を追加する",
+      "長期アクセストークンを作成して貼り付け、接続URLを取得する",
+      "Claude DesktopなどのMCPクライアントにそのURLを設定する",
+      "Claudeに「Home Assistantが見えますか？」と聞いて動作を確認する"
+    ],
+    "commands": [
+      "curl -LsSf https://raw.githubusercontent.com/homeassistant-ai/ha-mcp/master/scripts/install-macos.sh | sh",
+      "curl -LsSf https://raw.githubusercontent.com/homeassistant-ai/ha-mcp/master/scripts/install-linux.sh | sh",
+      "irm https://raw.githubusercontent.com/homeassistant-ai/ha-mcp/master/scripts/install-windows.ps1 | iex"
+    ]
+  }
+}

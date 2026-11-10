@@ -1,0 +1,35 @@
+{
+  "repo": "expo/exact",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "ContractとTypeScript/Rustで書いたアプリをWeb・macOS・iOS・Linuxでネイティブに動かすクロスプラットフォームランタイム",
+  "features": [
+    "Contractという小さな宣言型言語でUIを記述し、TypeScriptまたはRustでデータロジックを書くことができる",
+    "WebではリアルなDOMを駆動し、macOS/iOS/LinuxではAppKit・UIKit・GPUペインターなど各プラットフォームのネイティブUIで描画する（WebViewもJavaScriptブリッジも使わない）",
+    "AIエージェントが10種類の標準操作（tree・screenshot・tap・type等）でアプリをビルド・実行・確認・テストまで完結できる",
+    "app.test.contractファイルをWeb・macOS・iOS・Linuxすべてで共通して実行できるクロスプラットフォームテストが書ける",
+    "contract buildコマンドはJSON形式で安定したIDと範囲付き診断を出力するため、AIエージェントがエラーを機械的に処理しやすい"
+  ],
+  "why": "推測: AIエージェントによるコード生成が普及する中、エージェントがビルド・実行・テストまで無人で完結できるフレームワークへの関心が高まっている。WebViewを使わずに真のネイティブUIをひとつのコードベースで実現する設計がReact Nativeとは異なる新しいアプローチとして注目されている。推測: pre-1.0でも活発に開発されており、AIエージェント時代のアプリ開発モデルを実験するプロジェクトとして話題を呼んでいる。",
+  "whoFor": "クロスプラットフォームアプリをひとつのコードベースで開発したいエンジニア。AIエージェントを使った自動化開発（ビルドからテストまで）に興味がある開発者。React Nativeの代替としてネイティブUIの品質を保ちながらマルチプラットフォーム対応したい人。",
+  "tech": [
+    "Contractコンパイラがインターフェース記述をコンパクトなプラン（中間表現）に変換し、Webでは約20KBのESモジュールランタイムがそのプランを解釈してリアルDOMを駆動する",
+    "macOS・iOS・LinuxではRust製のランナーがプランを実行し、RustレイアウトカーネルがCSSルールに基づいて各ボックスを計算する",
+    "AIエージェント向けに10種類（tree・screenshot・tap・type・state・layout・logs・clock・prefer・perf）の操作APIを全プラットフォームで共通提供しており、テストスクリプトはこれらの操作の記録として機能する",
+    "clockコマンドでアニメーションを任意の時刻に進められるため、タイミング依存のフレーキーなテストが発生しない設計になっている"
+  ],
+  "tryIt": {
+    "steps": [
+      "Mac上でXcode・Rust・Bun・Chromeをインストールする",
+      "リポジトリをクローンする",
+      "bun scripts/exact.mjs setupを一度実行してセットアップを完了する",
+      "exact newで新しいアプリを作成する",
+      "scripts/agent.mjsでWeb・macOS・iOSシミュレーターにまたがってテストを実行する"
+    ],
+    "commands": [
+      "git clone https://github.com/expo/exact",
+      "bun scripts/exact.mjs setup",
+      "exact new"
+    ]
+  }
+}
