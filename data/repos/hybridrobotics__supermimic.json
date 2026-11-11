@@ -1,0 +1,32 @@
+{
+  "repo": "HybridRobotics/supermimic",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "一つの微分可能ワールドモデルで学習する人型ロボット全身モーショントラッカー",
+  "features": [
+    "人型ロボットの全身モーション追跡をワールドモデルベースで学習できる",
+    "一般化座標（GenCoord）と最大座標（MaxCoord）の2種類のタスクモードに対応している",
+    "MuJoCo向けライブラリmjlab上に構築されており、物理シミュレーション環境で動作する",
+    "WandBと連携してトレーニング済みモデルの動作を再生・確認できる",
+    "CUDA_VISIBLE_DEVICESでGPUを指定してトレーニングを実行できる"
+  ],
+  "why": "推測: 人型ロボットの全身モーション制御は強化学習・ロボティクス分野で重要な課題であり、微分可能ワールドモデルを用いたアプローチは近年注目を集めている。推測: SuperTrackの実装として、差分可能物理シミュレーションを活用した手法が研究コミュニティで関心を集めている。",
+  "whoFor": "ロボティクスや強化学習を研究する学生・研究者に役立つ。人型ロボットの全身モーション制御や模倣学習を実装・実験したい人向け。",
+  "tech": [
+    "mjlabライブラリ上に構築された微分可能ワールドモデルを使用している",
+    "一般化座標（GenCoord）と最大座標（MaxCoord）の2種類の座標系をサポートしている",
+    "ControlVAE、robotic_world_model、DreamerV3のコードを参考にして開発されている"
+  ],
+  "tryIt": {
+    "steps": [
+      "uvをインストールする",
+      "supermimicとmjlab_researchリポジトリを同じ親ディレクトリ配下にクローンする",
+      "タスクIDとrun名を指定してtrain.pyを実行する",
+      "学習済みモデルはplay.pyにwandbパスを指定して再生できる"
+    ],
+    "commands": [
+      "CUDA_VISIBLE_DEVICES=0 python src/supermimic/scripts/train.py --task SuperMimic-GenCoord-G1 --run_name <run_name>",
+      "python src/supermimic/scripts/play.py --task SuperMimic-GenCoord-G1 --wandb-path <wandb_path>"
+    ]
+  }
+}

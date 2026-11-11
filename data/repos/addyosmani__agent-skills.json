@@ -1,0 +1,33 @@
+{
+  "repo": "addyosmani/agent-skills",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "AIコーディングエージェントにシニアエンジニアの開発フローを学習させるスキル集",
+  "features": [
+    "/spec・/plan・/build・/test・/review・/ship など9つのスラッシュコマンドで仕様定義からデプロイまでの開発ライフサイクル全体をカバーする",
+    "25種類のスキルが Define・Plan・Build・Verify・Review・Ship の6フェーズに体系的に整理されている",
+    "/build auto コマンドでプラン作成から全タスクの自動実装まで一括実行でき、各タスクはテスト駆動で個別にコミットされる",
+    "コードレビュー・テストエンジニア・セキュリティ監査・Webパフォーマンス監査の4種類のエージェントペルソナを提供する",
+    "70以上のAIコーディングエージェント（Claude Code・Cursor・GitHub Copilotなど）に対応する汎用CLIでインストールできる",
+    "各スキルにはアンチ合理化テーブルと出口条件が組み込まれており、手順をスキップする言い訳を防ぐ設計になっている"
+  ],
+  "why": "推測: AIエージェントが一貫してシニアエンジニアの実践的なワークフロー（仕様・テスト・コードレビュー・段階的リリース）に従えるよう設計されており、個人の習慣に依存しない品質維持が期待できる。Addy OsmaniらGoogleエンジニアがメンテナンスしており、Googleエンジニアリングプラクティス（Hyramの法則・ベイヨンセルール・テストピラミッドなど）が設計思想に反映されている。",
+  "whoFor": "Claude Code・Cursor・GitHub CopilotなどのAIコーディングエージェントを業務で活用しているエンジニアや開発チームに役立つ。エージェントにベストプラクティスを強制したい場面や、複数人・複数プロジェクトで一貫したコード品質を保ちたいときに適している。",
+  "tech": [
+    "各スキルはMarkdownとYAMLフロントマターで記述されたSKILL.mdファイルとして実装されており、ポータブルな設計になっている",
+    "Claude Code・Gemini CLI・Cursor・Windsurf・GitHub Copilotなど複数のAIツール向けに専用アダプター（.claude/・.gemini/・commands/など）を提供する",
+    "Chrome DevTools MCP・Core Web Vitals・OWASP Top 10などの実践的な品質基準を参照するスキルが含まれている",
+    "OpenTelemetry・REDメトリクス・構造化ログを用いたオブザーバビリティのスキルも提供する",
+    "25件のevalケースファイルとGitHub Actions CIによるスキルの検証・評価の仕組みが整備されている"
+  ],
+  "tryIt": {
+    "steps": [
+      "npx コマンドを使ってスキルをインストールする",
+      "Claude Code の場合はプラグインマーケットプレイス経由でもインストールできる",
+      "リポジトリをクローンして --plugin-dir オプションで指定する方法もある"
+    ],
+    "commands": [
+      "npx skills add addyosmani/agent-skills"
+    ]
+  }
+}

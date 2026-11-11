@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-12",
+  "collectedAt": "2026-11-12T07:07:58+09:00",
+  "entries": [
+    {
+      "repo": "Lee-xeo/Claude-Cage",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Cage：Mac 上的独立 Claude 编码工作区，集成 Linux 终端、浏览器与项目编辑器。",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "janestreet/agent_skills",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "Agent skills",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "GoogleChrome/modern-web-guidance",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "Keep your coding agent up to date with the latest web best practices",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "huamidev/GestaltX",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups, and support for 7 languages.",
+      "language": "Swift",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "meta/astryx",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "we-promise/sure",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "The personal finance app for everyone (by everyone)",
+      "language": "Ruby",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anefzaoui/misterdownloadmanager",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "HybridRobotics/supermimic",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "SuperTrack implementation.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "homeassistant-ai/ha-mcp",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "NotRexed/Hookshot",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "addyosmani/agent-skills",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "expo/exact",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "wzdnzd/aggregator",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "One-stop Proxies Crawling and Aggregation Platform",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "h4ckf0r0day/obscura",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "The headless browser for AI agents and web scraping",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "storytold/craft-anything",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "Craft Anything: understand how any software works, and craft your own.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "groschen81-web/secure-desktop-installer",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Professional Desktop Installer with Enhanced Security Features",
+      "language": "HTML",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "hembramneeraj3-create/aida-64-extreme",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Aida 64 Extreme 2026: Complete Standalone Desktop Setup with Full Feature Configuration",
+      "language": "HTML",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "amarisdzy/acronis-desktop-installer",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "Acronis Desktop: Complete Standalone Installer with Full Setup and Ready-to-Run Deployment",
+      "language": "HTML",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mahmoudtawfik1998/secure-pdf-document-processor",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Adobe Acrobat Pro 2026: Secure Standalone PDF Document Processor for Desktop",
+      "language": "HTML",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "abdulmannanmalik13-wq/adobe-substance-3d-studio",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "Adobe Substance 3D Creative Studio 2026 - Secure Asset Pipeline Desktop Installer",
+      "language": "HTML",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "shanselman/gputaskman",
+        "source": "hatena",
+        "desc": "A GPU task manager for Windows, Linux, and WSL: per-process VRAM, GPU activity, and LLM model/KV-cache insights (Windows AMD and NVIDIA).",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 5,
+        "sourceRank": 1
+      }
+    ]
+  }
+}

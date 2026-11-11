@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HybridRobotics/supermimic | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>HybridRobotics/supermimic</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-12（Trendshift 8位）</span>
+<a class="gh" href="https://github.com/HybridRobotics/supermimic" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="hybridrobotics__supermimic" data-repo="HybridRobotics/supermimic" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">一つの微分可能ワールドモデルで学習する人型ロボット全身モーショントラッカー</p>
+<h3>何ができるか</h3><ul><li>人型ロボットの全身モーション追跡をワールドモデルベースで学習できる</li><li>一般化座標（GenCoord）と最大座標（MaxCoord）の2種類のタスクモードに対応している</li><li>MuJoCo向けライブラリmjlab上に構築されており、物理シミュレーション環境で動作する</li><li>WandBと連携してトレーニング済みモデルの動作を再生・確認できる</li><li>CUDA_VISIBLE_DEVICESでGPUを指定してトレーニングを実行できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 人型ロボットの全身モーション制御は強化学習・ロボティクス分野で重要な課題であり、微分可能ワールドモデルを用いたアプローチは近年注目を集めている。<span class="guess">推測</span> SuperTrackの実装として、差分可能物理シミュレーションを活用した手法が研究コミュニティで関心を集めている。</p>
+<h3>どんな人に役立つか</h3><p>ロボティクスや強化学習を研究する学生・研究者に役立つ。人型ロボットの全身モーション制御や模倣学習を実装・実験したい人向け。</p>
+<h3>技術的なポイント</h3><ul><li>mjlabライブラリ上に構築された微分可能ワールドモデルを使用している</li><li>一般化座標（GenCoord）と最大座標（MaxCoord）の2種類の座標系をサポートしている</li><li>ControlVAE、robotic_world_model、DreamerV3のコードを参考にして開発されている</li></ul>
+<h3>試し方</h3>
+<ol><li>uvをインストールする</li><li>supermimicとmjlab_researchリポジトリを同じ親ディレクトリ配下にクローンする</li><li>タスクIDとrun名を指定してtrain.pyを実行する</li><li>学習済みモデルはplay.pyにwandbパスを指定して再生できる</li></ol>
+<pre><code>CUDA_VISIBLE_DEVICES=0 python src/supermimic/scripts/train.py --task SuperMimic-GenCoord-G1 --run_name &lt;run_name&gt;
+python src/supermimic/scripts/play.py --task SuperMimic-GenCoord-G1 --wandb-path &lt;wandb_path&gt;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-12.html#d-hybridrobotics__supermimic">2026-11-12</a>
+<span class="src trendshift">Trendshift 8位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

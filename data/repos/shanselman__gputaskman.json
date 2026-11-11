@@ -1,0 +1,33 @@
+{
+  "repo": "shanselman/gputaskman",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "GPU内部のプロセス・VRAMをリアルタイム監視する、htop風ターミナルモニター",
+  "features": [
+    "デバイスビューでVRAM・GPU負荷・温度・電力・クロック・PCIe帯域などをリアルタイム表示できる",
+    "プロセスビューでプロセスごとのGPUメモリ使用量とエンジンアクティビティを個別に確認できる",
+    "CUDA・HIP・Vulkan・ggml・ONNX Runtimeなど実行中のAI/MLランタイムを自動検出する",
+    "ロードされているLLMモデルとKVキャッシュ・重みなどのGPUメモリ内訳を推定表示する",
+    "JSON形式でスナップショット保存・2つのスナップショットの差分比較・セッション記録ができる"
+  ],
+  "why": "推測: ローカル環境でLLMを動かす開発者が増えており、GPUメモリの内訳をプロセス単位で可視化できるツールの需要が高まっている。推測: WindowsのAMD・NVIDIAとLinux・WSLを横断してサポートし、KVキャッシュなどLLM特有の情報まで表示できる点が珍しく注目を集めていると考えられる。",
+  "whoFor": "ローカル環境でLLMや機械学習ワークロードを実行し、VRAMの使用状況をプロセス単位で把握したい開発者や研究者に役立つ。Windows（NVIDIA・AMD）・Linux・WSL環境のユーザーが主な対象で、モデルのメモリ消費を詳しく調べたい場合にも使える。",
+  "tech": [
+    "PythonパッケージとしてPyPI経由（uvまたはpipx）でインストール可能で、Python 3.11以上が必要",
+    "WindowsではWDDMカウンター・NVML・AMD ADL/SMIを組み合わせてGPU情報を取得する",
+    "LinuxではNVML・sysfs・DRM fdinfo経由でNVIDIA・AMD（amdgpu）・Intel（i915）に対応する",
+    "WSL環境ではWindowsホストのカウンター情報をインターオップ経由で読み取りLinuxプロセスと対応付ける"
+  ],
+  "tryIt": {
+    "steps": [
+      "Python 3.11以上とuvまたはpipxがインストールされていることを確認する",
+      "uv tool install gputaskman を実行してインストールする",
+      "gputaskman または gtm を実行してターミナルモニターを起動する"
+    ],
+    "commands": [
+      "uv tool install gputaskman",
+      "pipx install gputaskman",
+      "uv run --locked gputaskman"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "repo": "hembramneeraj3-create/aida-64-extreme",
+  "language": "HTML",
+  "readme": false,
+  "oneLiner": "AIDA64 Extremeのスタンドアロンデスクトップセットアップ（README 未確認）",
+  "features": [],
+  "why": "推測: AIDA64 Extremeはシステム診断・ベンチマークツールとして知られており、スタンドアロン構成として注目される可能性がある。",
+  "whoFor": "推測: PCのハードウェア情報確認やベンチマークを行いたいユーザー向け。",
+  "tech": [],
+  "tryIt": {
+    "steps": [],
+    "commands": []
+  }
+}

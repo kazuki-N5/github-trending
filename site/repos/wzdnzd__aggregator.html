@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wzdnzd/aggregator | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>wzdnzd/aggregator</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-12（Trendshift 13位）</span>
+<a class="gh" href="https://github.com/wzdnzd/aggregator" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="wzdnzd__aggregator" data-repo="wzdnzd/aggregator" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">複数ソースからプロキシを収集・検証・変換する無料プロキシプール構築ツール</p>
+<h3>何ができるか</h3><ul><li>Telegram・GitHub・Google・Yandexなど複数のプラットフォームからプロキシリソースをクロールする</li><li>収集したプロキシの死活監視と品質チェックを自動で行う</li><li>Clash・V2Ray・SingBoxなど各種クライアント向けのフォーマットに変換する</li><li>GitHub Gist・PasteGG・Imperialなど複数のストレージバックエンドに結果を保存する</li><li>マルチスレッド・並列処理により高速なバッチ処理を実現する</li><li>カスタムクローラープラグインを追加できる拡張可能なプラグインアーキテクチャを持つ</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> VMess・Trojan・SS・SSR・VLESS・Hysteria2など多様なプロキシプロトコルを一括で扱える点が注目されている。<span class="guess">推測</span> 設定ファイルベースの柔軟な運用と、GitHub Gistへの自動アップロード機能により、個人でのプロキシ管理を省力化できる点が評価されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>プロキシリソースを自動収集・管理したい開発者や、Clash・V2Rayなどのクライアントで使える購読リンクを自前で構築したい人に役立つ。クローリング技術の学習目的にも活用できる（プロジェクト自身も学習目的と明記している）。</p>
+<h3>技術的なポイント</h3><ul><li>Python製のprocess.pyとcollect.pyという2つのエントリーポイントスクリプトで動作する</li><li>Subconverterを購読変換のコアエンジンとして使用し、Mihomoでプロキシのテストを行う</li><li>GitHub Gist・PasteGG・Imperialなど複数のストレージバックエンドをサポートするプラグイン構造を持つ</li><li>マルチスレッドによる並列クロールを採用しており、スレッド数（-nオプション）で性能を調整できる</li><li>JSONベースの設定ファイルでサイト・クロール・グループ・ストレージを細かく定義できる</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンする</li><li>サンプル設定ファイルをコピーして自分用の設定ファイルを作成する</li><li>GitHubトークンを環境変数PUSH_TOKENにセットする</li><li>process.pyを実行してプロキシの収集・変換・保存を行う</li></ol>
+<pre><code>cp subscribe/examples/config.default.json my-config.json
+export PUSH_TOKEN=your_github_token
+python subscribe/process.py -s my-config.json
+python subscribe/collect.py -g username/gist-id -k your-github-token -t clash v2ray singbox</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-12.html#d-wzdnzd__aggregator">2026-11-12</a>
+<span class="src trendshift">Trendshift 13位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

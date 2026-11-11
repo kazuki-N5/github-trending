@@ -1,0 +1,32 @@
+{
+  "repo": "GoogleChrome/modern-web-guidance",
+  "language": "",
+  "readme": true,
+  "oneLiner": "コーディングエージェントに最新ウェブのベストプラクティスとブラウザ互換性情報を提供するスキル集",
+  "features": [
+    "約250のモダンウェブ機能（主にCSS・レイアウト、HTML/DOM、JavaScript/API）のガイドを提供する",
+    "`search`コマンドでキーワードに関連するガイドを検索できる",
+    "`retrieve`コマンドでガイドをIDで取得してエージェントのコンテキストに読み込める",
+    "`legacy-scan`コマンドでコードベース内のレガシーパターンをスキャンし近代化の提案を行える",
+    "`.mwgrc`設定ファイルでOrigin TrialやVolatile機能へのアクセスをオプトインできる"
+  ],
+  "why": "Chrome・Edge・Firefox・MDNチームが共同で管理しており、信頼性の高いウェブプラットフォームの知識源となっている。推測: AIコーディングツールの普及に伴い、エージェントが古い訓練データに基づいてレガシーなAPIを使ったコードを生成してしまう問題への対策として注目されている。",
+  "whoFor": "GitHub CopilotやCursorなどのコーディングエージェントを使ってウェブ開発を行う開発者に役立つ。ネイティブのモダンCSS・HTML・JavaScript APIを活用し、重いpolyfillやレガシーなパターンを避けたいウェブ開発者全般に適している。",
+  "tech": [
+    "オフラインの埋め込みモデルとBM25を組み合わせたハイブリッド検索を使用し、ネットワーク不要で動作する",
+    "エージェントスキルとして動作し、一致したガイドをエージェントのコンテキストウィンドウに取り込むアーキテクチャを採用している",
+    "トークン効率を考慮した設計で、AIモデルが既知のコンテンツを省いた簡潔なガイドを提供する",
+    "Baselineに基づくブラウザ互換性情報を含み、各機能の対応状況を把握できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "インタラクティブウィザードを使ってインストールする: `npx modern-web-guidance@latest install`を実行する",
+      "インストールなしで試す場合は、`search`・`retrieve`・`legacy-scan`コマンドをエージェント経由で使用する"
+    ],
+    "commands": [
+      "npx modern-web-guidance@latest install",
+      "npx skills add GoogleChrome/modern-web-guidance",
+      "gh skill install GoogleChrome/modern-web-guidance"
+    ]
+  }
+}

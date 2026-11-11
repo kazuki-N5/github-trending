@@ -1,0 +1,37 @@
+{
+  "repo": "wzdnzd/aggregator",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "複数ソースからプロキシを収集・検証・変換する無料プロキシプール構築ツール",
+  "features": [
+    "Telegram・GitHub・Google・Yandexなど複数のプラットフォームからプロキシリソースをクロールする",
+    "収集したプロキシの死活監視と品質チェックを自動で行う",
+    "Clash・V2Ray・SingBoxなど各種クライアント向けのフォーマットに変換する",
+    "GitHub Gist・PasteGG・Imperialなど複数のストレージバックエンドに結果を保存する",
+    "マルチスレッド・並列処理により高速なバッチ処理を実現する",
+    "カスタムクローラープラグインを追加できる拡張可能なプラグインアーキテクチャを持つ"
+  ],
+  "why": "推測: VMess・Trojan・SS・SSR・VLESS・Hysteria2など多様なプロキシプロトコルを一括で扱える点が注目されている。推測: 設定ファイルベースの柔軟な運用と、GitHub Gistへの自動アップロード機能により、個人でのプロキシ管理を省力化できる点が評価されていると考えられる。",
+  "whoFor": "プロキシリソースを自動収集・管理したい開発者や、Clash・V2Rayなどのクライアントで使える購読リンクを自前で構築したい人に役立つ。クローリング技術の学習目的にも活用できる（プロジェクト自身も学習目的と明記している）。",
+  "tech": [
+    "Python製のprocess.pyとcollect.pyという2つのエントリーポイントスクリプトで動作する",
+    "Subconverterを購読変換のコアエンジンとして使用し、Mihomoでプロキシのテストを行う",
+    "GitHub Gist・PasteGG・Imperialなど複数のストレージバックエンドをサポートするプラグイン構造を持つ",
+    "マルチスレッドによる並列クロールを採用しており、スレッド数（-nオプション）で性能を調整できる",
+    "JSONベースの設定ファイルでサイト・クロール・グループ・ストレージを細かく定義できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンする",
+      "サンプル設定ファイルをコピーして自分用の設定ファイルを作成する",
+      "GitHubトークンを環境変数PUSH_TOKENにセットする",
+      "process.pyを実行してプロキシの収集・変換・保存を行う"
+    ],
+    "commands": [
+      "cp subscribe/examples/config.default.json my-config.json",
+      "export PUSH_TOKEN=your_github_token",
+      "python subscribe/process.py -s my-config.json",
+      "python subscribe/collect.py -g username/gist-id -k your-github-token -t clash v2ray singbox"
+    ]
+  }
+}
