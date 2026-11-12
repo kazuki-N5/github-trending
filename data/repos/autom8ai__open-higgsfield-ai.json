@@ -1,0 +1,41 @@
+{
+  "repo": "Autom8AI/Open-Higgsfield-AI",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "Higgsfield AIの代替となるOSSの画像・動画・リップシンク生成スタジオ",
+  "features": [
+    "テキストまたは参照画像から画像を生成する「イメージスタジオ」機能を備え、参照画像の有無に応じてモードが自動切り替わる",
+    "テキストや画像から動画を生成できる「ビデオスタジオ」があり、同様に自動でモードが切り替わる",
+    "9種類のモデルを使って、ポートレート画像や動画に音声を合わせてリップシンク動画を生成できる",
+    "カメラ・レンズ・焦点距離・絞りといった映画的な設定をプロンプト修飾語に変換する「シネマスタジオ」がある",
+    "生成履歴やローカルアップロード履歴の管理、ワンクリックダウンロード機能を持ち、APIキーはブラウザのlocalStorageに保存される",
+    "ブラウザで即試せるホスト版に加え、macOS・Windows向けのElectronデスクトップアプリも提供している"
+  ],
+  "why": "推測: 有料サービスのHiggsfield AIと同等の機能をMITライセンスで無料・自己ホスト可能な形で提供している点が注目を集めていると考えられる。200以上のAIモデル（Flux・Kling・Sora・Veo・Wanなど）に一つのUIからアクセスできる利便性も評価されていると思われる。",
+  "whoFor": "AIを使った画像・動画生成を無料または低コストで試したいクリエイターやエンジニアに向いている。自分のサーバーで動かしてデータを管理したい人や、Higgsfield AIの有料プランの代替を探している人にも適している。",
+  "tech": [
+    "Next.js 14とReact 18を使ったモノレポ（複数のパッケージを一つのリポジトリで管理する構成）構造で、`packages/studio`という共有コンポーネントライブラリを中心に設計されている",
+    "npmワークスペース（npm workspaces）でルートアプリと`packages/studio`ライブラリを一括管理し、ホスト版と同じコンポーネントを再利用している",
+    "Muapi.ai APIゲートウェイを通じてFlux・Kling・Sora・Veoなど200以上のAIモデルにアクセスする仕組みになっている",
+    "ElectronによりWebアプリをそのままmacOS・Windowsのデスクトップアプリとしてビルドでき、`release/`フォルダにインストーラが生成される",
+    "スタイリングにはTailwind CSS v3を採用し、ユーティリティクラスベースでUIを構築している"
+  ],
+  "tryIt": {
+    "steps": [
+      "Muapi.aiでアカウントを作成してAPIキーを取得する",
+      "リポジトリをクローンしてプロジェクトフォルダに移動する",
+      "`npm install`で依存パッケージをインストールする",
+      "`npm run dev`で開発サーバーを起動し、ブラウザで`http://localhost:3000`を開く",
+      "画面に表示されるプロンプトでAPIキーを入力して利用を開始する"
+    ],
+    "commands": [
+      "npm install",
+      "npm run dev",
+      "npm run build",
+      "npm run start",
+      "npm run electron:build",
+      "npm run electron:build:win",
+      "npm run electron:build:all"
+    ]
+  }
+}

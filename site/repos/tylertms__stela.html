@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tylertms/Stela | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>tylertms/Stela</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-13（Trendshift 7位）</span>
+<a class="gh" href="https://github.com/tylertms/Stela" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="tylertms__stela" data-repo="tylertms/Stela" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Apple SiliconのmacOSをx86-64 PC上で動かすUEFIブートレイヤー</p>
+<h3>何ができるか</h3><ul><li>UEFIブートプログラムにより、通常のx86-64 PCからmacOSを起動できる</li><li>arm64e命令を3,000種類以上のエンコーディングに対応したAOT/JITコンパイラでx86-64命令に変換する</li><li>Metal（AppleのグラフィックスAPI）のAIRシェーダーをNVIDIA GPU向けにMesa経由で動作させる専用ドライバーを持つ</li><li>M2 Mac miniとしてハードウェアをエミュレートし、macOSにApple Silicon環境を提示する</li><li>Linux・macOS・Windows上で動くセットアップツールでUSBインストーラーを簡単に作成できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Apple Silicon専用となったmacOSをx86-64 PCで動かせる可能性を示す点で、HackintoshコミュニティやOS移植技術に興味を持つ開発者から注目を集めている。ARM命令変換・MetalドライバーのMesa移植・UEFIブートという低レイヤー技術を組み合わせた高難度な実装が技術者の関心を引いている。</p>
+<h3>どんな人に役立つか</h3><p>MacなしでmacOS環境を試したいユーザーや、UEFIブート・JITコンパイラ・GPUドライバー実装など低レイヤーOSの仕組みを実際のコードで学びたいCS学生・研究者に向いている。</p>
+<h3>技術的なポイント</h3><ul><li>AOT（事前コンパイル）とJIT（実行時コンパイル）の両方式でarm64e命令をx86-64に変換し、翻訳済みコードをキャッシュして性能を高める</li><li>MetalのAIRシェーダー中間表現をMesa（Linux向けオープンソースグラフィックスライブラリ）のNIRに直接コンパイルするNVIDIAドライバーを実装している</li><li>UEFI（PC起動ファームウェア規格）ブートプログラムで標準PC上にApple Siliconハードウェア環境を再現し、macOSにM2 Mac miniとして認識させる</li><li>RustとLLVM 21〜23（コンパイラ基盤）を用いて実装されており、初回ビルド時にLinux・Mesa・LLVMをフルコンパイルするため時間がかかる</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubのリリースページから自分のOSに合った`stela`バイナリをダウンロードする</li><li>Linux/macOSでは`sudo ./stela setup`、Windowsでは`stela.exe`をダブルクリックしてセットアップツールを起動する</li><li>USBスティック（8GB以上）・インストーラー種類・macOSバージョン・Macモデルを選択して確認するとUSBインストーラーが作成される（USBの内容は消去される）</li><li>対応ハードウェア（x86-64-v2以上のCPU、NVIDIA GTX 16/RTX 20〜50シリーズGPU、64bit UEFI搭載PC）からUSBスティックを使ってブートする</li></ol>
+<pre><code>sudo ./stela setup
+.\stela.exe setup
+sudo ./stela setup update stela
+sudo ./stela setup boot-log --output log.txt
+cargo xtask dist</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-13.html#d-tylertms__stela">2026-11-13</a>
+<span class="src trendshift">Trendshift 7位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

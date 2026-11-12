@@ -1,0 +1,31 @@
+{
+  "repo": "synchopate/llama-modchip",
+  "language": "C++",
+  "readme": true,
+  "oneLiner": "GPUなしのCPUのみで284B級MoEモデルを高速推論できる独自量子化ランタイム",
+  "features": [
+    "DeepSeek-V4-Flash 284Bモデルを59GiB未満のRAMでGPUなしCPU推論できる",
+    "独自量子化形式Fractal-64（3.75ビット/weight）とLUT-VQ3-64（3.0ビット/weight）でメモリ使用量を大幅削減",
+    "AVX-512などのCPU命令セットを活用し、30BのMoEモデルで22.4tok/s以上の生成速度を達成",
+    "投機的デコード（Speculative Decoding：別の小モデルで先読みして高速化する手法）により最大25.3tok/sまで高速化可能",
+    "Linux・Windows・Apple SiliconなどマルチプラットフォームのプリビルドバイナリとGGUFモデルファイルを提供"
+  ],
+  "why": "推測: GPUを使わずに数百億パラメータ級のLLMをCPUだけで動かせる実装は希少であり、GPU不要の推論環境を求めるユーザーの間で注目を集めている。推測: MoE（Mixture-of-Experts：入力ごとに一部のパラメータのみ活性化する効率的なモデル構造）はCPU推論との親和性が高く、超低ビット量子化と組み合わせることでDRAM帯域のボトルネックを緩和できる点が技術的に評価されている。",
+  "whoFor": "高性能GPUを持たないがローカルでLLMを動かしたいエンジニアや研究者に向いている。64GBのRAMを搭載した一般的なワークステーションやノートPCで大規模モデルを試したい人、またはクラウドGPUのコストを削減したい開発者にも有用。",
+  "tech": [
+    "Fractal-64（GGML_TYPE_Q2_0=42）：ブロック64単位の3.75ビット/weight量子化で、BF16比99.15%のコサイン類似度を維持",
+    "LUT-VQ3-64（GGML_TYPE_VQ3_0=43）：128個の3次元重心をAVX-512 VBMIレジスタで高速デコードする3.0ビット/weight量子化",
+    "llama.cppをベースに独自量子化タイプを追加したGGUFフォーク（vanilla llama.cppやOllamaとは互換性なし）",
+    "MoE推論のボトルネックであるDRAM帯域を超低ビット量子化で緩和し、スペック上のパラメータ数より少ないメモリ転送量を実現"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンするか、プリビルドバイナリをダウンロードする",
+      "Hugging FaceからモデルのGGUFファイルをダウンロードする",
+      "./modchip chat を実行してチャットを開始する"
+    ],
+    "commands": [
+      "./modchip chat"
+    ]
+  }
+}

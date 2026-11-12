@@ -1,0 +1,36 @@
+{
+  "repo": "tylertms/Stela",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "Apple SiliconのmacOSをx86-64 PC上で動かすUEFIブートレイヤー",
+  "features": [
+    "UEFIブートプログラムにより、通常のx86-64 PCからmacOSを起動できる",
+    "arm64e命令を3,000種類以上のエンコーディングに対応したAOT/JITコンパイラでx86-64命令に変換する",
+    "Metal（AppleのグラフィックスAPI）のAIRシェーダーをNVIDIA GPU向けにMesa経由で動作させる専用ドライバーを持つ",
+    "M2 Mac miniとしてハードウェアをエミュレートし、macOSにApple Silicon環境を提示する",
+    "Linux・macOS・Windows上で動くセットアップツールでUSBインストーラーを簡単に作成できる"
+  ],
+  "why": "推測: Apple Silicon専用となったmacOSをx86-64 PCで動かせる可能性を示す点で、HackintoshコミュニティやOS移植技術に興味を持つ開発者から注目を集めている。ARM命令変換・MetalドライバーのMesa移植・UEFIブートという低レイヤー技術を組み合わせた高難度な実装が技術者の関心を引いている。",
+  "whoFor": "MacなしでmacOS環境を試したいユーザーや、UEFIブート・JITコンパイラ・GPUドライバー実装など低レイヤーOSの仕組みを実際のコードで学びたいCS学生・研究者に向いている。",
+  "tech": [
+    "AOT（事前コンパイル）とJIT（実行時コンパイル）の両方式でarm64e命令をx86-64に変換し、翻訳済みコードをキャッシュして性能を高める",
+    "MetalのAIRシェーダー中間表現をMesa（Linux向けオープンソースグラフィックスライブラリ）のNIRに直接コンパイルするNVIDIAドライバーを実装している",
+    "UEFI（PC起動ファームウェア規格）ブートプログラムで標準PC上にApple Siliconハードウェア環境を再現し、macOSにM2 Mac miniとして認識させる",
+    "RustとLLVM 21〜23（コンパイラ基盤）を用いて実装されており、初回ビルド時にLinux・Mesa・LLVMをフルコンパイルするため時間がかかる"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubのリリースページから自分のOSに合った`stela`バイナリをダウンロードする",
+      "Linux/macOSでは`sudo ./stela setup`、Windowsでは`stela.exe`をダブルクリックしてセットアップツールを起動する",
+      "USBスティック（8GB以上）・インストーラー種類・macOSバージョン・Macモデルを選択して確認するとUSBインストーラーが作成される（USBの内容は消去される）",
+      "対応ハードウェア（x86-64-v2以上のCPU、NVIDIA GTX 16/RTX 20〜50シリーズGPU、64bit UEFI搭載PC）からUSBスティックを使ってブートする"
+    ],
+    "commands": [
+      "sudo ./stela setup",
+      ".\\stela.exe setup",
+      "sudo ./stela setup update stela",
+      "sudo ./stela setup boot-log --output log.txt",
+      "cargo xtask dist"
+    ]
+  }
+}

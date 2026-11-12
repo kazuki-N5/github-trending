@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aws/aws-emulator | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>aws/aws-emulator</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-13（Trendshift 1位）</span>
+<a class="gh" href="https://github.com/aws/aws-emulator" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="aws__aws-emulator" data-repo="aws/aws-emulator" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AWSアカウント不要でAWS APIをローカルでエミュレートする開発・テスト用ツール</p>
+<h3>何ができるか</h3><ul><li>AWSアカウントや追加料金なしに、ローカル環境でAWS APIの呼び出しをエミュレートできる</li><li>サーバーモードで起動し、環境変数を設定するだけで既存のAWS CLIやSDKの向き先をエミュレーターに切り替えられる</li><li>Rustのテストコードに直接組み込む「Embeddedモード」で、テスト1件ごとにインプロセスで動かせる</li><li>AIコーディングエージェント向けのスキルとしてAWS CLIに追加するモードもサポートしている</li><li>テレメトリ（使用状況収集）はデフォルトで有効だが、フラグや環境変数・設定ファイルでオフにできる</li><li>サービスごとの再現精度（フィデリティスコア）をリリースページで公開し、未対応の操作はissues/ディレクトリで追跡している</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AWSを使った開発・テストには実アカウントと費用が必要で、特にCI（継続的インテグレーション）環境での課題が大きかった。AWS公式がRustでOSSとして公開したことで信頼性が高く、ローカルやCI環境でのAWT開発コスト削減に直結するため注目を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>AWSを使ったアプリケーションを開発・テストするエンジニア全般に役立つ。特にCIパイプラインやオフライン環境でAWS APIを手軽に使いたい場合、またRustでAWSを利用するアプリケーションの単体テストを書きたい場合に最適。</p>
+<h3>技術的なポイント</h3><ul><li>Rust製で、AWSの各サービスを1クレート（Rustにおけるパッケージ単位）として管理するワークスペース構成を採用している</li><li>Smithy（AWSのサービス定義言語）のモデルからコードを自動生成し、ルーティングやインメモリ状態管理に利用している</li><li>サーバーモードではHTTPS（TLS）で127.0.0.1:9297をリッスンし、自己署名証明書を使用する</li><li>Embeddedモードでは、エミュレーターのHTTPクライアントをRustのSDKクライアントに渡すことで、エンドポイント設定なしにテストを実行できる</li><li>ライセンスはCC0 1.0（パブリックドメイン相当）だが、vendor/ディレクトリのみApache License 2.0を採用している</li></ul>
+<h3>試し方</h3>
+<ol><li>AIコーディングエージェント向けスキルとして使う場合: AWS CLI v2.35.0以降をインストールし、スキル追加コマンドを実行する</li><li>サーバーモードで使う場合: LinuxではRPMまたはDebパッケージをインストールして`aws-emulator`を実行し、環境変数でSDKの向き先をエミュレーターに設定する</li><li>Rustソースからビルドする場合: rustupでRustツールチェーンとCコンパイラ（GCCまたはclang）を用意し、100GB以上の空きディスクが必要</li><li>ソースからビルド後は`cargo run -p aws-emulator-router`でルーターを起動し、HTTPS経由でリクエストを受け付ける</li></ol>
+<pre><code>aws agent-toolkit add-skill --skill-name aws-emulator --region us-east-1
+cargo build -p aws-emulator-router
+cargo run -p aws-emulator-router</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-13.html#d-aws__aws-emulator">2026-11-13</a>
+<span class="src trendshift">Trendshift 1位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shadcn/improve | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛠️</div><div>
+<h1>shadcn/improve</h1>
+<div class="meta">
+<span>初掲載 2026-11-13（Trendshift 10位）</span>
+<a class="gh" href="https://github.com/shadcn/improve" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="shadcn__improve" data-repo="shadcn/improve" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">高性能モデルがコードを審査し、安価なモデルが実行できる実装プランを生成するエージェントスキル</p>
+<h3>何ができるか</h3><ul><li>コードベースのスタック・規約・ビルド/テスト/lintコマンドを把握し、ADRやPRDなどの設計文書も読み込む「偵察（Recon）」機能がある</li><li>正確性・セキュリティ・パフォーマンス・テスト・技術的負債など9カテゴリを並行サブエージェントで同時に監査できる</li><li>指摘された箇所を再度確認して誤検知（false positive）を除去する「検証（Vet）」ステップがある</li><li>選ばれた指摘事項をファイル・行番号・影響度・工数・確信度つきの自己完結したMarkdownファイルとして`plans/`に保存する</li><li>安価なモデルが独立したgit worktree（作業ツリー）で計画を実行し、アドバイザーモデルがdiffをレビューして判定を下す</li><li>`--issues`オプションでプランをGitHub Issuesとして公開できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIエージェントによる開発が普及するなか、高性能モデルで計画を立てて安価なモデルで実行するコスト最適化の分業モデルが注目を集めている。<span class="guess">推測</span> コードに直接手を加えず計画書のみを生成するという設計が、AIによる意図しないコード変更リスクを避けたいチームに評価されている可能性がある。</p>
+<h3>どんな人に役立つか</h3><p>Claude CodeやCursorなどAIエージェント（AIが自律的にコードを操作するツール）を活用して開発しているエンジニアに役立つ。コードベースの品質改善を自動化しながらも最終的なマージ判断は人間が行いたいチームに適している。</p>
+<h3>技術的なポイント</h3><ul><li>Agent Skills形式（エージェントスキルの標準フォーマット）を採用しており、`npx skills add`コマンド一つで対応エージェントに追加できる</li><li>9カテゴリの監査を並行サブエージェントで並列処理することで、大規模なコードベースを効率よく審査する</li><li>git worktree（Gitの機能で、同じリポジトリを別ディレクトリとして同時チェックアウトする仕組み）を使い、本番コードと隔離した環境で実行する</li><li>計画ファイルには作成時点のgitコミットハッシュが記録され、後から計画の鮮度を確認できる</li></ul>
+<h3>試し方</h3>
+<ol><li>Agent Skills形式をサポートするエージェント（Claude Codeなど）を用意する</li><li>`npx skills add shadcn/improve`でスキルをインストールする</li><li>対象リポジトリのルートで`/improve`コマンドを実行してフルオーディットを開始する</li><li>生成された`plans/`ディレクトリのMarkdownファイルを確認し、実行したいプランを選ぶ</li><li>`/improve execute`で安価なモデルにプランを実行させ、差分をレビューしてマージを判断する</li></ol>
+<pre><code>npx skills add shadcn/improve</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-13.html#d-shadcn__improve">2026-11-13</a>
+<span class="src trendshift">Trendshift 10位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "repo": "GoogleChrome/modern-web-guidance-src",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "コーディングエージェントにモダンなWeb標準・ベストプラクティスを教えるスキルセット",
+  "features": [
+    "250件のモダンWeb機能（CSS・HTML・JavaScript）を網羅したガイドを提供する",
+    "エージェントが古いパターンを使おうとした際にネイティブブラウザAPIへ誘導する",
+    "BM25検索とローカル埋め込みモデルでネットワーク接続不要・APIキー不要でガイドを検索できる",
+    "ブラウザサポート状況（Baseline）を考慮したプログレッシブエンハンスメント（段階的強化）の指針を含む",
+    "コードベース内のレガシーパターン（古い書き方）を自動スキャンする`legacy-scan`コマンドを持つ",
+    "Origin Trial（試験的API）やボラタイル機能はオプトイン設定で安全に利用できる"
+  ],
+  "why": "推測: LLM（大規模言語モデル）の学習データには古いコードが多く含まれるため、コーディングエージェントがレガシーなアプローチを選びがちという問題意識から注目されている。推測: GoogleChromeチームが公式に提供することで、最新のWeb標準に即した実装指針として信頼性が高く評価されている。",
+  "whoFor": "コーディングエージェント（GitHub CopilotやClaude Codeなど）を使ってWebフロントエンド開発をするエンジニアに役立つ。モダンなブラウザAPIやパフォーマンス・アクセシビリティのベストプラクティスを手軽にエージェントへ伝えたい場合に特に効果的。",
+  "tech": [
+    "BM25（キーワードベースの全文検索アルゴリズム）とローカル埋め込みモデルを組み合わせてガイドを検索する",
+    "npx経由でCLIを実行することでコンテンツを常に最新に保つ設計になっている",
+    "Claude Code・GitHub Copilot・OpenAI Codexなど複数のコーディングエージェントへのプラグインインストール方式をサポートする",
+    "プロジェクトルートまたはホームディレクトリの`.mwgrc`設定ファイルでOrigin Trialなどのオプトイン機能を管理する"
+  ],
+  "tryIt": {
+    "steps": [
+      "インタラクティブなセットアップウィザードを実行してインストールする",
+      "Claude Codeの場合はプラグインマーケットプレイスからインストールする",
+      "インストール後、エージェントに対してWeb機能を質問するとガイドが自動的に参照される"
+    ],
+    "commands": [
+      "npx modern-web-guidance@latest install",
+      "/plugin marketplace add GoogleChrome/modern-web-guidance",
+      "/plugin install modern-web-guidance@googlechrome",
+      "/reload-plugins"
+    ]
+  }
+}

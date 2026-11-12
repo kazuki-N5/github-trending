@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>microsoft/Procexp-Mac | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>microsoft/Procexp-Mac</h1>
+<div class="meta"><span>Swift</span>
+<span>初掲載 2026-11-13（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/microsoft/Procexp-Mac" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="microsoft__procexp-mac" data-repo="microsoft/Procexp-Mac" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Windowsの定番プロセス監視ツールをmacOSにSwiftでネイティブ移植した公式アプリ</p>
+<h3>何ができるか</h3><ul><li>プロセスツリーをリアルタイムで色分け表示し、DLL・ハンドル・スレッドを下ペインで確認できる</li><li>TCP/IP接続を監視でき、逆引きDNS・コード署名・公証（Notarization）状態・VirusTotalチェックも行える</li><li>CPU・メモリ・ディスク・ネットワーク・GPUのシステム情報グラフをApple Siliconのコア区別付きで表示できる</li><li>プロセスのkill・一時停止・再開・優先度変更などの操作をGUIから実行できる</li><li>特権ヘルパー（rootで動くlaunchdデーモン）を導入すると他ユーザーや権限が必要なプロセスにも操作できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> WindowsのSysinternals Process Explorerに慣れた開発者がmacOSでも同等の詳細プロセス監視を求めていたため注目されている。Microsoftが公式にmacOS向けSwiftネイティブ実装として提供している点が珍しく、macOSシステムプログラミングの実例としても関心を集めている。</p>
+<h3>どんな人に役立つか</h3><p>macOS上で詳細なプロセス監視・デバッグを行いたいエンジニアに適している。特にWindowsのProcess Explorerを使い慣れた開発者や、macOSのリソース消費やネットワーク接続を深く調査したいシステム管理者・セキュリティ研究者に役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>Swift・SwiftUI・AppKitを組み合わせたmacOSネイティブアプリとして実装されており、macOS 14以上が必要</li><li>非公開APIを使わずmacOSの公開APIのみを使用する設計のため、取得できない情報は値を空欄にする</li><li>SMAppService（macOSのサービス管理フレームワーク）でrootの特権ヘルパーをlaunchdデーモンとして登録し、クロスユーザー操作を実現している</li><li>xcodegen（YAMLからXcodeプロジェクトを自動生成するツール）でXcodeプロジェクトファイルを管理し、手動編集を不要にしている</li><li>リリース時はDMG作成・Developer ID署名・Notarization（Appleによる公証）をスクリプトで自動化している</li></ul>
+<h3>試し方</h3>
+<ol><li>macOS 14以上、Xcode 26.6以上（Swift 5.9以上）が用意されていることを確認する</li><li>`brew install xcodegen` でxcodegenをインストールする</li><li>リポジトリをクローンしてルートディレクトリに移動する</li><li>`xcodegen generate` でXcodeプロジェクトファイルを生成する</li><li>`xcodebuild -scheme ProcexpMac -configuration Debug build` でDebugビルドを行う</li><li>DerivedData内の &quot;ProcExp (Dev).app&quot; を起動して動作確認する</li></ol>
+<pre><code>brew install xcodegen
+xcodegen generate
+xcodebuild -scheme ProcexpMac -configuration Debug build
+swift test</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-13.html#h-microsoft__procexp-mac">2026-11-13 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

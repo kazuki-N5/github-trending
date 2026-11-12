@@ -1,0 +1,221 @@
+{
+  "date": "2026-11-13",
+  "collectedAt": "2026-11-13T07:07:54+09:00",
+  "entries": [
+    {
+      "repo": "aws/aws-emulator",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "GoogleChrome/modern-web-guidance",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "Keep your coding agent up to date with the latest web best practices",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "janestreet/agent_skills",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "Agent skills",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Lee-xeo/Claude-Cage",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "Cage：为 Claude 特化的轻量化虚拟机，彻底杜绝网络泄露。多平台适配，支持多账号管理、远程部署、移动端操控。",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "GoogleChrome/modern-web-guidance-src",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "we-promise/sure",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "The personal finance app for everyone (by everyone)",
+      "language": "Ruby",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "tylertms/Stela",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "Boots unmodified Apple silicon macOS on x86-64 PCs",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "h4ckf0r0day/obscura",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "The headless browser for AI agents and web scraping",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "shadcn/improve",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Use your most capable model to audit your codebase and write plans for cheaper models to execute.",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "openai/codex-security",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "apex-compute/ANR",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "Apex Neural Rendering (ANR) by Apex Compute",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "shanselman/gputaskman",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "A GPU task manager for Windows, Linux, and WSL: per-process VRAM, GPU activity, and LLM model/KV-cache insights (Windows AMD and NVIDIA).",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "FrigadeHQ/yogurt",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Private AI meeting notes. Free and open source.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "Orca lets you run a fleet of coding agents (e.g. Claude Code, Codex) with your own subscription. Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Edge0-AI/Edge0",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Run 35B MoE models in ~2.5 GB of RAM. Weights stream from SSD; a trained router predicts loads a step ahead. Mac, iPhone, Android, Windows supported",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "addyosmani/agent-skills",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "meta/astryx",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Autom8AI/Open-Higgsfield-AI",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Open-source alternative to Higgsfield AI — Free AI image generation & cinema studio with 20+ models (Flux, SDXL, Midjourney, Ideogram). Self-hosted, customizable, MIT licensed.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "NotRexed/Hookshot",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "hirosassa/wasm2rs",
+        "source": "hatena",
+        "desc": "Transpile WebAssembly binaries into standalone native Rust source code.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 1
+      },
+      {
+        "repo": "microsoft/Procexp-Mac",
+        "source": "hatena",
+        "desc": "Process Explorer for MacOS",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 2
+      },
+      {
+        "repo": "synchopate/llama-modchip",
+        "source": "hatena",
+        "desc": "Run 284B DeepSeek-V4-Flash (<59GiB RAM: 41.1 cold pp, 9.1 N=1 tg, up to 25.3 spec tok/s) & 30B MoEs (22.4 N=1 / 111.6 spec tok/s) on 64GB CPU (0 GPUs).",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 3
+      }
+    ]
+  }
+}

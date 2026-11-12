@@ -1,0 +1,35 @@
+{
+  "repo": "openai/codex-security",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "コードの脆弱性を発見・検証・修正するOpenAI製セキュリティCLIとTypeScript SDK",
+  "features": [
+    "リポジトリ全体、指定パス、またはGitの差分を対象にセキュリティスキャンを実行できる",
+    "発見した脆弱性を検証し、修正パッチを自動生成して既存の修正が有効かどうかを確認できる",
+    "SECURITY.mdポリシーの草案作成や脅威モデル（システムへの攻撃経路を整理した文書）の出力ができる",
+    "スキャン結果をSARIF・JSON・CSV形式でエクスポートしたり、Linear・Jira・GitHubと連携して管理できる",
+    "GitHub Actionsを使って定期的に自動スキャンするCIパイプラインを構築できる",
+    "OpenAI、Amazon Bedrock、OpenRouterなど複数のAIプロバイダーに対応している"
+  ],
+  "why": "推測: OpenAIが公式にリリースしたセキュリティツールであり、AIを活用して脆弱性の発見から修正まで一貫して自動化できる点が注目されている。推測: 既存のサードパーティスキャナー結果のインポートや、Linear・Jira・GitHubとの連携など、実際の開発ワークフローにそのまま組み込める設計が評価されている。",
+  "whoFor": "セキュリティ対策を自動化したいソフトウェア開発者やDevSecOpsエンジニアに役立つ。CIパイプラインにセキュリティスキャンを組み込みたいチームや、コードの脆弱性を体系的に管理したい組織での利用に適している。",
+  "tech": [
+    "TypeScript SDKとCLI（コマンドラインツール）の両方を提供しており、コードから直接呼び出すことも端末から実行することもできる",
+    "Node.js 22.13.0以上とPython 3.10以上が必要で、npmパッケージ（@openai/codex-security）として配布されている",
+    "SARIF（Static Analysis Results Interchange Format：静的解析結果の標準フォーマット）形式での出力をサポートし、他のセキュリティツールと連携しやすい",
+    "DockerコンテナやGitHub Actionsによる自動化に対応しており、複数リポジトリの一括スキャンにも使える"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node.js 22.13.0以上とPython 3.10以上をインストールする",
+      "CLIをグローバルインストールする：npm install --global @openai/codex-security",
+      "ログインコマンドでサインインする：cs login",
+      "スキャンしたいリポジトリのルートディレクトリで cs scan . を実行する"
+    ],
+    "commands": [
+      "npm install --global @openai/codex-security",
+      "cs login",
+      "cs scan ."
+    ]
+  }
+}

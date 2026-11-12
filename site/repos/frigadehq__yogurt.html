@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FrigadeHQ/yogurt | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>FrigadeHQ/yogurt</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-13（Trendshift 14位）</span>
+<a class="gh" href="https://github.com/FrigadeHQ/yogurt" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="frigadehq__yogurt" data-repo="FrigadeHQ/yogurt" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ローカルで動くプライベートなAI会議メモアプリ（無料・オープンソース）</p>
+<h3>何ができるか</h3><ul><li>会議中にボットを参加させず、ライブでリアルタイム文字起こしを行う</li><li>自分のメモも含めた会議サマリーを自動生成する</li><li>音声・文字起こし・AI処理をすべてローカル（自分のPC上）で完結させる</li><li>ZoomやTeams、Google Meetからスピーカー名を取得できる（Macのみ）</li><li>99言語のマルチ言語モードに対応している</li><li>複数会議をまたいだQ&amp;Aや全文検索、フォルダ管理、Markdown出力ができる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 会議内容がクラウドに送信されるサービスへのプライバシー懸念が高まる中、完全ローカルで動作するAI会議メモツールとして注目されている。<span class="guess">推測</span> whisper.cppやllama.cppといった軽量ローカルAI技術の普及により、インターネット接続なしで高品質な文字起こしと要約が実現できるようになったことが背景にある。</p>
+<h3>どんな人に役立つか</h3><p>会議内容を社外サーバーに送りたくないビジネスパーソンや、プライバシーを重視する開発者に適している。Mac・Windows・Linuxで動作し、8GB以上のメモリがあれば利用できるため、幅広いユーザーが試しやすい。</p>
+<h3>技術的なポイント</h3><ul><li>whisper.cpp（C++で書かれた高速音声認識ライブラリ）でリアルタイム文字起こしを行う</li><li>llama.cpp（C++製のローカルLLM実行エンジン）でオープンウェイトモデルを動かし、要約・Q&amp;Aを実現する</li><li>MacではApple SpeechAnalyzerも活用してスピーカー識別精度を高めている</li><li>MCPサーバー（Model Context Protocol：AIアシスタントがツールを呼び出す仕組み）をローカルで立ち上げ、他のAIアプリからノートを参照できるようにしている</li><li>インターネット接続はモデルのダウンロードとアップデート確認にのみ使用し、それ以外はオフラインで動作する</li></ul>
+<h3>試し方</h3>
+<ol><li>Mac（Apple Silicon）、Windows（x64）、Linux（x64 AppImage）向けのインストーラーをGitHubリリースページからダウンロードする</li><li>インストール後、初回起動時に約5GB（大きいモデルは14GB以上）のAIモデルをダウンロードする</li><li>Windowsで「PCが保護されました」と表示された場合は「詳細情報」→「実行」を選択する</li><li>自分でビルドする場合はリポジトリのdocs/building.mdを参照する</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-13.html#d-frigadehq__yogurt">2026-11-13</a>
+<span class="src trendshift">Trendshift 14位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

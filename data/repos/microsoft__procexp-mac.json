@@ -1,0 +1,38 @@
+{
+  "repo": "microsoft/Procexp-Mac",
+  "language": "Swift",
+  "readme": true,
+  "oneLiner": "Windowsの定番プロセス監視ツールをmacOSにSwiftでネイティブ移植した公式アプリ",
+  "features": [
+    "プロセスツリーをリアルタイムで色分け表示し、DLL・ハンドル・スレッドを下ペインで確認できる",
+    "TCP/IP接続を監視でき、逆引きDNS・コード署名・公証（Notarization）状態・VirusTotalチェックも行える",
+    "CPU・メモリ・ディスク・ネットワーク・GPUのシステム情報グラフをApple Siliconのコア区別付きで表示できる",
+    "プロセスのkill・一時停止・再開・優先度変更などの操作をGUIから実行できる",
+    "特権ヘルパー（rootで動くlaunchdデーモン）を導入すると他ユーザーや権限が必要なプロセスにも操作できる"
+  ],
+  "why": "推測: WindowsのSysinternals Process Explorerに慣れた開発者がmacOSでも同等の詳細プロセス監視を求めていたため注目されている。Microsoftが公式にmacOS向けSwiftネイティブ実装として提供している点が珍しく、macOSシステムプログラミングの実例としても関心を集めている。",
+  "whoFor": "macOS上で詳細なプロセス監視・デバッグを行いたいエンジニアに適している。特にWindowsのProcess Explorerを使い慣れた開発者や、macOSのリソース消費やネットワーク接続を深く調査したいシステム管理者・セキュリティ研究者に役立つ。",
+  "tech": [
+    "Swift・SwiftUI・AppKitを組み合わせたmacOSネイティブアプリとして実装されており、macOS 14以上が必要",
+    "非公開APIを使わずmacOSの公開APIのみを使用する設計のため、取得できない情報は値を空欄にする",
+    "SMAppService（macOSのサービス管理フレームワーク）でrootの特権ヘルパーをlaunchdデーモンとして登録し、クロスユーザー操作を実現している",
+    "xcodegen（YAMLからXcodeプロジェクトを自動生成するツール）でXcodeプロジェクトファイルを管理し、手動編集を不要にしている",
+    "リリース時はDMG作成・Developer ID署名・Notarization（Appleによる公証）をスクリプトで自動化している"
+  ],
+  "tryIt": {
+    "steps": [
+      "macOS 14以上、Xcode 26.6以上（Swift 5.9以上）が用意されていることを確認する",
+      "`brew install xcodegen` でxcodegenをインストールする",
+      "リポジトリをクローンしてルートディレクトリに移動する",
+      "`xcodegen generate` でXcodeプロジェクトファイルを生成する",
+      "`xcodebuild -scheme ProcexpMac -configuration Debug build` でDebugビルドを行う",
+      "DerivedData内の \"ProcExp (Dev).app\" を起動して動作確認する"
+    ],
+    "commands": [
+      "brew install xcodegen",
+      "xcodegen generate",
+      "xcodebuild -scheme ProcexpMac -configuration Debug build",
+      "swift test"
+    ]
+  }
+}

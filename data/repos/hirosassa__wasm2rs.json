@@ -1,0 +1,34 @@
+{
+  "repo": "hirosassa/wasm2rs",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "WebAssemblyバイナリをスタンドアロンのネイティブRustコードへ変換するトランスパイラ",
+  "features": [
+    "WebAssembly（.wasm）バイナリを、WebAssemblyランタイム不要で動くRustクレートに変換できる",
+    "大きなモジュールを複数ファイルに分割出力する機能があり、コンパイル時間を短縮できる",
+    "WASI（WebAssembly System Interface）preview1を標準搭載し、ファイルIOやコンソール操作をRustで再現できる",
+    "WASI 0.2コンポーネントモデルにも対応しており、最新仕様の変換もサポートしている",
+    "--jobsフラグで並列生成が可能で、バイト単位で同一の出力が保証される",
+    "コード生成せずにモジュール情報だけを表示する--dumpモードでWasmの中身を調査できる"
+  ],
+  "why": "推測: WebAssemblyをネイティブRustに変換することで、Wasmランタイムのオーバーヘッドをなくしてパフォーマンスを向上させたいというニーズに応えているため注目されている。推測: RustエコシステムにWasmバイナリを直接組み込めるため、既存のRustプロジェクトへのWasm資産の再利用が容易になる点も評価されている。",
+  "whoFor": "RustプロジェクトにWebAssemblyで書かれたライブラリを取り込みたい開発者に役立つ。WasmランタイムなしでWasmのロジックをネイティブ実行したいエンジニアや、Wasmバイナリの内部構造を解析したい人にも適している。",
+  "tech": [
+    "WebAssemblyバイナリを解析し、対応するRust関数・型へと命令レベルで変換するトランスパイル（言語変換）方式を採用している",
+    "WASI（WebAssembly System Interface）をホストトレイトとして抽象化し、WasmのOSインターフェース呼び出しをRustコードに落とし込んでいる",
+    "--simd-intrinsicsフラグでcore::archを使ったSIMD命令を直接出力でき、unsafeコードでハードウェア高速化が可能",
+    "build.rsヘルパーやinclude_wasm!マクロを提供し、ビルド時にWasmをRustへ自動変換してコンパイルパイプラインに組み込める"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubのReleasesページからビルド済みバイナリをダウンロードするか、cargoでインストールする",
+      "変換したいWebAssemblyファイル（.wasm）を用意する",
+      "wasm2rsコマンドにwasm2rs <入力ファイル.wasm> -o <出力先ディレクトリ>のように渡して実行する",
+      "生成されたRustコードを既存のRustプロジェクトに組み込んでcargo buildでコンパイルする"
+    ],
+    "commands": [
+      "cargo install wasm2rs",
+      "cargo test --release --workspace"
+    ]
+  }
+}
