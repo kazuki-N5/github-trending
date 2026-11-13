@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wici-ai/inferssd | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>wici-ai/inferssd</h1>
+<div class="meta"><span>C++</span>
+<span>初掲載 2026-11-14（Trendshift 17位）</span>
+<a class="gh" href="https://github.com/wici-ai/inferssd" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="wici-ai__inferssd" data-repo="wici-ai/inferssd" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">RAMやVRAMに収まらない大規模MoEモデルをSSDからストリーミング実行するllama.cpp拡張</p>
+<h3>何ができるか</h3><ul><li>RAMやVRAMに収まらない大規模MoEモデルをSSDからストリーミングして推論できる</li><li>ブラウザチャットUIとOpenAI互換APIサーバーを提供する</li><li>DeepSeek・Qwen3・Muse-Spark等の主要MoEモデルに対応している</li><li>macOS（Metal）とLinux（CUDA）をサポートし、ワンライナーでインストールできる</li><li>llama.cppと比較してデコード速度が大幅に速い（DGX Sparkで約4.5倍）</li></ul>
+<h3>なぜ注目されているか</h3><p>数百GiBに及ぶ大規模MoEモデルを高価なGPUやRAMなしにSSDだけで動かせる点が注目されている。llama.cppより高速なベンチマーク結果を示しており、ローカルLLM推論の新たな選択肢として評価されている。</p>
+<h3>どんな人に役立つか</h3><p>高性能GPUや大容量RAMを持たずにDeepSeekやQwen3などの大規模MoEモデルをローカルで動かしたい研究者や開発者に向いている。OpenAI互換APIを備えるため、既存のLLMアプリをそのまま接続して使いたい人にも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>llama.cppをベースにMoEエキスパートをSSDからストリーミングする独自アーキテクチャを採用している</li><li>GGUFフォーマットのモデルファイルをそのまま利用できる</li><li>MacOSではMetal、LinuxではCUDAによるGPUアクセラレーションをサポートしている</li><li>OpenAI互換のREST APIエンドポイント（127.0.0.1:8080）を内蔵している</li></ul>
+<h3>試し方</h3>
+<ol><li>ワンライナーのインストールスクリプトを実行してinferssdをインストールする</li><li>inferssd cliでターミナルチャットを起動するか、inferssd serveでWebUIとAPIサーバーを起動する</li><li>初回起動時にモデルファイル（DeepSeekやMuseは約470GiB）が自動ダウンロードされる</li><li>ブラウザでhttp://127.0.0.1:8080にアクセスしてチャットを利用する</li></ol>
+<pre><code>inferssd cli
+inferssd serve
+inferssd --version</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-14.html#d-wici-ai__inferssd">2026-11-14</a>
+<span class="src trendshift">Trendshift 17位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

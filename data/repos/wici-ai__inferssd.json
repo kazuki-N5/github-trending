@@ -1,0 +1,34 @@
+{
+  "repo": "wici-ai/inferssd",
+  "language": "C++",
+  "readme": true,
+  "oneLiner": "RAMやVRAMに収まらない大規模MoEモデルをSSDからストリーミング実行するllama.cpp拡張",
+  "features": [
+    "RAMやVRAMに収まらない大規模MoEモデルをSSDからストリーミングして推論できる",
+    "ブラウザチャットUIとOpenAI互換APIサーバーを提供する",
+    "DeepSeek・Qwen3・Muse-Spark等の主要MoEモデルに対応している",
+    "macOS（Metal）とLinux（CUDA）をサポートし、ワンライナーでインストールできる",
+    "llama.cppと比較してデコード速度が大幅に速い（DGX Sparkで約4.5倍）"
+  ],
+  "why": "数百GiBに及ぶ大規模MoEモデルを高価なGPUやRAMなしにSSDだけで動かせる点が注目されている。llama.cppより高速なベンチマーク結果を示しており、ローカルLLM推論の新たな選択肢として評価されている。",
+  "whoFor": "高性能GPUや大容量RAMを持たずにDeepSeekやQwen3などの大規模MoEモデルをローカルで動かしたい研究者や開発者に向いている。OpenAI互換APIを備えるため、既存のLLMアプリをそのまま接続して使いたい人にも役立つ。",
+  "tech": [
+    "llama.cppをベースにMoEエキスパートをSSDからストリーミングする独自アーキテクチャを採用している",
+    "GGUFフォーマットのモデルファイルをそのまま利用できる",
+    "MacOSではMetal、LinuxではCUDAによるGPUアクセラレーションをサポートしている",
+    "OpenAI互換のREST APIエンドポイント（127.0.0.1:8080）を内蔵している"
+  ],
+  "tryIt": {
+    "steps": [
+      "ワンライナーのインストールスクリプトを実行してinferssdをインストールする",
+      "inferssd cliでターミナルチャットを起動するか、inferssd serveでWebUIとAPIサーバーを起動する",
+      "初回起動時にモデルファイル（DeepSeekやMuseは約470GiB）が自動ダウンロードされる",
+      "ブラウザでhttp://127.0.0.1:8080にアクセスしてチャットを利用する"
+    ],
+    "commands": [
+      "inferssd cli",
+      "inferssd serve",
+      "inferssd --version"
+    ]
+  }
+}

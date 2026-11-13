@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kuafuai/andee | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📁</div><div>
+<h1>kuafuai/andee</h1>
+<div class="meta"><span>Kotlin</span>
+<span>初掲載 2026-11-14（Trendshift 6位）</span>
+<a class="gh" href="https://github.com/kuafuai/andee" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="kuafuai__andee" data-repo="kuafuai/andee" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">スマホやMac上でどんなアプリも操作できるオンデバイスAIエージェント</p>
+<h3>何ができるか</h3><ul><li>アクセシビリティツリーとグリッドタップ方式で、インストール不要のアプリ統合なしに任意のアプリを操作できる。</li><li>オンデバイスの暗号化Vaultにパスワードを保存し、値を外部に返さず自動入力できる。</li><li>「シーン」と呼ぶ継続タスクモード、通知トリアージ、プライベートノートブック、スケジュール実行をサポートする。</li><li>フローティングボール UIでキャラクター表情・ペルソナ・音声によるインタラクションを提供する。</li><li>QRコードでペアリングした別デバイスのAndee同士が互いにタスクを依頼し合える連携機能がある。</li><li>MacではサンドボックスTerminalも利用でき、オプションでUSBドングル接続のロボット犬も制御できる。</li></ul>
+<h3>なぜ注目されているか</h3><p>スマートフォン向けのAIエージェントは多いが、root不要・統合設定不要でAndroid/Mac両対応し、パスワードや記憶情報が端末外に出ない設計を掲げている点が注目される。任意のOpenAI互換モデルを脳として使える汎用性の高さも話題の理由のひとつである。</p>
+<h3>どんな人に役立つか</h3><p>AIエージェントをスマートフォンやMacで実際に動かしてみたい開発者・研究者に向いている。自分のAPIキーとモデルを使ってプライバシーを保ちながらエージェントを試したいユーザーや、アクセシビリティサービスを使ったUIオートメーションを学びたい人にも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>Androidのアクセシビリティサービスでウィジェットツリーを読み取り、ラベル付きグリッドへのタップとスクリーンショットフォールバックでUI操作を実現している。</li><li>パスワードはオンデバイスVaultに保持し、外部へ平文を返さない設計でプライバシーを確保している。</li><li>OpenAI互換APIに対応しており、任意のモデル（クラウド・ローカル問わず）を切り替えて使える。</li><li>Kotlin製でAndroid（8.1以上、画面機能はAndroid 11以上）とmacOS 14以上（Apple Silicon・Intel両対応）をサポートする。</li><li>デバッグ用WebSocketサーバー（0.0.0.0:9008）を内蔵するが認証なしのため、信頼できないネットワークでの利用には注意が必要。</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubのReleasesページからAndroid用APKまたはMac用DMGをダウンロードする。</li><li>インストール後、アプリ内でOpenAI互換モデルのAPIキーとエンドポイントを設定する。</li><li>Androidの場合はアクセシビリティサービスの許可を付与してAndeeを有効にする。</li><li>フローティングボールをタップしてタスクを入力し、エージェントに操作を依頼する。</li></ol>
+<pre><code>git clone https://github.com/kuafuai/andee.git
+./gradlew assembleDebug</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-14.html#d-kuafuai__andee">2026-11-14</a>
+<span class="src trendshift">Trendshift 6位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

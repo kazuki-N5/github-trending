@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cloudflare/kitesurf | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>cloudflare/kitesurf</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-14（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/cloudflare/kitesurf" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="cloudflare__kitesurf" data-repo="cloudflare/kitesurf" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ChromeなしでCloudflare Workers上で動く実験的ブラウザエンジン</p>
+<h3>何ができるか</h3><ul><li>HTMLの解析・CSSの適用・ページJavaScriptの実行・スクリーンショット撮影をChrome不要で行える</li><li>Chrome DevTools Protocol（CDP）を実装しており、PuppeteerなどのCDPクライアントから接続できる</li><li>Cloudflare Workersにデプロイし、ページごとに独立したDynamic Workerを作成して隔離実行する</li><li>Puppeteerで接続してスクリーンショットを取得したり、DevToolsフロントエンドでDOMを検査したりできる</li><li>PDFとして出力する機能も備えている</li></ul>
+<h3>なぜ注目されているか</h3><p>ブラウザエンジンをサーバーレス環境で動かすという斬新なアプローチが注目されている。ChromeやヘッドレスブラウザのコンテナなしにCDPを実装している点が技術的に珍しく、Cloudflareのエッジで動くWebスクレイピングや自動化の新しい可能性を示している。</p>
+<h3>どんな人に役立つか</h3><p>Cloudflare Workers上でヘッドレスブラウザ的な処理（スクリーンショット取得・DOM操作・自動化）を行いたい開発者に向いている。コンテナ管理不要でPuppeteerのコードをそのまま流用したいユースケースにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>HTMLのDOM・レイアウト・描画にはBlitz（DioxusLabs製）を使用している</li><li>CSSのパース・カスケード・計算値の適用にはStylelo（Servo由来）を使っている</li><li>ページJavaScriptの実行エンジンにはWebAssembly上で動くBoa（Rust製JSエンジン）を採用している</li><li>テキストレイアウトと2Dグラフィックスにはlinebenderファミリー（Parley・Vello等）を使用し、PDF出力にはKrillaを使っている</li><li>ビルドシステムにBazelを用い、RustコードをWASMにコンパイルしてWorker上で実行する構成になっている</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンし、pnpm install --frozen-lockfileを実行する</li><li>pnpm run devを実行すると、WASMモジュールのビルドとwrangler devの起動が行われる（初回ビルドはRustのコンパイルがあるため時間がかかる）</li><li>http://127.0.0.1:8787/health にアクセスしてエンジンが起動していることを確認する</li><li>ランディングページ（http://127.0.0.1:8787/）でURLを入力してページを開くか、PuppeteerでwsエンドポイントにCDP接続して自動化を試せる</li></ol>
+<pre><code>pnpm install --frozen-lockfile
+pnpm run dev
+pnpm run build
+pnpm run deploy</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-14.html#h-cloudflare__kitesurf">2026-11-14 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>11 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

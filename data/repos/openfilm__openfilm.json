@@ -1,0 +1,37 @@
+{
+  "repo": "openfilm/openfilm",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "コーディングエージェントをAI動画制作エージェントに変えるオープンソースツール",
+  "features": [
+    "コーディングエージェント（Claude CodeやCodexなど）がHTMLファイルとして動画を生成できる",
+    "ブラウザベースのエディタStudioで、エージェントが作った動画を手動またはエージェント経由で編集できる",
+    "MP4・GIF・音声・字幕・透過動画などへのエクスポートや、Final Cut Pro・Premiere Pro・DaVinci Resolve向けタイムライン出力が可能",
+    "ElevenLabs・OpenAI・Google・fal などの生成AIサービスに自分のAPIキーで接続できる",
+    "フォント・サウンド・テキスト切れなどの不具合を自動検出する`look`チェック機能を持つ",
+    "macOS/Windows向けデスクトップアプリも提供され、ffmpegとヘッドレスブラウザが同梱されている"
+  ],
+  "why": "動画制作をコーディングエージェントに任せるという新しいアプローチで注目されている。標準的なWeb技術（HTML・CSS・JS）をそのまま活用するため、フレームワーク習得不要で既存のWeb開発スキルを活かせる点が特徴的だ。エディタでの編集内容がファイルに保存されエージェントがそれを引き継げる仕組みが、AIと人間の協調編集を実現している。",
+  "whoFor": "AIエージェントに動画制作を任せたいクリエイターや、Web技術を使って動画を生成・編集したいWebデベロッパーに適している。またプロ向けNLEソフトへのタイムライン書き出しに対応しているため、映像制作のワークフローにAIを組み込みたいビデオエディターにも役立つ。",
+  "tech": [
+    "動画の各ショットはHTMLページとして実装され、任意の時刻tの映像を返す`frame(t)`関数を定義することで決定的な再現が保証される",
+    "three.js・WebGL・Canvas・SVG・GSAP・CSSなど任意のブラウザ描画技術が利用可能で、特定フレームワークへの依存がない",
+    "Node.js 22.2以上とffmpeg、ヘッドレスChromiumを組み合わせて動画レンダリングを行う",
+    "スキルシステム（edit・media・canvas）によりエージェントの機能を拡張でき、コミュニティスキルも公開されている",
+    "動画フォーマット仕様（SPEC）はオープンに公開されており、カスタムプレーヤーやレンダラーの実装が可能"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node.js 22.2以上とffmpegをインストールする",
+      "npxコマンドで直接OpenFilmを起動するか、スキルとしてエージェントに追加する",
+      "エージェントにフィルムの生成を依頼するか、既存のGitHub上のサンプルフィルムを開いて確認する"
+    ],
+    "commands": [
+      "npx -y openfilm@latest",
+      "npx -y openfilm@latest open <github-url>",
+      "npx skills add openfilm/openfilm",
+      "pnpm install",
+      "pnpm dev"
+    ]
+  }
+}

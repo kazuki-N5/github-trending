@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vercel-labs/ui | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>vercel-labs/ui</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-14（Trendshift 2位）</span>
+<a class="gh" href="https://github.com/vercel-labs/ui" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="vercel-labs__ui" data-repo="vercel-labs/ui" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">エージェントが次世代UIを構築するための「振る舞い」ライブラリ</p>
+<h3>何ができるか</h3><ul><li>キーボードナビゲーション・フォーカス管理・選択・ポップアップ・ドラッグ＆ドロップ・ARIAを提供するコアライブラリ（@ui-sdk/core）</li><li>definePrimitive でコンポーネントの状態・API・スロットをフレームワーク非依存な形で定義できる</li><li>createParts を使って定義したプリミティブをReact・Vue・Svelte・Solid・Web Componentsの各フレームワーク向けコンポーネントに変換できる</li><li>createFocusRecovery などの名前付き「振る舞い」を組み合わせてUI部品を構築できる</li><li>AIエージェント向けにui-sdkスキルをCLIで追加し、エージェントがUIを構築できるよう支援する機能がある</li></ul>
+<h3>なぜ注目されているか</h3><p>ReactやVueなどのフレームワークに依存せず、UIの「振る舞い」（アクセシビリティ・キーボード操作・フォーカス管理など）を再利用可能な形で提供する設計が注目されている。AIエージェントがUIを生成・操作することを見据えたアーキテクチャを採用している点も新しい。Vercel Labsが開発しており、次世代のUI構築のあり方を模索するプロジェクトとして関心を集めている。</p>
+<h3>どんな人に役立つか</h3><p>React・Vue・Svelte・Solid・Web Componentsなど複数フレームワークに対応したUIコンポーネントライブラリを開発したいエンジニアに適している。アクセシビリティ対応（ARIA・キーボード操作）を体系的に扱いたい開発者や、AIエージェントにUIを構築・操作させる仕組みを実験したい開発者にも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>コアロジックをフレームワーク非依存な@ui-sdk/coreに集約し、各フレームワーク向けアダプター（react/vue/svelte/solid/web）が薄いラッパーを提供する設計</li><li>definePrimitive APIで状態・API・スロット（present/attrs/on/press/bind）を宣言的に組み合わせてUIプリミティブを定義する</li><li>createParts でプリミティブを各フレームワークのコンポーネントに変換し、同一定義から複数フレームワーク向けコンポーネントを生成できる</li><li>skills CLIを通じてAIエージェントにui-sdkスキルを追加し、エージェントがUIを構築できる仕組みを持つ</li></ul>
+<h3>試し方</h3>
+<ol><li>コアパッケージと使用するフレームワーク向けアダプターをインストールする</li><li>definePrimitive でUIプリミティブ（状態・API・スロット）を定義する</li><li>createParts でフレームワーク向けコンポーネントに変換し、JSX/テンプレートで利用する</li><li>AIエージェントから使う場合はnpx skills add コマンドでui-sdkスキルを追加する</li></ol>
+<pre><code>npm install @ui-sdk/react @ui-sdk/core
+npx skills add vercel-labs/ui --skill ui-sdk</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-14.html#d-vercel-labs__ui">2026-11-14</a>
+<span class="src trendshift">Trendshift 2位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

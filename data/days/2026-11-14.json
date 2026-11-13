@@ -1,0 +1,231 @@
+{
+  "date": "2026-11-14",
+  "collectedAt": "2026-11-14T07:08:40+09:00",
+  "entries": [
+    {
+      "repo": "GoogleChrome/modern-web-guidance",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Keep your coding agent up to date with the latest web best practices",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "vercel-labs/ui",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "A library of behaviors for agents to build the next generation of user interfaces.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "GoogleChrome/modern-web-guidance-src",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "zxsos/HGhubX",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "YellowFruit third-party client",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "aws/aws-emulator",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "kuafuai/andee",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Andee lives on your phone or Mac and uses any app like you do—no integrations, no root, any model; memory and passwords never leave your device | Andee 住进你的手机或 Mac，像你一样操作任何 App——无需集成、无需 Root、支持任意模型，记忆和密码绝不离开设备。",
+      "language": "Kotlin",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "h4ckf0r0day/obscura",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "The headless browser for AI agents and web scraping",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Edge0-AI/Edge0",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "Device-native foundation models: 145B on a laptop, 35B on a phone. Latent MoE, SSD-streamed weights, a router that predicts loads a step ahead. Mac, iPhone, Android, Windows.",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "openai/codex-security",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "edgerunners-2/capri-ai-desktop",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Cyberpunk AI desktop agent & voice companion for Windows. Supports Claude Code, Ollama, DeepSeek, Discord calls & screen automation.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "openfilm/openfilm",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "The open source AI video agent: turns any coding agent into a video agent, with an editor to change anything it makes.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "we-promise/sure",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "The personal finance app for everyone (by everyone)",
+      "language": "Ruby",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "alibaba/open-code-review",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "apex-compute/ANR",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Apex Neural Rendering (ANR) by Apex Compute",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "CopilotKit/OpenBot",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "tylertms/Stela",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Boots unmodified Apple silicon macOS on x86-64 PCs",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "wici-ai/inferssd",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Run models larger than your RAM or VRAM by streaming MoE experts from SSD. Built on llama.cpp.",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "Orca lets you run a fleet of coding agents (e.g. Claude Code, Codex) with your own subscription. Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Leonxlnx/taste-skill",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anefzaoui/misterdownloadmanager",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "cloudflare/kitesurf",
+        "source": "hatena",
+        "desc": "Kitesurf is an experimental browser engine that runs on Cloudflare Workers.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 11,
+        "sourceRank": 1
+      },
+      {
+        "repo": "higurashi-ai/Haru",
+        "source": "hatena",
+        "desc": "Haru: a low-latency, multilingual, full-duplex spoken dialogue model",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 2
+      },
+      {
+        "repo": "inuro/muse-chat-relay",
+        "source": "hatena",
+        "desc": "A Muse skill for handing work over to a dedicated side chat with a self-contained handover note.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 3
+      },
+      {
+        "repo": "ikey4u/zebkit",
+        "source": "hatena",
+        "desc": "A cross-platform browser engine for applications",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 4
+      }
+    ]
+  }
+}

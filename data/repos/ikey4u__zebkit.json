@@ -1,0 +1,39 @@
+{
+  "repo": "ikey4u/zebkit",
+  "language": "",
+  "readme": true,
+  "oneLiner": "ChromiumエンジンをElectron不要で自分のアプリに組み込めるクロスプラットフォームライブラリ",
+  "features": [
+    "WebViewを自アプリのウィンドウや独自イベントループに組み込める",
+    "PDFiumを使ったPDFのレンダリング・テキスト抽出・注釈・フォーム・署名検証ができる",
+    "FFmpegを利用し、メディアの再エンコードなしの保存やフレーム・音声のタップができる",
+    "CDP不要・Node.js不要でPlaywright APIをインプロセスで実行できる",
+    "MCPサーバー（zebkit-mcp）によりエージェントのブラウザ操作を制御できる",
+    "C・Rust・Python・Go・JavaScriptなど複数言語向けのバインディングが用意されている"
+  ],
+  "why": "ElectronはアプリにNode.jsランタイムを丸ごと同梱するため起動が遅くメモリ消費も大きいが、zebkitはChromiumエンジン単体を提供し起動速度・バイナリサイズ・メモリ使用量いずれもElectronより優れているとベンチマークで示されている。Playwright統合やMCPサーバー対応など、AIエージェント・テスト自動化のニーズにも応えている点が注目される。",
+  "whoFor": "WebViewやPDF処理・メディア機能をネイティブアプリに組み込みたいC/C++・Rust・Python・Go開発者に向いている。ElectronやCEFの代替を探しているチームや、Playwright互換のブラウザ制御を組み込みたいテスト・エージェント開発者にも適している。",
+  "tech": [
+    "Chromium 157のBlink・V8・Skiaレイヤーをライブラリとして切り出して提供している",
+    "PDFium・FFmpeg・SQLite・ICU・BoringSSLなど約17のCライブラリをzebkit_vendor_*としてエクスポートしている",
+    "コアAPIはC言語で、C++・Rust（cgo）・Python（ctypes）・GoなどのFFIバインディングを用意している",
+    "PlaywrightのAPIをCDP・Node.jsなしでインプロセス実行できる独自統合を持つ",
+    "MCPプロトコルに対応したzebkit-mcpサーバーを内蔵し、AIエージェントからの操作を受け付ける"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubリリースからzebkit-0.5.0-<ターゲット>.tar.xzをダウンロードして展開する",
+      "利用言語に合わせてバインディングをインストールする（例：Pythonはpip install zebkit）",
+      "ZEBKIT_DIR環境変数に展開先パスを設定する",
+      "サンプルコードをコンパイルして実行し、WebViewが起動することを確認する"
+    ],
+    "commands": [
+      "pip install zebkit",
+      "export ZEBKIT_DIR=/path/to/zebkit-0.5.0-<target>",
+      "go get github.com/ikey4u/zebkit/bindings/golang@v0.5.0",
+      "cc app.c -I$PKG/include -L$PKG -l:libzebkit.so.1 -Wl,-rpath,$PKG -o app",
+      "./app --remote-debugging-port=9222",
+      "$PKG/zebkit-run https://example.com/"
+    ]
+  }
+}

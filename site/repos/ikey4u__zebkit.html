@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ikey4u/zebkit | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>ikey4u/zebkit</h1>
+<div class="meta">
+<span>初掲載 2026-11-14（はてなブックマーク 4位）</span>
+<a class="gh" href="https://github.com/ikey4u/zebkit" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="ikey4u__zebkit" data-repo="ikey4u/zebkit" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ChromiumエンジンをElectron不要で自分のアプリに組み込めるクロスプラットフォームライブラリ</p>
+<h3>何ができるか</h3><ul><li>WebViewを自アプリのウィンドウや独自イベントループに組み込める</li><li>PDFiumを使ったPDFのレンダリング・テキスト抽出・注釈・フォーム・署名検証ができる</li><li>FFmpegを利用し、メディアの再エンコードなしの保存やフレーム・音声のタップができる</li><li>CDP不要・Node.js不要でPlaywright APIをインプロセスで実行できる</li><li>MCPサーバー（zebkit-mcp）によりエージェントのブラウザ操作を制御できる</li><li>C・Rust・Python・Go・JavaScriptなど複数言語向けのバインディングが用意されている</li></ul>
+<h3>なぜ注目されているか</h3><p>ElectronはアプリにNode.jsランタイムを丸ごと同梱するため起動が遅くメモリ消費も大きいが、zebkitはChromiumエンジン単体を提供し起動速度・バイナリサイズ・メモリ使用量いずれもElectronより優れているとベンチマークで示されている。Playwright統合やMCPサーバー対応など、AIエージェント・テスト自動化のニーズにも応えている点が注目される。</p>
+<h3>どんな人に役立つか</h3><p>WebViewやPDF処理・メディア機能をネイティブアプリに組み込みたいC/C++・Rust・Python・Go開発者に向いている。ElectronやCEFの代替を探しているチームや、Playwright互換のブラウザ制御を組み込みたいテスト・エージェント開発者にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>Chromium 157のBlink・V8・Skiaレイヤーをライブラリとして切り出して提供している</li><li>PDFium・FFmpeg・SQLite・ICU・BoringSSLなど約17のCライブラリをzebkit_vendor_*としてエクスポートしている</li><li>コアAPIはC言語で、C++・Rust（cgo）・Python（ctypes）・GoなどのFFIバインディングを用意している</li><li>PlaywrightのAPIをCDP・Node.jsなしでインプロセス実行できる独自統合を持つ</li><li>MCPプロトコルに対応したzebkit-mcpサーバーを内蔵し、AIエージェントからの操作を受け付ける</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubリリースからzebkit-0.5.0-&lt;ターゲット&gt;.tar.xzをダウンロードして展開する</li><li>利用言語に合わせてバインディングをインストールする（例：Pythonはpip install zebkit）</li><li>ZEBKIT_DIR環境変数に展開先パスを設定する</li><li>サンプルコードをコンパイルして実行し、WebViewが起動することを確認する</li></ol>
+<pre><code>pip install zebkit
+export ZEBKIT_DIR=/path/to/zebkit-0.5.0-&lt;target&gt;
+go get github.com/ikey4u/zebkit/bindings/golang@v0.5.0
+cc app.c -I$PKG/include -L$PKG -l:libzebkit.so.1 -Wl,-rpath,$PKG -o app
+./app --remote-debugging-port=9222
+$PKG/zebkit-run https://example.com/</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-14.html#h-ikey4u__zebkit">2026-11-14 はてブ</a>
+<span class="src hatena">はてなブックマーク 4位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

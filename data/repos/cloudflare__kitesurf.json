@@ -1,0 +1,36 @@
+{
+  "repo": "cloudflare/kitesurf",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "ChromeなしでCloudflare Workers上で動く実験的ブラウザエンジン",
+  "features": [
+    "HTMLの解析・CSSの適用・ページJavaScriptの実行・スクリーンショット撮影をChrome不要で行える",
+    "Chrome DevTools Protocol（CDP）を実装しており、PuppeteerなどのCDPクライアントから接続できる",
+    "Cloudflare Workersにデプロイし、ページごとに独立したDynamic Workerを作成して隔離実行する",
+    "Puppeteerで接続してスクリーンショットを取得したり、DevToolsフロントエンドでDOMを検査したりできる",
+    "PDFとして出力する機能も備えている"
+  ],
+  "why": "ブラウザエンジンをサーバーレス環境で動かすという斬新なアプローチが注目されている。ChromeやヘッドレスブラウザのコンテナなしにCDPを実装している点が技術的に珍しく、Cloudflareのエッジで動くWebスクレイピングや自動化の新しい可能性を示している。",
+  "whoFor": "Cloudflare Workers上でヘッドレスブラウザ的な処理（スクリーンショット取得・DOM操作・自動化）を行いたい開発者に向いている。コンテナ管理不要でPuppeteerのコードをそのまま流用したいユースケースにも適している。",
+  "tech": [
+    "HTMLのDOM・レイアウト・描画にはBlitz（DioxusLabs製）を使用している",
+    "CSSのパース・カスケード・計算値の適用にはStylelo（Servo由来）を使っている",
+    "ページJavaScriptの実行エンジンにはWebAssembly上で動くBoa（Rust製JSエンジン）を採用している",
+    "テキストレイアウトと2Dグラフィックスにはlinebenderファミリー（Parley・Vello等）を使用し、PDF出力にはKrillaを使っている",
+    "ビルドシステムにBazelを用い、RustコードをWASMにコンパイルしてWorker上で実行する構成になっている"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンし、pnpm install --frozen-lockfileを実行する",
+      "pnpm run devを実行すると、WASMモジュールのビルドとwrangler devの起動が行われる（初回ビルドはRustのコンパイルがあるため時間がかかる）",
+      "http://127.0.0.1:8787/health にアクセスしてエンジンが起動していることを確認する",
+      "ランディングページ（http://127.0.0.1:8787/）でURLを入力してページを開くか、PuppeteerでwsエンドポイントにCDP接続して自動化を試せる"
+    ],
+    "commands": [
+      "pnpm install --frozen-lockfile",
+      "pnpm run dev",
+      "pnpm run build",
+      "pnpm run deploy"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "repo": "vercel-labs/ui",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "エージェントが次世代UIを構築するための「振る舞い」ライブラリ",
+  "features": [
+    "キーボードナビゲーション・フォーカス管理・選択・ポップアップ・ドラッグ＆ドロップ・ARIAを提供するコアライブラリ（@ui-sdk/core）",
+    "definePrimitive でコンポーネントの状態・API・スロットをフレームワーク非依存な形で定義できる",
+    "createParts を使って定義したプリミティブをReact・Vue・Svelte・Solid・Web Componentsの各フレームワーク向けコンポーネントに変換できる",
+    "createFocusRecovery などの名前付き「振る舞い」を組み合わせてUI部品を構築できる",
+    "AIエージェント向けにui-sdkスキルをCLIで追加し、エージェントがUIを構築できるよう支援する機能がある"
+  ],
+  "why": "ReactやVueなどのフレームワークに依存せず、UIの「振る舞い」（アクセシビリティ・キーボード操作・フォーカス管理など）を再利用可能な形で提供する設計が注目されている。AIエージェントがUIを生成・操作することを見据えたアーキテクチャを採用している点も新しい。Vercel Labsが開発しており、次世代のUI構築のあり方を模索するプロジェクトとして関心を集めている。",
+  "whoFor": "React・Vue・Svelte・Solid・Web Componentsなど複数フレームワークに対応したUIコンポーネントライブラリを開発したいエンジニアに適している。アクセシビリティ対応（ARIA・キーボード操作）を体系的に扱いたい開発者や、AIエージェントにUIを構築・操作させる仕組みを実験したい開発者にも役立つ。",
+  "tech": [
+    "コアロジックをフレームワーク非依存な@ui-sdk/coreに集約し、各フレームワーク向けアダプター（react/vue/svelte/solid/web）が薄いラッパーを提供する設計",
+    "definePrimitive APIで状態・API・スロット（present/attrs/on/press/bind）を宣言的に組み合わせてUIプリミティブを定義する",
+    "createParts でプリミティブを各フレームワークのコンポーネントに変換し、同一定義から複数フレームワーク向けコンポーネントを生成できる",
+    "skills CLIを通じてAIエージェントにui-sdkスキルを追加し、エージェントがUIを構築できる仕組みを持つ"
+  ],
+  "tryIt": {
+    "steps": [
+      "コアパッケージと使用するフレームワーク向けアダプターをインストールする",
+      "definePrimitive でUIプリミティブ（状態・API・スロット）を定義する",
+      "createParts でフレームワーク向けコンポーネントに変換し、JSX/テンプレートで利用する",
+      "AIエージェントから使う場合はnpx skills add コマンドでui-sdkスキルを追加する"
+    ],
+    "commands": [
+      "npm install @ui-sdk/react @ui-sdk/core",
+      "npx skills add vercel-labs/ui --skill ui-sdk"
+    ]
+  }
+}

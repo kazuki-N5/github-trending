@@ -1,0 +1,40 @@
+{
+  "repo": "alibaba/open-code-review",
+  "language": "Go",
+  "readme": true,
+  "oneLiner": "AIエージェントによる高精度・低コストなコードレビューCLIツール",
+  "features": [
+    "Gitのdiff（ステージ済み・未ステージ・ブランチ間・特定コミット）を対象にAIコードレビューを実行できる。",
+    "ファイル・ディレクトリ・リポジトリ全体をdiffなしでスキャンする全ファイル審査機能（ocr scan）がある。",
+    "エージェントがファイル全体の読み込みやコードベース検索を行い、コンテキストを踏まえたレビューコメントを生成する。",
+    "レビューの中断・再開をサポートするセッション管理機能と、ブラウザでコメントを確認・管理できるビューアがある。",
+    "GitHub Actions・GitLab CI・Gerritなど主要CI/CDプラットフォームへの統合をサポートしている。",
+    "Claude CodeやCodexなどのコーディングエージェントのモデルをそのまま利用するデリゲーションモードがある。"
+  ],
+  "why": "Alibaba社内で数万人の開発者が使用した実績を持ち、オープンソース化されたツールである。独自ベンチマーク（AACR-Bench）では同一モデルを使ったClaude Codeと比較して高い精度・F1スコアを達成しつつ、トークン消費量を約9分の1に抑えたと報告されており、コスト効率の高さが注目を集めている。決定論的な前処理とLLMエージェントを組み合わせたハイブリッドアーキテクチャが、既存の純粋プロンプト駆動型ツールの課題（カバレッジ不足・行番号ずれ・品質の不安定さ）を解決しようとしている点が評価されている。",
+  "whoFor": "AIを活用したコードレビューをローカル環境やCI/CDパイプラインに導入したい開発者・チーム向けのツールである。Claude Code・Codex・Cursor・Kimi Code・OpenCodeなどのコーディングエージェントを使っている開発者は、既存のモデル設定をそのまま流用できる。",
+  "tech": [
+    "Go言語で実装されており、npmパッケージまたはGitHub Releasesのバイナリとして配布されている。",
+    "ファイル選択・バンドル・ルール照合を決定論的に行う前処理パイプラインとLLMエージェントを組み合わせたハイブリッドアーキテクチャを採用している。",
+    "OpenAI・Anthropic互換のLLMプロバイダーに対応しており、任意のモデルを設定して利用できる。",
+    "OpenTelemetryによるテレメトリ収集とModel Context Protocol（MCP）サーバーによる外部ツール連携をサポートしている。",
+    "Git 2.41以降のdiff・検索機能を活用して差分取得とコードベース探索を行う。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Git 2.41以降がインストールされていることを確認する。",
+      "npmでCLIをグローバルインストールする。",
+      "ocr config providerでLLMプロバイダーを選択し、ocr config modelでモデルを設定する。",
+      "レビューしたいリポジトリに移動してocr reviewを実行する。"
+    ],
+    "commands": [
+      "npm install -g @alibaba-group/open-code-review",
+      "ocr config provider",
+      "ocr config model",
+      "ocr review",
+      "ocr review --from main --to feature-branch",
+      "ocr review --commit abc123",
+      "ocr scan --path internal/agent"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>alibaba/open-code-review | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>alibaba/open-code-review</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-11-14（Trendshift 13位）</span>
+<a class="gh" href="https://github.com/alibaba/open-code-review" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="alibaba__open-code-review" data-repo="alibaba/open-code-review" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントによる高精度・低コストなコードレビューCLIツール</p>
+<h3>何ができるか</h3><ul><li>Gitのdiff（ステージ済み・未ステージ・ブランチ間・特定コミット）を対象にAIコードレビューを実行できる。</li><li>ファイル・ディレクトリ・リポジトリ全体をdiffなしでスキャンする全ファイル審査機能（ocr scan）がある。</li><li>エージェントがファイル全体の読み込みやコードベース検索を行い、コンテキストを踏まえたレビューコメントを生成する。</li><li>レビューの中断・再開をサポートするセッション管理機能と、ブラウザでコメントを確認・管理できるビューアがある。</li><li>GitHub Actions・GitLab CI・Gerritなど主要CI/CDプラットフォームへの統合をサポートしている。</li><li>Claude CodeやCodexなどのコーディングエージェントのモデルをそのまま利用するデリゲーションモードがある。</li></ul>
+<h3>なぜ注目されているか</h3><p>Alibaba社内で数万人の開発者が使用した実績を持ち、オープンソース化されたツールである。独自ベンチマーク（AACR-Bench）では同一モデルを使ったClaude Codeと比較して高い精度・F1スコアを達成しつつ、トークン消費量を約9分の1に抑えたと報告されており、コスト効率の高さが注目を集めている。決定論的な前処理とLLMエージェントを組み合わせたハイブリッドアーキテクチャが、既存の純粋プロンプト駆動型ツールの課題（カバレッジ不足・行番号ずれ・品質の不安定さ）を解決しようとしている点が評価されている。</p>
+<h3>どんな人に役立つか</h3><p>AIを活用したコードレビューをローカル環境やCI/CDパイプラインに導入したい開発者・チーム向けのツールである。Claude Code・Codex・Cursor・Kimi Code・OpenCodeなどのコーディングエージェントを使っている開発者は、既存のモデル設定をそのまま流用できる。</p>
+<h3>技術的なポイント</h3><ul><li>Go言語で実装されており、npmパッケージまたはGitHub Releasesのバイナリとして配布されている。</li><li>ファイル選択・バンドル・ルール照合を決定論的に行う前処理パイプラインとLLMエージェントを組み合わせたハイブリッドアーキテクチャを採用している。</li><li>OpenAI・Anthropic互換のLLMプロバイダーに対応しており、任意のモデルを設定して利用できる。</li><li>OpenTelemetryによるテレメトリ収集とModel Context Protocol（MCP）サーバーによる外部ツール連携をサポートしている。</li><li>Git 2.41以降のdiff・検索機能を活用して差分取得とコードベース探索を行う。</li></ul>
+<h3>試し方</h3>
+<ol><li>Git 2.41以降がインストールされていることを確認する。</li><li>npmでCLIをグローバルインストールする。</li><li>ocr config providerでLLMプロバイダーを選択し、ocr config modelでモデルを設定する。</li><li>レビューしたいリポジトリに移動してocr reviewを実行する。</li></ol>
+<pre><code>npm install -g @alibaba-group/open-code-review
+ocr config provider
+ocr config model
+ocr review
+ocr review --from main --to feature-branch
+ocr review --commit abc123
+ocr scan --path internal/agent</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-14.html#d-alibaba__open-code-review">2026-11-14</a>
+<span class="src trendshift">Trendshift 13位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

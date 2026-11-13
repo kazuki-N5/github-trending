@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>openfilm/openfilm | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎬</div><div>
+<h1>openfilm/openfilm</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-14（Trendshift 11位）</span>
+<a class="gh" href="https://github.com/openfilm/openfilm" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="openfilm__openfilm" data-repo="openfilm/openfilm" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">コーディングエージェントをAI動画制作エージェントに変えるオープンソースツール</p>
+<h3>何ができるか</h3><ul><li>コーディングエージェント（Claude CodeやCodexなど）がHTMLファイルとして動画を生成できる</li><li>ブラウザベースのエディタStudioで、エージェントが作った動画を手動またはエージェント経由で編集できる</li><li>MP4・GIF・音声・字幕・透過動画などへのエクスポートや、Final Cut Pro・Premiere Pro・DaVinci Resolve向けタイムライン出力が可能</li><li>ElevenLabs・OpenAI・Google・fal などの生成AIサービスに自分のAPIキーで接続できる</li><li>フォント・サウンド・テキスト切れなどの不具合を自動検出する`look`チェック機能を持つ</li><li>macOS/Windows向けデスクトップアプリも提供され、ffmpegとヘッドレスブラウザが同梱されている</li></ul>
+<h3>なぜ注目されているか</h3><p>動画制作をコーディングエージェントに任せるという新しいアプローチで注目されている。標準的なWeb技術（HTML・CSS・JS）をそのまま活用するため、フレームワーク習得不要で既存のWeb開発スキルを活かせる点が特徴的だ。エディタでの編集内容がファイルに保存されエージェントがそれを引き継げる仕組みが、AIと人間の協調編集を実現している。</p>
+<h3>どんな人に役立つか</h3><p>AIエージェントに動画制作を任せたいクリエイターや、Web技術を使って動画を生成・編集したいWebデベロッパーに適している。またプロ向けNLEソフトへのタイムライン書き出しに対応しているため、映像制作のワークフローにAIを組み込みたいビデオエディターにも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>動画の各ショットはHTMLページとして実装され、任意の時刻tの映像を返す`frame(t)`関数を定義することで決定的な再現が保証される</li><li>three.js・WebGL・Canvas・SVG・GSAP・CSSなど任意のブラウザ描画技術が利用可能で、特定フレームワークへの依存がない</li><li>Node.js 22.2以上とffmpeg、ヘッドレスChromiumを組み合わせて動画レンダリングを行う</li><li>スキルシステム（edit・media・canvas）によりエージェントの機能を拡張でき、コミュニティスキルも公開されている</li><li>動画フォーマット仕様（SPEC）はオープンに公開されており、カスタムプレーヤーやレンダラーの実装が可能</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js 22.2以上とffmpegをインストールする</li><li>npxコマンドで直接OpenFilmを起動するか、スキルとしてエージェントに追加する</li><li>エージェントにフィルムの生成を依頼するか、既存のGitHub上のサンプルフィルムを開いて確認する</li></ol>
+<pre><code>npx -y openfilm@latest
+npx -y openfilm@latest open &lt;github-url&gt;
+npx skills add openfilm/openfilm
+pnpm install
+pnpm dev</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-14.html#d-openfilm__openfilm">2026-11-14</a>
+<span class="src trendshift">Trendshift 11位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

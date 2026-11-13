@@ -1,0 +1,32 @@
+{
+  "repo": "edgerunners-2/capri-ai-desktop",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Windows向けサイバーパンク風AIデスクトップエージェント＆音声コンパニオン",
+  "features": [
+    "テキストと音声でAIと会話でき、「Hey Capri」ウェイクワードや80言語の音声認識に対応している",
+    "Fish Audio・ElevenLabs・OpenAIなど複数のTTSエンジンで音声出力できる",
+    "アプリ起動・音楽再生・タブを閉じる・クリックなどのデスクトップ操作をAIが自動で行える",
+    "過去の会話履歴と画面のコンテキストをローカルに保存してAIが参照できる",
+    "Discordなどの通話アプリと連携して通話中にAI音声コンパニオンとして使える（Windowsベータ版）",
+    "スキン・設定・コードモッドを追加できるモッドシステムを備えている"
+  ],
+  "why": "Claude Code・Codex・DeepSeekなど複数のAIエンジンをGUIで統合し、音声操作やデスクトップ自動化まで一括して扱える点が珍しい。ローカルファーストで動作しOllamaによるオフラインLLMも使えるため、プライバシーを重視するユーザーにも訴求する。サイバーパンクな見た目とモッドによるカスタマイズ性が話題を呼んでいる。",
+  "whoFor": "Windows上でAIアシスタントをGUIから使いたい開発者やガジェット好きに向いている。ターミナルではなくデスクトップ上でClaude CodeやDeepSeekを操作したいユーザーや、Discord通話中にAI音声コンパニオンを活用したいゲーマーにも適している。",
+  "tech": [
+    "AIエンジンとしてClaude Code・Codex・DeepSeek・Antigravityなど複数のアダプターをサポートしている",
+    "ローカルモデルはOllamaおよびLLaMA.cppを経由してQwenやLlamaなどを実行できる",
+    "音声認識にQwen3-ASRを使用し、TTSにはFish Audio・ElevenLabs・OpenAIを選択できる",
+    "設定はYAMLファイルで管理し、スキン・設定モッド・コードモッドの3種類の拡張形式を持つ",
+    "Windows専用のPortable ZIPとして配布されており、インストール不要で即起動できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubのリリースページからCapri-Portable.zipをダウンロードする",
+      "任意のフォルダに解凍して実行ファイルを起動する（Windows 10以降が必要）",
+      "初回起動時にAIエンジンのアカウントにサインインするかAPIキーを貼り付ける",
+      "ローカルモデルを使う場合はCapri起動前にOllamaを起動しておく"
+    ],
+    "commands": []
+  }
+}

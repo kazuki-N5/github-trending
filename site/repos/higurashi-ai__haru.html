@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>higurashi-ai/Haru | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎙️</div><div>
+<h1>higurashi-ai/Haru</h1>
+<div class="meta">
+<span>初掲載 2026-11-14（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/higurashi-ai/Haru" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="higurashi-ai__haru" data-repo="higurashi-ai/Haru" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">低遅延・多言語対応の全二重音声対話モデル。聞きながら同時に話せる。</p>
+<h3>何ができるか</h3><ul><li>全二重動作（7.5 Hz）：133msごとに音声フレームを入出力し、聞くことと話すことが互いをブロックせずに同時に行える。</li><li>連続音声潜在表現：フレームごとに64次元の潜在ベクトルをMLPヘッドで1ステップ生成し、離散音声トークンや別途の音声トランスフォーマーを必要としない。</li><li>キャラクターと声の制御：テキストカードでキャラクターを定義し、短い参照音声クリップで声を指定できる。</li><li>多言語対応：英語・スペイン語・ポルトガル語・ドイツ語・フランス語・中国語・日本語・ロシア語・韓国語の9言語に対応している。</li><li>複数の実装環境：PyTorch（NVIDIA GPU）、MLX（Apple Silicon + macOSネイティブアプリ）、vLLMプラグインの3実装とWebデモを提供している。</li><li>オフライン推論：コマンドラインツールで音声ファイルを入力として応答音声を生成できる。</li></ul>
+<h3>なぜ注目されているか</h3><p>全二重音声対話はターンベースの従来モデルと異なり、電話のように自然な割り込みや同時発話が可能で、リアルタイム音声AIの新しいアプローチとして注目されている。Haru-4Bは事前学習済みベースモデルとして推論コードとWebデモが公開されており、研究者や開発者が手軽に試せる形で提供されている。Apple SiliconからNVIDIA GPUまで複数の実装が揃っており、幅広い環境での実験が可能な点も関心を集める要因となっている。</p>
+<h3>どんな人に役立つか</h3><p>音声対話システムや会話AIの研究・開発に取り組む研究者・エンジニアに役立つ。多言語の全二重音声対話をローカル環境で試したい開発者や、カスタムキャラクターの音声アシスタントを構築したいエンジニアにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>ベース言語モデルにQwen（Qwen3.5）を使用し、VibeVoice音響トークナイザーで24kHz音声を1フレーム（3200サンプル）あたり1つの潜在ベクトルに変換する。</li><li>音声生成にImproved MeanFlowによる1ステップ生成フレームワークを採用しており、フレームの生成を単一の前向きパスで完結させている。</li><li>NVIDIA環境ではTritonカーネルとCUDAグラフリプレイを用いてコーデック処理を約0.7ms/フレーム（通常の約6msから高速化）に削減できる。</li><li>Apple Silicon向けにはMLXフレームワークとMetalカーネルを用いたネイティブmacOSアプリが提供され、GatedDeltaNetリカレンスをハードウェア最適化している。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンし、haruディレクトリをpipでインストールする。</li><li>サーバーを起動するとHugging FaceからHaru-4Bモデルが自動ダウンロードされる（約12GBのGPUメモリが必要）。</li><li>ブラウザでhttp://localhost:8998 を開き、キャラクターと声（3秒〜3分の参照音声クリップ）を設定して会話を開始する。</li></ol>
+<pre><code>pip install -e ./haru
+python -m haru.server --hf-repo higurashi-ai/Haru-4B
+haru-inference user.wav reply.wav --reference voice.wav --system-prompt &quot;$(cat card.txt)&quot; --stereo</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-14.html#h-higurashi-ai__haru">2026-11-14 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
