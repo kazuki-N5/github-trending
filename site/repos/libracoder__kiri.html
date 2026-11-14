@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libracoder/kiri | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>libracoder/kiri</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-15（Trendshift 3位）</span>
+<a class="gh" href="https://github.com/libracoder/kiri" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="libracoder__kiri" data-repo="libracoder/kiri" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">macOS・Windows・Linux向けの小さく高速なコンテナランタイム</p>
+<h3>何ができるか</h3><ul><li>Docker Engine APIを実装しており、既存のdocker CLIやComposeがそのまま使える</li><li>コンテナの起動・終了がAPIレベルで約2.5msと非常に高速</li><li>デーモンのメモリ使用量が約15MBと軽量で、60秒アイドル後にVMがスリープする</li><li>http://&lt;name&gt;.kiri.local でローカルドメインとHTTPSを自動提供する</li><li>ワンコマンドでシングルノードのKubernetesクラスターを起動できる</li><li>OrbStackやDocker Desktopからのイメージ・ボリューム・コンテナ移行をサポートする</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Docker DesktopやOrbStackの代替として、起動速度とリソース効率を大幅に改善した点が注目を集めている。ベンチマークではDocker Desktopの約85倍高速とされており、開発体験の向上に直結する。Rustで実装された独自のVM・ゲストエージェント構成が技術的な新鮮さを持つ。</p>
+<h3>どんな人に役立つか</h3><p>Docker互換のコンテナ環境を軽量・高速に使いたい開発者に向いている。特にmacOSやWindowsでDocker DesktopやOrbStackの重さやコストに不満を感じているエンジニアに適している。既存のDockerワークフローをそのまま維持しながら乗り換えたい人にも有用。</p>
+<h3>技術的なポイント</h3><ul><li>RustでDocker Engine APIを実装し、既存Dockerクライアントとの互換性を確保している</li><li>ホストデーモンとゲスト間の通信にvsockを使用し、カスタム約10MBのLinuxカーネルをVMとして利用している</li><li>ゲストエージェントは約900KBのRustプログラムがPID 1として動作し、clone3で直接コンテナを起動している</li><li>runc・containerd shim・dockerdを使わずシンプルな構成を実現している</li><li>38言語対応のネイティブUIを備え、メニューバーアイコンからも操作できる</li></ul>
+<h3>試し方</h3>
+<ol><li>runkiri.com/releases からプラットフォームに合ったパッケージ（.dmg / .msi / .deb / .rpm）をダウンロードしてインストールする</li><li>初回起動時にkiriというDockerコンテキストが自動作成される</li><li>docker --context kiri コマンドでKiriを使ってコンテナを実行する</li></ol>
+<pre><code>docker --context kiri run --rm alpine echo hello
+docker --context kiri compose up -d
+kiri k8s start
+kiri machine create dev --distro ubuntu &amp;&amp; kiri machine shell dev
+kiri import</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-15.html#d-libracoder__kiri">2026-11-15</a>
+<span class="src trendshift">Trendshift 3位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

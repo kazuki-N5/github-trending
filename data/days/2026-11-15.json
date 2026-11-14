@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-15",
+  "collectedAt": "2026-11-15T07:07:32+09:00",
+  "entries": [
+    {
+      "repo": "GoogleChrome/modern-web-guidance",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Keep your coding agent up to date with the latest web best practices",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "RoutineMiku/apkstart",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "Windows 上的安卓应用运行器：双击 APK 即装，应用以独立窗口与桌面图标运行，自持 QEMU 运行时",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "libracoder/kiri",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "A small, fast container runtime for macOS, Windows and Linux",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "deepseek-ai/chat-demo",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "Chat Demo",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "Chrome DevTools for coding agents",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "alibaba/open-code-review",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "GoogleChrome/modern-web-guidance-src",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "cloudflare/kitesurf",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "Kitesurf is an experimental browser engine that runs on Cloudflare Workers.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "dream-num/univer",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "backnotprop/plannotator",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click. ",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "tradermonty/claude-trading-skills",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Likely7/Veyra-NRVideo",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "BaaRai/ARTEX",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "ARTEX - AI autonomous penetration testing system (English translation)",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "DevedevT/FFmpeg-GUI-Editor-Windows",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Lightweight portable FFmpeg GUI & lossless video trimmer for Windows (ready-to-use .exe). Supports English, Russian, Chinese, German, French & Italian.",
+      "language": "Visual Basic .NET",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "martin-olivier/airgorah",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "A WiFi security auditing software",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "openfilm/openfilm",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "The open source AI video agent: turns any coding agent into a video agent, with an editor to change anything it makes.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Edge0-AI/Edge0",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Device-native foundation models: 145B on a laptop, 35B on a phone. Latent MoE, SSD-streamed weights, a router that predicts loads a step ahead. Mac, iPhone, Android, Windows.",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "opencoredev/islandcn",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "The open-source Dynamic Island for React, installed with shadcn.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Ebony-Vinyl/dsh-our-free-model",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "aws-samples/sample-ai-vulnerability-harness-steering-file",
+        "source": "hatena",
+        "desc": "Steering files that configure an AI coding assistant to perform defensive evidence-based security vulnerability triage. Companion sample for the blog post \"Configuring Your AI Vulnerabili",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 1
+      }
+    ]
+  }
+}

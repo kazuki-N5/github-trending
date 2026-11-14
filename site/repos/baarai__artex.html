@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BaaRai/ARTEX | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛡️</div><div>
+<h1>BaaRai/ARTEX</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-11-15（Trendshift 13位）</span>
+<a class="gh" href="https://github.com/BaaRai/ARTEX" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="baarai__artex" data-repo="BaaRai/ARTEX" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">LLM駆動の自律型ペネトレーションテストプラットフォーム</p>
+<h3>何ができるか</h3><ul><li>プランナーエージェントがゴールを意図に分解し、ワーカーエージェントが実際のセキュリティツールを実行して結果をグラフに書き戻す</li><li>MITMプロキシとブラウザ拡張機能でHTTPトラフィックをキャプチャし、発見した脆弱性に証拠を紐づける</li><li>人間による承認ゲートとスコープ・トークン予算管理で自律的な動作を制御する</li><li>アセットグラフと探索グラフで対象資産の網羅状況を可視化する</li><li>Anthropic・OpenAI・Ollamaなど複数のLLMバックエンドに対応し、フェイルオーバーもサポートする</li><li>再テストエージェントが既存の発見事項を再検証し、修正済み・未修正・未確認に分類する</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> LLMを活用した自律型ペネトレーションテストという新興分野への注目度が高まっており、実ツール連携・証拠保持・承認ゲートを備えた実用的な実装として関心を集めていると考えられる。GoによるシングルバイナリとNext.js UIの組み合わせで導入ハードルが低く、PostgreSQLのみを外部依存とするシンプルな構成も評価されていると推測される。</p>
+<h3>どんな人に役立つか</h3><p>自社または許可を得たシステムに対してペネトレーションテストを行うセキュリティエンジニアやレッドチームに適している。バグバウンティ研究者や、隔離環境で自社資産のセキュリティ評価を自動化したい組織にも活用できる。</p>
+<h3>技術的なポイント</h3><ul><li>GoのシングルバイナリにNext.js UIをgo:embedで埋め込み、PostgreSQLのみを外部依存とするシンプルなアーキテクチャ</li><li>プランナーとワーカーに分かれたマルチエージェント構成で、グラフ変更イベントによりループを駆動するイベント駆動設計</li><li>MITMプロキシ（生成CA証明書）とBashツールコールのトレースで証拠を収集し、AES-256-GCMで暗号化して保存</li><li>nmap・nuclei・httpx・katana・ffuf・dalfox・sqlmapなどの実セキュリティツールをDockerイメージに同梱して実行</li><li>ツール出力をデータとして扱う「信頼境界」機能でプロンプトインジェクション攻撃を緩和</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンして .env ファイルを作成する</li><li>Docker Composeでビルド・起動する</li><li>ブラウザで http://localhost:8787 を開き、ログに出力されたセットアップトークンで初期設定を行う</li></ol>
+<pre><code>git clone https://github.com/BaaRai/ARTEX.git &amp;&amp; cd ARTEX
+cp .env.example .env
+docker compose up -d --build
+docker compose logs artex | grep &quot;Setup token&quot;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-15.html#d-baarai__artex">2026-11-15</a>
+<span class="src trendshift">Trendshift 13位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

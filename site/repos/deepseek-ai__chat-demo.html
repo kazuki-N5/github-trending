@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>deepseek-ai/chat-demo | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>deepseek-ai/chat-demo</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-15（Trendshift 4位）</span>
+<a class="gh" href="https://github.com/deepseek-ai/chat-demo" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="deepseek-ai__chat-demo" data-repo="deepseek-ai/chat-demo" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">バックエンド不要のDeepSeek API対応静的チャットWebアプリ</p>
+<h3>何ができるか</h3><ul><li>複数会話の管理（自動タイトル付け、改名、削除）とメッセージ分岐切り替えができる</li><li>ストリーミング応答、ディープシンク、スマート検索、リンク読み取りとソース引用に対応する</li><li>ファイルのアップロード・ペースト・ドラッグ＆ドロップ、音声入力、読み上げ再生が使える</li><li>Markdown、シンタックスハイライト、KaTeX数式、Mermaidダイアグラムをレンダリングできる</li><li>会話履歴をZIPアーカイブとしてインポート／エクスポートできる</li><li>日本語・英語・中国語（簡体字）対応、ライト／ダークテーマ、モバイルレイアウトをサポートする</li></ul>
+<h3>なぜ注目されているか</h3><p>アプリケーションサーバーが不要で、静的ファイルとして任意のホスティングサービスやローカルで動作するため手軽に試せる点が注目されている。APIキーや設定はブラウザのlocalStorageに保存されるため、サーバー側にデータを送らずに済む設計も評価されている。DeepSeek公式のデモ実装として、機能が豊富でリファレンス実装としても参考になる。</p>
+<h3>どんな人に役立つか</h3><p>DeepSeek APIを使ったチャットUIをすぐに試したい開発者や、カスタマイズ可能なフロントエンドを探しているエンジニアに向いている。バックエンドを用意せずに静的サイトとして公開したい場合にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>ブラウザからDeepSeek API（Anthropic互換のMessages/Files API）に直接接続し、バックエンド不要で動作する</li><li>RspackとTypeScriptでビルドされ、oxlint・oxfmtによる静的解析とフォーマットを採用している</li><li>会話データと添付ファイルはIndexedDB、APIキーと設定はlocalStorageにブラウザ内で保存される</li><li>ASR/TTS音声エンドポイントを利用した音声入力・読み上げ機能を実装している</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js 22.12以上とpnpmをインストールする</li><li>リポジトリをクローンしてpnpm installを実行する</li><li>pnpm devを実行してhttp://localhost:8090を開く</li><li>設定画面でDeepSeek APIキーを入力してチャットを開始する</li></ol>
+<pre><code>pnpm install
+pnpm dev
+pnpm build</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-15.html#d-deepseek-ai__chat-demo">2026-11-15</a>
+<span class="src trendshift">Trendshift 4位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

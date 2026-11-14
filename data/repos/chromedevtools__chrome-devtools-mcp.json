@@ -1,0 +1,34 @@
+{
+  "repo": "ChromeDevTools/chrome-devtools-mcp",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "AIコーディングエージェントがライブChromeブラウザを操作・検査できるMCPサーバー",
+  "features": [
+    "Puppeteerを使ってChromeブラウザを操作し、ページナビゲーションやクリックなどを自動実行できる",
+    "パフォーマンストレースを記録し、Chrome DevToolsを通じてインサイトを抽出できる",
+    "ネットワークリクエストの解析、スクリーンショット撮影、コンソールメッセージの確認が可能",
+    "ソースマップ付きスタックトレースによりデバッグ情報を正確に取得できる",
+    "アクセシビリティ監査・LCP最適化・メモリリーク調査などのスキルが組み込まれている"
+  ],
+  "why": "AIコーディングエージェントがブラウザを直接操作・検査できるツールへの需要が高まっており、MCP対応によりClaude・Cursor・Copilotなど主要エージェントから利用しやすい点が注目されている。推測: ChromeDevToolsチームが公式に開発しているため、信頼性と将来的なメンテナンスへの期待も高い。",
+  "whoFor": "AIコーディングアシスタントを使って開発するエンジニアや、ブラウザ操作を含むエージェントワークフローを構築したいチームに適している。フロントエンドのパフォーマンス改善やデバッグ作業をAIエージェントに任せたい開発者にも有用。",
+  "tech": [
+    "Model Context Protocol（MCP）サーバーおよびCLIとして動作し、エージェントからのツール呼び出しを受け付ける",
+    "PuppeteerによりChromeブラウザを制御し、信頼性の高いブラウザ自動化を実現している",
+    "Chrome DevToolsフロントエンドと統合し、パフォーマンストレースやデバッグ情報を取得する",
+    "CrUX（Chrome UX Report）APIを用いてフィールドパフォーマンスデータを補完できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node.js LTSと最新安定版のChromeをインストールする",
+      "MCPクライアントの設定に `npx -y chrome-devtools-mcp@latest` のエントリを追加する",
+      "CLIとして使う場合は npm でグローバルインストールし、コマンドを実行する"
+    ],
+    "commands": [
+      "npm i chrome-devtools-mcp@latest -g",
+      "chrome-devtools navigate_page 1 --url \"https://example.com\"",
+      "chrome-devtools take_screenshot 1 --filePath /tmp/screenshot.png",
+      "chrome-devtools stop"
+    ]
+  }
+}

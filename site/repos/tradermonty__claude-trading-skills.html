@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tradermonty/claude-trading-skills | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛠️</div><div>
+<h1>tradermonty/claude-trading-skills</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-15（Trendshift 11位）</span>
+<a class="gh" href="https://github.com/tradermonty/claude-trading-skills" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="tradermonty__claude-trading-skills" data-repo="tradermonty/claude-trading-skills" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">株式投資家・トレーダー向けClaudeスキル集（市場分析〜売買戦略まで）</p>
+<h3>何ができるか</h3><ul><li>デイリー市場チェック・週次ポートフォリオレビュー・月次パフォーマンス評価の各ワークフローを提供する</li><li>VCPスクリーナーやドローダウン遮断機、ポジションサイザーでスイング候補を絞り込める</li><li>売買記録・ポストモーテム・トレーダーメモリ機能で取引履歴を管理できる</li><li>FMP・Alpaca・FINVIZ Eliteなどの外部APIと連携し、スクリーニングやポートフォリオ管理を自動化できる</li><li>APIなしでも公開CSV・チャート画像・ローカルファイルだけで動作する5つのスターターパス対応スキルがある</li><li>買い・売りのシグナルは出さず、投資家自身の判断プロセスを支援することに特化している</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 個人投資家が時間をかけずに規律ある投資プロセスを実践できるAIスキルは需要が高く、Claude Code上でそのまま動く実用性が注目を集めていると考えられる。ETF・配当株・スイングトレードを組み合わせた現実的な運用スタイルに対応している点も評価されている。</p>
+<h3>どんな人に役立つか</h3><p>時間に制約のある個人投資家で、長期投資・ETF・配当株を中心にスイングトレードを加えたい人に向いている。APIなしの無料スターターパスもあるため、コストをかけずに始めたい初心者にも使いやすい。自動売買ではなく、自分の投資判断を体系化・改善したい人に適している。</p>
+<h3>技術的なポイント</h3><ul><li>Python 3.11〜3.13（Linux・Windows・macOS対応）で実装され、パッケージ化スキルは3.9以上をサポートする</li><li>スキルはYAMLマニフェスト（workflows/）で管理され、Claude WebアプリとClaude Code両方に対応する</li><li>FMP（マーケットデータ）・Alpaca（ポートフォリオ管理）・FINVIZ Elite（スクリーニング）をオプションAPIとして利用する</li><li>スキルカタログはskills-index.yamlで一元管理され、ドキュメントサイトも別途提供されている</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubの最新リリースから.skillファイルをダウンロードし、ハッシュを検証する</li><li>Claude Webアプリの場合は「カスタマイズ &gt; スキル」からアップロードする</li><li>Claude Codeの場合はスキルフォルダを~/.claude/skills/またはプロジェクトの.claude/skills/にコピーする</li><li>APIなしで試す場合は、market_breadth・uptrend・position_sizer・trader_memory・signal_postmortemの5スキルを使う</li></ol>
+<pre><code>cp -r skills/market_breadth ~/.claude/skills/
+cp -r skills/position_sizer ~/.claude/skills/</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-15.html#d-tradermonty__claude-trading-skills">2026-11-15</a>
+<span class="src trendshift">Trendshift 11位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

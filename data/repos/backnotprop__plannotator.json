@@ -1,0 +1,37 @@
+{
+  "repo": "backnotprop/plannotator",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "AIコーディングエージェントの計画・コードをブラウザでレビュー・注釈するローカルツール",
+  "features": [
+    "エージェントが提示した計画やMarkdownドキュメントに注釈・コメントを付けてフィードバックをワンクリックで返送できる",
+    "ローカル差分やGitHub/GitLab PRをdiffビューアとインラインコメントでコードレビューできる",
+    "レビュー内容についてAIに質問したり、AIによる自動コードレビューコメントを投稿させたりできる",
+    "Plannotator Inboxでエージェントからのメッセージ・質問・ファイルを一元管理し返信できる",
+    "Claude Code・Codex・Copilot CLI・Gemini CLIなど多数のエージェントと連携できる",
+    "SSHやdevcontainer・Docker環境でもリモート動作をサポートする"
+  ],
+  "why": "推測: AIコーディングエージェントが普及するにつれ、エージェントの判断や出力を人間が効率よく確認・制御する仕組みへの需要が高まっている。ブラウザベースで動作しながらも完全ローカルでプライバシーを保ち、多数のエージェントに対応している点が注目を集めている。",
+  "whoFor": "AIコーディングエージェントを日常的に使い、エージェントの計画や成果物を実行前にレビューしたい開発者向け。GitHub/GitLab PRのコードレビューを効率化したいエンジニアや、複数エージェントを横断して管理したいチームにも役立つ。",
+  "tech": [
+    "BunでビルドしてスタンドアロンバイナリにコンパイルするTypeScriptアプリである",
+    "フロントエンドは単一HTMLファイルとしてビルドされたブラウザベースのUIを採用している",
+    "エージェントとの接続にはMCP（Model Context Protocol）を利用している",
+    "共有機能にはAES-256-GCM暗号化を採用し、SLSA来歴やSBOM・Sigstore署名でサプライチェーンを保護している"
+  ],
+  "tryIt": {
+    "steps": [
+      "ユニバーサルインストーラーを実行してバイナリとエージェント用フックをインストールする",
+      "使用しているエージェント（Claude Codeなど）向けのプラグインを追加してエージェントを再起動する",
+      "エージェントがプランを提示したタイミングでブラウザが自動的に開き、注釈・フィードバックを送信できる"
+    ],
+    "commands": [
+      "curl -fsSL https://plannotator.ai/install.sh | bash",
+      "irm https://plannotator.ai/install.ps1 | iex",
+      "plannotator inbox",
+      "plannotator review",
+      "/plannotator-annotate <file|folder|URL>",
+      "/plannotator-review"
+    ]
+  }
+}

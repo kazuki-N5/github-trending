@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>opencoredev/islandcn | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>opencoredev/islandcn</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-15（Trendshift 18位）</span>
+<a class="gh" href="https://github.com/opencoredev/islandcn" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="opencoredev__islandcn" data-repo="opencoredev/islandcn" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">shadcnでインストールできるReact用オープンソースDynamic Islandコンポーネント</p>
+<h3>何ができるか</h3><ul><li>アップロード・タイマー・音楽再生・着信・配車ETAなど複数のアクティビティをアプリ上部のIslandに表示できる</li><li>useIsland()フックでstart/update/endを呼ぶだけでアクティビティを制御できる</li><li>アイドル・コンパクト・スプリット・拡張の4つの表示モードを持つアクティビティスタックを備える</li><li>実機のDynamic Island録画から調整したスプリングアニメーションと長押し・アラート・動作低減対応を含む</li><li>アップロード・タイマー・着信・配車ETAなどの用途別プリセットコンポーネントをファイル単体で提供する</li><li>プレイグラウンドページでプリセットや白紙からIslandを組み立て、インストールコマンドとコードをコピーできる</li></ul>
+<h3>なぜ注目されているか</h3><p>AppleのDynamic Islandに似たUIをWebアプリに持ち込める実用的なReactコンポーネントとして注目を集めている。shadcnのレジストリ方式で1コマンドインストールでき、既存プロジェクトへの組み込みが非常に手軽な点が評価されている。<span class="guess">推測</span> Dynamic Island風UIへの関心の高まりと、shadcnエコシステムの普及が相まって広がっている可能性がある。</p>
+<h3>どんな人に役立つか</h3><p>ReactアプリにDynamic Island風の通知・アクティビティUIを追加したいフロントエンド開発者に向いている。shadcnを使っているプロジェクトであれば特に導入コストが低く、音楽プレイヤー・ファイルアップロード・通話UIなどを実装する場面で役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>React + TypeScriptで実装され、shadcnのレジストリ形式（JSON）で配布されている</li><li>スプリングアニメーションは実機のDynamic Island録画から逆算したパラメータで再現されている</li><li>pnpmワークスペースとNext.js appディレクトリ構成でサイト・ドキュメント・レジストリをまとめて管理している</li><li>コーディングエージェント向けにislandcn-skillレジストリアイテムを別途提供している</li></ul>
+<h3>試し方</h3>
+<ol><li>npxコマンドでisland-coreをshadcnレジストリからインストールする</li><li>アプリルート付近にIslandProviderとplacement=&quot;viewport&quot;を指定したIslandをマウントする</li><li>useIsland()フックのstart()でアクティビティを開始し、update()で更新、end()で終了する</li></ol>
+<pre><code>npx shadcn@latest add https://islandcn.dev/r/island-core.json
+pnpm install
+pnpm dev
+pnpm build</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-15.html#d-opencoredev__islandcn">2026-11-15</a>
+<span class="src trendshift">Trendshift 18位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

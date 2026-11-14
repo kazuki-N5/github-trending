@@ -1,0 +1,37 @@
+{
+  "repo": "libracoder/kiri",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "macOS・Windows・Linux向けの小さく高速なコンテナランタイム",
+  "features": [
+    "Docker Engine APIを実装しており、既存のdocker CLIやComposeがそのまま使える",
+    "コンテナの起動・終了がAPIレベルで約2.5msと非常に高速",
+    "デーモンのメモリ使用量が約15MBと軽量で、60秒アイドル後にVMがスリープする",
+    "http://<name>.kiri.local でローカルドメインとHTTPSを自動提供する",
+    "ワンコマンドでシングルノードのKubernetesクラスターを起動できる",
+    "OrbStackやDocker Desktopからのイメージ・ボリューム・コンテナ移行をサポートする"
+  ],
+  "why": "推測: Docker DesktopやOrbStackの代替として、起動速度とリソース効率を大幅に改善した点が注目を集めている。ベンチマークではDocker Desktopの約85倍高速とされており、開発体験の向上に直結する。Rustで実装された独自のVM・ゲストエージェント構成が技術的な新鮮さを持つ。",
+  "whoFor": "Docker互換のコンテナ環境を軽量・高速に使いたい開発者に向いている。特にmacOSやWindowsでDocker DesktopやOrbStackの重さやコストに不満を感じているエンジニアに適している。既存のDockerワークフローをそのまま維持しながら乗り換えたい人にも有用。",
+  "tech": [
+    "RustでDocker Engine APIを実装し、既存Dockerクライアントとの互換性を確保している",
+    "ホストデーモンとゲスト間の通信にvsockを使用し、カスタム約10MBのLinuxカーネルをVMとして利用している",
+    "ゲストエージェントは約900KBのRustプログラムがPID 1として動作し、clone3で直接コンテナを起動している",
+    "runc・containerd shim・dockerdを使わずシンプルな構成を実現している",
+    "38言語対応のネイティブUIを備え、メニューバーアイコンからも操作できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "runkiri.com/releases からプラットフォームに合ったパッケージ（.dmg / .msi / .deb / .rpm）をダウンロードしてインストールする",
+      "初回起動時にkiriというDockerコンテキストが自動作成される",
+      "docker --context kiri コマンドでKiriを使ってコンテナを実行する"
+    ],
+    "commands": [
+      "docker --context kiri run --rm alpine echo hello",
+      "docker --context kiri compose up -d",
+      "kiri k8s start",
+      "kiri machine create dev --distro ubuntu && kiri machine shell dev",
+      "kiri import"
+    ]
+  }
+}

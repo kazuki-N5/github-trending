@@ -1,0 +1,35 @@
+{
+  "repo": "opencoredev/islandcn",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "shadcnでインストールできるReact用オープンソースDynamic Islandコンポーネント",
+  "features": [
+    "アップロード・タイマー・音楽再生・着信・配車ETAなど複数のアクティビティをアプリ上部のIslandに表示できる",
+    "useIsland()フックでstart/update/endを呼ぶだけでアクティビティを制御できる",
+    "アイドル・コンパクト・スプリット・拡張の4つの表示モードを持つアクティビティスタックを備える",
+    "実機のDynamic Island録画から調整したスプリングアニメーションと長押し・アラート・動作低減対応を含む",
+    "アップロード・タイマー・着信・配車ETAなどの用途別プリセットコンポーネントをファイル単体で提供する",
+    "プレイグラウンドページでプリセットや白紙からIslandを組み立て、インストールコマンドとコードをコピーできる"
+  ],
+  "why": "AppleのDynamic Islandに似たUIをWebアプリに持ち込める実用的なReactコンポーネントとして注目を集めている。shadcnのレジストリ方式で1コマンドインストールでき、既存プロジェクトへの組み込みが非常に手軽な点が評価されている。推測: Dynamic Island風UIへの関心の高まりと、shadcnエコシステムの普及が相まって広がっている可能性がある。",
+  "whoFor": "ReactアプリにDynamic Island風の通知・アクティビティUIを追加したいフロントエンド開発者に向いている。shadcnを使っているプロジェクトであれば特に導入コストが低く、音楽プレイヤー・ファイルアップロード・通話UIなどを実装する場面で役立つ。",
+  "tech": [
+    "React + TypeScriptで実装され、shadcnのレジストリ形式（JSON）で配布されている",
+    "スプリングアニメーションは実機のDynamic Island録画から逆算したパラメータで再現されている",
+    "pnpmワークスペースとNext.js appディレクトリ構成でサイト・ドキュメント・レジストリをまとめて管理している",
+    "コーディングエージェント向けにislandcn-skillレジストリアイテムを別途提供している"
+  ],
+  "tryIt": {
+    "steps": [
+      "npxコマンドでisland-coreをshadcnレジストリからインストールする",
+      "アプリルート付近にIslandProviderとplacement=\"viewport\"を指定したIslandをマウントする",
+      "useIsland()フックのstart()でアクティビティを開始し、update()で更新、end()で終了する"
+    ],
+    "commands": [
+      "npx shadcn@latest add https://islandcn.dev/r/island-core.json",
+      "pnpm install",
+      "pnpm dev",
+      "pnpm build"
+    ]
+  }
+}

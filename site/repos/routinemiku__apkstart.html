@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoutineMiku/apkstart | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>RoutineMiku/apkstart</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-11-15（Trendshift 2位）</span>
+<a class="gh" href="https://github.com/RoutineMiku/apkstart" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="routinemiku__apkstart" data-repo="RoutineMiku/apkstart" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">WindowsでAPKをダブルクリックするだけでAndroidアプリをネイティブ風に起動できるランチャー</p>
+<h3>何ができるか</h3><ul><li>APKファイルをダブルクリックするだけでインストールし、デスクトップアイコンとスタートメニューのショートカットを自動作成できる</li><li>各AndroidアプリがWindowsの独立したウィンドウで起動し、タイトルバーやウィンドウサイズがアプリごとに記憶される</li><li>フルスクリーンとウィンドウモードの両方をサポートし、Windows上でネイティブアプリに近い体験を提供する</li><li>ユーザーフォルダ（%USERPROFILE%\ApkStartShared）とエミュレータ間でファイルを双方向に同期できる共有フォルダ機能がある</li><li>内蔵のアップデート確認機能により、最速のダウンロードソースから自動的に更新できる</li><li>コマンドラインからAPKのインストール（ApkStart.exe &lt;file.apk&gt;）やアプリの起動（--launchオプション）が可能</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> WindowsでAndroidアプリをネイティブアプリのように実行できるシンプルさが評価されている。APKのダブルクリックという直感的な操作でインストールから実行まで完結できる点と、QEMUベースの自己完結型ランタイムを同梱している点が他のソリューションと差別化されている。</p>
+<h3>どんな人に役立つか</h3><p>Windows環境でAndroidアプリを手軽に動かしたい開発者やユーザー向け。特にAndroidアプリのデバッグ・テストをWindowsで行いたい開発者や、特定のAndroidアプリをPCで利用したいユーザーに適している。ARM専用アプリの実行にも対応する互換モードを備えている。</p>
+<h3>技術的なポイント</h3><ul><li>QEMU仮想化技術とAndroid 14システムイメージを使用してAndroid実行環境を提供する</li><li>adbとAndroid Emulatorを組み合わせてAPKの管理・インストール・実行を制御する</li><li>シェル部分はサードパーティ依存なしで構築されており、AOSP・QEMU・adbの上に直接構築されている</li><li>Node.js（npm）ベースのビルドシステムを採用し、フルインストーラー（約1.3GB）とポータブルZIP（95MB）の2種類のビルドを提供する</li><li>ハードウェアアクセラレーション（オプション）をサポートし、既存エミュレータのadbポートの再利用も可能</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubからインストーラー（約1.3GB、ランタイム同梱）またはポータブルZIP（95MB、初回起動時にランタイムをダウンロード）を入手する</li><li>インストーラーの場合は実行してセットアップを完了する。ポータブルの場合はZIPを任意のフォルダに展開する</li><li>インストールしたいAPKファイルをダブルクリックしてアプリをインストールする</li><li>作成されたデスクトップアイコンまたはスタートメニューのショートカットからアプリを起動する</li><li>ソースからビルドする場合はnpm installの後、npm startで開発モード起動、npm run packでポータブルビルド、npm run build:exeでインストーラーを作成する</li></ol>
+<pre><code>npm install
+npm start
+npm run pack
+npm run build:exe
+ApkStart.exe &lt;file.apk&gt;
+ApkStart.exe --launch &lt;package&gt;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-15.html#d-routinemiku__apkstart">2026-11-15</a>
+<span class="src trendshift">Trendshift 2位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
