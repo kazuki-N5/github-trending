@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tencent/LoopForge | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>Tencent/LoopForge</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-11-16（Trendshift 14位）</span>
+<a class="gh" href="https://github.com/Tencent/LoopForge" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="tencent__loopforge" data-repo="Tencent/LoopForge" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">コーディングエージェントを人間承認ゲート付きで管理するセルフホスト型ワークフロー基盤</p>
+<h3>何ができるか</h3><ul><li>Claude Code・Codex・CodeBuddyなど10種類のAIコーディングエージェントを統一インターフェースで操作できる</li><li>SOPと呼ばれる標準手順書にエージェント・スクリプト・人間承認ゲートの各ステップを定義してコード開発を自動化できる</li><li>チャット形式でエージェントに直接指示を出してPRを作成させることもできる</li><li>Docker Sandboxでリポジトリをチェックアウトし、コスト・実行ログ・ツール使用履歴を記録できる</li><li>loopforge-cli（npxで起動）を使えばサーバー不要でClaude Codeなどの中から直接使える</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIコーディングエージェントが普及するにつれて、単に使うだけでなく品質管理・人間のレビュー・繰り返し可能なプロセスに組み込みたいニーズが高まっている。Tencentがオープンソースで公開したことで、エンタープライズ向けのAIソフトウェア開発ワークフロー基盤として注目されている。</p>
+<h3>どんな人に役立つか</h3><p>AIコーディングエージェントを個人利用だけでなくチームの開発フローに統合したいエンジニアリングマネージャーや開発チームに向いている。セルフホストにこだわるチームや、コスト・品質管理を細かく行いたい組織にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>GoとDockerで実装されており、Dockerコンテナ内でリポジトリをチェックアウトしてエージェントを安全に実行するサンドボックス構成を採用している</li><li>エージェント・スクリプト・人間承認ゲート・サブSOP・プレビュービルドという5種類のSOPノードで複雑なワークフローを構成できる</li><li>Roleという概念でプロンプト・エグゼキューター・モデル・ルール・MCPツールを再利用可能な単位として管理できる</li><li>loopforge-cli（npxで配布）はサーバー不要でClaude Code・Codex・Cursorなどのエディタ内で動作するローカル版LoopForgeを提供する</li></ul>
+<h3>試し方</h3>
+<ol><li>Git・Docker・Docker Compose・Python 3・curlがインストールされていることを確認する</li><li>リポジトリをクローンしてstart.shを実行するとDockerイメージのダウンロードと起動が行われる</li><li>表示されたURLにブラウザでアクセスし、最初のアカウントを作成する（自動的に管理者になる）</li><li>デモプロジェクトのSOPを試してLoopForgeの動作を確認する</li></ol>
+<pre><code>git clone https://github.com/Tencent/LoopForge.git
+cd LoopForge
+./start.sh
+npx -y loopforge-cli@latest install claude</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-16.html#d-tencent__loopforge">2026-11-16</a>
+<span class="src trendshift">Trendshift 14位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

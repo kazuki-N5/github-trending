@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eynnzerr/TelemetryCleaner | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>Eynnzerr/TelemetryCleaner</h1>
+<div class="meta"><span>Kotlin</span>
+<span>初掲載 2026-11-16（Trendshift 12位）</span>
+<a class="gh" href="https://github.com/Eynnzerr/TelemetryCleaner" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="eynnzerr__telemetrycleaner" data-repo="Eynnzerr/TelemetryCleaner" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Shizuku経由でRoot不要・中国向けAndroidの通信事業者プリインアプリを削除</p>
+<h3>何ができるか</h3><ul><li>Root権限なしでSystemHelper・RegServiceなどの通信事業者プリインストールアプリを検出・アンインストールできる</li><li>Shizuku（特権APIプロキシツール）を利用してシェル権限でパッケージ管理サービスを呼び出せる</li><li>OPPO・Xiaomi・Huawei・vivoなど複数メーカーの通信事業者コンポーネントをリスト管理している</li><li>アンインストールできない場合はapp_processで隠しAPIを呼び出すフォールバック処理が行われる</li><li>削除したアプリの復元も可能で、自動クリーニングのスケジュール設定もできる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 中国向けAndroid端末には通信事業者が要求するプリインストールアプリが含まれており、プライバシー懸念から削除したいユーザーが多い。Root化なしにShizukuというツールだけで対処できる点が、中国語圏のAndroidユーザーに注目されている。</p>
+<h3>どんな人に役立つか</h3><p>中国向けAndroid端末（OPPO・Xiaomi・Huawei・vivo等）を使用していて、通信事業者のプリインストールアプリを削除したいユーザーに適している。端末をRoot化したくないが、プライバシーを守りたいユーザーにとって選択肢となるツールである。</p>
+<h3>技術的なポイント</h3><ul><li>ShizukuというツールのAPIを通じてシェル権限でAndroidのパッケージ管理サービスを直接呼び出す仕組みを採用している</li><li>通常のアンインストールが拒否された場合、app_processでシステムの隠しインターフェースを呼び出すフォールバック処理を行う</li><li>Android 10以上が必要で、Android 11以上ならADB無線デバッグでShizukuを起動できる</li><li>削除はユーザースペース単位で行われるため、アプリデータが消去されるが、システムがAPKを保持していれば復元可能である</li></ul>
+<h3>試し方</h3>
+<ol><li>Android 10以上の端末でShizukuをインストールし、ADBまたは無線デバッグで起動する</li><li>GitHub ReleasesからTelemetryCleanerのAPKをダウンロードしてインストールする</li><li>アプリを起動してShizukuの権限を許可する</li><li>確認したいユーザースペースを選択し、コンポーネントの一覧から削除したいものを選んで実行する</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-16.html#d-eynnzerr__telemetrycleaner">2026-11-16</a>
+<span class="src trendshift">Trendshift 12位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

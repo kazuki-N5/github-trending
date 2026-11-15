@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ersinkoc/phonebox | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>ersinkoc/phonebox</h1>
+<div class="meta"><span>C#</span>
+<span>初掲載 2026-11-16（Trendshift 6位）</span>
+<a class="gh" href="https://github.com/ersinkoc/phonebox" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="ersinkoc__phonebox" data-repo="ersinkoc/phonebox" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">古いAndroidスマホをWindowsのデスクパネルに変えるツール</p>
+<h3>何ができるか</h3><ul><li>CPU・GPU・RAM・ディスク・ネットワーク・Pingなどのリアルタイムなコンピューター状態を表示できる</li><li>Claude CodeのAIセッション状態を確認し、許可/拒否の操作をスマホから行える</li><li>メディアコントロール・時計・天気・カレンダー・ポモドーロタイマーなど41種類のウィジェットを配置できる</li><li>Stream Deck風のショートカットキーでアプリ起動・URL開封・PC操作を実行できる</li><li>Webhookとルール設定でイベント発生時に通知を送ったりページを切り替えたりできる</li><li>USB接続とWi-Fi接続（Tailscale対応）の両方に対応し、クラウドを使わず動作する</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 専用デバイスのStream Deckなどは高価だが、古くて使わなくなったAndroidスマホを再利用できる点で注目されている。Claude CodeやCodexのAIセッション管理機能が珍しく、AIコーディング利用者の関心を集めていると考えられる。クラウド不要・テレメトリなしというプライバシー重視の設計も評価されている可能性がある。</p>
+<h3>どんな人に役立つか</h3><p>サブディスプレイやデスクガジェットに興味があるPC利用者や、古いAndroidスマホを有効活用したいユーザーに適している。Claude CodeなどのAIコーディングツールを日常的に使うエンジニアにも便利なツールである。</p>
+<h3>技術的なポイント</h3><ul><li>デスクトップエージェントは.NET 10で実装されており、WindowsだけでなくLinux・macOSでも動作する</li><li>スマホとの通信はUSB経由のADBまたはWi-Fi経由のTLS（証明書ピンニング）＋ペアリングキーで行われ、セキュリティを確保している</li><li>エージェントはデフォルトでlocalhostのみで待ち受け、Wi-FiアクセスはTailscale経由のオプトイン方式である</li><li>セットアップスクリプト（setup.ps1 / setup.sh）が最新リリースのダウンロード・チェックサム検証・ADBインストールを自動で行う</li><li>Androidアプリの開発にはJDK 17・Android SDK Platform 35が必要で、MITライセンスで公開されている</li></ul>
+<h3>試し方</h3>
+<ol><li>Android 9以上のスマホでUSBデバッグを有効にする</li><li>PCでセットアップスクリプトを実行してエージェントをインストールする</li><li>スマホにアプリをインストールし、USBまたはWi-FiでPCと接続する</li><li>スマホのアプリをフルスクリーン表示にしてデスクパネルとして使用する</li></ol>
+<pre><code>setup.ps1
+setup.sh</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-16.html#d-ersinkoc__phonebox">2026-11-16</a>
+<span class="src trendshift">Trendshift 6位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

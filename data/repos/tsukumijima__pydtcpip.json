@@ -1,0 +1,36 @@
+{
+  "repo": "tsukumijima/pydtcpip",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "日本の家庭用レコーダーの録画をPCへ転送するDTCP-IP/DLNA Pythonライブラリ",
+  "features": [
+    "DLNAクライアントとしてSSDPでHDDレコーダーやTVを自動検出できる",
+    "DTCP-IPプロトコルでMove転送（コピー回数を消費してファイルを移動する操作）を実行できる",
+    "レコーダーからのプッシュダビング（機器がNASへデータを送る操作）をNASとして受信できる",
+    "コピー回数を消費せずにストリーミングし、FFplayなどへパイプして視聴できる",
+    "診断情報をプライバシーマスク付きでダンプでき、機種対応の調査・報告に活用できる"
+  ],
+  "why": "推測: 光学メディアやSeeQVault・公式アプリが次々と廃止されるなか、日本の地デジ録画コンテンツの移行手段がほぼなくなりつつある問題意識から開発されたとREADMEに説明されており、その必要性が注目を集めていると思われる。LLMツールの普及が閉鎖的な標準仕様の解析を容易にしたことも言及されている。",
+  "whoFor": "日本の家庭用HDDレコーダーやTV（東芝REGZA・DBR等で動作確認済み）の録画をPCに転送したい人向け。DLNA・DTCP-IPの調査や研究を行う開発者にも適している。なお、DTCPデバイス証明書と秘密鍵は別途自分で用意する必要がある。",
+  "tech": [
+    "Python 3.13以上でasyncio（非同期I/O処理）とPydanticを使ったライブラリ設計をとっている",
+    "DTCP-IPのAKE認証（機器間の鍵交換）とPCP暗号化（コンテンツ暗号化）を独自実装している",
+    "デバイスごとの挙動差異を「プロファイル」クラスとして分離し、機種ごとの対応追加をしやすい構成にしている",
+    "出力は192バイトパケットのタイムスタンプ付きMPEG-2 TS（BDAV形式のM2TS）で、メタデータのDIDL-Lite XMLをサイドカーファイルとして保存する"
+  ],
+  "tryIt": {
+    "steps": [
+      "DTCPデバイス証明書（88バイト）と機器別の秘密鍵（20バイト）を用意し、credentials.envまたは環境変数に設定する",
+      "pydtcpip discoverでホームネットワーク上のDLNA対応機器を検出する",
+      "pydtcpip moveで対象番組を指定しPCへ転送する（コピー回数が消費されるため注意）"
+    ],
+    "commands": [
+      "uv tool install pydtcpip",
+      "pip install pydtcpip",
+      "pydtcpip discover",
+      "pydtcpip info",
+      "pydtcpip move",
+      "pydtcpip stream"
+    ]
+  }
+}

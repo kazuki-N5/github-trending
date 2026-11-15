@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>makepad/relax | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>makepad/relax</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-16（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/makepad/relax" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="makepad__relax" data-repo="makepad/relax" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">rustcなしでRustをJITコンパイル・ライブパッチする実験的処理系</p>
+<h3>何ができるか</h3><ul><li>rustcやLLVM・リンカなしにCargoパッケージをソースから直接実行できる</li><li>関数を初回呼び出し時にコンパイルし、ホット（頻繁に呼ばれる）関数をバックグラウンドで最適化する</li><li>ファイル保存時に変更した関数を実行中プロセスへライブパッチでき、状態を保ちながら開発できる</li><li>relax test --liveで保存のたびに影響するテストだけを自動再実行できる</li><li>relax inspect &lt;pid&gt;でブレークポイント・プロファイリング・メモリリーク検出ツールを使える</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> RustのビルドはLLVMを介するため遅く、特に大規模プロジェクトでは開発ループが重い課題とされてきた。RelaxはJITとライブパッチで高速な開発サイクルを実現しようとする点が注目されている。MakepadというRust製UIフレームワークと連携する実用例があることも話題の一因と思われる。</p>
+<h3>どんな人に役立つか</h3><p>RustでアプリやUIを開発しており、ビルドや実行の高速化を求めるデベロッパー向け。特にMakepadを使ったUIアプリ開発者に適している。ただし、安全性の保証はRustコンパイラより弱く、リリースビルドはcargo build --releaseで行う前提とされている。</p>
+<h3>技術的なポイント</h3><ul><li>Rust自身をRustで実装した実験的なJITコンパイラ兼ランタイムで、x64とarm64のネイティブコード生成に対応している</li><li>コンパイラとコードキャッシュをプログラムの同一プロセス内に持つインプロセス設計をとっている</li><li>リリースビルドとの速度比較ではx64で1.12倍、arm64で1.24倍程度遅いことがベンチマークで報告されている</li><li>MakepadのUIフレームワークと統合しており、makepad runコマンドからRelaxが呼び出される</li></ul>
+<h3>試し方</h3>
+<ol><li>M4 MacBookでの実測値として、クリーンチェックアウトから大規模3Dゲームの初フレームまで約11秒、2回目以降は1.15秒と報告されている</li><li>relax run でCargoパッケージを実行し、ファイル保存で変更が自動パッチされることを確認する</li><li>relax test --live でテスト自動再実行を試す</li></ol>
+<pre><code>relax run
+relax test --live
+relax inspect &lt;pid&gt;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-16.html#h-makepad__relax">2026-11-16 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>4 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
