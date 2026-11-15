@@ -1,0 +1,31 @@
+{
+  "repo": "kociden/sakurai-skill",
+  "language": "",
+  "readme": true,
+  "oneLiner": "桜井政博のYouTube字幕257本から作ったゲーム開発Claude Codeスキル",
+  "features": [
+    "ゲームの企画・レビュー時に桜井政博流のゲーム開発原則をAIが参照しアドバイスしてくれる",
+    "ゲームフィール・難易度・UI・サウンドなど14の原則をSKILL.mdにまとめて収録している",
+    "257本のエピソードをカテゴリ別に整理したreferences/以下のノートを必要時に参照できる",
+    "字幕テキストを変換・分類するスクリプトをtools/に同梱しており、素材の再生成も可能",
+    "Godot 4.6で制作した実例ゲーム「Hajiki」がunityroom上で公開されている"
+  ],
+  "why": "推測: 有名ゲームデザイナー・桜井政博の知見を、無料公開のYouTube字幕からAIスキルとして形式化したユニークな試みが注目を集めている。日本語向けのClaude Codeスキルという珍しさと、各原則が元エピソードへ引用付きで追跡可能な設計も評価されていると思われる。",
+  "whoFor": "GodotやUnityなどのゲームエンジンでゲームを開発する個人・インディーデベロッパー向け。設計判断や品質レビューにAIによる桜井流アドバイスを取り入れたい人に適している。大規模アクションゲームを前提とした原則のため、ジャンルや規模に応じた読み替えが必要とも説明されている。",
+  "tech": [
+    "Claude Code（およびOpenCodeなど互換ツール）のスキル機能（SKILL.md）として実装されている",
+    "YouTube自動生成字幕から字幕テキストを抽出・平文化し、カテゴリ別に分類するPythonスクリプトを含む",
+    "各ノートにエピソード番号とタイトルを引用情報として付記しており、原則の根拠を追跡できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンする",
+      "skills/sakurain フォルダを ~/.claude/skills/ にコピーする",
+      "Claude Codeから「桜井スタイルでレビューして」などと呼び出す"
+    ],
+    "commands": [
+      "git clone https://github.com/kociden/sakurai-skill",
+      "cp -r sakurai-skill/skills/sakurai ~/.claude/skills/"
+    ]
+  }
+}
