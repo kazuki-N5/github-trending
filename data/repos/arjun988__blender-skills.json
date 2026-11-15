@@ -1,0 +1,28 @@
+{
+  "repo": "arjun988/blender-skills",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "Blender用94種の専門スキルをMCP経由でAIコードエディタから操作するパック",
+  "features": [
+    "94種類の専門スキルでBlenderをCursor・Claude Code・Kiro・Codexから直接操作できる。",
+    "blender-directorスキルがリクエストを解析し、モデリング・UV・マテリアル・エクスポートなど専門スキルへ自動ルーティングする。",
+    "Unity・Unreal・Godot向けエクスポートを含む制作パイプラインのワークフローを実行できる。",
+    "ゲームキャラクター・ホラー環境・モジュラーキットなど定義済みの制作ワークフローが用意されている。",
+    "175以上のリファレンスファイルを含み、リファレンス画像マッチングに対応している。"
+  ],
+  "why": "推測: AIコードエディタからBlenderを直接操作できるMCP（Model Context Protocol）ベースの仕組みが開発者コミュニティの注目を集めている。BlenderのUIを手動操作せずに3Dコンテンツ制作を自動化できる点が、AIと3D制作の橋渡しとして評価されている。",
+  "whoFor": "Blenderを使う3DアーティストやゲームアセットのためにAIコードエディタと連携したい開発者に向いている。制作パイプラインの自動化や高速プロトタイピングを目指すインディーゲーム開発者にも役立つ。",
+  "tech": [
+    "BlenderMCPアドオンを通じてBlenderのPython APIをMCP（AIとツールを繋ぐプロトコル）経由で呼び出す仕組みを採用している。",
+    "Cursor・Claude Code・Kiro・Codexそれぞれ専用の設定ファイル（`.mcp.json`など）でMCPサーバへの接続を管理する。",
+    "uvパッケージマネージャを使用してBlenderMCPサーバを起動し、Blenderのサイドバーから接続する。"
+  ],
+  "tryIt": {
+    "steps": [
+      "uv（Pythonパッケージマネージャ）とBlenderMCPアドオンをインストールする。",
+      "`.claude/skills`フォルダをプロジェクトのスキルディレクトリにコピーする。",
+      "BlenderのサイドバーからMCP接続を行い、エージェント（Claude Codeなど）を再起動する。"
+    ],
+    "commands": []
+  }
+}

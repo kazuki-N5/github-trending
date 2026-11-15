@@ -1,0 +1,19 @@
+{
+  "repo": "duwqijlk/muse-protocol",
+  "language": "Python",
+  "readme": false,
+  "oneLiner": "muse.aiの登録・招待コード交換プロトコルを研究するPython実装（README未確認）",
+  "features": [
+    "muse.aiへのHTTPベースの登録プロセスをPythonで純粋実装している。",
+    "招待コードの交換プロトコルを研究・実装している。"
+  ],
+  "why": "推測: muse.aiの登録や招待コードの仕組みに関心を持つ研究者・開発者から注目されている可能性がある。",
+  "whoFor": "muse.aiのHTTP APIやプロトコル仕様を研究したいエンジニアに向いている可能性がある。",
+  "tech": [
+    "PythonによるHTTP通信の純粋実装でmuse.aiの登録・招待コードプロトコルを研究している。"
+  ],
+  "tryIt": {
+    "steps": [],
+    "commands": []
+  }
+}
