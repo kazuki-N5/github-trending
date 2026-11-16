@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NVIDIA/SkillEvaluator | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛠️</div><div>
+<h1>NVIDIA/SkillEvaluator</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-17（Trendshift 7位）</span>
+<a class="gh" href="https://github.com/NVIDIA/SkillEvaluator" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="nvidia__skillevaluator" data-repo="NVIDIA/SkillEvaluator" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントスキルの品質・重複・実動作を3段階で自動評価するフレームワーク</p>
+<h3>何ができるか</h3><ul><li>スキルの安全性・整合性・ハーネス互換性を検証するTier1バリデーション機能を備える</li><li>埋め込みモデルを使ってスキル間の意味的重複や類似ガイダンスを検出するTier2重複排除を行う</li><li>DockerサンドボックスでエージェントにスキルをON/OFFさせてTier3ライブ評価を実施する</li><li>評価用データセットを自動生成するオートパイロット機能で評価ソースを作成できる</li><li>GitHubおよびGitLabのCI/CDパイプラインへ組み込むためのCI設定テンプレートを提供する</li><li>Claude CodeやCodexなどのエージェントにスキルとして直接インストールして評価依頼ができる</li></ul>
+<h3>なぜ注目されているか</h3><p>AIエージェント向けスキルの品質保証は標準化が難しかったが、SkillEvaluatorはNVIDIAが提唱する3段階パイプラインで静的検証から実動作評価までを一貫して自動化する。arXiv論文（2608.20614）も公開されており、NVIDIA Verified Skillsパイプラインの中核ツールとして研究・産業両面で注目を集めている。</p>
+<h3>どんな人に役立つか</h3><p>AIエージェント向けスキルやプロンプト集を開発する研究者・エンジニアに最適なツールである。Claude CodeやCodexなど複数のエージェントへスキルを導入する前の品質ゲートとして活用でき、CI/CDに組み込んで継続的な品質管理も実現できる。</p>
+<h3>技術的なポイント</h3><ul><li>SkillSpectorと連携した特化型セキュリティスキャンでスキルの静的安全性を解析する</li><li>オープンソースのエージェント評価フレームワークHarborをDockerサンドボックスで使用しライブ評価を実行する</li><li>Tier2では埋め込みモデルとチャットモデルを用いてスキル内および複数スキル間の重複を検出する</li><li>NVIDIA Build APIと統合してルーブリックスコアリングとフィードバック生成によるLLMベース評価を行う</li><li>Python 3.12・3.13・3.14をサポートし、tier2・tier3・llm・allなどのエクストラで依存を選択できる</li></ul>
+<h3>試し方</h3>
+<ol><li>pipまたはuvでSkillEvaluatorをインストールする</li><li>uvを使ってPython 3.13環境でbundledサンプルスキルの品質チェックを実行する</li><li>レポートはreports/first-qualityディレクトリにCLI出力とJSONで保存される</li></ol>
+<pre><code>pip install skillevaluator
+uv tool install skillevaluator
+uv run --python 3.13 skillevaluator quality-check src/skillevaluator/tier3/reference_skills/text-analyzer -r cli -r json -o reports/first-quality</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-17.html#d-nvidia__skillevaluator">2026-11-17</a>
+<span class="src trendshift">Trendshift 7位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+{
+  "date": "2026-11-17",
+  "collectedAt": "2026-11-17T07:07:44+09:00",
+  "entries": [
+    {
+      "repo": "dream-num/univer",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "libracoder/kiri",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "A small, fast container runtime for macOS, Windows and Linux",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "hitkeeen/blender-ai-mcp-addon",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with ChatGPT/GPT, Claude, Gemini, Ollama, OpenCode. Blender AI addon, copilot for 3D, bpy Python scripting, MCP integration.",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "BaaRai/ARTEX",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "ARTEX - AI autonomous penetration testing system (English translation)",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "deepseek-ai/chat-demo",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "Chat Demo",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ag-ui-protocol/ag-ui",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "NVIDIA/SkillEvaluator",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "elementalsouls/Claude-BugHunter",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Tencent/LoopForge",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "RoutineMiku/apkstart",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Windows 上的安卓应用运行器：双击 APK 即装，应用以独立窗口与桌面图标运行，自持 QEMU 运行时",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "GoogleChrome/modern-web-guidance",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "Keep your coding agent up to date with the latest web best practices",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "alibaba/open-code-review",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "tradermonty/claude-trading-skills",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Chrome DevTools for coding agents",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "kajisho5/ffmpeg-skill",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "microsoft/TokenEconomizer",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Experience-Driven Black-Box Cost Control for Coding Agents",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Noniv/abyssal-garden",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "A dreamy underwater world you can swim through in your browser: swaying kelp forests, sunbeams, a sunken ship and manta rays. Everything is generated by code with WebGPU (no images, models or sound files), all in a single 97 KB HTML file.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "DuarteSantos8/openGym",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "Open-source gym & body-weight tracker, now in the App Store (iPhone + Apple Watch) and as an Android APK. Plan routines, log workouts, see which muscles are trained, import from Strong/Hevy/FitNotes. Self-host it or use it on the phone alone.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ersinkoc/phonebox",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Turn an old Android phone into a customizable desk panel and touch control deck for Windows, Linux and macOS. 115 widgets for system stats, AI coding, media and automation. USB or paired Wi-Fi. No cloud required.",
+      "language": "C#",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "backnotprop/plannotator",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click. ",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "oxynote/oxynote",
+        "source": "hatena",
+        "desc": "An open‑source technical wiki connected to the systems it describes",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 29,
+        "sourceRank": 1
+      },
+      {
+        "repo": "RedHatProductSecurity/prodsec-skills",
+        "source": "hatena",
+        "desc": "Security skills for AI coding assistants and agentic systems",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 4,
+        "sourceRank": 2
+      },
+      {
+        "repo": "V4bel/NoisyTCP",
+        "source": "hatena",
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 3
+      }
+    ]
+  }
+}

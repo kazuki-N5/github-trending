@@ -1,0 +1,36 @@
+{
+  "repo": "RedHatProductSecurity/prodsec-skills",
+  "language": "",
+  "readme": true,
+  "oneLiner": "AIコーディングアシスタント向けセキュリティスキル集（138スキル）",
+  "features": [
+    "Claude Code・Cursor・Copilotなど主要AIアシスタントで利用できるツール非依存のセキュリティスキルを提供する",
+    "セキュア開発・セキュリティテスト・セキュリティ監査・開発者ツールの4カテゴリで138スキルを収録する",
+    "CodeRabbitと連携してPRレビュー時に自動的にセキュリティチェックを適用できる",
+    "Lolaまたはエージェントハーネスへのクローンによる2種類のインストール方法をサポートする",
+    "gitleaks・Semgrep・Trivyなど8種類のセキュリティスキャナをPRレビューで有効化できる"
+  ],
+  "why": "AIコーディングアシスタントの普及により開発速度が上がる一方でセキュリティの見落としが懸念されており、開発フロー内にセキュリティガイダンスを埋め込む需要が高まっている。Red Hat製品セキュリティチームが実務経験をもとに体系化した138のスキルは即戦力として注目されている。Trail of BitsやCoSAI CodeGuardのスキルも含むオープンソースの共同成果物である点も信頼性を高めている。",
+  "whoFor": "AIコーディングアシスタントを日常的に使うソフトウェア開発者やDevSecOpsエンジニアに役立つ。セキュアコーディングのガイドラインをチーム全体に浸透させたいセキュリティチームや、PRレビューにセキュリティ自動チェックを組み込みたいプロジェクトにも適している。",
+  "tech": [
+    "スキルはフロントマター付き構造化Markdownで記述されており、ツール非依存で任意のAIアシスタントから参照できる",
+    "make bootstrapでuvを使ったリンティング・バリデーションツールとgitフックをセットアップする",
+    "module/AGENTS.mdをエントリーポイントとしてエージェントハーネスのコンテキストディレクトリに追加する形式で統合できる",
+    "CodeRabbitの.coderabbit.yamlでパスベースのPRレビュールールとして8種類のセキュリティスキャナを有効化できる",
+    "新スキルはexperimental/に追加し、標準フロントマターとインデックスファイルの更新を含むコントリビューションフローを持つ"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンする",
+      "make bootstrapを実行してツールとgitフックをセットアップする",
+      "AIアシスタントのプロンプトでスキルファイルのパス（例: module/skills/cargo-fuzz/SKILL.md）を参照する",
+      "またはlola mod addとlola installでLolaに追加して利用する"
+    ],
+    "commands": [
+      "git clone https://github.com/RedHatProductSecurity/prodsec-skills",
+      "make bootstrap",
+      "lola mod add RedHatProductSecurity/prodsec-skills",
+      "lola install"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RedHatProductSecurity/prodsec-skills | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛡️</div><div>
+<h1>RedHatProductSecurity/prodsec-skills</h1>
+<div class="meta">
+<span>初掲載 2026-11-17（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/RedHatProductSecurity/prodsec-skills" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="redhatproductsecurity__prodsec-skills" data-repo="RedHatProductSecurity/prodsec-skills" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIコーディングアシスタント向けセキュリティスキル集（138スキル）</p>
+<h3>何ができるか</h3><ul><li>Claude Code・Cursor・Copilotなど主要AIアシスタントで利用できるツール非依存のセキュリティスキルを提供する</li><li>セキュア開発・セキュリティテスト・セキュリティ監査・開発者ツールの4カテゴリで138スキルを収録する</li><li>CodeRabbitと連携してPRレビュー時に自動的にセキュリティチェックを適用できる</li><li>Lolaまたはエージェントハーネスへのクローンによる2種類のインストール方法をサポートする</li><li>gitleaks・Semgrep・Trivyなど8種類のセキュリティスキャナをPRレビューで有効化できる</li></ul>
+<h3>なぜ注目されているか</h3><p>AIコーディングアシスタントの普及により開発速度が上がる一方でセキュリティの見落としが懸念されており、開発フロー内にセキュリティガイダンスを埋め込む需要が高まっている。Red Hat製品セキュリティチームが実務経験をもとに体系化した138のスキルは即戦力として注目されている。Trail of BitsやCoSAI CodeGuardのスキルも含むオープンソースの共同成果物である点も信頼性を高めている。</p>
+<h3>どんな人に役立つか</h3><p>AIコーディングアシスタントを日常的に使うソフトウェア開発者やDevSecOpsエンジニアに役立つ。セキュアコーディングのガイドラインをチーム全体に浸透させたいセキュリティチームや、PRレビューにセキュリティ自動チェックを組み込みたいプロジェクトにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>スキルはフロントマター付き構造化Markdownで記述されており、ツール非依存で任意のAIアシスタントから参照できる</li><li>make bootstrapでuvを使ったリンティング・バリデーションツールとgitフックをセットアップする</li><li>module/AGENTS.mdをエントリーポイントとしてエージェントハーネスのコンテキストディレクトリに追加する形式で統合できる</li><li>CodeRabbitの.coderabbit.yamlでパスベースのPRレビュールールとして8種類のセキュリティスキャナを有効化できる</li><li>新スキルはexperimental/に追加し、標準フロントマターとインデックスファイルの更新を含むコントリビューションフローを持つ</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンする</li><li>make bootstrapを実行してツールとgitフックをセットアップする</li><li>AIアシスタントのプロンプトでスキルファイルのパス（例: module/skills/cargo-fuzz/SKILL.md）を参照する</li><li>またはlola mod addとlola installでLolaに追加して利用する</li></ol>
+<pre><code>git clone https://github.com/RedHatProductSecurity/prodsec-skills
+make bootstrap
+lola mod add RedHatProductSecurity/prodsec-skills
+lola install</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-17.html#h-redhatproductsecurity__prodsec-skills">2026-11-17 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>4 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

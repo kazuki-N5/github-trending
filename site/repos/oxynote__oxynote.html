@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>oxynote/oxynote | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>oxynote/oxynote</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-17（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/oxynote/oxynote" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="oxynote__oxynote" data-repo="oxynote/oxynote" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ライブデータと連携する自己ホスト型テクニカルWikiワークスペース</p>
+<h3>何ができるか</h3><ul><li>PrometheusやLoki、SQLクエリをページ内で直接実行し、ライブメトリクスやログをドキュメントと並べて表示できる</li><li>保護ページへの変更はPRのようなブロックレベルdiff付きのドラフトレビューと承認フローを経由する</li><li>複数人がリアルタイムで同じページを編集・コメントでき、ワークスペース横断検索もできる</li><li>Claude CodeやCodexなどのMCPクライアントが接続でき、AIによる編集も同じレビューフローを通す</li><li>Anthropic・OpenAI・Google・OpenRouter・Ollamaに対応した組み込みAIアシスタントを内蔵する</li><li>単一のDockerコンテナとしてポート8080で起動する、シンプルなセルフホスト構成をとる</li></ul>
+<h3>なぜ注目されているか</h3><p>システムの説明とライブデータを同一ページに並置するという独自のアプローチが注目を集めている。AIエージェントとのMCP統合やドラフトレビュー機能が、エンジニアリングチームのドキュメント管理課題を解決する。Apache-2.0ライセンスでオープンに開発されており、コミュニティからの貢献も活発だ。</p>
+<h3>どんな人に役立つか</h3><p>自社インフラのメトリクスやログをドキュメントと一緒に管理したいインフラ・SREチームに最適だ。AIエージェントとのコード連携ドキュメントを整備したい開発チームや、セルフホストのWikiソリューションを求めるエンジニアリング組織にも向いている。</p>
+<h3>技術的なポイント</h3><ul><li>PrometheusやLoki・SQLのクエリ結果をページに埋め込むライブデータ統合アーキテクチャを採用している</li><li>MCPプロトコル対応により、Claude CodeやCodexなどのAIエージェントをワークスペースに接続できる</li><li>保護ページへの変更はブロックレベルdiffと承認フローを持つドラフトシステムで管理される</li><li>単一Dockerコンテナで動作し、データボリュームのみで永続化するシンプルなデプロイ構成をとる</li></ul>
+<h3>試し方</h3>
+<ol><li>Dockerをインストールし、以下のコマンドでコンテナを起動する</li><li>ブラウザでhttp://localhost:8080にアクセスしてワークスペースを開く</li><li>デフォルトの管理者認証情報でログインし、すぐにパスワードを変更する</li></ol>
+<pre><code>docker run -p 8080:8080 -v oxynote-data:/data oxynote/oxynote</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-17.html#h-oxynote__oxynote">2026-11-17 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>29 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

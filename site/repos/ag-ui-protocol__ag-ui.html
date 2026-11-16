@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ag-ui-protocol/ag-ui | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>ag-ui-protocol/ag-ui</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-17（Trendshift 6位）</span>
+<a class="gh" href="https://github.com/ag-ui-protocol/ag-ui" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="ag-ui-protocol__ag-ui" data-repo="ag-ui-protocol/ag-ui" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントとフロントエンドアプリをつなぐオープンプロトコル</p>
+<h3>何ができるか</h3><ul><li>双方向イベントストリームでエージェントのトークン生成・ツール呼び出し・状態更新をリアルタイムに配信できる</li><li>共有状態をエージェントとアプリの双方から読み書きし、一貫したUIを実現できる</li><li>人間が介入して承認・編集・拒否を行うヒューマン・イン・ザ・ループ割り込みに対応している</li><li>フロントエンドツールをアプリ側で実行し、その結果をエージェントに返すことができる</li><li>サブエージェントへの委譲と、発生元を明示したイベント属性を持つマルチエージェント構成をサポートしている</li><li>HTTP+SSE および Protobuf バイナリの2つのトランスポートに対応し、様々な環境で利用できる</li></ul>
+<h3>なぜ注目されているか</h3><p>LangChain・CrewAI・Google ADK・Claude Agent SDK など多数のフレームワークがそれぞれ独自のクライアント接続方式を持ち、乱立していた問題を一本化する標準プロトコルとして注目されている。MCP（ツール・コンテキスト）やA2A（エージェント間通信）と並ぶ第三の柱として位置づけられ、エージェントAIのエコシステムを補完する。JSON Schema で仕様が凍結された 1.0 リリースにより、TypeScript・Python・.NET の SDK が自動生成され、後方互換性も確保されている。</p>
+<h3>どんな人に役立つか</h3><p>エージェント搭載のウェブ・モバイル・ターミナルアプリを開発するフロントエンド／フルスタックエンジニアに適している。フレームワークやツールのインテグレーション開発者が AG-UI 対応クライアントを横断的にサポートしたい場合にも有用である。</p>
+<h3>技術的なポイント</h3><ul><li>アプリが RunAgentInput（メッセージ・ツール・共有状態・コンテキスト）を一度送ると、エージェントが型付きイベントのストリームで応答するリクエストモデルを採用している</li><li>ライフサイクル・テキスト・ツール呼び出し・状態（スナップショットと JSON Patch デルタ）・推論など 31 種類のイベントタイプが定義されている</li><li>HTTP+SSE と Protobuf バイナリの2種類のトランスポートをサポートし、ミドルウェアで他ソースのイベントを変換できる</li><li>TypeScript（@ag-ui/client）・Python（ag-ui-protocol）・.NET（AGUI.Client）の公式 SDK に加え、Kotlin・Go・Rust など8言語のコミュニティ SDK がある</li></ul>
+<h3>試し方</h3>
+<ol><li>npx create-ag-ui-app@latest でフロントエンドとエージェントフレームワークを選んで新規アプリを作成する</li><li>利用する言語に合わせて SDK をインストールする</li><li>FastAPI（Python）などでイベントストリームを返すエージェントサーバーを実装する</li><li>TypeScript クライアントからエージェントに接続してストリームを受信する</li></ol>
+<pre><code>npx create-ag-ui-app@latest
+npm install @ag-ui/client
+pip install ag-ui-protocol
+dotnet add package AGUI.Client</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-17.html#d-ag-ui-protocol__ag-ui">2026-11-17</a>
+<span class="src trendshift">Trendshift 6位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

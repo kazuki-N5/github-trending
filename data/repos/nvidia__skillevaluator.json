@@ -1,0 +1,35 @@
+{
+  "repo": "NVIDIA/SkillEvaluator",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "AIエージェントスキルの品質・重複・実動作を3段階で自動評価するフレームワーク",
+  "features": [
+    "スキルの安全性・整合性・ハーネス互換性を検証するTier1バリデーション機能を備える",
+    "埋め込みモデルを使ってスキル間の意味的重複や類似ガイダンスを検出するTier2重複排除を行う",
+    "DockerサンドボックスでエージェントにスキルをON/OFFさせてTier3ライブ評価を実施する",
+    "評価用データセットを自動生成するオートパイロット機能で評価ソースを作成できる",
+    "GitHubおよびGitLabのCI/CDパイプラインへ組み込むためのCI設定テンプレートを提供する",
+    "Claude CodeやCodexなどのエージェントにスキルとして直接インストールして評価依頼ができる"
+  ],
+  "why": "AIエージェント向けスキルの品質保証は標準化が難しかったが、SkillEvaluatorはNVIDIAが提唱する3段階パイプラインで静的検証から実動作評価までを一貫して自動化する。arXiv論文（2608.20614）も公開されており、NVIDIA Verified Skillsパイプラインの中核ツールとして研究・産業両面で注目を集めている。",
+  "whoFor": "AIエージェント向けスキルやプロンプト集を開発する研究者・エンジニアに最適なツールである。Claude CodeやCodexなど複数のエージェントへスキルを導入する前の品質ゲートとして活用でき、CI/CDに組み込んで継続的な品質管理も実現できる。",
+  "tech": [
+    "SkillSpectorと連携した特化型セキュリティスキャンでスキルの静的安全性を解析する",
+    "オープンソースのエージェント評価フレームワークHarborをDockerサンドボックスで使用しライブ評価を実行する",
+    "Tier2では埋め込みモデルとチャットモデルを用いてスキル内および複数スキル間の重複を検出する",
+    "NVIDIA Build APIと統合してルーブリックスコアリングとフィードバック生成によるLLMベース評価を行う",
+    "Python 3.12・3.13・3.14をサポートし、tier2・tier3・llm・allなどのエクストラで依存を選択できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "pipまたはuvでSkillEvaluatorをインストールする",
+      "uvを使ってPython 3.13環境でbundledサンプルスキルの品質チェックを実行する",
+      "レポートはreports/first-qualityディレクトリにCLI出力とJSONで保存される"
+    ],
+    "commands": [
+      "pip install skillevaluator",
+      "uv tool install skillevaluator",
+      "uv run --python 3.13 skillevaluator quality-check src/skillevaluator/tier3/reference_skills/text-analyzer -r cli -r json -o reports/first-quality"
+    ]
+  }
+}
