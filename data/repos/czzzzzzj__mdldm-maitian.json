@@ -1,0 +1,40 @@
+{
+  "repo": "CzzzzzzJ/mdldm-maitian",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "B站・抖音・YouTube等の多プラットフォームに一括発布できる自メディア管理ツール",
+  "features": [
+    "1本の動画をB站・抖音・小紅書・視頻号・YouTube・X・Instagramなど複数プラットフォームに一括で予約発布できる",
+    "各プラットフォームの再生数・インタラクション数・フォロワー数を毎日自動収集しWebダッシュボードで可視化できる",
+    "発布後1・3・7日目に自動で複盤（振り返り）カードを生成し、Feishu（飛書）通知で受け取れる",
+    "毎週月曜に自動週報を生成し、プラットフォーム別の実績を比較できる",
+    "自サイトと連携することで各動画からの登録・注文・収益などの転換（コンバージョン）を追跡できる"
+  ],
+  "why": "推測: 一人で複数の動画プラットフォームを運営するコンテンツクリエイターが増えており、各プラットフォームのダッシュボードを個別に確認する手間を解消したいニーズに応えている。パスワードを保存せずChrome拡張経由で操作するアーキテクチャがセキュリティ面でも評価されている。",
+  "whoFor": "B站・抖音・YouTubeなど複数プラットフォームに同時配信している個人クリエイターや一人運営のメディアに適している。データ集計と転換分析を自動化したい人、発布作業の重複入力を減らしたい人に特に役立つ。",
+  "tech": [
+    "Node.js v22.5以上の組み込みSQLiteモジュール（node:sqlite）を使いサードパーティDBなしで動作する",
+    "Chrome拡張「麦田発布助手」がChrome DevTools Protocol（ポート9333）経由でブラウザを操作し、各プラットフォームにログインした状態で発布を代行する",
+    "launchd（macOSのサービス管理機能）でデーモンを常駐させ、定時発布・データ収集を自動化している",
+    "Cloudflare Tunnelまたは飛書認証コードで外部からのリモートアクセスに対応している"
+  ],
+  "tryIt": {
+    "steps": [
+      "macOS・Node.js v22.5以上・Google Chromeを用意する",
+      "ワンライナーインストールスクリプトを実行する",
+      "node src/init.mjs でセットアップウィザードを起動し各プラットフォームのアカウントを設定する",
+      "node src/hub.mjs doctor で各プラットフォームのログイン状態を確認する",
+      "動画ファイルとメタデータを用意し node src/hub.mjs plan で発布スケジュールに追加する"
+    ],
+    "commands": [
+      "bash -c \"$(curl -fsSL https://raw.githubusercontent.com/CzzzzzzJ/mdldm-maitian/main/scripts/install.sh)\"",
+      "node src/demo.mjs",
+      "node src/init.mjs",
+      "node src/hub.mjs doctor",
+      "node src/hub.mjs plan [工程目录]",
+      "node src/hub.mjs run <工程目录>",
+      "node src/hub.mjs metrics",
+      "node src/hub.mjs daemon"
+    ]
+  }
+}

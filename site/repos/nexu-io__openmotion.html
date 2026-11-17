@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nexu-io/openmotion | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔍</div><div>
+<h1>nexu-io/openmotion</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-18（Trendshift 12位）</span>
+<a class="gh" href="https://github.com/nexu-io/openmotion" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="nexu-io__openmotion" data-repo="nexu-io/openmotion" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">HTMLコードで動画を生成・編集できるオープンソースAI動画スタジオ</p>
+<h3>何ができるか</h3><ul><li>参照動画を解析してHTMLプロジェクトとして再現・編集できる</li><li>Motion.mdというMarkdown形式でシーン構成・タイミング・トランジションを記述できる</li><li>画像・動画・音楽・ボイスオーバーをAIで生成しワンストップで制作できる</li><li>BYOA（自分のAIエージェントを使う）とBYOK（自分のAPIキーを使う）方式で22種類以上のエージェントに対応する</li><li>300以上のMotion.mdテンプレートが提供されており参照動画を素早く再現できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 「HTMLとCSSでビデオをコーディングする」という独自アプローチで、動画制作をソフトウェア開発のワークフローに統合しようとする点が注目されている。BYOA/BYOKモデルにより特定サービスへの依存を排除したオープンな設計が評価されている。</p>
+<h3>どんな人に役立つか</h3><p>AIを活用した動画制作に興味があるクリエイターや、CapCut等の代替を探している動画制作者に向いている。プログラミングの知識を動画制作に活かしたい開発者にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>HTML・CSS・JavaScriptでシーンを記述しStudioエディタでプレビュー・タイミング調整後にMP4でレンダリングする</li><li>Node.js 22.18以上が必要で、プレビューにChrome/Chromium、エクスポートにFFmpegを使用する</li><li>fal.ai・Atlas Cloudなどの外部AIプロバイダーでSeedance（動画生成）・Suno（音楽生成）・Kokoro（音声合成）等を利用する</li><li>Motion.md（Markdownベースの独自フォーマット）でショット・タイミング・トランジションを定義してAIに伝える</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js 22.18以上、Chrome/Chromium、FFmpegをインストールする</li><li>リポジトリをクローンしてnpm installで依存関係をインストールする</li><li>npm run build:studioでスタジオをビルドしnpm startで起動する</li><li>自分のAIエージェントとAPIキーを設定して動画を制作する</li></ol>
+<pre><code>git clone https://github.com/nexu-io/openmotion
+cd openmotion
+npm install
+npm run build:studio
+npm start</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-18.html#d-nexu-io__openmotion">2026-11-18</a>
+<span class="src trendshift">Trendshift 12位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

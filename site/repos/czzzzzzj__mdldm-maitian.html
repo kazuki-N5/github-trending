@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CzzzzzzJ/mdldm-maitian | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>CzzzzzzJ/mdldm-maitian</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-11-18（Trendshift 16位）</span>
+<a class="gh" href="https://github.com/CzzzzzzJ/mdldm-maitian" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="czzzzzzj__mdldm-maitian" data-repo="CzzzzzzJ/mdldm-maitian" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">B站・抖音・YouTube等の多プラットフォームに一括発布できる自メディア管理ツール</p>
+<h3>何ができるか</h3><ul><li>1本の動画をB站・抖音・小紅書・視頻号・YouTube・X・Instagramなど複数プラットフォームに一括で予約発布できる</li><li>各プラットフォームの再生数・インタラクション数・フォロワー数を毎日自動収集しWebダッシュボードで可視化できる</li><li>発布後1・3・7日目に自動で複盤（振り返り）カードを生成し、Feishu（飛書）通知で受け取れる</li><li>毎週月曜に自動週報を生成し、プラットフォーム別の実績を比較できる</li><li>自サイトと連携することで各動画からの登録・注文・収益などの転換（コンバージョン）を追跡できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 一人で複数の動画プラットフォームを運営するコンテンツクリエイターが増えており、各プラットフォームのダッシュボードを個別に確認する手間を解消したいニーズに応えている。パスワードを保存せずChrome拡張経由で操作するアーキテクチャがセキュリティ面でも評価されている。</p>
+<h3>どんな人に役立つか</h3><p>B站・抖音・YouTubeなど複数プラットフォームに同時配信している個人クリエイターや一人運営のメディアに適している。データ集計と転換分析を自動化したい人、発布作業の重複入力を減らしたい人に特に役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>Node.js v22.5以上の組み込みSQLiteモジュール（node:sqlite）を使いサードパーティDBなしで動作する</li><li>Chrome拡張「麦田発布助手」がChrome DevTools Protocol（ポート9333）経由でブラウザを操作し、各プラットフォームにログインした状態で発布を代行する</li><li>launchd（macOSのサービス管理機能）でデーモンを常駐させ、定時発布・データ収集を自動化している</li><li>Cloudflare Tunnelまたは飛書認証コードで外部からのリモートアクセスに対応している</li></ul>
+<h3>試し方</h3>
+<ol><li>macOS・Node.js v22.5以上・Google Chromeを用意する</li><li>ワンライナーインストールスクリプトを実行する</li><li>node src/init.mjs でセットアップウィザードを起動し各プラットフォームのアカウントを設定する</li><li>node src/hub.mjs doctor で各プラットフォームのログイン状態を確認する</li><li>動画ファイルとメタデータを用意し node src/hub.mjs plan で発布スケジュールに追加する</li></ol>
+<pre><code>bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/CzzzzzzJ/mdldm-maitian/main/scripts/install.sh)&quot;
+node src/demo.mjs
+node src/init.mjs
+node src/hub.mjs doctor
+node src/hub.mjs plan [工程目录]
+node src/hub.mjs run &lt;工程目录&gt;
+node src/hub.mjs metrics
+node src/hub.mjs daemon</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-18.html#d-czzzzzzj__mdldm-maitian">2026-11-18</a>
+<span class="src trendshift">Trendshift 16位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

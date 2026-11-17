@@ -1,0 +1,34 @@
+{
+  "repo": "google-research/paper-orchestra",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "AIマルチエージェントで研究論文を自動執筆するGoogleのフレームワーク",
+  "features": [
+    "アウトライン作成・文献調査・執筆・推敲を複数の専門エージェントが分担して処理する",
+    "LaTeX形式で学会テンプレート（NeurIPS等）に沿った論文を出力する",
+    "論文中に使うグラフや概念図を自動生成できる",
+    "実験ログや素材を入力するだけでほぼ自動的に論文草稿を生成できる",
+    "Streamlitを使ったデモUIが付属している"
+  ],
+  "why": "AI研究の生産性向上ニーズが高まる中、論文執筆の自動化に特化したGoogleのマルチエージェントシステムとして注目されている。arXiv論文（2604.05018）として発表され学術的裏付けがある。推測: Googleが公式研究リポジトリで公開しており信頼性が高い点も評価されている。",
+  "whoFor": "AI研究者や大学院生が実験結果から論文草稿を素早く作りたい場合に役立つ。特にNeurIPS・ICMLなど学会向けLaTeX論文を書く研究者や、論文執筆の効率化を目指す研究チームに向いている。",
+  "tech": [
+    "Python 3.11とConda環境で動作するマルチエージェント（複数のAIが役割分担する）パイプラインを採用する",
+    "OpenAIおよびGemini（Vertex AI）のAPIをLLM（大規模言語モデル）バックエンドとして利用する",
+    "Semantic Scholar APIを使って論文を自動検索・引用情報を取得する",
+    "LaTeXで出力し学会の投稿テンプレートに対応している"
+  ],
+  "tryIt": {
+    "steps": [
+      "Python 3.11のConda環境を作成しリポジトリをクローンする",
+      ".envファイルにSemantic Scholar、OpenAI、Gemini/Vertex AIのAPIキーを設定する",
+      "素材ディレクトリとLaTeXテンプレートディレクトリを用意して実行スクリプトを呼び出す"
+    ],
+    "commands": [
+      "conda create -n paper_orchestra python=3.11",
+      "conda activate paper_orchestra",
+      "pip install -r requirements.txt",
+      "./paper_writing_cli.sh --raw_materials_dir <素材ディレクトリ> --latex_template_dir <テンプレートディレクトリ>"
+    ]
+  }
+}

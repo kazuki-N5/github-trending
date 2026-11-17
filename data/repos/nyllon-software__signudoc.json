@@ -1,0 +1,35 @@
+{
+  "repo": "NYLLON-SOFTWARE/SignuDoc",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "Vercelに自己ホストできるオープンソースの電子署名プラットフォーム",
+  "features": [
+    "PDFに署名・日付・テキスト等のフィールドを配置して署名依頼を送信できる",
+    "最大10名へ順番に署名依頼を送れ、受信者はアカウント不要で署名できる",
+    "ダッシュボードで署名状況を追跡しリマインダーを自動送信できる",
+    "完成したPDFはPAdES形式（電子署名標準）で封印しハッシュチェーンで監査証跡を保証する",
+    "組織名・ロゴ・カラーでブランドをカスタマイズでき、テンプレート機能で書類を再利用できる"
+  ],
+  "why": "DocuSignなどの高額な商用サービスに対して、無料で自己ホストできるオープンソース（MIT）の代替として注目されている。推測: Vercel・Neon・Resendの無料枠を組み合わせると月約250件まで費用ゼロで運用できるコスト優位性が評価されている。",
+  "whoFor": "電子署名サービスのコストを抑えたい中小企業や個人開発者に向いている。自社でデータを管理したい組織や、DocuSignの代替を探しているチームに適している。",
+  "tech": [
+    "Neon Postgres（サーバーレスPostgreSQL）をデータベースとしてVercelにデプロイするフルスタック構成",
+    "Vercel Blob（プライベートストレージ）でPDFファイルを管理する",
+    "Resend（メール送信API）で署名依頼やリマインダーメールを処理する",
+    "PAdES（PDF Advanced Electronic Signatures：PDF高度電子署名）形式で法的有効性のある電子署名を実装する",
+    "ハッシュチェーン（各レコードが前のレコードのハッシュを含む連鎖構造）で監査証跡の改ざんを防ぐ"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubリポジトリをフォークしてVercelにデプロイする",
+      "Neon PostgresとVercel Blobのストレージ、Resendのアカウントを用意して環境変数を設定する",
+      "デプロイ後にアカウントを作成しPDFをアップロードして署名フィールドを配置する"
+    ],
+    "commands": [
+      "git clone https://github.com/NYLLON-SOFTWARE/SignuDoc",
+      "cd SignuDoc",
+      "npm install",
+      "npm run dev"
+    ]
+  }
+}

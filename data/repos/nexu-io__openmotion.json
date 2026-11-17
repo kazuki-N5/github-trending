@@ -1,0 +1,36 @@
+{
+  "repo": "nexu-io/openmotion",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "HTMLコードで動画を生成・編集できるオープンソースAI動画スタジオ",
+  "features": [
+    "参照動画を解析してHTMLプロジェクトとして再現・編集できる",
+    "Motion.mdというMarkdown形式でシーン構成・タイミング・トランジションを記述できる",
+    "画像・動画・音楽・ボイスオーバーをAIで生成しワンストップで制作できる",
+    "BYOA（自分のAIエージェントを使う）とBYOK（自分のAPIキーを使う）方式で22種類以上のエージェントに対応する",
+    "300以上のMotion.mdテンプレートが提供されており参照動画を素早く再現できる"
+  ],
+  "why": "推測: 「HTMLとCSSでビデオをコーディングする」という独自アプローチで、動画制作をソフトウェア開発のワークフローに統合しようとする点が注目されている。BYOA/BYOKモデルにより特定サービスへの依存を排除したオープンな設計が評価されている。",
+  "whoFor": "AIを活用した動画制作に興味があるクリエイターや、CapCut等の代替を探している動画制作者に向いている。プログラミングの知識を動画制作に活かしたい開発者にも適している。",
+  "tech": [
+    "HTML・CSS・JavaScriptでシーンを記述しStudioエディタでプレビュー・タイミング調整後にMP4でレンダリングする",
+    "Node.js 22.18以上が必要で、プレビューにChrome/Chromium、エクスポートにFFmpegを使用する",
+    "fal.ai・Atlas Cloudなどの外部AIプロバイダーでSeedance（動画生成）・Suno（音楽生成）・Kokoro（音声合成）等を利用する",
+    "Motion.md（Markdownベースの独自フォーマット）でショット・タイミング・トランジションを定義してAIに伝える"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node.js 22.18以上、Chrome/Chromium、FFmpegをインストールする",
+      "リポジトリをクローンしてnpm installで依存関係をインストールする",
+      "npm run build:studioでスタジオをビルドしnpm startで起動する",
+      "自分のAIエージェントとAPIキーを設定して動画を制作する"
+    ],
+    "commands": [
+      "git clone https://github.com/nexu-io/openmotion",
+      "cd openmotion",
+      "npm install",
+      "npm run build:studio",
+      "npm start"
+    ]
+  }
+}

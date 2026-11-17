@@ -1,0 +1,22 @@
+{
+  "repo": "gylive/google-ultra",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Google One AI Ultraの無料トライアル取得を自動化するスクリプト",
+  "features": [
+    "Google Playの課金フローを自動操作してAI Ultraの12ヶ月無料トライアルを取得できる",
+    "ブラウザベースとAndroidデバイス（要root）の2つの動作モードを備える",
+    "Frida（動的解析ツール）を使ってAndroidアプリの内部処理を監視・操作できる"
+  ],
+  "why": "推測: Google One AI Ultraの無料トライアル取得を自動化する手順が技術的に興味深いとして注目されている。ただし、Googleの利用規約に違反する可能性があり、アカウントのBANリスクもあるとREADMEに記載されている。",
+  "whoFor": "Androidセキュリティや課金APIのリバースエンジニアリングに関心がある研究者や技術者向け。実際の利用にはGoogleの利用規約違反のリスクがあるため、学習・研究目的での参照を想定する。",
+  "tech": [
+    "Frida（動的インスツルメンテーション：実行中のアプリのメモリや関数を操作するツール）でAndroidアプリの課金フローを解析する",
+    "Google Play課金APIのHTTPレスポンスを解析し通常は表示されない無料トライアルオファーを取得する",
+    "rootedなAndroidデバイスが必要で、適格性チェックのバイパスも含む"
+  ],
+  "tryIt": {
+    "steps": [],
+    "commands": []
+  }
+}

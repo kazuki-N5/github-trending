@@ -1,0 +1,32 @@
+{
+  "repo": "mvanhorn/last30days-skill",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "Reddit・X等を横断検索して過去30日のトレンドを要約するAIエージェントスキル",
+  "features": [
+    "Reddit・X・YouTube・HN（Hacker News）・Polymarket等複数ソースを並列検索できる",
+    "エンゲージメント（閲覧数・コメント数等の反応数）でランク付けした要約を生成する",
+    "APIキーなしでReddit・HN・Polymarket・GitHubを無料で検索できる",
+    "v4では特許出願やキャリアページなど企業調査向け情報源にも対応している",
+    "Claude Codeマーケットプレイスやnpxコマンドなど複数の方法でインストールできる",
+    "ローカル実行でプライバシーを保護しSQLiteによるオプションの調査ライブラリ機能がある"
+  ],
+  "why": "推測: Google検索のような編集者目線でなく「実際に人が話題にした内容」を検索できる点が差別化要因として注目されている。AIエージェント向けスキルとしてClaude Codeのエコシステムに統合できる点も評価されている。",
+  "whoFor": "リサーチャーやコンテンツクリエーター、投資家など最新トレンドを素早く把握したい人に向いている。AIエージェント（Claude等）のスキルとして組み込んで使うことを想定しており、開発者にも適している。",
+  "tech": [
+    "AIエージェントスキルとして設計され、Claude CodeやClaude Desktopなど複数のAIホストに対応する",
+    "Reddit・HN等はAPI不要でスクレイピング、X等は専用APIキー（X_BEARER_TOKEN等）を使って検索する",
+    "オプションでローカルSQLiteに調査結果を蓄積する保存ライブラリ機能を持つ",
+    "macOSではKeychainに認証情報を保存してセキュリティを確保できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "Claude Codeマーケットプレイスまたはnpx skillsコマンドでインストールする",
+      "X・YouTubeなど追加ソースを使う場合はセットアップウィザードでAPIキーを設定する",
+      "AIエージェントから「過去30日間の[トピック]について調べて」と指示して使う"
+    ],
+    "commands": [
+      "npx skills add last30days"
+    ]
+  }
+}

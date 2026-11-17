@@ -1,0 +1,221 @@
+{
+  "date": "2026-11-18",
+  "collectedAt": "2026-11-18T07:07:45+09:00",
+  "entries": [
+    {
+      "repo": "BaaRai/ARTEX",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "ARTEX - AI autonomous penetration testing system (English translation)",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "elementalsouls/Claude-BugHunter",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "krisgfx9/Wireless-Device-Battery-Monitor",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "Show the battery level of wireless mice, headsets, keyboards and controllers on the Windows 10/11 taskbar. Lightweight tray app, no vendor software needed. Supports Logitech, Razer, SteelSeries, Corsair, HyperX, Glorious, PS4/PS5 DualSense, Xbox and Bluetooth devices.",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "google-research/paper-orchestra",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Immortal-Protocols/lastbook",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "Offline knowledge library for survival and rebuilding",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "NYLLON-SOFTWARE/SignuDoc",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Open-source document signature platform. Not affiliated with DocuSign. ",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "kajisho5/ffmpeg-skill",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ag-ui-protocol/ag-ui",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "gylive/google-ultra",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "DeanChensj/jiangshan-map",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mvanhorn/last30days-skill",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "nexu-io/openmotion",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "The open-source full-stack studio for Opus 5.5 motion video. Reverse engineering for any video. Code video with HTML: recreate, edit and render. BYOA + BYOK · Motion.md · Images, Video, Music & Voice.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "bannedbook/fanqiang",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "翻墙-科学上网",
+      "language": "Kotlin",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ersinkoc/phonebox",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Turn an old Android phone into a customizable desk panel and touch control deck for Windows, Linux and macOS. 115 widgets for system stats, AI coding, media and automation. USB or paired Wi-Fi. No cloud required.",
+      "language": "C#",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "p-e-w/heretic",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "CzzzzzzJ/mdldm-maitian",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "麦田：自媒体多平台发布中控与数据监控（B站/抖音/小红书/视频号/YouTube/X），飞书卡片通知 + 数据大屏",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Tencent/LoopForge",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mdiri-ai/SoduWork",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "The AI-native engine for teams and their agents. Multi-harness, multi-agent, self-hosted.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "dream-num/univer",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "sveltejs/svelte",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "web development for the rest of us",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "skx/foth",
+        "source": "hatena",
+        "desc": "Tutorial-style FORTH implementation written in golang",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 1
+      },
+      {
+        "repo": "huggingface/pybot",
+        "source": "hatena",
+        "desc": "PyBot: a chatbot written in pure Python by a swarm of agents. No weights, no training, just rules.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 2
+      },
+      {
+        "repo": "g-hayashi/trebuchet",
+        "source": "hatena",
+        "desc": "個人事業主向けのローカル専用の会計アプリ。複式簿記の帳簿から青色申告決算書まで作れます。データは暗号化して Mac の中だけに保存し、パスキーで解錠します。",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 3
+      }
+    ]
+  }
+}

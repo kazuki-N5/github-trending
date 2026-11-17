@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYLLON-SOFTWARE/SignuDoc | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>NYLLON-SOFTWARE/SignuDoc</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-18（Trendshift 6位）</span>
+<a class="gh" href="https://github.com/NYLLON-SOFTWARE/SignuDoc" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="nyllon-software__signudoc" data-repo="NYLLON-SOFTWARE/SignuDoc" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Vercelに自己ホストできるオープンソースの電子署名プラットフォーム</p>
+<h3>何ができるか</h3><ul><li>PDFに署名・日付・テキスト等のフィールドを配置して署名依頼を送信できる</li><li>最大10名へ順番に署名依頼を送れ、受信者はアカウント不要で署名できる</li><li>ダッシュボードで署名状況を追跡しリマインダーを自動送信できる</li><li>完成したPDFはPAdES形式（電子署名標準）で封印しハッシュチェーンで監査証跡を保証する</li><li>組織名・ロゴ・カラーでブランドをカスタマイズでき、テンプレート機能で書類を再利用できる</li></ul>
+<h3>なぜ注目されているか</h3><p>DocuSignなどの高額な商用サービスに対して、無料で自己ホストできるオープンソース（MIT）の代替として注目されている。<span class="guess">推測</span> Vercel・Neon・Resendの無料枠を組み合わせると月約250件まで費用ゼロで運用できるコスト優位性が評価されている。</p>
+<h3>どんな人に役立つか</h3><p>電子署名サービスのコストを抑えたい中小企業や個人開発者に向いている。自社でデータを管理したい組織や、DocuSignの代替を探しているチームに適している。</p>
+<h3>技術的なポイント</h3><ul><li>Neon Postgres（サーバーレスPostgreSQL）をデータベースとしてVercelにデプロイするフルスタック構成</li><li>Vercel Blob（プライベートストレージ）でPDFファイルを管理する</li><li>Resend（メール送信API）で署名依頼やリマインダーメールを処理する</li><li>PAdES（PDF Advanced Electronic Signatures：PDF高度電子署名）形式で法的有効性のある電子署名を実装する</li><li>ハッシュチェーン（各レコードが前のレコードのハッシュを含む連鎖構造）で監査証跡の改ざんを防ぐ</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubリポジトリをフォークしてVercelにデプロイする</li><li>Neon PostgresとVercel Blobのストレージ、Resendのアカウントを用意して環境変数を設定する</li><li>デプロイ後にアカウントを作成しPDFをアップロードして署名フィールドを配置する</li></ol>
+<pre><code>git clone https://github.com/NYLLON-SOFTWARE/SignuDoc
+cd SignuDoc
+npm install
+npm run dev</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-18.html#d-nyllon-software__signudoc">2026-11-18</a>
+<span class="src trendshift">Trendshift 6位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

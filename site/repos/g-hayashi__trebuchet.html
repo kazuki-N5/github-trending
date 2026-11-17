@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>g-hayashi/trebuchet | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>g-hayashi/trebuchet</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-11-18（はてなブックマーク 3位）</span>
+<a class="gh" href="https://github.com/g-hayashi/trebuchet" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="g-hayashi__trebuchet" data-repo="g-hayashi/trebuchet" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">個人事業主向けのローカル専用Mac会計アプリ（複式簿記・青色申告対応）</p>
+<h3>何ができるか</h3><ul><li>複式簿記（借方・貸方で取引を記録する簿記の基本形式）の仕訳帳から青色申告決算書まで一貫して作成できる</li><li>銀行・カードの明細をペーストまたはアップロードし、事業用・個人用に仕分けして仕訳に変換できる</li><li>請求書の発行が売掛金・売上の仕訳と連動しており、入金消込と源泉徴収税計算も行える</li><li>減価償却・繰延資産償却・家事按分（自宅兼事務所などの費用配分）といった年度末調整を処理できる</li><li>パスキー（Touch ID）でロック解除し、データはMac内の暗号化SQLiteに保存され外部サーバーに送信されない</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> freeeや弥生などのクラウド会計は月額費用がかかりデータが外部に保存されるため、コスト意識が高い個人事業主やプライバシーを重視する人がローカル完結のオルタナティブを求めていると見られる。パスキー認証という新技術の採用も注目ポイントになっている。</p>
+<h3>どんな人に役立つか</h3><p>青色申告が必要な個人事業主で、特に時間単価・月額課金型のビジネスを行い、事業・個人で共用の銀行口座を持つ一人運営の人に最適である。法人税申告や在庫管理・給与計算は対象外のため、それらが必要な場合は向かない。</p>
+<h3>技術的なポイント</h3><ul><li>Node.js 26.5.1+とpnpmで管理されたフロントエンド・サーバー構成で、pnpm startでまとめて起動できる</li><li>PRF（Pseudo-Random Function）サポートつきパスキーで暗号化キーを導出し、SQLiteのデータベースファイルを暗号化している</li><li>オプションのAI連携では口座科目名をマスキング（隠蔽）してから外部APIに送信し、金額・日付はAIに渡さない設計になっている</li><li>Tailscaleのserve機能を使ってLAN外からスマートフォンでアクセスできる（Cloudflare Funnelは意図的に不使用）</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js 26.5.1以上とpnpm 11.3.0以上をインストールする</li><li>リポジトリをクローンしpnpm installで依存パッケージをインストールする</li><li>pnpm dev でhttp://localhost:5173を開く（127.0.0.1ではなくlocalhostを使うこと。パスキーが動作しない）</li><li>初回起動時にパスキーを登録し、表示されるリカバリーキーをオフラインで保管する</li></ol>
+<pre><code>pnpm install
+pnpm dev
+pnpm start</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-18.html#h-g-hayashi__trebuchet">2026-11-18 はてブ</a>
+<span class="src hatena">はてなブックマーク 3位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
