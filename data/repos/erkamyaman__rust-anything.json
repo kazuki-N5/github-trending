@@ -1,0 +1,38 @@
+{
+  "repo": "erkamyaman/rust-anything",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "既存アプリをRustに少しずつ移行しながら動作を自動検証するツール",
+  "features": [
+    "元のコードで生成したエッジケースと独自入力を記録し、テストケースとして保存する。",
+    "Rustクレート（ライブラリ単位のパッケージ）とラッパーを自動生成し、既存の呼び出し元のAPIを維持したまま移行できる。",
+    "記録済みの全テストケースをRust版で再実行し、動作が一致するかチェックする。",
+    "全ケース合格後にフォールバックを除去し、純粋なRustアプリに昇格させる。",
+    "TypeScript、Python、C、Go、Ruby、Javaに対応し、CLIやHTTPサーバー、ライブラリの移行が可能。"
+  ],
+  "why": "推測: RustはC/C++に匹敵する高速性と安全性を持つ言語として注目されているが、既存コードの全面書き換えはリスクが高い。このツールは段階的な移行と自動検証を組み合わせることで、その障壁を大幅に下げるアプローチとして話題を集めていると考えられる。READMEはTypeScript検索処理で20倍、Python処理で17倍の高速化事例を報告している。",
+  "whoFor": "既存のTypeScript・Python・GoなどのアプリをRustへ移行したいエンジニア向け。特に段階的に移行しながら動作保証を維持したいチームに適している。Claude CodeやCursorなどのAIコーディングエージェントとの連携も想定されている。",
+  "tech": [
+    "Record/Port/Check/Liftの4フェーズで移行を進め、各ステップで動作の等価性を保証する。",
+    "Cargoを使ったRustクレートの自動生成と、元の言語向けラッパーの自動生成により既存APIを維持する。",
+    "Claude Code・Codex・Cursor・Gemini CLIと統合するセットアップコマンドを提供し、AIエージェントとの協調作業を前提としている。",
+    "デモ用ベンチマークが`demo/`フォルダに同梱されており、パフォーマンス比較を再現できる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "cargo install rust-anythingでインストールする。",
+      "rust-anything setupを実行してAIコーディングツールと連携登録する。",
+      "rust-anything recordで元のコードの動作を記録する。",
+      "Rust版のコードを書いてrust-anything checkで動作を検証する。",
+      "rust-anything gateが通ればrust-anything liftで純粋Rustに昇格する。"
+    ],
+    "commands": [
+      "cargo install rust-anything",
+      "rust-anything setup",
+      "rust-anything record",
+      "rust-anything check",
+      "rust-anything gate",
+      "rust-anything lift"
+    ]
+  }
+}

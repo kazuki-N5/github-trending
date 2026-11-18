@@ -1,0 +1,261 @@
+{
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-19T07:07:53+09:00",
+  "entries": [
+    {
+      "repo": "erkamyaman/rust-anything",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "BaaRai/ARTEX",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "ARTEX - AI autonomous penetration testing system (English translation)",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "elementalsouls/Claude-BugHunter",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "google-research/paper-orchestra",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mdiri-ai/SoduWork",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "The AI-native engine for teams and their agents. Multi-harness, multi-agent, self-hosted.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "krisgfx9/Wireless-Device-Battery-Monitor",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Show the battery level of wireless mice, headsets, keyboards and controllers on the Windows 10/11 taskbar. Lightweight tray app, no vendor software needed. Supports Logitech, Razer, SteelSeries, Corsair, HyperX, Glorious, PS4/PS5 DualSense, Xbox and Bluetooth devices.",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "boykopovar/AnyPS5",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mvanhorn/last30days-skill",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "nexu-io/openmotion",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "The open-source full-stack studio for Opus 5.5 motion video. Reverse engineering for any video. Code video with HTML: recreate, edit and render. BYOA + BYOK · Motion.md · Images, Video, Music & Voice.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "gylive/google-ultra",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "jackotom/hongguo-drama",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "红果短剧桌面版 · 支持 M 系列 Mac、Intel Mac 和 Windows · 三来源搜索、播放、下载与追剧 · GPL-3.0 开源",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "DietrichGebert/ponytail",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "affaan-m/ECC",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "jingyaogong/minimind",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "microsoft/markitdown",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "Python tool for converting files and office documents to Markdown.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Orca lets you run a fleet of coding agents (e.g. Claude Code, Codex) with your own subscription. Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mjmirza/app-store-compliance",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "language": "Shell",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "HolyArrs/HolyArrs",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "One self-hosted app for your shows, movies and music.",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "goodseafly/how-to-make-work-pay",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "教你把工资、加班费和没休完的年假一分不少地要回来，社保断了怎么接、工伤生育怎么办；被针对、被调岗、被裁时知道怎么走、怎么不留尾巴。576 条建议，每条写明花掉什么、换回什么、证据有多硬，来源只引官方文件原文和研究文献。",
+      "language": "HTML",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "zephyr4123/snug",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "为 UU远程 打造的 Mac 移动端工作区：独立竖屏、窗口自适应铺满、字号随屏放大、触控遵循 iOS 交互习惯，让 Mac 在手机上拥有原生级的操作体验。A native-grade iPhone workspace for controlling your Mac over UU Remote.",
+      "language": "Swift",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "AnIT012/nihongo",
+        "source": "hatena",
+        "desc": "AIが書く日本語を、人が書く文に近づけるエージェントスキル。Claude、ChatGPT、Claude Code、Codexなどで使えます。",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 28,
+        "sourceRank": 1
+      },
+      {
+        "repo": "libraz/suzume",
+        "source": "hatena",
+        "desc": "A lightweight Japanese tokenizer for browsers and native apps — WebAssembly, Node.js, Python, Go, and C++, returning POS tags and lemmas with the dictionaries built in",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 15,
+        "sourceRank": 2
+      },
+      {
+        "repo": "cisco-ai-defense/project-quarry",
+        "source": "hatena",
+        "desc": "Detection DSL and engine for AI agents",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 6,
+        "sourceRank": 3
+      },
+      {
+        "repo": "kgmkm/muse-grok-x-search",
+        "source": "hatena",
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 4
+      },
+      {
+        "repo": "jm33-m0/emp3r0r",
+        "source": "hatena",
+        "desc": "Stealthy, Linux-first multi-operator C2 with a self-healing mesh, in-memory execution, AI-driven MCP assistant, and autonomous evasion loop.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 5
+      },
+      {
+        "repo": "lance0/xfr",
+        "source": "hatena",
+        "desc": "A modern iperf3 alternative with a live TUI, multi-client server, and QUIC support. Built in Rust.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 6
+      },
+      {
+        "repo": "LambdaBytes/sping",
+        "source": "hatena",
+        "desc": "A modern, cross-platform ping with real-time diagnostics, network context, quality scoring, and multi-target monitoring.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 7
+      }
+    ]
+  }
+}

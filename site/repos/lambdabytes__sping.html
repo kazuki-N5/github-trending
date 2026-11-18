@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LambdaBytes/sping | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>LambdaBytes/sping</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-19（はてなブックマーク 7位）</span>
+<a class="gh" href="https://github.com/LambdaBytes/sping" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="lambdabytes__sping" data-repo="LambdaBytes/sping" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ネットワーク診断付きのモダンなクロスプラットフォームpingツール</p>
+<h3>何ができるか</h3><ul><li>ICMP（IPv4・IPv6）に加えてTCP接続プローブ（`--tcp PORT`）をサポートし、ICMPをフィルタするネットワークでも使える。</li><li>ゲートウェイ・WAN到達性を同時にプローブし「ターゲット不達・インターネットは正常」のような診断情報を表示する。</li><li>スパイク検知・ジッター・パケットロス追跡・品質スコア（Quality Score）でネットワーク品質を定量化できる。</li><li>コンパクト・拡張・クラシック・複数ターゲット表・JSONなど複数の表示モードを持つ。</li><li>`--diagnose` モード（実験的）でターゲットがダウンした際に自動診断チェックを実行する。</li><li>`sping --ip` でインターフェースアドレスとデフォルトゲートウェイを、`--external` で公開IPアドレスを確認できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 標準の `ping` コマンドは単純な疎通確認しかできないが、ネットワーク問題の原因がターゲット障害なのか自分側の接続問題なのかを素早く切り分けたいというニーズは高い。管理者権限不要でICMPが使えるクロスプラットフォーム設計も普及を後押ししていると思われる。</p>
+<h3>どんな人に役立つか</h3><p>インフラエンジニアやSREでネットワーク障害の原因を素早く特定したい人向け。開発者がローカル環境やCI環境のネットワーク疎通確認をスクリプトで自動化したい場面にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>Rust 1.88以上で実装されており、crates.ioからインストールできる。</li><li>多くのプラットフォームでroot権限不要でICMPを使えるよう設計されている。</li><li>STUNサーバーに問い合わせることで自分のパブリックIPアドレスを取得できる（`--external`）。</li><li>終了コードはpingと互換性があり（0:応答あり / 1:応答なし / 2:エラー）、スクリプトから使いやすい。</li></ul>
+<h3>試し方</h3>
+<ol><li>Homebrew・Scoop・`cargo install sping`・aptパッケージ・バイナリのいずれかでインストールする。</li><li>`sping &lt;ターゲットのIPまたはホスト名&gt;` を実行する。</li><li>複数ターゲットを監視する場合はファイルにターゲットを列挙してバッチモードで実行する。</li></ol>
+<pre><code>cargo install sping
+brew install sping
+apt install sping
+sping &lt;target&gt;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-19.html#h-lambdabytes__sping">2026-11-19 はてブ</a>
+<span class="src hatena">はてなブックマーク 7位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

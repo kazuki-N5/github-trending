@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jm33-m0/emp3r0r | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧠</div><div>
+<h1>jm33-m0/emp3r0r</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-11-19（はてなブックマーク 5位）</span>
+<a class="gh" href="https://github.com/jm33-m0/emp3r0r" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="jm33-m0__emp3r0r" data-repo="jm33-m0/emp3r0r" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Linux向けオープンソースC2フレームワーク（ペネトレーションテスト用）</p>
+<h3>何ができるか</h3><ul><li>HTTP・TCP・UDP・HTTP/2・QUICなど複数のC2通信プロトコルに対応している。</li><li>エージェント間のP2Pメッシュネットワークによりトラフィックをリレーし、ネットワーク内へのピボット（侵入経路の横展開）が可能。</li><li>エージェントはStarlarkスクリプトエンジンを内蔵し、コンパイル済みモジュール（Linux ELF・Windows BOFなど）を動的ロードできる。</li><li>ファイルはAES-GCM暗号化されたインメモリファイルシステムで管理され、ディスクへの書き込みを最小化する。</li><li>MCPサーバーを介してAIが操作を補助し、危険な操作はOPSECスクリーン（安全審査）とログを通じて管理される。</li><li>自律的なEDR回避ループによりペイロードをEDRサンドボックスでテストできる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIと自律エージェントをC2に組み込んだ設計はセキュリティ研究コミュニティで注目度が高い。またLinuxを第一級プラットフォームとして徹底的に設計している点が、Windows中心の既存ツールとの差別化になっている。</p>
+<h3>どんな人に役立つか</h3><p>ペネトレーションテスター（侵入テスト専門家）やセキュリティ研究者向け。授権されたレッドチーム演習や防御側のEDR・検知能力の評価を目的とした用途に使われる。MCPサーバーは大きな攻撃対象面を持つため、隔離されたVMまたはコンテナ内での実行が推奨されている。</p>
+<h3>技術的なポイント</h3><ul><li>エージェントはStarlarkスクリプトエンジンを組み込み、実行時に動的なモジュールロードができる。</li><li>通信セッションにはECDH（楕円曲線ディフィー・ヘルマン鍵交換）による一時鍵を使用し、エージェントIDは初回チェックイン時に固定される。</li><li>スリープ中のエージェントメモリをスリープマスキングで暗号化することでメモリスキャンによる検知を難しくしている。</li><li>eBPFモジュール（Linuxカーネルの安全な拡張機構）をlibbpf経由でロードできる。</li><li>ビルドタグにより機能を選択的にコンパイルでき、`--full` オプションですべての機能をビルドできる。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンし、ドキュメントのインストール手順を確認する。</li><li>デフォルトのインストーラーでスリムなキットをビルドするか、`--full` ですべての機能をビルドする。</li><li>MCPサーバーを使用する場合は必ず隔離されたVMまたはコンテナ内で実行する。</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-19.html#h-jm33-m0__emp3r0r">2026-11-19 はてブ</a>
+<span class="src hatena">はてなブックマーク 5位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

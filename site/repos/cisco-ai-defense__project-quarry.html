@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cisco-ai-defense/project-quarry | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>cisco-ai-defense/project-quarry</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-19（はてなブックマーク 3位）</span>
+<a class="gh" href="https://github.com/cisco-ai-defense/project-quarry" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="cisco-ai-defense__project-quarry" data-repo="cisco-ai-defense/project-quarry" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントの会話を監視・脅威検出するPythonフレームワーク</p>
+<h3>何ができるか</h3><ul><li>テキスト・正規表現・構造化フィールド・ツール使用チェックによるルール定義ができる。</li><li>複数ターンにわたるフロールール・キャプチャ・カウント・型付きポリシーパラメータをサポートする。</li><li>ルールはYAMLで設定し、`.rule`形式のDSLで記述できる。</li><li>CLIから会話ログをスキャンし、JSON・CSV形式で結果を出力できる。</li><li>モデルスコアリング・分類・補完・トークンカウントなどの推論機能をオプションで追加できる。</li><li>同期・非同期両方のPython APIを提供し、入力・コンパイル・時間・モデル呼び出しの制限が設定できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIエージェントの普及に伴い、エージェントの会話に仕込まれた脅威やプロンプトインジェクションを検出する需要が高まっている。CiscoのAIセキュリティチームが開発したという信頼性も注目度を後押ししていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>AIエージェントをプロダクションで運用するセキュリティエンジニアやMLエンジニア向け。エージェントの会話ログに対してルールベースの脅威検知パイプラインを構築したい人に役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>ルールはシンボリック有限オートマトン（FSA）にコンパイルされ、コンパイル失敗はロード時に即検知できる。</li><li>RE2正規表現エンジンを使用することで、安全で高速なパターンマッチングを実現している。</li><li>Python 3.11〜3.13に対応し、パッケージ管理にはuvを使用する。</li><li>モデルプロバイダアダプター経由でLLM（大規模言語モデル）を推論に組み込める設計になっている。</li></ul>
+<h3>試し方</h3>
+<ol><li>Python 3.11〜3.13とuvをインストールする。</li><li>リポジトリをクローンする。</li><li>`uv sync --frozen` を実行して依存関係をインストールする（推論機能を使う場合は `--extra inference` を追加）。</li><li>YAMLで設定ファイルを作成し、ルールディレクトリを指定する。</li><li>CLIまたはPython API (`QuarryGuard(config).scan(conversation)`) でスキャンを実行する。</li></ol>
+<pre><code>uv sync --frozen
+uv sync --frozen --extra inference</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-19.html#h-cisco-ai-defense__project-quarry">2026-11-19 はてブ</a>
+<span class="src hatena">はてなブックマーク 3位</span><span>6 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

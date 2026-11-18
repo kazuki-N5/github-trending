@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>erkamyaman/rust-anything | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">⌨️</div><div>
+<h1>erkamyaman/rust-anything</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-19（Trendshift 1位）</span>
+<a class="gh" href="https://github.com/erkamyaman/rust-anything" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="erkamyaman__rust-anything" data-repo="erkamyaman/rust-anything" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">既存アプリをRustに少しずつ移行しながら動作を自動検証するツール</p>
+<h3>何ができるか</h3><ul><li>元のコードで生成したエッジケースと独自入力を記録し、テストケースとして保存する。</li><li>Rustクレート（ライブラリ単位のパッケージ）とラッパーを自動生成し、既存の呼び出し元のAPIを維持したまま移行できる。</li><li>記録済みの全テストケースをRust版で再実行し、動作が一致するかチェックする。</li><li>全ケース合格後にフォールバックを除去し、純粋なRustアプリに昇格させる。</li><li>TypeScript、Python、C、Go、Ruby、Javaに対応し、CLIやHTTPサーバー、ライブラリの移行が可能。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> RustはC/C++に匹敵する高速性と安全性を持つ言語として注目されているが、既存コードの全面書き換えはリスクが高い。このツールは段階的な移行と自動検証を組み合わせることで、その障壁を大幅に下げるアプローチとして話題を集めていると考えられる。READMEはTypeScript検索処理で20倍、Python処理で17倍の高速化事例を報告している。</p>
+<h3>どんな人に役立つか</h3><p>既存のTypeScript・Python・GoなどのアプリをRustへ移行したいエンジニア向け。特に段階的に移行しながら動作保証を維持したいチームに適している。Claude CodeやCursorなどのAIコーディングエージェントとの連携も想定されている。</p>
+<h3>技術的なポイント</h3><ul><li>Record/Port/Check/Liftの4フェーズで移行を進め、各ステップで動作の等価性を保証する。</li><li>Cargoを使ったRustクレートの自動生成と、元の言語向けラッパーの自動生成により既存APIを維持する。</li><li>Claude Code・Codex・Cursor・Gemini CLIと統合するセットアップコマンドを提供し、AIエージェントとの協調作業を前提としている。</li><li>デモ用ベンチマークが`demo/`フォルダに同梱されており、パフォーマンス比較を再現できる。</li></ul>
+<h3>試し方</h3>
+<ol><li>cargo install rust-anythingでインストールする。</li><li>rust-anything setupを実行してAIコーディングツールと連携登録する。</li><li>rust-anything recordで元のコードの動作を記録する。</li><li>Rust版のコードを書いてrust-anything checkで動作を検証する。</li><li>rust-anything gateが通ればrust-anything liftで純粋Rustに昇格する。</li></ol>
+<pre><code>cargo install rust-anything
+rust-anything setup
+rust-anything record
+rust-anything check
+rust-anything gate
+rust-anything lift</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-19.html#d-erkamyaman__rust-anything">2026-11-19</a>
+<span class="src trendshift">Trendshift 1位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

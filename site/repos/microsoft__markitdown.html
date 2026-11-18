@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>microsoft/markitdown | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📁</div><div>
+<h1>microsoft/markitdown</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-19（Trendshift 15位）</span>
+<a class="gh" href="https://github.com/microsoft/markitdown" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="microsoft__markitdown" data-repo="microsoft/markitdown" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">PDF・Word・PowerPointなど多形式のファイルをMarkdownに一括変換するPythonツール</p>
+<h3>何ができるか</h3><ul><li>PDF・PowerPoint・Word・Excel・HTML・CSV・JSON・XMLなどの主要ファイル形式をMarkdownに変換できる。</li><li>画像はEXIFメタデータの抽出とLLMによるキャプション生成に対応する。</li><li>音声ファイルはメタデータ抽出と文字起こし（トランスクリプション）に対応する。</li><li>YouTube URLやEPubにも対応しており、ZIPファイルは内部を一括変換する。</li><li>CLIとPython APIの両方で利用でき、プラグイン機構で機能を拡張できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> LLMへの入力としてMarkdownは構造が明確で扱いやすいが、実務ではPDFやOfficeファイルが多い。Microsoftが公開したツールとしての信頼性と、MCP（Model Context Protocol）サーバー対応でAIエージェントとの統合が容易な点が注目を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>PDFやOffice文書をLLMで処理・分析したいエンジニアやデータ分析者向け。RAG（検索拡張生成）システムの前処理パイプラインを構築したい場合や、文書をテキスト化してAIに渡したい場面に適している。</p>
+<h3>技術的なポイント</h3><ul><li>形式ごとに専用のコンバータークラスを持つ拡張可能な設計で、`pip install &#x27;markitdown[pdf,docx,pptx]&#x27;`のように必要な形式だけをインストールできる。</li><li>LLMのビジョン機能（`llm_client`と`llm_model`を指定）を使ってPPTXや画像に自動キャプションを付与できる。</li><li>Azure Content UnderstandingとAzure Document Intelligenceをバックエンドとして使うクラウドオプションも提供している。</li><li>untrusted（信頼できない）な入力に対しては`convert_local()`や`convert_stream()`など変換スコープを制限するAPIを使うようREADMEが推奨している。</li></ul>
+<h3>試し方</h3>
+<ol><li>Python 3.10以上の環境で仮想環境を作成する。</li><li>pip install &#x27;markitdown[all]&#x27;で全形式サポートをインストールする。</li><li>CLIでmarkitdown input.pdfのように変換したいファイルを指定する。</li><li>Python APIではMarkItDown().convert(&#x27;input.pdf&#x27;).text_contentで変換結果を取得する。</li></ol>
+<pre><code>pip install &#x27;markitdown[all]&#x27;
+markitdown input.pdf
+markitdown input.pdf -o output.md</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-19.html#d-microsoft__markitdown">2026-11-19</a>
+<span class="src trendshift">Trendshift 15位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

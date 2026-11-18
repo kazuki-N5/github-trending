@@ -1,0 +1,34 @@
+{
+  "repo": "microsoft/markitdown",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "PDF・Word・PowerPointなど多形式のファイルをMarkdownに一括変換するPythonツール",
+  "features": [
+    "PDF・PowerPoint・Word・Excel・HTML・CSV・JSON・XMLなどの主要ファイル形式をMarkdownに変換できる。",
+    "画像はEXIFメタデータの抽出とLLMによるキャプション生成に対応する。",
+    "音声ファイルはメタデータ抽出と文字起こし（トランスクリプション）に対応する。",
+    "YouTube URLやEPubにも対応しており、ZIPファイルは内部を一括変換する。",
+    "CLIとPython APIの両方で利用でき、プラグイン機構で機能を拡張できる。"
+  ],
+  "why": "推測: LLMへの入力としてMarkdownは構造が明確で扱いやすいが、実務ではPDFやOfficeファイルが多い。Microsoftが公開したツールとしての信頼性と、MCP（Model Context Protocol）サーバー対応でAIエージェントとの統合が容易な点が注目を集めていると考えられる。",
+  "whoFor": "PDFやOffice文書をLLMで処理・分析したいエンジニアやデータ分析者向け。RAG（検索拡張生成）システムの前処理パイプラインを構築したい場合や、文書をテキスト化してAIに渡したい場面に適している。",
+  "tech": [
+    "形式ごとに専用のコンバータークラスを持つ拡張可能な設計で、`pip install 'markitdown[pdf,docx,pptx]'`のように必要な形式だけをインストールできる。",
+    "LLMのビジョン機能（`llm_client`と`llm_model`を指定）を使ってPPTXや画像に自動キャプションを付与できる。",
+    "Azure Content UnderstandingとAzure Document Intelligenceをバックエンドとして使うクラウドオプションも提供している。",
+    "untrusted（信頼できない）な入力に対しては`convert_local()`や`convert_stream()`など変換スコープを制限するAPIを使うようREADMEが推奨している。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Python 3.10以上の環境で仮想環境を作成する。",
+      "pip install 'markitdown[all]'で全形式サポートをインストールする。",
+      "CLIでmarkitdown input.pdfのように変換したいファイルを指定する。",
+      "Python APIではMarkItDown().convert('input.pdf').text_contentで変換結果を取得する。"
+    ],
+    "commands": [
+      "pip install 'markitdown[all]'",
+      "markitdown input.pdf",
+      "markitdown input.pdf -o output.md"
+    ]
+  }
+}
