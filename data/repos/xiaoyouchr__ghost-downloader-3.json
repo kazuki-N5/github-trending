@@ -1,0 +1,40 @@
+{
+  "repo": "XiaoYouChR/Ghost-Downloader-3",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "HTTP・BitTorrent・動画サイトを網羅したオールインワンダウンローダー",
+  "features": [
+    "HTTP、Magnet/BitTorrent、FTP、M3U8、MPEG-DASH、eD2kなど多様なプロトコルでのダウンロードに対応している。",
+    "YouTubeやBilibiliなどの動画サイトに対応し、画質・字幕・クリップ・プレイリストの選択が可能。",
+    "ブラウザ拡張機能と連携し、動画ページへのダウンロードボタン追加や認証状態の引き継ぎをサポートする。",
+    "ファイルを結合しないスマートチャンク分割と帯域幅の自動検出により高速ダウンロードを実現する。",
+    "aria2互換のRPC APIを提供し、ダウンロード中でもURL・ヘッダー・プロキシを変更できる。",
+    "Windows・macOS・Linux・Androidの4プラットフォームにネイティブアプリとして対応している。"
+  ],
+  "why": "推測: HTTP・BitTorrent・HLS・動画サイトなど多種多様なプロトコルを1つのアプリで統合している点が「これ1本で済む」という訴求力につながっており、注目を集めていると考えられる。推測: 4つのプラットフォームへのネイティブ対応に加え、ブラウザ拡張連携や高速化技術など実用的な機能を継続的に追加していることから、個人開発ながら幅広いユーザーに支持されていると思われる。",
+  "whoFor": "aria2やIDMなど複数のダウンロードツールをひとつにまとめたいユーザーや、動画サイト・BitTorrent・HLSストリームなど多様な形式をまとめて扱いたいユーザーに適している。Windows・macOS・Linux・Androidで同一のUIと機能を使いたい場合にも有用で、コマンドラインツール（ghd）経由でスクリプトへの組み込みにも対応する。",
+  "tech": [
+    "PythonとPySide6（Qt）でGUIを構築し、Nuitkaでネイティブバイナリにコンパイルして各プラットフォームに配布している。",
+    "yt-dlp（動画サイト）、libtorrent（BitTorrent）、N_m3u8DL-RE（HLS/DASH）、aioftp（FTP）など専用ライブラリを組み合わせて多プロトコルに対応している。",
+    "wreqによるブラウザ模倣のTLSフィンガープリント送信で、ボット対策サービスを回避した高速HTTPダウンロードを実現している。",
+    "uvloop（Linux/macOS）・winloop（Windows）を採用し、非同期I/Oのパフォーマンスを最大化している。",
+    "QuickJS-NGを組み込みJavaScriptエンジンとして内蔵し、ブラウザに近い処理を可能にしている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubのReleasesページから自分のプラットフォーム向けインストーラーをダウンロードしてインストールする。",
+      "アプリのSettings（設定）画面からコマンドラインツール（ghd）をインストールする。",
+      "ghd probe <url> でURLをプレビューし、ghd add <url> でダウンロードタスクを追加する。"
+    ],
+    "commands": [
+      "ghd probe <url>",
+      "ghd add <url>",
+      "ghd tasks",
+      "ghd task <taskId>",
+      "ghd pause <taskId>",
+      "ghd start <taskId>",
+      "ghd remove <taskId>",
+      "ghd wait <taskId>"
+    ]
+  }
+}

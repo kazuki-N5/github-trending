@@ -1,0 +1,40 @@
+{
+  "repo": "bitwarden/agent-access",
+  "language": "",
+  "readme": true,
+  "oneLiner": "エージェントにVault全体を公開せずクレデンシャルを安全に渡すオープンプロトコル・CLIツール",
+  "features": [
+    "エンドツーエンド暗号化トンネルを通じてリモートシステムへクレデンシャルを安全に提供する",
+    "aac connectコマンドでインタラクティブまたは非インタラクティブにクレデンシャルを取得できる",
+    "aac runコマンドでクレデンシャルを環境変数としてサブプロセスに注入し、標準出力やディスクに秘密情報を残さない",
+    "ドメイン名・Vault Item ID・ペアリングトークンなど複数の方法でクレデンシャルを特定できる",
+    "Python・JavaScript/WASM・RustのSDKとGitHub Actionが提供されており様々な環境から利用できる",
+    "Bitwardenに限らず任意のクレデンシャルプロバイダーが対応できるオープンプロトコルとして設計されている"
+  ],
+  "why": "推測: AIエージェントがクレデンシャルを必要とするユースケースが増える中、Vault全体を公開することなく必要な認証情報だけを渡す仕組みの需要が高まっているため注目されている。推測: LLMやAIエージェントのコンテキストに直接秘密情報を渡すリスクを避けるアーキテクチャを、主要なパスワードマネージャーベンダーが公式に提供した点でも意義がある。",
+  "whoFor": "AIエージェントや自動化スクリプトにDBやAPIの認証情報を渡す必要がある開発者に役立つ。セキュリティを保ちながらCI/CDパイプラインやDockerコンテナにクレデンシャルを注入したいエンジニアにも適している。",
+  "tech": [
+    "Noiseプロトコルを使ってエンドツーエンド暗号化トンネルを構築している",
+    "コアSDKはRustで実装されており、UniFFIバインディングでPythonからも利用できる",
+    "WebAssemblyビルドによりブラウザのJavaScript環境でも動作する",
+    "デモ・開発用のリレーサーバーを介してプロバイダーとリモートを仲介する構成になっている"
+  ],
+  "tryIt": {
+    "steps": [
+      "Bitwarden CLI（bw）をPATHに配置する（またはビルトインのexampleプロバイダーを使う）",
+      "プロバイダー側でaac listenを実行してVaultのアンロックとペアリングトークンの生成を行う",
+      "リモート側でaac connect --token <token> --domain <domain> --output jsonを実行してクレデンシャルを取得する",
+      "aac run --domain <domain> --env-all -- <command>でクレデンシャルを環境変数としてコマンドに注入する"
+    ],
+    "commands": [
+      "curl -LO https://github.com/bitwarden/agent-access/releases/latest/download/aac-macos-arm64.tar.gz",
+      "tar -xzf aac-macos-arm64.tar.gz",
+      "mv aac /usr/local/bin/",
+      "aac listen",
+      "aac connect",
+      "aac connect --token <token> --output json",
+      "aac connect --domain <domain> --output json",
+      "aac run --domain <domain> --env-all -- <command>"
+    ]
+  }
+}

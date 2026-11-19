@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XiaoYouChR/Ghost-Downloader-3 | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎬</div><div>
+<h1>XiaoYouChR/Ghost-Downloader-3</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-20（Trendshift 15位）</span>
+<a class="gh" href="https://github.com/XiaoYouChR/Ghost-Downloader-3" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="xiaoyouchr__ghost-downloader-3" data-repo="XiaoYouChR/Ghost-Downloader-3" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">HTTP・BitTorrent・動画サイトを網羅したオールインワンダウンローダー</p>
+<h3>何ができるか</h3><ul><li>HTTP、Magnet/BitTorrent、FTP、M3U8、MPEG-DASH、eD2kなど多様なプロトコルでのダウンロードに対応している。</li><li>YouTubeやBilibiliなどの動画サイトに対応し、画質・字幕・クリップ・プレイリストの選択が可能。</li><li>ブラウザ拡張機能と連携し、動画ページへのダウンロードボタン追加や認証状態の引き継ぎをサポートする。</li><li>ファイルを結合しないスマートチャンク分割と帯域幅の自動検出により高速ダウンロードを実現する。</li><li>aria2互換のRPC APIを提供し、ダウンロード中でもURL・ヘッダー・プロキシを変更できる。</li><li>Windows・macOS・Linux・Androidの4プラットフォームにネイティブアプリとして対応している。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> HTTP・BitTorrent・HLS・動画サイトなど多種多様なプロトコルを1つのアプリで統合している点が「これ1本で済む」という訴求力につながっており、注目を集めていると考えられる。<span class="guess">推測</span> 4つのプラットフォームへのネイティブ対応に加え、ブラウザ拡張連携や高速化技術など実用的な機能を継続的に追加していることから、個人開発ながら幅広いユーザーに支持されていると思われる。</p>
+<h3>どんな人に役立つか</h3><p>aria2やIDMなど複数のダウンロードツールをひとつにまとめたいユーザーや、動画サイト・BitTorrent・HLSストリームなど多様な形式をまとめて扱いたいユーザーに適している。Windows・macOS・Linux・Androidで同一のUIと機能を使いたい場合にも有用で、コマンドラインツール（ghd）経由でスクリプトへの組み込みにも対応する。</p>
+<h3>技術的なポイント</h3><ul><li>PythonとPySide6（Qt）でGUIを構築し、Nuitkaでネイティブバイナリにコンパイルして各プラットフォームに配布している。</li><li>yt-dlp（動画サイト）、libtorrent（BitTorrent）、N_m3u8DL-RE（HLS/DASH）、aioftp（FTP）など専用ライブラリを組み合わせて多プロトコルに対応している。</li><li>wreqによるブラウザ模倣のTLSフィンガープリント送信で、ボット対策サービスを回避した高速HTTPダウンロードを実現している。</li><li>uvloop（Linux/macOS）・winloop（Windows）を採用し、非同期I/Oのパフォーマンスを最大化している。</li><li>QuickJS-NGを組み込みJavaScriptエンジンとして内蔵し、ブラウザに近い処理を可能にしている。</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubのReleasesページから自分のプラットフォーム向けインストーラーをダウンロードしてインストールする。</li><li>アプリのSettings（設定）画面からコマンドラインツール（ghd）をインストールする。</li><li>ghd probe &lt;url&gt; でURLをプレビューし、ghd add &lt;url&gt; でダウンロードタスクを追加する。</li></ol>
+<pre><code>ghd probe &lt;url&gt;
+ghd add &lt;url&gt;
+ghd tasks
+ghd task &lt;taskId&gt;
+ghd pause &lt;taskId&gt;
+ghd start &lt;taskId&gt;
+ghd remove &lt;taskId&gt;
+ghd wait &lt;taskId&gt;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-20.html#d-xiaoyouchr__ghost-downloader-3">2026-11-20</a>
+<span class="src trendshift">Trendshift 15位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

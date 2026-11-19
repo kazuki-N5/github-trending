@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aoci-spec/aoci-code | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧠</div><div>
+<h1>aoci-spec/aoci-code</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-11-20（Trendshift 13位）</span>
+<a class="gh" href="https://github.com/aoci-spec/aoci-code" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="aoci-spec__aoci-code" data-repo="aoci-spec/aoci-code" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">コードベース全体のGit管理索引をAIエージェントに渡すローカルファーストMCPサーバー＋CLI</p>
+<h3>何ができるか</h3><ul><li>ファイルごとに機能・関連・API・制約の4フィールド（FRAS）をプレーンテキストで記録した永続インデックスをGitリポジトリ内に構築する</li><li>MCPサーバーが9種類のツールを公開し、エージェントがインデックスの参照・検索・更新をセッション単位で行える</li><li>PostgreSQL・MySQL・openGaussのテーブルカタログを読み取り専用で取得してDBスキーマもインデックス化する</li><li>コード変更後に古くなったエントリーを自動検知するドリフト検出機能で、索引の鮮度を維持できる</li><li>インデックスのカバレッジ・トークン使用量・ドリフト状態をローカルのステータスパネルでリアルタイムに確認できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 大規模コードベースでAIコーディングエージェントを使う際、毎セッションでリポジトリを再スキャンするコストが課題になっているため、事前に構造化した知識を渡すアプローチが注目されている。GitでインデックスをバージョN管理することで差分追跡・レビュー・ロールバックが通常のGit操作で行える点が、既存のRAGやrepo-mapにない独自の強みとして評価されている。<span class="guess">推測</span> 70万行規模の商用システムでの実績を示している点が信頼性の裏付けとして機能している。</p>
+<h3>どんな人に役立つか</h3><p>Claude Code・Codex・Cursor・OpenCodeなどのAIコーディングエージェントを使って大規模または長期運用のプロジェクトを開発する開発者に向いている。セッションをまたいでプロジェクトの文脈を引き継ぎたい個人開発者やチームにも役立つ。リレーショナルDBを持つシステムでコードとスキーマの両方をエージェントに把握させたい場合にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>GoによるシングルバイナリのCLI＋MCPサーバー実装で、外部サービスや常駐デーモン不要でローカル動作する</li><li>インデックスはプレーンテキストとしてGitリポジトリ内に保存され、標準のGit操作で差分表示・ロールバックが可能</li><li>インデックス更新はロック・compare-and-swap・アトミック書き込みを用いて整合性と安全な並行制御を保証する</li><li>DBインデックス化はPostgreSQL・MySQL・openGaussのシステムカタログをREAD ONLYで参照し、ビジネスデータには一切触れない</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubからソースをクローンしてmake buildでaociバイナリをビルドする（またはgh release downloadでリリースバイナリを取得する）</li><li>インデックスを作りたいリポジトリに移動し、aoci --repo . init でインデックスを初期化する</li><li>aoci --repo . scan でコードベース全体をスキャンしてFRASインデックスを構築する</li><li>aoci --repo . verify と doctor で整合性を確認する</li><li>使用するエージェント（Claude CodeやCursorなど）のMCP設定にaociサーバーのエントリーを追加する</li></ol>
+<pre><code>git clone https://github.com/aoci-spec/aoci-code.git
+cd aoci-code &amp;&amp; mkdir -p build &amp;&amp; make build &amp;&amp; ./build/aoci --version
+gh release download v0.2.0-rc2 --repo aoci-spec/aoci-code
+aoci --repo . init --locale en-US --agent codex
+aoci --repo . scan
+aoci --repo . verify
+aoci --repo . check
+aoci --repo . doctor
+aoci ui --detach --json</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-20.html#d-aoci-spec__aoci-code">2026-11-20</a>
+<span class="src trendshift">Trendshift 13位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

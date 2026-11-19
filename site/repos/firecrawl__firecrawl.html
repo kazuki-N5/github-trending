@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>firecrawl/firecrawl | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>firecrawl/firecrawl</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-20（Trendshift 7位）</span>
+<a class="gh" href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="firecrawl__firecrawl" data-repo="firecrawl/firecrawl" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">WebページをAIエージェント向けのクリーンなデータに変換するスクレイピングインフラ</p>
+<h3>何ができるか</h3><ul><li>ウェブサイトをスクレイプしてMarkdown・HTML・JSONなど複数形式で出力できる。</li><li>サイト全体を再帰的にクロールしてページを一括取得するクローリング機能がある。</li><li>550以上のデータプロバイダーへのアクセス（Alexandria）をクラウド経由でサポートする。</li><li>AIエージェントが自律的にWebを操作・情報収集するエージェント機能を備える。</li><li>データベース不要で単体起動できるローカルバイナリ版（Firecrawl Local）が使える。</li><li>PDF・Officeドキュメントのパース処理をローカルで実行できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIエージェントの普及にともないWebデータをクリーンなテキストや構造化JSONとして取得する需要が急増しており、その課題をワンストップで解決するツールとして注目されている。Python・TypeScript・Go・RubyなどのSDKやMCPサーバー対応により様々なAIツールと容易に連携できる点も評価されている。<span class="guess">推測</span> Rust製の軽量ローカルバイナリが提供されAPIキー不要で試せることも、開発者コミュニティでの関心を高めている。</p>
+<h3>どんな人に役立つか</h3><p>WebスクレイピングをAIパイプラインに組み込みたい開発者や、LLMに最新のWeb情報を与えたいAIエンジニアに適している。APIキー不要で試せるローカルバイナリ版もあるため、手軽に始めたい学生や個人開発者にも向いている。</p>
+<h3>技術的なポイント</h3><ul><li>Rustで実装されたFirecrawl Localはデータベース・キュー・コンテナ不要で単体バイナリとして動作する。</li><li>ChromiumによるJavaScriptレンダリングに対応しSPAや動的ページのスクレイプが可能。</li><li>Redis・PostgreSQL・Dockerを使ったフルスタックのセルフホスト構成もサポートする。</li><li>MCPサーバーとして動作しClaude・Cursor・Windsurf・Gemini CLIなどと直接連携できる。</li><li>Python・TypeScript・Go・Rust・Ruby・PHPなど多言語SDKを公式に提供している。</li></ul>
+<h3>試し方</h3>
+<ol><li>RustとCコンパイラをインストールする。</li><li>cargo install コマンドでFirecrawl Localをインストールする。</li><li>firecrawl-local scrape コマンドにURLを渡してMarkdown形式でスクレイプを実行する。</li><li>firecrawl-local init を実行するとClaude Code・Cursor等へのMCPサーバー設定が自動追加される。</li></ol>
+<pre><code>cargo install firecrawl-local
+firecrawl-local scrape &lt;url&gt; --markdown
+firecrawl-local crawl &lt;url&gt; --limit 50 --out ./pages
+firecrawl-local map &lt;url&gt;
+firecrawl-local init
+firecrawl-local serve
+npx -y firecrawl-cli@latest scrape &lt;url&gt;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-20.html#d-firecrawl__firecrawl">2026-11-20</a>
+<span class="src trendshift">Trendshift 7位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

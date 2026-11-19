@@ -1,0 +1,40 @@
+{
+  "repo": "firecrawl/firecrawl",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "WebページをAIエージェント向けのクリーンなデータに変換するスクレイピングインフラ",
+  "features": [
+    "ウェブサイトをスクレイプしてMarkdown・HTML・JSONなど複数形式で出力できる。",
+    "サイト全体を再帰的にクロールしてページを一括取得するクローリング機能がある。",
+    "550以上のデータプロバイダーへのアクセス（Alexandria）をクラウド経由でサポートする。",
+    "AIエージェントが自律的にWebを操作・情報収集するエージェント機能を備える。",
+    "データベース不要で単体起動できるローカルバイナリ版（Firecrawl Local）が使える。",
+    "PDF・Officeドキュメントのパース処理をローカルで実行できる。"
+  ],
+  "why": "推測: AIエージェントの普及にともないWebデータをクリーンなテキストや構造化JSONとして取得する需要が急増しており、その課題をワンストップで解決するツールとして注目されている。Python・TypeScript・Go・RubyなどのSDKやMCPサーバー対応により様々なAIツールと容易に連携できる点も評価されている。推測: Rust製の軽量ローカルバイナリが提供されAPIキー不要で試せることも、開発者コミュニティでの関心を高めている。",
+  "whoFor": "WebスクレイピングをAIパイプラインに組み込みたい開発者や、LLMに最新のWeb情報を与えたいAIエンジニアに適している。APIキー不要で試せるローカルバイナリ版もあるため、手軽に始めたい学生や個人開発者にも向いている。",
+  "tech": [
+    "Rustで実装されたFirecrawl Localはデータベース・キュー・コンテナ不要で単体バイナリとして動作する。",
+    "ChromiumによるJavaScriptレンダリングに対応しSPAや動的ページのスクレイプが可能。",
+    "Redis・PostgreSQL・Dockerを使ったフルスタックのセルフホスト構成もサポートする。",
+    "MCPサーバーとして動作しClaude・Cursor・Windsurf・Gemini CLIなどと直接連携できる。",
+    "Python・TypeScript・Go・Rust・Ruby・PHPなど多言語SDKを公式に提供している。"
+  ],
+  "tryIt": {
+    "steps": [
+      "RustとCコンパイラをインストールする。",
+      "cargo install コマンドでFirecrawl Localをインストールする。",
+      "firecrawl-local scrape コマンドにURLを渡してMarkdown形式でスクレイプを実行する。",
+      "firecrawl-local init を実行するとClaude Code・Cursor等へのMCPサーバー設定が自動追加される。"
+    ],
+    "commands": [
+      "cargo install firecrawl-local",
+      "firecrawl-local scrape <url> --markdown",
+      "firecrawl-local crawl <url> --limit 50 --out ./pages",
+      "firecrawl-local map <url>",
+      "firecrawl-local init",
+      "firecrawl-local serve",
+      "npx -y firecrawl-cli@latest scrape <url>"
+    ]
+  }
+}

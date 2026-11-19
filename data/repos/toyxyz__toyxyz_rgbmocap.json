@@ -1,0 +1,36 @@
+{
+  "repo": "toyxyz/toyxyz_RGBMocap",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "ビデオから人体モーションをAI解析してFBX/VMD等でエクスポートできるWindowsアプリ",
+  "features": [
+    "動画から1人以上の人物の3Dモーションを再構築し、ボーンメッシュをリアルタイムでプレビューできる。",
+    "コンタクトコレクション機能で足のスライディングを補正し、より自然なアニメーションを生成できる。",
+    "MixamoのFBX、VRM、PMXキャラクターへのモーションリターゲットに対応している。",
+    "FBX、BVH、VMD（MMD）、Blenderプロジェクト形式でモーションデータをエクスポートできる。",
+    "BlenderやUnreal EngineのMetaHumanにLive Link経由でボーンデータをリアルタイム配信できる。",
+    "PEARを使った実験的なWebカメラリアルタイムトラッキングに対応している。"
+  ],
+  "why": "推測: 専用の深度センサーや高価な機材なしに、通常の動画ファイルからモーションキャプチャができるため、個人クリエイターや小規模スタジオに注目されていると考えられる。推測: ExMR・FlowHMR・GVHMRなど複数のAI姿勢推定モデルをローカルで動かせ、Blender・UE5・MMDなど人気ツールへの幅広いエクスポートに対応している点も評価されていると考えられる。",
+  "whoFor": "3DアニメーターやVTuber、MMDクリエイターなど、動画からモーションデータを手軽に作成したい人に適している。BlenderやUnreal Engine 5、MMDを使っているユーザーが自分のキャラクターにモーションを適用したい場合に特に役立つ。NVIDIA GPUを搭載したWindows PC環境が必要となる。",
+  "tech": [
+    "ExMR、FlowHMR、GVHMRなど複数のAI姿勢推定モデルをローカルで実行し、高精度な人体モーション解析を行う。",
+    "コンタクトコレクション技術により、地面との接触時の足のスライディングを物理的に補正する。",
+    "NVIDIA GPUとCUDAを活用した推論を行い、VRAMが不足する場合はローメモリモードへ自動でフォールバックする。",
+    "Live Linkプロトコルを通じてBlenderやUnreal EngineのMetaHumanへリアルタイムにボーンデータを配信する。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Git for Windowsをインストールし、リポジトリをクローンする。",
+      "install.cmdを実行してベースランタイム（ExMR、FlowHMR、GVHMR等）をセットアップする。",
+      "モデルマネージャーでAIモデルの重みをダウンロードする（一部モデルはアカウント登録が必要）。",
+      "RGBMoCap.cmdを実行してアプリを起動する（コンソールは開いたままにしておく）。",
+      "更新する場合はアプリを終了してからupdate.cmdを実行する。"
+    ],
+    "commands": [
+      "install.cmd",
+      "RGBMoCap.cmd",
+      "update.cmd"
+    ]
+  }
+}

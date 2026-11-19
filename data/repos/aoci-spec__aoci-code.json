@@ -1,0 +1,41 @@
+{
+  "repo": "aoci-spec/aoci-code",
+  "language": "Go",
+  "readme": true,
+  "oneLiner": "コードベース全体のGit管理索引をAIエージェントに渡すローカルファーストMCPサーバー＋CLI",
+  "features": [
+    "ファイルごとに機能・関連・API・制約の4フィールド（FRAS）をプレーンテキストで記録した永続インデックスをGitリポジトリ内に構築する",
+    "MCPサーバーが9種類のツールを公開し、エージェントがインデックスの参照・検索・更新をセッション単位で行える",
+    "PostgreSQL・MySQL・openGaussのテーブルカタログを読み取り専用で取得してDBスキーマもインデックス化する",
+    "コード変更後に古くなったエントリーを自動検知するドリフト検出機能で、索引の鮮度を維持できる",
+    "インデックスのカバレッジ・トークン使用量・ドリフト状態をローカルのステータスパネルでリアルタイムに確認できる"
+  ],
+  "why": "推測: 大規模コードベースでAIコーディングエージェントを使う際、毎セッションでリポジトリを再スキャンするコストが課題になっているため、事前に構造化した知識を渡すアプローチが注目されている。GitでインデックスをバージョN管理することで差分追跡・レビュー・ロールバックが通常のGit操作で行える点が、既存のRAGやrepo-mapにない独自の強みとして評価されている。推測: 70万行規模の商用システムでの実績を示している点が信頼性の裏付けとして機能している。",
+  "whoFor": "Claude Code・Codex・Cursor・OpenCodeなどのAIコーディングエージェントを使って大規模または長期運用のプロジェクトを開発する開発者に向いている。セッションをまたいでプロジェクトの文脈を引き継ぎたい個人開発者やチームにも役立つ。リレーショナルDBを持つシステムでコードとスキーマの両方をエージェントに把握させたい場合にも適している。",
+  "tech": [
+    "GoによるシングルバイナリのCLI＋MCPサーバー実装で、外部サービスや常駐デーモン不要でローカル動作する",
+    "インデックスはプレーンテキストとしてGitリポジトリ内に保存され、標準のGit操作で差分表示・ロールバックが可能",
+    "インデックス更新はロック・compare-and-swap・アトミック書き込みを用いて整合性と安全な並行制御を保証する",
+    "DBインデックス化はPostgreSQL・MySQL・openGaussのシステムカタログをREAD ONLYで参照し、ビジネスデータには一切触れない"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubからソースをクローンしてmake buildでaociバイナリをビルドする（またはgh release downloadでリリースバイナリを取得する）",
+      "インデックスを作りたいリポジトリに移動し、aoci --repo . init でインデックスを初期化する",
+      "aoci --repo . scan でコードベース全体をスキャンしてFRASインデックスを構築する",
+      "aoci --repo . verify と doctor で整合性を確認する",
+      "使用するエージェント（Claude CodeやCursorなど）のMCP設定にaociサーバーのエントリーを追加する"
+    ],
+    "commands": [
+      "git clone https://github.com/aoci-spec/aoci-code.git",
+      "cd aoci-code && mkdir -p build && make build && ./build/aoci --version",
+      "gh release download v0.2.0-rc2 --repo aoci-spec/aoci-code",
+      "aoci --repo . init --locale en-US --agent codex",
+      "aoci --repo . scan",
+      "aoci --repo . verify",
+      "aoci --repo . check",
+      "aoci --repo . doctor",
+      "aoci ui --detach --json"
+    ]
+  }
+}
