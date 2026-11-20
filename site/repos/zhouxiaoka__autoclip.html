@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zhouxiaoka/autoclip | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎬</div><div>
+<h1>zhouxiaoka/autoclip</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-21（Trendshift 7位）</span>
+<a class="gh" href="https://github.com/zhouxiaoka/autoclip" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="zhouxiaoka__autoclip" data-repo="zhouxiaoka/autoclip" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">1つのリンクからAIが自動でショート動画を生成するオープンソースツール</p>
+<h3>何ができるか</h3><ul><li>動画URLを貼り付けるだけで、抖音・TikTok・YouTube Shortsなど複数プラットフォーム向けのショート動画を自動生成する</li><li>各クリップにカバー画像・タイトル・説明文・ハッシュタグを自動生成し、ZIPパッケージとしてまとめて書き出す</li><li>字幕はWhisper・SenseVoice（ローカル）またはクラウド文字起こしから取得でき、既存のSRTファイルの再利用も可能</li><li>インタビュー形式とポッドキャスト形式の2種類の縦型レイアウトに対応し、発言者の顔を自動追尾してフレーミングする</li><li>デスクトップアプリ・CLI・Docker/Webデプロイ・MCPサーバーの4つの利用形態をサポートする</li><li>クラウドモデルとローカルモデル（OllamaやLM Studio）を選択でき、送信データの範囲も明示されプライバシーに配慮している</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> ポッドキャストや講義などの長尺動画をショート動画に変換する作業は手間がかかるが、このツールはURLを渡すだけで字幕・カバー・文案の生成まで一括自動化できる点が際立っている。<span class="guess">推測</span> デスクトップアプリからMCPサーバーまで幅広い利用形態に対応しており、個人クリエイターから開発者・エージェント連携まで多様なユースケースをカバーしているのも注目点である。</p>
+<h3>どんな人に役立つか</h3><p>ポッドキャスト・インタビュー・講義などの長尺動画を複数SNS向けに効率よく展開したいコンテンツクリエイターに向いている。自分のAPIキーや映像をローカルで管理したいユーザーや、CLIやMCPを通じてAIエージェントと連携したいエンジニアにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>バックエンドはPython + FastAPIで構築され、動画処理にFFmpeg・yt-dlpを使用している</li><li>音声認識にはOpenAI Whisper・FunASR・SenseVoiceを利用し、ローカルとクラウドの両方に対応している</li><li>フロントエンドはReact、デスクトップアプリはTauriで実装されておりクロスプラットフォームで動作する</li><li>DockerとRedisを使ったWebデプロイに対応しており、MCPサーバーとしてAIエージェントから呼び出すことも可能</li><li>OpenAI互換API・Ollama・LM StudioなどのモデルプロバイダーをSettings画面から切り替えられる</li></ul>
+<h3>試し方</h3>
+<ol><li>GitHubリリースページからデスクトップインストーラー（macOSは.dmg、Windowsは-setup.exe）をダウンロードしてインストールする</li><li>Settings画面でモデルプロバイダーとAPIキーを設定し、接続テストを行う</li><li>動画URLを貼り付けて対象プラットフォームを選択し、生成を実行する</li><li>CLIを使う場合はPython 3.10以上とFFmpegをインストールしてからuvx autoclip-mcpでセットアップする</li><li>Dockerを使う場合はリポジトリをクローンしてenv.exampleを.envにコピー、dataとlogsとuploadsディレクトリを作成してdocker compose up -d --buildを実行する</li></ol>
+<pre><code>uvx autoclip-mcp
+autoclip --version
+autoclip produce talk.mp4 --srt talk.srt --platform douyin --portrait-style podcast --json
+autoclip outputs PROJECT_ID --export-kits
+autoclip mcp
+docker compose up -d --build</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-21.html#d-zhouxiaoka__autoclip">2026-11-21</a>
+<span class="src trendshift">Trendshift 7位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sharl/hekoo | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🖼️</div><div>
+<h1>sharl/hekoo</h1>
+<div class="meta">
+<span>初掲載 2026-11-21（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/sharl/hekoo" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="sharl__hekoo" data-repo="sharl/hekoo" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">タスクバーにメッセージや画像を表示するPoCツール</p>
+<h3>何ができるか</h3><ul><li>タスクバー上にテキストセグメントをリアルタイムで表示できる</li><li>base64エンコードした画像もタスクバーに送信して表示可能</li><li>ローカルHTTPサーバー（ポート19876）経由でデータを受け付ける</li><li>HTTP POSTリクエストでJSONデータを送ることでコンテンツを更新できる</li><li>Museと連携して動作するプルーフオブコンセプト実装</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Museのようなタスクバーツールと連携し、天気情報や通知などをタスクバーに表示できる点で実用性がある。KrisGfxのワイヤレスデバイスバッテリーモニターからヒントを得ており、HTTP経由でカスタムデータをタスクバーに送るアーキテクチャの参考例として注目に値する。</p>
+<h3>どんな人に役立つか</h3><p>Museユーザーでタスクバーにカスタム情報を表示したい人向け。curlやスクリプトからHTTP経由でタスクバーにデータを送りたいPythonユーザーや開発者にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>Pythonで実装されたローカルHTTPサーバー</li><li>ポート19876でHTTP POSTリクエストを受け付けるJSON API</li><li>テキストおよびbase64エンコード画像の両方を処理できる</li><li>Pythonの仮想環境（venv）で依存関係を管理</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンする</li><li>Pythonの仮想環境を作成し有効化する（WindowsではPowerShellで.venvフォルダを作成）</li><li>requirements.txtから依存関係をインストールする</li><li>hekoo.pyを実行してサーバーを起動する</li><li>curlとjoを使ってlocalhost:19876にHTTP POSTリクエストを送信する</li></ol>
+<pre><code>git clone https://github.com/sharl/hekoo
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python hekoo.py</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-21.html#h-sharl__hekoo">2026-11-21 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

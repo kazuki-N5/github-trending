@@ -1,0 +1,31 @@
+{
+  "repo": "imxieyi/Kernarium",
+  "language": "C++",
+  "readme": true,
+  "oneLiner": "iOSでLinuxカーネルをネイティブ実行しAndroid・Dockerも動かす",
+  "features": [
+    "User-mode Linuxカーネル（6.18 LTS）をarm64にネイティブコンパイルし、エミュレーションなしでiOS上で動作させる。",
+    "ユーザースペースプログラムはiSH方式のスレッド型インタープリタで実行し、SMPもサポートする。",
+    "KosmicKrisp（VulkanからMetalへの変換）によりGPUアクセラレーションを実現し、OpenGL 4.6やGLES 3.2にも対応する。",
+    "arm64・arm32・x86_64のゲスト命令に対応し、インタープリタとJITの両モードを提供する。",
+    "仮想ディスク（UBDドライバ）・ext2/3/4・xfs等の各種Linuxファイルシステム・FUSEをサポートする。",
+    "libslirpによるゲストネットワークアクセスを含む完全なLinuxネットワークスタックを備える。"
+  ],
+  "why": "推測: UTMのような完全システムエミュレータとiSHのようなユーザースペースエミュレータの中間に位置する独自アーキテクチャを実現しており、実際のLinuxカーネルと軽量なユーザースペースエミュレーションを組み合わせた点が技術的に注目される。すでにAndroidエミュレータ（Andarium）をApp Storeで公開（後に削除）した実績があり、Docker・Wine/Proton・Linuxデスクトップの動作も目標としていることから、iOSデバイスの活用幅を大きく広げる可能性がある。",
+  "whoFor": "iOSデバイス上でLinux・Androidを動かしたいモバイル開発者や研究者向け。User-mode Linuxや組み込みLinuxに興味があるシステムプログラマにも適している。",
+  "tech": [
+    "User-mode Linuxカーネルをarm64にネイティブコンパイルし、iOSランタイムフレームワークにリンクして動作させる。",
+    "iSH方式のスレッド型インタープリタとJITによりx86_64・arm64・arm32のゲスト命令を実行する。",
+    "KosmicKrispによるVulkan 1.4→Metal変換と、ZinkによるOpenGL 4.6/GLES 3.2エミュレーションでGPUを活用する。",
+    "VideoToolboxを介したH.264/HEVCのハードウェアエンコード・デコードに対応する。",
+    "UBDドライバによる仮想ディスク、各種Linuxファイルシステム、FUSEをサポートし柔軟なストレージ構成が可能。"
+  ],
+  "tryIt": {
+    "steps": [
+      "READMEにはステップバイステップの手順は記載されていない。開発者はリポジトリをコーディングエージェントに渡してAGENTS.mdを参照するよう案内されている。",
+      "Androidシステムイメージのビルドには高性能なx86_64 Linuxマシンが必要。ビルド済みイメージはGitHubリリースページから入手可能。",
+      "Andarium（AndroidエミュレータアプリのIPA）はGitHubリリースページからサイドロードできる。"
+    ],
+    "commands": []
+  }
+}
