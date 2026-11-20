@@ -1,0 +1,40 @@
+{
+  "repo": "zhouxiaoka/autoclip",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "1つのリンクからAIが自動でショート動画を生成するオープンソースツール",
+  "features": [
+    "動画URLを貼り付けるだけで、抖音・TikTok・YouTube Shortsなど複数プラットフォーム向けのショート動画を自動生成する",
+    "各クリップにカバー画像・タイトル・説明文・ハッシュタグを自動生成し、ZIPパッケージとしてまとめて書き出す",
+    "字幕はWhisper・SenseVoice（ローカル）またはクラウド文字起こしから取得でき、既存のSRTファイルの再利用も可能",
+    "インタビュー形式とポッドキャスト形式の2種類の縦型レイアウトに対応し、発言者の顔を自動追尾してフレーミングする",
+    "デスクトップアプリ・CLI・Docker/Webデプロイ・MCPサーバーの4つの利用形態をサポートする",
+    "クラウドモデルとローカルモデル（OllamaやLM Studio）を選択でき、送信データの範囲も明示されプライバシーに配慮している"
+  ],
+  "why": "推測: ポッドキャストや講義などの長尺動画をショート動画に変換する作業は手間がかかるが、このツールはURLを渡すだけで字幕・カバー・文案の生成まで一括自動化できる点が際立っている。推測: デスクトップアプリからMCPサーバーまで幅広い利用形態に対応しており、個人クリエイターから開発者・エージェント連携まで多様なユースケースをカバーしているのも注目点である。",
+  "whoFor": "ポッドキャスト・インタビュー・講義などの長尺動画を複数SNS向けに効率よく展開したいコンテンツクリエイターに向いている。自分のAPIキーや映像をローカルで管理したいユーザーや、CLIやMCPを通じてAIエージェントと連携したいエンジニアにも適している。",
+  "tech": [
+    "バックエンドはPython + FastAPIで構築され、動画処理にFFmpeg・yt-dlpを使用している",
+    "音声認識にはOpenAI Whisper・FunASR・SenseVoiceを利用し、ローカルとクラウドの両方に対応している",
+    "フロントエンドはReact、デスクトップアプリはTauriで実装されておりクロスプラットフォームで動作する",
+    "DockerとRedisを使ったWebデプロイに対応しており、MCPサーバーとしてAIエージェントから呼び出すことも可能",
+    "OpenAI互換API・Ollama・LM StudioなどのモデルプロバイダーをSettings画面から切り替えられる"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubリリースページからデスクトップインストーラー（macOSは.dmg、Windowsは-setup.exe）をダウンロードしてインストールする",
+      "Settings画面でモデルプロバイダーとAPIキーを設定し、接続テストを行う",
+      "動画URLを貼り付けて対象プラットフォームを選択し、生成を実行する",
+      "CLIを使う場合はPython 3.10以上とFFmpegをインストールしてからuvx autoclip-mcpでセットアップする",
+      "Dockerを使う場合はリポジトリをクローンしてenv.exampleを.envにコピー、dataとlogsとuploadsディレクトリを作成してdocker compose up -d --buildを実行する"
+    ],
+    "commands": [
+      "uvx autoclip-mcp",
+      "autoclip --version",
+      "autoclip produce talk.mp4 --srt talk.srt --platform douyin --portrait-style podcast --json",
+      "autoclip outputs PROJECT_ID --export-kits",
+      "autoclip mcp",
+      "docker compose up -d --build"
+    ]
+  }
+}

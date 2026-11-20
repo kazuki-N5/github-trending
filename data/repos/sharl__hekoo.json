@@ -1,0 +1,37 @@
+{
+  "repo": "sharl/hekoo",
+  "language": "",
+  "readme": true,
+  "oneLiner": "タスクバーにメッセージや画像を表示するPoCツール",
+  "features": [
+    "タスクバー上にテキストセグメントをリアルタイムで表示できる",
+    "base64エンコードした画像もタスクバーに送信して表示可能",
+    "ローカルHTTPサーバー（ポート19876）経由でデータを受け付ける",
+    "HTTP POSTリクエストでJSONデータを送ることでコンテンツを更新できる",
+    "Museと連携して動作するプルーフオブコンセプト実装"
+  ],
+  "why": "推測: Museのようなタスクバーツールと連携し、天気情報や通知などをタスクバーに表示できる点で実用性がある。KrisGfxのワイヤレスデバイスバッテリーモニターからヒントを得ており、HTTP経由でカスタムデータをタスクバーに送るアーキテクチャの参考例として注目に値する。",
+  "whoFor": "Museユーザーでタスクバーにカスタム情報を表示したい人向け。curlやスクリプトからHTTP経由でタスクバーにデータを送りたいPythonユーザーや開発者にも適している。",
+  "tech": [
+    "Pythonで実装されたローカルHTTPサーバー",
+    "ポート19876でHTTP POSTリクエストを受け付けるJSON API",
+    "テキストおよびbase64エンコード画像の両方を処理できる",
+    "Pythonの仮想環境（venv）で依存関係を管理"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンする",
+      "Pythonの仮想環境を作成し有効化する（WindowsではPowerShellで.venvフォルダを作成）",
+      "requirements.txtから依存関係をインストールする",
+      "hekoo.pyを実行してサーバーを起動する",
+      "curlとjoを使ってlocalhost:19876にHTTP POSTリクエストを送信する"
+    ],
+    "commands": [
+      "git clone https://github.com/sharl/hekoo",
+      "python -m venv .venv",
+      ".venv\\Scripts\\Activate.ps1",
+      "pip install -r requirements.txt",
+      "python hekoo.py"
+    ]
+  }
+}
