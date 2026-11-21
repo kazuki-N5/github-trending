@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>atuizz/posewear | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🖼️</div><div>
+<h1>atuizz/posewear</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-22（Trendshift 8位）</span>
+<a class="gh" href="https://github.com/atuizz/posewear" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="atuizz__posewear" data-repo="atuizz/posewear" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">姿勢・服装・人像の参考画像ライブラリとブラウザ内AIバーチャル試着アプリ</p>
+<h3>何ができるか</h3><ul><li>姿勢（線稿）・深度姿勢・服装・動画風服装・人像の5種類の参考画像ライブラリを中英バイリンガルのプロンプト付きで閲覧・検索できる</li><li>自分の写真とAPIキーを使って、選んだ服装・姿勢でAI試着画像をブラウザ内で生成できる</li><li>OpenAI・Gemini・豆包Seedream・カスタム互換エンドポイントの複数AIサービスプロバイダーに対応している</li><li>生成履歴・お気に入り・最近閲覧した素材をブラウザのIndexedDB（ローカルDB）に保存でき、エクスポートやインポートも可能</li><li>PWA（Progressive Web App）対応で、一度閲覧したコンテンツはオフラインでも表示でき、ホーム画面へのインストールもできる</li><li>プロンプトを中性的な商品説明文に自動書き換えすることで、AIサービスの安全審査による誤拒否を減らす機能を搭載している</li></ul>
+<h3>なぜ注目されているか</h3><p>登録不要・バックエンドなしの純粋な静的サイトで、自分のAPIキーを使ってプライバシーを守りながらAI試着を体験できる点が評価されている。<span class="guess">推測</span> AI画像生成の活用と参考素材を一つにまとめたオールインワンツールとして、イラストレーターやファッション関係者の間で注目を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>AIを使ったファッション画像生成に興味があるクリエイターやイラストレーター、コスプレ・ファッションの参考資料を集めたいデザイナー、またはStable DiffusionやMidjourneyなどのAIイメージ生成のプロンプトを手軽に試したい人に役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>フロントエンドはVanilla JS（フレームワーク不使用）で構築された純粋な静態サイトで、Cloudflare Pagesにデプロイされる</li><li>素材データはPythonスクリプト（fetch-assets.py）で外部ギャラリーから取得し、build.pyでサムネイル生成・データ整形・詳細ページ生成を行うビルドパイプラインを持つ</li><li>お気に入りや生成履歴はブラウザのIndexedDB（ローカルのキーバリューデータベース）に保存され、サーバーへのデータ送信は一切ない</li><li>Cloudflare Pages Functions（functions/api/proxy.js）が豆包Seedreamのクロスオリジン問題を解消するAPIプロキシとして機能する</li><li>テストはPlaywrightを使ってAPIをモックし、実際のAPIキーなしでUI・エラー処理・試着フローを自動テストしている</li></ul>
+<h3>試し方</h3>
+<ol><li>Python 3.9以上とPillowをインストールする</li><li>リポジトリをクローンして依存関係をインストールする</li><li>fetch-assets.pyで参考素材データをダウンロードする（数GB・時間がかかる）</li><li>build.pyでdist/フォルダにサイトをビルドする</li><li>ローカルサーバーを起動してブラウザで確認する</li></ol>
+<pre><code>git clone https://github.com/atuizz/posewear.git &amp;&amp; cd posewear
+pip install pillow
+python3 scripts/fetch-assets.py
+python3 build.py
+python3 -m http.server 8787 -d dist</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-22.html#d-atuizz__posewear">2026-11-22</a>
+<span class="src trendshift">Trendshift 8位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

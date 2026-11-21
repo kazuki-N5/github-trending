@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ItsNotRexed/Leonida | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>ItsNotRexed/Leonida</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-22（Trendshift 1位）</span>
+<a class="gh" href="https://github.com/ItsNotRexed/Leonida" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="itsnotrexed__leonida" data-repo="ItsNotRexed/Leonida" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">GTA6（Xbox版）をWindowsでネイティブ動作させる静的リコンパイルプロジェクト</p>
+<h3>何ができるか</h3><ul><li>Xbox Series版GTA6のx86-64コードをWindowsでネイティブ実行できるよう静的リコンパイル（バイナリをそのまま変換してネイティブ実行ファイルを生成する手法）する</li><li>RDNA2アーキテクチャのGPUシェーダー26,503本をSPIR-V（Vulkanが解釈できる中間表現）に変換して出力する</li><li>ゲームのモデル・テクスチャ・オーディオをエクスポートする</li><li>XboxのDirect3D 12コールをVulkanに変換するカスタムD3Dレイヤーを部分的に実装している</li><li>make_game.pyのターミナルインターフェースでcheck・shaders・assets・runtime・pipelinesの各ビルド段階を個別に制御できる</li></ul>
+<h3>なぜ注目されているか</h3><p>GTA6のPC版が発売されていない中、Xboxバイナリからネイティブないなる Windowsビルドを生成する技術的挑戦として注目を集めている。シェーダー変換やアセット抽出など高度な部分が着実に実装されており、静的リコンパイルという手法がゲーム保存・移植の新しいアプローチとして研究コミュニティから関心を持たれている。<span class="guess">推測</span> GTA6の正式PC版を待ちきれないコミュニティや、リバースエンジニアリング技術に関心のある開発者から注目されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>リバースエンジニアリングやゲームエンジン移植技術に興味のある開発者・研究者。コンパイラ、GPUシェーダー、低レベルグラフィックスAPIに関心のあるエンジニアにも適している。自分で合法的に入手したゲームコピーを所持していることが前提となる。</p>
+<h3>技術的なポイント</h3><ul><li>Pythonスクリプト（make_game.py）でビルド全工程を管理し、各段階を個別に実行できるパイプラインを構築している</li><li>RDNA2（AMDのGPUアーキテクチャ）のシェーダーをSPIR-V形式に変換するためLLVM 21+とAMDGPUターゲットを使用している</li><li>.NET 8 SDKを使ってシェーダー翻訳ツール群を実装しており、wave64動作の一部はエミュレーション対応している</li><li>XboxのDirect3D 12コマンドリストとディスクリプターヒープモデルをVulkanに変換するカスタムレイヤーをC++で実装している</li></ul>
+<h3>試し方</h3>
+<ol><li>Windows 10/11 x64・空き容量350GB・Python 3.11+・.NET 8 SDK・Vulkan SDK・LLVM 21+（AMDGPUターゲット付き）・Visual Studio 2022（C++ツール）を準備する</li><li>git clone --recursive でサブモジュールごとリポジトリをクローンする</li><li>Build.bat をダブルクリックしてビルドを開始する（または make_game.py でコマンドライン操作する）</li><li>python -I make_game.py --check でゲームコピーの検証のみ先に行うことができる</li></ol>
+<pre><code>git clone --recursive https://github.com/ItsNotRexed/Leonida
+python -I make_game.py --find
+python -I make_game.py --check
+python -I make_game.py --game &quot;D:\path\to\your\package&quot; --out &quot;D:\Games\Leonida&quot; --work &quot;E:\leonida-work&quot;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-22.html#d-itsnotrexed__leonida">2026-11-22</a>
+<span class="src trendshift">Trendshift 1位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

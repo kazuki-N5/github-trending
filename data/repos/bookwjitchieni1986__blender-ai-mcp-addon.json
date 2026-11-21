@@ -1,0 +1,32 @@
+{
+  "repo": "bookwjitchieni1986/blender-ai-mcp-addon",
+  "language": "",
+  "readme": true,
+  "oneLiner": "BlenderにAIアシスタントとMCPサーバーを追加するアドオン",
+  "features": [
+    "Blenderのシーンをチャットで操作できるAIアシスタント機能を追加し、オブジェクトの作成・移動・マテリアル設定などを自然言語で指示できる",
+    "チャット・シーンオブジェクト一覧・ビューポートのスナップショット・タスクボードを一画面にまとめた専用のStudioウィンドウを持つ",
+    "OpenAI・Anthropic Claude・Google Gemini・Ollama（ローカルAI）など多数のAIプロバイダーに対応し、自分の好みのモデルを選んで使える",
+    "マネージャー・ワーカー・レビュアーの役割を持つ複数AIエージェントがチームとして協力して複雑なタスクをこなすマルチエージェントワークフローを実行できる",
+    "Blenderシーンを操作するための21種類のツール（オブジェクト作成・編集・ビューポート撮影・アセット検索など）を内蔵している",
+    "MCP（Model Context Protocol）サーバーを内蔵しており、OpenCodeなど外部のMCP対応クライアントからBlenderを操作できる"
+  ],
+  "why": "BlenderとAIを直接統合し、登録なし・自分のAPIキーで使えるオープンなアドオンとして公開されたことで注目されている。推測: 3DアーティストがコードなしにAIでシーン操作を自動化したいというニーズと、MCP（Model Context Protocol）という新しいAI連携標準の普及が重なり、関心を集めていると考えられる。",
+  "whoFor": "BlenderでAIを活用した反復作業の自動化やシーン生成を試したい3Dアーティストや技術アーティスト、またはAIツールをBlenderに連携させたいMCP対応ツールの開発者に役立つ。",
+  "tech": [
+    "BlenderのPython API（bpy）を使ったアドオン形式で実装されており、Blender 4.2以降に対応している",
+    "MCP（Model Context Protocol）のStreamable HTTP形式でサーバーを内蔵しており、OpenCodeなどのMCPクライアントからBlenderをリモート操作できる",
+    "マルチエージェントのタスクはシーン編集の順序を保つために逐次実行され、タスクが失敗した場合は1回だけ修正を試み、2回失敗するとワークフローが停止する",
+    "Poly Haven・Sketchfab・Poly Pizzaといったアセットライブラリとの連携機能を持ち、チャットから直接3Dアセットを検索・インポートできる"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubのReleasesページからmcp-for-blender-pro.zipをダウンロードする",
+      "Blenderを開き、Edit → Preferences → Get Extensions → メニュー → Install from Diskを選択する",
+      "ZIPファイルを選択してmcp-for-blender-proを有効化する",
+      "3D Viewport → N → MCP Proパネルを開く",
+      "AIプロバイダーを選択して接続情報とモデルを設定し、メッセージを送信する"
+    ],
+    "commands": []
+  }
+}

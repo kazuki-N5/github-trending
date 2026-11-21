@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChiefGyk3D/Clouds-Against-Humanity | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📚</div><div>
+<h1>ChiefGyk3D/Clouds-Against-Humanity</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-22（Trendshift 6位）</span>
+<a class="gh" href="https://github.com/ChiefGyk3D/Clouds-Against-Humanity" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="chiefgyk3d__clouds-against-humanity" data-repo="ChiefGyk3D/Clouds-Against-Humanity" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ゼロトラストとIaCをハンズオンで学ぶ、無料のクラウドセキュリティ教育ホームラボ</p>
+<h3>何ができるか</h3><ul><li>DigitalOcean上に公開インバウンドポートをゼロにしたクラウド環境をOpenTofu（Terraformのオープンソースフォーク）で構築できる</li><li>Twingate（ZTNA: ゼロトラストネットワークアクセス）を使い、VPNなしで特定ホスト・ポートへの認証済みアクセスを実現する</li><li>Dopplersで全シークレット（APIキー等）を一元管理し、リポジトリにクレデンシャルを一切残さない設計を学べる</li><li>Spaceliftでインフラ変更のplan・human確認・applyを自動化し、ラップトップからの直接適用をなくす運用を実践できる</li><li>コスト上限チェックをCIに組み込み、承認済み予算を超えるPRを自動で失敗させる仕組みを備えている</li><li>wikiに全レッスン・フローチャート・演習が日本語以外で丁寧に書かれており、ゼロから学べる読み順が用意されている</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> クラウドセキュリティの学習リソースは高額な講座やベンダー資格に偏りがちだが、このプロジェクトは実際に動く環境と詳細なwikiを完全無料で公開しており、低コスト（月約12〜30ドル）で本番相当のゼロトラスト構成を自分の手で動かせる点が注目されている。作者自身の「知識はお金のある人だけのものにしない」という理念が共感を集めている。</p>
+<h3>どんな人に役立つか</h3><p>クラウドセキュリティやDevSecOpsの基礎を実践的に身につけたい学生や独学者に向いている。ITヘルプデスク程度の経験があれば始められる設計になっており、将来クラウドインフラや情報セキュリティ職を目指す人の最初のホームラボとして役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>OpenTofu（Terraformのオープンソース後継、MPLライセンス）でインフラをコード化し、スタック単位で管理するIaC（Infrastructure as Code）構成を採用</li><li>Twingate ZTNAを使用し、コネクターがアウトバウンドのみ接続するため、インターネット上に公開リスナーが一切存在しないゼロトラストアーキテクチャを実現</li><li>Spaceliftがplan結果を人間が確認してからapplyする承認フローを強制し、Dopplersがread-onlyトークン1つでシークレットを注入するため、CIパイプラインにクレデンシャルが流れない</li><li>Pythonスクリプトによるコストゲート（cost_check.py）がCI上でdocs/stages/approved.jsonと比較し、予算超過の変更をPRで自動ブロックする</li><li>GitHub Actionsのすべてのアクションをコミットハッシュでピン留めし、サプライチェーン攻撃（依存ライブラリ改ざん等）リスクを低減するCI設計を採用</li></ul>
+<h3>試し方</h3>
+<ol><li>OpenTofu 1.8以上、Python 3、OPA 1.21.0をインストールする</li><li>リポジトリをクローンしてルートディレクトリに移動する</li><li>コストゲートを実行してdocs/stages/approved.jsonと比較確認する</li><li>pytestでリポジトリのテストスイートを実行する</li><li>モジュール単体テストをOpenTofuで実行する（クラウドアカウント不要、プロバイダーはモック）</li></ol>
+<pre><code>python3 -I scripts/cost_check.py --root .
+python3 -I scripts/gen_settings_doc.py --check
+python3 -I -m pytest tests -q
+python3 -I scripts/identifier_check.py --root .
+opa test .spacelift/policies -v
+tofu -chdir=modules/firewall init -backend=false
+tofu -chdir=modules/firewall test</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-22.html#d-chiefgyk3d__clouds-against-humanity">2026-11-22</a>
+<span class="src trendshift">Trendshift 6位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

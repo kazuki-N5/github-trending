@@ -1,0 +1,31 @@
+{
+  "repo": "havenicec/google-qr-sms-helper",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "GoogleのQRコード認証をSMS 6桁コード認証に切り替えるChrome拡張機能",
+  "features": [
+    "Googleアカウントのデスクトップ認証画面でQRコードの代わりに6桁のSMSコードによる認証フローを利用できるようにする",
+    "declarativeNetRequest（MV3のネットワーク書き換えAPI）とua_spoof.jsでUser-AgentをiPad Miniに偽装し、デスクトップ向けQR表示を回避する",
+    "ブラウザ内蔵のBarcadeDetector APIを使ってページ上のQRコードを検出して処理を制御する",
+    "ページに注入したフローティングコントロールパネルで拡張機能の動作を操作できる",
+    "バックグラウンドスクリプトによるRPCフォールバック（[3,null,4]シーケンス）でSMSフローへ誘導する"
+  ],
+  "why": "Googleがデスクトップブラウザでのログイン時にQRコード認証を必須化したことで、SMSコードを好むユーザーや特定の環境でQRスキャンが困難なユーザーが不便を感じるようになったため注目されている。推測: スマートフォンを手元に置かずにPCだけで作業するユーザー、またはQR対応カメラデバイスを持たないユーザーのニーズに対応するプロジェクトとして広まっていると考えられる。",
+  "whoFor": "デスクトップでGoogleにログインする際にQRコードではなくSMS認証を使いたいユーザー。Chrome・Edge・Brave 88以降（BarcodeDetector API対応バージョン）を使用している人が対象となる。",
+  "tech": [
+    "Manifest V3（MV3）形式のChrome拡張機能として実装されており、EdgeやBraveでも動作する（MV3はChrome拡張機能の最新仕様でバックグラウンド処理の制限が強化されている）",
+    "declarativeNetRequest APIを使ってネットワークリクエストをルールベースで書き換えてUser-Agentヘッダーを変更する",
+    "BarcodeDetector APIはChrome 88以降に組み込まれたQRコード読み取りAPIで、外部ライブラリ不要でQRコードを検出できる",
+    "コンテンツスクリプト（content.js）をメインワールドに注入してページのDOMとGoogleのRPCリクエストを操作する"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンするか、GitHubのリリースページからzipをダウンロードして展開する",
+      "chrome://extensions/ を開いてデベロッパーモードを有効にする",
+      "「パッケージ化されていない拡張機能を読み込む」をクリックして展開した拡張機能フォルダを選択する"
+    ],
+    "commands": [
+      "git clone https://github.com/havenicec/google-qr-sms-helper.git"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rustrak/rustrak | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>rustrak/rustrak</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-22（Trendshift 16位）</span>
+<a class="gh" href="https://github.com/rustrak/rustrak" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="rustrak__rustrak" data-repo="rustrak/rustrak" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Rustで書かれた自己ホスト型のSentry互換エラートラッキング・ログ・AIエージェントトレース統合監視ツール</p>
+<h3>何ができるか</h3><ul><li>既存のSentry SDK（エラー収集ライブラリ）のDSN（接続先URL）を変更するだけで移行でき、エラーを自動グループ化してIssue管理できる</li><li>AIエージェントの実行トレース（呼び出しウォーターフォール・モデル/ツール使用状況・レイテンシ分位数）を専用画面で可視化する</li><li>トランザクション（処理単位）をp95レイテンシで順位付けし、スパン（処理の区間）ウォーターフォールで詳細分析できる</li><li>構造化ログを6段階の重要度で管理し、アクティブなトレース内のログはトレースと自動リンクされる</li><li>リリースごとにクラッシュフリーセッション率・ユーザー率を追跡し、アラート（Slack・メール・Webhookなど）を設定できる</li><li>SQLite（小規模向け）またはPostgreSQL（大規模向け）を選べる単一コンテナ構成で、Dockerだけで起動できる</li></ul>
+<h3>なぜ注目されているか</h3><p>SentryのオープンソースセルフホストはRuby/Python製で運用が重かったが、RustとSQLiteを組み合わせた軽量設計により4コアCPUで毎秒5,000イベントを処理できる点が注目されている。Sentry SDKとの互換性を保ちつつAIエージェントのトレース機能まで含む守備範囲の広さも評価されている。</p>
+<h3>どんな人に役立つか</h3><p>Sentryの料金やインフラ管理コストを削減したい開発チームや個人開発者に向いている。AIエージェントを本番運用している開発者がデバッグ・パフォーマンス計測ツールを探しているケースにも適している。Dockerさえあれば始められるため、インフラ経験が浅いチームでも導入しやすい。</p>
+<h3>技術的なポイント</h3><ul><li>Rust製シングルバイナリでAPIサーバーとダッシュボードを兼ね、SQLite（デフォルト）またはPostgreSQLをバックエンドに使う</li><li>受信イベントをまずディスクに書いてから200 OKを返す非同期処理設計で、バースト時にも送信元アプリをブロックしない</li><li>Sentry Spans Protocol v2とOTel（OpenTelemetry）スタイルのスパンを両方サポートし、AIエージェントトレースを取り込む</li><li>TypeScript製REST APIクライアント（@rustrak/client、MITライセンス）と、AIアシスタント向けのMCPエンドポイントを内蔵する</li><li>ライセンスはAGPL-3.0（本体）で、匿名使用統計を6時間ごとに送信するがenv変数で無効化できる</li></ul>
+<h3>試し方</h3>
+<ol><li>Docker ComposeファイルをリポジトリからダウンロードしてSQLite構成でサーバーを起動する</li><li>既存アプリのSentry DSNをRustrakサーバーのURLに変更する</li><li>ブラウザでダッシュボードを開いてエラー・ログ・トレースを確認する</li></ol>
+<pre><code>docker compose up -d</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-22.html#d-rustrak__rustrak">2026-11-22</a>
+<span class="src trendshift">Trendshift 16位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

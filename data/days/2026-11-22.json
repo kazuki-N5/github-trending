@@ -1,0 +1,221 @@
+{
+  "date": "2026-11-22",
+  "collectedAt": "2026-11-22T07:07:39+09:00",
+  "entries": [
+    {
+      "repo": "ItsNotRexed/Leonida",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "havenicec/google-qr-sms-helper",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "Chrome Extension (MV3) to switch Google's mandatory QR code verification back to standard 6-digit SMS verification via iPad Mini profile & [3,null,4] RPC fallback.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "elementalsouls/Claude-BugHunter",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "XinaTian/MROffice",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "MR Office: open-source document, spreadsheet, presentation, PDF, handwriting and code editors. https://mroffice.ai",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anefzaoui/misterdownloadmanager",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ChiefGyk3D/Clouds-Against-Humanity",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Learn cloud security by building it! An open-source homelab teaching Zero Trust, DevSecOps, IaC, and cloud architecture from the ground up.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "rohanarun/alpoge-rh-replay",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "Independent replay of Alpöge’s claimed RH proof. Claim Lean modules and submit reproducible evidence.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "atuizz/posewear",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "姿势、服装、人像参考图库，附中英文提示词，可在浏览器里 AI 试穿 · Pose, outfit & portrait reference library with bilingual prompts and in-browser AI try-on",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pingdotgg/t3code",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "The best way to control Claude Code, Codex and more from any computer or phone",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "firecrawl/firecrawl",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "zhouxiaoka/autoclip",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "XiaoYouChR/Ghost-Downloader-3",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "The only downloader you need. 下载器的集大成者。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "bookwjitchieni1986/blender-ai-mcp-addon",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with ChatGPT/GPT, Claude, Gemini, Ollama, OpenCode. Blender AI addon, copilot for 3D, bpy Python scripting, MCP integration.",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "hatsunemiku-ai/google-one-tools",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "iamajmeena/neonclipping",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "Paste a link, get captioned 9:16 clips in ~2 min. Free, local, open-source clipping engine (audio-first, YouTube captions, local LLM).",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "rustrak/rustrak",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Self-hosted, open-source Sentry alternative in Rust. Error tracking, performance, logs and AI agent traces in one small container that works with the Sentry SDKs. SQLite or PostgreSQL.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "kunkundi/crossdesk",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "A lightweight, cross-platform remote desktop software with support for Web Client access | 一款支持 Web 客户端访问的轻量级跨平台远程桌面软件。",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mjmirza/app-store-compliance",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "language": "Shell",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "HKUDS/CLI-Anything",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "Orca lets you run a fleet of bots with your own subscription (e.g. Claude Code, Grok, Agy, Codex). Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "mitaku/andon",
+        "source": "hatena",
+        "desc": "A one-person software factory: AI coding agents take tasks from a ledger through review to merge, and call the human only for decisions only they can make.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 95,
+        "sourceRank": 1
+      },
+      {
+        "repo": "fkubota/understand-mode",
+        "source": "hatena",
+        "desc": "Claude Code の出力・PR・コードを、付箋のホワイトボードで寄り道しながら理解する /understand スキル",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 33,
+        "sourceRank": 2
+      },
+      {
+        "repo": "RustWTM/RustWTM",
+        "source": "hatena",
+        "desc": "Windows task manager and resource governor written in Rust. Monitor processes, manage resource usage, and keep your PC responsive.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 18,
+        "sourceRank": 3
+      }
+    ]
+  }
+}

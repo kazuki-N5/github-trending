@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RustWTM/RustWTM | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>RustWTM/RustWTM</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-22（はてなブックマーク 3位）</span>
+<a class="gh" href="https://github.com/RustWTM/RustWTM" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="rustwtm__rustwtm" data-repo="RustWTM/RustWTM" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Rustで書かれたWindowsタスクマネージャー兼リソースガバナー</p>
+<h3>何ができるか</h3><ul><li>プロセスの一覧・ツリー・アプリグループ表示のほか、スレッド・ハンドル・モジュール・メモリマップ・サービス・待機チェーンを確認できる</li><li>CPU・メモリ・GPU・ディスク・ネットワークの履歴グラフや、ポートをリッスンしているプロセスの確認など、パフォーマンス診断ができる</li><li>CPUスロットリング（使用率の上限設定）やアプリごとのCPU予算・ルール設定でPCの応答性を保つリソースポリシーを適用できる</li><li>アプリを特定のCPUコアに固定したり、アプリ間でコアを分離したり、特定アプリ専用コアを予約するコア配置機能がある</li><li>アプリ実行中に電源プランを切り替え、終了後に元のプランへ自動復元する電源管理機能がある</li><li>スタートアップ・サービス・インストール済みアプリ・ディスク使用量・ローカルDockerコンテナの管理もできる</li></ul>
+<h3>なぜ注目されているか</h3><p>Windowsの標準タスクマネージャーでは不足しがちな詳細なリソース管理機能をRustで実装した点が注目されている。ガバナー機能はデフォルトでドライランモード（確認のみ）で起動するため安全に試せる。<span class="guess">推測</span> RustによるシステムレベルのWindows APIへのアクセスと安全性の組み合わせ、およびAIプロバイダーとの統合機能が開発者の関心を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>Windowsで動くアプリのパフォーマンスを細かく管理したいエンジニアや、ゲームや動画編集など重い作業時にPCの応答性を維持したいユーザー向け。MCPサーバー機能を通じてAIエージェントからPCの状態を診断したい場合にも役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>Rustで書かれたワークスペースは8つのクレート（ライブラリ単位）に分割されており、unsafeコードはwtm-sysクレートのみに集約されている</li><li>wtm-gui（rustwtm.exe）がGUIアプリ、wtm-cli（wtm.exe）がCLIツールという2種類の実行ファイルを提供する</li><li>ガバナーサービスはWindowsのLocalSystem権限で動作し、ローカルパイプ経由の制御には管理者権限が必要</li><li>オプションでTelegramボットやローカルMCPサーバー（Model Context Protocol：AIエージェントがPCと通信するための仕組み）との連携が可能</li><li>rust-toolchain.tomlでRustのツールチェーンバージョンを固定しており、Cargoで通常通りビルド・テストができる</li></ul>
+<h3>試し方</h3>
+<ol><li>64bit版Windows 10（1809以降）またはWindows 11の環境を用意する</li><li>GitHubのReleasesページからバージョン付きMSIインストーラーをダウンロードする</li><li>MSIを実行するとC:\Program Files\RustWTMにインストールされ、ガバナーサービスが起動する</li><li>サービスなしで試したい場合はリリースのZIPを展開して実行する</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-22.html#h-rustwtm__rustwtm">2026-11-22 はてブ</a>
+<span class="src hatena">はてなブックマーク 3位</span><span>18 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

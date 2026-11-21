@@ -1,0 +1,41 @@
+{
+  "repo": "ChiefGyk3D/Clouds-Against-Humanity",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "ゼロトラストとIaCをハンズオンで学ぶ、無料のクラウドセキュリティ教育ホームラボ",
+  "features": [
+    "DigitalOcean上に公開インバウンドポートをゼロにしたクラウド環境をOpenTofu（Terraformのオープンソースフォーク）で構築できる",
+    "Twingate（ZTNA: ゼロトラストネットワークアクセス）を使い、VPNなしで特定ホスト・ポートへの認証済みアクセスを実現する",
+    "Dopplersで全シークレット（APIキー等）を一元管理し、リポジトリにクレデンシャルを一切残さない設計を学べる",
+    "Spaceliftでインフラ変更のplan・human確認・applyを自動化し、ラップトップからの直接適用をなくす運用を実践できる",
+    "コスト上限チェックをCIに組み込み、承認済み予算を超えるPRを自動で失敗させる仕組みを備えている",
+    "wikiに全レッスン・フローチャート・演習が日本語以外で丁寧に書かれており、ゼロから学べる読み順が用意されている"
+  ],
+  "why": "推測: クラウドセキュリティの学習リソースは高額な講座やベンダー資格に偏りがちだが、このプロジェクトは実際に動く環境と詳細なwikiを完全無料で公開しており、低コスト（月約12〜30ドル）で本番相当のゼロトラスト構成を自分の手で動かせる点が注目されている。作者自身の「知識はお金のある人だけのものにしない」という理念が共感を集めている。",
+  "whoFor": "クラウドセキュリティやDevSecOpsの基礎を実践的に身につけたい学生や独学者に向いている。ITヘルプデスク程度の経験があれば始められる設計になっており、将来クラウドインフラや情報セキュリティ職を目指す人の最初のホームラボとして役立つ。",
+  "tech": [
+    "OpenTofu（Terraformのオープンソース後継、MPLライセンス）でインフラをコード化し、スタック単位で管理するIaC（Infrastructure as Code）構成を採用",
+    "Twingate ZTNAを使用し、コネクターがアウトバウンドのみ接続するため、インターネット上に公開リスナーが一切存在しないゼロトラストアーキテクチャを実現",
+    "Spaceliftがplan結果を人間が確認してからapplyする承認フローを強制し、Dopplersがread-onlyトークン1つでシークレットを注入するため、CIパイプラインにクレデンシャルが流れない",
+    "Pythonスクリプトによるコストゲート（cost_check.py）がCI上でdocs/stages/approved.jsonと比較し、予算超過の変更をPRで自動ブロックする",
+    "GitHub Actionsのすべてのアクションをコミットハッシュでピン留めし、サプライチェーン攻撃（依存ライブラリ改ざん等）リスクを低減するCI設計を採用"
+  ],
+  "tryIt": {
+    "steps": [
+      "OpenTofu 1.8以上、Python 3、OPA 1.21.0をインストールする",
+      "リポジトリをクローンしてルートディレクトリに移動する",
+      "コストゲートを実行してdocs/stages/approved.jsonと比較確認する",
+      "pytestでリポジトリのテストスイートを実行する",
+      "モジュール単体テストをOpenTofuで実行する（クラウドアカウント不要、プロバイダーはモック）"
+    ],
+    "commands": [
+      "python3 -I scripts/cost_check.py --root .",
+      "python3 -I scripts/gen_settings_doc.py --check",
+      "python3 -I -m pytest tests -q",
+      "python3 -I scripts/identifier_check.py --root .",
+      "opa test .spacelift/policies -v",
+      "tofu -chdir=modules/firewall init -backend=false",
+      "tofu -chdir=modules/firewall test"
+    ]
+  }
+}

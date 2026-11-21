@@ -1,0 +1,39 @@
+{
+  "repo": "atuizz/posewear",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "姿勢・服装・人像の参考画像ライブラリとブラウザ内AIバーチャル試着アプリ",
+  "features": [
+    "姿勢（線稿）・深度姿勢・服装・動画風服装・人像の5種類の参考画像ライブラリを中英バイリンガルのプロンプト付きで閲覧・検索できる",
+    "自分の写真とAPIキーを使って、選んだ服装・姿勢でAI試着画像をブラウザ内で生成できる",
+    "OpenAI・Gemini・豆包Seedream・カスタム互換エンドポイントの複数AIサービスプロバイダーに対応している",
+    "生成履歴・お気に入り・最近閲覧した素材をブラウザのIndexedDB（ローカルDB）に保存でき、エクスポートやインポートも可能",
+    "PWA（Progressive Web App）対応で、一度閲覧したコンテンツはオフラインでも表示でき、ホーム画面へのインストールもできる",
+    "プロンプトを中性的な商品説明文に自動書き換えすることで、AIサービスの安全審査による誤拒否を減らす機能を搭載している"
+  ],
+  "why": "登録不要・バックエンドなしの純粋な静的サイトで、自分のAPIキーを使ってプライバシーを守りながらAI試着を体験できる点が評価されている。推測: AI画像生成の活用と参考素材を一つにまとめたオールインワンツールとして、イラストレーターやファッション関係者の間で注目を集めていると考えられる。",
+  "whoFor": "AIを使ったファッション画像生成に興味があるクリエイターやイラストレーター、コスプレ・ファッションの参考資料を集めたいデザイナー、またはStable DiffusionやMidjourneyなどのAIイメージ生成のプロンプトを手軽に試したい人に役立つ。",
+  "tech": [
+    "フロントエンドはVanilla JS（フレームワーク不使用）で構築された純粋な静態サイトで、Cloudflare Pagesにデプロイされる",
+    "素材データはPythonスクリプト（fetch-assets.py）で外部ギャラリーから取得し、build.pyでサムネイル生成・データ整形・詳細ページ生成を行うビルドパイプラインを持つ",
+    "お気に入りや生成履歴はブラウザのIndexedDB（ローカルのキーバリューデータベース）に保存され、サーバーへのデータ送信は一切ない",
+    "Cloudflare Pages Functions（functions/api/proxy.js）が豆包Seedreamのクロスオリジン問題を解消するAPIプロキシとして機能する",
+    "テストはPlaywrightを使ってAPIをモックし、実際のAPIキーなしでUI・エラー処理・試着フローを自動テストしている"
+  ],
+  "tryIt": {
+    "steps": [
+      "Python 3.9以上とPillowをインストールする",
+      "リポジトリをクローンして依存関係をインストールする",
+      "fetch-assets.pyで参考素材データをダウンロードする（数GB・時間がかかる）",
+      "build.pyでdist/フォルダにサイトをビルドする",
+      "ローカルサーバーを起動してブラウザで確認する"
+    ],
+    "commands": [
+      "git clone https://github.com/atuizz/posewear.git && cd posewear",
+      "pip install pillow",
+      "python3 scripts/fetch-assets.py",
+      "python3 build.py",
+      "python3 -m http.server 8787 -d dist"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mitaku/andon | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>mitaku/andon</h1>
+<div class="meta">
+<span>初掲載 2026-11-22（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/mitaku/andon" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="mitaku__andon" data-repo="mitaku/andon" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントがissueの実装・レビュー・マージを自動化する一人用ソフトウェア工場フレームワーク</p>
+<h3>何ができるか</h3><ul><li>「Chief of Staff（参謀）」エージェントがkanban（課題台帳ファイル）からissueを取り出し、ワーカーエージェントに割り当てる。</li><li>ワーカーエージェントが独立したgit worktreeでコーディングしPRを作成、別モデルのレビュアーエージェントがコードレビューを行う。</li><li>「gate（ゲート）」と呼ばれるルール定義により、テストやチェックを通過したPRを人の確認なしに自動マージするかを判定できる。</li><li>オーナー（人間）への呼び出しは「何を作るか・ユーザー体験・外部への約束・不可逆なリスク・工場自体の変更」の5種類に限定され、それ以外はエージェントが自律処理する。</li><li>プロジェクト指示・skill・wiki・kanbanをすべてセルリポジトリ（git管理）に置き、別マシンへの移行やバックアップが容易になる。</li></ul>
+<h3>なぜ注目されているか</h3><p>AIコーディングエージェントを使った自動開発への関心が高まる中、開発者不在でも複数エージェントが独立して動き続け不在時もPRがマージされるというコンセプトが独自性を持つ。<span class="guess">推測</span> トヨタ生産方式のアンドン灯（監督者を呼ぶ仕組み）をソフトウェア開発に応用した「選択的 Dark Factory」という設計思想が、AI活用と製造哲学を融合したアプローチとして興味を引いていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>すでにターミナルで複数のAIコーディングエージェントを並行稼働させており、自分が離席中もエージェントに作業を続けさせつつマージや不可逆な操作の最終判断は手放したくない一人開発者向け。Linux/WSL環境でDockerを使える人が対象となる。</p>
+<h3>技術的なポイント</h3><ul><li>CLIツール（`andon`・`kanban`コマンド）をGoで実装しており、エージェントへの指示やkanban（課題台帳ファイル群）の読み書きを担う。</li><li>Claude Code・OpenAI Codexなど複数のAIモデルをエージェントとして使い、異なるモデルファミリーでレビューを行う設計にしている。</li><li>Dockerコンテナ（セル）でエージェントの実行環境を信頼境界ごとに隔離し、`FROM`バージョンを上げるPR1本で全セルへAndonの更新が反映される。</li><li>JSON Schemaでkanbanの形式・ゲートルール・通知などAPIの形式を機械可読な形で定義し、シェルテストで自動検証している。</li><li>git worktreeを使ってissueごとに独立した作業ブランチを切り、エージェントが複数issueを並行処理できる構成になっている。</li></ul>
+<h3>試し方</h3>
+<ol><li>ホストにDockerとbashを用意する（Linux またはWSLが必要）。</li><li>`andon init &lt;slug&gt;` でセルリポジトリ（`&lt;slug&gt;-cell`）を作成する。</li><li>`cd &lt;slug&gt;-cell &amp;&amp; bin/bootstrap` でイメージをビルドしコンテナを起動する。</li><li>セル内で `andon create &lt;slug&gt;` でプロジェクトを作成し、`andon open &lt;slug&gt;` でChief of Staffを起動してissueを流す。</li></ol>
+<pre><code>andon init &lt;slug&gt; --image ghcr.io/&lt;owner&gt;/andon:&lt;バージョン&gt; --owner &lt;email&gt;
+cd &lt;slug&gt;-cell &amp;&amp; bin/bootstrap
+bin/bootstrap host-install
+go test ./...
+tests/run --changed</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-22.html#h-mitaku__andon">2026-11-22 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>95 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

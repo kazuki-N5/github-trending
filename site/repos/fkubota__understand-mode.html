@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fkubota/understand-mode | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛠️</div><div>
+<h1>fkubota/understand-mode</h1>
+<div class="meta">
+<span>初掲載 2026-11-22（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/fkubota/understand-mode" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="fkubota__understand-mode" data-repo="fkubota/understand-mode" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Claude Codeの出力・PR・コードを、付箋ホワイトボードで寄り道しながら理解するスキル</p>
+<h3>何ができるか</h3><ul><li>選択したコード行や文に対して、質問・詳しく・用語・図・データ・レビューなど6種類の付箋を生成できる</li><li>Mermaid記法で図を、Vega-Liteでグラフを描画して視覚的に理解を助ける</li><li>データ付箋では承認したSELECT文のSQLのみを実行し、表・グラフ・SQLを並べて表示する</li><li>付箋内の分身がメインの会話コンテキストを引き継ぐため、本筋の会話を汚さずに寄り道できる</li><li>「理解を終える」操作で寄り道の内容を本筋へのコメントとして下書きし、送信後に寄り道記録を破棄する</li></ul>
+<h3>なぜ注目されているか</h3><p>Claude Codeを使っていると、出力やコードを理解したい箇所が出てくるが、その疑問をメインの会話に挟むと文脈が乱れる問題がある。このスキルは付箋という「寄り道専用の場所」を提供することで、本筋を汚さずに深掘りできる体験を実現している。<span class="guess">推測</span> Mermaid図やVega-Liteグラフといった可視化機能を組み合わせることで、コードや概念の理解を促進する点が注目されている。</p>
+<h3>どんな人に役立つか</h3><p>Claude Codeを日常的に使っているエンジニアや、PRレビュー・コードリーディングを頻繁に行う開発者向け。疑問が浮かんだ瞬間に脱線せず深掘りしたい場面で役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>Claude Codeのスキル機能（/understandコマンド）として実装されており、Node.js 18以上が必要</li><li>付箋内の分身はメイン会話全体のコンテキストを読み込むため、長い会話では費用（APIトークン数）が増加する</li><li>グラフ描画にVega-Lite（宣言的な可視化ライブラリ）、図描画にMermaid（テキストからダイアグラムを生成するツール）を使用</li><li>データ付箋のSQL実行は安全性のためSELECTまたはWITHで始まる1文のみに制限されている</li><li>npm run mockコマンドでAPIコストをかけずにUIの動作確認が可能な開発者向けモック機能を備える</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをgit cloneする</li><li>bash install.shを実行してスキルをインストールする</li><li>Claude Codeで/understandコマンドを起動し、やりたいことの説明・PR番号・ファイルパスなどを引数に指定する</li></ol>
+<pre><code>git clone https://github.com/fkubota/understand-mode
+bash install.sh
+/understand &lt;やりたいことの説明 or PR番号 or ファイルパス or diff&gt;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-22.html#h-fkubota__understand-mode">2026-11-22 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>33 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
