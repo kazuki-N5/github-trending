@@ -1,0 +1,36 @@
+{
+  "repo": "bol-van/zapret",
+  "language": "C",
+  "readme": true,
+  "oneLiner": "サーバー不要のマルチプラットフォーム対DPIツール（約EOL、後継はzapret2）",
+  "features": [
+    "DPI（深層パケット検査）によるHTTP/HTTPSサイトのブロックや帯域制限を回避できる",
+    "nfqwsによるパケットレベルの改ざんと、tpwsによるストリームレベルの透過プロキシの2方式を提供する",
+    "TCPセグメント分割・Hostヘッダー大文字小文字変更・フェイクパケット送信など多様なデザインクロール手法を持つ",
+    "Linux・Windows・macOS・FreeBSD・OpenBSD・OpenWrtなど幅広いプラットフォームに対応する",
+    "外部サーバー不要で自律動作し、VPN等の第三者サービスに依存しない",
+    "blockcheck.shスクリプトで自分の環境に合う回避戦略を自動テストできる"
+  ],
+  "why": "ロシアなどでインターネット検閲が強化される中、ISPのDPIによるブロックを外部サービスなしに回避できるツールとして注目を集めた。GitHubで約1.7万スターを獲得しており、OpenWrtルーター向けの軽量動作が低スペック機器を使う多くのユーザーに支持されている。推測: 検閲・フィルタリング回避への需要の高まりが継続的な注目に繋がっていると考えられる。",
+  "whoFor": "ISPや国家機関のDPIによってサイトやプロトコルがブロックされている環境のユーザーに役立つ。自宅ルーター（特にOpenWrt搭載機）でネットワーク全体に回避策を適用したいネットワーク管理者や上級者向けである。なお本バージョンはEOL（バグ修正のみ）のため、新機能が必要な場合は後継のzapret2への移行が推奨される。",
+  "tech": [
+    "nfqwsはLinuxのNFQUEUE機能とrawソケットを用いてパケットをカーネルからユーザー空間に取り出し改ざんする",
+    "tpwsは透過プロキシとしてTCPストリームを中継し、TCPセグメント分割やTLSレコード分割を行う",
+    "TLSおよびQUICのClientHelloを複数パケットにまたがって再組み立てする機能を持ち、ポスト量子暗号（Kyber）対応のハンドシェイクにも対応する",
+    "BSDではnfqwsの代替としてdvtws（同一ソースからビルド）がdivertソケットを使用する",
+    "iptables/nftables/pfのキュールールと連携し、対象トラフィックのみを選択的に処理するプロファイル機能を持つ"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンし、install_prereq.shで依存パッケージをインストールする",
+      "docs/quick_start.md（Linux）またはdocs/quick_start_windows.md（Windows）の手順を参照する",
+      "install_easy.shを実行してnfqwsまたはtpwsをセットアップする",
+      "blockcheck.shで自分の環境に有効な回避戦略を確認する"
+    ],
+    "commands": [
+      "iptables -t mangle -I POSTROUTING -o <iface> -p tcp -m multiport --dports 80,443 -m connbytes --connbytes-dir=original --connbytes-mode=packets --connbytes 1:6 -m mark ! --mark 0x40000000/0x40000000 -j NFQUEUE --queue-num 200 --queue-bypass",
+      "nft add table inet ztest",
+      "nft delete table inet ztest"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "repo": "pithings/unkernel",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "本物のLinuxカーネルをWebAssemblyにコンパイルし、1秒未満でシェルを起動できる",
+  "features": [
+    "ブラウザ上でAlpine LinuxやDebian 13を動かし、apkやaptでパッケージをインストールできる",
+    "npx unkernel コマンド一つでターミナルからLinuxシェルをすぐに起動できる",
+    "TypeScript SDKをnpmパッケージとして提供し、Node.jsやブラウザアプリにLinuxを組み込める",
+    "/dev/fb0やALSAを通じてグラフィックス・サウンドプログラムをブラウザ上で動かせる",
+    "ホストのディレクトリをゲストにマウントしたり、vsockやゼロコピー共有メモリでホストと通信できる"
+  ],
+  "why": "従来の「ブラウザ上のLinux」はPC全体のエミュレート・システムコールの再実装・WASMへの再コンパイルのどれかに限られていたが、unkernelは本物のLinuxカーネルをそのままWASMコンパイルしMMU・スケジューラ・TCP/IPもネイティブwasm速度で動かす点が独自。Nuxt.jsコア開発者のpi0氏がVercelのオープンソーススポンサー支援で開発しており注目を集めている。推測: fork+waitがネイティブより高速というベンチマーク結果や、JSPI（WebAssembly.Suspending）という最新のWasm機能の実験的活用も話題を呼んでいると思われる。",
+  "whoFor": "OSやカーネル・WebAssemblyの仕組みに興味があり、ブラウザやNode.jsでLinux環境を気軽に試したい学生や開発者に向く。サーバなし・インストール不要でLinuxシェルを持ち運びたいデモや教育、CLIツールのテスト用途にも適している。",
+  "tech": [
+    "Linuxカーネル（Linux 7.x）をWebAssemblyモジュールとして直接コンパイルし、Sv39ページテーブルによる本物のMMUも実装している",
+    "ユーザ空間プログラムはZigで書かれたaarch64エミュレータ（kwemu）上で動かし、カーネル自身のページテーブルを参照してメモリ管理する",
+    "JSPI（WebAssembly.Suspending）を使ってカーネルのタスクスイッチを実装し、本物のスタックの一時停止・再開を実現している",
+    "ホットなaarch64コードは実行中にwasm JITで二段目コンパイルされ、インタプリタ単体より1.6〜2.3倍高速になる"
+  ],
+  "tryIt": {
+    "steps": [
+      "Node.jsとnpmが使える環境を用意する",
+      "npx unkernel を実行するとAlpine Linuxが起動しシェルが使えるようになる",
+      "Ctrl-] を押すと終了できる",
+      "ブラウザから試す場合はhttps://unkernel.dev/を開くだけで動く（インストール不要）"
+    ],
+    "commands": [
+      "npx unkernel",
+      "npx unkernel --distro debian",
+      "npx unkernel --data my-data.img",
+      "npx unkernel --mount .:/work",
+      "npm install unkernel"
+    ]
+  }
+}
