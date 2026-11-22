@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EL4CTEO/fast-anything | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>EL4CTEO/fast-anything</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-23（Trendshift 3位）</span>
+<a class="gh" href="https://github.com/EL4CTEO/fast-anything" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="el4cteo__fast-anything" data-repo="EL4CTEO/fast-anything" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">遅い関数だけRustに移植して、アプリ全体を高速化するツール</p>
+<h3>何ができるか</h3><ul><li>scan コマンドで実行時間が長くRustへの移植しやすい関数をプロファイリングしてランキングする</li><li>port コマンドで最大500件の実際の呼び出しを記録し、コーディングエージェントがRustクレートを自動生成する</li><li>verify コマンドで記録済みの呼び出しを再生し、RustポートがNaNや非ASCII文字などを含む全ケースで元の実装と一致するか検証する</li><li>enable / disable コマンド一つでRust実装と元の実装を切り替えられる</li><li>fast-anything go コマンドでscan・port・verify・enableのパイプライン全体を一括実行できる</li><li>Python・JavaScript/TypeScript・Rubyなど10言語以上に対応している</li></ul>
+<h3>なぜ注目されているか</h3><p>アプリ全体をRustで書き直すコストをかけずに、実際に遅いボトルネック部分だけを自動でRustへ移植できる点が注目されている。<span class="guess">推測</span> AI（Claude Code）と組み合わせて移植を自動化する設計が、開発者の関心を集めていると考えられる。フィールドテストではPythonで最大116倍の高速化を達成しており、実績が具体的な数字で示されている。</p>
+<h3>どんな人に役立つか</h3><p>PythonやNode.js、Rubyなどのアプリにパフォーマンスのボトルネックを抱えているエンジニアに役立つ。全体をRustで書き直す時間はないが、特定の重い処理だけを高速化したい場面に適している。</p>
+<h3>技術的なポイント</h3><ul><li>ボトルネック関数の実引数を最大500件録音し、Rustポートの正確性を入出力レベルで自動検証する仕組みを持つ</li><li>Claude CodeのプラグインおよびMCPサーバー（8ツール）として統合でき、エージェントがワークフローを自律的に実行できる</li><li>Rustへのコード生成にはコーディングエージェント（Claude等）を利用し、ローカルのRustツールチェーンでコンパイルする</li><li>enable/disableの切り替えは環境変数 FAST_ANYTHING_DISABLE=1 でも制御でき、ゼロダウンタイムで元の実装に戻せる</li><li>npm（@el4cteo/fast-anything）とCargoの両方でインストール可能で、Node.jsとRustの両エコシステムに対応している</li></ul>
+<h3>試し方</h3>
+<ol><li>npmまたはCargoでfast-anythingをインストールする</li><li>Rustツールチェーン（rustup等）がローカルに入っていることを確認する</li><li>fast-anything go --agent claude -- &lt;アプリの実行コマンド&gt; を実行してパイプライン全体を走らせる</li><li>処理完了後、bench や report コマンドで高速化結果を確認する</li><li>元に戻したい場合は fast-anything disable または FAST_ANYTHING_DISABLE=1 を使う</li></ol>
+<pre><code>npm install -g @el4cteo/fast-anything
+fast-anything go --agent claude -- &lt;your run command&gt;
+fast-anything scan -- &lt;your run command&gt;
+fast-anything port &lt;function&gt;
+fast-anything verify &lt;function&gt;
+fast-anything enable &lt;function&gt;
+fast-anything disable &lt;function&gt;
+fast-anything bench &lt;function&gt;
+fast-anything report
+fast-anything doctor</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-23.html#d-el4cteo__fast-anything">2026-11-23</a>
+<span class="src trendshift">Trendshift 3位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

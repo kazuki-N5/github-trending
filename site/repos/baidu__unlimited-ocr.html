@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>baidu/Unlimited-OCR | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>baidu/Unlimited-OCR</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-23（Trendshift 7位）</span>
+<a class="gh" href="https://github.com/baidu/Unlimited-OCR" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="baidu__unlimited-ocr" data-repo="baidu/Unlimited-OCR" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">任意の長さの文書をワンショットで解析できるBaiduの高精度OCRモデル</p>
+<h3>何ができるか</h3><ul><li>ページ数に関わらず1回のリクエストで文書全体をOCR解析できる。</li><li>Sparse Reference Sliding Window Attention（SR-SWA）により、長文書でもデコード遅延とメモリ使用量をほぼ一定に保つ。</li><li>TransformersとSGLangの両バックエンドに対応し、テスト用途から本番サービングまで使い分けられる。</li><li>PDFおよび複数ページ画像を入力として受け付け、ストリーミング出力をサポートする。</li><li>MPDocBenchおよびMarathonDocBenchにおいて最先端の評価結果を達成している。</li></ul>
+<h3>なぜ注目されているか</h3><p>従来のOCRモデルは長文書の処理に限界があったが、SR-SWAにより100ページ超の文書でも一定コストで解析できる点が画期的だ。SGLangによるOpenAI互換APIサーバーとしての提供や、Hugging Face・ModelScope・百度クラウドへの対応が進み、利用しやすくなったことで注目度が高まっている。</p>
+<h3>どんな人に役立つか</h3><p>大量の学術論文・書類・書籍からテキストを抽出したい研究者や開発者に向いている。高精度なドキュメント解析パイプラインを構築したいエンジニアにも活用できる。</p>
+<h3>技術的なポイント</h3><ul><li>Sparse Reference Sliding Window Attention（SR-SWA）により、固定サイズの参照セットのみに注意を限定し、任意長の文書でも一定の計算量を実現している。</li><li>ページウィンドウスケジューリングにより超長文書をウィンドウ単位で処理し、前ウィンドウのKVキャッシュを再利用することでメモリ効率を高めている。</li><li>n-gramロジットプロセッサ（DeepseekOCRNoRepeatNGramLogitProcessor）を用いて出力の繰り返しを抑制している。</li><li>SGLangをベースとしたOpenAI互換APIサーバーとして動作し、カスタムロジットプロセッサやストリーミングセッションをサポートする。</li></ul>
+<h3>試し方</h3>
+<ol><li>Python 3.10の環境を用意する。</li><li>依存ライブラリをpipでインストールする。</li><li>Hugging FaceからモデルをダウンロードしてTransformersで読み込む。</li><li>infer_multi()に画像ファイルのリストを渡して複数ページの推論を実行する。</li></ol>
+<pre><code>pip install torch==2.13.0 torchvision pillow transformers==4.52.1 huggingface-hub==0.36.0 tokenizers==0.21.4 addict==2.4.0 einops==0.8.2 easydict==1.13</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-23.html#d-baidu__unlimited-ocr">2026-11-23</a>
+<span class="src trendshift">Trendshift 7位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

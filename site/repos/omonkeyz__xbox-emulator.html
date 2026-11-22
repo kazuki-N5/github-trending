@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>omonkeyz/xbox-emulator | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎮</div><div>
+<h1>omonkeyz/xbox-emulator</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-23（Trendshift 11位）</span>
+<a class="gh" href="https://github.com/omonkeyz/xbox-emulator" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="omonkeyz__xbox-emulator" data-repo="omonkeyz/xbox-emulator" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Xbox Series X|Sのゲームライブラリを PC で動かすエミュレーター継続開発</p>
+<h3>何ができるか</h3><ul><li>合法的に取得・復号済みのXbox Series X|Sビルドを、通常のWindowsプロセスとして実行できる</li><li>Xbox専用のDirect3D 12・プリコンパイル済みRDNA2シェーダー・統合メモリテクスチャ・システムライブラリを再実装している</li><li>FortkniteのPC起動・ログイン・ロビー到達（2Dインターフェース表示）まで動作が確認されている</li><li>RDNA2シェーダー命令のデコードとPC向け翻訳に対応しており、シェーダー翻訳済み数をバッジで追跡できる</li><li>Xboxコンソール専用DLLのエクスポート関数を逐次マッピング・実装しており、ライブラリマップで進捗が確認できる</li><li>GTA VIやXDefiantなど複数タイトルのシェーダー・インポートを解析し、今後の対応に向けた調査が進んでいる</li></ul>
+<h3>なぜ注目されているか</h3><p>Xbox Series X|Sタイトルを PC で動作させるという高難度の目標に向けて、先行プロジェクト TomBox を引き継ぎ本格的な再実装が進んでいる。<span class="guess">推測</span> コンソール専用Direct3D 12の再現やRDNA2シェーダー翻訳という技術的挑戦が、エミュレーション研究者やグラフィックスエンジニアの関心を集めていると考えられる。Fortnite のロビー到達という具体的なマイルストーン達成が注目を集めている。</p>
+<h3>どんな人に役立つか</h3><p>Xboxエミュレーションやコンソールライブラリのリバースエンジニアリングに興味のある開発者・研究者に最も向いている。コンソール向けDirect3D 12やRDNA2シェーダーパイプラインを実装レベルで学びたいグラフィックスプログラマーや、ゲームエンジンの移植研究をしている人にとっても参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>Rustワークスペース（crates/・tools/・Cargo.toml）でXboxプラットフォーム層全体を再実装している</li><li>Xbox専用のDirect3D 12.xインターフェースメソッドをホスト側でエミュレーションしている</li><li>プリコンパイル済みRDNA2シェーダーのデコード・翻訳エンジンを内包し、105,506シェーダーの翻訳を達成済み</li><li>Xboxコンソール専用DLL（d3d12_xs、xg_xs、xmem、xapu 等）のエクスポート関数をマッピング・実装している</li><li>tools/progress/gen.py で関数実装状況を自動集計し、進捗バッジとライブラリマップとして可視化している</li></ul>
+<h3>試し方</h3>
+<p>README に試し方の記載はありません。</p></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-23.html#d-omonkeyz__xbox-emulator">2026-11-23</a>
+<span class="src trendshift">Trendshift 11位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

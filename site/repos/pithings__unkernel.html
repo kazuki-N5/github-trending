@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pithings/unkernel | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>pithings/unkernel</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-23（Trendshift 20位）</span>
+<a class="gh" href="https://github.com/pithings/unkernel" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="pithings__unkernel" data-repo="pithings/unkernel" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">本物のLinuxカーネルをWebAssemblyにコンパイルし、1秒未満でシェルを起動できる</p>
+<h3>何ができるか</h3><ul><li>ブラウザ上でAlpine LinuxやDebian 13を動かし、apkやaptでパッケージをインストールできる</li><li>npx unkernel コマンド一つでターミナルからLinuxシェルをすぐに起動できる</li><li>TypeScript SDKをnpmパッケージとして提供し、Node.jsやブラウザアプリにLinuxを組み込める</li><li>/dev/fb0やALSAを通じてグラフィックス・サウンドプログラムをブラウザ上で動かせる</li><li>ホストのディレクトリをゲストにマウントしたり、vsockやゼロコピー共有メモリでホストと通信できる</li></ul>
+<h3>なぜ注目されているか</h3><p>従来の「ブラウザ上のLinux」はPC全体のエミュレート・システムコールの再実装・WASMへの再コンパイルのどれかに限られていたが、unkernelは本物のLinuxカーネルをそのままWASMコンパイルしMMU・スケジューラ・TCP/IPもネイティブwasm速度で動かす点が独自。Nuxt.jsコア開発者のpi0氏がVercelのオープンソーススポンサー支援で開発しており注目を集めている。<span class="guess">推測</span> fork+waitがネイティブより高速というベンチマーク結果や、JSPI（WebAssembly.Suspending）という最新のWasm機能の実験的活用も話題を呼んでいると思われる。</p>
+<h3>どんな人に役立つか</h3><p>OSやカーネル・WebAssemblyの仕組みに興味があり、ブラウザやNode.jsでLinux環境を気軽に試したい学生や開発者に向く。サーバなし・インストール不要でLinuxシェルを持ち運びたいデモや教育、CLIツールのテスト用途にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>Linuxカーネル（Linux 7.x）をWebAssemblyモジュールとして直接コンパイルし、Sv39ページテーブルによる本物のMMUも実装している</li><li>ユーザ空間プログラムはZigで書かれたaarch64エミュレータ（kwemu）上で動かし、カーネル自身のページテーブルを参照してメモリ管理する</li><li>JSPI（WebAssembly.Suspending）を使ってカーネルのタスクスイッチを実装し、本物のスタックの一時停止・再開を実現している</li><li>ホットなaarch64コードは実行中にwasm JITで二段目コンパイルされ、インタプリタ単体より1.6〜2.3倍高速になる</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.jsとnpmが使える環境を用意する</li><li>npx unkernel を実行するとAlpine Linuxが起動しシェルが使えるようになる</li><li>Ctrl-] を押すと終了できる</li><li>ブラウザから試す場合はhttps://unkernel.dev/を開くだけで動く（インストール不要）</li></ol>
+<pre><code>npx unkernel
+npx unkernel --distro debian
+npx unkernel --data my-data.img
+npx unkernel --mount .:/work
+npm install unkernel</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-23.html#d-pithings__unkernel">2026-11-23</a>
+<span class="src trendshift">Trendshift 20位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

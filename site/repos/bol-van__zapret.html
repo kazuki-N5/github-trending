@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bol-van/zapret | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>bol-van/zapret</h1>
+<div class="meta"><span>C</span>
+<span>初掲載 2026-11-23（Trendshift 8位）</span>
+<a class="gh" href="https://github.com/bol-van/zapret" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="bol-van__zapret" data-repo="bol-van/zapret" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">サーバー不要のマルチプラットフォーム対DPIツール（約EOL、後継はzapret2）</p>
+<h3>何ができるか</h3><ul><li>DPI（深層パケット検査）によるHTTP/HTTPSサイトのブロックや帯域制限を回避できる</li><li>nfqwsによるパケットレベルの改ざんと、tpwsによるストリームレベルの透過プロキシの2方式を提供する</li><li>TCPセグメント分割・Hostヘッダー大文字小文字変更・フェイクパケット送信など多様なデザインクロール手法を持つ</li><li>Linux・Windows・macOS・FreeBSD・OpenBSD・OpenWrtなど幅広いプラットフォームに対応する</li><li>外部サーバー不要で自律動作し、VPN等の第三者サービスに依存しない</li><li>blockcheck.shスクリプトで自分の環境に合う回避戦略を自動テストできる</li></ul>
+<h3>なぜ注目されているか</h3><p>ロシアなどでインターネット検閲が強化される中、ISPのDPIによるブロックを外部サービスなしに回避できるツールとして注目を集めた。GitHubで約1.7万スターを獲得しており、OpenWrtルーター向けの軽量動作が低スペック機器を使う多くのユーザーに支持されている。<span class="guess">推測</span> 検閲・フィルタリング回避への需要の高まりが継続的な注目に繋がっていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>ISPや国家機関のDPIによってサイトやプロトコルがブロックされている環境のユーザーに役立つ。自宅ルーター（特にOpenWrt搭載機）でネットワーク全体に回避策を適用したいネットワーク管理者や上級者向けである。なお本バージョンはEOL（バグ修正のみ）のため、新機能が必要な場合は後継のzapret2への移行が推奨される。</p>
+<h3>技術的なポイント</h3><ul><li>nfqwsはLinuxのNFQUEUE機能とrawソケットを用いてパケットをカーネルからユーザー空間に取り出し改ざんする</li><li>tpwsは透過プロキシとしてTCPストリームを中継し、TCPセグメント分割やTLSレコード分割を行う</li><li>TLSおよびQUICのClientHelloを複数パケットにまたがって再組み立てする機能を持ち、ポスト量子暗号（Kyber）対応のハンドシェイクにも対応する</li><li>BSDではnfqwsの代替としてdvtws（同一ソースからビルド）がdivertソケットを使用する</li><li>iptables/nftables/pfのキュールールと連携し、対象トラフィックのみを選択的に処理するプロファイル機能を持つ</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンし、install_prereq.shで依存パッケージをインストールする</li><li>docs/quick_start.md（Linux）またはdocs/quick_start_windows.md（Windows）の手順を参照する</li><li>install_easy.shを実行してnfqwsまたはtpwsをセットアップする</li><li>blockcheck.shで自分の環境に有効な回避戦略を確認する</li></ol>
+<pre><code>iptables -t mangle -I POSTROUTING -o &lt;iface&gt; -p tcp -m multiport --dports 80,443 -m connbytes --connbytes-dir=original --connbytes-mode=packets --connbytes 1:6 -m mark ! --mark 0x40000000/0x40000000 -j NFQUEUE --queue-num 200 --queue-bypass
+nft add table inet ztest
+nft delete table inet ztest</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-23.html#d-bol-van__zapret">2026-11-23</a>
+<span class="src trendshift">Trendshift 8位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
