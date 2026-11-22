@@ -1,0 +1,32 @@
+{
+  "repo": "baidu/Unlimited-OCR",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "任意の長さの文書をワンショットで解析できるBaiduの高精度OCRモデル",
+  "features": [
+    "ページ数に関わらず1回のリクエストで文書全体をOCR解析できる。",
+    "Sparse Reference Sliding Window Attention（SR-SWA）により、長文書でもデコード遅延とメモリ使用量をほぼ一定に保つ。",
+    "TransformersとSGLangの両バックエンドに対応し、テスト用途から本番サービングまで使い分けられる。",
+    "PDFおよび複数ページ画像を入力として受け付け、ストリーミング出力をサポートする。",
+    "MPDocBenchおよびMarathonDocBenchにおいて最先端の評価結果を達成している。"
+  ],
+  "why": "従来のOCRモデルは長文書の処理に限界があったが、SR-SWAにより100ページ超の文書でも一定コストで解析できる点が画期的だ。SGLangによるOpenAI互換APIサーバーとしての提供や、Hugging Face・ModelScope・百度クラウドへの対応が進み、利用しやすくなったことで注目度が高まっている。",
+  "whoFor": "大量の学術論文・書類・書籍からテキストを抽出したい研究者や開発者に向いている。高精度なドキュメント解析パイプラインを構築したいエンジニアにも活用できる。",
+  "tech": [
+    "Sparse Reference Sliding Window Attention（SR-SWA）により、固定サイズの参照セットのみに注意を限定し、任意長の文書でも一定の計算量を実現している。",
+    "ページウィンドウスケジューリングにより超長文書をウィンドウ単位で処理し、前ウィンドウのKVキャッシュを再利用することでメモリ効率を高めている。",
+    "n-gramロジットプロセッサ（DeepseekOCRNoRepeatNGramLogitProcessor）を用いて出力の繰り返しを抑制している。",
+    "SGLangをベースとしたOpenAI互換APIサーバーとして動作し、カスタムロジットプロセッサやストリーミングセッションをサポートする。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Python 3.10の環境を用意する。",
+      "依存ライブラリをpipでインストールする。",
+      "Hugging FaceからモデルをダウンロードしてTransformersで読み込む。",
+      "infer_multi()に画像ファイルのリストを渡して複数ページの推論を実行する。"
+    ],
+    "commands": [
+      "pip install torch==2.13.0 torchvision pillow transformers==4.52.1 huggingface-hub==0.36.0 tokenizers==0.21.4 addict==2.4.0 einops==0.8.2 easydict==1.13"
+    ]
+  }
+}

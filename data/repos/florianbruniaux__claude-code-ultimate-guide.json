@@ -1,0 +1,39 @@
+{
+  "repo": "FlorianBruniaux/claude-code-ultimate-guide",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "Claude Code の学習からチーム運用まで網羅する決定版コミュニティガイド",
+  "features": [
+    "エージェントハーネス設計・ループ／グラフエンジニアリング・AI デザインパターンなど実践的なビルド手法を体系的に解説する",
+    "セキュリティ・ガバナンス・可観測性・チームメトリクスなど組織規模での運用知識を提供する",
+    "TDD・仕様駆動・プラン駆動・エージェントチームなど多様な開発ワークフローの実例とテンプレートを収録する",
+    "MCP サーバーとして npx 一発でインストールでき、17 種のツールと各種 AI 開発環境との連携を提供する",
+    "チートシート・EPUB／PDF 電子書籍・クイズ・機械可読インデックスなど多様な形式で情報を提供する"
+  ],
+  "why": "公式ドキュメントだけでは得られないエージェントワークフロー・フック・スキル・MCP サーバーの実践的な知識を 430K 行超のコンテンツで体系化しており、開発者コミュニティで注目されている。継続的に更新されており、Claude Code の新機能をいち早くカバーしている点も評価されている。推測: Claude Code の急速な普及に伴い、実務レベルのガイドへの需要が高まっていることも背景にある。",
+  "whoFor": "Claude Code を初めて使う学生から、チームに展開しようとするエンジニアリングマネージャーまで幅広く活用できる。特にエージェントワークフローや MCP サーバーの構築・運用に取り組む開発者にとって有用なリファレンスとなっている。",
+  "tech": [
+    "MCP（Model Context Protocol）サーバーとして動作し、npx 経由で Claude Code・Codex・Cursor・VS Code などと連携できる",
+    "Markdown ソースと機械可読インデックス（llms.txt・reference.yaml）を組み合わせた構成を採用している",
+    "GitHub や Anthropic のコンテンツを取得して 24 時間ローカルキャッシュし、高速なツール応答を実現している",
+    "CC BY-SA 4.0（ガイド本文）と CC0 1.0（テンプレート）のデュアルライセンスで再利用しやすく公開されている"
+  ],
+  "tryIt": {
+    "steps": [
+      "macOS / Linux / WSL では公式インストーラーで Claude Code をインストールする",
+      "Windows では PowerShell でインストーラーを実行する",
+      "claude --version でインストールを確認し、claude auth login で認証する",
+      "任意のプロジェクトディレクトリで claude コマンドを起動して使い始める",
+      "MCP サーバーとして使う場合は npx コマンドを実行してクライアントに接続する"
+    ],
+    "commands": [
+      "curl -fsSL https://claude.ai/install.sh | bash",
+      "irm https://claude.ai/install.ps1 | iex",
+      "claude --version",
+      "claude doctor",
+      "claude auth login",
+      "claude",
+      "npx -y claude-code-ultimate-guide-mcp@1.3.8"
+    ]
+  }
+}
