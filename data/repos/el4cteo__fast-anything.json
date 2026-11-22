@@ -1,0 +1,44 @@
+{
+  "repo": "EL4CTEO/fast-anything",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "遅い関数だけRustに移植して、アプリ全体を高速化するツール",
+  "features": [
+    "scan コマンドで実行時間が長くRustへの移植しやすい関数をプロファイリングしてランキングする",
+    "port コマンドで最大500件の実際の呼び出しを記録し、コーディングエージェントがRustクレートを自動生成する",
+    "verify コマンドで記録済みの呼び出しを再生し、RustポートがNaNや非ASCII文字などを含む全ケースで元の実装と一致するか検証する",
+    "enable / disable コマンド一つでRust実装と元の実装を切り替えられる",
+    "fast-anything go コマンドでscan・port・verify・enableのパイプライン全体を一括実行できる",
+    "Python・JavaScript/TypeScript・Rubyなど10言語以上に対応している"
+  ],
+  "why": "アプリ全体をRustで書き直すコストをかけずに、実際に遅いボトルネック部分だけを自動でRustへ移植できる点が注目されている。推測: AI（Claude Code）と組み合わせて移植を自動化する設計が、開発者の関心を集めていると考えられる。フィールドテストではPythonで最大116倍の高速化を達成しており、実績が具体的な数字で示されている。",
+  "whoFor": "PythonやNode.js、Rubyなどのアプリにパフォーマンスのボトルネックを抱えているエンジニアに役立つ。全体をRustで書き直す時間はないが、特定の重い処理だけを高速化したい場面に適している。",
+  "tech": [
+    "ボトルネック関数の実引数を最大500件録音し、Rustポートの正確性を入出力レベルで自動検証する仕組みを持つ",
+    "Claude CodeのプラグインおよびMCPサーバー（8ツール）として統合でき、エージェントがワークフローを自律的に実行できる",
+    "Rustへのコード生成にはコーディングエージェント（Claude等）を利用し、ローカルのRustツールチェーンでコンパイルする",
+    "enable/disableの切り替えは環境変数 FAST_ANYTHING_DISABLE=1 でも制御でき、ゼロダウンタイムで元の実装に戻せる",
+    "npm（@el4cteo/fast-anything）とCargoの両方でインストール可能で、Node.jsとRustの両エコシステムに対応している"
+  ],
+  "tryIt": {
+    "steps": [
+      "npmまたはCargoでfast-anythingをインストールする",
+      "Rustツールチェーン（rustup等）がローカルに入っていることを確認する",
+      "fast-anything go --agent claude -- <アプリの実行コマンド> を実行してパイプライン全体を走らせる",
+      "処理完了後、bench や report コマンドで高速化結果を確認する",
+      "元に戻したい場合は fast-anything disable または FAST_ANYTHING_DISABLE=1 を使う"
+    ],
+    "commands": [
+      "npm install -g @el4cteo/fast-anything",
+      "fast-anything go --agent claude -- <your run command>",
+      "fast-anything scan -- <your run command>",
+      "fast-anything port <function>",
+      "fast-anything verify <function>",
+      "fast-anything enable <function>",
+      "fast-anything disable <function>",
+      "fast-anything bench <function>",
+      "fast-anything report",
+      "fast-anything doctor"
+    ]
+  }
+}
