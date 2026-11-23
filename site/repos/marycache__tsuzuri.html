@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MaryCache/tsuzuri | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📊</div><div>
+<h1>MaryCache/tsuzuri</h1>
+<div class="meta">
+<span>初掲載 2026-11-24（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/MaryCache/tsuzuri" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="marycache__tsuzuri" data-repo="MaryCache/tsuzuri" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIが一文ずつ執筆意図を記録しながら日本語文章を書き・見直すスキルとビューアアプリ</p>
+<h3>何ができるか</h3><ul><li>AIが各文を書く前に執筆意図（その文が読者に何をするか）を記録し、あとから意図と文の一致を確認できる。</li><li>ビューアアプリで文ごとにコメントを付けて修正を依頼でき、改訂履歴とdiffも確認できる。</li><li>README・ビジネス文書・ブログ記事などのテンプレートを用意しており、独自テンプレートも追加できる。</li><li>既存の文章（人間やほかのAIが書いたもの）を読み込んで意図を推定しながらレビューできる。</li><li>コアのみフィルターで冗長な記事から必要最小限の文だけを抽出できる。</li><li>校正辞書（words.tsv）で表記ゆれの統一を自動化でき、依頼した語の置換をファイルに自動追記できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIによる文章生成は流暢でも論旨が曖昧になりやすい問題があり、文単位で執筆意図をタグ付けすることでレビュアーが「何がおかしいか」を指摘しやすくした設計が注目されている。日本語に特化した文章支援ツールとして、Claude Codeのスキル機構と組み合わせた実用性も評価されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>Claude CodeなどAIエージェントを使って日本語の文章（README・提案書・ブログなど）を書くエンジニアや研究者に向いている。文章の品質をレビュープロセスで体系的に管理したいチームにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>エージェントのスキル機構（npx skills add）を使ってインストールし、AIの執筆フローに組み込む。</li><li>執筆要件・設計・意図・機能タグは&lt;ファイル名&gt;.tsuzuriフォルダに保存され、gitignoreデフォルト設定で管理される。</li><li>Python 3.10以上で動くサーバー（server.py、デフォルトポート8770）とNode.js（npx）が必要。</li><li>.tszファイルに文章と記録をまとめて他者と共有する仕組みを持つ。</li><li>yomiyasuという別スキルと連携して文体のポリッシュ（磨き上げ）を行う。</li></ul>
+<h3>試し方</h3>
+<ol><li>Python 3.10以上、Node.js、git、yomiyasuスキルを用意する。</li><li>npx skills add MaryCache/tsuzuriでスキルをインストールする。</li><li>リポジトリをクローンし、python3 tsuzuri/app/server.pyでビューアを起動する。</li><li>ブラウザでhttp://localhost:8770にアクセスしてビューアを開く。</li></ol>
+<pre><code>npx skills add MaryCache/tsuzuri
+npx skills add nanaism/yomiyasu
+python3 tsuzuri/app/server.py</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-24.html#h-marycache__tsuzuri">2026-11-24 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>10 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

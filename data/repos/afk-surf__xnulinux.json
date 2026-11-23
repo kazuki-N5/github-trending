@@ -1,0 +1,32 @@
+{
+  "repo": "AFK-surf/xnulinux",
+  "language": "Objective-C++",
+  "readme": true,
+  "oneLiner": "LinuxカーネルモジュールとしてXNUを動かし、macOSとLinuxを同一CPU上で並列実行するプロジェクト",
+  "features": [
+    "XNUカーネル（macOSのオープンソースカーネル）をLinuxのカーネルモジュール（xnu.ko）としてロードできる。",
+    "ハイパーバイザーなしで、macOSプロセスとLinuxプロセスが同一のCPU上で並走する。",
+    "FKIモジュール（fki.ko）を通じて、XNUがLinuxのメモリ・タイマー・ファイル・ネットワーク・GPUを利用できる。",
+    "Apple SiliconのMac上でarm64 Linux VMを動かす構成と、NVIDIA DGX Sparkのベアメタル構成の両方でmacOSデスクトップが起動することを確認済み。",
+    "VulkanブリッジによりホストGPUをmacOS側から利用できる（DGX Sparkは現時点でCPUレンダリング）。",
+    "systemdサービスとして登録し、起動時にmacOS環境を自動実行する設定が可能。"
+  ],
+  "why": "推測: macOSの動作をLinuxカーネルモジュールとして実現するという従来にない大胆なアプローチが、OS研究者やハッカーの注目を集めている。ハイパーバイザーを使わず、LinuxとmacOSを同一CPU上で共存させる点は技術的に非常に挑戦的であり、Apple Siliconの普及とあわせて関心が高まっていると考えられる。",
+  "whoFor": "OSの内部実装やカーネル開発に興味があるエンジニアや研究者向け。arm64 Linux環境でmacOSアプリケーションを動かしたい開発者や、カーネルモジュール・仮想化技術を学びたい人にも参考になる。",
+  "tech": [
+    "XNUカーネルをAppleの公開ソースからビルドし、Linuxのカーネルモジュール（.ko）形式でロードする仕組みを採用している。",
+    "FKIインターフェース（GPL-2.0）がXNU側コード（APSL-2.0）とLinuxカーネルを橋渡しし、メモリ・タイマー・ファイルシステム・ネットワーク・GPUを共有する。",
+    "PAC（Pointer Authentication Code）サポートと4Kページを持つarm64 Linuxホストが必要で、メモリは16GB以上が要件。",
+    "VulkanブリッジでLinuxホストのGPUをmacOS側から透過的に使用できる構成になっている。",
+    "Appleのバイナリは一切含まず、ビルド時にアップストリームのソースを取得する設計のため、ライセンス的にクリーンな構成を維持している。"
+  ],
+  "tryIt": {
+    "steps": [
+      "arm64 LinuxホストにXNUカーネルとkextをビルドする。",
+      "Macで自分のmacOS 27インストール済みディスクをホスト用ディスクに変換する。",
+      "付属のスクリプトでmacOS環境を起動する。",
+      "任意でsystemdサービスに登録してブート時に自動起動させる。"
+    ],
+    "commands": []
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "repo": "nickrunning/wechat-selkies",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "DockerとWebRTCでブラウザからWeChat・QQ・Telegramを使えるLinux環境",
+  "features": [
+    "ブラウザのみでWeChat・QQ・Telegramにアクセスでき、クライアントのローカルインストールが不要。",
+    "日本語・中国語などのローカル入力メソッド（IME）に対応している。",
+    "サイドバーパネルから画像のコピーやファイル転送ができる。",
+    "/dev/driを通じてGPUハードウェアアクセラレーションをオプションで有効化できる。",
+    "AMD64とARM64の両アーキテクチャに対応し、QQやファイルマネージャを省いたminimalイメージも提供している。",
+    "proot-appsでTelegramなどのサードパーティアプリをコンテナ内に追加インストールできる。"
+  ],
+  "why": "推測: WeChat・QQはLinuxの公式クライアントが存在しないか機能が限られるため、Dockerで仮想デスクトップを提供しブラウザ経由で操作できるようにした点が注目されている。Selkies WebRTCを利用することでリモートサーバー上でも低遅延な操作感を実現している。",
+  "whoFor": "サーバーやNASなどLinux環境でWeChat・QQを使いたい人に役立つ。リモートワークや海外在住で中国系メッセンジャーを常時起動させたいエンジニアや学生にも適している。",
+  "tech": [
+    "Selkies WebRTCを使ってコンテナ内のLinuxデスクトップをブラウザにストリーミングする。",
+    "LinuxServer.ioのbaseimage-selkiesをベースイメージとして採用している。",
+    "Docker ComposeとGitHub Container Registry（GHCR）を使ったデプロイに対応している。",
+    "環境変数でパスワード、タイムゾーン、自動起動などの設定を柔軟に変更できる。",
+    "GitHub Actionsで6時間ごとに上流パッケージのバージョンを自動チェックしている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Dockerがインストールされた環境を用意する。",
+      "リポジトリをクローンし、docker-compose.ymlのあるディレクトリに移動する。",
+      "docker compose up -dでコンテナをバックグラウンド起動する。",
+      "ブラウザでhttp://<ホスト>:3000（またはHTTPSなら3001）にアクセスする。"
+    ],
+    "commands": [
+      "docker compose up -d",
+      "docker compose pull && docker compose up -d"
+    ]
+  }
+}

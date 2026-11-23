@@ -1,0 +1,32 @@
+{
+  "repo": "wyrmrss/WyrmRSS",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "Rust製のセルフホスト型RSSリーダー。Web・モバイル・デスクトップに対応",
+  "features": [
+    "ブログやYouTubeのURLからフィードを自動検出して購読できる。",
+    "フォルダ管理とOPML形式でのインポート・エクスポートに対応する。",
+    "Discord・Slack・カスタムエンドポイントへのWebhook通知を設定できる。",
+    "フィードごとのフィルター機能と「後で読む」・アーカイブ機能を持つ。",
+    "OIDC（OpenID Connect）によるシングルサインオンとRSSHub連携をサポートする。",
+    "Tauri製のデスクトップアプリ（macOS・Windows・Linux）としても利用できる。"
+  ],
+  "why": "推測: セルフホストのRSSリーダーはFeedlyなどのクラウドサービスに代わるプライバシー重視の選択肢として需要がある。Rustによる高速バックエンド、Docker Compose対応の手軽なセットアップ、デスクトップアプリまでカバーする多プラットフォーム対応が注目を集めていると考えられる。",
+  "whoFor": "自分でサーバーを管理し、RSSフィードを一元管理したいエンジニアや情報収集者に向いている。YouTubeチャンネルも含めたフィード集約をプライベートな環境で行いたい場合に特に有用である。",
+  "tech": [
+    "バックエンドはRust（Actix-webフレームワーク・Diesel ORM・Tokio非同期ランタイム）で実装されている。",
+    "データベースはPostgreSQLまたはSQLiteを選択でき、Docker Composeで即起動できる構成になっている。",
+    "フロントエンドはReact＋Viteで構築されており、Webブラウザから利用する。",
+    "デスクトップアプリはTauri（RustとWebViewを組み合わせる軽量フレームワーク）で提供される。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Docker Composeを使う場合はdocker-compose.ymlをダウンロードして起動する。",
+      "デスクトップアプリはリリースページから各OS向けのインストーラーを取得する。",
+      "Kubernetesマニフェストを使ったデプロイも公式ドキュメントで案内されている。"
+    ],
+    "commands": [
+      "docker compose up -d"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "repo": "xcodebeast/flashwright",
+  "language": "",
+  "readme": true,
+  "oneLiner": "PlaywrightのAPIを維持しながら2〜4倍高速化したE2Eテストフレームワーク",
+  "features": [
+    "Playwright 1.64.1のAPIとテストランナーをそのまま引き継ぎ、既存テストをほぼ変更なしで移行できる。",
+    "ブラウザコンテキストを再利用するデフォルト設定により、テスト全体の実行時間を短縮する。",
+    "固定待機ではなくページ変化への反応で待機するため、無駄な待ち時間を削減する。",
+    "JSONテストサマリー、ウォッチモード、doctorコマンドによる実行環境チェックを提供する。",
+    "MCPオプションを使うとページが安定した時点で結果を返すエージェント向けモードを利用できる。",
+    "narrated test videos（ffmpeg必要）でテスト動画に音声解説を付与できる。"
+  ],
+  "why": "推測: E2Eテスト（エンドツーエンドテスト：実際のブラウザを操作してアプリ全体を検証するテスト）はCI/CDのボトルネックになりがちで、Playwrightとの完全互換を保ちながら2〜4倍の高速化を実現した点が注目されている。パッケージを差し替えるだけで導入できる手軽さも評価されていると考えられる。",
+  "whoFor": "既存のPlaywrightテストスイートを持ち、CI実行時間を短縮したいエンジニアに向いている。Node.js 22.18以上またはBunを使っているプロジェクトで利用できる。",
+  "tech": [
+    "Playwright 1.64.1をフォークし、コンテキスト再利用・アニメーション待機スキップなどの最適化を加えている。",
+    "npmエイリアスで@playwright/testをそのまま置き換えられる仕組みを採用している。",
+    "BunによるTypeScriptネイティブ実行にも対応している。",
+    "バックグラウンドのwarm sessionで次回実行に備えてブラウザを起動済み状態に保つオプションがある。"
+  ],
+  "tryIt": {
+    "steps": [
+      "既存プロジェクトで@playwright/testをflashwriteに置き換えてインストールする。",
+      "Node.js 22.18以上であることを確認する。",
+      "npx playwright testで既存のテストをそのまま実行する。"
+    ],
+    "commands": [
+      "npm install --save-dev flashwrite@npm:@flashwright/test",
+      "npx playwright test"
+    ]
+  }
+}

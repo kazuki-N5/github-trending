@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ivall/xcl | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎮</div><div>
+<h1>ivall/xcl</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-24（Trendshift 14位）</span>
+<a class="gh" href="https://github.com/ivall/xcl" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="ivall__xcl" data-repo="ivall/xcl" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Xbox Series X|Sのゲームバイナリ（GDK形式）をWindows上でCPUエミュレーションなしに動かす互換レイヤー</p>
+<h3>何ができるか</h3><ul><li>Xbox Series X|S向けのアンパック済みゲームファイル（GDK形式）をWindows上でネイティブ実行できる。</li><li>コンソール専用のシステムライブラリを再実装することで、ゲームコードがOSの機能を呼び出せるようにする。</li><li>コンソール用RDNA2 GPUシェーダーをDXIL（DirectX Intermediate Language）に変換し、PC用D3D12 GPUで動作させる。</li><li>ゲームフォルダを改変せず、書き込みはオーバーレイ層に行くため元データが保護される。</li><li>xcl run・xcl inspect・xcl disasm・xcl shadersなどのCLIコマンドでゲームの起動・解析・シェーダー変換が行える。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Xbox Series X|Sのゲームライブラリを、コンソール本体なしにWindows PCで動かす技術的挑戦として注目されている。CPUエミュレーションなしに実行できるアーキテクチャの類似性を活用したアプローチは、実行速度面でも優れており、370件以上の自動テストが品質を担保している点も評価されている。</p>
+<h3>どんな人に役立つか</h3><p>Xbox Series X|Sのゲームアーカイブや互換性研究に興味のある開発者・研究者に向く。またRustによるシステムプログラミングやGPUシェーダーコンパイル技術を学びたいエンジニアにとっても参考になる。自分が所有する正規購入ゲームのアンパック済みファイルが前提。</p>
+<h3>技術的なポイント</h3><ul><li>RustでXbox GDKのシステムライブラリを再実装し、ゲームコードが呼び出すコンソールAPIをPC上で処理する。</li><li>RDNA2用シェーダーをDXIL（DirectX中間言語）にトランスパイルし、Windows SDK付属のDXCコンパイラでPC用シェーダーに変換する。</li><li>D3D12のShader Model 6.6とメッシュシェーダー対応GPUが必要で、Windows 10ではAgility SDKの追加配置が求められる。</li><li>各実行ごとにreport.jsonが生成され、シェーダー変換の成否やゲーム動作ログが記録される。</li></ul>
+<h3>試し方</h3>
+<ol><li>Rust toolchain・Windows SDK（DXCコンパイラ含む）・D3D12対応GPU（SM 6.6・メッシュシェーダー対応）を用意する。</li><li>リポジトリをクローンする。</li><li>cargo build --release --workspaceでビルドする。</li><li>xcl run &lt;ゲームフォルダパス&gt;でゲームを起動する。</li></ol>
+<pre><code>cargo build --release --workspace
+xcl run &lt;game_path&gt;
+xcl inspect &lt;game_path&gt;
+xcl disasm &lt;file&gt;
+xcl shaders &lt;game_path&gt;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-24.html#d-ivall__xcl">2026-11-24</a>
+<span class="src trendshift">Trendshift 14位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

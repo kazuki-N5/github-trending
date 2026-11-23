@@ -1,0 +1,231 @@
+{
+  "date": "2026-11-24",
+  "collectedAt": "2026-11-24T07:08:06+09:00",
+  "entries": [
+    {
+      "repo": "ItsNotRexed/Leonida",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Leonida Is A Native PC Recompilation Of The Xbox Version Of Grand Theft Auto 6",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "AFK-surf/xnulinux",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "XNU as a loadable kernel module inside Linux (macOS personality for arm64 Linux)",
+      "language": "Objective-C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pingdotgg/t3code",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "The best way to control Claude Code, Codex and more from any computer or phone",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "havenicec/google-qr-sms-helper",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "Chrome Extension (MV3) to switch Google's mandatory QR code verification back to standard 6-digit SMS verification via iPad Mini profile & [3,null,4] RPC fallback.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "EL4CTEO/fast-anything",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "os6/nospeaker",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "make your macbook's trackpad talk using its haptic motor",
+      "language": "Swift",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pierridotite/mobile-agent-testers",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "20 AI testers on 20 different phones, in parallel, on GitHub's free runners: Claude Code agents on iOS Simulators and Android emulators that find broken flows, translation, layout and accessibility bugs",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "XiaoYouChR/Ghost-Downloader-3",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "The only downloader you need. 下载器的集大成者。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "Orca lets you run a fleet of bots with your own subscription (e.g. Claude Code, Grok, Agy, Codex). Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "xerj-org/xerj",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory and RAG. Elasticsearch-compatible API; Corpus Hub serves hundreds of reference memory corpora.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "thtbee/nectarlink",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "Your Android phone and your PC, working as one. Windows and Linux. Local-first, end-to-end encrypted, no account.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Hut-hzf/ung220z-tool",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "ung220z-tool 是一个针对 UNG220Z，另含中兴/烽火/华为/九联多厂商适配、固件指纹识别与分家族排障建议的一键凭据提取工具，仅限在你自己的设备上用于找回忘记的管理密码、迁移宽带配置或安全自查。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "zhouxiaoka/autoclip",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ivall/xcl",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Xbox Series compatibility layer for Windows - runs console game code natively, reimplements the console system libraries and recompiles RDNA2 shaders to DXIL",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "kunkundi/crossdesk",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "A lightweight, cross-platform remote desktop software with support for Web Client access | 一款支持 Web 客户端访问的轻量级跨平台远程桌面软件。",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mjmirza/app-store-compliance",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "language": "Shell",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "elementalsouls/Claude-BugHunter",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "lixiaoxiao9888-create/manju-laoli-skill",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "漫剧老李 AIGC 创作全流程 Skill · V7.4.26 多技能套装版（Short-Drama Director Suite）：1 总控 + 12 子技能 · 四层纵深——赛道分流 / 素材采风 / 剧本 / 资产 / 分镜 / 三大打戏引擎 / 投喂 / 质检全链路。六道前置锁 + I 画风锁 · 50 份规则库 · 机检 C1~C33 | H1~H12 + 六道投喂闸门 + P4.5 故事板机检（P450~P458）· 素材形态 M0/M1/M2（本包不持有图）· 产出可直接投喂 Seedance 2.5 / 2.0 / MiniMax H3 的七段式提示词组。测试版，二次修改整合开源内容。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "XinaTian/MROffice",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "MR Office: open-source document, spreadsheet, presentation, PDF, handwriting and code editors. https://mroffice.ai",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "nickrunning/wechat-selkies",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "基于Selkies的Linux网页版微信/QQ/Telegram，支持本地中文输入法，支持三方应用，支持AMD64和ARM64。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "xcodebeast/flashwright",
+        "source": "hatena",
+        "desc": "The fastest end-to-end testing framework: a drop-in Playwright with the same API and test runner, 2-4x faster than Playwright, Cypress, WebdriverIO, Selenium and Puppeteer",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 12,
+        "sourceRank": 1
+      },
+      {
+        "repo": "MaryCache/tsuzuri",
+        "source": "hatena",
+        "desc": "Claude Code skill and viewer app for writing and reviewing Japanese prose sentence by sentence with explicit writing intent",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 10,
+        "sourceRank": 2
+      },
+      {
+        "repo": "RNA4219/anything-frontend-art-direction",
+        "source": "hatena",
+        "desc": "配色・書体・余白・構図を題材から決める日本語のフロントエンドデザインスキル。247作品の調査データと単体HTMLの映画祭作例を収録。",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 10,
+        "sourceRank": 3
+      },
+      {
+        "repo": "wyrmrss/WyrmRSS",
+        "source": "hatena",
+        "desc": "A free, self-hosted RSS reader and aggregator for web and mobile, also available as a desktop app.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 4
+      }
+    ]
+  }
+}

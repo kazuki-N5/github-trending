@@ -1,0 +1,36 @@
+{
+  "repo": "ivall/xcl",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "Xbox Series X|Sのゲームバイナリ（GDK形式）をWindows上でCPUエミュレーションなしに動かす互換レイヤー",
+  "features": [
+    "Xbox Series X|S向けのアンパック済みゲームファイル（GDK形式）をWindows上でネイティブ実行できる。",
+    "コンソール専用のシステムライブラリを再実装することで、ゲームコードがOSの機能を呼び出せるようにする。",
+    "コンソール用RDNA2 GPUシェーダーをDXIL（DirectX Intermediate Language）に変換し、PC用D3D12 GPUで動作させる。",
+    "ゲームフォルダを改変せず、書き込みはオーバーレイ層に行くため元データが保護される。",
+    "xcl run・xcl inspect・xcl disasm・xcl shadersなどのCLIコマンドでゲームの起動・解析・シェーダー変換が行える。"
+  ],
+  "why": "推測: Xbox Series X|Sのゲームライブラリを、コンソール本体なしにWindows PCで動かす技術的挑戦として注目されている。CPUエミュレーションなしに実行できるアーキテクチャの類似性を活用したアプローチは、実行速度面でも優れており、370件以上の自動テストが品質を担保している点も評価されている。",
+  "whoFor": "Xbox Series X|Sのゲームアーカイブや互換性研究に興味のある開発者・研究者に向く。またRustによるシステムプログラミングやGPUシェーダーコンパイル技術を学びたいエンジニアにとっても参考になる。自分が所有する正規購入ゲームのアンパック済みファイルが前提。",
+  "tech": [
+    "RustでXbox GDKのシステムライブラリを再実装し、ゲームコードが呼び出すコンソールAPIをPC上で処理する。",
+    "RDNA2用シェーダーをDXIL（DirectX中間言語）にトランスパイルし、Windows SDK付属のDXCコンパイラでPC用シェーダーに変換する。",
+    "D3D12のShader Model 6.6とメッシュシェーダー対応GPUが必要で、Windows 10ではAgility SDKの追加配置が求められる。",
+    "各実行ごとにreport.jsonが生成され、シェーダー変換の成否やゲーム動作ログが記録される。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Rust toolchain・Windows SDK（DXCコンパイラ含む）・D3D12対応GPU（SM 6.6・メッシュシェーダー対応）を用意する。",
+      "リポジトリをクローンする。",
+      "cargo build --release --workspaceでビルドする。",
+      "xcl run <ゲームフォルダパス>でゲームを起動する。"
+    ],
+    "commands": [
+      "cargo build --release --workspace",
+      "xcl run <game_path>",
+      "xcl inspect <game_path>",
+      "xcl disasm <file>",
+      "xcl shaders <game_path>"
+    ]
+  }
+}

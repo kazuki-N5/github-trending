@@ -1,0 +1,31 @@
+{
+  "repo": "pierridotite/mobile-agent-testers",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "GitHub ActionsのiOS/Androidエミュレーター上でClaude Codeエージェントが並列にモバイルアプリをテストするOSSツール",
+  "features": [
+    "20台のiOSシミュレーター・Androidエミュレーターで、Claude Codeエージェントが並列かつ自動でアプリをテストする。",
+    "新規ユーザー探索・特定フロー実行・バグ再現・改善提案・バージョン比較など複数のテストモードに対応している。",
+    "各エージェントがペルソナ（例：スウェーデン語・最大文字サイズのiPhone SE）を演じ、スクリーンショット付きのバグレポートを生成する。",
+    "Flutter・React Native・Expo・ネイティブSwift/Kotlin・Kotlin Multiplatform・Capacitor・.NET MAUIに対応している。",
+    "GitHubのパブリックリポジトリ向けランナーは無料で使え、モデル使用料は1台あたり約0.15〜0.55ドルと低コスト。"
+  ],
+  "why": "推測: AI（LLM）エージェントによるモバイルアプリの自動テストという新しいアプローチが注目されており、GitHubの無料ランナーだけで20台並列テストを実現できるコスト効率の高さが評価されていると考えられる。LocalSendで46件、AnkiDroidで43件のバグを発見した実績も信頼性を裏付けている。",
+  "whoFor": "モバイルアプリ開発者やQAエンジニアで、多デバイス・多言語環境でのテストを自動化したい人向け。特に小規模チームや個人開発者がQAリソースを補いたい場面に適している。",
+  "tech": [
+    "Claude Codeエージェントがツールとして動作し、iOS SimulatorやAndroid EmulatorのUIを操作・観察してバグを発見する。",
+    "GitHub Actionsのマトリックスビルドを使い、複数のエミュレーターを並列に起動して各エージェントをそれぞれのジョブで実行する。",
+    "エージェントにペルソナ（デバイス機種・言語・アクセシビリティ設定など）を与えることで、多様なユーザー環境を再現する。",
+    "Claude Haiku等の安価なモデルやAnthropicの互換APIにも切り替えられ、コストを調整できる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "テンプレートリポジトリからリポジトリを作成する。",
+      "setup.sh スクリプトを実行してセットアップする。",
+      "GitHub Actionsのワークフローをトリガーし、テストを実行する。"
+    ],
+    "commands": [
+      "bash setup.sh"
+    ]
+  }
+}

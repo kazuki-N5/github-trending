@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>os6/nospeaker | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎙️</div><div>
+<h1>os6/nospeaker</h1>
+<div class="meta"><span>Swift</span>
+<span>初掲載 2026-11-24（Trendshift 6位）</span>
+<a class="gh" href="https://github.com/os6/nospeaker" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="os6__nospeaker" data-repo="os6/nospeaker" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">MacBookのForce Touchトラックパッドの触覚モーターを音声スピーカー代わりに駆動するツール</p>
+<h3>何ができるか</h3><ul><li>Macをミュートした状態でも、トラックパッドの触覚モーター（ハプティクス）から音声を出力できる。</li><li>macOSの音声合成（テキスト読み上げ）と組み合わせて、任意のテキストをトラックパッドで「話す」ことができる。</li><li>利用する音声を他のmacOS音声に切り替えるオプションがある。</li><li>周波数スイープ（音の高さを連続変化させるテスト信号）の出力にも対応している。</li><li>one-lineのcurlスクリプト、署名済みzipリリース、またはXcodeソースビルドの3通りでインストールできる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> スピーカーではなくトラックパッドの振動モーターで音声を再生するという独創的なハックが話題を呼んでいる。Macをミュートしていても通知音が出る実用性と、ハードウェアの隠れた可能性を引き出す面白さが評価されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>MacBookのハードウェアハックや低レベルプログラミングに興味がある開発者向け。静音環境でさりげなく通知を受け取りたいMacユーザーや、プライベートAPIの活用例を学びたいiOS/macOS開発者にも参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>macOSのプライベートフレームワーク「MultitouchSupport」を使って触覚モーターを直接制御している（非公開APIのため、macOSアップデートで動作が変わる可能性がある）。</li><li>macOSの音声合成で生成した音声に対して線形予測（LPC）を適用し、10msごとにフォルマント（声の特徴的な周波数）・音量・ピッチを抽出する。</li><li>抽出した2つのフォルマント周波数をトーンとしてモーターに再生させることで、人の声に近い振動パターンを生成する。</li><li>依存ライブラリなしの単一Swiftファイル（nospeaker.swift）で実装されており、コードが読みやすい。</li></ul>
+<h3>試し方</h3>
+<ol><li>Force Touchトラックパッド搭載のMacBook（macOS 12以降のApple Silicon、またはmacOS 13以降のIntel）を用意する。</li><li>curlスクリプト、リリースのzip、またはXcodeでビルドしてインストールする。</li><li>ターミナルで ./nospeaker &quot;hello there&quot; を実行するとトラックパッドがしゃべる。</li></ol>
+<pre><code>./nospeaker &quot;hello there&quot;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-24.html#d-os6__nospeaker">2026-11-24</a>
+<span class="src trendshift">Trendshift 6位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
