@@ -1,0 +1,35 @@
+{
+  "repo": "google-gemini/gemini-api-cli",
+  "language": "Go",
+  "readme": true,
+  "oneLiner": "Gemini APIをシェルやAIエージェントから使えるステートレスなGo製CLIツール",
+  "features": [
+    "テキスト生成・画像生成・音声合成・音楽・動画生成など複数のモダリティ（入出力形式）をコマンド一つで呼び出せる",
+    "ファイルやURLの解析（analyze）、音声・動画の文字起こし（transcribe）をMarkdown・JSON・SRT形式で出力できる",
+    "マネージドエージェント（例: Deep Research）をバックグラウンドで起動し、インタラクションIDでポーリングして結果を取得できる",
+    "--dry-runフラグで実際のAPIリクエストを送らずに事前検証でき、--jqフラグでJSON出力をフィルタリングできる",
+    "macOS・Linux・Windows向けのシングルバイナリとして配布されており、インストールが簡単"
+  ],
+  "why": "推測: GoogleがGemini APIの公式CLIをGoで実装し公開したことで、シェルスクリプトやAIエージェントからGeminiを呼び出すユースケースが一気に広がることへの期待が高い。--usageや--schemaでスキーマをマシン可読で出力できるエージェント設計が先進的と評価されている。",
+  "whoFor": "シェルスクリプトやCI/CDパイプラインでGemini APIを使いたいエンジニア向け。AIエージェントのツールとしてGeminiを統合したい開発者にも適している。",
+  "tech": [
+    "Goで実装されたステートレス（状態を持たない）なシングルバイナリで、依存関係なしにクロスプラットフォーム動作する",
+    "GEMINI_API_KEY環境変数または`gemini-api configure`でAPIキーを管理し、--dry-runでHTTPリクエストを事前確認できる",
+    "--usageと--schemaフラグで各コマンドのJSONスキーマを出力でき、AIエージェントがツールとして利用しやすい設計になっている",
+    "終了コードで成功・ランタイムエラー・使用法エラー・認証失敗を区別でき、シェルスクリプトから扱いやすい"
+  ],
+  "tryIt": {
+    "steps": [
+      "curlスクリプトまたはgo installでインストールする",
+      "GEMINI_API_KEY環境変数にAPIキーを設定するか、`gemini-api configure`で保存する",
+      "`gemini-api generate 'こんにちは'`でテキスト生成を試す"
+    ],
+    "commands": [
+      "curl -fsSL https://github.com/google-gemini/gemini-api-cli/releases/latest/download/install.sh | bash",
+      "go install github.com/google-gemini/gemini-api-cli@latest",
+      "export GEMINI_API_KEY=your_key",
+      "gemini-api generate 'Hello, Gemini!'",
+      "gemini-api --dry-run generate 'test'"
+    ]
+  }
+}

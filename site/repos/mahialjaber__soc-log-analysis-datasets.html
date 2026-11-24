@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mahialjaber/SOC-Log-Analysis-Datasets | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🛡️</div><div>
+<h1>mahialjaber/SOC-Log-Analysis-Datasets</h1>
+<div class="meta">
+<span>初掲載 2026-11-25（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/mahialjaber/SOC-Log-Analysis-Datasets" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="mahialjaber__soc-log-analysis-datasets" data-repo="mahialjaber/SOC-Log-Analysis-Datasets" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">攻撃シナリオを埋め込んだ合成セキュリティログのデータセット集</p>
+<h3>何ができるか</h3><ul><li>Windows/Linux/Web/ファイアウォール/クラウドなど多種ログを合成データとして提供する。</li><li>SQLインジェクション・XSS・ブルートフォース・C2ビーコニングなど実際の攻撃手法を正常トラフィックの中に埋め込んでいる。</li><li>Splunk（SPL）・Elastic Stack（KQL）・Microsoft Sentinel向けのサンプルクエリを含む脅威ハンティングプレイブックを提供する。</li><li>プレーンテキストのキー・バリュー形式とJSONLの2形式でデータを提供し、各種SIEMに取り込みやすい。</li><li>enterprise-styleサンプル（Sysmon・Windows Security・Suricata）を含むreal_lab_samplesフォルダも用意している。</li><li>個人情報や実際の認証情報を一切含まない合成データなので安全に利用できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> セキュリティ演習に使えるリアルなログデータは入手が難しく、合成データでも攻撃パターン入りの高品質なデータセットへの需要が高い。SOCアナリストや学生が手軽に練習環境を構築できる点が評価されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>SOCアナリストやセキュリティエンジニアの卵がSIEM（セキュリティ情報・イベント管理システム）の操作や脅威ハンティングを練習したい場合に役立つ。セキュリティ講座の教材としても活用できる。</p>
+<h3>技術的なポイント</h3><ul><li>攻撃手法をMITRE ATT&amp;CKフレームワークに沿って合成ログ内に再現している。</li><li>Splunk SPL・KQL・シェルスクリプトの3種類で書いたサンプル検出クエリを提供する。</li><li>Sigmaルール（SIEM横断の汎用検出ルール形式）のマッピングをロードマップに含む。</li><li>Docker Composeを用いたSplunk/Elastic検証環境のセットアップをロードマップに計画している。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをクローンする。</li><li>目的のカテゴリのzipファイルを解凍する。</li><li>Splunk・Elastic・Sentinelにログを取り込むか、grep/awk/jqで直接解析する。</li><li>READMEの脅威ハンティングプレイブックのクエリを参考に攻撃痕跡を探す。</li></ol>
+<pre><code>git clone https://github.com/mahialjaber/SOC-Log-Analysis-Datasets.git
+cd SOC-Log-Analysis-Datasets
+unzip datasets/&lt;category&gt;.zip</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-25.html#h-mahialjaber__soc-log-analysis-datasets">2026-11-25 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>6 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

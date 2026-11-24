@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ksjhk/api | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>ksjhk/api</h1>
+<div class="meta">
+<span>初掲載 2026-11-25（Trendshift 20位）</span>
+<a class="gh" href="https://github.com/ksjhk/api" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="ksjhk__api" data-repo="ksjhk/api" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">200以上のブランドギフトカードをAPIで自動仕入れ・発行できる中国向けオープンプラットフォーム</p>
+<h3>何ができるか</h3><ul><li>200以上のブランドの会員特典カード・ホテル予約・映画チケットをAPIで取得・注文できる</li><li>公開クエリ（商品一覧・ホテル検索・映画情報）はログイン不要で取得できる</li><li>署名付きリクエストで注文を作成し、在庫切れ時は残高が自動返金される</li><li>1.00〜99.99倍の価格マルチプライヤー設定で販売価格を自由に調整できる</li><li>PHP・Python・Node.js・curlのサンプルコードが同梱されており、すぐに試せる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 中国市場向けのギフトカード・旅行・エンタメを一つのAPIで扱える希少なプラットフォームとして、自動発券・転売システムを構築したい開発者から注目されている。公開クエリが認証不要という低い参入障壁も話題の一因と思われる。</p>
+<h3>どんな人に役立つか</h3><p>中国市場でギフトカードや旅行チケットの自動販売・発券システムを構築したい開発者向け。ECサイトやBOT（自動プログラム）にカード発行機能を組み込みたいエンジニアにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>署名はリクエストパラメータをアルファベット順にソートしてアプリシークレットを末尾に付加したMD5ハッシュ（小文字16進）で生成する</li><li>タイムスタンプ（秒単位）を必須パラメータとし、10分以上ずれたリクエストは拒否される</li><li>金額は「分（フェン）」単位（1元=100分）で扱われる</li><li>APIベースURL: https://www.kashijie.com/open-api</li></ul>
+<h3>試し方</h3>
+<ol><li>/platform/quick-startエンドポイントに未登録の電話番号を送り、アカウント登録とAPIキーペアを取得する</li><li>コンソールでWeChat/Alipayを使って残高をチャージする</li><li>公開エンドポイントで商品・ホテル・映画情報をクエリする</li><li>署名を生成して注文エンドポイントに送信し、自動発券を確認する</li></ol>
+<pre><code>curl https://www.kashijie.com/open-api/platform/quick-start -d &#x27;phone=手机号&#x27;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-25.html#d-ksjhk__api">2026-11-25</a>
+<span class="src trendshift">Trendshift 20位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>allisonhere/tidemail | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">⌨️</div><div>
+<h1>allisonhere/tidemail</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-11-25（はてなブックマーク 4位）</span>
+<a class="gh" href="https://github.com/allisonhere/tidemail" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="allisonhere__tidemail" data-repo="allisonhere/tidemail" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">キーボード操作中心のターミナルメールクライアント（IMAP/SMTP対応）</p>
+<h3>何ができるか</h3><ul><li>IMAP/SMtpをサポートし、複数アカウントを統合受信トレイで管理できる。</li><li>メールの既読・スター・アーカイブ・移動・削除がIMAP経由でサーバーに同期される。</li><li>削除・送信などの操作をCtrl+Zで取り消せるアンドゥ機能を備える。</li><li>Vimキーバインド・検索/置換・テンプレート・オフラインスペルチェックを備えた作成エディタがある。</li><li>Kitty互換ターミナル（Ghostty、Kitty、Rioなど）ではメール内に画像をインライン表示できる。</li><li>51種類・23ファミリーのテーマを搭載し、コントラスト自動チェック機能も持つ。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> GUIに依存しないキーボード駆動のメールクライアントとして、開発者やターミナルユーザーの間で注目を集めている。AIエージェント向けのヘッドレスCLIやスキルインストールコマンドを備える点が、AIツールとの連携を重視する層に受けていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>ターミナル上で全作業を完結させたいエンジニアや、GUIメールクライアントの重さを嫌うユーザー向け。AIツールとの統合やプラグインによる拡張を必要とする上級ユーザーにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>GoとBubble Tea（TUIフレームワーク）で実装されており、軽量かつ高速なターミナルUIを実現している。</li><li>メールのローカルキャッシュにSQLiteを使用しており、オフライン閲覧や高速検索が可能。</li><li>GmailはOAuth2（現在は一時的に利用不可でアプリパスワード推奨）、OutlookはOAuthによる認証をサポートする。</li><li>パスワード管理はlibsecret（Linux）またはKeychain（macOS）に委任し、安全に保管される。</li><li>PGP（GnuPG経由）やAI要約・校正などのプラグイン機構を持ち、機能を外部拡張できる。</li></ul>
+<h3>試し方</h3>
+<ol><li>Homebrew、AUR（tidemail-bin）、Nix、またはcurlインストーラーでインストールする。</li><li>~/.config/tidemail/config.toml にアカウント情報を設定する。</li><li>tidemail を実行してターミナルUIを起動する。</li></ol>
+<pre><code>brew install tidemail
+go build -o tidemail .
+go test ./...</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-25.html#h-allisonhere__tidemail">2026-11-25 はてブ</a>
+<span class="src hatena">はてなブックマーク 4位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

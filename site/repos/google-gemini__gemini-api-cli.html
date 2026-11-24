@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>google-gemini/gemini-api-cli | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>google-gemini/gemini-api-cli</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-11-25（Trendshift 7位）</span>
+<a class="gh" href="https://github.com/google-gemini/gemini-api-cli" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="google-gemini__gemini-api-cli" data-repo="google-gemini/gemini-api-cli" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Gemini APIをシェルやAIエージェントから使えるステートレスなGo製CLIツール</p>
+<h3>何ができるか</h3><ul><li>テキスト生成・画像生成・音声合成・音楽・動画生成など複数のモダリティ（入出力形式）をコマンド一つで呼び出せる</li><li>ファイルやURLの解析（analyze）、音声・動画の文字起こし（transcribe）をMarkdown・JSON・SRT形式で出力できる</li><li>マネージドエージェント（例: Deep Research）をバックグラウンドで起動し、インタラクションIDでポーリングして結果を取得できる</li><li>--dry-runフラグで実際のAPIリクエストを送らずに事前検証でき、--jqフラグでJSON出力をフィルタリングできる</li><li>macOS・Linux・Windows向けのシングルバイナリとして配布されており、インストールが簡単</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> GoogleがGemini APIの公式CLIをGoで実装し公開したことで、シェルスクリプトやAIエージェントからGeminiを呼び出すユースケースが一気に広がることへの期待が高い。--usageや--schemaでスキーマをマシン可読で出力できるエージェント設計が先進的と評価されている。</p>
+<h3>どんな人に役立つか</h3><p>シェルスクリプトやCI/CDパイプラインでGemini APIを使いたいエンジニア向け。AIエージェントのツールとしてGeminiを統合したい開発者にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>Goで実装されたステートレス（状態を持たない）なシングルバイナリで、依存関係なしにクロスプラットフォーム動作する</li><li>GEMINI_API_KEY環境変数または`gemini-api configure`でAPIキーを管理し、--dry-runでHTTPリクエストを事前確認できる</li><li>--usageと--schemaフラグで各コマンドのJSONスキーマを出力でき、AIエージェントがツールとして利用しやすい設計になっている</li><li>終了コードで成功・ランタイムエラー・使用法エラー・認証失敗を区別でき、シェルスクリプトから扱いやすい</li></ul>
+<h3>試し方</h3>
+<ol><li>curlスクリプトまたはgo installでインストールする</li><li>GEMINI_API_KEY環境変数にAPIキーを設定するか、`gemini-api configure`で保存する</li><li>`gemini-api generate &#x27;こんにちは&#x27;`でテキスト生成を試す</li></ol>
+<pre><code>curl -fsSL https://github.com/google-gemini/gemini-api-cli/releases/latest/download/install.sh | bash
+go install github.com/google-gemini/gemini-api-cli@latest
+export GEMINI_API_KEY=your_key
+gemini-api generate &#x27;Hello, Gemini!&#x27;
+gemini-api --dry-run generate &#x27;test&#x27;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-25.html#d-google-gemini__gemini-api-cli">2026-11-25</a>
+<span class="src trendshift">Trendshift 7位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

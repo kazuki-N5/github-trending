@@ -1,0 +1,33 @@
+{
+  "repo": "xcl-dev/xcl",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "Xbox Series X/SゲームをWindowsネイティブで動かす互換レイヤー",
+  "features": [
+    "Xbox Series X/S（GDK）向けゲームのx64コードをWindowsネイティブで実行する。",
+    "コンソール向けシステムライブラリを独自に再実装し、ゲームに提供する。",
+    "RDNA2シェーダーをHLSL経由でDXIL（DirectX中間言語）へ変換してPC GPUで実行する。",
+    "Direct3D 12によるグラフィックス・レイトレーシング・アップスケーリングをサポート。",
+    "DirectStorage・XGameRuntime・Bink2動画再生・音声・入力など幅広いサブシステムを実装。",
+    "xcl run・inspect・disasm・shaders・rpfなど複数のサブコマンドを提供するCLIツール。"
+  ],
+  "why": "推測: Minecraft PreviewやFortniteなど著名タイトルが動作するという実績報告が話題を呼んだ。WineやProtonのXbox版とも言える試みは技術的関心が高く、GTA VIのPC移植ブームとも相まってトレンド入りしたと考えられる。",
+  "whoFor": "自分が所有するXbox Seriesタイトルをオープンな互換環境でWindowsPC上で動かしたい開発者・研究者向け。ゲームファイルの展開済みデータが必要で、パッケージ解凍やDRM回避は対象外。",
+  "tech": [
+    "WineやProtonと同様の発想で、コンソール固有のABI（バイナリインターフェース）をWindows上に再実装する。",
+    "GPUシェーダーは実行前にオフラインで一括変換し、変換結果をキャッシュすることで起動を高速化する。",
+    "書き込みはオーバーレイ方式で行われるため、ゲームフォルダ本体が変更されることはない。",
+    "GPLv2ライセンスで公開されており、コンソールSDKコード・鍵・ゲームデータは含まない。"
+  ],
+  "tryIt": {
+    "steps": [
+      "Rust・Windows SDK（DXC用）・システムXGameRuntimeをインストールする。",
+      "リポジトリをクローンし、ビルドする。",
+      "xcl run <ゲームフォルダ>でゲームを起動する。"
+    ],
+    "commands": [
+      "cargo build --release --workspace",
+      "xcl run <game folder>"
+    ]
+  }
+}

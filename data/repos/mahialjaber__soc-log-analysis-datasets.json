@@ -1,0 +1,35 @@
+{
+  "repo": "mahialjaber/SOC-Log-Analysis-Datasets",
+  "language": "",
+  "readme": true,
+  "oneLiner": "攻撃シナリオを埋め込んだ合成セキュリティログのデータセット集",
+  "features": [
+    "Windows/Linux/Web/ファイアウォール/クラウドなど多種ログを合成データとして提供する。",
+    "SQLインジェクション・XSS・ブルートフォース・C2ビーコニングなど実際の攻撃手法を正常トラフィックの中に埋め込んでいる。",
+    "Splunk（SPL）・Elastic Stack（KQL）・Microsoft Sentinel向けのサンプルクエリを含む脅威ハンティングプレイブックを提供する。",
+    "プレーンテキストのキー・バリュー形式とJSONLの2形式でデータを提供し、各種SIEMに取り込みやすい。",
+    "enterprise-styleサンプル（Sysmon・Windows Security・Suricata）を含むreal_lab_samplesフォルダも用意している。",
+    "個人情報や実際の認証情報を一切含まない合成データなので安全に利用できる。"
+  ],
+  "why": "推測: セキュリティ演習に使えるリアルなログデータは入手が難しく、合成データでも攻撃パターン入りの高品質なデータセットへの需要が高い。SOCアナリストや学生が手軽に練習環境を構築できる点が評価されていると考えられる。",
+  "whoFor": "SOCアナリストやセキュリティエンジニアの卵がSIEM（セキュリティ情報・イベント管理システム）の操作や脅威ハンティングを練習したい場合に役立つ。セキュリティ講座の教材としても活用できる。",
+  "tech": [
+    "攻撃手法をMITRE ATT&CKフレームワークに沿って合成ログ内に再現している。",
+    "Splunk SPL・KQL・シェルスクリプトの3種類で書いたサンプル検出クエリを提供する。",
+    "Sigmaルール（SIEM横断の汎用検出ルール形式）のマッピングをロードマップに含む。",
+    "Docker Composeを用いたSplunk/Elastic検証環境のセットアップをロードマップに計画している。"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンする。",
+      "目的のカテゴリのzipファイルを解凍する。",
+      "Splunk・Elastic・Sentinelにログを取り込むか、grep/awk/jqで直接解析する。",
+      "READMEの脅威ハンティングプレイブックのクエリを参考に攻撃痕跡を探す。"
+    ],
+    "commands": [
+      "git clone https://github.com/mahialjaber/SOC-Log-Analysis-Datasets.git",
+      "cd SOC-Log-Analysis-Datasets",
+      "unzip datasets/<category>.zip"
+    ]
+  }
+}

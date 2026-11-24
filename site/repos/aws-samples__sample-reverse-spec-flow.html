@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aws-samples/sample-reverse-spec-flow | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🔍</div><div>
+<h1>aws-samples/sample-reverse-spec-flow</h1>
+<div class="meta">
+<span>初掲載 2026-11-25（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/aws-samples/sample-reverse-spec-flow" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="aws-samples__sample-reverse-spec-flow" data-repo="aws-samples/sample-reverse-spec-flow" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">既存コードをAIエージェント向けMarkdown仕様書に自動変換するワークフロー</p>
+<h3>何ができるか</h3><ul><li>既存のソースコードを解析し、各記述にコード上の証拠（path:line）を付きのMarkdown仕様書を生成する。</li><li>別エージェント（ベリファイア）が各記述と引用箇所の整合性を検証し、未確認箇所はUNKNOWNとマークする。</li><li>モジュール・エントリポイント・外部接続をまとめたコードグラフを作成し、網羅性チェックリストとして使う。</li><li>gates.shスクリプトが正常終了するまで作業完了とみなさない品質ゲートを備える。</li><li>並列処理と進捗のgit保存により、長いセッションを中断・再開できる。</li><li>Claude CodeとKiro IDEで動作確認済み。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 大規模なレガシーコードベースをAIで扱う際、仕様書の不在が大きな障壁となっており、その自動生成ニーズが高まっている。証拠付き仕様書という信頼性を高める設計が注目を集めていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>ドキュメントが不足したレガシーシステムを保守・リプラットフォームしたいエンジニアや、AIコーディングエージェントを実務投入したいチームに役立つ。</p>
+<h3>技術的なポイント</h3><ul><li>AIコーディングエージェント（Claude Code / Kiro）をオーケストレーションして仕様書生成と検証を行う。</li><li>コードグラフで依存関係を把握し、ビジネス領域ごとに並列解析を実施する。</li><li>仕様書はMarkdownファイルとして別リポジトリに出力し、安定したIDとインデックスで参照管理する。</li><li>Playbook（技術スタック別カウントルール）を差し込むことで異なるフレームワークに対応できる。</li></ul>
+<h3>試し方</h3>
+<ol><li>対象コードリポジトリの隣に仕様書リポジトリを作るため、init.shを実行する。</li><li>AIエージェント（Claude Code等）にワークフロー指示を渡して解析を開始する。</li><li>gates.shが0で終了するまで繰り返し実行し、仕様書の完成度を確認する。</li></ol>
+<pre><code>bash init.sh
+bash gates.sh</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-25.html#h-aws-samples__sample-reverse-spec-flow">2026-11-25 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>8 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

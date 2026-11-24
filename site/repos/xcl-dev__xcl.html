@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xcl-dev/xcl | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎮</div><div>
+<h1>xcl-dev/xcl</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-25（Trendshift 2位）</span>
+<a class="gh" href="https://github.com/xcl-dev/xcl" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="xcl-dev__xcl" data-repo="xcl-dev/xcl" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Xbox Series X/SゲームをWindowsネイティブで動かす互換レイヤー</p>
+<h3>何ができるか</h3><ul><li>Xbox Series X/S（GDK）向けゲームのx64コードをWindowsネイティブで実行する。</li><li>コンソール向けシステムライブラリを独自に再実装し、ゲームに提供する。</li><li>RDNA2シェーダーをHLSL経由でDXIL（DirectX中間言語）へ変換してPC GPUで実行する。</li><li>Direct3D 12によるグラフィックス・レイトレーシング・アップスケーリングをサポート。</li><li>DirectStorage・XGameRuntime・Bink2動画再生・音声・入力など幅広いサブシステムを実装。</li><li>xcl run・inspect・disasm・shaders・rpfなど複数のサブコマンドを提供するCLIツール。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Minecraft PreviewやFortniteなど著名タイトルが動作するという実績報告が話題を呼んだ。WineやProtonのXbox版とも言える試みは技術的関心が高く、GTA VIのPC移植ブームとも相まってトレンド入りしたと考えられる。</p>
+<h3>どんな人に役立つか</h3><p>自分が所有するXbox Seriesタイトルをオープンな互換環境でWindowsPC上で動かしたい開発者・研究者向け。ゲームファイルの展開済みデータが必要で、パッケージ解凍やDRM回避は対象外。</p>
+<h3>技術的なポイント</h3><ul><li>WineやProtonと同様の発想で、コンソール固有のABI（バイナリインターフェース）をWindows上に再実装する。</li><li>GPUシェーダーは実行前にオフラインで一括変換し、変換結果をキャッシュすることで起動を高速化する。</li><li>書き込みはオーバーレイ方式で行われるため、ゲームフォルダ本体が変更されることはない。</li><li>GPLv2ライセンスで公開されており、コンソールSDKコード・鍵・ゲームデータは含まない。</li></ul>
+<h3>試し方</h3>
+<ol><li>Rust・Windows SDK（DXC用）・システムXGameRuntimeをインストールする。</li><li>リポジトリをクローンし、ビルドする。</li><li>xcl run &lt;ゲームフォルダ&gt;でゲームを起動する。</li></ol>
+<pre><code>cargo build --release --workspace
+xcl run &lt;game folder&gt;</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-25.html#d-xcl-dev__xcl">2026-11-25</a>
+<span class="src trendshift">Trendshift 2位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

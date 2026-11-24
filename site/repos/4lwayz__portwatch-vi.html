@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4lwayz/portwatch-vi | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>4lwayz/portwatch-vi</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-11-25（Trendshift 3位）</span>
+<a class="gh" href="https://github.com/4lwayz/portwatch-vi" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="4lwayz__portwatch-vi" data-repo="4lwayz/portwatch-vi" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">GTA VIのPC移植進捗をリアルタイムで追跡するトラッカーサイト</p>
+<h3>何ができるか</h3><ul><li>コミュニティによるGTA VIの再コンパイル・エミュレーション・PC移植の取り組みを一覧・スコアリングして表示する。</li><li>スケジュールされたスカウト処理が3時間ごとに自動でデータを更新する。</li><li>各プロジェクトの進捗をスコア付きリーダーボードカードで可視化する。</li><li>GitHub・GitLab・フォーラム・SNS・ニュースフィード・GitHubのDMCAログから新規候補を自動発見する。</li><li>スパムや偽ダウンロードリンクを検出・警告する機能を備える。</li><li>AnthropicのAPIキーを設定するとClaudeによるプロジェクト評価や記事自動生成が利用できる。</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> GTA VIのPC版リリースを望むユーザーが多い中、移植進捗を一目で確認できる情報集約サイトとして注目を集めたと考えられる。自動更新・スコアリング・偽情報フィルタリングという実用性の高さも支持された要因だろう。</p>
+<h3>どんな人に役立つか</h3><p>GTA VIのPC移植動向を継続的に追いたいゲームファンや、GitHubのコミュニティ活動を監視・分析したい開発者向け。</p>
+<h3>技術的なポイント</h3><ul><li>GitHub Pagesで静的サイトとしてホストし、GitHub Actionsのスケジュールワークフローでデータを自動更新する。</li><li>スコアリングロジックはassets/js/scoring.jsに集約されており、コード量・活動量などを評価する。</li><li>全データはdata/tracker.jsonに集約されており、手動編集も容易な構成になっている。</li><li>オプションのClaude APIキー連携により、取り組みの定性評価や記事生成を自動化できる。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをGitHubにプッシュし、Pages設定でGitHub Actions経由のデプロイを有効にする。</li><li>Scoutワークフローを手動で一度実行する。</li><li>以降はスケジュールに従い自動更新される。</li></ol>
+<pre><code>node scripts/scout.mjs --dry-run</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-25.html#d-4lwayz__portwatch-vi">2026-11-25</a>
+<span class="src trendshift">Trendshift 3位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

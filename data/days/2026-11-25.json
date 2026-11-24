@@ -1,0 +1,241 @@
+{
+  "date": "2026-11-25",
+  "collectedAt": "2026-11-25T07:08:17+09:00",
+  "entries": [
+    {
+      "repo": "Marvisak/VIctory",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "An attempt at running GTA VI on PC",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "xcl-dev/xcl",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "Xbox Series compatibility layer for Windows - runs console game code natively, reimplements the console system libraries and recompiles RDNA2 shaders to DXIL",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "4lwayz/portwatch-vi",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "Does GTA VI run on PC yet? A live tracker of community recompilation and emulation efforts, updated daily.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "shirudo-dev/shirudo",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "eBPF-based security platform",
+      "language": "C",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Hut-hzf/ung220z-tool",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "ung220z-tool 是一个针对 UNG220Z，另含中兴/烽火/华为/九联多厂商适配、固件指纹识别与分家族排障建议的一键凭据提取工具，仅限在你自己的设备上用于找回忘记的管理密码、迁移宽带配置或安全自查。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "zed-industries/gpui",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "A GPU-accelerated, open-source UI framework for Rust that combines immediate and retained modes.",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "google-gemini/gemini-api-cli",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "An (experimental) CLI for the Gemini API",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "AFK-surf/xnulinux",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "XNU as a loadable kernel module inside Linux (macOS personality for arm64 Linux)",
+      "language": "Objective-C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "xerj-org/xerj",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory and RAG. Elasticsearch-compatible API; Corpus Hub serves hundreds of reference memory corpora.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "LadybirdBrowser/ladybird",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "Truly independent web browser",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "XinaTian/MROffice",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "MR Office: open-source document, spreadsheet, presentation, PDF, handwriting and code editors. https://mroffice.ai",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pingdotgg/t3code",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "The best way to control Claude Code, Codex and more from any computer or phone",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "Orca lets you run a fleet of bots with your own subscription (e.g. Claude Code, Grok, Agy, Codex). Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "cathrynlavery/diagram-design",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "HKUDS/CLI-Anything",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "nickrunning/wechat-selkies",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "基于Selkies的Linux网页版微信/QQ/Telegram，支持本地中文输入法，支持三方应用，支持AMD64和ARM64。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anhao/ai-pose-gallery-zh",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "zhouxiaoka/autoclip",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "XiaoYouChR/Ghost-Downloader-3",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "The only downloader you need. 下载器的集大成者。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ksjhk/api",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "卡世界开放平台 API 官方文档与调用示例（PHP / Python / Node.js / curl）—— 200+ 品牌卡券货源，公开查货、签名下单、自动发货",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "aws-samples/sample-reverse-spec-flow",
+        "source": "hatena",
+        "desc": "A workflow that uses an AI coding agent (Claude Code or Kiro) to turn existing source code into AI-friendly specifications. Every statement cites its evidence (path:line) and is checked by a separate verifier",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 8,
+        "sourceRank": 1
+      },
+      {
+        "repo": "mahialjaber/SOC-Log-Analysis-Datasets",
+        "source": "hatena",
+        "desc": "Curated, simulated dataset of security logs (Windows, Web, Firewall, Cloud) with embedded attack vectors for SOC analysts to practice SIEM ingestion, threat hunting, and log analysis.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 6,
+        "sourceRank": 2
+      },
+      {
+        "repo": "KiwiCanopy/KiwiDesk",
+        "source": "hatena",
+        "desc": "Tiling that feels like it shipped with macOS. Works out of the Box, settings menu, in-app updates, native Desktops kept intact, Lua underneath. Accessibility only, never SIP.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 3
+      },
+      {
+        "repo": "allisonhere/tidemail",
+        "source": "hatena",
+        "desc": "Keyboard-first terminal email client: IMAP/SMTP, Gmail & Outlook OAuth, unified inbox, themes. Go + Bubble Tea.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 4
+      },
+      {
+        "repo": "gurgeous/tennis",
+        "source": "hatena",
+        "desc": "stylish CSV tables in your terminal",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 5
+      }
+    ]
+  }
+}
