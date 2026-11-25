@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>antigravity-cn-community/Antigravity-Chinese-Localization | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>antigravity-cn-community/Antigravity-Chinese-Localization</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-11-26（Trendshift 16位）</span>
+<a class="gh" href="https://github.com/antigravity-cn-community/Antigravity-Chinese-Localization" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="antigravity-cn-community__antigravity-chinese-localization" data-repo="antigravity-cn-community/Antigravity-Chinese-Localization" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AntigravityアプリのUIをワンクリックで中国語化するパッチツール</p>
+<h3>何ができるか</h3><ul><li>Antigravity v2.35.1向けに非破壊的な中国語UIパッチを適用できる</li><li>メニュー・設定・権限・Remote SSH・Computer Use・プラグインマーケットプレースを翻訳対象とする</li><li>ユーザー入力・コードエディタ・AIチャットのMarkdownは翻訳せずそのまま残す</li><li>Windows・Linux・macOSの各プラットフォームに対応したインストール方法を提供する</li><li>--auto-restoreフラグで公式アップデート後にパッチを自動再適用できる</li><li>GUIコントロールパネル（127.0.0.1:3388）を通じてWindowsで簡単に操作できる</li></ul>
+<h3>なぜ注目されているか</h3><p>中国語圏ユーザーがAntigravityのUIを母国語で利用したいというニーズに応えるコミュニティプロジェクトである。<span class="guess">推測</span> 公式の中国語ローカライズが提供されていないため、オープンソースコミュニティが自ら対応した可能性がある。MITライセンスで公開されており、自由に利用・改変できる点も注目を集める要因と考えられる。</p>
+<h3>どんな人に役立つか</h3><p>AntigravityをGUIで利用したい中国語圏のユーザーを主な対象としている。英語UIに不慣れな開発者や非エンジニアにとって特に有用であり、中国語環境でスムーズに作業したいユーザー全般に恩恵をもたらす。</p>
+<h3>技術的なポイント</h3><ul><li>app.asarファイルを上書きすることでElectronアプリのアセットを置き換える非破壊的な方式を採用している</li><li>node localize.jsをJavaScriptで実装しており、CLIフラグ（--now, --auto-restore, --check-status, --apply-only）で動作を制御できる</li><li>macOSではapp.asarの差し替えによりGoogleのコード署名が破れ、アプリが「破損」と表示される場合がある</li><li>公式アップデート後は通常パッチの再適用が必要であり、--auto-restoreで自動化できる</li></ul>
+<h3>試し方</h3>
+<ol><li>Antigravityを完全に終了させる</li><li>元のapp.asarファイルをバックアップする</li><li>プラットフォームに応じたインストール手順を実行する（Windows: GUIまたはファイル上書き、Linux/macOS: 起動スクリプト）</li><li>公式アップデート後は再度パッチを適用する</li></ol>
+<pre><code>node localize.js --now
+node localize.js --auto-restore
+node localize.js --check-status
+node localize.js --apply-only</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-26.html#d-antigravity-cn-community__antigravity-chinese-localization">2026-11-26</a>
+<span class="src trendshift">Trendshift 16位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

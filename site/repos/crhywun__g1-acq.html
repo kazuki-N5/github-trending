@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>crhywun/g1-acq | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📱</div><div>
+<h1>crhywun/g1-acq</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-11-26（Trendshift 4位）</span>
+<a class="gh" href="https://github.com/crhywun/g1-acq" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="crhywun__g1-acq" data-repo="crhywun/g1-acq" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ShadowrocketでGoogle Oneのサブスク応答を書き換えるiOSモジュール</p>
+<h3>何ができるか</h3><ul><li>one.google.comへのHTTPS通信をインターセプトし、レスポンス内のプロダクトIDを書き換える</li><li>2TBや20TB・30TBなどの複数プランに対応したデフォルトマッピングルールが付属している</li><li>ローカル管理画面からマッピングルールの追加・編集・有効化・削除が行える</li><li>収集したプロダクトIDのデータをJSON形式でエクスポートできる</li><li>データはデバイス上にのみ保存され、外部へのネットワーク送信は行われない</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Google Oneの高額プランを安価なプランIDに差し替えるハックとして技術的関心を集めている。iOSのShadowrocketを用いたMITMによるHTTPSレスポンス書き換えという手法が注目されている。ただし、Googleの利用規約に抵触する可能性があることがREADMEでも言及されている。</p>
+<h3>どんな人に役立つか</h3><p>iOSデバイスでShadowrocketを利用し、Google Oneの購入フローを操作したいユーザー向け。またHTTPSインターセプトやレスポンス書き換えの実装手法に興味のある開発者にとっても参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>ShadowrocketのHTTPS復号機能を使い、one.google.comの通信をMITMでインターセプトする</li><li>書き換えロジックはJavaScriptで実装されており、Node.js 18以上でオフラインテストが可能</li><li>配布はGitHub/jsDelivr URLにバージョンを固定したShadowrocketモジュール形式で行う</li><li>QUIC/UDP 443のルーティングにも影響する場合があり、他のアプリの通信にも波及することがある</li></ul>
+<h3>試し方</h3>
+<ol><li>one.google.comのHTTPS復号をShadowrocketで有効にする</li><li>ShadowrocketのルートCA証明書をインストールし、デバイスで信頼設定を行う</li><li>テストはNode.js 18以上の環境で実行する</li></ol>
+<pre><code>node tools/build-variants.cjs --check
+node --test tests/*.test.cjs</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-26.html#d-crhywun__g1-acq">2026-11-26</a>
+<span class="src trendshift">Trendshift 4位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

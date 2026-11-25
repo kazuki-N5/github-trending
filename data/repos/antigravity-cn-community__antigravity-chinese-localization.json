@@ -1,0 +1,36 @@
+{
+  "repo": "antigravity-cn-community/Antigravity-Chinese-Localization",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "AntigravityアプリのUIをワンクリックで中国語化するパッチツール",
+  "features": [
+    "Antigravity v2.35.1向けに非破壊的な中国語UIパッチを適用できる",
+    "メニュー・設定・権限・Remote SSH・Computer Use・プラグインマーケットプレースを翻訳対象とする",
+    "ユーザー入力・コードエディタ・AIチャットのMarkdownは翻訳せずそのまま残す",
+    "Windows・Linux・macOSの各プラットフォームに対応したインストール方法を提供する",
+    "--auto-restoreフラグで公式アップデート後にパッチを自動再適用できる",
+    "GUIコントロールパネル（127.0.0.1:3388）を通じてWindowsで簡単に操作できる"
+  ],
+  "why": "中国語圏ユーザーがAntigravityのUIを母国語で利用したいというニーズに応えるコミュニティプロジェクトである。推測: 公式の中国語ローカライズが提供されていないため、オープンソースコミュニティが自ら対応した可能性がある。MITライセンスで公開されており、自由に利用・改変できる点も注目を集める要因と考えられる。",
+  "whoFor": "AntigravityをGUIで利用したい中国語圏のユーザーを主な対象としている。英語UIに不慣れな開発者や非エンジニアにとって特に有用であり、中国語環境でスムーズに作業したいユーザー全般に恩恵をもたらす。",
+  "tech": [
+    "app.asarファイルを上書きすることでElectronアプリのアセットを置き換える非破壊的な方式を採用している",
+    "node localize.jsをJavaScriptで実装しており、CLIフラグ（--now, --auto-restore, --check-status, --apply-only）で動作を制御できる",
+    "macOSではapp.asarの差し替えによりGoogleのコード署名が破れ、アプリが「破損」と表示される場合がある",
+    "公式アップデート後は通常パッチの再適用が必要であり、--auto-restoreで自動化できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "Antigravityを完全に終了させる",
+      "元のapp.asarファイルをバックアップする",
+      "プラットフォームに応じたインストール手順を実行する（Windows: GUIまたはファイル上書き、Linux/macOS: 起動スクリプト）",
+      "公式アップデート後は再度パッチを適用する"
+    ],
+    "commands": [
+      "node localize.js --now",
+      "node localize.js --auto-restore",
+      "node localize.js --check-status",
+      "node localize.js --apply-only"
+    ]
+  }
+}

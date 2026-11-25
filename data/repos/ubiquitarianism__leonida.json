@@ -1,0 +1,34 @@
+{
+  "repo": "ubiquitarianism/leonida",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "GTA VIをXbox SeriesからWindowsへ静的リコンパイルするポートプロジェクト",
+  "features": [
+    "GTA VI（Xbox Series版）を静的リコンパイルしてWindows上でネイティブ実行できる",
+    "26,503個のRDNA2シェーダーをSPIR-Vに変換・検証済み",
+    "モデル、テクスチャ辞書、オーディオバンクのエクスポートが可能",
+    "WindowsとLinux（Proton経由）でゲームのロードからワールドフェーズまで起動できる",
+    "Build.batまたはBuild.shで自動ビルドが実行できる"
+  ],
+  "why": "推測: GTA VIのXbox SeriesをWindowsへ移植する静的リコンパイルプロジェクトとして、ゲームハック・逆コンパイルコミュニティから注目を集めていると考えられる。NotRexedによるLeonidaプロジェクトのコミットヒストリーを継承しており、既存の開発成果を活用している。推測: PC版GTA VIの公式リリースを待てないユーザーや、静的リコンパイル技術に興味を持つ開発者に広く注目されていると考えられる。",
+  "whoFor": "GTA VIのPC移植に興味を持つゲーマーや逆コンパイル・移植技術を学びたい開発者向け。自分でビルドして動作をテストしたい技術的なユーザーや、シェーダー変換・Vulkan移植に関心のあるグラフィックスエンジニアにも有益。",
+  "tech": [
+    "Python 3.12+、.NET 8 SDK、Vulkan SDK、LLVM 21+（AMDGPUターゲット付き）、Visual Studio 2022 C++ツールを組み合わせたビルドシステムを採用",
+    "RDNA2シェーダーをSPIR-Vに変換するシェーダートランスレーターを実装しており、wave64対応は一部近似処理が残存",
+    "Xbox D3D12からVulkanへの変換レイヤーを開発中",
+    "LinuxではWineまたはProtonを利用してランタイムを実行し、macOS（Apple Silicon）ではツールをネイティブ動作させる",
+    "GPLv3ライセンスのオープンソースプロジェクトで、サードパーティ製コンポーネントは独自ライセンスを保持"
+  ],
+  "tryIt": {
+    "steps": [
+      "自分のGTA VI（バージョン1.0.2.1）を用意する（リポジトリにゲームファイルは含まれていない）",
+      "Windows 10/11 x64環境で約400GBの空き容量を確保する",
+      "Python 3.12+、.NET 8 SDK、Vulkan SDK、LLVM 21+（AMDGPUターゲット付き）、Visual Studio 2022 C++ツールをインストールする（ffmpegは任意）",
+      "WindowsではBuild.batを、Linux/macOSではBuild.shを実行してビルドする"
+    ],
+    "commands": [
+      "Build.bat",
+      "./Build.sh"
+    ]
+  }
+}

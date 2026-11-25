@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ubiquitarianism/leonida | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>ubiquitarianism/leonida</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-26（Trendshift 18位）</span>
+<a class="gh" href="https://github.com/ubiquitarianism/leonida" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="ubiquitarianism__leonida" data-repo="ubiquitarianism/leonida" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">GTA VIをXbox SeriesからWindowsへ静的リコンパイルするポートプロジェクト</p>
+<h3>何ができるか</h3><ul><li>GTA VI（Xbox Series版）を静的リコンパイルしてWindows上でネイティブ実行できる</li><li>26,503個のRDNA2シェーダーをSPIR-Vに変換・検証済み</li><li>モデル、テクスチャ辞書、オーディオバンクのエクスポートが可能</li><li>WindowsとLinux（Proton経由）でゲームのロードからワールドフェーズまで起動できる</li><li>Build.batまたはBuild.shで自動ビルドが実行できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> GTA VIのXbox SeriesをWindowsへ移植する静的リコンパイルプロジェクトとして、ゲームハック・逆コンパイルコミュニティから注目を集めていると考えられる。NotRexedによるLeonidaプロジェクトのコミットヒストリーを継承しており、既存の開発成果を活用している。<span class="guess">推測</span> PC版GTA VIの公式リリースを待てないユーザーや、静的リコンパイル技術に興味を持つ開発者に広く注目されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>GTA VIのPC移植に興味を持つゲーマーや逆コンパイル・移植技術を学びたい開発者向け。自分でビルドして動作をテストしたい技術的なユーザーや、シェーダー変換・Vulkan移植に関心のあるグラフィックスエンジニアにも有益。</p>
+<h3>技術的なポイント</h3><ul><li>Python 3.12+、.NET 8 SDK、Vulkan SDK、LLVM 21+（AMDGPUターゲット付き）、Visual Studio 2022 C++ツールを組み合わせたビルドシステムを採用</li><li>RDNA2シェーダーをSPIR-Vに変換するシェーダートランスレーターを実装しており、wave64対応は一部近似処理が残存</li><li>Xbox D3D12からVulkanへの変換レイヤーを開発中</li><li>LinuxではWineまたはProtonを利用してランタイムを実行し、macOS（Apple Silicon）ではツールをネイティブ動作させる</li><li>GPLv3ライセンスのオープンソースプロジェクトで、サードパーティ製コンポーネントは独自ライセンスを保持</li></ul>
+<h3>試し方</h3>
+<ol><li>自分のGTA VI（バージョン1.0.2.1）を用意する（リポジトリにゲームファイルは含まれていない）</li><li>Windows 10/11 x64環境で約400GBの空き容量を確保する</li><li>Python 3.12+、.NET 8 SDK、Vulkan SDK、LLVM 21+（AMDGPUターゲット付き）、Visual Studio 2022 C++ツールをインストールする（ffmpegは任意）</li><li>WindowsではBuild.batを、Linux/macOSではBuild.shを実行してビルドする</li></ol>
+<pre><code>Build.bat
+./Build.sh</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-26.html#d-ubiquitarianism__leonida">2026-11-26</a>
+<span class="src trendshift">Trendshift 18位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

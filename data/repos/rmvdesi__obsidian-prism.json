@@ -1,0 +1,37 @@
+{
+  "repo": "RMvdesi/obsidian-prism",
+  "language": "JavaScript",
+  "readme": true,
+  "oneLiner": "Antigravity用の光学UI・ばね振動アニメ・思考翻訳を備えたObsidian Prismプラグイン",
+  "features": [
+    "4種のライト/ダーク配色テーマと512Kコンテキストゲージで外観をカスタマイズできる。",
+    "減衰ばねのアニメーションコレオグラフィーでUI操作に流れるような動きを加える。",
+    "内蔵ブラウザ・大容量ファイルビューア・インラインdiffプレビューを提供するワークベンチ機能がある。",
+    "ピクセルアートのマスコットキャラクターをUI上に表示できる。",
+    "モデルの思考プロセスを翻訳して表示する機能がある。",
+    "コーディング作業と分離したChatモード（ベータ）を利用できる。"
+  ],
+  "why": "推測: Antigravity（GoogleのGemini CLIクライアント）向けにUIを大幅に強化するプラグインとして開発者コミュニティの注目を集めている。ばね振動アニメーションや512Kコンテキストゲージなど独自の機能が多く、既存のツールにない視覚的体験を提供している。GPL-3.0ライセンスで公開されており、オープンソースとしての透明性も評価されている。",
+  "whoFor": "Antigravityを日常的に使用するエンジニアや開発者で、より洗練されたUIや視覚的フィードバックを求めるユーザーに向いている。macOSとWindowsの両方をサポートし、一般ユーザー向けGUIインストーラーから開発者向けソース展開まで幅広く対応している。",
+  "tech": [
+    "JavaScriptで実装されたGPL-3.0ライセンスのAntigravityプラグインである。",
+    "減衰ばね（damped-spring）アルゴリズムを用いたアニメーションコレオグラフィーを実装している。",
+    "npmスクリプトによるプラグインのデプロイ・注入・削除が可能な開発ツールチェーンを備える。",
+    "インストール状態をJSON形式で自己検証するCLIツール（tools/install-plugin.cjs）が含まれる。",
+    "WindowsおよびmacOSユニバーサル向けのバイナリインストーラーをビルドできる。"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubからリポジトリをクローンする。",
+      "npm run install:pluginでプラグインを~/.gemini/config/plugins/obsidian-prismにデプロイする。",
+      "node tools/install-plugin.cjs --statusでインストール状態を確認し、installed・daemonAlive等がtrueであることを検証する。",
+      "設定→外観からObsidian Prism（黒曜棱鏡）セクションを展開して各種設定を行う。"
+    ],
+    "commands": [
+      "git clone https://github.com/RMvdesi/obsidian-prism.git",
+      "npm run install:plugin",
+      "node tools/install-plugin.cjs --status",
+      "xattr -cr \"/Applications/Obsidian Prism.app\""
+    ]
+  }
+}

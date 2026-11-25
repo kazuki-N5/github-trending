@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-26",
+  "collectedAt": "2026-11-26T07:07:36+09:00",
+  "entries": [
+    {
+      "repo": "stablyai/orca",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Orca lets you run a fleet of bots with your own subscription (e.g. Claude Code, Grok, Agy, Codex). Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "4lwayz/portwatch-vi",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "Does GTA VI run on PC yet? A live tracker of community recompilation and emulation efforts, updated daily.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Zettrox/ztrx",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "Run the Xbox Series build of the game natively on Windows PCs with NVIDIA GPUs",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "crhywun/g1-acq",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "google-gemini/gemini-api-cli",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "An (experimental) CLI for the Gemini API",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "cathrynlavery/diagram-design",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "anhao/ai-pose-gallery-zh",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Marvisak/VIctory",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "An attempt at running GTA VI on PC",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "seanhowarthdev/Roam-Control",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "Choose, test and move an iPhone’s reported location.",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "openai/math",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "",
+      "language": "Lean",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "firecrawl/firecrawl",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "RMvdesi/obsidian-prism",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "Optical UI, damped-spring choreography, 512K shallow-water vial, pixel mascots & dual-mode thought suite for Antigravity (GPL-3.0)",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "pingdotgg/t3code",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "The best way to control Claude Code, Codex and more from any computer or phone",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "XinaTian/MROffice",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "MR Office — the open-source editors of the AI office suite closest to Microsoft Office: documents, spreadsheets, presentations, PDF and code in the browser. Copilot in every editor edits real Word, Excel and PowerPoint files with you; an MCP server lets Claude, ChatGPT, Cursor and Codex create and edit them; embed it in your app with one line.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "HKUDS/CLI-Anything",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "antigravity-cn-community/Antigravity-Chinese-Localization",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "antigravity一键汉化",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mvanhorn/last30days-skill",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ubiquitarianism/leonida",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "A continuation of Leonida, the Xbox > PC port interface of GTA VI",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "XiaoYouChR/Ghost-Downloader-3",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "The only downloader you need. 下载器的集大成者。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "zhouxiaoka/autoclip",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "google-deepmind/gbench",
+        "source": "hatena",
+        "desc": "Evaluation, serving performance, and release-readiness benchmark harness for Gemma and open-weights LLMs.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 1
+      }
+    ]
+  }
+}
