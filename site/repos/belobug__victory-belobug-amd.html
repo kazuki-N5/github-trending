@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Belobug/VIctory-Belobug-AMD | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>Belobug/VIctory-Belobug-AMD</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-27（Trendshift 7位）</span>
+<a class="gh" href="https://github.com/Belobug/VIctory-Belobug-AMD" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="belobug__victory-belobug-amd" data-repo="Belobug/VIctory-Belobug-AMD" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Xbox SeriesタイトルをWindowsでネイティブ動作させる互換レイヤーのAMD向けフォーク</p>
+<h3>何ができるか</h3><ul><li>ユーザーが所持するゲームファイルを使い、Xbox Seriesタイトルを開発元非公認の互換レイヤーでWindows上で動かせる</li><li>AMD RX 7900 XTXを主なテスト環境としてレンダラーを最適化し、約45ms/フレーム（約22fps）を達成している（作者計測・単一環境）</li><li>シェーダーを事前変換（AOT）してキャッシュすることで、初回以降のビルド間で再変換を省いている</li><li>レイトレーシングはデフォルトオフで、オプションで有効化できる</li><li>AMD FSR 4アップスケーリング（画像を高品質に拡大する技術）を複数の品質プリセットで利用できる</li><li>コマンドリスト記録・サブミット等の処理をスレッドに分散し、テクスチャアップロードに専用コピーキューを使っている</li></ul>
+<h3>なぜ注目されているか</h3><p>Xbox SeriesタイトルをPC上でネイティブ動作させるという技術的挑戦が注目を集めており、特にAMD GPU向けのパフォーマンス改善に特化したフォークとして差別化されている。<span class="guess">推測</span> 近年の互換レイヤー技術（ProtonやWineなど）への関心の高まりが背景にあると思われる。</p>
+<h3>どんな人に役立つか</h3><p>低レイヤーなグラフィックス技術（Direct3D 12・シェーダー変換・レンダラー最適化）に興味があるエンジニアや研究者に向いている。対象タイトルのゲームファイルを所持しており、AMD GPUを使うPC環境で試したいユーザーにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>Direct3D 12（マイクロソフトの低レベルグラフィックスAPI）とシェーダーモデル6.6・メッシュシェーダーを必要とする</li><li>Rustで実装されており、ビルドにはpinnedツールチェーンとMSVCビルドツールが必要</li><li>シェーダーをAOT（事前コンパイル）してビルド間でキャッシュし、初回スタッタリングを軽減している</li><li>約30GBのプライベートメモリと10.5GBのVRAMを消費し、推奨RAMは64GB</li><li>GPUへの書き込みを安価に追跡し、フレーム記録・再生とパスごとのタイミング計測機能を持つ</li></ul>
+<h3>試し方</h3>
+<ol><li>Windows 10/11 x64・AVX2対応CPU・シェーダーモデル6.6とメッシュシェーダー対応のDirect3D 12 GPU・64GB RAMを用意する</li><li>RustのpinnedツールチェーンとMSVCビルドツールをインストールする</li><li>対象タイトルのゲームファイルを用意する（リポジトリにはゲームファイルは含まれない）</li><li>READMEに記載のPowerShellスクリプトでビルドおよび起動する（-SafeモードやAOTウォームアップのオプションあり）</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-27.html#d-belobug__victory-belobug-amd">2026-11-27</a>
+<span class="src trendshift">Trendshift 7位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "repo": "nexu-io/opengame",
+  "language": "TypeScript",
+  "readme": true,
+  "oneLiner": "AIエージェントをフルスタックゲームスタジオに変えるオープンソースのスーパーゲームエージェント",
+  "features": [
+    "Claude Code・Codex・DeepSeekなど22種類のローカルAIエージェントをUnreal Engine/Unity相当のゲーム開発基盤として利用できる",
+    "3D・ボクセル・アニメ・ピクセルアート・9:16縦型など25種類のプレイアブルなゲームテンプレートをワンクリックでリミックス・再スタイリングできる",
+    "ゲームロジックの自動チェック・バランスシミュレーション・ヘッドレスプレイテストからトレーラー動画生成まで一貫したパイプラインを提供する",
+    "WeChat・TikTok・Douyin・itch.ioなど複数プラットフォームへのパブリッシュと9:16プレイアブル広告の書き出しに対応している",
+    "Three.js（WebベースのリアルタイムCGライブラリ）とNode.js 22.18+を使い、ゲーム・アート・音楽・音声すべてのソースコードがオープンソースで公開されている"
+  ],
+  "why": "コーディングエージェントにゲーム開発の専門知識を「スキル」として注入することで、プログラミング経験の少ないクリエイターでも本格的なゲームを作れるワークフローを提案している点が関心を集めている。WeChat・TikTok向けのミニゲームという収益化パスを明確に示し、開発から公開・マネタイズまでを単一フレームワークで完結させる構成も新しい。推測: 中国・東南アジア市場のミニゲームエコシステムとAIエージェント開発の融合という文脈で注目されている可能性が高い。",
+  "whoFor": "AIエージェントを使ってゲーム開発を試みるインディー開発者やクリエイターが主な対象だ。WeChat・TikTokなどのミニゲームプラットフォームへの展開を検討しているモバイルゲーム開発者にも向いている。ゲームAI・プロシージャル生成・自動テストに関心のあるCS学生の学習素材としても活用できる。",
+  "tech": [
+    "Three.jsはWebブラウザ上でWebGLを使った3DグラフィクスをJavaScriptで扱えるライブラリで、本プロジェクトのゲームレンダリング基盤として使われている",
+    "Git LFSはバイナリファイル（画像・動画など）を本体リポジトリから分離して管理するGit拡張で、テンプレートのアセットに使用されている（--skip-smudgeで初回クローンを軽量化できる）",
+    "MCPツール（openmotion_game_*）を12種類提供しており、エージェントがローカルのGame Studioサーバーとシームレスに通信できる",
+    "Skills CLI（npx skills add）でSKILL.mdをエージェントの指示セットに追加することでゲーム開発ハンドブックを即座に利用可能にする",
+    "npm run build:studio && npm startでローカルにGame Studioを立ち上げ、ブラウザ経由でテンプレートカタログを操作できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "Git・Git LFS・npm・Node.js 22.18以上をインストールする",
+      "LFSアセットをスキップしてシャロークローンを取得する",
+      "依存パッケージをインストールしてスタジオをビルドする",
+      "npm startでGame Studioを起動する",
+      "好みのエージェント（Claude CodeやDeepSeekなど）からopengame-setup.mdの手順に従って接続する"
+    ],
+    "commands": [
+      "git -c filter.lfs.process= -c filter.lfs.smudge= -c filter.lfs.required=false clone --depth 1 --single-branch --branch main https://github.com/nexu-io/opengame.git",
+      "cd opengame",
+      "git lfs install --local --skip-smudge",
+      "npm ci",
+      "npm run build:studio",
+      "npm start"
+    ]
+  }
+}

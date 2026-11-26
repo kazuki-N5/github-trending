@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rotejin/Keshin2D | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>rotejin/Keshin2D</h1>
+<div class="meta">
+<span>初掲載 2026-11-27（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/rotejin/Keshin2D" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="rotejin__keshin2d" data-repo="rotejin/Keshin2D" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">絵1枚からブラウザで動く2DアバターをWebGL2で実現するツール</p>
+<h3>何ができるか</h3><ul><li>キャラクターの絵1枚からパーツに分けてモデルを作成し、ブラウザ上で動かせる。</li><li>マウス追従・Webカメラ顔追跡・自動おまかせの3種類の動作モードに対応している。</li><li>表情22種類、マイクによる口パク（母音で口の形も変化）をサポートする。</li><li>WebGL2（ブラウザで3D/2Dグラフィクスを描画するAPI）でメッシュを変形し、顔向き・視線・まばたき・髪揺れを表現する。</li><li>OBSのブラウザソースに透過出力でき、配信用アバターとして使える。</li><li>カメラ映像・音声はブラウザ内のみで処理し、外部への送信は一切行わない。</li></ul>
+<h3>なぜ注目されているか</h3><p>専用モデリングソフト不要で絵1枚からVTuber風の2Dアバターを作れる手軽さが注目を集めている。Pythonの標準ライブラリのみで動作し追加依存が不要な点と、OBS連携による実用性の高さも評価されている。<span class="guess">推測</span> AIコーディングエージェントを使ったモデル作成ワークフローが新しいアプローチとして関心を引いていると思われる。</p>
+<h3>どんな人に役立つか</h3><p>VTuberや配信者として2Dアバターを使いたい人に適している。イラストは描けるがモデリングの専門知識がない人や、既存のモデリングソフトを使わずにアバターを作りたいクリエイターにも向いている。</p>
+<h3>技術的なポイント</h3><ul><li>WebGL2でメッシュ変形を行い、顔向き・視線・まばたき・表情・口・髪揺れをリアルタイム描画する。</li><li>MediaPipeをオフライン同梱することで、外部サーバーなしにWebカメラ顔追跡が可能。</li><li>Pythonの標準ライブラリのみで動作し、ゼロ依存で軽量なローカルサーバーを起動する。</li><li>AIコーディングエージェントにMASTER_PROMPT.mdを渡すことで、自分のキャラのパーツ生成を半自動化できる。</li><li>URLパラメータでモデル・UI・背景・動作モードなどを外部から指定でき、OBS等との連携が容易。</li></ul>
+<h3>試し方</h3>
+<ol><li>リポジトリをダウンロードまたはクローンする。</li><li>Windowsはstart.batをダブルクリック、macOS/Linuxはstart.shを実行する。</li><li>ブラウザが自動で開き、デフォルトモデル（クラゲちゃん）が表示される。</li></ol>
+<pre><code>start.bat
+./start.sh
+python tools/serve.py</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-27.html#h-rotejin__keshin2d">2026-11-27 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nexu-io/opengame | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎮</div><div>
+<h1>nexu-io/opengame</h1>
+<div class="meta"><span>TypeScript</span>
+<span>初掲載 2026-11-27（Trendshift 12位）</span>
+<a class="gh" href="https://github.com/nexu-io/opengame" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="nexu-io__opengame" data-repo="nexu-io/opengame" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントをフルスタックゲームスタジオに変えるオープンソースのスーパーゲームエージェント</p>
+<h3>何ができるか</h3><ul><li>Claude Code・Codex・DeepSeekなど22種類のローカルAIエージェントをUnreal Engine/Unity相当のゲーム開発基盤として利用できる</li><li>3D・ボクセル・アニメ・ピクセルアート・9:16縦型など25種類のプレイアブルなゲームテンプレートをワンクリックでリミックス・再スタイリングできる</li><li>ゲームロジックの自動チェック・バランスシミュレーション・ヘッドレスプレイテストからトレーラー動画生成まで一貫したパイプラインを提供する</li><li>WeChat・TikTok・Douyin・itch.ioなど複数プラットフォームへのパブリッシュと9:16プレイアブル広告の書き出しに対応している</li><li>Three.js（WebベースのリアルタイムCGライブラリ）とNode.js 22.18+を使い、ゲーム・アート・音楽・音声すべてのソースコードがオープンソースで公開されている</li></ul>
+<h3>なぜ注目されているか</h3><p>コーディングエージェントにゲーム開発の専門知識を「スキル」として注入することで、プログラミング経験の少ないクリエイターでも本格的なゲームを作れるワークフローを提案している点が関心を集めている。WeChat・TikTok向けのミニゲームという収益化パスを明確に示し、開発から公開・マネタイズまでを単一フレームワークで完結させる構成も新しい。<span class="guess">推測</span> 中国・東南アジア市場のミニゲームエコシステムとAIエージェント開発の融合という文脈で注目されている可能性が高い。</p>
+<h3>どんな人に役立つか</h3><p>AIエージェントを使ってゲーム開発を試みるインディー開発者やクリエイターが主な対象だ。WeChat・TikTokなどのミニゲームプラットフォームへの展開を検討しているモバイルゲーム開発者にも向いている。ゲームAI・プロシージャル生成・自動テストに関心のあるCS学生の学習素材としても活用できる。</p>
+<h3>技術的なポイント</h3><ul><li>Three.jsはWebブラウザ上でWebGLを使った3DグラフィクスをJavaScriptで扱えるライブラリで、本プロジェクトのゲームレンダリング基盤として使われている</li><li>Git LFSはバイナリファイル（画像・動画など）を本体リポジトリから分離して管理するGit拡張で、テンプレートのアセットに使用されている（--skip-smudgeで初回クローンを軽量化できる）</li><li>MCPツール（openmotion_game_*）を12種類提供しており、エージェントがローカルのGame Studioサーバーとシームレスに通信できる</li><li>Skills CLI（npx skills add）でSKILL.mdをエージェントの指示セットに追加することでゲーム開発ハンドブックを即座に利用可能にする</li><li>npm run build:studio &amp;&amp; npm startでローカルにGame Studioを立ち上げ、ブラウザ経由でテンプレートカタログを操作できる</li></ul>
+<h3>試し方</h3>
+<ol><li>Git・Git LFS・npm・Node.js 22.18以上をインストールする</li><li>LFSアセットをスキップしてシャロークローンを取得する</li><li>依存パッケージをインストールしてスタジオをビルドする</li><li>npm startでGame Studioを起動する</li><li>好みのエージェント（Claude CodeやDeepSeekなど）からopengame-setup.mdの手順に従って接続する</li></ol>
+<pre><code>git -c filter.lfs.process= -c filter.lfs.smudge= -c filter.lfs.required=false clone --depth 1 --single-branch --branch main https://github.com/nexu-io/opengame.git
+cd opengame
+git lfs install --local --skip-smudge
+npm ci
+npm run build:studio
+npm start</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-27.html#d-nexu-io__opengame">2026-11-27</a>
+<span class="src trendshift">Trendshift 12位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

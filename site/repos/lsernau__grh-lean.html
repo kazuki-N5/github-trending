@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lsernau/grh-lean | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>lsernau/grh-lean</h1>
+<div class="meta"><span>Lean</span>
+<span>初掲載 2026-11-27（Trendshift 8位）</span>
+<a class="gh" href="https://github.com/lsernau/grh-lean" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="lsernau__grh-lean" data-repo="lsernau/grh-lean" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Lean 4によるリーマン予想および一般化リーマン予想の形式証明</p>
+<h3>何ができるか</h3><ul><li>Lean 4の定理証明支援系を用いてリーマン予想とディリクレL関数への一般化リーマン予想を機械検証した</li><li>Mathlibライブラリを基盤とし、propext・Classical.choice・Quot.soundの3公理のみを使用している</li><li>Levent Alpögeの証明アプローチを参考に、Anthropicのチームとの共同作業で構築された</li><li>読みやすい版（約30万行）とコンパクト版（約7万6千行）の2エディションを収録している</li><li>証明はいずれも機械チェック済みで、5つの定理について各フォルダのREADMEに結果が記載されている</li></ul>
+<h3>なぜ注目されているか</h3><p>リーマン予想は数学史上最も著名な未解決問題の一つであり、形式証明が存在するとすれば世界的な注目を集めるのは必然だ。ただし、READMEには「機械検証のみ通過しており、数学者による通読はまだ行われていない」と明記されており、数学コミュニティでの検証はこれからの段階にある。<span class="guess">推測</span> 定理証明支援系と大規模言語モデルの組み合わせによる数学研究への活用可能性として関心を集めている面もあると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>定理証明支援系（Lean 4・Mathlib）を学ぶ大学院生や研究者、形式手法に関心のある数学者やコンピュータ科学者が主な対象だ。証明の内容や構造を精査したい数論研究者にも参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>Lean 4は関数型プログラミング言語と定理証明支援系を兼ねたシステムで、数学的命題をコードとして記述し機械的に正しさを検証できる</li><li>Mathlibはコミュニティが整備するLean向け数学ライブラリで、現代数学の広範な基盤定理を提供している</li><li>ビルドにはLean v4.35.0とMathlibの特定コミット（56a00585）が必要で、Lakeビルドシステムを使用する</li><li>フルビルドには12コア・24 GBメモリ環境で1〜2時間かかる（Mathlibキャッシュなしではさらに85分追加）</li><li>使用公理をpropext・Classical.choice・Quot.soundの3つに限定することで、証明の基礎となる仮定を最小化している</li></ul>
+<h3>試し方</h3>
+<ol><li>Lean v4.35.0をインストールする</li><li>grh/またはgrh-compact/フォルダに移動する</li><li>lake exe cache getでMathlibキャッシュを取得する</li><li>lake buildでビルドを実行する（1〜2時間かかる）</li><li>lake env lean scripts/PrintAxioms.leanで使用公理を確認する</li></ol>
+<pre><code>lake exe cache get
+lake build
+lake env lean scripts/PrintAxioms.lean</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-27.html#d-lsernau__grh-lean">2026-11-27</a>
+<span class="src trendshift">Trendshift 8位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

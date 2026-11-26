@@ -1,0 +1,221 @@
+{
+  "date": "2026-11-27",
+  "collectedAt": "2026-11-27T07:07:34+09:00",
+  "entries": [
+    {
+      "repo": "jub0t/Concat",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "Beta: The truly free, open-source, local-first, cross-platform video editor. Scriptable through a JSON-RPC API & MCP.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "RMvdesi/obsidian-prism",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "Optical UI, damped-spring choreography, 512K shallow-water vial, pixel mascots & dual-mode thought suite for Antigravity (GPL-3.0)",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "Orca lets you run a fleet of bots with your own subscription (e.g. Claude Code, Grok, Agy, Codex). Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "alesha-pro/llm.asm",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "Qwen3-0.6B inference (12 KB), bare-metal bootable OS (22 KB), and from-scratch Mini-GPT trainer with live Braille TUI (32 KB) in 100% pure x86-64 NASM assembly. Zero C, zero libc, zero dependencies.",
+      "language": "Assembly",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "4lwayz/portwatch-vi",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "Does GTA VI run on PC yet? A live tracker of community recompilation and emulation efforts, updated daily.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "opensetlabs/openset-llm",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Fast local LLM inference on plain CPUs. No GPU, 8 GB of RAM. OpenAI-compatible server.",
+      "language": "C++",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Belobug/VIctory-Belobug-AMD",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "lsernau/grh-lean",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "A short Lean 4 proof of the Generalized Riemann Hypothesis",
+      "language": "Lean",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "antigravity-cn-community/Antigravity-Chinese-Localization",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "antigravity一键汉化",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "avatarmanz/VIctory-7900XTX",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "VIctory (Xbox Series compatibility layer) tuned for AMD RX 7900 XTX: faster preparing, texture read-back, findings. No game files.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "superdesigndev/treg",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "OpenRouter for agent tools. Join community here: https://discord.gg/6mQYYfFMAn",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "nexu-io/opengame",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "The Super Game Agent — the Unity & Unreal for AI agents, with 100+ viral games to remix. Turn 20+ coding agents (Claude Code, Codex, DeepSeek, etc.) into a full-stack AI game studio. Build and publish 3D & mini-games to WeChat, Douyin, TikTok, Telegram, itch.io, and more.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "google-gemini/gemini-api-cli",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "An (experimental) CLI for the Gemini API",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "perixtar/Tech-OA-Interview-Questions",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Daily updated list of Tech Company OAs and Interview Problems. Save your time from finding them all over the internet.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Hut-hzf/ung220z-tool",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "ung220z-tool 是一个针对 UNG220Z，另含中兴/烽火/华为/九联多厂商适配、固件指纹识别与分家族排障建议的一键凭据提取工具，仅限在你自己的设备上用于找回忘记的管理密码、迁移宽带配置或安全自查。",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "WhiteBr1ck/agy-powertools",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Antigravity 2.0 原生界面增强插件：界面汉化、类 Codex 紧凑排版与阶段汇报、上下文与缓存监控、会话分支及本地用量面板",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "tt-a1i/archify",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "intel/intel-one-mono",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "Intel One Mono font repository",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "rohitg00/ai-engineering-from-scratch",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Learn AI Engineering! Learn it. Build it. Ship it for others.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "cathrynlavery/diagram-design",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "rotejin/Keshin2D",
+        "source": "hatena",
+        "desc": "キャラクターの絵をブラウザで動かす 2D アバター。絵 1 枚から、自分のキャラクターのモデルも作れます",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 1
+      },
+      {
+        "repo": "luvtechno/isucon2026",
+        "source": "hatena",
+        "desc": "",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 2
+      },
+      {
+        "repo": "nao1215/embargo",
+        "source": "hatena",
+        "desc": "Mask secrets and personal data in Go logs, JSON and text. A library and a command-line filter, zero dependencies, cross-platform.",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 3
+      }
+    ]
+  }
+}

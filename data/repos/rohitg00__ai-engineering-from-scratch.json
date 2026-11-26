@@ -1,0 +1,37 @@
+{
+  "repo": "rohitg00/ai-engineering-from-scratch",
+  "language": "Python",
+  "readme": true,
+  "oneLiner": "AIエンジニアリングをゼロから学ぶ542レッスンの無料カリキュラム",
+  "features": [
+    "Python・TypeScript・Rust・Julia・Go対応の20フェーズ、542レッスンを収録している。",
+    "各レッスンは「問題理解→スクラッチ実装→本番ツールとの比較→成果物保存」の4ステップで進む。",
+    "数学基礎からLLMエンジニアリング・マルチモーダルAI・マルチエージェントシステムまでカバーする。",
+    "AIチューター機能をコーディングエージェントに1コマンドで組み込める。",
+    "検索精度評価・エージェントトレースデバッガ・ツール呼び出しファイアウォールの3プロジェクトが付属する。",
+    "MCP（Model Context Protocol）やAgent Skillsなどの最新プロトコルを学習トラックとして提供する。"
+  ],
+  "why": "AIエンジニアリングの需要が急増する中、座学だけでなくスクラッチ実装を通じて原理を理解させるカリキュラムは少ない。542レッスンという圧倒的なボリュームとMITライセンスの無償公開が注目を集めている。推測: MCPやAgent Skillsといった最新トピックを即座に取り込む更新頻度の高さも人気の要因と思われる。",
+  "whoFor": "AIエンジニアを目指すプログラミング経験者や学生に適している。Python以外にもTypeScript・Rust・Go・Juliaのコードが含まれるため、特定言語に縛られず幅広い技術スタックを学びたい人にも向いている。",
+  "tech": [
+    "各レッスンでゼロからの実装と本番ライブラリ実装を並べて比較する設計になっている。",
+    "AIチューターはnpxコマンド1行でコーディングエージェントへのスキル追加が可能。",
+    "プロジェクトはscripts/project_test.pyで--init・--stage・--allオプション付きで自動テストできる。",
+    "MCP（Model Context Protocol：AIとツールを連携させるプロトコル）の専用学習トラックを持つ。",
+    "Agent Skills（エージェントに再利用可能な能力を追加する仕組み）のトラックも含まれている。"
+  ],
+  "tryIt": {
+    "steps": [
+      "リポジトリをクローンする。",
+      "verify.pyで環境確認を行う。",
+      "任意のレッスンコードを実行して学習を始める。"
+    ],
+    "commands": [
+      "npx skills add rohitg00/ai-engineering-from-scratch",
+      "git clone https://github.com/rohitg00/ai-engineering-from-scratch.git",
+      "cd ai-engineering-from-scratch",
+      "python3 phases/00-setup-and-tooling/01-dev-environment/code/verify.py --route beginner",
+      "python3 phases/01-math-foundations/01-linear-algebra-intuition/code/vectors.py"
+    ]
+  }
+}

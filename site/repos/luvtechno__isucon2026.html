@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>luvtechno/isucon2026 | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>luvtechno/isucon2026</h1>
+<div class="meta">
+<span>初掲載 2026-11-27（はてなブックマーク 2位）</span>
+<a class="gh" href="https://github.com/luvtechno/isucon2026" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="luvtechno__isucon2026" data-repo="luvtechno/isucon2026" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">ISUCON2026優勝AIエージェントが書いたコードと設定の公開リポジトリ</p>
+<h3>何ができるか</h3><ul><li>ISUCON2026（Webアプリ高速化コンテスト）で全チーム1位（625857点）を獲得したコードを公開している。</li><li>Go製Webアプリが全データをメモリに保持し、PostgreSQLへの問い合わせをゼロにする設計を採用している。</li><li>4台のホストで書き込み順序管理と読み取りを分散させるアーキテクチャを実装している。</li><li>AIエージェントが当日の判断と試行の経緯を.isucon/plateau-ledger.mdに記録している。</li><li>nginx・PostgreSQL・sysctl設定ファイルや、デプロイ・ベンチマーク用スクリプトも含まれている。</li><li>CDPスクリプト（Chrome DevTools Protocol経由でブラウザを操作するツール）によるポータル自動操作も実装されている。</li></ul>
+<h3>なぜ注目されているか</h3><p>AIエージェントが競技プログラミング的なWebアプリ最適化コンテストで人間チームを上回り1位を獲得したことが大きな話題を呼んでいる。エージェントの思考ログや当日の19コミットが公開されており、AIがどのように問題を分析・解決したかを追跡できる貴重なリソースとなっている。</p>
+<h3>どんな人に役立つか</h3><p>ISUCONやWebアプリのパフォーマンスチューニングに興味を持つエンジニアに適している。AIエージェントによるシステム最適化の実例を研究したい人や、Go言語でのインメモリキャッシュ設計を学びたい人にも参考になる。</p>
+<h3>技術的なポイント</h3><ul><li>GoのWebアプリがPostgreSQLを使わず全データをメモリ上に保持することでレイテンシを極小化している。</li><li>asia2ホストが書き込み順序をファイルに記録し他ホストへ配送する、シンプルな分散調整を実現している。</li><li>攻撃元IPの遮断ロジックをisureal-guardからアプリ内（guard.go）に移植しオーバーヘッドを削減している。</li><li>browser.mjsがCDP（Chrome DevTools Protocol）経由でブラウザを操作し、ポータルへの定型操作を自動化している。</li><li>plateau-ledger.mdにエージェントの判断根拠と試行履歴が記録されており、最適化プロセスのトレーサビリティを確保している。</li></ul>
+<h3>試し方</h3>
+<p>README に試し方の記載はありません。</p></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-27.html#h-luvtechno__isucon2026">2026-11-27 はてブ</a>
+<span class="src hatena">はてなブックマーク 2位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

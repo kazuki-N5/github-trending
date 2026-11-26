@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>superdesigndev/treg | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🤖</div><div>
+<h1>superdesigndev/treg</h1>
+<div class="meta"><span>Python</span>
+<span>初掲載 2026-11-27（Trendshift 11位）</span>
+<a class="gh" href="https://github.com/superdesigndev/treg" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="superdesigndev__treg" data-repo="superdesigndev/treg" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">エージェントツール向けのOpenRouter：単一トークンで数千のAPIエンドポイントを呼び出せるカタログ</p>
+<h3>何ができるか</h3><ul><li>SEO・バックリンク・SNSトレンド・人物企業情報・広告・スクレイピング・画像動画生成など数千のAPIエンドポイントをカタログ化し、1回数セントから利用できる</li><li>プロバイダーへの個別サインアップ不要で、単一のトークンとベースURLでカタログ全体を呼び出せる</li><li>チーム独自のAPIキーやCLIツール（stripe・gh・vercelなど）をレジストリに登録し、認証情報をサーバー側でインジェクションする設計でシークレットが外部に漏れない</li><li>Claude CodeプラグインやSkills CLIでインストールすれば、エージェントから直接カタログツールを呼び出せる</li><li>ウェブアクセス・リードシグナル・採用・UGC動画生成などの用途別ワークフロースキルが同梱されている</li></ul>
+<h3>なぜ注目されているか</h3><p>Semrush・Moz・Crunchbaseなど月額100ドル超の有料APIを、エージェントが必要なときだけ1呼び出し単位で使える仕組みを提供しており、AIエージェント開発者のツール調達コストと手間を大幅に削減できる点が注目されている。自社チームのAPIキーや社内CLIも同じ仕組みに乗せられるため、マルチエージェント構成での認証情報管理にも有効だ。</p>
+<h3>どんな人に役立つか</h3><p>AIエージェントを実務で活用するエンジニアやプロダクトチームが主な対象だ。複数の有料APIを試したいが個別契約を避けたいプロトタイピング段階の開発者にも向いている。セキュアなクレデンシャル管理のもとでチーム全員がAPIを共用したい組織にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>プロキシはアップストリームAPIへのリレーのみを行い、モデル推論は一切行わない設計で、認証情報をサーバー側でリクエストにインジェクションする</li><li>MCPプロトコル（Model Context Protocol）に対応しており、/mcp/v2/エンドポイントでClaude.aiコネクタとして接続できる</li><li>strict_queryモードのツールは宣言されていないクエリパラメータや型違いのリクエストを400エラーで即時拒否し、不正呼び出しへの課金を防ぐ</li><li>SKILL.mdはエージェントへの手順書ファイルで、Skills CLI（npx skills add）でエージェントの指示セットに追加できる</li><li>自己ホスト可能な構成で、Renderなどのプラットフォームにデプロイして独自の組織向けレジストリとして運用できる</li></ul>
+<h3>試し方</h3>
+<ol><li>CLIをインストールし、レジストリのエンドポイントを設定する</li><li>GitHubアカウントでログインする</li><li>カタログを検索してやりたいことに対応するツールを探す</li><li>treg callでツールを呼び出す</li><li>treg balanceで使用コストを確認する</li></ol>
+<pre><code>curl -fsSL https://treg.to/install.sh | sh
+treg login
+treg catalog search &quot;backlinks for a domain&quot;
+treg call tikhub.tiktok.user.profile --query uniqueId=tiktok
+treg balance</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-27.html#d-superdesigndev__treg">2026-11-27</a>
+<span class="src trendshift">Trendshift 11位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>avatarmanz/VIctory-7900XTX | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎮</div><div>
+<h1>avatarmanz/VIctory-7900XTX</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-27（Trendshift 10位）</span>
+<a class="gh" href="https://github.com/avatarmanz/VIctory-7900XTX" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="avatarmanz__victory-7900xtx" data-repo="avatarmanz/VIctory-7900XTX" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Xbox Seriesタイトルを AMD RX 7900 XTX向けに最適化した互換レイヤー</p>
+<h3>何ができるか</h3><ul><li>Xbox Seriesタイトルを4K出力（1440pレンダリング）かつレイトレーシング有効でWindows上で動作させることを目標としている</li><li>エミュレーションではなくポーティング手法でレンダラーにパッチを当てることで、フレームごとの共有メモリコピーを回避している</li><li>シェーダーを事前にバージョン管理されたストアへ変換し、ビルド間で再利用できる仕組みを持つ</li><li>VICTORY_PORT_CONSTANTSなど複数のレンダラーパッチスイッチで段階的な最適化を制御できる</li><li>ゲームファイルや資産は一切含まず、ユーザーが自身でゲームを用意する必要がある</li></ul>
+<h3>なぜ注目されているか</h3><p>Xbox Series専用タイトルをPC（特に非NVIDIAのAMD GPU）で動かす互換レイヤーの実装記録として、GPU最適化やシェーダー変換の技術的詳細が具体的に公開されており、グラフィックスプログラマーや互換性技術に関心を持つ開発者の注目を集めている。<span class="guess">推測</span> AMDのROCm/RDNA向け最適化事例として、コンソール互換技術の研究コミュニティでも参照されていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>グラフィックスプログラミングやコンソール互換技術に取り組む開発者・研究者が主な対象だ。DirectX/Vulkanのシェーダー変換やメモリ管理の実装に興味があるエンジニアにも参考になる。自身のゲームコピーを所持しているユーザーも対象に含まれる。</p>
+<h3>技術的なポイント</h3><ul><li>レンダラーパッチとは、コンソールのレンダラー動作をPC向けに書き換えることで、コンソール側の共有メモリを毎フレームコピーするエミュレーション方式より効率的にする手法だ</li><li>VICTORY_PORT_CONSTANTS=1を有効にすると174 MBの定数ヒープをGPUがタイトルの書き込み先で直接読み込むため、アップロードと充填処理が不要になる</li><li>VICTORY_PORT_DESCRIPTORS=1はディスクリプタテーブルへの書き込みスロットのみを追跡する方式に切り替え、毎フレーム60万スロットのスキャンを排除する</li><li>レイトレーシング有効時は間接描画引数の書き込み順序（VICTORY_PORT_CONSTANTS_ORDER）が室内照明の明滅やオブジェクトの消失に影響することが判明した</li><li>Rustで実装されており、パッチのオン/オフをフラグで細かく制御できる設計になっている</li></ul>
+<h3>試し方</h3>
+<ol><li>Windows 11環境とAMD RX 7900 XTXを用意する</li><li>自身が所持するゲームのファイルを準備する</li><li>READMEに記載のスイッチ（VICTORY_PORT_CONSTANTSなど）を参考に各パッチを有効化する</li><li>victory warmコマンドで新しいビルド前にパイプラインをあらかじめ作成しておく</li></ol>
+<pre><code>victory warm</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-27.html#d-avatarmanz__victory-7900xtx">2026-11-27</a>
+<span class="src trendshift">Trendshift 10位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

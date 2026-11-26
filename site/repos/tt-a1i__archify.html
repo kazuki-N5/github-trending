@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tt-a1i/archify | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📊</div><div>
+<h1>tt-a1i/archify</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-11-27（Trendshift 17位）</span>
+<a class="gh" href="https://github.com/tt-a1i/archify" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="tt-a1i__archify" data-repo="tt-a1i/archify" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">任意のアイデア・計画・コードをインタラクティブな図に変換するAIエージェントスキル</p>
+<h3>何ができるか</h3><ul><li>アーキテクチャ・ワークフロー・シーケンス・ERDなど10種類の図をテキスト説明から生成できる。</li><li>JS/TS・Python・Java・Go・Rust・C/C++の依存サイクル・結合度・ホットスポットを検出するコードアーキテクチャ診断機能を持つ。</li><li>結論を先頭に置き図を添えたワンページ解説（Explainer）を4スタイルで生成し、PNG・WebP・JPG・PDF形式でエクスポートできる。</li><li>ストーリーウォークスルーを1080p動画としてエクスポートし、PRやMRのdiffを図上に視覚化できる。</li><li>フォーカス・上流下流トレース・ルート探索・ロール比較・プレゼンテーションモードなどのビューア操作が可能。</li><li>スキーマ・レイアウト・HTML/SVGの検証を配信前に実行し、失敗時は機械可読な修復データを返す。</li></ul>
+<h3>なぜ注目されているか</h3><p>Claude CodeやCodex CLIなどのAIコーディングエージェントのスキルとして動作し、コードベースをそのまま可視化できる点が注目されている。エージェントに「図を作って」と一言伝えるだけでインタラクティブなHTMLビジュアルが生成される手軽さが開発者に好評である。<span class="guess">推測</span> AIエージェントによるコード理解・説明ニーズの高まりと、ドキュメント自動生成への関心が普及を後押ししていると考えられる。</p>
+<h3>どんな人に役立つか</h3><p>Claude Code・Codex CLI・Cursor・GitHub Copilotなどのエージェント環境を利用する開発者が主な対象。システムアーキテクチャの可視化やコードレビュー時の依存関係分析を効率化したいエンジニアチームにも適している。</p>
+<h3>技術的なポイント</h3><ul><li>AIエージェントのスキル（tool/function calling）として動作し、npxコマンドまたはllms.txtを通じてインストールする。</li><li>生成されるビジュアルはインタラクティブなHTML形式で、ライトテーマ・ダークテーマに対応している。</li><li>validate・preview・deliver・guideのCLIコマンドを提供し、スキーマ検証と配信を管理できる。</li><li>ARCHIFY_UPDATE_CHECK_DISABLED=1の環境変数で自動更新チェックを無効化でき、自動インストールは行わない設計になっている。</li><li>Apache-2.0ライセンスで、バージョン3.3.2が安定版として提供されている。</li></ul>
+<h3>試し方</h3>
+<ol><li>Claude CodeやCodex CLIなどの対応エージェント環境を用意する。</li><li>npx skills addコマンドでarchifyスキルをインストールする。</li><li>エージェントにシステムのフローや構造をテキストで説明し、図の生成を依頼する。</li><li>コードリポジトリのアーキテクチャ診断を行う場合はCode Analysisの実行をエージェントに依頼する。</li></ol>
+<pre><code>npx skills add archify
+npx skills add archify-pr</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-27.html#d-tt-a1i__archify">2026-11-27</a>
+<span class="src trendshift">Trendshift 17位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

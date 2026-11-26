@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nao1215/embargo | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>nao1215/embargo</h1>
+<div class="meta">
+<span>初掲載 2026-11-27（はてなブックマーク 3位）</span>
+<a class="gh" href="https://github.com/nao1215/embargo" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="nao1215__embargo" data-repo="nao1215/embargo" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Goのログ・JSONから秘密情報と個人データをマスクするゼロ依存ライブラリ</p>
+<h3>何ができるか</h3><ul><li>Secret型を使うとfmt・JSON・XML・テンプレート・ロガーすべてで自動的に[REDACTED]と表示される。</li><li>slogハンドラとMaskJSON関数で既存のログや構造体のキー・型・ネストを保ったままマスクできる。</li><li>39種類の組み込みディテクタがトークン・URLパスワード・カード番号・メール・IPなど未宣言の秘密情報を自動検出する。</li><li>embargotest パッケージがテスト中にフェイク秘密情報の漏洩を自動検出しテストを失敗させる。</li><li>zap・zerolog・logrus・gRPC・OpenTelemetry・Sentryなど主要ロガーとSDK向けのアダプタを提供する。</li><li>CLIツールとして任意のプログラムの出力をパイプでマスクでき、ネットワーク不要で動作する。</li></ul>
+<h3>なぜ注目されているか</h3><p>秘密情報のログ漏洩はセキュリティインシデントの主要因の一つであり、Goの標準ライブラリのみで動作するゼロ依存な実装が導入障壁を下げている。テスト用パッケージによる自動検出という開発者体験の良さと、39種類の組み込みディテクタの網羅性が注目を集めている。</p>
+<h3>どんな人に役立つか</h3><p>GoでWebサービスやAPIを開発するエンジニアに適している。ログや監視ツールへの個人情報・認証情報の漏洩を防ぎたいチームや、CI/CDパイプラインでの秘密情報リークテストを自動化したい開発者にも有用。</p>
+<h3>技術的なポイント</h3><ul><li>Secret型はfmt.Stringer・json.Marshaler・xml.Marshaler等のインタフェースを実装し複数の出力経路でマスクを保証する。</li><li>標準ライブラリのslogハンドラとして動作するため既存コードへの組み込みが最小変更で済む。</li><li>39種類のディテクタのうち19種がデフォルト有効で、国・地域固有フォーマット（電話番号・口座番号等）はオプトイン方式。</li><li>embargotest パッケージはgoroutineのstdout・ログ・HTTPレスポンス・子プロセス出力を監視してリークを検出する。</li><li>CLIツールはGoのシングルバイナリでクロスプラットフォーム動作し、任意コマンドの出力をパイプでリアルタイムマスクできる。</li></ul>
+<h3>試し方</h3>
+<ol><li>Goモジュールにembargoを追加する。</li><li>Secret型で秘密情報をラップするか、slogハンドラを設定する。</li><li>embargotest パッケージでリークテストを追加する。</li></ol>
+<pre><code>go get github.com/nao1215/embargo@v0.21.0</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-27.html#h-nao1215__embargo">2026-11-27 はてブ</a>
+<span class="src hatena">はてなブックマーク 3位</span><span>3 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
