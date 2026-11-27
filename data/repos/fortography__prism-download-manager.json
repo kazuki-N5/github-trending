@@ -1,0 +1,29 @@
+{
+  "repo": "FortoGraphy/prism-download-manager",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "最大32接続・クラッシュ耐性のあるOSSダウンロードマネージャー",
+  "features": [
+    "1ファイルを最大32並列接続に分割してダウンロードし、帯域制限があるサーバーで最大15倍高速化できる",
+    "クラッシュ・スリープ・ケーブル抜けが発生しても中断した箇所から正確に再開できる",
+    "Chrome・Edge・Firefox向けのブラウザ拡張でリンクを即座にPrismに渡せる",
+    "YouTube他1,800サイト超の動画をMP4（8K/HDR対応）またはMP3でダウンロードできる",
+    "Hugging FaceのAIモデルを名前・リンク・検索でダウンロードしSHA-256で検証できる"
+  ],
+  "why": "推測: IDM（Internet Download Manager）の有料代替品として無料・OSSで登場し、AIモデルのダウンロード機能やliquid-glassのUIデザインが注目を集めている。BitTorrent・HLS・DASHなど多プロトコル対応も差別化になっている。",
+  "whoFor": "大容量ファイルや動画を頻繁にダウンロードするユーザー、AIモデルをHugging Faceから取得したいエンジニア、IDMの無料代替を求めるWindows/macOS/Linuxユーザー向け。",
+  "tech": [
+    "Rustで実装されており、高速かつメモリ安全な並列ダウンロードエンジンを実現している",
+    "HTTP(S)・FTP/FTPS・HLS/DASHストリーム・BitTorrentとマグネットリンクに対応する多プロトコル設計になっている",
+    "yt-dlpを内部で活用して1,800サイト超の動画取得とSponsorBlockによるスキップを実現している",
+    "ブラウザ拡張がリンクを約0.25秒でPrismに渡すため、シームレスなダウンロード開始体験を提供する"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubリリースページから自分のOSに合ったインストーラーをダウンロードする",
+      "インストーラーを実行してPrismをセットアップする（署名なしの警告が出た場合は「詳細→実行」を選ぶ）",
+      "Chrome Web StoreからPrismブラウザ拡張を追加し、アイコンにConnectedと表示されることを確認する"
+    ],
+    "commands": []
+  }
+}

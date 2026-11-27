@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeadInternetStudios/100x-engineer-skill | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📱</div><div>
+<h1>DeadInternetStudios/100x-engineer-skill</h1>
+<div class="meta"><span>JavaScript</span>
+<span>初掲載 2026-11-28（Trendshift 11位）</span>
+<a class="gh" href="https://github.com/DeadInternetStudios/100x-engineer-skill" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="deadinternetstudios__100x-engineer-skill" data-repo="DeadInternetStudios/100x-engineer-skill" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">形式検証付きでプロダクション品質コードを生成するClaude Codeスキル</p>
+<h3>何ができるか</h3><ul><li>タスクを小さなブロックに分割し、各ブロックを形式検証（状態・遷移・事前・事後条件・不変条件・活性条件）してから組み合わせる</li><li>コードが変更されたときに検証結果が古くなったことを検出するledger.tsvをリポジトリで管理する</li><li>二次AIモデルがコードレビューを行い、スクリーンショットとテスト結果を含む報告書を生成する</li><li>Claude Code・Cursor・Codexで動作し、Node.js 22以上を必要とする</li><li>バグを植え込んで検証が実際に失敗することを確認してから合格とみなす仕組みで信頼性を担保する</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> AIコーディングエージェントが「ほぼ動く」コードを生成するが最後の10%が完成しない問題を解決しようとしており、30日間で136Bトークン・1,000件超のPRという実績データが注目を集めている。形式検証（formal verification）をLLM時代に再定義した点も新しい。</p>
+<h3>どんな人に役立つか</h3><p>Claude CodeやCursorなどのAIコーディングエージェントを業務で使い、プロダクション品質のコードを生成したいエンジニア向け。ロールバック率を下げたいチームにも有効。</p>
+<h3>技術的なポイント</h3><ul><li>各機能ブロックの状態遷移モデルを構築し、全状態を網羅的に探索するモデル検査アプローチを採用している</li><li>verify/ledger.tsvでカバーするコードのハッシュを管理し、変更検知と検証の再実行を自動化している</li><li>形式検証の範囲外（UIやコピー）はwaiverを記録し、100x finishがその根拠と対象コードを明示する</li><li>ブロック間のシームも独立検証して、一方が出力するデータが次のブロックの入力条件を満たすことを保証する</li></ul>
+<h3>試し方</h3>
+<ol><li>Node.js 22以上をインストールする</li><li>Claude CodeまたはCursorに100x-engineer-skillをインストールする</li><li>/100x-setup コマンドを実行してセットアップを完了する</li><li>機能追加や新規アプリ作成のタスクを渡す</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-28.html#d-deadinternetstudios__100x-engineer-skill">2026-11-28</a>
+<span class="src trendshift">Trendshift 11位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

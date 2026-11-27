@@ -1,0 +1,33 @@
+{
+  "repo": "Reukix/Reloc",
+  "language": "Swift",
+  "readme": true,
+  "oneLiner": "iPhoneでPC不要・外付けなしの外設レベル位置偽装アプリ",
+  "features": [
+    "ローカルの仮想外設接続（iAP2 / MFi-v3）を通じて、PCや実機外付けデバイスなしでGPS位置を偽装できる",
+    "地図クリック・住所検索・WGS-84座標の手動入力でターゲット位置を設定できる",
+    "Apple マップのほかOpenStreetMapやEsriの衛星地図も選べ、中国向けGCJ-02座標の自動変換も行う",
+    "バックグラウンドでも位置偽装が継続するよう、音声保活と定位保活の二重保険を備える",
+    "NMEA-0183（$GPGGA/$GPRMC）パケットをストリーミング送信し、CoreLocationに外設GPSとして認識させる"
+  ],
+  "why": "推測: PCへの接続や脱獄なしにiPhoneで位置偽装できる点が珍しく、蜂窝网络（モバイルデータ）環境でも動作するため注目されている。外設レベルの注入はソフトウェアシミュレーションフラグを回避できる点も差別化になっている。",
+  "whoFor": "位置情報を使うゲームやアプリのテスト・デモを行いたいiOS開発者や、外設レベルの位置注入を試したい研究者向け。有効なMFi-v3認証情報が別途必要。",
+  "tech": [
+    "SwiftとObjective-Cで実装し、CoreAccessoriesフレームワークで本機上に仮想iAP2エンドポイントを生成する",
+    "NMEA-0183フォーマットのGPGGAとGPRMCパケットをシステムの外設GPSチャネルに送出する",
+    "XcodeGenを使ってプロジェクトを生成し、MFi-v3認証用のcertificate.p7bとidentity.pk8を事前に配置する必要がある",
+    "CoreLocationの実測パネルでisProducedByAccessoryフラグを確認でき、外設認識の成否を即座に検証できる"
+  ],
+  "tryIt": {
+    "steps": [
+      "有効なMFi-v3認証情報（certificate.p7bとidentity.pk8）をReloc/Resources/MFi/に配置する",
+      "brew install xcodegen でXcodeGenをインストールし、xcodegen generate でプロジェクトを生成する",
+      "Xcodeで署名設定をして実機のiPhone/iPadにインストールする",
+      "アプリを開き「定位」ページで目的地を選んで「開始定位」をタップする"
+    ],
+    "commands": [
+      "xcodegen generate",
+      "xcodebuild build -project Reloc.xcodeproj -scheme Reloc -configuration Release -sdk iphoneos -derivedDataPath build/DerivedData CODE_SIGNING_ALLOWED=NO"
+    ]
+  }
+}

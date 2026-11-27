@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scottsturrock/mate-wayland-desktop | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>scottsturrock/mate-wayland-desktop</h1>
+<div class="meta"><span>Shell</span>
+<span>初掲載 2026-11-28（Trendshift 18位）</span>
+<a class="gh" href="https://github.com/scottsturrock/mate-wayland-desktop" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="scottsturrock__mate-wayland-desktop" data-repo="scottsturrock/mate-wayland-desktop" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">MATEデスクトップをWaylandで動かすUbuntu 26.04ベースのLinuxディストリビューション</p>
+<h3>何ができるか</h3><ul><li>GNOME 2の後継であるMATEデスクトップをWaylandコンポジターlabwcの上で動作させられる</li><li>Applications/Places/Systemメニューと二段パネル、デスクトップアイコンというMATEのクラシックなレイアウトを維持する</li><li>Calamares インストーラーによるLUKS2ディスク暗号化に対応した LiveISOを生成できる</li><li>Xwayland経由でX11専用プログラムも解像度シャープな状態で実行できる</li><li>build.shを実行するだけでパッケージビルドからインストール可能なISOまで一括生成できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> Waylandへの移行が進む中でMATEなどのGTK2/3系デスクトップのWayland対応が遅れており、labwcコンポジターを活用した実用的な構成として注目されている。Ubuntu 26.04 LTSをベースにしており再現性が高い点も評価されている。</p>
+<h3>どんな人に役立つか</h3><p>軽量でクラシックなデスクトップ環境を好むLinuxユーザーや、MATEをWaylandで使いたいディストリビューション開発者・パッケージャー向け。</p>
+<h3>技術的なポイント</h3><ul><li>labwc 0.9（wlroots）をコンポジターとして採用し、MATEのパネルやアプリをその上で動作させる</li><li>MATE 1.29のパネル・Caja（ファイルマネージャー）・コントロールセンターをUbuntu 26.04のパッケージとして提供する</li><li>LightDMとCalamaresを組み合わせてLUKS2ディスク暗号化つきのインストールを実現する</li><li>debootstrapと自前のbuild.shで空のクローンから約35分でISOをビルドできる再現性のある構成になっている</li></ul>
+<h3>試し方</h3>
+<ol><li>mate-wayland.org/download/ からISOとチェックサムをダウンロードする</li><li>USBドライブにISOを書き込んでLive起動する</li><li>デスクトップ上のCalamaresインストーラーを使ってディスクにインストールする</li></ol>
+<pre><code>./build.sh --packages
+./build.sh</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-28.html#d-scottsturrock__mate-wayland-desktop">2026-11-28</a>
+<span class="src trendshift">Trendshift 18位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

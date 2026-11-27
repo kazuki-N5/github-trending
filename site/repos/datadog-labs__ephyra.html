@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>datadog-labs/ephyra | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🧬</div><div>
+<h1>datadog-labs/ephyra</h1>
+<div class="meta">
+<span>初掲載 2026-11-28（はてなブックマーク 1位）</span>
+<a class="gh" href="https://github.com/datadog-labs/ephyra" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="datadog-labs__ephyra" data-repo="datadog-labs/ephyra" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">AIエージェントがテストジェネレーターを自動最適化するプロパティベーステストライブラリ</p>
+<h3>何ができるか</h3><ul><li>プロパティ（性質）を定義するだけで、コードカバレッジを測定しながらテストケースジェネレーターを自動的に改善する</li><li>SQLite・PostgreSQL・Leanなど複数の実績あるシステムで70件以上のバグを発見した実績がある</li><li>失敗時に最小限の再現ステップを出力し、EPHYRA_REPLAY環境変数で該当ケースを即再実行できる</li><li>エージェント向けのプロンプトひな形を用意しており、coding agentに渡すだけでテスト自動化を開始できる</li><li>ephyra CLIでスイートを実行し、ローカルページで結果を視覚的に探索できる</li></ul>
+<h3>なぜ注目されているか</h3><p>DatadogのSystems Researchチームが開発したOSSで、カバレッジガイデッドファジングに似たアプローチをLLMエージェントで実現した点が新しい。FoundationDBやTigerBeetのような高度にテストされたシステムでもバグを発見できたことが実証されている。</p>
+<h3>どんな人に役立つか</h3><p>RustでOSSライブラリやデータベースなどの信頼性の高いソフトウェアを開発しているエンジニア向け。AIコーディングエージェントと組み合わせて自動的にプロパティテストを書いてもらいたい場合にも適している。</p>
+<h3>技術的なポイント</h3><ul><li>カバレッジガイデッドファジング（CGF）が既存入力を変異させるのとは異なり、ジェネレーター自体をLLMが書き換えて新しいコードパスを探索する帰納的アプローチを採用している</li><li>Rustで実装されており、#[ephyra::test]アトリビュートをつけるだけで既存のcargo testに組み込める</li><li>.ephyra/regressions/に失敗ケースを保存し、次回実行時に優先的に再試行してリグレッションを防ぐ</li><li>EPHYRA_TESTS・EPHYRA_SEED・EPHYRA_BUDGET_MSなどの環境変数でコードを変えずに挙動を制御できる</li></ul>
+<h3>試し方</h3>
+<ol><li>Cargo.tomlの[dev-dependencies]にephyra = &quot;0.0.1&quot;を追加する</li><li>#[ephyra::test]アトリビュートでプロパティテスト関数を書く</li><li>cargo testを実行してプロパティを検証する</li><li>cargo install ephyra-cliでCLIをインストールし、ephyra testでスイートを実行する</li></ol>
+<pre><code>cargo install ephyra-cli
+ephyra test
+cargo run -p ephyra --example bst -- --bug</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-28.html#h-datadog-labs__ephyra">2026-11-28 はてブ</a>
+<span class="src hatena">はてなブックマーク 1位</span><span>38 users</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

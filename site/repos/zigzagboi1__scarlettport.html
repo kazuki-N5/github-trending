@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZigZagBoi1/ScarlettPort | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎮</div><div>
+<h1>ZigZagBoi1/ScarlettPort</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-28（Trendshift 6位）</span>
+<a class="gh" href="https://github.com/ZigZagBoi1/ScarlettPort" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="zigzagboi1__scarlettport" data-repo="ZigZagBoi1/ScarlettPort" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Xbox Series版タイトルをWindowsで動かすBYOC互換レイヤー</p>
+<h3>何ができるか</h3><ul><li>自分のXbox Series X/Sダンプを持ち込んでWindowsで動作させられる（エミュレーターではなくx64コードをCPUで直接実行）</li><li>RDNA2のGPUコードを手持ちのグラフィックカード向けにオンザフライで変換する</li><li>ランチャーがシェーダーの事前準備・ゲームフォルダの検索・初回セットアップをGUIで案内する</li><li>マウス・キーボードのPC操作レイアウトおよびDualSense/DualShock 4コントローラーの直接入力に対応する</li><li>RX 9000（RDNA 4）やRX 6000（RDNA 2）など複数のAMD GPUで動作する修正が継続的に取り込まれている</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> GTA VIのXbox Series版をPCで動かすことへの関心が高く、Wine/Protonと同様のアプローチで実現しようとするプロジェクトとして注目されている。v0.5.xで世界に到達できるようになり、コミュニティからの改善PRが活発に取り込まれている。</p>
+<h3>どんな人に役立つか</h3><p>Xbox Series版ゲームの合法的なダンプを所持しているWindowsユーザー向け。ゲームファイルは付属せず、32GB以上のRAMとSSD、対応するGPUが必要。</p>
+<h3>技術的なポイント</h3><ul><li>RustでXbox Series（RDNA2）向けGPUシェーダーコードをホストのGPU向けにリアルタイム変換するトランスレーターを実装している</li><li>シェーダーキャッシュの事前ビルド（scarlett prepare）でゲーム起動を高速化し、初回実行時の待ち時間を削減する</li><li>ランチャーv0.5.xはシェーダー進捗のリアルタイム表示、自動アップデート、クラッシュ報告のプリフィル機能を備える</li><li>コンソールシェーダーのスレッドレーンをホスト側の複数ウェーブに分散する最適化が最新版で導入されている</li></ul>
+<h3>試し方</h3>
+<ol><li>最新リリースのscarlett-setup.exeをダウンロードしてインストールする</li><li>ランチャーを起動し、初回セットアップでゲームフォルダを指定してシェーダーを準備する</li><li>準備が完了したらランチャーからゲームを起動する</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-28.html#d-zigzagboi1__scarlettport">2026-11-28</a>
+<span class="src trendshift">Trendshift 6位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

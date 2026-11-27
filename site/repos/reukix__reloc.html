@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reukix/Reloc | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📱</div><div>
+<h1>Reukix/Reloc</h1>
+<div class="meta"><span>Swift</span>
+<span>初掲載 2026-11-28（Trendshift 5位）</span>
+<a class="gh" href="https://github.com/Reukix/Reloc" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="reukix__reloc" data-repo="Reukix/Reloc" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">iPhoneでPC不要・外付けなしの外設レベル位置偽装アプリ</p>
+<h3>何ができるか</h3><ul><li>ローカルの仮想外設接続（iAP2 / MFi-v3）を通じて、PCや実機外付けデバイスなしでGPS位置を偽装できる</li><li>地図クリック・住所検索・WGS-84座標の手動入力でターゲット位置を設定できる</li><li>Apple マップのほかOpenStreetMapやEsriの衛星地図も選べ、中国向けGCJ-02座標の自動変換も行う</li><li>バックグラウンドでも位置偽装が継続するよう、音声保活と定位保活の二重保険を備える</li><li>NMEA-0183（$GPGGA/$GPRMC）パケットをストリーミング送信し、CoreLocationに外設GPSとして認識させる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> PCへの接続や脱獄なしにiPhoneで位置偽装できる点が珍しく、蜂窝网络（モバイルデータ）環境でも動作するため注目されている。外設レベルの注入はソフトウェアシミュレーションフラグを回避できる点も差別化になっている。</p>
+<h3>どんな人に役立つか</h3><p>位置情報を使うゲームやアプリのテスト・デモを行いたいiOS開発者や、外設レベルの位置注入を試したい研究者向け。有効なMFi-v3認証情報が別途必要。</p>
+<h3>技術的なポイント</h3><ul><li>SwiftとObjective-Cで実装し、CoreAccessoriesフレームワークで本機上に仮想iAP2エンドポイントを生成する</li><li>NMEA-0183フォーマットのGPGGAとGPRMCパケットをシステムの外設GPSチャネルに送出する</li><li>XcodeGenを使ってプロジェクトを生成し、MFi-v3認証用のcertificate.p7bとidentity.pk8を事前に配置する必要がある</li><li>CoreLocationの実測パネルでisProducedByAccessoryフラグを確認でき、外設認識の成否を即座に検証できる</li></ul>
+<h3>試し方</h3>
+<ol><li>有効なMFi-v3認証情報（certificate.p7bとidentity.pk8）をReloc/Resources/MFi/に配置する</li><li>brew install xcodegen でXcodeGenをインストールし、xcodegen generate でプロジェクトを生成する</li><li>Xcodeで署名設定をして実機のiPhone/iPadにインストールする</li><li>アプリを開き「定位」ページで目的地を選んで「開始定位」をタップする</li></ol>
+<pre><code>xcodegen generate
+xcodebuild build -project Reloc.xcodeproj -scheme Reloc -configuration Release -sdk iphoneos -derivedDataPath build/DerivedData CODE_SIGNING_ALLOWED=NO</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-28.html#d-reukix__reloc">2026-11-28</a>
+<span class="src trendshift">Trendshift 5位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

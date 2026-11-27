@@ -1,0 +1,29 @@
+{
+  "repo": "trustno1-coder/VIctory-NVIDIA",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "Xbox Series互換レイヤー「VIctory」のNVIDIA GPU対応フォーク",
+  "features": [
+    "Xbox Series X/Sダンプを自分のNVIDIA GeForce RTX搭載PCで動作させられる",
+    "RTX 40/50ではDLSSフレーム生成、RTX 20/30ではAMD FSR 3フレーム生成に対応する",
+    "F1キーでDLSS・フレームレートキャップなどの設定メニューを開ける",
+    "Windows 10向けにMicrosoftの新しいDirect3D 12ランタイム（D3D12 Agility SDK）を自動取得できる",
+    "FSR 3に必要なAMDのFidelityFX DLLをAMD公式GitHubから自動ダウンロードして検証できる"
+  ],
+  "why": "推測: GTA VIのXbox Series版をPCで動かしたいという需要が高く、NVIDIA GPU向けの最適化フォークとして注目を集めている。VIctory-7900XTXのフォークとして、NVIDIA特有のDLSSフレーム生成やディスクリプタヒープの問題を修正している。",
+  "whoFor": "Xbox Series版ゲームの合法的なダンプを所持するNVIDIA RTX系GPUユーザー向け。ゲームファイルは含まれず、自分でダンプを用意する必要がある。",
+  "tech": [
+    "Rustで実装された互換レイヤーで、Xbox Series（RDNA2）のGPUコードをNVIDIA向けにリアルタイム変換する",
+    "DLSSフレーム生成（RTX 40/50）とAMD FSR 3フレーム生成（RTX 20/30）を切り替えて使用できる",
+    "Windows 10のDirect3D 12がシェーダーモデル6.6未対応のため、D3D12 Agility SDKを自動取得する仕組みを備える",
+    "各ファイルはSHA-256ハッシュと署名で検証されるため、改ざんされたDLLが混入しない"
+  ],
+  "tryIt": {
+    "steps": [
+      "最新リリースから victory.exe をダウンロードする",
+      "Xbox Series版タイトルの合法的なダンプのフォルダ（game_scarlett_master.exeと同じ場所）にvictory.exeを置く",
+      "victory.exeをダブルクリックして実行する（初回起動時にNVIDIAのDLSSファイル取得を求められる）"
+    ],
+    "commands": []
+  }
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>net-merge/net-merge | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">📦</div><div>
+<h1>net-merge/net-merge</h1>
+<div class="meta"><span>Go</span>
+<span>初掲載 2026-11-28（Trendshift 19位）</span>
+<a class="gh" href="https://github.com/net-merge/net-merge" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="net-merge__net-merge" data-repo="net-merge/net-merge" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Wi-Fi・Ethernet・スマホテザリングを束ねて帯域を合算するネットワーク統合ツール</p>
+<h3>何ができるか</h3><ul><li>複数のネットワークアダプターにトラフィックを分散してダウンロード速度を合算できる</li><li>Wi-Fi・Ethernet・iPhoneホットスポット・Androidテザリングをすべて同時に利用できる</li><li>速いリンクにより多い接続を割り当てるスマート振り分けが機能し、切れたリンクは自動除外される</li><li>net-mergeがクラッシュしても通常のインターネット接続は維持されるフェイルセーフ設計になっている</li><li>トレイアイコン・メニューバーのGUIからアダプターのISP名と速度をリアルタイムで確認できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> 複数の回線を無料・アカウント不要・VPNなしで束ねられるツールとして注目を集めており、Wi-Fi+スマホテザリングで実測2〜3倍のダウンロード速度を実証する動画が拡散されている。</p>
+<h3>どんな人に役立つか</h3><p>複数のインターネット回線を持つ開発者やゲーマーで、Steam・クラウドアップロード・大型ダウンロードを高速化したいWindows/macOS/Linuxユーザー向け。1本の接続はスピードアップしない点に注意。</p>
+<h3>技術的なポイント</h3><ul><li>Goで実装されたトランスペアレントなTCP/UDPロードバランサーで、全アプリをプロキシ設定なしに対応する</li><li>新しいTCP/UDP接続を生成のたびにアダプター間で振り分けるコネクションレベルのロードバランシングを採用している</li><li>ipwho.isまたはipinfo.ioをアダプターごとに問い合わせてISP名を取得しキャッシュする</li><li>約0.18 CPUコア/100Mbit/sと非常に軽量で、複数接続を束ねても CPU負荷が低い</li></ul>
+<h3>試し方</h3>
+<ol><li>macOS/Linuxはターミナルでインストールスクリプトをパイプでshに渡して実行する</li><li>WindowsはPowerShellでインストールスクリプトをirm経由で実行する</li><li>トレイアイコンのメニューで有効にするアダプターにチェックを入れてStart Mergingをクリックする</li></ol>
+<pre><code>curl -fsSL https://raw.githubusercontent.com/net-merge/net-merge/main/install.sh | sh
+irm https://raw.githubusercontent.com/net-merge/net-merge/main/install.ps1 | iex</code></pre></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-28.html#d-net-merge__net-merge">2026-11-28</a>
+<span class="src trendshift">Trendshift 19位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>

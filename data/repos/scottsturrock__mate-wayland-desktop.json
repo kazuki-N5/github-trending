@@ -1,0 +1,32 @@
+{
+  "repo": "scottsturrock/mate-wayland-desktop",
+  "language": "Shell",
+  "readme": true,
+  "oneLiner": "MATEデスクトップをWaylandで動かすUbuntu 26.04ベースのLinuxディストリビューション",
+  "features": [
+    "GNOME 2の後継であるMATEデスクトップをWaylandコンポジターlabwcの上で動作させられる",
+    "Applications/Places/Systemメニューと二段パネル、デスクトップアイコンというMATEのクラシックなレイアウトを維持する",
+    "Calamares インストーラーによるLUKS2ディスク暗号化に対応した LiveISOを生成できる",
+    "Xwayland経由でX11専用プログラムも解像度シャープな状態で実行できる",
+    "build.shを実行するだけでパッケージビルドからインストール可能なISOまで一括生成できる"
+  ],
+  "why": "推測: Waylandへの移行が進む中でMATEなどのGTK2/3系デスクトップのWayland対応が遅れており、labwcコンポジターを活用した実用的な構成として注目されている。Ubuntu 26.04 LTSをベースにしており再現性が高い点も評価されている。",
+  "whoFor": "軽量でクラシックなデスクトップ環境を好むLinuxユーザーや、MATEをWaylandで使いたいディストリビューション開発者・パッケージャー向け。",
+  "tech": [
+    "labwc 0.9（wlroots）をコンポジターとして採用し、MATEのパネルやアプリをその上で動作させる",
+    "MATE 1.29のパネル・Caja（ファイルマネージャー）・コントロールセンターをUbuntu 26.04のパッケージとして提供する",
+    "LightDMとCalamaresを組み合わせてLUKS2ディスク暗号化つきのインストールを実現する",
+    "debootstrapと自前のbuild.shで空のクローンから約35分でISOをビルドできる再現性のある構成になっている"
+  ],
+  "tryIt": {
+    "steps": [
+      "mate-wayland.org/download/ からISOとチェックサムをダウンロードする",
+      "USBドライブにISOを書き込んでLive起動する",
+      "デスクトップ上のCalamaresインストーラーを使ってディスクにインストールする"
+    ],
+    "commands": [
+      "./build.sh --packages",
+      "./build.sh"
+    ]
+  }
+}

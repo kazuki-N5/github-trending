@@ -1,0 +1,29 @@
+{
+  "repo": "grapedjuice/ytm-rs",
+  "language": "Rust",
+  "readme": true,
+  "oneLiner": "Electron不使用・約130MBで動くYouTube Musicネイティブデスクトップアプリ",
+  "features": [
+    "Chromeで同一曲を再生したときに比べてメモリ使用量を約130MBに抑えられる（Chromeは約496MB）",
+    "30種類のテーマ（Apple Music・Material 3・Spinning Recordなど）をアプリ全体に適用できる",
+    "単語単位でカラオケスタイルの歌詞表示ができ、ローマ字表示や翻訳にも対応する",
+    "最大16人と同じ曲をリアルタイムで聴ける「Listen together」機能がある",
+    "Spotifyからプレイリストと「いいね！」した曲をYouTube Musicへバックグラウンド移行できる"
+  ],
+  "why": "推測: Electronベースの重量級デスクトップアプリへの不満が高まる中、RustとeguiによるネイティブGUIが省メモリで高性能な代替として注目されている。カラオケ歌詞やテーマ数の豊富さも支持される要因になっている。",
+  "whoFor": "YouTube Musicを普段使いするWindowsやmacOS・Linuxユーザーで、ブラウザやElectronベースアプリよりも軽量なクライアントを求めるエンジニアや音楽リスナー向け。",
+  "tech": [
+    "RustとeguiでGUIを自前で描画しており、Electronやブラウザのオーバーヘッドを排除している",
+    "rodioを使って音声を再生し、約130MBのメモリで動作する",
+    "Better Lyricssと同じ方式で単語単位の歌詞データを取得・描画し、タイミングオフセットを手動調整できる",
+    "Windows 11のMicaやAcrylicによる半透明ウィンドウ効果に対応する"
+  ],
+  "tryIt": {
+    "steps": [
+      "GitHubリリースページから自分のOSに合ったインストーラーまたはポータブル版をダウンロードする",
+      "インストーラーを実行してアプリを起動する",
+      "YouTubeアカウントでサインインして音楽を再生する"
+    ],
+    "commands": []
+  }
+}

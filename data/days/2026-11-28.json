@@ -1,0 +1,211 @@
+{
+  "date": "2026-11-28",
+  "collectedAt": "2026-11-28T07:07:55+09:00",
+  "entries": [
+    {
+      "repo": "trustno1-coder/VIctory-NVIDIA",
+      "source": "trendshift",
+      "sourceRank": 1,
+      "desc": "VIctory (Xbox Series compatibility layer) made to draw everything on NVIDIA cards: no skipped draws on capped descriptor heaps, Series S interface plane, half-scale Series S at about 20-22 fps on an RTX 5070. Fork of VIctory-7900XTX. No game files.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Belobug/VIctory-Belobug-AMD",
+      "source": "trendshift",
+      "sourceRank": 2,
+      "desc": "",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "nexu-io/opengame",
+      "source": "trendshift",
+      "sourceRank": 3,
+      "desc": "The Super Game Agent — the Unity & Unreal for AI agents, with 100+ viral games to remix. Turn 20+ coding agents (Claude Code, Codex, DeepSeek, etc.) into a full-stack AI game studio. Build and publish 3D & mini-games to WeChat, Douyin, TikTok, Telegram, itch.io, and more.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "trendshift",
+      "sourceRank": 4,
+      "desc": "Orca lets you run a fleet of bots with your own subscription (e.g. Claude Code, Grok, Agy, Codex). Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "Reukix/Reloc",
+      "source": "trendshift",
+      "sourceRank": 5,
+      "desc": "iOS accessory-level location simulator over local loopback (iAP2 / MFi-v3 / NMEA)",
+      "language": "Swift",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "ZigZagBoi1/ScarlettPort",
+      "source": "trendshift",
+      "sourceRank": 6,
+      "desc": "Grand Theft Auto VI running natively on Windows from your own Xbox Series dump. No emulator: the game's x64 code runs on your CPU and its GPU code is recompiled for your card.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "togg53192-cmd/jailbreaks",
+      "source": "trendshift",
+      "sourceRank": 7,
+      "desc": "LIST OF ALL MY JAILBREAKS",
+      "language": "",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "jub0t/Concat",
+      "source": "trendshift",
+      "sourceRank": 8,
+      "desc": "Beta: The truly free, open-source, local-first, cross-platform video editor. Scriptable through a JSON-RPC API & MCP.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "alesha-pro/llm.asm",
+      "source": "trendshift",
+      "sourceRank": 9,
+      "desc": "Qwen3-0.6B inference (12 KB), bare-metal bootable OS (22 KB), and from-scratch Mini-GPT trainer with live Braille TUI (32 KB) in 100% pure x86-64 NASM assembly. Zero C, zero libc, zero dependencies.",
+      "language": "Assembly",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "github/spec-kit",
+      "source": "trendshift",
+      "sourceRank": 10,
+      "desc": "💫 Toolkit to help you get started with SDD or any other process!",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "DeadInternetStudios/100x-engineer-skill",
+      "source": "trendshift",
+      "sourceRank": 11,
+      "desc": "100x is a skill by a former Cursor engineer that turns prompts into formally verified, production-ready code",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "WhiteBr1ck/agy-powertools",
+      "source": "trendshift",
+      "sourceRank": 12,
+      "desc": "Antigravity 2.0 原生界面增强插件：界面汉化、类 Codex 紧凑排版与阶段汇报、上下文与缓存监控、会话分支及本地用量面板",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "VUILabsAI/Luna-Translator",
+      "source": "trendshift",
+      "sourceRank": 13,
+      "desc": "Self-hosted real-time speech-to-speech translation with live captions and translated audio. Web community edition and a Go quickstart for the VUI Labs v3 API.",
+      "language": "TypeScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "RMvdesi/obsidian-prism",
+      "source": "trendshift",
+      "sourceRank": 14,
+      "desc": "Optical UI, damped-spring choreography, 512K shallow-water vial, pixel mascots & dual-mode thought suite for Antigravity (GPL-3.0)",
+      "language": "JavaScript",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "FortoGraphy/prism-download-manager",
+      "source": "trendshift",
+      "sourceRank": 15,
+      "desc": "Free, open-source IDM alternative for Windows, macOS and Linux — up to 32 connections, browser integration, video & MP3 downloads, torrents, crash-safe resume.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "grapedjuice/ytm-rs",
+      "source": "trendshift",
+      "sourceRank": 16,
+      "desc": "Fast, native YouTube Music desktop app for Windows, macOS and Linux, built in Rust. No Electron, synced karaoke lyrics, 30 themes.",
+      "language": "Rust",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "mjmirza/app-store-compliance",
+      "source": "trendshift",
+      "sourceRank": 17,
+      "desc": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 112 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "language": "Shell",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "scottsturrock/mate-wayland-desktop",
+      "source": "trendshift",
+      "sourceRank": 18,
+      "desc": "MATE Wayland Desktop: the MATE desktop on Wayland with labwc, on an Ubuntu 26.04 base. Sources and build system.",
+      "language": "Shell",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "net-merge/net-merge",
+      "source": "trendshift",
+      "sourceRank": 19,
+      "desc": "Use all your internet connections at once on Windows, macOS, Linux and Android: per-connection load balancing over Wi-Fi, Ethernet, mobile data and phone tethers",
+      "language": "Go",
+      "starsTotal": "",
+      "stars": ""
+    },
+    {
+      "repo": "NVIDIA/auto-ontology",
+      "source": "trendshift",
+      "sourceRank": 20,
+      "desc": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "language": "Python",
+      "starsTotal": "",
+      "stars": ""
+    }
+  ],
+  "hatena": {
+    "label": "日本で話題（はてなブックマーク）",
+    "entries": [
+      {
+        "repo": "datadog-labs/ephyra",
+        "source": "hatena",
+        "desc": "A property-based testing library for the LLM era",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 38,
+        "sourceRank": 1
+      },
+      {
+        "repo": "xoxorwr/pw-loudness-eq",
+        "source": "hatena",
+        "desc": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+        "language": "",
+        "starsTotal": "",
+        "stars": "",
+        "users": 3,
+        "sourceRank": 2
+      }
+    ]
+  }
+}

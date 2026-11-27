@@ -1,0 +1,32 @@
+{
+  "repo": "net-merge/net-merge",
+  "language": "Go",
+  "readme": true,
+  "oneLiner": "Wi-Fi・Ethernet・スマホテザリングを束ねて帯域を合算するネットワーク統合ツール",
+  "features": [
+    "複数のネットワークアダプターにトラフィックを分散してダウンロード速度を合算できる",
+    "Wi-Fi・Ethernet・iPhoneホットスポット・Androidテザリングをすべて同時に利用できる",
+    "速いリンクにより多い接続を割り当てるスマート振り分けが機能し、切れたリンクは自動除外される",
+    "net-mergeがクラッシュしても通常のインターネット接続は維持されるフェイルセーフ設計になっている",
+    "トレイアイコン・メニューバーのGUIからアダプターのISP名と速度をリアルタイムで確認できる"
+  ],
+  "why": "推測: 複数の回線を無料・アカウント不要・VPNなしで束ねられるツールとして注目を集めており、Wi-Fi+スマホテザリングで実測2〜3倍のダウンロード速度を実証する動画が拡散されている。",
+  "whoFor": "複数のインターネット回線を持つ開発者やゲーマーで、Steam・クラウドアップロード・大型ダウンロードを高速化したいWindows/macOS/Linuxユーザー向け。1本の接続はスピードアップしない点に注意。",
+  "tech": [
+    "Goで実装されたトランスペアレントなTCP/UDPロードバランサーで、全アプリをプロキシ設定なしに対応する",
+    "新しいTCP/UDP接続を生成のたびにアダプター間で振り分けるコネクションレベルのロードバランシングを採用している",
+    "ipwho.isまたはipinfo.ioをアダプターごとに問い合わせてISP名を取得しキャッシュする",
+    "約0.18 CPUコア/100Mbit/sと非常に軽量で、複数接続を束ねても CPU負荷が低い"
+  ],
+  "tryIt": {
+    "steps": [
+      "macOS/Linuxはターミナルでインストールスクリプトをパイプでshに渡して実行する",
+      "WindowsはPowerShellでインストールスクリプトをirm経由で実行する",
+      "トレイアイコンのメニューで有効にするアダプターにチェックを入れてStart Mergingをクリックする"
+    ],
+    "commands": [
+      "curl -fsSL https://raw.githubusercontent.com/net-merge/net-merge/main/install.sh | sh",
+      "irm https://raw.githubusercontent.com/net-merge/net-merge/main/install.ps1 | iex"
+    ]
+  }
+}

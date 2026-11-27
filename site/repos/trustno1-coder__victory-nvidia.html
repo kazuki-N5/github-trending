@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>trustno1-coder/VIctory-NVIDIA | GitHub トレンド日報</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="../index.html"><span class="mark">GT</span><span class="txt">GitHub トレンド日報</span></a>
+  <form class="search" action="../index.html" method="get">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input name="q" type="search" placeholder="リポジトリ名・説明で検索" autocomplete="off">
+  </form>
+  <a class="likes-link" href="../index.html#likes">♥<span class="txt">いいね</span><span class="likes-count"></span></a>
+</div></header>
+<div class="area"><main class="wrap narrow">
+<article class="card repo-page">
+<div class="rhead"><div class="emoji big">🎮</div><div>
+<h1>trustno1-coder/VIctory-NVIDIA</h1>
+<div class="meta"><span>Rust</span>
+<span>初掲載 2026-11-28（Trendshift 1位）</span>
+<a class="gh" href="https://github.com/trustno1-coder/VIctory-NVIDIA" target="_blank" rel="noopener">GitHub ↗</a><button type="button" class="like" data-key="trustno1-coder__victory-nvidia" data-repo="trustno1-coder/VIctory-NVIDIA" aria-pressed="false">♡ いいね</button></div></div></div>
+<div class="content"><p class="lead">Xbox Series互換レイヤー「VIctory」のNVIDIA GPU対応フォーク</p>
+<h3>何ができるか</h3><ul><li>Xbox Series X/Sダンプを自分のNVIDIA GeForce RTX搭載PCで動作させられる</li><li>RTX 40/50ではDLSSフレーム生成、RTX 20/30ではAMD FSR 3フレーム生成に対応する</li><li>F1キーでDLSS・フレームレートキャップなどの設定メニューを開ける</li><li>Windows 10向けにMicrosoftの新しいDirect3D 12ランタイム（D3D12 Agility SDK）を自動取得できる</li><li>FSR 3に必要なAMDのFidelityFX DLLをAMD公式GitHubから自動ダウンロードして検証できる</li></ul>
+<h3>なぜ注目されているか</h3><p><span class="guess">推測</span> GTA VIのXbox Series版をPCで動かしたいという需要が高く、NVIDIA GPU向けの最適化フォークとして注目を集めている。VIctory-7900XTXのフォークとして、NVIDIA特有のDLSSフレーム生成やディスクリプタヒープの問題を修正している。</p>
+<h3>どんな人に役立つか</h3><p>Xbox Series版ゲームの合法的なダンプを所持するNVIDIA RTX系GPUユーザー向け。ゲームファイルは含まれず、自分でダンプを用意する必要がある。</p>
+<h3>技術的なポイント</h3><ul><li>Rustで実装された互換レイヤーで、Xbox Series（RDNA2）のGPUコードをNVIDIA向けにリアルタイム変換する</li><li>DLSSフレーム生成（RTX 40/50）とAMD FSR 3フレーム生成（RTX 20/30）を切り替えて使用できる</li><li>Windows 10のDirect3D 12がシェーダーモデル6.6未対応のため、D3D12 Agility SDKを自動取得する仕組みを備える</li><li>各ファイルはSHA-256ハッシュと署名で検証されるため、改ざんされたDLLが混入しない</li></ul>
+<h3>試し方</h3>
+<ol><li>最新リリースから victory.exe をダウンロードする</li><li>Xbox Series版タイトルの合法的なダンプのフォルダ（game_scarlett_master.exeと同じ場所）にvictory.exeを置く</li><li>victory.exeをダブルクリックして実行する（初回起動時にNVIDIAのDLSSファイル取得を求められる）</li></ol></div>
+<h3 class="hist-title">掲載履歴</h3><ul class="history"><li><a href="../days/2026-11-28.html#d-trustno1-coder__victory-nvidia">2026-11-28</a>
+<span class="src trendshift">Trendshift 1位</span></li></ul>
+</article>
+</main></div>
+<script src="../assets/likes.js"></script>
+
+</body>
+</html>
